@@ -23,7 +23,7 @@ INSTALL_DIR = /usr/local/lib
 SRC = $(wildcard src/*.cpp)
 OBJ = $(SRC:%.cpp=%.o)
 
-DST = libmml.a
+DST = libmml.so
 
 HPP = $(wildcard include/*.hpp )
 DST_HPP = $(wildcard $(INSTALL_DIR)/mml/*.hpp $(INSTALL_DIR)/mml.hpp)
@@ -37,8 +37,9 @@ all: $(DST)
 
 install: $(OBJ) $(MOBJ)
 	cp -ar include /usr/local/
-	ar rcs $(INSTALL_DIR)/libmml.a $(OBJ)
-
+	$(GCC) -shared $(LDFLAGS) -o $(INSTALL_DIR)/$(DST) $(OBJ)
+	ldconfig
+#ar rcs $(INSTALL_DIR)/libmml.a $(OBJ)
 clean:
 	rm -f $(OBJ)
 	rm -f lib/$(DST)
@@ -46,7 +47,8 @@ clean:
 distclean:
 	rm -f $(OBJ)
 	rm -f lib/$(DST)
-	rm -f $(DST_HPP)
+	rm -f /usr/local/include/mml.hpp
+	rm -rf /usr/local/include/mml
 
 
 debug: $(DST)
