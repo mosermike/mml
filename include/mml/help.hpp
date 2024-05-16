@@ -48,7 +48,7 @@ namespace mml {
 		 * 
 		 * @author Mike
 		 */
-		void foot();
+		void foot(std::string version, std::string month, double year);
 		
 		// TODO sha256
 
@@ -71,7 +71,7 @@ namespace mml {
 		 * 
 		 * @author Mike
 		 */
-		void status(mml::string befehl);
+		//void status(mml::string befehl);
 		
 		// TODO nur Ausgabe von C++-Programmen bei hhelp
 		

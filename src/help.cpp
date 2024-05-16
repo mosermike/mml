@@ -30,13 +30,13 @@ void mml::help::header(std::string befehl, std::string option) {
 	mml::shell::chapter("DESCRIPTION",true);
 }
 
-void mml::help::foot() {
+void mml::help::foot(std::string version, std::string month, double year) {
 	
 	mml::shell::chapter("AUTHOR",true);
 	std::cout << "Written from Mike Moser" << std::endl << std::endl;
-	std::cout << "Version: " << VERSION << "\t\t\t\t\t\t" << MONTH << " " << YEAR << std::endl;
+	std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << " " << year << std::endl;
 }
-
+/*
 void mml::help::status(mml::string befehl) {
 	mml::Unix::User user;
 	std::ifstream	input;
@@ -83,10 +83,11 @@ void mml::help::status(mml::string befehl) {
 	}
 	input.close();
 }
+*/
 
 void mml::help::check_root() {
 	
-	mml::help::status("check_root");
+	//mml::help::status("check_root");
 	
 	header("Check for root rights");
 	
@@ -99,12 +100,12 @@ void mml::help::check_root() {
 	mml::shell::option("-lb, --log_backup", "Backup of the logfile");
 	mml::shell::option("-v, --verbose", "Verbose printouts (only for logging purposes)");
 	
-	foot();
+	//foot();
 }
 
 void mml::help::cifs() {
 	
-	mml::help::status("cifs");
+	//mml::help::status("cifs");
 	
 	header("Mount of partitions");
 	
@@ -126,12 +127,12 @@ void mml::help::cifs() {
 	mml::shell::option("-user","to mount the ftp server with another user as ftp");
 	mml::shell::option("-w","mount all partitions of WD MyCloud");
 	
-	foot();
+	//foot();
 }
 
 void mml::help::convert() {
 	
-	mml::help::status("Convert");
+	//mml::help::status("Convert");
 	
 	header("Convert different types of photos to jpeg");
 	
@@ -150,13 +151,13 @@ void mml::help::convert() {
 	mml::shell::option("-v, --verbose", "Verbose output.");
 	mml::shell::option("-w,--wdmycloud", "Use a predefined input for uploaded picture from the iPhone (Should be revised).");
 	
-	foot();
+	//foot();
 }
 
 
 void mml::help::cop(){
 	
-	mml::help::status("cop");
+	//mml::help::status("cop");
 	
 	header("Kopieren von Dateien und Ordner auf Netzwerkfestplatten");
 	
@@ -182,14 +183,14 @@ void mml::help::cop(){
 	mml::shell::option("-v,--verbose","durchgeführte Tätigkeiten erklären");
 	mml::shell::option("-w","Sichern der Dateien von der Windowspartition");
 	
-	foot();
+	//foot();
 	
 }
 
 
 void mml::help::copy() {
 	
-	mml::help::status("copy");
+	//mml::help::status("copy");
 
 	header("Kopieren von Dateien und Verzeichnissen"," if=QUELLE of=ZIEL ");
 
@@ -211,13 +212,13 @@ void mml::help::copy() {
 	mml::shell::option("-v, --verbose","durchgeführte Tätigkeiten erklären");
 	mml::shell::option("-vv", "More verbose printouts explaining when what is executed.");
 
-	foot();
+	//foot();
 	
 }
 
 void mml::help::farben() {
 	
-	mml::help::status("farben");
+	//mml::help::status("farben");
 	
 	header("Ändern der Formatierung","[OPTION] -t TEXT ");
 	
@@ -230,12 +231,12 @@ void mml::help::farben() {
 	mml::shell::option("-f, --formation","Ändert die Formatierung.");
 	mml::shell::option("-n, --normal","Alle neuen Einstellungen rückgängig machen");
 	
-	foot();
+	//foot();
 }
 
 void mml::help::finanzen() {
 	
-	mml::help::status("finanzen");
+	//mml::help::status("finanzen");
 	
 	header("Daten von Finanzchecker App anpassen","[OPTION] -t TEXT ");
 	
@@ -247,26 +248,24 @@ void mml::help::finanzen() {
 	mml::shell::option("-v, --verbose","Zeige zusätzliche Infos.");
 	mml::shell::option("    --verbose-extra","Zeige zusätzliche debug infos.");
 	
-	foot();
+	//foot();
 }
 	
 	
 void mml::help::hhelp() {
-	mml::help::status("hhelp");
+	//mml::help::status("hhelp");
 	header("Anzeigen der vorhandenen Befehle in /usr/local/bin");
 	std::cout << "\tAnzeige der vorhandenen, selbst geschriebenen Befehlen in dem Ordner /usr/local/bin." << std::endl << std::endl;
 	mml::shell::chapter("\nVorhandene Befehle:\n",true);
 	mml::shell::option("-a,--all","zeigt alle verfügbaren Programme mit Kurzbeschreibung an");
 	mml::shell::option("-c,--command","zeigt die Hilfeseite von einem angegebenen Programm an");
 	mml::shell::option("-h,--help","zeigt diese Hile an");
-	foot();
+	//foot();
 }
 void mml::help::hhelp_commands() {
 	// TODO automatische Erstellung aus anderer hilfeseite?
 	mml::Unix::User user;
-	std::cout << "Test" << std::endl;
-	mml::help::status("hhelp");
-	std::cout << "Test" << std::endl;
+	//mml::help::status("hhelp");
 	header("Anzeigen der vorhandenen Befehle in /usr/local/bin");
 	std::cout << "Test" << std::endl;
 	std::cout << "\tAnzeige der vorhandenen, selbst geschriebenen Befehlen in dem Ordner /usr/local/bin." << std::endl << std::endl;
@@ -315,13 +314,13 @@ void mml::help::hhelp_commands() {
 	mml::shell::option("vpn:","VPN Verbindung mit dem Raspberry Pi.(Nicht verwendbar durch Portsperrung)");
 	mml::shell::option("win:","Neustart mit Windows Boot Manager\n");
 	
-	foot();
+	//foot();
 	
 }
 
 void mml::help::R_cop(){
 	
-	mml::help::status("Raspberry/cop");
+	//mml::help::status("Raspberry/cop");
 	
 	header("Kopieren von Dateien und Ordner auf Netzwerkfestplatten");
 	
@@ -341,13 +340,13 @@ void mml::help::R_cop(){
 	mml::shell::option("-t, --Timer","Ausgabe der Dauer des Kopiervorgangs");
 	mml::shell::option("-v,--verbose","durchgeführte Tätigkeiten erklären");
 		
-	foot();
+	//foot();
 	
 }
 
 void mml::help::R_dns_filter(){
 	
-	mml::help::status("Raspberry/dns_filter");
+	//mml::help::status("Raspberry/dns_filter");
 	
 	header("Herausfiltern von unnötigen Informationen in dnsmasq.log");
 	
@@ -368,13 +367,13 @@ void mml::help::R_dns_filter(){
 	mml::shell::option("-t, --Timer","Ausgabe der Dauer des Kopiervorgangs");
 	mml::shell::option("-v, --verbose","durchgeführte Tätigkeiten erklären beim Kopieren");
 	
-	foot();
+	//foot();
 	
 }
 
 void mml::help::rechner() {
 
-	mml::help::status("rechner");
+	//mml::help::status("rechner");
 
 	header("Führt verschiedene Berechungen durch.");
 	
@@ -426,12 +425,12 @@ void mml::help::rechner() {
 	std::cout << "\tVorhandene Konstanten: pi, exp,E , P_c, P_k, P_m, P_e, P_G, P_h, P_µ, P_NA, P_u" << std::endl;
 	std::cout << "\tVorhandene Potenzen:   p, n, µ, m, k, M, G, T oder mit e" << std::endl << std::endl;
 		
-	foot();
+	//foot();
 }
 
 void mml::help::sizeof_h() {
 
-	mml::help::status("sizeof");
+	//mml::help::status("sizeof");
 
 	header("Berechnet die Größen von verschiedenen Objekte.");
 	
@@ -442,12 +441,12 @@ void mml::help::sizeof_h() {
 	mml::shell::option("-h, --help" , "Ausgabe dieser Hilfe.");
 	mml::shell::option("-n, --human","Größen in menschenlesbarem Format ausgeben.");
 			
-	foot();
+	//foot();
 }
 
 void mml::help::statistik() {
 
-	mml::help::status("statistik");
+	//mml::help::status("statistik");
 
 	header("Berechnung von statistischen Werten.");
 	
@@ -475,12 +474,12 @@ void mml::help::statistik() {
 	
 	
 	
-	foot();
+	//foot();
 }
 
 void mml::help::timer() {
 
-	mml::help::status("timer");
+	//mml::help::status("timer");
 
 	header("Timer.");
 	
@@ -500,12 +499,12 @@ void mml::help::timer() {
 	mml::shell::option("-t, --timer", "Timer benutzen.");
 	mml::shell::option("-v, --verbose","Ausgabe der verbleibenden Zeit.");
 			
-	foot();
+	//foot();
 }
 
 void mml::help::todos() {
 	
-	mml::help::status("todos");
+	//mml::help::status("todos");
 
 	header(" - Gibt die Anzahl an TODO's aus");
 	
@@ -516,11 +515,11 @@ void mml::help::todos() {
 	mml::shell::option("-i7,--gentoo-i7","TODO's Ausgabe des Gerätes gentoo-i7");
 	mml::shell::option("-pi,--raspberrypi","TODO's Ausgabe des Gerätes raspberrypi");
 	
-	foot();
+	//foot();
 }
 void mml::help::userinfo() {
 	
-	mml::help::status("userinfo");
+	//mml::help::status("userinfo");
 	
 	header("Ausgabe von Benutzerinfos");
 	
@@ -547,7 +546,7 @@ void mml::help::userinfo() {
 	mml::shell::option("-u,--user","Aktuellen Benutzer ausgeben");
 		
 		
-	foot();
+	//foot();
 }
 
 void mml::help::help(mml::string output) {
