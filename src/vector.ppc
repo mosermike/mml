@@ -1,0 +1,337 @@
+#include "vector.hpp"
+#include <iostream>
+#include "standards.hpp"
+#include <vector>
+#include <string>
+#include <algorithm> // std::sort
+#include "shell.hpp"
+#include "log.hpp"
+
+template <class T> bool mml::vector<T>::empty() noexcept{
+	return this->vec.empty();
+}
+
+
+template <class T> void mml::vector<T>::cout(bool newline) noexcept{
+	if(newline) {
+		for(uint32_t i = 0; i < vec.size(); i++)
+			std::cout << vec[i] << std::endl; 
+	}
+	else {
+		bool first_val = false;
+		for(uint32_t i = 0; i < vec.size(); i++)  {
+			if(first_val)
+				std::cout << ", ";
+			else
+				first_val = true;
+			std::cout << vec[i];
+			
+		}
+		std::cout << std::endl;
+	}
+}
+
+template <class T> std::vector<T>  mml::vector<T>::del(){
+    while(!empty())
+			pop_back();	// Da eine Initialisierung stattfindet am Anfang
+	return this->vec;
+}
+
+template <class T> bool mml::vector<T>::exist(T const& value) {
+// 	bool exist = false;
+	
+// 	if(typeid(T) == typeid(std::string)) {
+// 		
+// 		for(uint32_t i = 0; i < vec.size(); i++) {
+// 			//exist = true;//vec[i].find(value) < std::string::npos ? true : false;
+// 			if(exist)
+// 				return true;
+// 		}
+// 	}
+// 	else if(typeid(T) == typeid(mml::string)) {
+// 		for(uint32_t i = 0; i < vec.size(); i++) {
+// 			exist = true; //vec[i].find(value) < std::string::npos ? true : false;
+// 			if(exist)
+// 				return true;
+// 		}
+// 	}
+// 	else {
+		for(uint32_t i = 0; i < vec.size(); i++) {
+			if(vec[i] == value)
+				return true;
+		}
+// 	}
+		
+		
+	return false;
+}
+
+template <class T> void mml::vector<T>::get_data( std::string filepath, int skip) {	//Nach dem Zeichen border wird ausgegeben
+	// TODO doesnt work because of toT
+	std::string 		value1 	= "";			//String aus einer Linie
+	std::size_t			pos		= 0;
+	//Öffne die Datei:
+	
+	std::fstream input(filepath);
+    
+	
+    //Überprüfung, ob die Datei geöffnet wurde
+    if ( !input ){
+        std::cerr << "file not found" << std::endl;
+        
+		//return ;
+		
+	}
+    
+	//Inhalt der Datei Zahl für Zahl einlesen
+	uint32_t i = 0;
+	while (! input.eof()){
+		std::getline(input, value1);
+		
+		std::cout << toT(value1) << std::endl;
+	
+		if (i > skip )	//Korrektur des Titels, das als Zahl 0 verwertet wird
+			this->vec.push_back(toT(value1));
+		i++;
+    }
+    
+    return;
+}
+
+template <class T> std::size_t mml::vector<T>::find(const T value) {
+	if(typeid(T) != typeid(std::string)  || typeid(T) != typeid(mml::string)) {
+		mml::shell::note("[find] Umwandlung des Typids notwendig.");
+		for(uint32_t i = 0; i < vec.size(); i++) {
+			if(vec[i] == value)
+				return i;
+		}
+	}
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		return mml::to_string(vec[i]).find(mml::to_string(value).str()) < std::string::npos ? i : -1;
+	}
+	return std::string::npos;
+}
+
+template <class T> void mml::vector<T>::log(mml::string logpath, bool newline, mml::string first, mml::string last) {
+	mml::log log(logpath);
+	
+	// Etwas vorangehendes in die Logdatei
+	log.cout(first, false);
+	
+	// Werte in die Logdatei
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		log.cout(vec[i],newline);
+		// Newline oder , als Trennungszeichen
+		if(!newline && i < vec.size()-1)
+			log.cout(", ");
+	}
+	// Etwas nachgehendes in die Logdatei
+	log.cout(last, true);
+	
+}
+
+template <class T> void mml::vector<T>::pop_back(){
+	this->vec.pop_back();
+}
+
+template <class T> void mml::vector<T>::push_back(T const& value){
+	vec.push_back(value);
+}
+
+
+template <class T> std::vector<T> mml::vector<T>::replace(T old, T new1) {
+	if(typeid(T) == typeid(std::string)  || typeid(T) == typeid(mml::string)) {
+		for(uint32_t i = 0; i < vec.size(); i++) {
+			mml::string temp = mml::to_string(vec[i]);
+			if(temp.exist(mml::to_string(old).str())) {
+				temp = temp.replace(mml::to_string(old).str(),mml::to_string(new1).str());
+				vec[i] = toT(temp);
+			}
+		}
+	}
+	else {
+		for(uint32_t i = 0; i < vec.size(); i++) {
+			if(vec[i] == old)
+				vec[i] = new1;
+		}
+	}
+	return vec;
+}
+
+// template <class T> std::vector<T> mml::vector<T>::sort(bool save) {
+// 	
+// 	// NOTE ineffizient
+// 	std::vector<std::string> temp;
+// 	std::vector<T> temp1;
+// 	for(uint32_t i = 0; i < vec.size(); i++)
+// 		temp[i] = mml::to_string(vec[i]).str();
+// 	
+// 	std::sort(temp.begin(),temp.end());
+// 	
+// 	for(uint32_t i = 0; i < vec.size(); i++)
+// 			temp1[i] = toT(temp[i]);
+// 	if(save)
+// 		vec = temp1;
+// 	return temp1;
+// }
+
+// template <class T> mml::vector<T> mml::vector<T>::s_add(const T &value) {
+// 	for(uint32_t i = 0; i < vec.size(); i++) {
+// 		vec[i] = vec[i] + value;
+// 	}
+// 	return vec;
+// }
+template <class T> T mml::vector<T>::sum() {
+// 	if(typeid(T) == typeid(std::string) || typeid(T) == typeid(mml::string))
+// 		mml::shell::note("[operator^] Achtung Umwandlung u.U. notwendig.");
+	T temp = toT("0");
+	
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		temp += vec[i];
+	}
+	
+	return temp;
+}
+
+template <class T> T mml::vector<T>::toT(mml::string s) {
+				std::istringstream stream (s.str());
+				
+				if(typeid(T) == typeid(mml::string) || typeid(T) == typeid(std::string)) {
+					if(s.exist(" "))
+						mml::shell::warn_opt("[toT] everything after special character is ignored!");
+				}
+				T t;
+				stream >> t;
+				return t;
+}
+
+
+template <class T> std::vector<T> mml::vector<T>::operator+(mml::vector<T> temp) {
+	
+	// Summe nicht möglich
+	if(vec.size() != temp.size())
+		mml::shell::error("[SUM] Größe unterschiedlich.");
+	
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		vec[i] += temp[i];
+	}
+	return vec;
+}
+
+template <class T> std::vector<T> mml::vector<T>::operator+=(mml::vector<T> temp) {
+	
+	// Summe nicht möglich
+	if(vec.size() != temp.size())
+		mml::shell::error("[SUM] Größe unterschiedlich.");
+	
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		vec[i] += temp[i];
+	}
+	return vec;
+}
+
+template <class T> std::vector<T> mml::vector<T>::operator^(const double exponent) {
+	
+	if(typeid(T) == typeid(std::string) || typeid(T) == typeid(mml::string))
+		mml::shell::error("[operator^] Inkompatibler Typid");
+	if(typeid(T) != typeid(double))
+		mml::shell::note("[operator^] Achtung Umwandlung u.U. notwendig.");
+	for(uint32_t i = 0; i < vec.size(); i++) {
+		vec[i] = std::pow(mml::atof(vec[i]),exponent);
+	}
+	return vec;
+}
+
+/**
+ * @note double
+ */
+template void mml::vector<double>::cout(bool newline = false) noexcept;
+template std::vector<double>  mml::vector<double>::del();
+template bool mml::vector<double>::exist(const double& value);
+template void mml::vector<double>::get_data( std::string filepath, int skip);
+template std::size_t mml::vector<double>::find(const double value);
+template void mml::vector<double>::log(mml::string logpath, bool newline, mml::string first, mml::string last);
+template std::vector<double> mml::vector<double>::replace(double old, double new1);
+// template mml::vector<double> mml::vector<double>::s_add(const double &value);
+// template std::vector<double> mml::vector<double>::sort(bool save);
+template double mml::vector<double>::sum();
+template double mml::vector<double>::toT(mml::string s);
+template std::vector<double> mml::vector<double>::operator+(vector<double> temp);
+template std::vector<double> mml::vector<double>::operator+=(vector<double> temp);
+template std::vector<double> mml::vector<double>::operator^(const double exponent);
+/**
+ * @note int
+ */
+template void mml::vector<int>::cout(bool newline = false) noexcept;
+template std::vector<int>  mml::vector<int>::del();
+template bool mml::vector<int>::exist(const int& value);
+template void mml::vector<int>::get_data( std::string filepath, int skip);
+template std::size_t mml::vector<int>::find(const int value);
+template void mml::vector<int>::log(mml::string logpath, bool newline, mml::string first, mml::string last);
+template std::vector<int> mml::vector<int>::replace(int old, int new1);
+// template mml::vector<int> mml::vector<int>::s_add(const int &value);
+// template std::vector<int> mml::vector<int>::sort(bool save);
+template int mml::vector<int>::sum();
+template int mml::vector<int>::toT(mml::string s);
+template std::vector<int> mml::vector<int>::operator+(vector<int> temp);
+template std::vector<int> mml::vector<int>::operator+=(vector<int> temp);
+template std::vector<int> mml::vector<int>::operator^(const double exponent);
+/**
+ * @note std::string
+ */
+template void mml::vector<std::string>::cout(bool newline = false) noexcept;
+template std::vector<std::string>  mml::vector<std::string>::del();
+template bool mml::vector<std::string>::exist(const std::string& value);
+template void mml::vector<std::string>::get_data( std::string filepath, int skip);
+template std::size_t mml::vector<std::string>::find(const std::string value);
+template void mml::vector<std::string>::log(mml::string logpath, bool newline, mml::string first, mml::string last);
+template std::vector<std::string> mml::vector<std::string>::replace(std::string old, std::string new1);
+// template mml::vector<std::string> mml::vector<std::string>::s_add(const std::string &value);
+// template std::vector<std::string> mml::vector<std::string>::sort(bool save);
+template std::string mml::vector<std::string>::sum();
+template std::string mml::vector<std::string>::toT(mml::string s);
+template std::vector<std::string> mml::vector<std::string>::operator+(vector<std::string> temp);
+template std::vector<std::string> mml::vector<std::string>::operator+=(vector<std::string> temp);
+template std::vector<std::string> mml::vector<std::string>::operator^(const double exponent);
+/**
+ * @note mml::string
+ */
+template <> mml::vector<mml::string>::vector();
+template bool mml::vector<mml::string>::empty() noexcept;
+template void mml::vector<mml::string>::cout(bool newline = false) noexcept;
+template std::vector<mml::string>  mml::vector<mml::string>::del();
+template bool mml::vector<mml::string>::exist(const mml::string& value);
+template void mml::vector<mml::string>::get_data( std::string filepath, int skip);
+template std::size_t mml::vector<mml::string>::find(const mml::string value);
+template void mml::vector<mml::string>::log(mml::string logpath, bool newline, mml::string first, mml::string last);
+template void mml::vector<mml::string>::pop_back();
+template void mml::vector<mml::string>::push_back(mml::string const& value);
+template std::vector<mml::string> mml::vector<mml::string>::replace(mml::string old, mml::string new1);
+// template mml::vector<mml::string> mml::vector<mml::string>::s_add(const mml::string &value);
+// template std::vector<mml::string> mml::vector<mml::string>::sort(bool save);
+template std::size_t mml::vector<mml::string>::size() const noexcept;
+template mml::string mml::vector<mml::string>::sum();
+template mml::string mml::vector<mml::string>::toT(mml::string s);
+template std::vector<mml::string> mml::vector<mml::string>::operator+(vector<mml::string> temp);
+template std::vector<mml::string> mml::vector<mml::string>::operator+=(vector<mml::string> temp);
+template std::vector<mml::string> mml::vector<mml::string>::operator^(const double exponent);
+
+
+
+/**
+ * @note XXX
+ */
+// template void mml::vector<XXX>::cout(bool newline = false) noexcept;
+// template std::vector<XXX>  mml::vector<XXX>::del();
+// template bool mml::vector<XXX>::exist(const XXX& value);
+//template void mml::vector<XXX>::get_data( std::string filepath, uint16_t skip);
+// template std::size_t mml::vector<XXX>::find(const XXX value);
+// template void mml::vector<XXX>::log(mml::string logpath, bool newline, mml::string first);
+// template std::vector<XXX> mml::vector<XXX>::replace(XXX old, XXX new1);
+// // template mml::vector<XXX> mml::vector<XXX>::s_add(const XXX &value);
+// // template std::vector<XXX> mml::vector<XXX>::sort(bool save);
+// template XXX mml::vector<XXX>::sum();
+// template XXX mml::vector<XXX>::toT(mml::string s);
+// template std::vector<XXX> mml::vector<XXX>::operator+(vector<XXX> temp);
+// template std::vector<XXX> mml::vector<XXX>::operator+=(vector<XXX> temp);
+// template std::vector<XXX> mml::vector<XXX>::operator^(const double exponent);
