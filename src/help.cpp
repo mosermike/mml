@@ -7,35 +7,28 @@
 */
 #include <iostream>
 #include <fstream>
-#include "help.hpp"
+#include "mml/help.hpp"
 #include <mml.hpp>
 
-
-#ifndef ____HELP__EXIST__
-#define ____HELP__EXIST__
-std::string		BEFEHL		= "BEFEHL";
-int 			YEAR		= 0000;
-std::string		MONTH		= "MONTH";
-double			VERSION		= 0.0;
-#endif
 
 void mml::help::header(std::string befehl, std::string option) {
 	
 	mml::shell::chapter("NAME",true);
-	std::cout << "\t" << BEFEHL << " - " << befehl << std::endl;
+	std::cout << "\t" << befehl << " - " << befehl << std::endl;
 	mml::shell::letter("white");
 	mml::shell::chapter("CALL",true);
-	mml::shell::chapter("\t" + BEFEHL,false);
+	mml::shell::chapter("\t" + befehl,false);
 	std::cout << option << " [OPTION]" << std::endl;
 	mml::shell::chapter("DESCRIPTION",true);
 }
 
-void mml::help::foot(std::string version, std::string month, double year) {
+void mml::help::foot(std::string version, std::string month, int year) {
 	
 	mml::shell::chapter("AUTHOR",true);
 	std::cout << "Written from Mike Moser" << std::endl << std::endl;
 	std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << " " << year << std::endl;
 }
+
 /*
 void mml::help::status(mml::string befehl) {
 	mml::Unix::User user;
@@ -88,7 +81,6 @@ void mml::help::status(mml::string befehl) {
 void mml::help::check_root() {
 	
 	//mml::help::status("check_root");
-	
 	header("Check for root rights");
 	
 	std::cout << "\tCheck, whether the executing user has root rights or not." << std::endl << std::endl;

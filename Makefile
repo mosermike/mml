@@ -18,7 +18,7 @@ INCLUDE += -I include -I include/mml
 
 LIBRARY += -L ./
 
-INSTALL_DIR = /usr/local/lib
+INSTALL_DIR = /usr/lib
 
 SRC = $(wildcard src/*.cpp)
 OBJ = $(SRC:%.cpp=%.o)

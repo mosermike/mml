@@ -11,8 +11,8 @@
 #ifndef __HELP__
 #define __HELP__
 
-#include <mml.hpp>
-
+#include <mml/standards.hpp>
+#include <iostream>
 // TODO letzte Zeile Informationen bestimmen (Version, Jahr)
 
 namespace mml {
@@ -45,10 +45,12 @@ namespace mml {
 		
 		/**
 		 * @note Ausgabe der Fußzeile mit Angabe zum Autor und Datum
-		 * 
+		 * @param string Version Number
+		 * @param string Month
+		 * @param int year
 		 * @author Mike
 		 */
-		void foot(std::string version, std::string month, double year);
+		void foot(std::string version, std::string month, int year);
 		
 		// TODO sha256
 
