@@ -394,11 +394,6 @@ void mml::help::rechner() {
 	mml::shell::option("-lb, --log_backup", "Backup der Logdatei");
 	mml::shell::option("-m, --matrix" , "Multiplzieren und Addieren von Matrizen.Matrixform [[1.,Reihe],[2.,Reihe]]");
 	mml::shell::option("-ml, --matrix-latex" , "Format in Latex. (Achtung Matrix endet und startet mit '|')");
-	mml::shell::option("-o, --oldresult" , "Übernahme des alten Resultates an der Stelle &.");
-	mml::shell::option("-o+" , "Übernahme des alten Resultates und addieren zum Ergebnis.");
-	mml::shell::option("-o-" , "Übernahme des alten Resultates und subtrahieren zum Ergebnis.");
-	mml::shell::option("-o*" , "Übernahme des alten Resultates und multiplizieren zum Ergebnis.");
-	mml::shell::option("-o/" , "Übernahme des alten Resultates und dividieren zum Ergebnis.");
 	mml::shell::option("-t, --timer", "Ausgabe der Dauer der Berechnung");
 	mml::shell::option("-tr, --transpose" , "Transponierte einer Matrix berechnen. Mit -m Matrix übergeben");
 	mml::shell::option("-u" , "Wertzuweisung einer oder mehreren unbekannten Variable(n) mit Trennzeichen ':' in der Gleichung. z.B. -u x=2");

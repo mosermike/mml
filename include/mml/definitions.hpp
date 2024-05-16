@@ -54,13 +54,13 @@
 #define _m_sec
 #define _d_sec
 // Logdateien
-#define _check_root_log 	"/var/log/own/check_root.log"
-#define _cifs_log 			"/var/log/own/cifs.log"
-#define _cop_log 			"/var/log/own/cop.log"
-#define _copy_log 			"/var/log/own/copy.log"
-#define _rechner_log 		"/var/log/own/rechner.log"
-#define _statistik_log 		"/var/log/own/statistik.log"
-#define _timer_log			"/var/log/own/timer.log"
+#define _check_root_log 	"/var/log/check_root.log"
+#define _cifs_log 			"/var/log/cifs.log"
+#define _cop_log 			"/var/log/cop.log"
+#define _copy_log 			"/var/log/copy.log"
+//#define _rechner_log 		"/var/log/rechner.log"
+#define _statistik_log 		"/var/log/statistik.log"
+#define _timer_log			"/var/log/timer.log"
 
 // Logdateien Raspberry
 #define _backup_log "/var/log/backup.log"
