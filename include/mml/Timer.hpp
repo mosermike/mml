@@ -12,7 +12,6 @@
 #include <chrono>
 #include <cstdint>
 
-#include "mml.hpp"
 
 namespace mml {
 	/**

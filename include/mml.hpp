@@ -20,16 +20,16 @@
 #define __MML_HPP__
 
 
-#include <definitions.hpp>
-#include <file.hpp>
-#include <functions.hpp>
-#include <help.hpp>
-#include <log.hpp>
-#include <shell.hpp>
-#include <standards.hpp>
-#include <Thread.hpp>
-#include <Timer.hpp>
-#include <Unix.hpp>
-#include <vector.hpp>
+#include "mml/definitions.hpp"
+#include "mml/file.hpp"
+#include "mml/functions.hpp"
+#include "mml/help.hpp"
+#include "mml/log.hpp"
+#include "mml/shell.hpp"
+#include "mml/standards.hpp"
+#include "mml/Thread.hpp"
+#include "mml/Timer.hpp"
+#include "mml/Unix.hpp"
+#include "mml/vector.hpp"
 
 #endif

@@ -13,11 +13,7 @@
 #include <vector>
 #include <string>
 #include "standards.hpp"
-
-
-// TODO
 #include <iostream>
-#include <standards.hpp>
 #include <vector>
 #include <string>
 #include <algorithm> // std::sort
