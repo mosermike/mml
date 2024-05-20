@@ -5,8 +5,8 @@
  * Different definitions
  * 
 */
-#ifndef __DEFINITIONS__
-#define __DEFINITIONS__
+#ifndef MML_INCLUDE_MML_DEFINITIONS_HPP
+#define MML_INCLUDE_MML_DEFINITIONS_HPP
 
 // Definitions for the Bytes
 #define _1B 	       8	//dd blockSize 1B

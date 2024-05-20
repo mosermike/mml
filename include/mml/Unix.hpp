@@ -7,8 +7,8 @@
  * : 
 */
 
-#ifndef __UNIX__
-#define __UNIX__
+#ifndef MML_INCLUDE_MML_UNIX_HPP
+#define MML_INCLUDE_MML_UNIX_HPP
 
 #ifdef __linux__
 

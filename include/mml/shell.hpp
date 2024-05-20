@@ -6,8 +6,8 @@
  * 
 */
 
-#ifndef __SHELL_HPP__
-#define __SHELL_HPP__ 
+#ifndef MML_INCLUDE_MML_SHELL_HPP
+#define MML_INCLUDE_MML_SHELL_HPP 
 #include <iostream>
 #include <vector>
 #include "vector.hpp"

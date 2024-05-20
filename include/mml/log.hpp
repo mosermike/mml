@@ -6,8 +6,8 @@
  * 
 */
 
-#ifndef __LOG_HPP__
-#define __LOG_HPP__
+#ifndef MML_INCLUDE_MML_LOG_HPP
+#define MML_INCLUDE_MML_LOG_HPP
 
 #include <iostream>
 #include <fstream>

@@ -7,8 +7,8 @@
  * : 
 */
 
-#ifndef __THREAD__
-#define __THREAD__
+#ifndef MML_INCLUDE_MML_THREAD_HPP
+#define MML_INCLUDE_MML_THREAD_HPP
 
 #include <iostream>       // std::cout
 #include <thread>         // std::thread, std::thread::id, std::this_thread::get_id

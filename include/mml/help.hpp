@@ -8,8 +8,8 @@
 
 //#ifdef __HELP__EXIST__
 
-#ifndef __HELP__
-#define __HELP__
+#ifndef MML_INCLUDE_MML_HELP_HPP
+#define MML_INCLUDE_MML_HELP_HPP
 
 #include <mml/standards.hpp>
 #include <iostream>

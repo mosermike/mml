@@ -6,8 +6,8 @@
  * 
 */
 
-#ifndef __STANDARDS_HPP__
-#define __STANDARDS_HPP__
+#ifndef MML_INCLUDE_MML_STANDARDS_HPP
+#define MML_INCLUDE_MML_STANDARDS_HPP
 
 // #include <standards.hpp>
 // #include <vector.hpp>

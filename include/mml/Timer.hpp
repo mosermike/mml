@@ -6,8 +6,8 @@
  * 
 */
 
-#ifndef _TIMER_HPP_
-#define _TIMER_HPP_
+#ifndef MML_INCLUDE_MML_TIMER_HPP
+#define MML_INCLUDE_MML_TIMER_HPP
 
 #include <chrono>
 #include <cstdint>

@@ -8,8 +8,8 @@
  * 
 */
 
-#ifndef __FILE_HPP__
-#define __FILE_HPP__
+#ifndef MML_INCLUDE_MML_FILE_HPP
+#define MML_INCLUDE_MML_FILE_HPP
 
 #include <functional>
 #include "functions.hpp"
