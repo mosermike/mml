@@ -57,30 +57,8 @@ namespace mml {
 		string(){}
 		
 		/**
-		 * Assign the value of the string with the '=' sign
-		 * @param char* String value
-		 * @return Class instance
-		*/
-		string &operator=(const char* value_direct){
-			this->value= std::string(value_direct);
-			this->save_value = this->value;
-			return *this;	
-		}
-		
-		/**
-		 * Assign the value of the string with the '=' sign
-		 * @param string Value
-		 * @return Class instance
-		*/
-		string &operator=(std::string value_undirect){
-			this->value = value_undirect;
-			save_value = value;
-			return *this;
-		}	// Zuweisung über = an value
-		
-		/**
-		 * Assign the value of the string with the '=' sign and convert T
-		 * @param T Value
+		 * Assign the value of the template type with the '=' sign 
+		 * @param template Value
 		 * @return Class instance
 		*/
 		template <typename T> mml::string& operator=(T value) {
@@ -91,19 +69,7 @@ namespace mml {
 			save_value = str_value;
 			return *this;
     	}	// Zuweisung über = an value
-		/*
-		string &operator=(int value){
-			this->value = std::to_string(value);
-			save_value = value;
-			return *this;
-		}	// Zuweisung über = an value
 		
-		string &operator=(char value){
-			this->value += value;
-			save_value = value;
-			return *this;
-		}	// Zuweisung über = an value
-		*/
 
 		/**
 		 * Output the value of the string via a stream

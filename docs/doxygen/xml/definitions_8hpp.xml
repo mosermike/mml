@@ -529,17 +529,6 @@
         </inbodydescription>
         <location file="include/mml/definitions.hpp" line="70" column="9" bodyfile="include/mml/definitions.hpp" bodystart="70" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1aa95dde2e230f36a47adad3036a17db6f" prot="public" static="no">
-        <name>_location</name>
-        <initializer>(std::string) &quot;to nowhere&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="74" column="9" bodyfile="include/mml/definitions.hpp" bodystart="74" bodyend="-1"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -617,14 +606,10 @@
 <codeline lineno="69" refid="definitions_8hpp_1a5dad0090f1fb5c7ad5153cdbb2522374" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_alma<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;192.168.20.99&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="70" refid="definitions_8hpp_1a326b6e0b534b07584518c6713b4ee427" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_printer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;192.168.20.20&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>home<sp/>file</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_location</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="definitions_8hpp_1aa95dde2e230f36a47adad3036a17db6f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_location<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(std::string)<sp/>&quot;to<sp/>nowhere&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/mml/definitions.hpp"/>
   </compounddef>

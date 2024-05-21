@@ -21,13 +21,7 @@ mml::string
 .RI "\fBstring\fP ()"
 .br
 .ti -1c
-.RI "\fBstring\fP & \fBoperator=\fP (const char *value_direct)"
-.br
-.ti -1c
-.RI "\fBstring\fP & \fBoperator=\fP (std::string value_undirect)"
-.br
-.ti -1c
-.RI "template<typename T > \fBstring\fP & \fBoperator=\fP (T value)"
+.RI "template<typename T > \fBmml::string\fP & \fBoperator=\fP (T value)"
 .br
 .ti -1c
 .RI "bool \fBoperator==\fP (const std::string test)"
@@ -704,40 +698,12 @@ Instance of this class
 .RE
 .PP
 
-.SS "\fBstring\fP& mml::string::operator= (const char * value_direct)\fC [inline]\fP"
-Assign the value of the string with the '=' sign 
+.SS "template<typename T > \fBmml::string\fP& mml::string::operator= (T value)\fC [inline]\fP"
+Assign the value of the template type with the '=' sign 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar*\fP String value 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Class instance 
-.RE
-.PP
-
-.SS "\fBstring\fP& mml::string::operator= (std::string value_undirect)\fC [inline]\fP"
-Assign the value of the string with the '=' sign 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP Value 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Class instance 
-.RE
-.PP
-
-.SS "template<typename T > \fBstring\fP& mml::string::operator= (T value)\fC [inline]\fP"
-Assign the value of the string with the '=' sign and convert T 
-.PP
-\fBParameters\fP
-.RS 4
-\fIT\fP Value 
+\fItemplate\fP Value 
 .RE
 .PP
 \fBReturns\fP

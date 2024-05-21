@@ -71,9 +71,7 @@
     <member refid="classmml_1_1string_1a408dfc4afe91314d4ccfdc56f01cce41" kind="function"><name>string</name></member>
     <member refid="classmml_1_1string_1a7a37e84dd180565fcb732a7c4bba8f01" kind="function"><name>string</name></member>
     <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" kind="function"><name>string</name></member>
-    <member refid="classmml_1_1string_1ad0965ccb326d08eb33afbbf37369227f" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1string_1a4a3ea43015b50e8b3033aab469326cab" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1string_1a2b94555504f824b035dae40e61ba2e9d" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1string_1ad39a6c49832f61a5cbc113c4ed90d687" kind="function"><name>operator=</name></member>
     <member refid="classmml_1_1string_1a284e9eb3658cd4b4aabb949fff56aeb1" kind="function"><name>operator==</name></member>
     <member refid="classmml_1_1string_1a8046ca739b1d09e2124de5357ecc3cf8" kind="function"><name>operator==</name></member>
     <member refid="classmml_1_1string_1a82b8a1e77beb95e2c47b14f26b45bdfc" kind="function"><name>operator==</name></member>
@@ -376,7 +374,6 @@
     <member refid="definitions_8hpp_1a32c4cbbb5844356bf537e38f6012d1dc" kind="define"><name>_backup_log</name></member>
     <member refid="definitions_8hpp_1a5dad0090f1fb5c7ad5153cdbb2522374" kind="define"><name>_alma</name></member>
     <member refid="definitions_8hpp_1a326b6e0b534b07584518c6713b4ee427" kind="define"><name>_printer</name></member>
-    <member refid="definitions_8hpp_1aa95dde2e230f36a47adad3036a17db6f" kind="define"><name>_location</name></member>
   </compound>
   <compound refid="file_8hpp" kind="file"><name>file.hpp</name>
   </compound>
