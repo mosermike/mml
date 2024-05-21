@@ -5,7 +5,7 @@
 
 PROJECT = libmml
 
-DVARS = -D_location=\"$(PWD)\"
+#DVARS = -D_location=\"$(PWD)\"
 
 GCC = /usr/bin/g++
 

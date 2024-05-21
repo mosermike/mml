@@ -69,10 +69,6 @@
 #define _alma		    "192.168.20.99"
 #define _printer		"192.168.20.20"
 
-// home file
-#ifndef _location
-#define _location       (std::string) "to nowhere"
-#endif
 
 
 #endif

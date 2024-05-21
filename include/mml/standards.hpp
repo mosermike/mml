@@ -24,7 +24,6 @@ namespace mml {
 		class arg;
 	}
 	
-	
 	/**
 	 * Class string which adds additional functions to std::string
 	 * 
@@ -84,11 +83,14 @@ namespace mml {
 		 * @param T Value
 		 * @return Class instance
 		*/
-		template<typename T> string &operator=(T value){
-			this->value = std::to_string(value);
-			save_value = value;
+		template <typename T> mml::string& operator=(T value) {
+			std::ostringstream stream;
+			stream << value;
+			std::string str_value = stream.str();
+
+			save_value = str_value;
 			return *this;
-		}	// Zuweisung über = an value
+    	}	// Zuweisung über = an value
 		/*
 		string &operator=(int value){
 			this->value = std::to_string(value);

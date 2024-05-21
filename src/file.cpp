@@ -738,7 +738,7 @@ int mml::file::Program_exist( std::string program ){
 	} while(pos < std::string::npos);
 	
 	for(uint32_t i = 0; i < path.size(); i++){
-		files = path[i].ls(path,"");
+		files = path[i].ls("","");
 	
 		for(uint32_t a = 0; a < files.size(); a++){
 			if(files[a] == program)
@@ -762,7 +762,7 @@ void mml::file::remove(std::string file) {
 
 void mml::file::set_date(mml::shell::arg args, mml::string src, mml::string dst, bool extend, bool verbose) {
 
-	std::vector<std::string> files = src.ls(args); // Files in source
+	std::vector<std::string> files = src.ls("","",args.exist("-r","--recursive"), args.exist("-a","--all")); // Files in source
 	std::vector<std::string> ends = {"NEF","tif","JPG","jpg","MP4","MOV","PNG","HEIC","JPEG","jpeg","pdf", "PDF"}; // endings to be checked
 
 	for(uint32_t i = 1; i < files.size(); i++) {
@@ -852,7 +852,7 @@ std::string mml::file::size_human(const std::string& filename, bool ausgabe) {
 std::string mml::file::size_dir(mml::shell::arg args, mml::string& dir, bool ausgabe, std::string include, std::string exclude) {
 	std::size_t						size		= 0;
 	std::string						size_str	= "";
-	const std::vector<std::string>	ls			= dir.ls(args, include, exclude);
+	const std::vector<std::string>	ls			= dir.ls(include, exclude, args.exist("-r","--recursive"), args.exist("-a", "--all"));
 	
 	for(uint32_t i = 0; i < ls.size(); i++) {
 		if(ls[i][ls[i].size()-1] != '/')

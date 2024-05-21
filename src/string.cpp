@@ -392,15 +392,6 @@ void mml::string::getline(std::ifstream& input) {
 }
 
 
-std::string mml::string::getline(std::string input) {
-	
-	std::ifstream input1(input);
-	std::getline(input1,value);
-	input1.close();
-	
-	return value;
-}
-
 std::string mml::string::getline(std::string input, std::size_t line){
 	std::ifstream input1(input);
 	std::string del;
