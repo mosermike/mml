@@ -1,0 +1,149 @@
+.TH "include/mml/functions.hpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/mml/functions.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'standards\&.hpp'\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <random>\fP
+.br
+\fC#include <float\&.h>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmml\fP"
+.br
+.ti -1c
+.RI " \fBmml::shell\fP"
+.br
+.ti -1c
+.RI " \fBmml::functions\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr uint32_t \fBmml::functions::const_string_hash\fP (const char *string)"
+.br
+.in -1c
+.PP
+.RI "\fBfunctions\&.cpp\fP"
+.br
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+Enthält verschiedene Funktionen 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "uint32_t \fBmml::functions::count_sym\fP (std::string test, char symbol)"
+.br
+.ti -1c
+.RI "void \fBmml::functions::cout\fP (std::vector< std::string > vec)"
+.br
+.ti -1c
+.RI "void \fBmml::functions::cout\fP (std::vector< \fBmml::string\fP > vec)"
+.br
+.ti -1c
+.RI "void \fBmml::functions::cout\fP (std::vector< double > vec)"
+.br
+.ti -1c
+.RI "void \fBmml::functions::cout\fP (std::vector< int > vec)"
+.br
+.ti -1c
+.RI "std::string \fBmml::functions::declare_month\fP (int month_nr)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBmml::functions::erase\fP (std::vector< std::string > data)"
+.br
+.ti -1c
+.RI "std::vector< \fBmml::string\fP > \fBmml::functions::erase\fP (std::vector< \fBmml::string\fP > data)"
+.br
+.ti -1c
+.RI "std::vector< double > \fBmml::functions::erase\fP (std::vector< double > data)"
+.br
+.ti -1c
+.RI "std::vector< int > \fBmml::functions::erase\fP (std::vector< int > data)"
+.br
+.ti -1c
+.RI "int \fBmml::functions::get_random\fP (int min=0, int max=100)"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::functions::smallest_num\fP (std::vector< std::size_t > values, std::size_t pos=0)"
+.br
+.ti -1c
+.RI "std::string \fBmml::functions::random_str\fP (uint32_t letters=10, std::string value='')"
+.br
+.ti -1c
+.RI "std::vector< double > \fBmml::functions::Add_Vector\fP (std::vector< double > vector1, std::vector< double > vector2)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBmml::functions::Add_Vector\fP (std::vector< std::string > vector1, std::vector< std::string > vector2)"
+.br
+.ti -1c
+.RI "uint32_t \fBmml::functions::cifs\fP (std::string src, std::string dst, \fBmml::string\fP fstype, std::string user, std::string pass)"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::functions::digits\fP (double number)"
+.br
+.ti -1c
+.RI "std::vector< double > \fBmml::functions::Get_Values\fP (std::string filepath, int16_t min_value=0)"
+.br
+.ti -1c
+.RI "void \fBmml::functions::getline\fP (std::ifstream &input, \fBmml::string\fP &String)"
+.br
+.ti -1c
+.RI "std::string \fBmml::functions::lower\fP (std::string input)"
+.br
+.ti -1c
+.RI "double \fBmml::functions::Mean_of_Vector\fP (std::vector< double > values, bool ausgabe=false)"
+.br
+.ti -1c
+.RI "double \fBmml::functions::Mean_of_Array\fP (double array[], uint16_t length, bool ausgabe=false)"
+.br
+.ti -1c
+.RI "std::string \fBmml::functions::mount_Dir\fP (\fBmml::shell::arg\fP args, std::string mountpath, string mountpoint, string controlpoint, std::string user, std::string pass1, const char *fstype, int count)"
+.br
+.ti -1c
+.RI "bool \fBmml::functions::unmount_dir\fP (std::string mount_dir, std::string controlpoint='')"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Enthält verschiedene Funktionen 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

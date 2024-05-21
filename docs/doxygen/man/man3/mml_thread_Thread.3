@@ -1,0 +1,134 @@
+.TH "mml::thread::Thread" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::thread::Thread
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Thread\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThread\fP ()"
+.br
+.ti -1c
+.RI "\fBThread\fP (const \fBThread\fP &thread_copy)"
+.br
+.ti -1c
+.RI "\fBThread\fP (int max_i2)"
+.br
+.ti -1c
+.RI "\fBThread\fP & \fBoperator=\fP (const \fBThread\fP &thread_temp)"
+.br
+.ti -1c
+.RI "void \fBset_max_i\fP (int max_temp)"
+.br
+.ti -1c
+.RI "void \fBthread_writing_true\fP ()"
+.br
+.ti -1c
+.RI "void \fBthread_writing_false\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis_writing_active\fP ()"
+.br
+.ti -1c
+.RI "void \fBthread_sleep\fP (float second)"
+.br
+.ti -1c
+.RI "void \fBthread_sleep_millisecond\fP (uint32_t millisecond)"
+.br
+.ti -1c
+.RI "bool \fBwaiting\fP (int a=0)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mml::thread::Thread::Thread ()\fC [inline]\fP"
+
+.SS "mml::thread::Thread::Thread (const \fBThread\fP & thread_copy)\fC [inline]\fP"
+
+.SS "mml::thread::Thread::Thread (int max_i2)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool mml::thread::Thread::is_writing_active ()"
+
+.SS "\fBThread\fP& mml::thread::Thread::operator= (const \fBThread\fP & thread_temp)\fC [inline]\fP"
+
+.SS "void mml::thread::Thread::set_max_i (int max_temp)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Die maximale Anzahl an vorhandenen Threads
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::thread::Thread::thread_sleep (float second)"
+
+.PP
+\fBNote\fP
+.RS 4
+Versetzt den aktuellen \fBThread\fP in den Sleep-Modus
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::thread::Thread::thread_sleep_millisecond (uint32_t millisecond)"
+
+.SS "void mml::thread::Thread::thread_writing_false ()"
+
+.SS "void mml::thread::Thread::thread_writing_true ()"
+
+.PP
+\fBNote\fP
+.RS 4
+aktuelles Schreiben aktiv oder nicht aktiv setzen und dessen Abfrage
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike
+.PP
+Mike Moser
+.RE
+.PP
+Programm: \fBThread\&.cpp\fP
+.PP
+Enthält verschiedene Funktionen für Threads 
+.SS "bool mml::thread::Thread::waiting (int a = \fC0\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Wartefunktion beim mehrfachen Schreiben Nicht immer gleiche Reihenfolge, wenn a nicht verwendet\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true, wenn kein \fBThread\fP mehr schreiben will 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

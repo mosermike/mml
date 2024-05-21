@@ -1,0 +1,393 @@
+.TH "mml::file" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::file
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBadd_twofiles\fP (std::string filepath_input1, std::string filepath_input2, std::string filepath_output)"
+.br
+.ti -1c
+.RI "std::size_t \fBbyteCopy\fP (const std::string &src, const std::string &dest, std::size_t num, std::size_t blockSize, bool progress=false, std::string fullsize='')"
+.br
+.ti -1c
+.RI "uint32_t \fBcopy\fP (\fBshell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in='', std::string name_ex='')"
+.br
+.ti -1c
+.RI "std::size_t \fBcopyFile\fP (\fBshell::arg\fP args, std::string src, std::string dst)"
+.br
+.ti -1c
+.RI "bool \fBequal\fP (std::string src, std::string dst)"
+.br
+.ti -1c
+.RI "int32_t \fBfiletype\fP (std::string filepath)"
+.br
+.ti -1c
+.RI "std::string \fBhumanread\fP (std::size_t number)"
+.br
+.ti -1c
+.RI "std::size_t \fBnum_lines\fP (std::string path)"
+.br
+.ti -1c
+.RI "int \fBProgram_exist\fP (std::string program)"
+.br
+.ti -1c
+.RI "void \fBremove\fP (std::string file)"
+.br
+.ti -1c
+.RI "void \fBset_date\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, bool extend=true, bool verbose=false)"
+.br
+.ti -1c
+.RI "std::size_t \fBsize\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "std::string \fBsize_human\fP (const std::string &filename, bool ausgabe=true)"
+.br
+.ti -1c
+.RI "std::string \fBsize_dir\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP &dir, bool ausgabe=false, std::string include='', std::string exclude='')"
+.br
+.ti -1c
+.RI "time_t \fBtime_mod\fP (const std::string &filename)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void mml::file::add_twofiles (std::string filepath_input1, std::string filepath_input2, std::string filepath_output)"
+
+.PP
+\fBNote\fP
+.RS 4
+Zwei Dateien zu einer zusammenfügen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::file::byteCopy (const std::string & src, const std::string & dest, std::size_t num, std::size_t blockSize, bool progress = \fCfalse\fP, std::string fullsize = \fC''\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Kopiervorgang einer Datei mit/ohne Fortschrittsanzeige
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Länge von Gesamtgröße 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike, Lucas 
+.RE
+.PP
+
+.SS "uint32_t mml::file::copy (\fBshell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in = \fC''\fP, std::string name_ex = \fC''\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Kopiert einen Quellpfad zu einem Quellpfad
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::file::copyFile (\fBshell::arg\fP args, std::string src, std::string dst)"
+
+.PP
+\fBNote\fP
+.RS 4
+Copy a file with determining the block size from the arguments
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Arguments from the shell 
+.br
+\fIstring\fP Source 
+.br
+\fIstring\fP Destination 
+.br
+\fIstring\fP Copy only files where this string exists 
+.br
+\fIstring\fP Copy only files where this string does not exist
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::file::equal (std::string src, std::string dst)"
+
+.PP
+\fBNote\fP
+.RS 4
+Compare two files by using the SHA256 algorithm\&. Only works for linux\&.
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "int32_t mml::file::filetype (std::string filepath)"
+
+.PP
+\fBNote\fP
+.RS 4
+Determine the type of an object (directory, file, etc\&.) 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Path to the object 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns a number\&. For interpretation look at \fBdefinitions\&.hpp\fP 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::file::humanread (std::size_t number)"
+
+.PP
+\fBNote\fP
+.RS 4
+Convert number into human readable number 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize_t\fP A number to be converted 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::file::num_lines (std::string path)"
+
+.PP
+\fBNote\fP
+.RS 4
+Determine number of lines in a file 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Path to the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+size_t Number of lines 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "int mml::file::Program_exist (std::string program)"
+
+.PP
+\fBNote\fP
+.RS 4
+Exisiert das Programm
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::file::remove (std::string file)"
+
+.PP
+\fBNote\fP
+.RS 4
+Delete a single file 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP path to the file 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::file::set_date (\fBmml::shell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, bool extend = \fCtrue\fP, bool verbose = \fCfalse\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Convert date of pictures\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Arguments from shell 
+.br
+\fIstring\fP Source path 
+.br
+\fIstring\fP Destination path 
+.br
+\fIbool\fP Check extended endings\&. False => Only NEF and HEIC 
+.br
+\fIbool\fP Verbose output\&.
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::file::size (const std::string & filename)"
+
+.PP
+\fBNote\fP
+.RS 4
+Calculates the size of a file 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Path to the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+size_t Size of the file 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas 
+.RE
+.PP
+
+.SS "std::string mml::file::size_dir (\fBmml::shell::arg\fP args, \fBmml::string\fP & dir, bool ausgabe = \fCfalse\fP, std::string include = \fC''\fP, std::string exclude = \fC''\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Calculates the size of a directory structure 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIarg\fP Arguments from the shell 
+.br
+\fIstring\fP Path to the directory 
+.br
+\fIbool\fP print out 
+.br
+\fIstring\fP Include only count objects having this string in its name 
+.br
+\fIstring\fP Exclude objects with this name from the count 
+.RE
+.PP
+\fBAttention\fP
+.RS 4
+Arguments must be correct!
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Gibt die Größe des Ordners zurück 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::file::size_human (const std::string & filename, bool ausgabe = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Calculates the size of a file 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Path to the file 
+.br
+\fIbool\fP Print out 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Returns the size of a file in a readable form as a string 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "time_t mml::file::time_mod (const std::string & filename)"
+
+.PP
+\fBNote\fP
+.RS 4
+Returns the last modified time of a file in seconds 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Path to the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Seconds since 1970 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

@@ -1,0 +1,524 @@
+\hypertarget{classmml_1_1vector}{}\doxysection{mml\+::vector$<$ T $>$ Class Template Reference}
+\label{classmml_1_1vector}\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$vector.\+hpp$>$}
+
+
+
+Inheritance diagram for mml\+::vector$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classmml_1_1vector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for mml\+::vector$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classmml_1_1vector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmml_1_1vector_ae33ede1abf01d6d2579d554e0e4ece65}{vector}} ()
+\item 
+\mbox{\hyperlink{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}{vector}} (const \mbox{\hyperlink{classmml_1_1vector}{vector}} \&temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector_ac6bb999219a514400d27c3ae0a1c38d8}{vector}} (std\+::vector$<$ T $>$ \&temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector_a110a81cb89a1d8d3747a59ec4bb12ec3}{vector}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \&temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector_a4c33b7774ac7303c95fb4be1195059da}{vector}} (double temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector_a12d163b0b93882c366b0fbd9bee30e64}{vector}} (int cols, T temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector_aab00229f585e0382fc1ff5c89cd77816}{vector}} (int cols, std\+::vector$<$ T $>$ temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}{operator=}} (const std\+::vector$<$ T $>$ \&temp)
+\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}{operator=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
+\item 
+std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a8dcf3737728770802554ed5183d4bb23}{begin}} () noexcept
+\item 
+bool \mbox{\hyperlink{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}{empty}} () noexcept
+\item 
+std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}{end}} () noexcept
+\item 
+std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a5a043eee4418d727d68b6f77ba0c5e5b}{erase}} (typename std\+::vector$<$ T $>$\+::iterator start, typename std\+::vector$<$ T $>$\+::iterator amount=0)
+\item 
+std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}{insert}} (const typename std\+::vector$<$ T $>$\+::iterator position, const T \&val)
+\item 
+T \& \mbox{\hyperlink{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}{pop\+\_\+back}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}{push\+\_\+back}} (T value)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}{size}} () const noexcept
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}{cout}} (bool newline=false) noexcept
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}{del}} ()
+\item 
+bool \mbox{\hyperlink{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}{exist}} (T const \&value)
+\item 
+T \mbox{\hyperlink{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}{toT}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} s)
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}{get\+\_\+data}} (std\+::string filepath, int skip=-\/1)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}{find}} (const T value)
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}{log}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} logpath, bool newline=false, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} first=\char`\"{}\char`\"{}, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} last=\char`\"{}\char`\"{})
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}{replace}} (T old, T new1)
+\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}{operator$\ast$}} (const T \&value)
+\item 
+void \mbox{\hyperlink{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}{set}} (std\+::vector$<$ T $>$ temp)
+\item 
+T \mbox{\hyperlink{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}{sum}} ()
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}{operator+}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}{operator+=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}{operator$^\wedge$}} (const double exponent)
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}{tovec}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a3b2d65ffa645eff2e56012d9e7c661e8}{vec}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&Vec)
+\item 
+std\+::istream \& \mbox{\hyperlink{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&Vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmml_1_1vector_ae33ede1abf01d6d2579d554e0e4ece65}\label{classmml_1_1vector_ae33ede1abf01d6d2579d554e0e4ece65}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+constructor
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}\label{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_ac6bb999219a514400d27c3ae0a1c38d8}\label{classmml_1_1vector_ac6bb999219a514400d27c3ae0a1c38d8}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a110a81cb89a1d8d3747a59ec4bb12ec3}\label{classmml_1_1vector_a110a81cb89a1d8d3747a59ec4bb12ec3}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a4c33b7774ac7303c95fb4be1195059da}\label{classmml_1_1vector_a4c33b7774ac7303c95fb4be1195059da}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{double}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a12d163b0b93882c366b0fbd9bee30e64}\label{classmml_1_1vector_a12d163b0b93882c366b0fbd9bee30e64}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{int}]{cols,  }\item[{T}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_aab00229f585e0382fc1ff5c89cd77816}\label{classmml_1_1vector_aab00229f585e0382fc1ff5c89cd77816}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
+\index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{int}]{cols,  }\item[{std\+::vector$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmml_1_1vector_a8dcf3737728770802554ed5183d4bb23}\label{classmml_1_1vector_a8dcf3737728770802554ed5183d4bb23}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Standardfunktionen aus std\+::vector
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}\label{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!cout@{cout}}
+\index{cout@{cout}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cout()}{cout()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::cout (\begin{DoxyParamCaption}\item[{bool}]{newline = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Vektorinhalt ausgeben
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}\label{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!del@{del}}
+\index{del@{del}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Vektor leeren
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}\label{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
+\end{DoxyNote}
+\mbox{\Hypertarget{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}\label{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!end@{end}}
+\index{end@{end}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a5a043eee4418d727d68b6f77ba0c5e5b}\label{classmml_1_1vector_a5a043eee4418d727d68b6f77ba0c5e5b}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{typename std\+::vector$<$ T $>$\+::iterator}]{start,  }\item[{typename std\+::vector$<$ T $>$\+::iterator}]{amount = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}\label{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!exist@{exist}}
+\index{exist@{exist}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{exist()}{exist()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::exist (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+exist
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}\label{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!find@{find}}
+\index{find@{find}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Position zurückgeben
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}\label{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::get\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath,  }\item[{int}]{skip = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+get data from file
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}\label{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const typename std\+::vector$<$ T $>$\+::iterator}]{position,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}\label{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!log@{log}}
+\index{log@{log}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1log}{log}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{logpath,  }\item[{bool}]{newline = {\ttfamily false},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{first = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{last = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Werte in eine Logdatei schreiben
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}\label{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Skalarmultiplikation
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vektor 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}\label{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Zwei Vektoren zeilenweise addieren
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vektor 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}\label{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}\label{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}\label{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}\label{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T\& \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}\label{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{const double}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Vektor hoch exponent
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vektor 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}\label{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}\label{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}\label{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!replace@{replace}}
+\index{replace@{replace}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::replace (\begin{DoxyParamCaption}\item[{T}]{old,  }\item[{T}]{new1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Ersetzen eines Wertes in einem Vektor
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vektor mit den ersetzten Werten 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}\label{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!set@{set}}
+\index{set@{set}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Skalare Addition
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+vec setzen
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}\label{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!size@{size}}
+\index{size@{size}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}\label{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!sum@{sum}}
+\index{sum@{sum}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+vec sortieren
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+Summe des Vektors bestimmen
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}\label{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!toT@{toT}}
+\index{toT@{toT}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{toT()}{toT()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+template \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::toT (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+String in T umwandeln
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+T 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}\label{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!tovec@{tovec}}
+\index{tovec@{tovec}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tovec()}{tovec()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::tovec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyNote}{Note}
+Vektor zurückgeben
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vektor 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}\label{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyNote}{Note}
+Vektorinhalt ausgeben
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}\label{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\begin{DoxyNote}{Note}
+Wert in Vektor reinschreiben
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmml_1_1vector_a3b2d65ffa645eff2e56012d9e7c661e8}\label{classmml_1_1vector_a3b2d65ffa645eff2e56012d9e7c661e8}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vec@{vec}}
+\index{vec@{vec}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec}{vec}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::vec\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mml/\mbox{\hyperlink{vector_8hpp}{vector.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,249 @@
+.TH "mml::shell" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::shell
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBarg\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror\fP (std::string text)"
+.br
+.ti -1c
+.RI "void \fBbackground\fP (\fBstring\fP colour)"
+.br
+.ti -1c
+.RI "void \fBchapter\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBcout\fP (\fBmml::string\fP text, bool newline=true, std::string colour='lightgreen')"
+.br
+.ti -1c
+.RI "void \fBformation\fP (\fBstring\fP format1)"
+.br
+.ti -1c
+.RI "void \fBletter\fP (\fBstring\fP colour)"
+.br
+.ti -1c
+.RI "void \fBnormal\fP ()"
+.br
+.ti -1c
+.RI "void \fBnote\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBoption\fP (std::string \fBchapter\fP, std::string option)"
+.br
+.ti -1c
+.RI "std::string \fBpassword\fP (std::string ausgabe, std::string source)"
+.br
+.ti -1c
+.RI "void \fBwarn\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBwarn_opt\fP (std::string text, bool newline=true)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void mml::shell::background (\fBmml::string\fP colour)"
+
+.PP
+\fBNote\fP
+.RS 4
+Hintergrund ändern
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::chapter (std::string text, bool newline = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Hilfeseiteausgabe eines Kapitels
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::cout (\fBmml::string\fP text, bool newline = \fCtrue\fP, std::string colour = \fC'lightgreen'\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe mit Werten in Klammern in einer Farbe
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::error (std::string text)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe eines Errors
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::formation (\fBmml::string\fP format1)"
+
+.PP
+\fBNote\fP
+.RS 4
+Formatierung ändern
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::letter (\fBmml::string\fP colour)"
+
+.PP
+\fBNote\fP
+.RS 4
+Schriftfarbe ändern
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike
+.PP
+Mike Moser
+.RE
+.PP
+Programm \fBshell\&.cpp\fP Enthält verschiedene Funktionen 
+.SS "void mml::shell::normal ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Alle Änderungen an der Ausgabe zurücksetzen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::note (std::string text, bool newline = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Eine Notiz ausgeben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::option (std::string chapter, std::string option)"
+
+.PP
+\fBNote\fP
+.RS 4
+Finden von übergebenen Argumente(n)
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe einer Option von einer Hilfeseite
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::shell::password (std::string ausgabe, std::string source)"
+
+.PP
+\fBNote\fP
+.RS 4
+Eingabe eines verdeckten Strings
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+eingegebener String 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::warn (std::string text, bool newline = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::shell::warn_opt (std::string text, bool newline = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

@@ -1,0 +1,61 @@
+.TH "mml::Time" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::Time
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmml::string\fP \fBto_date\fP (time_t time)"
+.br
+.ti -1c
+.RI "time_t \fBto_time\fP (std::string \fBdate\fP)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBmml::string\fP mml::Time::to_date (time_t time)"
+
+.PP
+\fBNote\fP
+.RS 4
+time_t in Datumformat
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "time_t mml::Time::to_time (std::string date)"
+
+.PP
+\fBNote\fP
+.RS 4
+Datumformat (DD\&.MM\&.YYYY HH:MM\&.SS) in time_t
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+time_t 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

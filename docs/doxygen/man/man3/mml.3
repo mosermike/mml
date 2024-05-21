@@ -1,0 +1,389 @@
+.TH "mml" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfile\fP"
+.br
+.ti -1c
+.RI " \fBfunctions\fP"
+.br
+.ti -1c
+.RI " \fBhelp\fP"
+.br
+.ti -1c
+.RI " \fBshell\fP"
+.br
+.ti -1c
+.RI " \fBthread\fP"
+.br
+.ti -1c
+.RI " \fBTime\fP"
+.br
+.ti -1c
+.RI " \fBUnix\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBlog\fP"
+.br
+.ti -1c
+.RI "class \fBstring\fP"
+.br
+.ti -1c
+.RI "class \fBTimer\fP"
+.br
+.ti -1c
+.RI "class \fBvector\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > double \fBatob\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > double \fBatof\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > int \fBatoi\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t)"
+.br
+.in -1c
+.PP
+.RI "\fBstandards\&.cpp\fP"
+.br
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+Enthält verschiedene Standardfunktionen 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBcheck_root\fP (\fBmml::shell::arg\fP args)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBcout\fP (std::vector< T > const &vec)"
+.br
+.ti -1c
+.RI "uint32_t \fBdate\fP (int info, time_t time1=\-1)"
+.br
+.ti -1c
+.RI "std::string \fBdate\fP (\fBmml::string\fP value='Datum', std::string trennzeichen1=':', std::string trennzeichen2='\&.')"
+.br
+.ti -1c
+.RI "bool \fBrange\fP (std::size_t number)"
+.br
+.ti -1c
+.RI "bool \fBrange\fP (std::size_t, std::size_t)"
+.br
+.ti -1c
+.RI "double \fBround\fP (double number, uint16_t digits)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+Bibliothek shell\&.h Enthält verschiedene Funktionen mit namespace shell 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > double mml::atob (const T & t)"
+
+.PP
+\fBNote\fP
+.RS 4
+Variable zu bool
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP Variable to bool
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true oder false 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<typename T > double mml::atof (const T & t)"
+
+.PP
+\fBNote\fP
+.RS 4
+string zu double
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP String to be changed into a double 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+double 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<typename T > int mml::atoi (const T & t)"
+
+.PP
+\fBNote\fP
+.RS 4
+string zu int
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP String to be changed into an integer 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Integer
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::check_root (\fBmml::shell::arg\fP args)"
+
+.PP
+\fBNote\fP
+.RS 4
+Überprüft, ob ein Programm als root ausgeführt wird
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Arguments passed for check_root
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<typename T > void mml::cout (std::vector< T > const & vec)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe der Werte eines Vektors
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec\fP Vector which is printed out
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "uint32_t mml::date (int info, time_t time1 = \fC\-1\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe des aktuellen Datums oder der Uhrzeit
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIinfo\fP Determines what information is printed 
+.br
+\fItime1\fP \fBTime\fP for which the information is printed\&. Default is -1 => Actual time now\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc\&.) 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::date (\fBmml::string\fP value = \fC'Datum'\fP, std::string trennzeichen1 = \fC':'\fP, std::string trennzeichen2 = \fC'\&.'\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Ausgabe des aktuellen Datums oder der Uhrzeit als String Mögliche Auswahl: 'Datum', 'Uhrzeit', 'Datum+Uhrzeit', Default:'Datum'
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Determines what information is printed\&. 
+.br
+ 'Datum' : DD\&.MM\&.YYYY (based on trennzeichen2) 
+.br
+ 'Zeit' : HH:MM:SS (based on trennzeichen1) 
+.br
+ 'Datum+Uhrzeit' : Complete date in format DD\&.MM\&.YYYY HH:MM:SS\&. 
+.br
+ 'Datum1+Uhrzeit' : Compete date in format YYYY\&.MM\&.DD HH:MM:SS\&. 
+.br
+\fItrennzeichen1\fP First separation sign for the date 
+.br
+\fItrennzeichen2\fP Second separation sign for the time
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc\&.) 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::range (std::size_t number)"
+
+.PP
+\fBNote\fP
+.RS 4
+Überprüfen, ob maximalert Wert von std::size_t erreicht
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP Number to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true (kleiner als max Wert) oder false 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::range (std::size_t number1, std::size_t number2)"
+
+.PP
+\fBNote\fP
+.RS 4
+Überprüfen, ob maximalert Wert von std::size_t erreicht
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber1\fP Number to be checked 
+.br
+\fInumber2\fP Number to be checked
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true (kleiner als max Wert) oder false 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "double mml::round (double number, uint16_t digits)"
+
+.PP
+\fBNote\fP
+.RS 4
+Zahl runden
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP Number which is rounded 
+.br
+\fIdigits\fP To which digit it is rounded
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+gerundete double Zahl 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<typename T > \fBmml::string\fP mml::to_string (const T & t)"
+
+.PP
+\fBNote\fP
+.RS 4
+Wert in \fBmml::string\fP umwandeln
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIt\fP Value to be changed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

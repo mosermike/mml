@@ -1,0 +1,87 @@
+.TH "conf" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+conf
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "string \fBproject\fP = 'mml'"
+.br
+.ti -1c
+.RI "string \fBcopyright\fP = '2024, Mike Moser'"
+.br
+.ti -1c
+.RI "string \fBauthor\fP = 'Mike Moser'"
+.br
+.ti -1c
+.RI "list \fBtemplates_path\fP = ['_templates']"
+.br
+.ti -1c
+.RI "list \fBexclude_patterns\fP = []"
+.br
+.ti -1c
+.RI "list \fBextensions\fP"
+.br
+.ti -1c
+.RI "\fBshell\fP"
+.br
+.ti -1c
+.RI "dictionary \fBbreathe_projects\fP = { 'mml': '\&.\&./\&.\&./doxygen/xml/' }"
+.br
+.ti -1c
+.RI "string \fBbreathe_default_project\fP = 'mml'"
+.br
+.ti -1c
+.RI "string \fBhtml_theme\fP = ''"
+.br
+.ti -1c
+.RI "list \fBhtml_static_path\fP = ['_static']"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "string conf\&.author = 'Mike Moser'"
+
+.SS "string conf\&.breathe_default_project = 'mml'"
+
+.SS "dictionary conf\&.breathe_projects = { 'mml': '\&.\&./\&.\&./doxygen/xml/' }"
+
+.SS "string conf\&.copyright = '2024, Mike Moser'"
+
+.SS "list conf\&.exclude_patterns = []"
+
+.SS "list conf\&.extensions"
+\fBInitial value:\fP
+.PP
+.nf
+1 =  [
+2     'sphinx\&.ext\&.autodoc',
+3     'sphinx\&.ext\&.doctest',
+4     'sphinx\&.ext\&.viewcode',
+5     'sphinx\&.ext\&.imgmath', 
+6     'sphinx\&.ext\&.todo',
+7     'breathe',
+8     'sphinx_math_dollar',
+9     'sphinx\&.ext\&.napoleon',
+10     'numpydoc',
+11 
+12 ]
+.fi
+.SS "list conf\&.html_static_path = ['_static']"
+
+.SS "string conf\&.html_theme = ''"
+
+.SS "string conf\&.project = 'mml'"
+
+.SS "conf\&.shell"
+
+.SS "list conf\&.templates_path = ['_templates']"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

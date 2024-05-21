@@ -1,0 +1,87 @@
+.TH "include/mml/file.hpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/mml/file.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <functional>\fP
+.br
+\fC#include 'functions\&.hpp'\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmml\fP"
+.br
+.ti -1c
+.RI " \fBmml::file\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmml::file::add_twofiles\fP (std::string filepath_input1, std::string filepath_input2, std::string filepath_output)"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::file::byteCopy\fP (const std::string &src, const std::string &dest, std::size_t num, std::size_t blockSize, bool progress=false, std::string fullsize='')"
+.br
+.ti -1c
+.RI "uint32_t \fBmml::file::copy\fP (shell::arg args, \fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in='', std::string name_ex='')"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::file::copyFile\fP (shell::arg args, std::string src, std::string dst)"
+.br
+.ti -1c
+.RI "bool \fBmml::file::equal\fP (std::string src, std::string dst)"
+.br
+.ti -1c
+.RI "int32_t \fBmml::file::filetype\fP (std::string filepath)"
+.br
+.ti -1c
+.RI "std::string \fBmml::file::humanread\fP (std::size_t number)"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::file::num_lines\fP (std::string path)"
+.br
+.ti -1c
+.RI "int \fBmml::file::Program_exist\fP (std::string program)"
+.br
+.ti -1c
+.RI "void \fBmml::file::remove\fP (std::string file)"
+.br
+.ti -1c
+.RI "void \fBmml::file::set_date\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, bool extend=true, bool verbose=false)"
+.br
+.ti -1c
+.RI "std::size_t \fBmml::file::size\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "std::string \fBmml::file::size_human\fP (const std::string &filename, bool ausgabe=true)"
+.br
+.ti -1c
+.RI "std::string \fBmml::file::size_dir\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP &dir, bool ausgabe=false, std::string include='', std::string exclude='')"
+.br
+.ti -1c
+.RI "time_t \fBmml::file::time_mod\fP (const std::string &filename)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+@description This file includes functions regarding the files\&. It might only work on linux as some commands might be os-dependent\&. The main function of here is to copy files\&. It also has other functions such as checking if a file exists 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

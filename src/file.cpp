@@ -461,7 +461,7 @@ uint32_t mml::file::copy(mml::shell::arg args, mml::string src, mml::string dst,
 	
 	// Save directories separately and additionally to save time when creating directories.
 	std::vector<std::string> directories;
-	std::vector<std::string> structure = src.ls(args,name_in, name_ex, directories); // list dir. tree
+	std::vector<std::string> structure = src.ls(name_in, name_ex, directories, args.exist("-r","--recursive"),args.exist("-a","--all")); // list dir. tree
 	
 	num_of_files = structure.size() - directories.size(); // Number of files to be copied
 	

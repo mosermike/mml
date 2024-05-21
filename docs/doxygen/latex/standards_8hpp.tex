@@ -1,0 +1,75 @@
+\hypertarget{standards_8hpp}{}\doxysection{include/mml/standards.hpp File Reference}
+\label{standards_8hpp}\index{include/mml/standards.hpp@{include/mml/standards.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+Include dependency graph for standards.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{standards_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{standards_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemml}{mml}}
+\item 
+ \mbox{\hyperlink{namespacemml_1_1shell}{mml\+::shell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a441733b0671056da9970ae129ef2815b}{mml\+::atob}} (const T \&t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}{mml\+::atof}} (const T \&t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_a149a900d1e48e37c56481964c79aa9b4}{mml\+::atoi}} (const T \&t)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a21e76265e9a8d7091fe7068aee432c39}{mml\+::to\+\_\+string}} (const T \&t)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ standards.\+cpp}\par
+{\em \begin{DoxyAuthor}{Author}
+Mike Moser
+\end{DoxyAuthor}
+Enthält verschiedene Standardfunktionen }\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacemml_a369221db1a4853285fbd90c1956a443c}{mml\+::check\+\_\+root}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacemml_a92c710d0a886107dcb38a6699151ec38}{mml\+::cout}} (std\+::vector$<$ T $>$ const \&vec)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}{mml\+::date}} (int info, time\+\_\+t time1=-\/1)
+\item 
+std\+::string \mbox{\hyperlink{namespacemml_ae1a9f89ef716fd943082126648d90659}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Datum\char`\"{}, std\+::string trennzeichen1=\char`\"{}\+:\char`\"{}, std\+::string trennzeichen2=\char`\"{}.\char`\"{})
+\item 
+bool \mbox{\hyperlink{namespacemml_a1d79d75734ea118c10fc391ab2231d56}{mml\+::range}} (std\+::size\+\_\+t number)
+\item 
+bool \mbox{\hyperlink{namespacemml_aef4479907a5a2ee42d0d0099e5525b5c}{mml\+::range}} (std\+::size\+\_\+t, std\+::size\+\_\+t)
+\item 
+double \mbox{\hyperlink{namespacemml_a2cf98422c1355b3c351820b70b2834ba}{mml\+::round}} (double number, uint16\+\_\+t digits)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mike Moser
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+Contains several standard functions 
+\end{DoxyNote}

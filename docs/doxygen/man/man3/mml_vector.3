@@ -1,0 +1,504 @@
+.TH "mml::vector< T >" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::vector< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vector\&.hpp>\fP
+.PP
+Inherits std::vector< T >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvector\fP ()"
+.br
+.ti -1c
+.RI "\fBvector\fP (const \fBvector\fP &temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP (std::vector< T > &temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP (\fBmml::vector\fP< T > &temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP (double temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP (int cols, T temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP (int cols, std::vector< T > temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP \fBoperator=\fP (const std::vector< T > &temp)"
+.br
+.ti -1c
+.RI "\fBvector\fP \fBoperator=\fP (\fBmml::vector\fP< T > temp)"
+.br
+.ti -1c
+.RI "std::vector< T >::iterator \fBbegin\fP () noexcept"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () noexcept"
+.br
+.ti -1c
+.RI "std::vector< T >::iterator \fBend\fP () noexcept"
+.br
+.ti -1c
+.RI "std::vector< T >::iterator \fBerase\fP (typename std::vector< T >::iterator start, typename std::vector< T >::iterator amount=0)"
+.br
+.ti -1c
+.RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val)"
+.br
+.ti -1c
+.RI "T & \fBoperator[]\fP (int index)"
+.br
+.ti -1c
+.RI "void \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (T value)"
+.br
+.ti -1c
+.RI "std::size_t \fBsize\fP () const noexcept"
+.br
+.ti -1c
+.RI "void \fBcout\fP (bool newline=false) noexcept"
+.br
+.ti -1c
+.RI "std::vector< T > \fBdel\fP ()"
+.br
+.ti -1c
+.RI "bool \fBexist\fP (T const &value)"
+.br
+.ti -1c
+.RI "T \fBtoT\fP (\fBmml::string\fP s)"
+.br
+.ti -1c
+.RI "void \fBget_data\fP (std::string filepath, int skip=\-1)"
+.br
+.ti -1c
+.RI "std::size_t \fBfind\fP (const T value)"
+.br
+.ti -1c
+.RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='')"
+.br
+.ti -1c
+.RI "std::vector< T > \fBreplace\fP (T old, T new1)"
+.br
+.ti -1c
+.RI "\fBvector\fP< T > \fBoperator*\fP (const T &value)"
+.br
+.ti -1c
+.RI "void \fBset\fP (std::vector< T > temp)"
+.br
+.ti -1c
+.RI "T \fBsum\fP ()"
+.br
+.ti -1c
+.RI "std::vector< T > \fBoperator+\fP (\fBmml::vector\fP< T > temp)"
+.br
+.ti -1c
+.RI "std::vector< T > \fBoperator+=\fP (\fBmml::vector\fP< T > temp)"
+.br
+.ti -1c
+.RI "std::vector< T > \fBoperator^\fP (const double exponent)"
+.br
+.ti -1c
+.RI "std::vector< T > \fBtovec\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< T > \fBvec\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBvector\fP< T > &Vec)"
+.br
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &in, \fBvector\fP< T > &Vec)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP ()\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+constructor
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (const \fBvector\fP< T > & temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (std::vector< T > & temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (\fBmml::vector\fP< T > & temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (double temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (int cols, T temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (int cols, std::vector< T > temp)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::begin ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Standardfunktionen aus std::vector
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Vektorinhalt ausgeben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::del ()\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Vektor leeren
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template bool \fBmml::vector\fP< T >::empty ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+
+.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::end ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::erase (typename std::vector< T >::iterator start, typename std::vector< T >::iterator amount = \fC0\fP)\fC [inline]\fP"
+
+.SS "template<class T > template bool \fBmml::vector\fP< T >::exist (T const & value)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+exist
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template std::size_t \fBmml::vector\fP< T >::find (const T value)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Position zurückgeben
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::get_data (std::string filepath, int skip = \fC\-1\fP)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+get data from file
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::insert (const typename std::vector< T >::iterator position, const T & val)\fC [inline]\fP"
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::\fBlog\fP (\fBmml::string\fP logpath, bool newline = \fCfalse\fP, \fBmml::string\fP first = \fC''\fP, \fBmml::string\fP last = \fC''\fP)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Werte in eine Logdatei schreiben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator* (const T & value)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Skalarmultiplikation
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator+ (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Zwei Vektoren zeilenweise addieren
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator+= (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (const std::vector< T > & temp)\fC [inline]\fP"
+
+.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
+
+.SS "template<class T > T& \fBmml::vector\fP< T >::operator[] (int index)\fC [inline]\fP"
+
+.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator^ (const double exponent)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Vektor hoch exponent
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::pop_back ()\fC [inline]\fP"
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::push_back (T value)\fC [inline]\fP"
+
+.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::replace (T old, T new1)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Ersetzen eines Wertes in einem Vektor
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor mit den ersetzten Werten 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > void \fBmml::vector\fP< T >::set (std::vector< T > temp)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Skalare Addition
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+vec setzen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template std::size_t \fBmml::vector\fP< T >::size () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "template<class T > template \fBmml::string\fP \fBmml::vector\fP< T >::sum ()\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+vec sortieren
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Summe des Vektors bestimmen
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+T 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > template \fBmml::string\fP \fBmml::vector\fP< T >::toT (\fBmml::string\fP s)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+String in T umwandeln
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+T 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::tovec ()\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Vektor zurückgeben
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<class T > std::ostream& operator<< (std::ostream & out, const \fBvector\fP< T > & Vec)\fC [friend]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Vektorinhalt ausgeben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "template<class T > std::istream& operator>> (std::istream & in, \fBvector\fP< T > & Vec)\fC [friend]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Wert in Vektor reinschreiben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::vec\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

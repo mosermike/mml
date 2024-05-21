@@ -1,0 +1,87 @@
+.TH "include/mml/shell.hpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/mml/shell.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'vector\&.hpp'\fP
+.br
+\fC#include 'functions\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBmml::shell::arg\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmml\fP"
+.br
+.ti -1c
+.RI " \fBmml::shell\fP"
+.br
+.ti -1c
+.RI " \fBmml::functions\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBmml::shell::arg\fP \fBmml::functions::vector\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmml::shell::background\fP (string colour)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::chapter\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::cout\fP (\fBmml::string\fP text, bool newline=true, std::string colour='lightgreen')"
+.br
+.ti -1c
+.RI "void \fBmml::shell::error\fP (std::string text)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::formation\fP (string format1)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::letter\fP (string colour)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::normal\fP ()"
+.br
+.ti -1c
+.RI "void \fBmml::shell::note\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::option\fP (std::string chapter, std::string option)"
+.br
+.ti -1c
+.RI "std::string \fBmml::shell::password\fP (std::string ausgabe, std::string source)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::warn\fP (std::string text, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBmml::shell::warn_opt\fP (std::string text, bool newline=true)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

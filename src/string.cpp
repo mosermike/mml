@@ -138,7 +138,7 @@ std::string mml::string::lower(){
 	return temp;
 }
 
-std::vector<std::string> mml::string::ls(mml::shell::arg args, std::string name_include, std::string name_exclude, std::vector<std::string> &directories) {
+std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive, bool all) {
 	std::vector<std::string> 	LS;
 	mml::string 				temp1;
 	mml::string 				temp2; // for name_include used
@@ -175,10 +175,10 @@ std::vector<std::string> mml::string::ls(mml::shell::arg args, std::string name_
 		temp1 = mml::to_string(dir_entry).sub(1,-2);
 
 		// Don't add files recursively
-		if (args.notArg("-r","--recursive") && temp1.substr(path.size()+2).exist("/"))
+		if (recursive && temp1.substr(path.size()+2).exist("/"))
 			continue;
 		// Don't add hidden files
-		if (args.notArg("-a","--all") && (temp1.exist("/.")))
+		if (all && (temp1.exist("/.")))
 			continue;
 		// Exclude a string
 		if (name_exclude != "" && temp1.exist(name_exclude))
@@ -205,9 +205,9 @@ std::vector<std::string> mml::string::ls(mml::shell::arg args, std::string name_
 	return LS;
 }
 
-std::vector<std::string> mml::string::ls(mml::shell::arg args, std::string name_include, std::string name_exclude) {
+std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, bool recursive, bool all) {
 	std::vector<std::string> directories = {"---"};
-	std::vector<std::string> LS = ls(args, name_include, name_exclude, directories);
+	std::vector<std::string> LS = ls(name_include, name_exclude, directories, recursive, all);
 	return LS;
 }
 
@@ -372,10 +372,6 @@ const char* mml::string::c_str() {
 	return this->value.c_str();
 }
 
-std::string mml::string::setString(std::string new_value) {
-	this->value = new_value;
-	return this->value;
-}
 
 int mml::string::stoi() {
 	return std::stoi(this->value);
@@ -405,10 +401,10 @@ std::string mml::string::getline(std::string input) {
 	return value;
 }
 
-std::string mml::string::getline(std::string input, uint32_t line){
+std::string mml::string::getline(std::string input, std::size_t line){
 	std::ifstream input1(input);
 	std::string del;
-	for(uint32_t i = 0; i < line - 1; i++)
+	for(uint32_t i = 0; i < line; i++)
 		std::getline(input1,del);
 	std::getline(input1,value);
 	input1.close();
@@ -476,13 +472,6 @@ bool mml::string::exist(std::string search) {
 	return value.find(search) < std::string::npos ? true : false;
 }
 
-bool mml::string::exist(std::string name1, std::string name2) {
-	return exist(name1) || exist(name2);
-}
-
-bool mml::string::exist(std::string name1, std::string name2, std::string name3) {
-	return exist(name1) || exist(name2) || exist(name3);
-}
 
 bool mml::string::exist(std::string name1, std::string name2, std::string name3, std::string name4) {
 	return exist(name1) || exist(name2) || exist(name3) || exist(name4);

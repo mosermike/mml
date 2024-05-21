@@ -1,0 +1,267 @@
+.TH "mml::log" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::log
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <log\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlog\fP (\fBmml::string\fP path)"
+.br
+.ti -1c
+.RI "\fBlog\fP ()"
+.br
+.ti -1c
+.RI "\fB~log\fP ()"
+.br
+.ti -1c
+.RI "\fBmml::log\fP & \fBoperator=\fP (std::string value)"
+.br
+.ti -1c
+.RI "void \fBbackup\fP (bool verbose=true, bool Reset=true)"
+.br
+.ti -1c
+.RI "void \fBclose\fP ()"
+.br
+.ti -1c
+.RI "void \fBcout\fP (\fBmml::string\fP value, bool newline=false)"
+.br
+.ti -1c
+.RI "void \fBcout\fP (double value, bool newline=false)"
+.br
+.ti -1c
+.RI "void \fBcout\fP (int value, bool newline=false)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBgetline\fP (uint32_t line)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBgetline_back\fP (uint32_t line)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBlastline\fP ()"
+.br
+.ti -1c
+.RI "void \fBheader\fP ()"
+.br
+.ti -1c
+.RI "void \fBopen\fP (\fBmml::string\fP path='')"
+.br
+.ti -1c
+.RI "void \fBprint\fP (bool linenumber=false)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (bool verbose=true)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const \fBmml::string\fP &String)"
+.br
+.ti -1c
+.RI "void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const double &String)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mml::log::log (\fBmml::string\fP path)\fC [inline]\fP"
+
+.SS "mml::log::log ()\fC [inline]\fP"
+
+.SS "mml::log::~log ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void mml::log::backup (bool verbose = \fCtrue\fP, bool Reset = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Logdatei sichern
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::log::close ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Logdatei schließen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::log::cout (double value, bool newline = \fCfalse\fP)"
+
+.SS "void mml::log::cout (int value, bool newline = \fCfalse\fP)"
+
+.SS "void mml::log::cout (\fBmml::string\fP value, bool newline = \fCfalse\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+in Logdatei schreiben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::log::getline (uint32_t line)"
+
+.PP
+\fBNote\fP
+.RS 4
+Eine bestimmte Zeile aus der Logdatei zurückgeben
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::log::getline_back (uint32_t line)"
+
+.PP
+\fBNote\fP
+.RS 4
+Eine bestimmte Zeile aus der Logdatei zurückgeben, dabei vom Ende aus Rechnen
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::log::header ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Neuen Kopf erstellen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::log::lastline ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Die letzte Zeile aus der Logdatei zurückgeben
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+stirng 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::log::open (\fBmml::string\fP path = \fC''\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Logdatei öffnen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "\fBmml::log\fP & mml::log::operator= (std::string value)"
+
+.PP
+\fBNote\fP
+.RS 4
+Neue Logfile öffnen;
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike
+.PP
+Mike Moser
+.RE
+.PP
+Quelldatei args\&.cpp Enthält verschiedene Funktionen für die Klasse args 
+.SS "void mml::log::print (bool linenumber = \fCfalse\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Logdatei ausgeben
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::log::reset (bool verbose = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Logdatei neu erstellen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "void operator<< (\fBmml::log\fP & log, const double & String)\fC [friend]\fP"
+
+.SS "void operator<< (\fBmml::log\fP & log, const \fBmml::string\fP & String)\fC [friend]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

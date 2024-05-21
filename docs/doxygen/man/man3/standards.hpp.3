@@ -1,0 +1,109 @@
+.TH "include/mml/standards.hpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/mml/standards.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <random>\fP
+.br
+\fC#include <float\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBmml::string\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBmml\fP"
+.br
+.ti -1c
+.RI " \fBmml::shell\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > double \fBmml::atob\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > double \fBmml::atof\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > int \fBmml::atoi\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t)"
+.br
+.in -1c
+.PP
+.RI "\fBstandards\&.cpp\fP"
+.br
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+Enthält verschiedene Standardfunktionen 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "bool \fBmml::check_root\fP (\fBmml::shell::arg\fP args)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBmml::cout\fP (std::vector< T > const &vec)"
+.br
+.ti -1c
+.RI "uint32_t \fBmml::date\fP (int info, time_t time1=\-1)"
+.br
+.ti -1c
+.RI "std::string \fBmml::date\fP (\fBmml::string\fP value='Datum', std::string trennzeichen1=':', std::string trennzeichen2='\&.')"
+.br
+.ti -1c
+.RI "bool \fBmml::range\fP (std::size_t number)"
+.br
+.ti -1c
+.RI "bool \fBmml::range\fP (std::size_t, std::size_t)"
+.br
+.ti -1c
+.RI "double \fBmml::round\fP (double number, uint16_t digits)"
+.br
+.in -1c
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Contains several standard functions 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

@@ -1,0 +1,1010 @@
+.TH "mml::string" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::string
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <standards\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstring\fP (const char *val)"
+.br
+.ti -1c
+.RI "\fBstring\fP (std::string val)"
+.br
+.ti -1c
+.RI "\fBstring\fP ()"
+.br
+.ti -1c
+.RI "\fBstring\fP & \fBoperator=\fP (const char *value_direct)"
+.br
+.ti -1c
+.RI "\fBstring\fP & \fBoperator=\fP (std::string value_undirect)"
+.br
+.ti -1c
+.RI "template<typename T > \fBstring\fP & \fBoperator=\fP (T value)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const std::string test)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBmml::string\fP test)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const char *test)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::string test)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (\fBmml::string\fP test)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const char *test)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+\fP (const char *add)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+\fP (const std::string add)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+\fP (\fBmml::string\fP add)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+=\fP (const char *add)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+=\fP (const std::string add)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBoperator+=\fP (\fBmml::string\fP add)"
+.br
+.ti -1c
+.RI "char & \fBoperator[]\fP (int index)"
+.br
+.ti -1c
+.RI "std::string & \fBoperator()\fP ()"
+.br
+.ti -1c
+.RI "double \fBatof\fP ()"
+.br
+.ti -1c
+.RI "int \fBatoi\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBc_str\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcount\fP (\fBmml::string\fP name)"
+.br
+.ti -1c
+.RI "void \fBcout\fP (bool newline=true, std::string text='')"
+.br
+.ti -1c
+.RI "std::string \fBdel_letter\fP (bool save=false)"
+.br
+.ti -1c
+.RI "std::string \fBdel_number\fP (bool save=false)"
+.br
+.ti -1c
+.RI "std::string \fBdel_space\fP (bool save=false)"
+.br
+.ti -1c
+.RI "bool \fBexist\fP (std::string name)"
+.br
+.ti -1c
+.RI "bool \fBexist\fP (std::string name1, std::string name2, std::string name3='__________', std::string name4='__________')"
+.br
+.ti -1c
+.RI "std::size_t \fBfind\fP (char letter, std::size_t old=0)"
+.br
+.ti -1c
+.RI "std::size_t \fBfind\fP (\fBmml::string\fP name, std::size_t old=0)"
+.br
+.ti -1c
+.RI "std::size_t \fBfind_back\fP (\fBmml::string\fP name, std::size_t pos=0, std::size_t low=0)"
+.br
+.ti -1c
+.RI "void \fBgetline\fP (std::ifstream &input)"
+.br
+.ti -1c
+.RI "std::string \fBgetline\fP (std::string input, std::size_t line=0)"
+.br
+.ti -1c
+.RI "std::string \fBgetValue\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBhash\fP ()"
+.br
+.ti -1c
+.RI "void \fBlog\fP (std::string logpath)"
+.br
+.ti -1c
+.RI "std::string \fBlower\fP ()"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBls\fP (std::string name_include, std::string name_exclude, std::vector< std::string > &directories, bool recursive=false, bool all=false)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBls\fP (std::string name_include='', std::string name_exclude='', bool recursive=false, bool all=false)"
+.br
+.ti -1c
+.RI "bool \fBmkdir_p\fP ()"
+.br
+.ti -1c
+.RI "bool \fBremove\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBreplace\fP (char sign_old, char sign_new, bool save=false, std::size_t pos=0, bool all=true)"
+.br
+.ti -1c
+.RI "std::string \fBreplace\fP (\fBmml::string\fP str_old, \fBmml::string\fP str_new, bool save=false, std::size_t pos=0, bool all=true)"
+.br
+.ti -1c
+.RI "std::string \fBreplace\fP (std::string str_old1, std::string str_new1, std::string str_old2, std::string str_new2, bool save=false, std::size_t pos=0, bool all=true)"
+.br
+.ti -1c
+.RI "std::size_t \fBrfind\fP (char letter)"
+.br
+.ti -1c
+.RI "std::size_t \fBsize\fP ()"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1, std::size_t length1)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1)"
+.br
+.ti -1c
+.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, int32_t end)"
+.br
+.ti -1c
+.RI "int \fBstoi\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBstr\fP ()"
+.br
+.ti -1c
+.RI "void \fBwriteline\fP (std::ofstream &output)"
+.br
+.ti -1c
+.RI "void \fBwriteline\fP (std::string output)"
+.br
+.ti -1c
+.RI "\fB~string\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBstring\fP &String)"
+.br
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &in, \fBstring\fP &String)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class string which adds additional functions to std::string 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mml::string::string (const char * val)\fC [inline]\fP"
+Initialize with a character array 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar*\fP Value of the string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+
+.SS "mml::string::string (std::string val)\fC [inline]\fP"
+Initialize with a character array 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP String value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+
+.SS "mml::string::string ()\fC [inline]\fP"
+Initialise without any value 
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+
+.SS "mml::string::~string ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "double mml::string::atof ()"
+Converts this string into a double 
+.PP
+\fBReturns\fP
+.RS 4
+double 
+.RE
+.PP
+
+.SS "int mml::string::atoi ()"
+Convert this string into an integer
+.PP
+\fBReturns\fP
+.RS 4
+int 
+.RE
+.PP
+
+.SS "const char * mml::string::c_str ()"
+Returns the string as a character pointer
+.PP
+\fBReturns\fP
+.RS 4
+char* 
+.RE
+.PP
+
+.SS "uint32_t mml::string::count (\fBmml::string\fP name)"
+Count how often a string appears 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fBmml::string\fP\fP String which is counted 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t 
+.RE
+.PP
+
+.SS "void mml::string::cout (bool newline = \fCtrue\fP, std::string text = \fC''\fP)"
+Print out the value of this instance 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool,optional\fP Print newline\&. Default: true 
+.br
+\fIstd::string,optional\fP Additional text\&. Default '' 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "std::string mml::string::del_letter (bool save = \fCfalse\fP)"
+Delete letters 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "std::string mml::string::del_number (bool save = \fCfalse\fP)"
+Delete numbers 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "std::string mml::string::del_space (bool save = \fCfalse\fP)"
+Remove everything after the first space 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String kürzen bis Space 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::string::exist (std::string name)"
+Check if a string exists 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP String to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::exist (std::string name1, std::string name2, std::string name3 = \fC'__________'\fP, std::string name4 = \fC'__________'\fP)"
+Check if one \fIor\fP another string exists 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP String to be checked 
+.br
+\fIstring\fP Second String to be checked\&. 
+.br
+\fIstring,optional\fP Third String to be checked\&. 
+.br
+\fIstring,optional\fP Fourth String to be checked\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "std::size_t mml::string::find (char letter, std::size_t old = \fC0\fP)\fC [inline]\fP"
+Position of the first appearance of a character after a start position
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP Value 
+.br
+\fIsize_t,optional\fP Value from where to search for the char\&. Default: 0 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Position 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::string::find (\fBmml::string\fP name, std::size_t old = \fC0\fP)\fC [inline]\fP"
+Position of the first appearance of a string after a start position
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value 
+.br
+\fIsize_t,optional\fP Value from where to search for the char\&. Default: 0 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Position 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::size_t mml::string::find_back (\fBmml::string\fP name, std::size_t pos = \fC0\fP, std::size_t low = \fC0\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Check if a string exists but starting from the right side
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP String to look for 
+.br
+\fIstd::size_t,optional\fP Value from where to search for the string\&. 0 means that it is not used\&. Default: 0 
+.br
+\fIstd::size_t,optional\fP Lower limit to which point is searched for\&. Default: 0 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.SS "void mml::string::getline (std::ifstream & input)"
+Reads a line from an input file stream and assigns it to the instance 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::ifstream\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "std::string mml::string::getline (std::string input, std::size_t line = \fC0\fP)"
+Reads a line from a file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP File name 
+.br
+\fIstd::size_t,optional\fP Line number\&. Default: 0\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::tring 
+.RE
+.PP
+
+.SS "std::string mml::string::getValue ()"
+Get the value of this instance 
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "uint32_t mml::string::hash ()"
+Creates a hash value of this instance\&. This hash value can then be used for example in an switch \&.\&.\&. case with strings by using hash values\&.
+.PP
+\fBReturns\fP
+.RS 4
+uint32_t 
+.RE
+.PP
+
+.SS "void mml::string::log (std::string logpath)"
+Writes the value of this instance into a log file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::string\fP Path to the logfile 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "std::string mml::string::lower ()"
+Transforms all letters into low case letters 
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "std::vector< std::string > mml::string::ls (std::string name_include, std::string name_exclude, std::vector< std::string > & directories, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP)"
+List all files and directories in a path\&. Directories end with '/' in the entry 
+.PP
+\fBNote\fP
+.RS 4
+If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::string\fP Only list files or directories which include this string in the name\&. 
+.br
+\fIstd::string\fP Exclude files or directories with this string in the name 
+.br
+\fIstd::vector<std::string>\fP Reference to a vector where the directories are added 
+.br
+\fIbool\fP Check directory recursively 
+.br
+\fIbool\fP Also list hidden files 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector<std::string> 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::vector< std::string > mml::string::ls (std::string name_include = \fC''\fP, std::string name_exclude = \fC''\fP, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP)"
+List all files and directories in a path\&. Directories end with '/' in the entry 
+.PP
+\fBNote\fP
+.RS 4
+If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::string\fP Only list files or directories which include this string in the name\&. 
+.br
+\fIstd::string\fP Exclude files or directories with this string in the name 
+.br
+\fIbool\fP Check directory recursively 
+.br
+\fIbool\fP Also list hidden files 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::vector<std::string> 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "bool mml::string::mkdir_p ()"
+Create directory with creating parent directories 
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::operator!= (const char * test)"
+Operator unequal to a char vector 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::operator!= (const std::string test)"
+Operator unequal to a std::string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::operator!= (\fBmml::string\fP test)"
+Operator unequal to a \fBmml::string\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "std::string & mml::string::operator() ()"
+
+.SS "\fBmml::string\fP mml::string::operator+ (const char * add)"
+Operator add a char vector 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar*\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Added \fBmml::string\fP 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::operator+ (const std::string add)"
+Operator add a std::string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value to be added 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::operator+ (\fBmml::string\fP add)"
+Operator add a \fBmml::string\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::operator+= (const char * add)"
+Operator add a char vector to this string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar*\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::operator+= (const std::string add)"
+Operator add a std::string to this instance 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+instance of this class 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::operator+= (\fBmml::string\fP add)"
+Operator add a \fBmml::string\fP to this instance 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of this class 
+.RE
+.PP
+
+.SS "\fBstring\fP& mml::string::operator= (const char * value_direct)\fC [inline]\fP"
+Assign the value of the string with the '=' sign 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar*\fP String value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Class instance 
+.RE
+.PP
+
+.SS "\fBstring\fP& mml::string::operator= (std::string value_undirect)\fC [inline]\fP"
+Assign the value of the string with the '=' sign 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Class instance 
+.RE
+.PP
+
+.SS "template<typename T > \fBstring\fP& mml::string::operator= (T value)\fC [inline]\fP"
+Assign the value of the string with the '=' sign and convert T 
+.PP
+\fBParameters\fP
+.RS 4
+\fIT\fP Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Class instance 
+.RE
+.PP
+
+.SS "bool mml::string::operator== (const char * test)"
+Operator equal to a char vector 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar*\fP Value to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::operator== (const std::string test)"
+Operator equal to a std::string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mml::string::operator== (\fBmml::string\fP test)"
+Operator equal to a \fBmml::string\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "char & mml::string::operator[] (int index)"
+Return a specific char from the string 
+.PP
+\fBParameters\fP
+.RS 4
+\fIint\fP Index 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+char 
+.RE
+.PP
+
+.SS "bool mml::string::remove ()"
+Remove the file with the value of the instance 
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "std::string mml::string::replace (char sign_old, char sign_new, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
+// TODO ÜBERARBEITEN!!! endless schleife wenn str_old in str_new 
+.PP
+\fBNote\fP
+.RS 4
+Zeichen in einem String ersetzen 
+.PP
+String in einem String ersetzen 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP Find this character or string 
+.br
+\fIchar\fP New character or string 
+.br
+\fIbool\fP Save the change in this class (False) 
+.br
+\fIsize_t\fP Start from this position to replace (0) 
+.br
+\fIbool\fP Replace all strings which exist (True) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+String mit den ersetzten Zeichen 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::string::replace (\fBmml::string\fP str_old, \fBmml::string\fP str_new, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
+
+.SS "std::string mml::string::replace (std::string str_old1, std::string str_new1, std::string str_old2, std::string str_new2, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
+
+.SS "std::size_t mml::string::rfind (char letter)\fC [inline]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Get position of last occurance of a character
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP Value to be found 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.SS "std::size_t mml::string::size ()"
+Compute size of the string 
+.PP
+\fBReturns\fP
+.RS 4
+std::size_t 
+.RE
+.PP
+
+.SS "int mml::string::stoi ()"
+Transform this instance to an integer 
+.PP
+\fBReturns\fP
+.RS 4
+int 
+.RE
+.PP
+
+.SS "std::string mml::string::str ()"
+Return the value of this instance as a std::string 
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::sub (std::size_t beg, int32_t end)"
+Create a substring starting and ending of specific positions 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::size_t\fP Start of the new string 
+.br
+\fIstd::size_t\fP End of the new string 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1)"
+Create a substring starting from this position to the end 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize_t\fP Start position to the end 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+
+.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1, std::size_t length1)"
+Create substring 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize_t\fP Start position 
+.br
+\fIstd::size_t\fP Length of the string
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fBmml::string\fP 
+.RE
+.PP
+
+.SS "void mml::string::writeline (std::ofstream & output)"
+Write this instance into the end of a file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::ofstream\fP Write to this output file stream 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "void mml::string::writeline (std::string output)"
+Write this instance into the end of a file 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::string\fP Path to the file 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & out, const \fBstring\fP & String)\fC [friend]\fP"
+Output the value of the string via a stream 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
+.RE
+.PP
+
+.SS "std::istream& operator>> (std::istream & in, \fBstring\fP & String)\fC [friend]\fP"
+Input the value of the string via a stream 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

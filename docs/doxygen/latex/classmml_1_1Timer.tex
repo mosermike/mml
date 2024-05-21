@@ -1,0 +1,255 @@
+\hypertarget{classmml_1_1Timer}{}\doxysection{mml\+::Timer Class Reference}
+\label{classmml_1_1Timer}\index{mml::Timer@{mml::Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmml_1_1Timer_1_1time}{time}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmml_1_1Timer_a8388437a554236e800ef35d37ceba950}{Timer}} ()
+\item 
+\mbox{\hyperlink{classmml_1_1Timer_abe0acc0023a0116c764232929c0adcb2}{Timer}} (const \mbox{\hyperlink{classmml_1_1Timer}{Timer}} \&t)
+\item 
+\mbox{\hyperlink{classmml_1_1Timer_ad28f8000cda033d3eb7dadab5554a9b5}{$\sim$\+Timer}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1Timer_ad95a6cccf71bdcb1753affecb16ec19b}{break\+\_\+start}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1Timer_a13ab728d658a504ce2e39d47ff06a230}{break\+\_\+stop}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1Timer_a33c476f593ac89d840660a4bdddf7828}{cout}} (std\+::string text=\char`\"{}\char`\"{}, bool format\+\_\+print=false, bool newline=true)
+\item 
+void \mbox{\hyperlink{classmml_1_1Timer_a5be128b48dd7e5ccd73935b5d9cb639b}{start}} () noexcept
+\item 
+double \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}} () noexcept
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classmml_1_1Timer_acbc5feb01146cf9067c08c52991300d4}{get\+US}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
+\item 
+double \mbox{\hyperlink{classmml_1_1Timer_a7ab3c31ff55f77a5fb16740df5d056c1}{get\+MS}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
+\item 
+double \mbox{\hyperlink{classmml_1_1Timer_a5138fe5353603b4fd5d12dfa5e0f6a22}{getS}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
+\item 
+int \mbox{\hyperlink{classmml_1_1Timer_a1857a5be5649d7d640d89fa7e22763c5}{to\+Int}} () noexcept
+\item 
+std\+::string \mbox{\hyperlink{classmml_1_1Timer_a72f8a2da44ec59a76ac7884e2db9352c}{to\+String}} () noexcept
+\item 
+std\+::string \mbox{\hyperlink{classmml_1_1Timer_aeadb046285a068a189a4359e9302ed3e}{clock}} () noexcept
+\item 
+std\+::string \mbox{\hyperlink{classmml_1_1Timer_a901cde7e7108eb41a97da7e3835844d8}{range}} () noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmml_1_1Timer}{Timer}} mit std\+::chrono (anstatt SDL\+\_\+\+Get\+Performance\+Counter()) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmml_1_1Timer_a8388437a554236e800ef35d37ceba950}\label{classmml_1_1Timer_a8388437a554236e800ef35d37ceba950}} 
+\index{mml::Timer@{mml::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mml\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1Timer_abe0acc0023a0116c764232929c0adcb2}\label{classmml_1_1Timer_abe0acc0023a0116c764232929c0adcb2}} 
+\index{mml::Timer@{mml::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mml\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1Timer}{Timer}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmml_1_1Timer_ad28f8000cda033d3eb7dadab5554a9b5}\label{classmml_1_1Timer_ad28f8000cda033d3eb7dadab5554a9b5}} 
+\index{mml::Timer@{mml::Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily mml\+::\+Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmml_1_1Timer_ad95a6cccf71bdcb1753affecb16ec19b}\label{classmml_1_1Timer_ad95a6cccf71bdcb1753affecb16ec19b}} 
+\index{mml::Timer@{mml::Timer}!break\_start@{break\_start}}
+\index{break\_start@{break\_start}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{break\_start()}{break\_start()}}
+{\footnotesize\ttfamily void mml\+::\+Timer\+::break\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Pause starten
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a13ab728d658a504ce2e39d47ff06a230}\label{classmml_1_1Timer_a13ab728d658a504ce2e39d47ff06a230}} 
+\index{mml::Timer@{mml::Timer}!break\_stop@{break\_stop}}
+\index{break\_stop@{break\_stop}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{break\_stop()}{break\_stop()}}
+{\footnotesize\ttfamily void mml\+::\+Timer\+::break\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Pause stoppen
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_aeadb046285a068a189a4359e9302ed3e}\label{classmml_1_1Timer_aeadb046285a068a189a4359e9302ed3e}} 
+\index{mml::Timer@{mml::Timer}!clock@{clock}}
+\index{clock@{clock}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{clock()}{clock()}}
+{\footnotesize\ttfamily std\+::string mml\+::\+Timer\+::clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classmml_1_1Timer_a33c476f593ac89d840660a4bdddf7828}\label{classmml_1_1Timer_a33c476f593ac89d840660a4bdddf7828}} 
+\index{mml::Timer@{mml::Timer}!cout@{cout}}
+\index{cout@{cout}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{cout()}{cout()}}
+{\footnotesize\ttfamily void mml\+::\+Timer\+::cout (\begin{DoxyParamCaption}\item[{std\+::string}]{text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{format\+\_\+print = {\ttfamily false},  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Zeit ausgeben (formatiert oder in Millisekunden)
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a7ab3c31ff55f77a5fb16740df5d056c1}\label{classmml_1_1Timer_a7ab3c31ff55f77a5fb16740df5d056c1}} 
+\index{mml::Timer@{mml::Timer}!getMS@{getMS}}
+\index{getMS@{getMS}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{getMS()}{getMS()}}
+{\footnotesize\ttfamily double mml\+::\+Timer\+::get\+MS (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Zwischenergebnis zurückgegeben.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Zwischenergebnis 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas
+\end{DoxyAuthor}
+Zwischenergebnis in ms zurückgegeben. (stop muss vorher aufgerufen werden)
+
+\begin{DoxyReturn}{Returns}
+Zwischenergebnis 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a5138fe5353603b4fd5d12dfa5e0f6a22}\label{classmml_1_1Timer_a5138fe5353603b4fd5d12dfa5e0f6a22}} 
+\index{mml::Timer@{mml::Timer}!getS@{getS}}
+\index{getS@{getS}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{getS()}{getS()}}
+{\footnotesize\ttfamily double mml\+::\+Timer\+::getS (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Zwischenergebnis zurückgegeben in s.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Zwischenergebnis 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike
+\end{DoxyAuthor}
+Zwischenergebnis zurückgegeben.
+
+\begin{DoxyReturn}{Returns}
+Zwischenergebnis 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_acbc5feb01146cf9067c08c52991300d4}\label{classmml_1_1Timer_acbc5feb01146cf9067c08c52991300d4}} 
+\index{mml::Timer@{mml::Timer}!getUS@{getUS}}
+\index{getUS@{getUS}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{getUS()}{getUS()}}
+{\footnotesize\ttfamily uint64\+\_\+t mml\+::\+Timer\+::get\+US (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Direkten Wert in Mikrosekunden zurückgegeben.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vergangene Zeit in Mikrosekunden (uint64\+\_\+t) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas
+\end{DoxyAuthor}
+Direkten Wert in Mikrosekunden zurückgegeben.
+
+\begin{DoxyReturn}{Returns}
+Vergangene Zeit in Mikrosekunden (uint64\+\_\+t) 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a901cde7e7108eb41a97da7e3835844d8}\label{classmml_1_1Timer_a901cde7e7108eb41a97da7e3835844d8}} 
+\index{mml::Timer@{mml::Timer}!range@{range}}
+\index{range@{range}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}}
+{\footnotesize\ttfamily std\+::string mml\+::\+Timer\+::range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Zeit abhängig von der Größe zurückgeben
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Ausgabe der Zeit 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a5be128b48dd7e5ccd73935b5d9cb639b}\label{classmml_1_1Timer_a5be128b48dd7e5ccd73935b5d9cb639b}} 
+\index{mml::Timer@{mml::Timer}!start@{start}}
+\index{start@{start}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void mml\+::\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Beginnt die Zeitmessung.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Lucas
+\end{DoxyAuthor}
+Beginnt die Zeitmessung.
+
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}\label{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}} 
+\index{mml::Timer@{mml::Timer}!stop@{stop}}
+\index{stop@{stop}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily double mml\+::\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\begin{DoxyNote}{Note}
+Stoppt die Zeitmessung.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Vergangene Zeit in Millisekunden 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas
+\end{DoxyAuthor}
+Stoppt die Zeitmessung.
+
+\begin{DoxyReturn}{Returns}
+Vergangene Zeit in Millisekunden 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1Timer_a1857a5be5649d7d640d89fa7e22763c5}\label{classmml_1_1Timer_a1857a5be5649d7d640d89fa7e22763c5}} 
+\index{mml::Timer@{mml::Timer}!toInt@{toInt}}
+\index{toInt@{toInt}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{toInt()}{toInt()}}
+{\footnotesize\ttfamily int mml\+::\+Timer\+::to\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classmml_1_1Timer_a72f8a2da44ec59a76ac7884e2db9352c}\label{classmml_1_1Timer_a72f8a2da44ec59a76ac7884e2db9352c}} 
+\index{mml::Timer@{mml::Timer}!toString@{toString}}
+\index{toString@{toString}!mml::Timer@{mml::Timer}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string mml\+::\+Timer\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mml/\mbox{\hyperlink{Timer_8hpp}{Timer.\+hpp}}\item 
+src/\mbox{\hyperlink{Timer_8cpp}{Timer.\+cpp}}\end{DoxyCompactItemize}

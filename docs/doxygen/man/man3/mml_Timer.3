@@ -1,0 +1,295 @@
+.TH "mml::Timer" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::Timer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Timer\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtime\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTimer\fP ()"
+.br
+.ti -1c
+.RI "\fBTimer\fP (const \fBTimer\fP &t)"
+.br
+.ti -1c
+.RI "\fB~Timer\fP ()"
+.br
+.ti -1c
+.RI "void \fBbreak_start\fP ()"
+.br
+.ti -1c
+.RI "void \fBbreak_stop\fP ()"
+.br
+.ti -1c
+.RI "void \fBcout\fP (std::string text='', bool format_print=false, bool newline=true)"
+.br
+.ti -1c
+.RI "void \fBstart\fP () noexcept"
+.br
+.ti -1c
+.RI "double \fBstop\fP () noexcept"
+.br
+.ti -1c
+.RI "uint64_t \fBgetUS\fP (bool \fBstop\fP=true) noexcept"
+.br
+.ti -1c
+.RI "double \fBgetMS\fP (bool \fBstop\fP=true) noexcept"
+.br
+.ti -1c
+.RI "double \fBgetS\fP (bool \fBstop\fP=true) noexcept"
+.br
+.ti -1c
+.RI "int \fBtoInt\fP () noexcept"
+.br
+.ti -1c
+.RI "std::string \fBtoString\fP () noexcept"
+.br
+.ti -1c
+.RI "std::string \fBclock\fP () noexcept"
+.br
+.ti -1c
+.RI "std::string \fBrange\fP () noexcept"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBTimer\fP mit std::chrono (anstatt SDL_GetPerformanceCounter()) 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mml::Timer::Timer ()\fC [inline]\fP"
+
+.SS "mml::Timer::Timer (const \fBTimer\fP & t)\fC [inline]\fP"
+
+.SS "mml::Timer::~Timer ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void mml::Timer::break_start ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Pause starten
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::Timer::break_stop ()"
+
+.PP
+\fBNote\fP
+.RS 4
+Pause stoppen
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "std::string mml::Timer::clock ()\fC [noexcept]\fP"
+
+.SS "void mml::Timer::cout (std::string text = \fC''\fP, bool format_print = \fCfalse\fP, bool newline = \fCtrue\fP)"
+
+.PP
+\fBNote\fP
+.RS 4
+Zeit ausgeben (formatiert oder in Millisekunden)
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "double mml::Timer::getMS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Zwischenergebnis zurückgegeben\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zwischenergebnis 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas
+.RE
+.PP
+Zwischenergebnis in ms zurückgegeben\&. (stop muss vorher aufgerufen werden)
+.PP
+\fBReturns\fP
+.RS 4
+Zwischenergebnis 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas 
+.RE
+.PP
+
+.SS "double mml::Timer::getS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Zwischenergebnis zurückgegeben in s\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zwischenergebnis 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike
+.RE
+.PP
+Zwischenergebnis zurückgegeben\&.
+.PP
+\fBReturns\fP
+.RS 4
+Zwischenergebnis 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "uint64_t mml::Timer::getUS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Direkten Wert in Mikrosekunden zurückgegeben\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vergangene Zeit in Mikrosekunden (uint64_t) 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas
+.RE
+.PP
+Direkten Wert in Mikrosekunden zurückgegeben\&.
+.PP
+\fBReturns\fP
+.RS 4
+Vergangene Zeit in Mikrosekunden (uint64_t) 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas 
+.RE
+.PP
+
+.SS "std::string mml::Timer::range ()\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Zeit abhängig von der Größe zurückgeben
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Ausgabe der Zeit 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Mike 
+.RE
+.PP
+
+.SS "void mml::Timer::start ()\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Beginnt die Zeitmessung\&.
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas
+.RE
+.PP
+Beginnt die Zeitmessung\&.
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas 
+.RE
+.PP
+
+.SS "double mml::Timer::stop ()\fC [noexcept]\fP"
+
+.PP
+\fBNote\fP
+.RS 4
+Stoppt die Zeitmessung\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vergangene Zeit in Millisekunden 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas
+.RE
+.PP
+Stoppt die Zeitmessung\&.
+.PP
+\fBReturns\fP
+.RS 4
+Vergangene Zeit in Millisekunden 
+.RE
+.PP
+\fBAuthor\fP
+.RS 4
+Lucas 
+.RE
+.PP
+
+.SS "int mml::Timer::toInt ()\fC [noexcept]\fP"
+
+.SS "std::string mml::Timer::toString ()\fC [noexcept]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

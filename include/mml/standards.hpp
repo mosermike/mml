@@ -2,15 +2,13 @@
  * @author Mike Moser
  * 
  * @file standards.hpp 
- * @note Enthält verschiedene Standardfunktionen
+ * @note Contains several standard functions
  * 
 */
 
 #ifndef MML_INCLUDE_MML_STANDARDS_HPP
 #define MML_INCLUDE_MML_STANDARDS_HPP
 
-// #include <standards.hpp>
-// #include <vector.hpp>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -27,6 +25,10 @@ namespace mml {
 	}
 	
 	
+	/**
+	 * Class string which adds additional functions to std::string
+	 * 
+	*/
 	class string{
 
 	private:
@@ -35,41 +37,59 @@ namespace mml {
 		std::string 				save_value 	= "";
 		
 	public:
-		// copy consructor
-// 		string(const string& temp) : value(temp.value){}
-		// Mit direkter Wertübergabe:
+		/**
+		 * Initialize with a character array
+		 * @param char* Value of the string
+		 * @return Instance of the class
+		*/
 		string(const char* val) :  value((std::string)val){}
-		// Mit Stringvariable als Wert:
+		
+		/**
+		 * Initialize with a character array
+		 * @param string String value
+		 * @return Instance of the class
+		*/
 		string(std::string val) :  value(val){}
-		// Mit double Wertübergabe NOTE geht nicht, kleine Zahlen werden zu null
-// 		string(double val){
-// 			std::ostringstream stream;
-// 			stream << val;
-// 			value =  stream.str();}
-		// Ohne direkte Initialisierung:
+		
+		/**
+		 * Initialise without any value
+		 * @return Instance of the class
+		*/
 		string(){}
 		
+		/**
+		 * Assign the value of the string with the '=' sign
+		 * @param char* String value
+		 * @return Class instance
+		*/
 		string &operator=(const char* value_direct){
 			this->value= std::string(value_direct);
 			this->save_value = this->value;
-			return *this;
-			
-			
-		}	// Eingabe eines Strings mit = mit Umwandlung
+			return *this;	
+		}
 		
-		
+		/**
+		 * Assign the value of the string with the '=' sign
+		 * @param string Value
+		 * @return Class instance
+		*/
 		string &operator=(std::string value_undirect){
 			this->value = value_undirect;
 			save_value = value;
 			return *this;
 		}	// Zuweisung über = an value
 		
-		string &operator=(double value){
+		/**
+		 * Assign the value of the string with the '=' sign and convert T
+		 * @param T Value
+		 * @return Class instance
+		*/
+		template<typename T> string &operator=(T value){
 			this->value = std::to_string(value);
 			save_value = value;
 			return *this;
 		}	// Zuweisung über = an value
-		
+		/*
 		string &operator=(int value){
 			this->value = std::to_string(value);
 			save_value = value;
@@ -81,197 +101,307 @@ namespace mml {
 			save_value = value;
 			return *this;
 		}	// Zuweisung über = an value
-		
-		friend std::ostream& operator<< (std::ostream &out, const string &String){		// Ausgabe über std::cout
+		*/
+
+		/**
+		 * Output the value of the string via a stream
+		 * @param string Value
+		 * @return ostream
+		*/
+		friend std::ostream& operator<< (std::ostream &out, const string &String){
 			out << String.value;
 			return out;
 		}
 		
+		/**
+		 * Input the value of the string via a stream
+		 * @param string Value
+		 * @return ostream
+		*/
 		friend std::istream& operator>> (std::istream &in, string &String){
 			in >> String.value;
 			return in;
 		}
 		
 		/**
-		*  @note Zuweisungen
-		*
-		*  @author Mike
+		*  Operator equal to a std::string
+		*  @param string
+		*  @return bool
 		*/
 		bool operator==(const std::string test);
+
+		/**
+		*  Operator equal to a mml::string
+		*  @param string
+		*  @return bool
+		*/
 		bool operator==(mml::string test);
+
+		/**
+		*  Operator equal to a char vector
+		*  @param char* Value to be checked
+		*  @return bool
+		*/
 		bool operator==(const char* test);
+
+		/**
+		*  Operator unequal to a std::string
+		*  @param string
+		*  @return bool
+		*/
 		bool operator!=(const std::string test);
+
+		/**
+		*  Operator unequal to a mml::string
+		*  @param string
+		*  @return bool
+		*/
 		bool operator!=(mml::string test);
+
+		/**
+		*  Operator unequal to a char vector
+		*  @param string
+		*  @return bool
+		*/
 		bool operator!=(const char* test);
+
+		/**
+		*  Operator add a char vector
+		*  @param char* Value to be added
+		*  @return Added mml::string
+		*/
 		mml::string operator+(const char* add);
-		mml::string operator+(const std::string add);				// Zwei Strings addieren
-		mml::string operator+(mml::string add);
-		mml::string operator+=(const char* add);
-		mml::string operator+=(const std::string add);				// Zwei Strings addieren
-		mml::string operator+=(mml::string add);	// Zwei Strings addieren
 		
 		/**
-		 * @note Bestimmte position im String ausgeben
-		 * 
-		 * @return Char
-		 * @author Mike
+		*  Operator add a std::string
+		*  @param string Value to be added
+		*  
+		*/
+		mml::string operator+(const std::string add);
+
+		/**
+		*  Operator add a mml::string
+		*  @param string Value to be added
+		*  @return mml::string
+		*/
+		mml::string operator+(mml::string add);
+
+		/**
+		*  Operator add a char vector to this string
+		*  @param char* Value to be added
+		*  @return mml::string
+		*/
+		mml::string operator+=(const char* add);
+
+		/**
+		*  Operator add a std::string to this instance
+		*  @param string Value to be added
+		*  @return instance of this class
+		*/
+		mml::string operator+=(const std::string add);
+		
+		/**
+		*  Operator add a mml::string to this instance
+		*  @param string Value to be added
+		*  @return Instance of this class
+		*/
+		mml::string operator+=(mml::string add);
+		
+		/**
+		 * Return a specific char from the string
+		 * @param int Index
+		 * @return char
 		*/
 		char &operator[](int index);		// bestimmte Position ausgeben
 		
 		std::string &operator()();		// value zurückgeben, wenn in Klammern
 		/**
-		 * @note Wert des String in einen Double umwandeln
+		 * Converts this string into a double
+		 * @return double
 		 * 
-		 * @return value als double
-		 * @author Mike
 		 */
 		double atof();
+
 		/**
-		 * @note Wert des String in einen Integer umwandeln
+		 * Convert this string into an integer
 		 * 
-		 * @return value als int
-		 * @author Mike
+		 * @return int
 		 */
 		int atoi();
+
 		/**
-		* @note Wert des Strings Value als char pointer zurückgeben
+		* Returns the string as a character pointer
 		* 
-		* @return char pointer value
-		* @author Mike
+		* @return char*
 		*/
 		const char* c_str();
 		
 		/**
-		 * @note Zählen wie oft ein String vorkommt
-		 * 
+		 * Count how often a string appears
+		 * @param mml::string String which is counted
 		 * @return uint32_t
-		 * @author Mike
+		 * 
 		 */
 		uint32_t count(mml::string name);
 		
 		/**
-		 * @note Wert ausgeben
-		 * 
-		 * @author Mike
+		 * Print out the value of this instance
+		 * @param bool,optional Print newline. Default: true
+		 * @param std::string,optional Additional text. Default ""
+		 * @return None
 		 */
 		void cout(bool newline = true, std::string text = "");
+		
 		/**
-		 * @note Buchstaben löschen
-		 * 
-		 * @return String ohne Buchstaben
-		 * @author Mike
+		 * Delete letters
+		 * @param bool,optional Save the changed string in this instance. Default: false
+		 * @return std::string
 		 */
 		  std::string del_letter(bool save = false);
 		
 		/**
-		 * @note Zahlen löschen
+		 * Delete numbers
+		 * @param bool,optional Save the changed string in this instance. Default: false
+		 * @return std::string
 		 * 
-		 * @return String ohne Zahlen
-		 * @author Mike
 		 */
 		std::string del_number(bool save = false);
+		
 		/**
-		 * @note Alles nach einem Space löschen
-		 * 
+		 * Remove everything after the first space
+		 * @param bool,optional Save the changed string in this instance. Default: false
 		 * @return String kürzen bis Space
 		 * @author Mike
 		 */
 		  std::string del_space(bool save = false);
+
 		/**
-		 * @note Nachschauen, ob ein String in einem String vorkommt
-		 * 
-		 * @return true oder false
-		 * @author Mike
+		 * Check if a string exists
+		 * @param string String to be checked
+		 * @return bool
 		 */
 		bool exist(std::string name);
-		bool exist(std::string name1, std::string name2);
-		bool exist(std::string name1, std::string name2, std::string name3);
-		bool exist(std::string name1, std::string name2, std::string name3, std::string name4);
+
+		/**
+		 * Check if one *or* another string exists
+		 * @param string String to be checked
+		 * @param string Second String to be checked.
+		 * @param string,optional Third String to be checked.
+		 * @param string,optional Fourth String to be checked.
+		 * 
+		 * @return bool
+		 */
+		bool exist(std::string name1, std::string name2, std::string name3 = "__________", std::string name4 = "__________");
 		
 		/** 
-		 * @note Überprüfen, ob ein String existiert
+		 * Position of the first appearance of a character after a start position
 		 * 
-		 * @param char/string Value
-		 * @param size_t Value from where to search for the char (optional)
+		 * @param char Value
+		 * @param size_t,optional Value from where to search for the char. Default: 0
 		 * @return Position
 		 * @author Mike
 		 */
-		std::size_t find(char letter){return value.find(letter);}
-		std::size_t find(char letter,std::size_t old){return value.find(letter,old);}
-		std::size_t find(mml::string name){return value.find(name.str());}
-		std::size_t find(mml::string name,std::size_t old){return value.find(name.str(),old);}
+		std::size_t find(char letter,std::size_t old = 0){return value.find(letter,old);}
+		/** 
+		 * Position of the first appearance of a string after a start position
+		 * 
+		 * @param string Value
+		 * @param size_t,optional Value from where to search for the char. Default: 0
+		 * @return Position
+		 * @author Mike
+		 */
+		std::size_t find(mml::string name,std::size_t old = 0){return value.find(name.str(),old);}
 		
 		/**
 		 * @note Check if a string exists but starting from the right side
 		 *
 		 * @param name String to look for
-		 * @param pos Value from where to search for the string. 0 means that it is not used. (optional, default 0)
-		 * @param low Lower limit to which point is searched for (optional, default 0)
-		 * @return Position
-		 * @author Mike
+		 * @param std::size_t,optional Value from where to search for the string. 0 means that it is not used. Default: 0
+		 * @param std::size_t,optional Lower limit to which point is searched for. Default: 0
+		 * @return std::size_t
+		 * 
 		 */
 		std::size_t find_back(mml::string name, std::size_t pos = 0, std::size_t low = 0);
 
 		/**
-		 * @note Linie aus einer Datei lesen
-		 *
-		 * @return String
-		 * @author Mike
+		 * Reads a line from an input file stream and assigns it to the instance
+		 * @param std::ifstream
+		 * @return None
+		 * 
 		 */
 		void getline(std::ifstream& input);
-		std::string getline(std::string input);
-		std::string getline(std::string input,uint32_t line);
 		
 		/**
-		* @note Wert des Strings Value zurückgeben
+		 * Reads a line from a file
+		 * @param string File name
+		 * @param std::size_t,optional Line number. Default: 0.
+		 * @return std::tring
+		 * 
+		 */
+		std::string getline(std::string input,std::size_t line = 0);
+		
+		/**
+		* Get the value of this instance
+		* @return std::string
 		* 
-		* @return String value
-		* @author Mike
 		*/
 		std::string getValue();
 		
 		/**
-		 * @note Hash Wert von einem String erstellen
+		 * Creates a hash value of this instance. This hash value can then be used for example in an switch ... case with strings by using hash values.
 		 * 
-		 * @return Hashwert als unsigned integer
-		 * @author Mike
+		 * @return uint32_t
+		 * 
 		 */
 		uint32_t hash();
            
 		/**
-		* @note Eine Zeile in eine log Datei schreiben
-		* 
-		* @author Mike
-		*/
+		 * Writes the value of this instance into a log file
+		 * @param std::string Path to the logfile
+		 * @return None
+		 */
 		void log (std::string logpath);
 		
 		/**
-		* @note Alle Werte im String als Kleinbuchstaben
-		* 
-		* @return String mit Kleinbuchstaben
-		* @author Mike
+		* Transforms all letters into low case letters
+		* @return std::string
 		*/
 		std::string lower();
+		
 		/**
-		* @note Alle Datei und Ornder auflisten in einem Pfad, nur Dateien mit Inhalt name
-		* 
-		* @return Vektor mit den Ordnern (endet mit '/') und Dateien
+		* List all files and directories in a path. Directories end with '/' in the entry
+		* @note If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively.
+		* @param std::string Only list files or directories which include this string in the name.
+		* @param std::string Exclude files or directories with this string in the name
+		* @param std::vector<std::string> Reference to a vector where the directories are added
+		* @param bool Check directory recursively
+		* @param bool Also list hidden files
+		* @return std::vector<std::string>
 		* @author Mike
 		*/
-		std::vector<std::string> ls(mml::shell::arg args, std::string name_include, std::string name_exclude, std::vector<std::string> &directories);
-		std::vector<std::string> ls(mml::shell::arg args, std::string name_include = "", std::string name_exclude = "");
+		std::vector<std::string> ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive = false, bool all = false);
+		
+		/**
+		* List all files and directories in a path. Directories end with '/' in the entry
+		* @note If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively.
+		* @param std::string Only list files or directories which include this string in the name.
+		* @param std::string Exclude files or directories with this string in the name
+		* @param bool Check directory recursively
+		* @param bool Also list hidden files
+		* @return std::vector<std::string>
+		* @author Mike
+		*/
+		std::vector<std::string> ls(std::string name_include = "", std::string name_exclude = "", bool recursive = false, bool all = false);
 			
 		/**
-		* @note Erstellen eines Ordners
-		* 
-		* @author Mike
+		* Create directory with creating parent directories
+		* @return bool
 		*/
 		bool mkdir_p();
 		
 		/**
-		 * @note value als File löschen (mit Überprüfung)
-		 * 
-		 * @author Mike
+		 * Remove the file with the value of the instance
+		 * @return bool
 		 */
 		bool remove();
 			
@@ -298,93 +428,66 @@ namespace mml {
 		/** 
 		 * @note Get position of last occurance of a character
 		 * 
-		 * @param char value
-		 * @return position
-		 * @author Mike
+		 * @param char Value to be found
+		 * @return std::size_t
 		 */
 		std::size_t rfind(char letter){return value.rfind(letter);}
-		/**
-		* @note Wert des Strings Value setzen
-		* @param new_value New string
-		* @return neuer value Wert
-		* @author Mike
-		*/
-		std::string setString(std::string new_value);
 		
 		/**
-		* @note Größe des Strings berechnen
-		* 
-		* @author Mike
-		*/
+		 * Compute size of the string
+		 * @return std::size_t
+		 */
 		
 		std::size_t size();
 		
 		/**
-		 * @note Bilden eines Substrings
+		 * Create substring 
+		 * @param size_t Start position
+		 * @param std::size_t Length of the string
 		 * 
-		 * @param pos1 size_t of start position
-		 * @param length1 size_t of length
-		 * 
-		 * @return gekürzter String
-		 * 
-		 * @author Mike
+		 * @return mml::string
 		*/
 		mml::string substr(std::size_t pos1, std::size_t length1);
 
 		/**
-		 * @note Bilden eines Substrings
-		 * 
-		 * @param pos1 size_t of start position to the end
-		 * 
-		 * @return gekürzter String
-		 * 
-		 * @author Mike
+		 * Create a substring starting from this position to the end
+		 * @param size_t Start position to the end
+		 * @return mml::string
 		*/
 		mml::string substr(std::size_t pos1);
 		
 		/**
-		 * @note Bilden eines Unterstrings mit Angabe der Anfangs- und Endposition
-		 * 
-		 * @param beg Start of the new string
-		 * @param end End of the new string
-		 * 
-		 * @return gekürzter String
+		 * Create a substring starting and ending of specific positions
+		 * @param std::size_t Start of the new string
+		 * @param std::size_t End of the new string
+		 * @return mml::string
 		 * @author Mike
 		 */
 		mml::string sub(std::size_t beg, int32_t end);
 		
 		/**
-		* @note Wert des Strings Value als int zurückgeben
-		* 
-		* @return int value
-		* @author Mike
+		* Transform this instance to an integer
+		* @return int
 		*/
 		int stoi();
 		
 		/**
-		* @note Wert des Strings Value zurückgeben
-		 *
-		 * 
-		 * @return String value
-		 * @author Mike
+		 * Return the value of this instance as a std::string
+		 * @return std::string
 		*/
 		std::string str();
 		
 		/**
-		 * @note Linie in eine Datei schreiben
-		 * 
-		 * @param output Filestream for the output
-		 * 
-		 * @author Mike
+		 * Write this instance into the end of a file 
+		 * @param std::ofstream Write to this output file stream
+		 * @return None
 		 */
 		void writeline(std::ofstream& output);
 
 		/**
-		 * @note Linie in eine Datei schreiben
-		 * 
-		 * @param output String of the filepath to write in
-		 * 
-		 * @author Mike
+		 * Write this instance into the end of a file
+		 * @param std::string Path to the file
+		 * @return None
 		 */
 		void writeline(std::string output);
 		

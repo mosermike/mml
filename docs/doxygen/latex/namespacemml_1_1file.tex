@@ -1,0 +1,321 @@
+\hypertarget{namespacemml_1_1file}{}\doxysection{mml\+::file Namespace Reference}
+\label{namespacemml_1_1file}\index{mml::file@{mml::file}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacemml_1_1file_a024fab60fe782292eeeab6b68408cef9}{add\+\_\+twofiles}} (std\+::string filepath\+\_\+input1, std\+::string filepath\+\_\+input2, std\+::string filepath\+\_\+output)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_ac0621b8370119515421b5b6f097151f8}{byte\+Copy}} (const std\+::string \&src, const std\+::string \&dest, std\+::size\+\_\+t num, std\+::size\+\_\+t block\+Size, bool progress=false, std\+::string fullsize=\char`\"{}\char`\"{})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_aec330f1b16f99b02f1e9d93fbd4f618a}{copy}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{shell\+::arg}} args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, std\+::string name\+\_\+in=\char`\"{}\char`\"{}, std\+::string name\+\_\+ex=\char`\"{}\char`\"{})
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a56a2dd74ae51d87843c003bf055e67fd}{copy\+File}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{shell\+::arg}} args, std\+::string src, std\+::string dst)
+\item 
+bool \mbox{\hyperlink{namespacemml_1_1file_a5c59971f2c51414f4ecbc2b3ab40909a}{equal}} (std\+::string src, std\+::string dst)
+\item 
+int32\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}{filetype}} (std\+::string filepath)
+\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}{humanread}} (std\+::size\+\_\+t number)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4037d2ecadff2ef72d423f1c6f867834}{num\+\_\+lines}} (std\+::string path)
+\item 
+int \mbox{\hyperlink{namespacemml_1_1file_a25b3681154f917c6ff8701e0c158bda2}{Program\+\_\+exist}} (std\+::string program)
+\item 
+void \mbox{\hyperlink{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}{remove}} (std\+::string file)
+\item 
+void \mbox{\hyperlink{namespacemml_1_1file_adf2596a9fc0056a8e22d59508a7c34f4}{set\+\_\+date}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, bool extend=true, bool verbose=false)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a97e554f98e4d84fd1ac488fc1e44640d}{size}} (const std\+::string \&filename)
+\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1file_acb9416915b68523578fdd80b0371bd5a}{size\+\_\+human}} (const std\+::string \&filename, bool ausgabe=true)
+\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1file_afc475319ec2ac8be0b35883e9b371a94}{size\+\_\+dir}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \&dir, bool ausgabe=false, std\+::string include=\char`\"{}\char`\"{}, std\+::string exclude=\char`\"{}\char`\"{})
+\item 
+time\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_aa040614064fb83b0548804e7a2b4aeb5}{time\+\_\+mod}} (const std\+::string \&filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemml_1_1file_a024fab60fe782292eeeab6b68408cef9}\label{namespacemml_1_1file_a024fab60fe782292eeeab6b68408cef9}} 
+\index{mml::file@{mml::file}!add\_twofiles@{add\_twofiles}}
+\index{add\_twofiles@{add\_twofiles}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{add\_twofiles()}{add\_twofiles()}}
+{\footnotesize\ttfamily void mml\+::file\+::add\+\_\+twofiles (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath\+\_\+input1,  }\item[{std\+::string}]{filepath\+\_\+input2,  }\item[{std\+::string}]{filepath\+\_\+output }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Zwei Dateien zu einer zusammenfügen
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_ac0621b8370119515421b5b6f097151f8}\label{namespacemml_1_1file_ac0621b8370119515421b5b6f097151f8}} 
+\index{mml::file@{mml::file}!byteCopy@{byteCopy}}
+\index{byteCopy@{byteCopy}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{byteCopy()}{byteCopy()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::file\+::byte\+Copy (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{src,  }\item[{const std\+::string \&}]{dest,  }\item[{std\+::size\+\_\+t}]{num,  }\item[{std\+::size\+\_\+t}]{block\+Size,  }\item[{bool}]{progress = {\ttfamily false},  }\item[{std\+::string}]{fullsize = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Kopiervorgang einer Datei mit/ohne Fortschrittsanzeige
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Länge von Gesamtgröße 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike, Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_aec330f1b16f99b02f1e9d93fbd4f618a}\label{namespacemml_1_1file_aec330f1b16f99b02f1e9d93fbd4f618a}} 
+\index{mml::file@{mml::file}!copy@{copy}}
+\index{copy@{copy}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily uint32\+\_\+t mml\+::file\+::copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{shell\+::arg}}}]{args,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{src,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{dst,  }\item[{std\+::string}]{name\+\_\+in = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{name\+\_\+ex = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Kopiert einen Quellpfad zu einem Quellpfad
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a56a2dd74ae51d87843c003bf055e67fd}\label{namespacemml_1_1file_a56a2dd74ae51d87843c003bf055e67fd}} 
+\index{mml::file@{mml::file}!copyFile@{copyFile}}
+\index{copyFile@{copyFile}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{copyFile()}{copyFile()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::file\+::copy\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{shell\+::arg}}}]{args,  }\item[{std\+::string}]{src,  }\item[{std\+::string}]{dst }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Copy a file with determining the block size from the arguments
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Arguments from the shell \\
+\hline
+{\em string} & Source \\
+\hline
+{\em string} & Destination \\
+\hline
+{\em string} & Copy only files where this string exists \\
+\hline
+{\em string} & Copy only files where this string does not exist\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a5c59971f2c51414f4ecbc2b3ab40909a}\label{namespacemml_1_1file_a5c59971f2c51414f4ecbc2b3ab40909a}} 
+\index{mml::file@{mml::file}!equal@{equal}}
+\index{equal@{equal}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily bool mml\+::file\+::equal (\begin{DoxyParamCaption}\item[{std\+::string}]{src,  }\item[{std\+::string}]{dst }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Compare two files by using the SHA256 algorithm. Only works for linux.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}\label{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}} 
+\index{mml::file@{mml::file}!filetype@{filetype}}
+\index{filetype@{filetype}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{filetype()}{filetype()}}
+{\footnotesize\ttfamily int32\+\_\+t mml\+::file\+::filetype (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Determine the type of an object (directory, file, etc.) 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path to the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a number. For interpretation look at \mbox{\hyperlink{definitions_8hpp}{definitions.\+hpp}} 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}\label{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}} 
+\index{mml::file@{mml::file}!humanread@{humanread}}
+\index{humanread@{humanread}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{humanread()}{humanread()}}
+{\footnotesize\ttfamily std\+::string mml\+::file\+::humanread (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{number }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Convert number into human readable number 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+t} & A number to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a4037d2ecadff2ef72d423f1c6f867834}\label{namespacemml_1_1file_a4037d2ecadff2ef72d423f1c6f867834}} 
+\index{mml::file@{mml::file}!num\_lines@{num\_lines}}
+\index{num\_lines@{num\_lines}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{num\_lines()}{num\_lines()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::file\+::num\+\_\+lines (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Determine number of lines in a file 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Number of lines 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a25b3681154f917c6ff8701e0c158bda2}\label{namespacemml_1_1file_a25b3681154f917c6ff8701e0c158bda2}} 
+\index{mml::file@{mml::file}!Program\_exist@{Program\_exist}}
+\index{Program\_exist@{Program\_exist}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{Program\_exist()}{Program\_exist()}}
+{\footnotesize\ttfamily int mml\+::file\+::\+Program\+\_\+exist (\begin{DoxyParamCaption}\item[{std\+::string}]{program }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Exisiert das Programm
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}\label{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}} 
+\index{mml::file@{mml::file}!remove@{remove}}
+\index{remove@{remove}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void mml\+::file\+::remove (\begin{DoxyParamCaption}\item[{std\+::string}]{file }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Delete a single file 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & path to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_adf2596a9fc0056a8e22d59508a7c34f4}\label{namespacemml_1_1file_adf2596a9fc0056a8e22d59508a7c34f4}} 
+\index{mml::file@{mml::file}!set\_date@{set\_date}}
+\index{set\_date@{set\_date}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{set\_date()}{set\_date()}}
+{\footnotesize\ttfamily void mml\+::file\+::set\+\_\+date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}}}]{args,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{src,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{dst,  }\item[{bool}]{extend = {\ttfamily true},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Convert date of pictures. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Arguments from shell \\
+\hline
+{\em string} & Source path \\
+\hline
+{\em string} & Destination path \\
+\hline
+{\em bool} & Check extended endings. False =$>$ Only NEF and HEIC \\
+\hline
+{\em bool} & Verbose output.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_a97e554f98e4d84fd1ac488fc1e44640d}\label{namespacemml_1_1file_a97e554f98e4d84fd1ac488fc1e44640d}} 
+\index{mml::file@{mml::file}!size@{size}}
+\index{size@{size}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::file\+::size (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Calculates the size of a file 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Size of the file 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_afc475319ec2ac8be0b35883e9b371a94}\label{namespacemml_1_1file_afc475319ec2ac8be0b35883e9b371a94}} 
+\index{mml::file@{mml::file}!size\_dir@{size\_dir}}
+\index{size\_dir@{size\_dir}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{size\_dir()}{size\_dir()}}
+{\footnotesize\ttfamily std\+::string mml\+::file\+::size\+\_\+dir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}}}]{args,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \&}]{dir,  }\item[{bool}]{ausgabe = {\ttfamily false},  }\item[{std\+::string}]{include = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{exclude = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Calculates the size of a directory structure 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Arguments from the shell \\
+\hline
+{\em string} & Path to the directory \\
+\hline
+{\em bool} & print out \\
+\hline
+{\em string} & Include only count objects having this string in its name \\
+\hline
+{\em string} & Exclude objects with this name from the count \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+Arguments must be correct!
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Gibt die Größe des Ordners zurück 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_acb9416915b68523578fdd80b0371bd5a}\label{namespacemml_1_1file_acb9416915b68523578fdd80b0371bd5a}} 
+\index{mml::file@{mml::file}!size\_human@{size\_human}}
+\index{size\_human@{size\_human}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{size\_human()}{size\_human()}}
+{\footnotesize\ttfamily std\+::string mml\+::file\+::size\+\_\+human (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{bool}]{ausgabe = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Calculates the size of a file 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path to the file \\
+\hline
+{\em bool} & Print out \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the size of a file in a readable form as a string 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{namespacemml_1_1file_aa040614064fb83b0548804e7a2b4aeb5}\label{namespacemml_1_1file_aa040614064fb83b0548804e7a2b4aeb5}} 
+\index{mml::file@{mml::file}!time\_mod@{time\_mod}}
+\index{time\_mod@{time\_mod}!mml::file@{mml::file}}
+\doxysubsubsection{\texorpdfstring{time\_mod()}{time\_mod()}}
+{\footnotesize\ttfamily time\+\_\+t mml\+::file\+::time\+\_\+mod (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Note}
+Returns the last modified time of a file in seconds 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path to the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Seconds since 1970 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
