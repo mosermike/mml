@@ -50,7 +50,7 @@ distclean:
 	rm -f lib/$(DST)
 	rm -f /usr/local/include/mml.hpp
 	rm -rf /usr/local/include/mml
-	rm -rf $(INSTALL_DIR)/$(DST)
+	rm -rf $(INSTALL_DIR)/$(MDST)
 
 debug: $(DST)
 

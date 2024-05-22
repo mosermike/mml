@@ -30,7 +30,8 @@
 char &mml::string::operator[](int index){		// bestimmte Position ausgeben
 		if (index < 0 && abs(index) < value.size())
 			index = value.size() + index;
-		else
+		
+		if(index >= (int) value.size())
 			throw std::logic_error("[operator[]] Out of range");
 
 		return value[index];
