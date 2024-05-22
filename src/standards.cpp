@@ -138,7 +138,9 @@ uint32_t mml::date(int info, time_t time1){
 				return year + separator2 + month + separator2 + day;
 		}
 		return "";
-	}
+}
+
+bool mml::is_num(char c) {return ((int) c >= 48 && (int) c <= 57) ? true : false;}
 
 bool mml::range(std::size_t number) {
 	return number < std::string::npos ? true : false;

@@ -522,6 +522,12 @@ namespace mml {
 	std::string date(mml::string value, std::string separator1 = ":", std::string separator2 = ".");
 
 	/**
+	 * Checks if a character is a number
+	 * @param char Character to be checked
+	 * @return bool
+	*/
+	bool is_num(char c);
+	/**
 	 * @note Überprüfen, ob maximalert Wert von std::size_t erreicht
 	 * 
 	 * @param number Number to be checked
@@ -530,6 +536,7 @@ namespace mml {
 	 * @author Mike
 	 */
 	bool range(std::size_t number);
+
 	/**
 	 * @note Überprüfen, ob maximalert Wert von std::size_t erreicht
 	 * 
@@ -577,4 +584,5 @@ namespace mml {
 // 	}
 
 }
+
 #endif
