@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="27" column="6" bodyfile="src/help.cpp" bodystart="81" bodyend="96" declfile="include/mml/help.hpp" declline="27" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="27" column="6" bodyfile="src/help.cpp" bodystart="82" bodyend="97" declfile="include/mml/help.hpp" declline="27" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1af68a38a5b5edae14bb0c48e8ccad0492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="28" column="6" bodyfile="src/help.cpp" bodystart="98" bodyend="123" declfile="include/mml/help.hpp" declline="28" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="28" column="6" bodyfile="src/help.cpp" bodystart="99" bodyend="124" declfile="include/mml/help.hpp" declline="28" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1af6ff7471d95837a6e357e83e23d81146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="29" column="6" bodyfile="src/help.cpp" bodystart="125" bodyend="147" declfile="include/mml/help.hpp" declline="29" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="29" column="6" bodyfile="src/help.cpp" bodystart="126" bodyend="148" declfile="include/mml/help.hpp" declline="29" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a3978351d7301b2be83bdc46e976d030e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="30" column="6" bodyfile="src/help.cpp" bodystart="150" bodyend="180" declfile="include/mml/help.hpp" declline="30" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="30" column="6" bodyfile="src/help.cpp" bodystart="151" bodyend="181" declfile="include/mml/help.hpp" declline="30" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1ab7c3684386d58dad93acae57b8605c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="31" column="6" bodyfile="src/help.cpp" bodystart="183" bodyend="209" declfile="include/mml/help.hpp" declline="31" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="31" column="6" bodyfile="src/help.cpp" bodystart="184" bodyend="210" declfile="include/mml/help.hpp" declline="31" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1ab01cf639d5ae44f4139d5861bd63ffdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="32" column="6" bodyfile="src/help.cpp" bodystart="211" bodyend="227" declfile="include/mml/help.hpp" declline="32" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="32" column="6" bodyfile="src/help.cpp" bodystart="212" bodyend="228" declfile="include/mml/help.hpp" declline="32" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a8c7b528a6fdce332a92230ac90ea003d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="33" column="6" bodyfile="src/help.cpp" bodystart="229" bodyend="244" declfile="include/mml/help.hpp" declline="33" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="33" column="6" bodyfile="src/help.cpp" bodystart="230" bodyend="245" declfile="include/mml/help.hpp" declline="33" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a4fa535a397a367b86af91e61c151e283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="34" column="6" bodyfile="src/help.cpp" bodystart="247" bodyend="256" declfile="include/mml/help.hpp" declline="34" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="34" column="6" bodyfile="src/help.cpp" bodystart="248" bodyend="257" declfile="include/mml/help.hpp" declline="34" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1aa108f1fd9a7926224fa455f94ad56bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="35" column="6" bodyfile="src/help.cpp" bodystart="257" bodyend="311" declfile="include/mml/help.hpp" declline="35" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="35" column="6" bodyfile="src/help.cpp" bodystart="258" bodyend="312" declfile="include/mml/help.hpp" declline="35" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a0d3054a6b1494b5e6051238734bb8a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="36" column="6" bodyfile="src/help.cpp" bodystart="313" bodyend="337" declfile="include/mml/help.hpp" declline="36" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="36" column="6" bodyfile="src/help.cpp" bodystart="314" bodyend="338" declfile="include/mml/help.hpp" declline="36" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a8d391a507817cbce59f1117c7364a3b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="38" column="6" bodyfile="src/help.cpp" bodystart="339" bodyend="364" declfile="include/mml/help.hpp" declline="38" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="38" column="6" bodyfile="src/help.cpp" bodystart="340" bodyend="365" declfile="include/mml/help.hpp" declline="38" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a128b2bcdce2b677d3d2ceaea60070640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="39" column="6" bodyfile="src/help.cpp" bodystart="366" bodyend="421" declfile="include/mml/help.hpp" declline="39" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="39" column="6" bodyfile="src/help.cpp" bodystart="367" bodyend="422" declfile="include/mml/help.hpp" declline="39" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a16ce13af175e32d8de860b816e83b6ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="40" column="6" bodyfile="src/help.cpp" bodystart="423" bodyend="437" declfile="include/mml/help.hpp" declline="40" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="40" column="6" bodyfile="src/help.cpp" bodystart="424" bodyend="438" declfile="include/mml/help.hpp" declline="40" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1af4841cdf2e481b424f11043dc912bbbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="41" column="6" bodyfile="src/help.cpp" bodystart="439" bodyend="470" declfile="include/mml/help.hpp" declline="41" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="41" column="6" bodyfile="src/help.cpp" bodystart="440" bodyend="471" declfile="include/mml/help.hpp" declline="41" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a7c4cd5cc193b9fe05c02fed824c5bccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="42" column="6" bodyfile="src/help.cpp" bodystart="472" bodyend="495" declfile="include/mml/help.hpp" declline="42" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="42" column="6" bodyfile="src/help.cpp" bodystart="473" bodyend="496" declfile="include/mml/help.hpp" declline="42" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a6deeceeb5c1a37549f37f5133a17af15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="43" column="6" bodyfile="src/help.cpp" bodystart="497" bodyend="511" declfile="include/mml/help.hpp" declline="43" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="43" column="6" bodyfile="src/help.cpp" bodystart="498" bodyend="512" declfile="include/mml/help.hpp" declline="43" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1adada0110d9f8fa7c5ba95a35a8a017d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="44" column="6" bodyfile="src/help.cpp" bodystart="512" bodyend="542" declfile="include/mml/help.hpp" declline="44" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="44" column="6" bodyfile="src/help.cpp" bodystart="513" bodyend="543" declfile="include/mml/help.hpp" declline="44" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1afe14f31b66244bc704fcaf2d819be286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="53" column="6" bodyfile="src/help.cpp" bodystart="25" bodyend="30" declfile="include/mml/help.hpp" declline="53" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="53" column="6" bodyfile="src/help.cpp" bodystart="26" bodyend="31" declfile="include/mml/help.hpp" declline="53" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1a9e7febbcf7bfe7817a766881fc57528d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="62" column="6" bodyfile="src/help.cpp" bodystart="14" bodyend="23" declfile="include/mml/help.hpp" declline="62" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="62" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="24" declfile="include/mml/help.hpp" declline="62" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1help_1acfa6f75011432c10e311874b40084544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="69" column="6" bodyfile="src/help.cpp" bodystart="544" bodyend="628" declfile="include/mml/help.hpp" declline="69" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="69" column="6" bodyfile="src/help.cpp" bodystart="545" bodyend="629" declfile="include/mml/help.hpp" declline="69" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

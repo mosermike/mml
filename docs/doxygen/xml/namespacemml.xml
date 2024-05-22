@@ -11,7 +11,6 @@
     <innernamespace refid="namespacemml_1_1help">mml::help</innernamespace>
     <innernamespace refid="namespacemml_1_1shell">mml::shell</innernamespace>
     <innernamespace refid="namespacemml_1_1thread">mml::thread</innernamespace>
-    <innernamespace refid="namespacemml_1_1Time">mml::Time</innernamespace>
     <innernamespace refid="namespacemml_1_1Unix">mml::Unix</innernamespace>
       <sectiondef kind="user-defined">
       <header>standards.cpp</header>
@@ -19,72 +18,36 @@
 </simplesect>
 Enthält verschiedene Standardfunktionen </para>
 </description>
-      <memberdef kind="function" id="namespacemml_1a369221db1a4853285fbd90c1956a443c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1af4da79098c1caf9501e3f4ad9313a573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool mml::check_root</definition>
-        <argsstring>(mml::shell::arg args)</argsstring>
+        <argsstring>(std::string programme=&quot;&quot;)</argsstring>
         <name>check_root</name>
         <param>
-          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">mml::shell::arg</ref></type>
-          <declname>args</declname>
+          <type>std::string</type>
+          <declname>programme</declname>
+          <defval>&quot;&quot;</defval>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Überprüft, ob ein Programm als root ausgeführt wird</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Check if program executed as root <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>args</parametername>
+<parametername>std::string</parametername>
+<parametername>optional</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Arguments passed for check_root</para>
+<para>Programme name </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="author"><para>Mike </para>
+<simplesect kind="return"><para>bool </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="520" column="6" bodyfile="src/standards.cpp" bodystart="40" bodyend="74" declfile="include/mml/standards.hpp" declline="520" declcolumn="6"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacemml_1a92c710d0a886107dcb38a6699151ec38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename T</type>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void mml::cout</definition>
-        <argsstring>(std::vector&lt; T &gt; const &amp;vec)</argsstring>
-        <name>cout</name>
-        <param>
-          <type>std::vector&lt; T &gt; const &amp;</type>
-          <declname>vec</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>Ausgabe der Werte eines Vektors</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>vec</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Vector which is printed out</para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/standards.hpp" line="529" column="18" bodyfile="src/standards.cpp" bodystart="76" bodyend="79" declfile="include/mml/standards.hpp" declline="529" declcolumn="18"/>
+        <location file="include/mml/standards.hpp" line="476" column="6" bodyfile="src/standards.cpp" bodystart="40" bodyend="73" declfile="include/mml/standards.hpp" declline="476" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a2f67fa9c2ab3cc2f1c104ebfd97c7e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -103,11 +66,22 @@ Enthält verschiedene Standardfunktionen </para>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Ausgabe des aktuellen Datums oder der Uhrzeit</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Returns the wished info from the time (like date etc.) Options are:<itemizedlist>
+<listitem><para>0: Seconds</para>
+</listitem><listitem><para>1: Minutes</para>
+</listitem><listitem><para>2: Hours</para>
+</listitem><listitem><para>3: Day</para>
+</listitem><listitem><para>4: Month</para>
+</listitem><listitem><para>5: Year</para>
+</listitem><listitem><para>6: Summertime</para>
+</listitem><listitem><para>7: Weekday (Days since sunday)</para>
+</listitem><listitem><para>8: Yearday (Days since New Year)</para>
+</listitem><listitem><para>9: kw</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>info</parametername>
+<parametername>int</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Determines what information is printed </para>
@@ -115,14 +89,14 @@ Enthält verschiedene Standardfunktionen </para>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>time1</parametername>
+<parametername>time_t</parametername>
 </parameternamelist>
 <parameterdescription>
-<para><ref refid="namespacemml_1_1Time" kindref="compound">Time</ref> for which the information is printed. Default is -1 =&gt; Actual time now.</para>
+<para>Time for which the information is printed. -1 =&gt; Actual time now. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.) </para>
+<simplesect kind="return"><para>unsigned integer </para>
 </simplesect>
 <simplesect kind="author"><para>Mike </para>
 </simplesect>
@@ -130,48 +104,48 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="540" column="10" bodyfile="src/standards.cpp" bodystart="89" bodyend="118" declfile="include/mml/standards.hpp" declline="540" declcolumn="10"/>
+        <location file="include/mml/standards.hpp" line="507" column="10" bodyfile="src/standards.cpp" bodystart="78" bodyend="106" declfile="include/mml/standards.hpp" declline="507" declcolumn="10"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1ae1a9f89ef716fd943082126648d90659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1acd2059d85ff229714514fba5add6c391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string mml::date</definition>
-        <argsstring>(mml::string value=&quot;Datum&quot;, std::string trennzeichen1=&quot;:&quot;, std::string trennzeichen2=&quot;.&quot;)</argsstring>
+        <argsstring>(mml::string value, std::string separator1=&quot;:&quot;, std::string separator2=&quot;.&quot;)</argsstring>
         <name>date</name>
         <param>
           <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
           <declname>value</declname>
-          <defval>&quot;Datum&quot;</defval>
         </param>
         <param>
           <type>std::string</type>
-          <declname>trennzeichen1</declname>
+          <declname>separator1</declname>
           <defval>&quot;:&quot;</defval>
         </param>
         <param>
           <type>std::string</type>
-          <declname>trennzeichen2</declname>
+          <declname>separator2</declname>
           <defval>&quot;.&quot;</defval>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Ausgabe des aktuellen Datums oder der Uhrzeit als String Mögliche Auswahl: &quot;Datum&quot;, &quot;Uhrzeit&quot;, &quot;Datum+Uhrzeit&quot;, Default:&quot;Datum&quot;</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Returns the actual date and/or time as a std::string <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>value</parametername>
+<parametername><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Determines what information is printed. <linebreak/>
- &quot;Datum&quot; : DD.MM.YYYY (based on trennzeichen2) <linebreak/>
- &quot;Zeit&quot; : HH:MM:SS (based on trennzeichen1) <linebreak/>
- &quot;Datum+Uhrzeit&quot; : Complete date in format DD.MM.YYYY HH:MM:SS. <linebreak/>
- &quot;Datum1+Uhrzeit&quot; : Compete date in format YYYY.MM.DD HH:MM:SS. </para>
+<para>Determines what information is printed.<itemizedlist>
+<listitem><para>&quot;Date&quot; : DD.MM.YYYY (based on separator1)</para>
+</listitem><listitem><para>&quot;Time&quot; : HH:MM:SS (based on separator1)</para>
+</listitem><listitem><para>&quot;Date+Time&quot; : Complete date in format DD.MM.YYYY HH:MM:SS.</para>
+</listitem><listitem><para>&quot;Date1+Time&quot; : Compete date in format YYYY.MM.DD HH:MM:SS. </para>
+</listitem></itemizedlist>
+</para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>trennzeichen1</parametername>
+<parametername>std::string</parametername>
+<parametername>optional</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>First separation sign for the date </para>
@@ -179,14 +153,15 @@ Enthält verschiedene Standardfunktionen </para>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>trennzeichen2</parametername>
+<parametername>std::string</parametername>
+<parametername>optional</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Second separation sign for the time</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.) </para>
+<simplesect kind="return"><para>std::string </para>
 </simplesect>
 <simplesect kind="author"><para>Mike </para>
 </simplesect>
@@ -194,7 +169,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="557" column="13" bodyfile="src/standards.cpp" bodystart="120" bodyend="154" declfile="include/mml/standards.hpp" declline="557" declcolumn="13"/>
+        <location file="include/mml/standards.hpp" line="522" column="13" bodyfile="src/standards.cpp" bodystart="108" bodyend="141" declfile="include/mml/standards.hpp" declline="522" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a1d79d75734ea118c10fc391ab2231d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -227,7 +202,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="567" column="6" bodyfile="src/standards.cpp" bodystart="156" bodyend="158" declfile="include/mml/standards.hpp" declline="567" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="532" column="6" bodyfile="src/standards.cpp" bodystart="143" bodyend="145" declfile="include/mml/standards.hpp" declline="532" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1aef4479907a5a2ee42d0d0099e5525b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -272,7 +247,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="577" column="6" bodyfile="src/standards.cpp" bodystart="160" bodyend="162" declfile="include/mml/standards.hpp" declline="577" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="542" column="6" bodyfile="src/standards.cpp" bodystart="147" bodyend="149" declfile="include/mml/standards.hpp" declline="542" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a2cf98422c1355b3c351820b70b2834ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -317,39 +292,38 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="588" column="8" bodyfile="src/standards.cpp" bodystart="164" bodyend="171" declfile="include/mml/standards.hpp" declline="588" declcolumn="8"/>
+        <location file="include/mml/standards.hpp" line="553" column="8" bodyfile="src/standards.cpp" bodystart="151" bodyend="158" declfile="include/mml/standards.hpp" declline="553" declcolumn="8"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacemml_1a441733b0671056da9970ae129ef2815b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1a5e1f7079411db351da5fb53576413d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
-            <type>typename T</type>
+            <type>typename templ</type>
           </param>
         </templateparamlist>
         <type>double</type>
         <definition>double mml::atob</definition>
-        <argsstring>(const T &amp;t)</argsstring>
+        <argsstring>(const templ &amp;t)</argsstring>
         <name>atob</name>
         <param>
-          <type>const T &amp;</type>
+          <type>const templ &amp;</type>
           <declname>t</declname>
         </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Variable zu bool</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Converts value to bool</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>t</parametername>
+<parametername>templ</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Variable to bool</para>
+<para>Value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true oder false </para>
+<simplesect kind="return"><para>bool </para>
 </simplesect>
 <simplesect kind="author"><para>Mike </para>
 </simplesect>
@@ -357,7 +331,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="473" column="19" bodyfile="include/mml/standards.hpp" bodystart="473" bodyend="480"/>
+        <location file="include/mml/standards.hpp" line="432" column="19" bodyfile="include/mml/standards.hpp" bodystart="432" bodyend="439"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a55ee60d6d3fb41858d5c3f151044c200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -376,14 +350,13 @@ Enthält verschiedene Standardfunktionen </para>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>string zu double</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Converts value to bool</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>t</parametername>
+<parametername>templ</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>String to be changed into a double </para>
+<para>Value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -395,7 +368,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="489" column="19" bodyfile="include/mml/standards.hpp" bodystart="489" bodyend="495"/>
+        <location file="include/mml/standards.hpp" line="448" column="19" bodyfile="include/mml/standards.hpp" bodystart="448" bodyend="454"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a149a900d1e48e37c56481964c79aa9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -414,18 +387,17 @@ Enthält verschiedene Standardfunktionen </para>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>string zu int</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para>Converts value to int</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>t</parametername>
+<parametername>templ</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>String to be changed into an integer </para>
+<para>Value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Integer</para>
+<simplesect kind="return"><para>int </para>
 </simplesect>
 <simplesect kind="author"><para>Mike </para>
 </simplesect>
@@ -433,7 +405,40 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="505" column="16" bodyfile="include/mml/standards.hpp" bodystart="505" bodyend="511"/>
+        <location file="include/mml/standards.hpp" line="463" column="16" bodyfile="include/mml/standards.hpp" bodystart="463" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1af9e4a0ff0d5308ede2e315150e566529" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void mml::cout</definition>
+        <argsstring>(std::vector&lt; templ &gt; const &amp;vec)</argsstring>
+        <name>cout</name>
+        <param>
+          <type>std::vector&lt; templ &gt; const &amp;</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the values of a vector</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::vector&lt;templ&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="483" column="18" bodyfile="include/mml/standards.hpp" bodystart="483" bodyend="486"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a21e76265e9a8d7091fe7068aee432c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -471,7 +476,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="597" column="24" bodyfile="include/mml/standards.hpp" bodystart="597" bodyend="603"/>
+        <location file="include/mml/standards.hpp" line="562" column="24" bodyfile="include/mml/standards.hpp" bodystart="562" bodyend="568"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

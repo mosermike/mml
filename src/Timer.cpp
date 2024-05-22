@@ -4,9 +4,9 @@
 #include <sstream>
 #include <iomanip>
 
-#include "mml.hpp"
-#include "Timer.hpp"
 
+#include "mml/Timer.hpp"
+#include "mml/standards.hpp"
 
 
 std::chrono::high_resolution_clock::time_point mml::Timer::_now() const noexcept {
@@ -167,58 +167,5 @@ std::ostream& operator<<(mml::Timer& t, std::ostream& os) {
     return os;
 }
 
-mml::string mml::Time::to_date(time_t time) {
-// 	tm* nun = gmtime(&time); // in UTC
-	tm* nun = std::localtime(&time); // in localtime
-	
-	uint32_t u_year = (uint32_t) nun->tm_year+1900;	// Jahr
-	uint32_t u_month = (uint32_t) nun->tm_mon+1;	// Monat
-	uint32_t u_day = (uint32_t) nun->tm_mday;	// Tag
-	uint32_t u_hour = (uint32_t) nun->tm_hour;	// Stunde
-	uint32_t u_minute = (uint32_t) nun->tm_min;	// Minute
-	uint32_t u_second = (uint32_t) nun->tm_sec;
-	
-	std::string year = std::to_string(u_year);
-	std::string month = u_month > 9		?	std::to_string(u_month) : "0" + std::to_string(u_month);
-	std::string day = u_day > 9 		?	std::to_string(u_day) : "0" + std::to_string(u_day);
-	std::string hour = u_hour > 9		?	std::to_string(u_hour) : "0" + std::to_string(u_hour);
-	std::string minute = u_minute > 9	?	std::to_string(u_minute) : "0" + std::to_string(u_minute);
-	std::string second = u_second > 9	?	std::to_string(u_second) : "0" + std::to_string(u_second);
-	
-	mml::string date = day + "." + month + "." + year + " " + hour + ":" + minute + ":" + second;
-	
-	return date;
-}
-
-// NOTE TODO BETA
-time_t mml::Time::to_time(std::string date) {
-	std::istringstream date1(date);
-	tm tm;
-	date1 >> std::get_time(&tm,"%d.%m.%Y %H:%M:%S");
-	double hour = std::atof(date.substr(date.find(' ')+1 , date.find(':')-date.find(' ')).c_str());
-	if(tm.tm_hour != hour)
-		tm.tm_hour = hour;
-	time_t time = mktime(&tm);
-	return time;
-}
-
-/*c
-mml::EverySecTimer::EverySecTimer() : _prev(0) {
-    _timer.start();
-}
-
-mml::EverySecTimer::~EverySecTimer() {
-}
-
-bool mml::EverySecTimer::run() {
-    if(_timer.stop() > _prev + 1000.0) {
-        _prev = _timer.getMS();
-        
-        return true;
-    }
-    else
-        return false;
-}
-*/
 
 

@@ -7,9 +7,8 @@
  * 
 */
 #include <iostream>
-#include <mml.hpp>
-#include <Thread.hpp>
-
+#include "mml/Thread.hpp"
+#include "mml.hpp"
 
 
 void mml::thread::Thread::thread_writing_true() {

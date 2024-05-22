@@ -15,6 +15,8 @@
 #include <string.h>
 #include <random>
 #include <float.h>
+#include <iostream>
+#include "mml/definitions.hpp"
 
 // TODO replace nur einmal
 
@@ -31,44 +33,48 @@ namespace mml {
 	class string{
 
 	private:
-		std::string 				value		= "";
-		std::string 				temp		= "";
-		std::string 				save_value 	= "";
+		std::string 				value		= ""; // Value of the string
+		std::string 				temp		= ""; // Temporary saved string (only for intern functions)
 		
+		// only for internal conversions
+		template <typename templ> mml::string to_mml(templ val) {
+			std::ostringstream stream;
+			stream << val;
+
+			mml::string temp;
+			temp.value = stream.str();
+			return temp;
+		}
+
 	public:
 		/**
-		 * Initialize with a character array
-		 * @param char* Value of the string
-		 * @return Instance of the class
+		 * @param templ Value
 		*/
-		string(const char* val) :  value((std::string)val){}
-		
+		template <typename templ> string(templ str) {
+			std::ostringstream stream;
+			stream << str;
+			value = stream.str();
+			temp = value;
+    	}
+
 		/**
-		 * Initialize with a character array
-		 * @param string String value
-		 * @return Instance of the class
-		*/
-		string(std::string val) :  value(val){}
-		
-		/**
-		 * Initialise without any value
 		 * @return Instance of the class
 		*/
 		string(){}
 		
 		/**
 		 * Assign the value of the template type with the '=' sign 
-		 * @param template Value
+		 * @param templ Value
 		 * @return Class instance
 		*/
-		template <typename T> mml::string& operator=(T value) {
+		template <typename templ> mml::string& operator=(templ str) {
 			std::ostringstream stream;
-			stream << value;
-			std::string str_value = stream.str();
+			stream << str;
+			value = stream.str();
 
-			save_value = str_value;
+			temp = value;
 			return *this;
-    	}	// Zuweisung über = an value
+    	}
 		
 
 		/**
@@ -92,88 +98,34 @@ namespace mml {
 		}
 		
 		/**
-		*  Operator equal to a std::string
-		*  @param string
+		*  Operator equal
+		*  @param templ Value
 		*  @return bool
 		*/
-		bool operator==(const std::string test);
+		template<typename templ> bool operator==(templ Test) {return to_mml(Test).str() == value ? true : false;}
 
 		/**
-		*  Operator equal to a mml::string
-		*  @param string
+		*  Operator unequal
+		*  @param templ Value
 		*  @return bool
 		*/
-		bool operator==(mml::string test);
+		template<typename templ> bool operator!=(templ Test) {return to_mml(Test).str() != value ? true : false;}
+
 
 		/**
-		*  Operator equal to a char vector
-		*  @param char* Value to be checked
-		*  @return bool
+		*  Operator add somehting at the end of this instance
+		*  @param templ Value to be added
+		*  @return std::string
 		*/
-		bool operator==(const char* test);
+		template<typename templ> std::string operator+(templ Test) {return this->value + to_mml(Test).str();}
 
-		/**
-		*  Operator unequal to a std::string
-		*  @param string
-		*  @return bool
-		*/
-		bool operator!=(const std::string test);
-
-		/**
-		*  Operator unequal to a mml::string
-		*  @param string
-		*  @return bool
-		*/
-		bool operator!=(mml::string test);
-
-		/**
-		*  Operator unequal to a char vector
-		*  @param string
-		*  @return bool
-		*/
-		bool operator!=(const char* test);
-
-		/**
-		*  Operator add a char vector
-		*  @param char* Value to be added
-		*  @return Added mml::string
-		*/
-		mml::string operator+(const char* add);
-		
-		/**
-		*  Operator add a std::string
-		*  @param string Value to be added
-		*  
-		*/
-		mml::string operator+(const std::string add);
-
-		/**
-		*  Operator add a mml::string
-		*  @param string Value to be added
-		*  @return mml::string
-		*/
-		mml::string operator+(mml::string add);
 
 		/**
 		*  Operator add a char vector to this string
-		*  @param char* Value to be added
+		*  @param template Value to be added
 		*  @return mml::string
 		*/
-		mml::string operator+=(const char* add);
-
-		/**
-		*  Operator add a std::string to this instance
-		*  @param string Value to be added
-		*  @return instance of this class
-		*/
-		mml::string operator+=(const std::string add);
-		
-		/**
-		*  Operator add a mml::string to this instance
-		*  @param string Value to be added
-		*  @return Instance of this class
-		*/
-		mml::string operator+=(mml::string add);
+		template<typename templ> mml::string operator+=(templ Test) {this->value += to_mml(Test).str(); return *this;}
 		
 		/**
 		 * Return a specific char from the string
@@ -214,22 +166,22 @@ namespace mml {
 		
 		/**
 		 * Print out the value of this instance
-		 * @param bool,optional Print newline. Default: true
-		 * @param std::string,optional Additional text. Default ""
+		 * @param bool,optional Print newline.
+		 * @param std::string,optional Additional text.
 		 * @return None
 		 */
 		void cout(bool newline = true, std::string text = "");
 		
 		/**
 		 * Delete letters
-		 * @param bool,optional Save the changed string in this instance. Default: false
+		 * @param bool,optional Save the changed string in this instance.
 		 * @return std::string
 		 */
 		  std::string del_letter(bool save = false);
 		
 		/**
 		 * Delete numbers
-		 * @param bool,optional Save the changed string in this instance. Default: false
+		 * @param bool,optional Save the changed string in this instance.
 		 * @return std::string
 		 * 
 		 */
@@ -237,11 +189,16 @@ namespace mml {
 		
 		/**
 		 * Remove everything after the first space
-		 * @param bool,optional Save the changed string in this instance. Default: false
-		 * @return String kürzen bis Space
-		 * @author Mike
+		 * @param bool,optional Save the changed string in this instance.
+		 * @return std::string
 		 */
 		  std::string del_space(bool save = false);
+
+		/**
+		 * Checks if the string is empty
+		 * @return bool
+		 */
+		  bool empty() {return value.empty();};
 
 		/**
 		 * Check if a string exists
@@ -265,7 +222,7 @@ namespace mml {
 		 * Position of the first appearance of a character after a start position
 		 * 
 		 * @param char Value
-		 * @param size_t,optional Value from where to search for the char. Default: 0
+		 * @param size_t,optional Value from where to search for the char.
 		 * @return Position
 		 * @author Mike
 		 */
@@ -274,7 +231,7 @@ namespace mml {
 		 * Position of the first appearance of a string after a start position
 		 * 
 		 * @param string Value
-		 * @param size_t,optional Value from where to search for the char. Default: 0
+		 * @param size_t,optional Value from where to search for the char.
 		 * @return Position
 		 * @author Mike
 		 */
@@ -284,8 +241,8 @@ namespace mml {
 		 * @note Check if a string exists but starting from the right side
 		 *
 		 * @param name String to look for
-		 * @param std::size_t,optional Value from where to search for the string. 0 means that it is not used. Default: 0
-		 * @param std::size_t,optional Lower limit to which point is searched for. Default: 0
+		 * @param std::size_t,optional Value from where to search for the string. 0 means that it is not used.
+		 * @param std::size_t,optional Lower limit to which point is searched for.
 		 * @return std::size_t
 		 * 
 		 */
@@ -302,7 +259,7 @@ namespace mml {
 		/**
 		 * Reads a line from a file
 		 * @param string File name
-		 * @param std::size_t,optional Line number. Default: 0.
+		 * @param std::size_t,optional Line number.
 		 * @return std::tring
 		 * 
 		 */
@@ -373,29 +330,34 @@ namespace mml {
 		 */
 		bool remove();
 			
-		/** // TODO ÜBERARBEITEN!!! endless schleife wenn str_old in str_new
-		* @note Zeichen in einem String ersetzen
-		* @note String in einem String ersetzen
-		* @param char Find this character or string
-		* @param char New character or string
-		* @param bool Save the change in this class (False)
-		* @param size_t Start from this position to replace (0)
-		* @param bool Replace all strings which exist (True)
-		* @return String mit den ersetzten Zeichen
-		* @author Mike
+		/**
+		* Replace sth in the string with sth else
+		* @param templ Replace this value
+		* @param temp Replaced with this value
+		* @param size_t Start from this position to replace
+		* @return std::string
 		*/
+		template <typename T> std::string replace(T str_old, T str_new, std::size_t pos = 0) {
+			mml::string str_old1(str_old);
+			mml::string str_new1(str_new);
 
-		std::string replace(char sign_old, char sign_new, bool save = false, std::size_t pos = 0, bool all = true);
-		std::string replace(mml::string str_old, mml::string str_new, bool save = false, std::size_t pos = 0, bool all = true);
-		std::string replace(std::string str_old1, std::string str_new1, std::string str_old2, std::string str_new2, bool save = false, std::size_t pos = 0, bool all = true);
+			if (str_old1.empty()) {
+				throw std::invalid_argument("The value to be replaced must not be empty.");
+			}
+
+			temp = value;
+
+			while ((pos = temp.find(str_old1.str(), pos)) != std::string::npos) {
+				temp.replace(pos, str_old1.size(), str_new1.str());
+				pos += str_new1.size();  // Move past the new string to avoid infinite loop
+			}
+
+			return temp;
+
+		}
 	
-	private:
-		std::string replace_intern(mml::string str_old, mml::string str_new, std::size_t pos, bool save = false);
-
-	public:
 		/** 
-		 * @note Get position of last occurance of a character
-		 * 
+		 * Get position of last occurance of a character
 		 * @param char Value to be found
 		 * @return std::size_t
 		 */
@@ -412,7 +374,6 @@ namespace mml {
 		 * Create substring 
 		 * @param size_t Start position
 		 * @param std::size_t Length of the string
-		 * 
 		 * @return mml::string
 		*/
 		mml::string substr(std::size_t pos1, std::size_t length1);
@@ -429,7 +390,6 @@ namespace mml {
 		 * @param std::size_t Start of the new string
 		 * @param std::size_t End of the new string
 		 * @return mml::string
-		 * @author Mike
 		 */
 		mml::string sub(std::size_t beg, int32_t end);
 		
@@ -463,14 +423,13 @@ namespace mml {
 	};
 	
 	/**
-	* @note Variable zu bool
+	 * Converts value to bool
 	 * 
-	 * @param t Variable to bool
-	 * 
-	 * @return true oder false
+	 * @param templ Value
+	 * @return bool
 	 * @author Mike
 	*/
-	template<typename T> double atob(const T& t) {
+	template<typename templ> double atob(const templ& t) {
 		std::ostringstream stream;
 		
 		stream << t;
@@ -480,12 +439,12 @@ namespace mml {
 	}
 	
 	/**
-	 * @note string zu double
+	 * Converts value to bool
 	 * 
-	 * @param t String to be changed into a double
+	 * @param templ Value
 	 * @return double
 	 * @author Mike
-	 */
+	*/
 	template<typename T> double atof(const T& t) {
 		std::ostringstream stream;
 		
@@ -495,13 +454,12 @@ namespace mml {
 	}
 	
 	/**
-	 * @note string zu int
+	 * Converts value to int
 	 * 
-	 * @param t String to be changed into an integer
-	 * @return Integer
-	 * 
+	 * @param templ Value
+	 * @return int
 	 * @author Mike
-	 */
+	*/
 	template<typename T> int atoi(const T& t) {
 		std::ostringstream stream;
 		
@@ -511,51 +469,58 @@ namespace mml {
 	}
 	
 	/**
-	 * @note Überprüft, ob ein Programm als root ausgeführt wird
-	 * 
-	 * @param args Arguments passed for check_root
-	 * 
-	 * @author Mike
+	 * Check if program executed as root
+	 * @param std::string,optional Programme name
+	 * @return bool
 	 */
-	bool check_root(mml::shell::arg args);
+	bool check_root(std::string programme = "");
 	
 	/**
-	 * @note Ausgabe der Werte eines Vektors
+	 * Prints the values of a vector
 	 * 
-	 * @param vec Vector which is printed out
-	 * 
-	 * @author Mike
+	 * @param std::vector<templ> Vector to be printed
 	 */
-	template <typename T> void cout (std::vector<T> const& vec);
+	template <typename templ> void cout (std::vector<templ> const& vec){
+	for(uint32_t i = 0; i < vec.size(); i++)
+		std::cout << vec[i] << std::endl;    //Ausgabe aller Werte
+	}
 	
 	/**
-	 * @note Ausgabe des aktuellen Datums oder der Uhrzeit 
+	 * Returns the wished info from the time (like date etc.)
+	 * Options are:
+	 * - 0: Seconds
+	 * - 1: Minutes
+	 * - 2: Hours
+	 * - 3: Day 
+	 * - 4: Month
+	 * - 5: Year
+	 * - 6: Summertime
+	 * - 7: Weekday (Days since sunday)
+	 * - 8: Yearday (Days since New Year)
+	 * - 9: kw
 	 * 
-	 * @param info Determines what information is printed
-	 * @param time1 Time for which the information is printed. Default is -1 => Actual time now.
-	 * 
-	 * @return unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.)
+	 * @param int Determines what information is printed
+	 * @param time_t Time for which the information is printed. -1 => Actual time now.
+	 * @return unsigned integer
 	 * @author Mike
 	*/
 	uint32_t date(int info, time_t time1 = -1);
-	
+
 	/**
-	 * @note Ausgabe des aktuellen Datums oder der Uhrzeit als String
-	 * 		 Mögliche Auswahl: "Datum", "Uhrzeit", "Datum+Uhrzeit", Default:"Datum"
+	 * Returns the actual date and/or time as a std::string
+	 * @param mml::string Determines what information is printed.
+	 *              - "Date" : DD.MM.YYYY (based on separator1)
+	 *              - "Time" : HH:MM:SS  (based on separator1)
+	 *              - "Date+Time"  : Complete date in format DD.MM.YYYY HH:MM:SS.
+	 *              - "Date1+Time" : Compete date in format YYYY.MM.DD HH:MM:SS.
+	 * @param std::string,optional First separation sign for the date
+	 * @param std::string,optional Second separation sign for the time
 	 * 
-	 * @param value Determines what information is printed. <br>
-	 *              "Datum"          : DD.MM.YYYY (based on trennzeichen2) <br>
-	 * 				"Zeit"           : HH:MM:SS  (based on trennzeichen1) <br>
-	 *              "Datum+Uhrzeit"  : Complete date in format DD.MM.YYYY HH:MM:SS. <br>
-	 *              "Datum1+Uhrzeit" : Compete date in format YYYY.MM.DD HH:MM:SS.
-	 * @param trennzeichen1 First separation sign for the date
-	 * @param trennzeichen2 Second separation sign for the time
-	 * 
-	 * @return unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.)
+	 * @return std::string
 	 * @author Mike
 	*/
-	std::string date(mml::string value = "Datum", std::string trennzeichen1 = ":", std::string trennzeichen2 = ".");
-	
+	std::string date(mml::string value, std::string separator1 = ":", std::string separator2 = ".");
+
 	/**
 	 * @note Überprüfen, ob maximalert Wert von std::size_t erreicht
 	 * 

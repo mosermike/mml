@@ -10,8 +10,8 @@
 #define MML_INCLUDE_MML_SHELL_HPP 
 #include <iostream>
 #include <vector>
-#include "vector.hpp"
-#include "functions.hpp"
+#include "mml/vector.hpp"
+#include "mml/functions.hpp"
 
 namespace mml{
 

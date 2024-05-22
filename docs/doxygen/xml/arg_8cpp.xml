@@ -6,8 +6,8 @@
     <includes local="no">string</includes>
     <includes local="no">algorithm</includes>
     <includes local="no">vector</includes>
-    <includes refid="functions_8hpp" local="no">functions.hpp</includes>
-    <includes refid="shell_8hpp" local="yes">shell.hpp</includes>
+    <includes refid="functions_8hpp" local="yes">mml/functions.hpp</includes>
+    <includes refid="shell_8hpp" local="yes">mml/shell.hpp</includes>
     <includes local="no">limits</includes>
     <incdepgraph>
       <node id="1">
@@ -23,19 +23,19 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>limits</label>
       </node>
       <node id="11">
         <label>float.h</label>
       </node>
       <node id="7">
-        <label>standards.hpp</label>
+        <label>mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -49,12 +49,16 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>string</label>
       </node>
       <node id="6">
-        <label>functions.hpp</label>
+        <label>mml/functions.hpp</label>
         <link refid="functions_8hpp"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -71,23 +75,27 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>fstream</label>
       </node>
-      <node id="12">
-        <label>shell.hpp</label>
+      <node id="13">
+        <label>mml/shell.hpp</label>
         <link refid="shell_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="10">
         <label>random</label>
+      </node>
+      <node id="12">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
       </node>
       <node id="9">
         <label>string.h</label>
@@ -101,8 +109,8 @@
       <node id="2">
         <label>iostream</label>
       </node>
-      <node id="13">
-        <label>vector.hpp</label>
+      <node id="14">
+        <label>mml/vector.hpp</label>
         <link refid="vector_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -114,15 +122,15 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="14">
-        <label>log.hpp</label>
+      <node id="15">
+        <label>mml/log.hpp</label>
         <link refid="log_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -143,8 +151,8 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="functions_8hpp" kindref="compound">functions.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="functions_8hpp" kindref="compound">mml/functions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">mml/shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Überprüfen,<sp/>ob<sp/>ein<sp/>Argument<sp/>mit<sp/>einem<sp/>bestimmten<sp/>String<sp/>anfängt</highlight><highlight class="normal"></highlight></codeline>

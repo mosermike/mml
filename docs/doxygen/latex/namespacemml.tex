@@ -13,8 +13,6 @@
 \item 
  \mbox{\hyperlink{namespacemml_1_1thread}{thread}}
 \item 
- \mbox{\hyperlink{namespacemml_1_1Time}{Time}}
-\item 
  \mbox{\hyperlink{namespacemml_1_1Unix}{Unix}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Classes}
@@ -31,11 +29,13 @@ class \mbox{\hyperlink{classmml_1_1vector}{vector}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a441733b0671056da9970ae129ef2815b}{atob}} (const T \&t)
+{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_a5e1f7079411db351da5fb53576413d38}{atob}} (const templ \&t)
 \item 
 {\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}{atof}} (const T \&t)
 \item 
 {\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_a149a900d1e48e37c56481964c79aa9b4}{atoi}} (const T \&t)
+\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_af9e4a0ff0d5308ede2e315150e566529}{cout}} (std\+::vector$<$ templ $>$ const \&vec)
 \item 
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a21e76265e9a8d7091fe7068aee432c39}{to\+\_\+string}} (const T \&t)
 \end{DoxyCompactItemize}
@@ -45,13 +45,11 @@ Mike Moser
 \end{DoxyAuthor}
 Enthält verschiedene Standardfunktionen }\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{namespacemml_a369221db1a4853285fbd90c1956a443c}{check\+\_\+root}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args)
-\item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacemml_a92c710d0a886107dcb38a6699151ec38}{cout}} (std\+::vector$<$ T $>$ const \&vec)
+bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{})
 \item 
 uint32\+\_\+t \mbox{\hyperlink{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}{date}} (int info, time\+\_\+t time1=-\/1)
 \item 
-std\+::string \mbox{\hyperlink{namespacemml_ae1a9f89ef716fd943082126648d90659}{date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Datum\char`\"{}, std\+::string trennzeichen1=\char`\"{}\+:\char`\"{}, std\+::string trennzeichen2=\char`\"{}.\char`\"{})
+std\+::string \mbox{\hyperlink{namespacemml_acd2059d85ff229714514fba5add6c391}{date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{})
 \item 
 bool \mbox{\hyperlink{namespacemml_a1d79d75734ea118c10fc391ab2231d56}{range}} (std\+::size\+\_\+t number)
 \item 
@@ -69,23 +67,22 @@ Mike Moser
 Bibliothek shell.\+h Enthält verschiedene Funktionen mit namespace shell 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacemml_a441733b0671056da9970ae129ef2815b}\label{namespacemml_a441733b0671056da9970ae129ef2815b}} 
+\mbox{\Hypertarget{namespacemml_a5e1f7079411db351da5fb53576413d38}\label{namespacemml_a5e1f7079411db351da5fb53576413d38}} 
 \index{mml@{mml}!atob@{atob}}
 \index{atob@{atob}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{atob()}{atob()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-double mml\+::atob (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename templ $>$ \\
+double mml\+::atob (\begin{DoxyParamCaption}\item[{const templ \&}]{t }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Variable zu bool
-\end{DoxyNote}
+Converts value to bool
+
 
 \begin{DoxyParams}{Parameters}
-{\em t} & Variable to bool\\
+{\em templ} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true oder false 
+bool 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike 
@@ -97,12 +94,11 @@ Mike
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 double mml\+::atof (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-string zu double
-\end{DoxyNote}
+Converts value to bool
+
 
 \begin{DoxyParams}{Parameters}
-{\em t} & String to be changed into a double \\
+{\em templ} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -118,101 +114,103 @@ Mike
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 int mml\+::atoi (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-string zu int
-\end{DoxyNote}
+Converts value to int
+
 
 \begin{DoxyParams}{Parameters}
-{\em t} & String to be changed into an integer \\
+{\em templ} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Integer
+int 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a369221db1a4853285fbd90c1956a443c}\label{namespacemml_a369221db1a4853285fbd90c1956a443c}} 
+\mbox{\Hypertarget{namespacemml_af4da79098c1caf9501e3f4ad9313a573}\label{namespacemml_af4da79098c1caf9501e3f4ad9313a573}} 
 \index{mml@{mml}!check\_root@{check\_root}}
 \index{check\_root@{check\_root}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{check\_root()}{check\_root()}}
-{\footnotesize\ttfamily bool mml\+::check\+\_\+root (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}}}]{args }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool mml\+::check\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::string}]{programme = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Überprüft, ob ein Programm als root ausgeführt wird
-\end{DoxyNote}
-
+Check if program executed as root 
 \begin{DoxyParams}{Parameters}
-{\em args} & Arguments passed for check\+\_\+root\\
+{\em std\+::string,optional} & Programme name \\
 \hline
 \end{DoxyParams}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a92c710d0a886107dcb38a6699151ec38}\label{namespacemml_a92c710d0a886107dcb38a6699151ec38}} 
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_af9e4a0ff0d5308ede2e315150e566529}\label{namespacemml_af9e4a0ff0d5308ede2e315150e566529}} 
 \index{mml@{mml}!cout@{cout}}
 \index{cout@{cout}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{cout()}{cout()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void mml\+::cout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ const \&}]{vec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename templ $>$ \\
+void mml\+::cout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ templ $>$ const \&}]{vec }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Ausgabe der Werte eines Vektors
-\end{DoxyNote}
+Prints the values of a vector
+
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & Vector which is printed out\\
+{\em std\+::vector$<$templ$>$} & Vector to be printed \\
 \hline
 \end{DoxyParams}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 \mbox{\Hypertarget{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}\label{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}} 
 \index{mml@{mml}!date@{date}}
 \index{date@{date}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{date()}{date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily uint32\+\_\+t mml\+::date (\begin{DoxyParamCaption}\item[{int}]{info,  }\item[{time\+\_\+t}]{time1 = {\ttfamily -\/1} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Ausgabe des aktuellen Datums oder der Uhrzeit
-\end{DoxyNote}
+Returns the wished info from the time (like date etc.) Options are\+:
+\begin{DoxyItemize}
+\item 0\+: Seconds
+\item 1\+: Minutes
+\item 2\+: Hours
+\item 3\+: Day
+\item 4\+: Month
+\item 5\+: Year
+\item 6\+: Summertime
+\item 7\+: Weekday (Days since sunday)
+\item 8\+: Yearday (Days since New Year)
+\item 9\+: kw
+\end{DoxyItemize}
+
 
 \begin{DoxyParams}{Parameters}
-{\em info} & Determines what information is printed \\
+{\em int} & Determines what information is printed \\
 \hline
-{\em time1} & \mbox{\hyperlink{namespacemml_1_1Time}{Time}} for which the information is printed. Default is -\/1 =$>$ Actual time now.\\
+{\em time\+\_\+t} & Time for which the information is printed. -\/1 =$>$ Actual time now. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.) 
+unsigned integer 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_ae1a9f89ef716fd943082126648d90659}\label{namespacemml_ae1a9f89ef716fd943082126648d90659}} 
+\mbox{\Hypertarget{namespacemml_acd2059d85ff229714514fba5add6c391}\label{namespacemml_acd2059d85ff229714514fba5add6c391}} 
 \index{mml@{mml}!date@{date}}
 \index{date@{date}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{date()}{date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value = {\ttfamily \char`\"{}Datum\char`\"{}},  }\item[{std\+::string}]{trennzeichen1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{trennzeichen2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value,  }\item[{std\+::string}]{separator1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{separator2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Ausgabe des aktuellen Datums oder der Uhrzeit als String Mögliche Auswahl\+: \char`\"{}\+Datum\char`\"{}, \char`\"{}\+Uhrzeit\char`\"{}, \char`\"{}\+Datum+\+Uhrzeit\char`\"{}, Default\+:\char`\"{}\+Datum\char`\"{}
-\end{DoxyNote}
-
+Returns the actual date and/or time as a std\+::string 
 \begin{DoxyParams}{Parameters}
-{\em value} & Determines what information is printed. ~\newline
- \char`\"{}\+Datum\char`\"{} \+: DD.\+MM.\+YYYY (based on trennzeichen2) ~\newline
- \char`\"{}\+Zeit\char`\"{} \+: HH\+:\+MM\+:SS (based on trennzeichen1) ~\newline
- \char`\"{}\+Datum+\+Uhrzeit\char`\"{} \+: Complete date in format DD.\+MM.\+YYYY HH\+:\+MM\+:SS. ~\newline
- \char`\"{}\+Datum1+\+Uhrzeit\char`\"{} \+: Compete date in format YYYY.\+MM.\+DD HH\+:\+MM\+:SS. \\
+{\em \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}} & Determines what information is printed.
+\begin{DoxyItemize}
+\item \char`\"{}\+Date\char`\"{} \+: DD.\+MM.\+YYYY (based on separator1)
+\item \char`\"{}\+Time\char`\"{} \+: HH\+:\+MM\+:SS (based on separator1)
+\item \char`\"{}\+Date+\+Time\char`\"{} \+: Complete date in format DD.\+MM.\+YYYY HH\+:\+MM\+:SS.
+\item \char`\"{}\+Date1+\+Time\char`\"{} \+: Compete date in format YYYY.\+MM.\+DD HH\+:\+MM\+:SS. 
+\end{DoxyItemize}\\
 \hline
-{\em trennzeichen1} & First separation sign for the date \\
+{\em std\+::string,optional} & First separation sign for the date \\
 \hline
-{\em trennzeichen2} & Second separation sign for the time\\
+{\em std\+::string,optional} & Second separation sign for the time\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc.) 
+std\+::string 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike 

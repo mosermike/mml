@@ -1,4 +1,4 @@
-.TH "src/standards.cpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.TH "src/standards.cpp" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,7 +16,7 @@ src/standards.cpp
 .br
 \fC#include <unistd\&.h>\fP
 .br
-\fC#include <definitions\&.hpp>\fP
+\fC#include <ctime>\fP
 .br
 \fC#include <algorithm>\fP
 .br
@@ -24,40 +24,14 @@ src/standards.cpp
 .br
 \fC#include <signal\&.h>\fP
 .br
-\fC#include <mml\&.hpp>\fP
+\fC#include 'mml/standards\&.hpp'\fP
 .br
-\fC#include 'standards\&.hpp'\fP
+\fC#include 'mml/functions\&.hpp'\fP
 .br
-
-.SS "Functions"
-
-.PP
-.RI "\fBstandards\&.cpp\fP"
+\fC#include 'mml/definitions\&.hpp'\fP
 .br
-
-.PP
-\fBAuthor\fP
-.RS 4
-Mike Moser
-.RE
-.PP
-Enthält verschiedene Standardfunktionen 
-.PP
-.in +1c
-.in +1c
-.ti -1c
-.RI "template void \fBmml::cout< mml::string >\fP (std::vector< \fBmml::string\fP > const &vec)"
+\fC#include 'mml/Unix\&.hpp'\fP
 .br
-.ti -1c
-.RI "template void \fBmml::cout< std::string >\fP (std::vector< std::string > const &vec)"
-.br
-.in -1c
-.in -1c
-.SH "Function Documentation"
-.PP 
-.SS "template void \fBmml::cout\fP< \fBmml::string\fP > (std::vector< \fBmml::string\fP > const & vec)"
-
-.SS "template void \fBmml::cout\fP< std::string > (std::vector< std::string > const & vec)"
 
 .SH "Author"
 .PP 

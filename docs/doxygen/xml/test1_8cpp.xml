@@ -2,8 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="test1_8cpp" kind="file" language="C++">
     <compoundname>test1.cpp</compoundname>
-    <includes refid="standards_8hpp" local="no">mml/standards.hpp</includes>
-    <includes refid="mml_8hpp" local="no">mml.hpp</includes>
+    <includes refid="standards_8hpp" local="yes">mml/standards.hpp</includes>
+    <includes refid="mml_8hpp" local="yes">mml.hpp</includes>
     <includes local="no">iostream</includes>
     <incdepgraph>
       <node id="15">
@@ -11,10 +11,10 @@
         <link refid="help_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="13">
         <label>functional</label>
       </node>
       <node id="8">
@@ -46,22 +46,26 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>string</label>
       </node>
-      <node id="11">
+      <node id="12">
         <label>mml/file.hpp</label>
         <link refid="file_8hpp"/>
-        <childnode refid="12" relation="include">
-        </childnode>
         <childnode refid="13" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="13">
-        <label>functions.hpp</label>
+      <node id="14">
+        <label>mml/functions.hpp</label>
         <link refid="functions_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -84,7 +88,7 @@
       <node id="21">
         <label>mml/Thread.hpp</label>
         <link refid="Thread_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
@@ -94,13 +98,13 @@
       <node id="18">
         <label>mml/shell.hpp</label>
         <link refid="shell_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="7">
@@ -110,14 +114,14 @@
         <label>mml/definitions.hpp</label>
         <link refid="definitions_8hpp"/>
       </node>
-      <node id="9">
+      <node id="11">
         <label>mml.hpp</label>
         <link refid="mml_8hpp"/>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
@@ -145,7 +149,7 @@
       <node id="5">
         <label>sstream</label>
       </node>
-      <node id="14">
+      <node id="9">
         <label>iostream</label>
       </node>
       <node id="1">
@@ -153,9 +157,9 @@
         <link refid="test1_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
       </node>
       <node id="23">
@@ -169,9 +173,9 @@
         <label>thread</label>
       </node>
       <node id="19">
-        <label>vector.hpp</label>
+        <label>mml/vector.hpp</label>
         <link refid="vector_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -187,7 +191,7 @@
       <node id="16">
         <label>mml/log.hpp</label>
         <link refid="log_8hpp"/>
-        <childnode refid="14" relation="include">
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -212,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/test1.cpp" line="5" column="5" bodyfile="test/test1.cpp" bodystart="5" bodyend="12"/>
+        <location file="test/test1.cpp" line="5" column="5" bodyfile="test/test1.cpp" bodystart="5" bodyend="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -220,18 +224,21 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;<ref refid="standards_8hpp" kindref="compound">mml/standards.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mml_8hpp" kindref="compound">mml.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="standards_8hpp" kindref="compound">mml/standards.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mml_8hpp" kindref="compound">mml.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>test;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>test<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;If<sp/>you<sp/>can<sp/>see<sp/>this<sp/>without<sp/>any<sp/>numbers,<sp/>then<sp/>you<sp/>succesfully<sp/>installed<sp/>your<sp/>library132!&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" kindref="member">del_number</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>test<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>test<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;If<sp/>you<sp/>can<sp/>see<sp/>this<sp/>without<sp/>any<sp/>numbers,<sp/>then<sp/>you<sp/>succesfully<sp/>installed<sp/>your<sp/>library132!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" kindref="member">del_number</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Now<sp/>you<sp/>should<sp/>see<sp/>your<sp/>date<sp/>and<sp/>time:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/><ref refid="namespacemml_1a2f67fa9c2ab3cc2f1c104ebfd97c7e11" kindref="member">mml::date</ref>(</highlight><highlight class="stringliteral">&quot;Date+Time&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="test/test1.cpp"/>
   </compounddef>

@@ -9,8 +9,8 @@
 #include <string>
 #include <algorithm>
 #include <vector>
-#include <functions.hpp>
-#include "shell.hpp"
+#include "mml/functions.hpp"
+#include "mml/shell.hpp"
 #include <limits>
 
 // Überprüfen, ob ein Argument mit einem bestimmten String anfängt

@@ -11,7 +11,6 @@
 #include <vector>
 #include <limits>
 #include <string>
-#include <mml.hpp>
 #include <string.h>
 #include <fstream>
 #include <sys/socket.h>
@@ -22,8 +21,8 @@
 #include <arpa/inet.h>
 #include <locale>	// for getting language of the user
 
-#include "Unix.hpp"
-
+#include "mml/Unix.hpp"
+#include "mml/file.hpp"
 
 bool mml::Unix::User::operator==(const std::string testuser){
  	if( this->username.str() == testuser)

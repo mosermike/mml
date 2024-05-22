@@ -127,23 +127,6 @@ namespace mml {
 		 */
 		std::string range() noexcept;
 	};
-
-	namespace Time {
-		/**
-		* @note time_t in Datumformat
-		* 
-		* @return string
-		* @author Mike
-		*/
-		mml::string to_date(time_t time);
-		/**
-		* @note Datumformat (DD.MM.YYYY HH:MM.SS) in time_t 
-		* 
-		* @return time_t
-		* @author Mike
-		*/
-		time_t to_time(std::string date);
-	}
 }
 
 std::ostream& operator<<(mml::Timer& t, std::ostream& os);

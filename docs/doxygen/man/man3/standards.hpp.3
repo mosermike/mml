@@ -1,4 +1,4 @@
-.TH "include/mml/standards.hpp" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.TH "include/mml/standards.hpp" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,6 +17,10 @@ include/mml/standards.hpp
 \fC#include <random>\fP
 .br
 \fC#include <float\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'mml/definitions\&.hpp'\fP
 .br
 
 .SS "Classes"
@@ -40,13 +44,16 @@ include/mml/standards.hpp
 
 .in +1c
 .ti -1c
-.RI "template<typename T > double \fBmml::atob\fP (const T &t)"
+.RI "template<typename templ > double \fBmml::atob\fP (const templ &t)"
 .br
 .ti -1c
 .RI "template<typename T > double \fBmml::atof\fP (const T &t)"
 .br
 .ti -1c
 .RI "template<typename T > int \fBmml::atoi\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename templ > void \fBmml::cout\fP (std::vector< templ > const &vec)"
 .br
 .ti -1c
 .RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t)"
@@ -67,16 +74,13 @@ Enthält verschiedene Standardfunktionen
 .in +1c
 .in +1c
 .ti -1c
-.RI "bool \fBmml::check_root\fP (\fBmml::shell::arg\fP args)"
-.br
-.ti -1c
-.RI "template<typename T > void \fBmml::cout\fP (std::vector< T > const &vec)"
+.RI "bool \fBmml::check_root\fP (std::string programme='')"
 .br
 .ti -1c
 .RI "uint32_t \fBmml::date\fP (int info, time_t time1=\-1)"
 .br
 .ti -1c
-.RI "std::string \fBmml::date\fP (\fBmml::string\fP value='Datum', std::string trennzeichen1=':', std::string trennzeichen2='\&.')"
+.RI "std::string \fBmml::date\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.')"
 .br
 .ti -1c
 .RI "bool \fBmml::range\fP (std::size_t number)"

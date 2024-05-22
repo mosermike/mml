@@ -46,7 +46,7 @@ import subprocess
 subprocess.call('make clean', shell=True)
 subprocess.call('cd ../../ ; doxygen docs/doxygen/doxygen.conf', shell=True)
 
-breathe_projects = { "mml": "../../doxygen/xml/" }
+breathe_projects = { "mml": "../doxygen/xml/" }
 breathe_default_project = "mml"
 
 # -- Options for HTML output -------------------------------------------------

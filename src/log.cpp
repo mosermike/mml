@@ -6,12 +6,12 @@
  * 
 */
 
-#include "log.hpp"
-
 #include <iostream>
-#include "standards.hpp"
-#include "file.hpp"
-#include "shell.hpp"
+
+#include "mml/log.hpp"
+#include "mml/standards.hpp"
+#include "mml/file.hpp"
+#include "mml/shell.hpp"
 
 	mml::log &mml::log::operator=(std::string value){
 		mml::log temp(value);
@@ -27,7 +27,7 @@
 			std::cout << "| Backup logfile...";
 		
 		// Write into log that a backup is executed
-		cout("[check_root] backup is executed at " + mml::date("Datum+Uhrzeit") + ".", true);
+		cout("[check_root] backup is executed at " + mml::date("Date+Time") + ".", true);
 		
 		// Execute backup
 		for(int32_t i = 4; i >= 0; i--) {
@@ -98,7 +98,7 @@
 		
 		// Machbarkeit prüfen
 		if(line > lines.size())
-			mml::shell::error("[getline_back] Falsche Zeilenangabe!");
+			mml::shell::error("[getline_back] Wrong line number!");
 		
 		// Position setzen
 		input.clear();	// error state zurücksetzen, sonst bei seekg und tellg error
@@ -118,8 +118,8 @@
 	}
 	
 	void mml::log::header() {
-		output << "| Log-Datei " << logpath << std::endl;
-		output << "| Zeitstempel: " << date("Datum+Uhrzeit") << std::endl;
+		output << "| Log-File " << logpath << std::endl;
+		output << "| Timestamp: " << date("Date+Time") << std::endl;
 	}
 
 	void mml::log::open(mml::string path) {

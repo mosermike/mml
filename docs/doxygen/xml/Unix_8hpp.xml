@@ -3,11 +3,13 @@
   <compounddef id="Unix_8hpp" kind="file" language="C++">
     <compoundname>Unix.hpp</compoundname>
     <includedby refid="mml_8hpp" local="yes">include/mml.hpp</includedby>
-    <includedby refid="string_8cpp" local="no">src/string.cpp</includedby>
+    <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
+    <includedby refid="standards_8cpp" local="yes">src/standards.cpp</includedby>
+    <includedby refid="string_8cpp" local="yes">src/string.cpp</includedby>
     <includedby refid="Unix_8cpp" local="yes">src/Unix.cpp</includedby>
     <includedby refid="User_8cpp" local="yes">src/User.cpp</includedby>
     <invincdepgraph>
-      <node id="11">
+      <node id="7">
         <label>src/Unix.cpp</label>
         <link refid="Unix_8cpp"/>
       </node>
@@ -19,23 +21,19 @@
         <label>src/file.cpp</label>
         <link refid="file_8cpp"/>
       </node>
-      <node id="9">
-        <label>src/Thread.cpp</label>
-        <link refid="Thread_8cpp"/>
-      </node>
-      <node id="8">
+      <node id="11">
         <label>src/string.cpp</label>
         <link refid="string_8cpp"/>
       </node>
       <node id="6">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
+      </node>
+      <node id="5">
         <label>src/shell.cpp</label>
         <link refid="shell_8cpp"/>
       </node>
-      <node id="10">
-        <label>src/Timer.cpp</label>
-        <link refid="Timer_8cpp"/>
-      </node>
-      <node id="5">
+      <node id="4">
         <label>src/help.cpp</label>
         <link refid="help_8cpp"/>
       </node>
@@ -54,22 +52,12 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
       </node>
-      <node id="4">
+      <node id="9">
         <label>src/functions.cpp</label>
         <link refid="functions_8cpp"/>
       </node>
-      <node id="13">
+      <node id="8">
         <label>test/test1.cpp</label>
         <link refid="test1_8cpp"/>
       </node>
@@ -78,14 +66,18 @@
         <link refid="Unix_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="7">
+      <node id="10">
         <label>src/standards.cpp</label>
         <link refid="standards_8cpp"/>
       </node>
@@ -109,8 +101,8 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pwd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;grp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">mml/shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">mml/vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref>{</highlight></codeline>
@@ -208,7 +200,7 @@
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><sp/><sp/><sp/>get_groups()<sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;groups;}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Groups</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1a92c710d0a886107dcb38a6699151ec38" kindref="member">cout</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>output);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1af9e4a0ff0d5308ede2e315150e566529" kindref="member">cout</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>output);</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>,<sp/>std::string<sp/>value);</highlight></codeline>

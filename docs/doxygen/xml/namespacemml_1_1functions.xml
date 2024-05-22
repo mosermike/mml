@@ -32,7 +32,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="71" column="10" bodyfile="src/functions.cpp" bodystart="249" bodyend="257" declfile="include/mml/functions.hpp" declline="71" declcolumn="10"/>
+        <location file="include/mml/functions.hpp" line="71" column="10" bodyfile="src/functions.cpp" bodystart="250" bodyend="258" declfile="include/mml/functions.hpp" declline="71" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -54,7 +54,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="78" column="6" bodyfile="src/functions.cpp" bodystart="259" bodyend="262" declfile="include/mml/functions.hpp" declline="78" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="78" column="6" bodyfile="src/functions.cpp" bodystart="260" bodyend="263" declfile="include/mml/functions.hpp" declline="78" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a45b7650e7b0cdffee9f33b8841274d2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="79" column="6" bodyfile="src/functions.cpp" bodystart="264" bodyend="267" declfile="include/mml/functions.hpp" declline="79" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="79" column="6" bodyfile="src/functions.cpp" bodystart="265" bodyend="268" declfile="include/mml/functions.hpp" declline="79" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1ac38212043b94eebcd39dafa61ab4f6bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="80" column="6" bodyfile="src/functions.cpp" bodystart="269" bodyend="272" declfile="include/mml/functions.hpp" declline="80" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="80" column="6" bodyfile="src/functions.cpp" bodystart="270" bodyend="273" declfile="include/mml/functions.hpp" declline="80" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1aab19815bc6c5988253ef00f76ef8c4f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="81" column="6" bodyfile="src/functions.cpp" bodystart="274" bodyend="277" declfile="include/mml/functions.hpp" declline="81" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="81" column="6" bodyfile="src/functions.cpp" bodystart="275" bodyend="278" declfile="include/mml/functions.hpp" declline="81" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1ab329e8a7f124bca7f7f6ae254b05ac19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -128,7 +128,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="89" column="13" bodyfile="src/functions.cpp" bodystart="279" bodyend="295" declfile="include/mml/functions.hpp" declline="89" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="89" column="13" bodyfile="src/functions.cpp" bodystart="280" bodyend="296" declfile="include/mml/functions.hpp" declline="89" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -152,7 +152,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="97" column="13" bodyfile="src/functions.cpp" bodystart="296" bodyend="303" declfile="include/mml/functions.hpp" declline="97" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="97" column="13" bodyfile="src/functions.cpp" bodystart="297" bodyend="304" declfile="include/mml/functions.hpp" declline="97" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a955b1a9bf2b1b4042a542071fff5d6e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt;</type>
@@ -169,7 +169,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="98" column="13" bodyfile="src/functions.cpp" bodystart="305" bodyend="312" declfile="include/mml/functions.hpp" declline="98" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="98" column="13" bodyfile="src/functions.cpp" bodystart="306" bodyend="313" declfile="include/mml/functions.hpp" declline="98" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a545e2cce4a554164b63a8f3d999069eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; double &gt;</type>
@@ -186,7 +186,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="99" column="13" bodyfile="src/functions.cpp" bodystart="314" bodyend="320" declfile="include/mml/functions.hpp" declline="99" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="99" column="13" bodyfile="src/functions.cpp" bodystart="315" bodyend="321" declfile="include/mml/functions.hpp" declline="99" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a29d42b19532064af399a6c526da85f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; int &gt;</type>
@@ -203,7 +203,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="100" column="13" bodyfile="src/functions.cpp" bodystart="322" bodyend="327" declfile="include/mml/functions.hpp" declline="100" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="100" column="13" bodyfile="src/functions.cpp" bodystart="323" bodyend="328" declfile="include/mml/functions.hpp" declline="100" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -233,7 +233,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="108" column="5" bodyfile="src/functions.cpp" bodystart="227" bodyend="236" declfile="include/mml/functions.hpp" declline="108" declcolumn="5"/>
+        <location file="include/mml/functions.hpp" line="108" column="5" bodyfile="src/functions.cpp" bodystart="228" bodyend="237" declfile="include/mml/functions.hpp" declline="108" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a7d8132e164cdbeb2b7f165909f2d1bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::size_t</type>
@@ -268,7 +268,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="126" column="13" bodyfile="src/functions.cpp" bodystart="244" bodyend="247" declfile="include/mml/functions.hpp" declline="126" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="126" column="13" bodyfile="src/functions.cpp" bodystart="245" bodyend="248" declfile="include/mml/functions.hpp" declline="126" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a7292b096bbe4bba8f51dad3ddcd17397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -304,7 +304,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="143" column="13" bodyfile="src/functions.cpp" bodystart="329" bodyend="335" declfile="include/mml/functions.hpp" declline="143" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="143" column="13" bodyfile="src/functions.cpp" bodystart="330" bodyend="336" declfile="include/mml/functions.hpp" declline="143" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a26b19eed5d28eb73559fd7d70814874f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; double &gt;</type>
@@ -338,7 +338,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="159" column="13" bodyfile="src/functions.cpp" bodystart="28" bodyend="32" declfile="include/mml/functions.hpp" declline="159" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="159" column="13" bodyfile="src/functions.cpp" bodystart="29" bodyend="33" declfile="include/mml/functions.hpp" declline="159" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1aa44cc5b5a5e8ba0767dbdd25373222cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -359,7 +359,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="160" column="13" bodyfile="src/functions.cpp" bodystart="34" bodyend="38" declfile="include/mml/functions.hpp" declline="160" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="160" column="13" bodyfile="src/functions.cpp" bodystart="35" bodyend="39" declfile="include/mml/functions.hpp" declline="160" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a96882f2e48261be8bb9ed69325c86858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -397,7 +397,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="169" column="10" bodyfile="src/functions.cpp" bodystart="111" bodyend="128" declfile="include/mml/functions.hpp" declline="169" declcolumn="10"/>
+        <location file="include/mml/functions.hpp" line="169" column="10" bodyfile="src/functions.cpp" bodystart="112" bodyend="129" declfile="include/mml/functions.hpp" declline="169" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a7ad5e71dbc16eacd87aa365de8ad66be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::size_t</type>
@@ -421,7 +421,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="179" column="13" bodyfile="src/functions.cpp" bodystart="207" bodyend="219" declfile="include/mml/functions.hpp" declline="179" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="179" column="13" bodyfile="src/functions.cpp" bodystart="208" bodyend="220" declfile="include/mml/functions.hpp" declline="179" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a0e96e0452d4751613aeb89406e7e5b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; double &gt;</type>
@@ -454,7 +454,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="196" column="13" bodyfile="src/functions.cpp" bodystart="75" bodyend="107" declfile="include/mml/functions.hpp" declline="196" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="196" column="13" bodyfile="src/functions.cpp" bodystart="76" bodyend="108" declfile="include/mml/functions.hpp" declline="196" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1ad25f2df1d22305eca7a0fecc4e139a71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +480,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="203" column="6" bodyfile="src/functions.cpp" bodystart="222" bodyend="224" declfile="include/mml/functions.hpp" declline="203" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="203" column="6" bodyfile="src/functions.cpp" bodystart="223" bodyend="225" declfile="include/mml/functions.hpp" declline="203" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a76ebf0e616c5163d81986062a58b5f82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -504,7 +504,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="210" column="13" bodyfile="src/functions.cpp" bodystart="342" bodyend="348" declfile="include/mml/functions.hpp" declline="210" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="210" column="13" bodyfile="src/functions.cpp" bodystart="343" bodyend="349" declfile="include/mml/functions.hpp" declline="210" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a15d9ea573c2898290db82cbb049559b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -533,7 +533,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="218" column="8" bodyfile="src/functions.cpp" bodystart="40" bodyend="57" declfile="include/mml/functions.hpp" declline="218" declcolumn="8"/>
+        <location file="include/mml/functions.hpp" line="218" column="8" bodyfile="src/functions.cpp" bodystart="41" bodyend="58" declfile="include/mml/functions.hpp" declline="218" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a611b42b46de00443a41d65682f56881d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -560,7 +560,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="219" column="8" bodyfile="src/functions.cpp" bodystart="59" bodyend="72" declfile="include/mml/functions.hpp" declline="219" declcolumn="8"/>
+        <location file="include/mml/functions.hpp" line="219" column="8" bodyfile="src/functions.cpp" bodystart="60" bodyend="73" declfile="include/mml/functions.hpp" declline="219" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a4c6ace1c6a5dff97fa85115618a217fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -612,7 +612,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="227" column="13" bodyfile="src/functions.cpp" bodystart="151" bodyend="203" declfile="include/mml/functions.hpp" declline="227" declcolumn="13"/>
+        <location file="include/mml/functions.hpp" line="227" column="13" bodyfile="src/functions.cpp" bodystart="152" bodyend="204" declfile="include/mml/functions.hpp" declline="227" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1functions_1a9262c7cd8e5f4205b650e9eb756a9655" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -656,7 +656,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/functions.hpp" line="237" column="6" bodyfile="src/functions.cpp" bodystart="130" bodyend="149" declfile="include/mml/functions.hpp" declline="237" declcolumn="6"/>
+        <location file="include/mml/functions.hpp" line="237" column="6" bodyfile="src/functions.cpp" bodystart="131" bodyend="150" declfile="include/mml/functions.hpp" declline="237" declcolumn="6"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">

@@ -11,14 +11,15 @@
 #include <fstream>
 #include <vector>
 #include <unistd.h>		// fsync(),stdin_fileno,getpass
-#include <definitions.hpp>
 #include <algorithm>	// std::replace
 #include <sys/mount.h>
 #include <signal.h>
 
-#include "functions.hpp"
-#include <mml.hpp>
-
+#include "mml/functions.hpp"
+#include "mml/shell.hpp"
+#include "mml/Unix.hpp"
+#include "mml/Thread.hpp"
+#include "mml/definitions.hpp"
 
 mml::string mml_pass;
 mml::string mml_mount_name;
@@ -155,7 +156,7 @@ std::string mml::functions::mount_Dir (mml::shell::arg args, std::string mountpa
 					mml_mount_name		= mountpoint; // nur zur Ausgabe von Mount the dev...
 	int				mount_return		= 0;
 	
-	mml::check_root(args);
+	mml::check_root(args[0].str());
 	
 	for(uint32_t i = mml_mount_name.size(); i >= 0;i--) {
 		if(mml_mount_name[i] == '/') {

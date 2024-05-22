@@ -13,9 +13,10 @@
 #include <unistd.h> // getpass
 #include <chrono>  //sleep function
 #include <thread>
-#include <definitions.hpp>
-#include <shell.hpp>
-#include <mml.hpp>
+
+#include "mml/definitions.hpp"
+#include "mml/shell.hpp"
+#include "mml.hpp"
 
 //FORMATIERUNGEN DER SHELL ÄNDERN:
 /*
@@ -116,7 +117,7 @@ void mml::shell::cout(mml::string text, bool newline, std::string colour) {
 		std::size_t temp = text.find("[");
 		if(temp != 0) {
 			output = text.sub(0,temp-1);
-			text.replace(output,"",true);
+			text = text.replace(output.c_str(),"");
 			std::cout << output;
 		}
 		// Farbe ändern
@@ -125,7 +126,7 @@ void mml::shell::cout(mml::string text, bool newline, std::string colour) {
 		// Ende der Klammer finden
 		temp = text.find("]");
 		output = text.sub(0,temp+1);
-		text.replace(output,"",true);
+		text = text.replace(output.c_str(),"");
 		std::cout << output;
 		mml::shell::normal();
 		std::cout << text;

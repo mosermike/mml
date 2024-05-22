@@ -1,4 +1,4 @@
-.TH "mml::string" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.TH "mml::string" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,52 +12,25 @@ mml::string
 
 .in +1c
 .ti -1c
-.RI "\fBstring\fP (const char *val)"
-.br
-.ti -1c
-.RI "\fBstring\fP (std::string val)"
+.RI "template<typename templ > \fBstring\fP (templ \fBstr\fP)"
 .br
 .ti -1c
 .RI "\fBstring\fP ()"
 .br
 .ti -1c
-.RI "template<typename T > \fBmml::string\fP & \fBoperator=\fP (T value)"
+.RI "template<typename templ > \fBmml::string\fP & \fBoperator=\fP (templ \fBstr\fP)"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (const std::string test)"
+.RI "template<typename templ > bool \fBoperator==\fP (templ Test)"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (\fBmml::string\fP test)"
+.RI "template<typename templ > bool \fBoperator!=\fP (templ Test)"
 .br
 .ti -1c
-.RI "bool \fBoperator==\fP (const char *test)"
+.RI "template<typename templ > std::string \fBoperator+\fP (templ Test)"
 .br
 .ti -1c
-.RI "bool \fBoperator!=\fP (const std::string test)"
-.br
-.ti -1c
-.RI "bool \fBoperator!=\fP (\fBmml::string\fP test)"
-.br
-.ti -1c
-.RI "bool \fBoperator!=\fP (const char *test)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+\fP (const char *add)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+\fP (const std::string add)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+\fP (\fBmml::string\fP add)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+=\fP (const char *add)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+=\fP (const std::string add)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBoperator+=\fP (\fBmml::string\fP add)"
+.RI "template<typename templ > \fBmml::string\fP \fBoperator+=\fP (templ Test)"
 .br
 .ti -1c
 .RI "char & \fBoperator[]\fP (int index)"
@@ -88,6 +61,9 @@ mml::string
 .br
 .ti -1c
 .RI "std::string \fBdel_space\fP (bool save=false)"
+.br
+.ti -1c
+.RI "bool \fBempty\fP ()"
 .br
 .ti -1c
 .RI "bool \fBexist\fP (std::string name)"
@@ -135,13 +111,7 @@ mml::string
 .RI "bool \fBremove\fP ()"
 .br
 .ti -1c
-.RI "std::string \fBreplace\fP (char sign_old, char sign_new, bool save=false, std::size_t pos=0, bool all=true)"
-.br
-.ti -1c
-.RI "std::string \fBreplace\fP (\fBmml::string\fP str_old, \fBmml::string\fP str_new, bool save=false, std::size_t pos=0, bool all=true)"
-.br
-.ti -1c
-.RI "std::string \fBreplace\fP (std::string str_old1, std::string str_new1, std::string str_old2, std::string str_new2, bool save=false, std::size_t pos=0, bool all=true)"
+.RI "template<typename T > std::string \fBreplace\fP (T str_old, T str_new, std::size_t pos=0)"
 .br
 .ti -1c
 .RI "std::size_t \fBrfind\fP (char letter)"
@@ -189,36 +159,17 @@ mml::string
 Class string which adds additional functions to std::string 
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "mml::string::string (const char * val)\fC [inline]\fP"
-Initialize with a character array 
-.PP
-\fBParameters\fP
-.RS 4
-\fIchar*\fP Value of the string 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Instance of the class 
-.RE
-.PP
+.SS "template<typename templ > mml::string::string (templ str)\fC [inline]\fP"
 
-.SS "mml::string::string (std::string val)\fC [inline]\fP"
-Initialize with a character array 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP String value 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Instance of the class 
+\fItempl\fP Value 
 .RE
 .PP
 
 .SS "mml::string::string ()\fC [inline]\fP"
-Initialise without any value 
+
 .PP
 \fBReturns\fP
 .RS 4
@@ -276,9 +227,9 @@ Print out the value of this instance
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Print newline\&. Default: true 
+\fIbool,optional\fP Print newline\&. 
 .br
-\fIstd::string,optional\fP Additional text\&. Default '' 
+\fIstd::string,optional\fP Additional text\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -292,7 +243,7 @@ Delete letters
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+\fIbool,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -306,7 +257,7 @@ Delete numbers
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+\fIbool,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -320,17 +271,21 @@ Remove everything after the first space
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. Default: false 
+\fIbool,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-String kürzen bis Space 
+std::string 
 .RE
 .PP
-\fBAuthor\fP
+
+.SS "bool mml::string::empty ()\fC [inline]\fP"
+Checks if the string is empty 
+.PP
+\fBReturns\fP
 .RS 4
-Mike 
+bool 
 .RE
 .PP
 
@@ -375,7 +330,7 @@ Position of the first appearance of a character after a start position
 .RS 4
 \fIchar\fP Value 
 .br
-\fIsize_t,optional\fP Value from where to search for the char\&. Default: 0 
+\fIsize_t,optional\fP Value from where to search for the char\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -396,7 +351,7 @@ Position of the first appearance of a string after a start position
 .RS 4
 \fIstring\fP Value 
 .br
-\fIsize_t,optional\fP Value from where to search for the char\&. Default: 0 
+\fIsize_t,optional\fP Value from where to search for the char\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -422,9 +377,9 @@ Check if a string exists but starting from the right side
 .RS 4
 \fIname\fP String to look for 
 .br
-\fIstd::size_t,optional\fP Value from where to search for the string\&. 0 means that it is not used\&. Default: 0 
+\fIstd::size_t,optional\fP Value from where to search for the string\&. 0 means that it is not used\&. 
 .br
-\fIstd::size_t,optional\fP Lower limit to which point is searched for\&. Default: 0 
+\fIstd::size_t,optional\fP Lower limit to which point is searched for\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -454,7 +409,7 @@ Reads a line from a file
 .RS 4
 \fIstring\fP File name 
 .br
-\fIstd::size_t,optional\fP Line number\&. Default: 0\&. 
+\fIstd::size_t,optional\fP Line number\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -575,40 +530,12 @@ bool
 .RE
 .PP
 
-.SS "bool mml::string::operator!= (const char * test)"
-Operator unequal to a char vector 
+.SS "template<typename templ > bool mml::string::operator!= (templ Test)\fC [inline]\fP"
+Operator unequal 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-bool 
-.RE
-.PP
-
-.SS "bool mml::string::operator!= (const std::string test)"
-Operator unequal to a std::string 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-bool 
-.RE
-.PP
-
-.SS "bool mml::string::operator!= (\fBmml::string\fP test)"
-Operator unequal to a \fBmml::string\fP 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP 
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -619,49 +546,26 @@ bool
 
 .SS "std::string & mml::string::operator() ()"
 
-.SS "\fBmml::string\fP mml::string::operator+ (const char * add)"
-Operator add a char vector 
+.SS "template<typename templ > std::string mml::string::operator+ (templ Test)\fC [inline]\fP"
+Operator add somehting at the end of this instance 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar*\fP Value to be added 
+\fItempl\fP Value to be added 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Added \fBmml::string\fP 
+std::string 
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::operator+ (const std::string add)"
-Operator add a std::string 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP Value to be added 
-.RE
-.PP
-
-.SS "\fBmml::string\fP mml::string::operator+ (\fBmml::string\fP add)"
-Operator add a \fBmml::string\fP 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP Value to be added 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-\fBmml::string\fP 
-.RE
-.PP
-
-.SS "\fBmml::string\fP mml::string::operator+= (const char * add)"
+.SS "template<typename templ > \fBmml::string\fP mml::string::operator+= (templ Test)\fC [inline]\fP"
 Operator add a char vector to this string 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar*\fP Value to be added 
+\fItemplate\fP Value to be added 
 .RE
 .PP
 \fBReturns\fP
@@ -670,40 +574,12 @@ Operator add a char vector to this string
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::operator+= (const std::string add)"
-Operator add a std::string to this instance 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP Value to be added 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-instance of this class 
-.RE
-.PP
-
-.SS "\fBmml::string\fP mml::string::operator+= (\fBmml::string\fP add)"
-Operator add a \fBmml::string\fP to this instance 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP Value to be added 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Instance of this class 
-.RE
-.PP
-
-.SS "template<typename T > \fBmml::string\fP& mml::string::operator= (T value)\fC [inline]\fP"
+.SS "template<typename templ > \fBmml::string\fP& mml::string::operator= (templ str)\fC [inline]\fP"
 Assign the value of the template type with the '=' sign 
 .PP
 \fBParameters\fP
 .RS 4
-\fItemplate\fP Value 
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -712,40 +588,12 @@ Class instance
 .RE
 .PP
 
-.SS "bool mml::string::operator== (const char * test)"
-Operator equal to a char vector 
+.SS "template<typename templ > bool mml::string::operator== (templ Test)\fC [inline]\fP"
+Operator equal 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar*\fP Value to be checked 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-bool 
-.RE
-.PP
-
-.SS "bool mml::string::operator== (const std::string test)"
-Operator equal to a std::string 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-bool 
-.RE
-.PP
-
-.SS "bool mml::string::operator== (\fBmml::string\fP test)"
-Operator equal to a \fBmml::string\fP 
-.PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP 
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -777,51 +625,26 @@ bool
 .RE
 .PP
 
-.SS "std::string mml::string::replace (char sign_old, char sign_new, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
-// TODO ÜBERARBEITEN!!! endless schleife wenn str_old in str_new 
-.PP
-\fBNote\fP
-.RS 4
-Zeichen in einem String ersetzen 
-.PP
-String in einem String ersetzen 
-.RE
+.SS "template<typename T > std::string mml::string::replace (T str_old, T str_new, std::size_t pos = \fC0\fP)\fC [inline]\fP"
+Replace sth in the string with sth else 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar\fP Find this character or string 
+\fItempl\fP Replace this value 
 .br
-\fIchar\fP New character or string 
+\fItemp\fP Replaced with this value 
 .br
-\fIbool\fP Save the change in this class (False) 
-.br
-\fIsize_t\fP Start from this position to replace (0) 
-.br
-\fIbool\fP Replace all strings which exist (True) 
+\fIsize_t\fP Start from this position to replace 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-String mit den ersetzten Zeichen 
+std::string 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "std::string mml::string::replace (\fBmml::string\fP str_old, \fBmml::string\fP str_new, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
-
-.SS "std::string mml::string::replace (std::string str_old1, std::string str_new1, std::string str_old2, std::string str_new2, bool save = \fCfalse\fP, std::size_t pos = \fC0\fP, bool all = \fCtrue\fP)"
 
 .SS "std::size_t mml::string::rfind (char letter)\fC [inline]\fP"
-
-.PP
-\fBNote\fP
-.RS 4
-Get position of last occurance of a character
-.RE
+Get position of last occurance of a character 
 .PP
 \fBParameters\fP
 .RS 4
@@ -876,11 +699,6 @@ Create a substring starting and ending of specific positions
 \fBmml::string\fP 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
 .SS "\fBmml::string\fP mml::string::substr (std::size_t pos1)"
 Create a substring starting from this position to the end 
@@ -903,7 +721,7 @@ Create substring
 .RS 4
 \fIsize_t\fP Start position 
 .br
-\fIstd::size_t\fP Length of the string
+\fIstd::size_t\fP Length of the string 
 .RE
 .PP
 \fBReturns\fP

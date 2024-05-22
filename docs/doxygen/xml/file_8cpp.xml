@@ -17,8 +17,8 @@
     <includes local="no">thread</includes>
     <includes local="no">limits.h</includes>
     <includes local="no">filesystem</includes>
-    <includes refid="mml_8hpp" local="no">mml.hpp</includes>
-    <includes refid="file_8hpp" local="no">file.hpp</includes>
+    <includes refid="mml_8hpp" local="yes">mml.hpp</includes>
+    <includes refid="file_8hpp" local="yes">mml/file.hpp</includes>
     <incdepgraph>
       <node id="7">
         <label>sys/stat.h</label>
@@ -96,7 +96,7 @@
         <label>bits/local_lim.h</label>
       </node>
       <node id="21">
-        <label>standards.hpp</label>
+        <label>mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -109,6 +109,10 @@
         <childnode refid="23" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -128,7 +132,7 @@
         <label>sys/ioctl.h</label>
       </node>
       <node id="20">
-        <label>functions.hpp</label>
+        <label>mml/functions.hpp</label>
         <link refid="functions_8hpp"/>
         <childnode refid="21" relation="include">
         </childnode>
@@ -232,7 +236,7 @@
         <label>thread</label>
       </node>
       <node id="28">
-        <label>vector.hpp</label>
+        <label>mml/vector.hpp</label>
         <link refid="vector_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -334,8 +338,8 @@ Enthält verschiedene Funktionen für Dateien </para>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="mml_8hpp" kindref="compound">mml.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="file_8hpp" kindref="compound">file.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mml_8hpp" kindref="compound">mml.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="file_8hpp" kindref="compound">mml/file.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><ref refid="classmml_1_1thread_1_1Thread" kindref="compound">mml::thread::Thread</ref><sp/><ref refid="file_8cpp_1aaa42715afd2d14de06bc8e9996b26f36" kindref="member">mml_thread</ref>;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="file_8cpp_1a758b36574da5ff53ba636af4440c4a13" kindref="member">mml_actual_file</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
@@ -831,7 +835,7 @@ Enthält verschiedene Funktionen für Dateien </para>
 <codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual_src_dir<sp/>=<sp/>temp_string.<ref refid="classmml_1_1string_1a70256e730794e650d332e213338e7d1c" kindref="member">sub</ref>(0,-2);</highlight></codeline>
 <codeline lineno="520"><highlight class="normal"></highlight></codeline>
-<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual_dst_dir<sp/>=<sp/>actual_src_dir.<ref refid="classmml_1_1string_1ad65ae4c3aa93bbba4bc7ccb851df281f" kindref="member">replace</ref>(src.<ref refid="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" kindref="member">str</ref>(),dst.str());<sp/></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual_dst_dir<sp/>=<sp/>actual_src_dir.<ref refid="classmml_1_1string_1a4b493ce495806a4dba04b14ae7a87347" kindref="member">replace</ref>(src.<ref refid="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" kindref="member">str</ref>(),dst.str());<sp/></highlight></codeline>
 <codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>actual_dst_dir.mkdir_p();</highlight></codeline>
 <codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>

@@ -1,4 +1,4 @@
-.TH "mml" 3 "Tue May 21 2024" "mml" \" -*- nroff -*-
+.TH "mml" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,9 +25,6 @@ mml
 .RI " \fBthread\fP"
 .br
 .ti -1c
-.RI " \fBTime\fP"
-.br
-.ti -1c
 .RI " \fBUnix\fP"
 .br
 .in -1c
@@ -51,13 +48,16 @@ mml
 
 .in +1c
 .ti -1c
-.RI "template<typename T > double \fBatob\fP (const T &t)"
+.RI "template<typename templ > double \fBatob\fP (const templ &t)"
 .br
 .ti -1c
 .RI "template<typename T > double \fBatof\fP (const T &t)"
 .br
 .ti -1c
 .RI "template<typename T > int \fBatoi\fP (const T &t)"
+.br
+.ti -1c
+.RI "template<typename templ > void \fBcout\fP (std::vector< templ > const &vec)"
 .br
 .ti -1c
 .RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t)"
@@ -78,16 +78,13 @@ Enthält verschiedene Standardfunktionen
 .in +1c
 .in +1c
 .ti -1c
-.RI "bool \fBcheck_root\fP (\fBmml::shell::arg\fP args)"
-.br
-.ti -1c
-.RI "template<typename T > void \fBcout\fP (std::vector< T > const &vec)"
+.RI "bool \fBcheck_root\fP (std::string programme='')"
 .br
 .ti -1c
 .RI "uint32_t \fBdate\fP (int info, time_t time1=\-1)"
 .br
 .ti -1c
-.RI "std::string \fBdate\fP (\fBmml::string\fP value='Datum', std::string trennzeichen1=':', std::string trennzeichen2='\&.')"
+.RI "std::string \fBdate\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.')"
 .br
 .ti -1c
 .RI "bool \fBrange\fP (std::size_t number)"
@@ -112,22 +109,17 @@ Mike Moser
 Bibliothek shell\&.h Enthält verschiedene Funktionen mit namespace shell 
 .SH "Function Documentation"
 .PP 
-.SS "template<typename T > double mml::atob (const T & t)"
-
-.PP
-\fBNote\fP
-.RS 4
-Variable zu bool
-.RE
+.SS "template<typename templ > double mml::atob (const templ & t)"
+Converts value to bool
 .PP
 \fBParameters\fP
 .RS 4
-\fIt\fP Variable to bool
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true oder false 
+bool 
 .RE
 .PP
 \fBAuthor\fP
@@ -137,16 +129,11 @@ Mike
 .PP
 
 .SS "template<typename T > double mml::atof (const T & t)"
-
-.PP
-\fBNote\fP
-.RS 4
-string zu double
-.RE
+Converts value to bool
 .PP
 \fBParameters\fP
 .RS 4
-\fIt\fP String to be changed into a double 
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -161,21 +148,16 @@ Mike
 .PP
 
 .SS "template<typename T > int mml::atoi (const T & t)"
-
-.PP
-\fBNote\fP
-.RS 4
-string zu int
-.RE
+Converts value to int
 .PP
 \fBParameters\fP
 .RS 4
-\fIt\fP String to be changed into an integer 
+\fItempl\fP Value 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Integer
+int 
 .RE
 .PP
 \fBAuthor\fP
@@ -184,62 +166,63 @@ Mike
 .RE
 .PP
 
-.SS "bool mml::check_root (\fBmml::shell::arg\fP args)"
-
-.PP
-\fBNote\fP
-.RS 4
-Überprüft, ob ein Programm als root ausgeführt wird
-.RE
+.SS "bool mml::check_root (std::string programme = \fC''\fP)"
+Check if program executed as root 
 .PP
 \fBParameters\fP
 .RS 4
-\fIargs\fP Arguments passed for check_root
+\fIstd::string,optional\fP Programme name 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+bool 
 .RE
 .PP
 
-.SS "template<typename T > void mml::cout (std::vector< T > const & vec)"
-
-.PP
-\fBNote\fP
-.RS 4
-Ausgabe der Werte eines Vektors
-.RE
+.SS "template<typename templ > void mml::cout (std::vector< templ > const & vec)"
+Prints the values of a vector
 .PP
 \fBParameters\fP
 .RS 4
-\fIvec\fP Vector which is printed out
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIstd::vector<templ>\fP Vector to be printed 
 .RE
 .PP
 
 .SS "uint32_t mml::date (int info, time_t time1 = \fC\-1\fP)"
-
+Returns the wished info from the time (like date etc\&.) Options are:
+.IP "\(bu" 2
+0: Seconds
+.IP "\(bu" 2
+1: Minutes
+.IP "\(bu" 2
+2: Hours
+.IP "\(bu" 2
+3: Day
+.IP "\(bu" 2
+4: Month
+.IP "\(bu" 2
+5: Year
+.IP "\(bu" 2
+6: Summertime
+.IP "\(bu" 2
+7: Weekday (Days since sunday)
+.IP "\(bu" 2
+8: Yearday (Days since New Year)
+.IP "\(bu" 2
+9: kw
 .PP
-\fBNote\fP
-.RS 4
-Ausgabe des aktuellen Datums oder der Uhrzeit
-.RE
 .PP
 \fBParameters\fP
 .RS 4
-\fIinfo\fP Determines what information is printed 
+\fIint\fP Determines what information is printed 
 .br
-\fItime1\fP \fBTime\fP for which the information is printed\&. Default is -1 => Actual time now\&.
+\fItime_t\fP Time for which the information is printed\&. -1 => Actual time now\&. 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc\&.) 
+unsigned integer 
 .RE
 .PP
 \fBAuthor\fP
@@ -248,34 +231,30 @@ Mike
 .RE
 .PP
 
-.SS "std::string mml::date (\fBmml::string\fP value = \fC'Datum'\fP, std::string trennzeichen1 = \fC':'\fP, std::string trennzeichen2 = \fC'\&.'\fP)"
-
-.PP
-\fBNote\fP
-.RS 4
-Ausgabe des aktuellen Datums oder der Uhrzeit als String Mögliche Auswahl: 'Datum', 'Uhrzeit', 'Datum+Uhrzeit', Default:'Datum'
-.RE
+.SS "std::string mml::date (\fBmml::string\fP value, std::string separator1 = \fC':'\fP, std::string separator2 = \fC'\&.'\fP)"
+Returns the actual date and/or time as a std::string 
 .PP
 \fBParameters\fP
 .RS 4
-\fIvalue\fP Determines what information is printed\&. 
+\fI\fBmml::string\fP\fP Determines what information is printed\&.
+.IP "\(bu" 2
+'Date' : DD\&.MM\&.YYYY (based on separator1)
+.IP "\(bu" 2
+'Time' : HH:MM:SS (based on separator1)
+.IP "\(bu" 2
+'Date+Time' : Complete date in format DD\&.MM\&.YYYY HH:MM:SS\&.
+.IP "\(bu" 2
+'Date1+Time' : Compete date in format YYYY\&.MM\&.DD HH:MM:SS\&. 
+.PP
 .br
- 'Datum' : DD\&.MM\&.YYYY (based on trennzeichen2) 
+\fIstd::string,optional\fP First separation sign for the date 
 .br
- 'Zeit' : HH:MM:SS (based on trennzeichen1) 
-.br
- 'Datum+Uhrzeit' : Complete date in format DD\&.MM\&.YYYY HH:MM:SS\&. 
-.br
- 'Datum1+Uhrzeit' : Compete date in format YYYY\&.MM\&.DD HH:MM:SS\&. 
-.br
-\fItrennzeichen1\fP First separation sign for the date 
-.br
-\fItrennzeichen2\fP Second separation sign for the time
+\fIstd::string,optional\fP Second separation sign for the time
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-unsigned Integer Wert der gewünschten Information(Tag, Monat, Jahr, Sekunden, etc\&.) 
+std::string 
 .RE
 .PP
 \fBAuthor\fP

@@ -12,13 +12,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "standards.hpp"
+#include "mml/standards.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm> // std::sort
 //#include "shell.hpp"
-#include "log.hpp"
+#include "mml/log.hpp"
 
 // todo count how many entries the same
 
@@ -259,7 +259,7 @@ namespace mml{
 				for(uint32_t i = 0; i < vec.size(); i++) {
 					mml::string temp = mml::to_string(vec[i]);
 					if(temp.exist(mml::to_string(old).str())) {
-						temp = temp.replace(mml::to_string(old).str(),mml::to_string(new1).str());
+						temp = temp.replace(old,new1);
 						vec[i] = toT(temp);
 					}
 				}

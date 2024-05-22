@@ -6,6 +6,8 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$random$>$}\newline
 {\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}mml/definitions.\+hpp\char`\"{}}\newline
 Include dependency graph for standards.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -35,11 +37,13 @@ class \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a441733b0671056da9970ae129ef2815b}{mml\+::atob}} (const T \&t)
+{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_a5e1f7079411db351da5fb53576413d38}{mml\+::atob}} (const templ \&t)
 \item 
 {\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}{mml\+::atof}} (const T \&t)
 \item 
 {\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_a149a900d1e48e37c56481964c79aa9b4}{mml\+::atoi}} (const T \&t)
+\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_af9e4a0ff0d5308ede2e315150e566529}{mml\+::cout}} (std\+::vector$<$ templ $>$ const \&vec)
 \item 
 {\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a21e76265e9a8d7091fe7068aee432c39}{mml\+::to\+\_\+string}} (const T \&t)
 \end{DoxyCompactItemize}
@@ -49,13 +53,11 @@ Mike Moser
 \end{DoxyAuthor}
 Enthält verschiedene Standardfunktionen }\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{namespacemml_a369221db1a4853285fbd90c1956a443c}{mml\+::check\+\_\+root}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args)
-\item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacemml_a92c710d0a886107dcb38a6699151ec38}{mml\+::cout}} (std\+::vector$<$ T $>$ const \&vec)
+bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{mml\+::check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{})
 \item 
 uint32\+\_\+t \mbox{\hyperlink{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}{mml\+::date}} (int info, time\+\_\+t time1=-\/1)
 \item 
-std\+::string \mbox{\hyperlink{namespacemml_ae1a9f89ef716fd943082126648d90659}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Datum\char`\"{}, std\+::string trennzeichen1=\char`\"{}\+:\char`\"{}, std\+::string trennzeichen2=\char`\"{}.\char`\"{})
+std\+::string \mbox{\hyperlink{namespacemml_acd2059d85ff229714514fba5add6c391}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{})
 \item 
 bool \mbox{\hyperlink{namespacemml_a1d79d75734ea118c10fc391ab2231d56}{mml\+::range}} (std\+::size\+\_\+t number)
 \item 

@@ -16,8 +16,8 @@
 #endif
 #endif
 
-#ifndef __MML_HPP__
-#define __MML_HPP__
+#ifndef MML_INCLUDE_MML_HPP
+#define MML_INCLUDE_MML_HPP
 
 
 #include "mml/definitions.hpp"

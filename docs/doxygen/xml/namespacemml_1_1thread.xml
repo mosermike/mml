@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="93" column="6" bodyfile="src/Thread.cpp" bodystart="70" bodyend="72" declfile="include/mml/Thread.hpp" declline="93" declcolumn="6"/>
+        <location file="include/mml/Thread.hpp" line="93" column="6" bodyfile="src/Thread.cpp" bodystart="69" bodyend="71" declfile="include/mml/Thread.hpp" declline="93" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -18,3 +18,11 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Contents
+--------
+.. toctree::
+  :maxdepth: 1
+
+  standards
+  api

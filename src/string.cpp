@@ -6,78 +6,36 @@
  * 
 */ 
 
-#include <functions.hpp>
+
 #include <iostream>
 #include <vector>
 #include <string>
 #include <dirent.h>
-#include <shell.hpp>
+
 #include <sys/stat.h>
 #include <stdlib.h>	//atoi()
-#include <mml.hpp>
+
 #include <string.h>
 #include <fstream>
 #include <sstream>
-#include <Unix.hpp>
+
 #include <filesystem> // for ls function
 
-bool mml::string::operator==(const std::string test){
-	return (this->value == test) ? true : false;
-}
+#include "mml/functions.hpp"
+#include "mml/shell.hpp"
+#include "mml/file.hpp"
+#include "mml/Unix.hpp"
 
-bool mml::string::operator==(mml::string test){
-	return (this->value == test.str()) ? true : false;
-}
-
-bool mml::string::operator==(const char* test){
-	return (this->value == test) ? true : false;
-}
-
-bool mml::string::operator!=(const std::string test){
-	if(this->value != test)
-		return true;
-	return false;
-}
-
-bool mml::string::operator!=(mml::string test){
-	return (this->value != test.str()) ? true : false;
-}
-
-bool mml::string::operator!=(const char* test){
-	return (this->value != test) ? true : false;
-}
 
 char &mml::string::operator[](int index){		// bestimmte Position ausgeben
-		if (index < 0)
+		if (index < 0 && abs(index) < value.size())
 			index = value.size() + index;
-		
+		else
+			throw std::logic_error("[operator[]] Out of range");
+
 		return value[index];
 }
 
-mml::string mml::string::operator+(const char* add) {
-	return (value + add);
-}
-
-mml::string mml::string::operator+(const std::string add) {
-	return (this->value + add);
-}
-mml::string mml::string::operator+(mml::string add) {
-	return (value + add.str());
-}
-
-mml::string mml::string::operator+=(const char* add) {
-	this->value = value + add;
-	return (value + add);
-}
-
-mml::string mml::string::operator+=(const std::string add) {
-	this->value = value + add;
-	return (value + add);
-}
-mml::string mml::string::operator+=(mml::string add) {
-	this->value = value + add.str();
-	return (value + add.str());
-}
 std::string &mml::string::operator()(){		// value zurückgeben, wenn in Klammern
 	return value;
 }
@@ -187,14 +145,14 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 		if (mml::Unix::filetype(temp1.str()) == S_DIR) {
 			temp1 += "/";
 			if (save_dirs) {
-				temp2 = temp1.replace(path,""); // Check if name_include exists in the part after the path
+				temp2 = temp1.replace(path.c_str(),""); // Check if name_include exists in the part after the path
 				if (temp2.substr(0,temp2.find('/')).exist(name_include))
 					directories.push_back(temp1.str());
 			}
 					
 		}
 		// If directory in path does not contain include => skip everything
-		temp2 = temp1.replace(path,"");
+		temp2 = temp1.replace(path.c_str(),"");
 		if (temp2.substr(0,temp2.find('/')).exist(name_include))
 			LS.push_back(temp1.str());
 		// List if include exists
@@ -211,82 +169,8 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 	return LS;
 }
 
-std::string mml::string::replace (char sign_old, char sign_new, bool save, std::size_t pos, bool all){
-	return replace(mml::to_string(sign_old), mml::to_string(sign_new), pos, save, all);
-// 	if(save_value == "") // Zum Speichern des Wertes value
-// 		save_value = value;
-// 	
-// 	temp = value;
-// 	
-// 	std::size_t pos_old = temp.find(sign_old);
-// 	    
-// 	if(temp.find(sign_old,pos_old+1) < std::string::npos) { // weiteres vorhanden von str_old
-// 		value = (temp.substr(0,pos_old) + sign_new + value.substr(pos_old+1));
-// 		replace(sign_old, sign_new);
-// 	}
-// 	
-// 	else if(pos_old < std::string::npos) {   // nur einmal kommt str_old vor
-// 		temp = temp.substr(0,pos_old) + sign_new + temp.substr(pos_old+1);	
-// 		if(save)
-// 			value = temp;
-// 		else
-// 			value = save_value; // value wird nicht verändert
-// 		
-// 		return temp;
-// 	}
-// 	
-// 	if(save)
-// 			value = temp;
-// 	return temp;
-}
 
-std::string mml::string::replace(mml::string str_old, mml::string str_new, bool save, std::size_t pos, bool all){
-	if(all) {
-		mml::string temp1 = this->value;
-		std::size_t temp2 = temp1.size();
 
-		// Go through the string and replace all appearances once
-		for (uint32_t i = 0; i < temp2; i++) {
-			if(temp1.substr(i).exist(str_old.str())) {
-				temp1 = temp1.replace_intern(str_old, str_new,i,true);
-				temp2 = temp1.size();
-				i = i + str_new.size();
-			}
-
-		}
-
-		if(save)
-			this->value = temp1.str();
-		return temp1.str();
-	}
-	else
-		return replace_intern(str_old, str_new, pos, save);
-}
-
-std::string mml::string::replace_intern(mml::string str_old, mml::string str_new, std::size_t pos, bool save){
-	std::string temp = this->value;
-	pos = temp.find(str_old.str(),pos);
-	temp = temp.substr(0,pos) + str_new.str() + temp.substr(pos+str_old.size());
-	if(save)
-		this->value = temp;
-	
-	return temp;
-}
-
-std::string mml::string::replace(std::string str_old1, std::string str_new1,std::string str_old2, std::string str_new2, bool save, std::size_t pos, bool all) {
-	
-	mml::string temp1 = this->value; // Store value in new string
-	
-	// @note Replace strings if exist
-	temp1.replace(mml::to_string(str_old1), mml::to_string(str_new1), true, pos, all);
-	temp1.replace(mml::to_string(str_old2), mml::to_string(str_new2), true, pos, all);
-	
-	// @note Save in this class
-	if(save)
-		this->value = temp1.str();
-	return temp1.str();
-	
-}
 	
 mml::string mml::string::substr(std::size_t pos1, std::size_t length1){
 	return value.substr(pos1,length1);
