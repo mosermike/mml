@@ -289,20 +289,15 @@ std::string mml::string::getline(std::string input, std::size_t line){
 }
 
 uint32_t mml::string::count(mml::string name) {
-	uint32_t counts = 0;
-	std::size_t pos = value.find(name.str());
-	if(range(pos)) {
-			counts++;
-	}
-	do {
-		pos = value.find(name.str(),pos+1);
-		if(range(pos)) {
-			counts++;
-		}
-		
-	} while(pos < name.size());
-	
-	return counts;
+	int count = 0;
+    size_t pos = value.find(name.str());
+
+    while (pos != std::string::npos) {
+        ++count;
+        pos = value.find(name.str(), pos + name.size());
+    }
+
+	return count;
 }
 void mml::string::cout(bool newline, std::string text) {
 	std::cout << text << this->value;

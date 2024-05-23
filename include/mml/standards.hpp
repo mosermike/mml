@@ -18,7 +18,6 @@
 #include <iostream>
 #include "mml/definitions.hpp"
 
-// TODO replace nur einmal
 
 namespace mml {
 	
@@ -332,12 +331,12 @@ namespace mml {
 			
 		/**
 		* Replace sth in the string with sth else
-		* @param templ Replace this value
-		* @param temp Replaced with this value
-		* @param size_t Start from this position to replace
-		* @return std::string
+		* @param str_old Replace this value
+		* @param str_new Replaced with this value
+		* @param pos Start from this position to replace
+		* @return mml::string
 		*/
-		template <typename T> std::string replace(T str_old, T str_new, std::size_t pos = 0) {
+		template <typename T> mml::string replace(T str_old, T str_new, std::size_t pos = 0) {
 			mml::string str_old1(str_old);
 			mml::string str_new1(str_new);
 
@@ -348,11 +347,11 @@ namespace mml {
 			temp = value;
 
 			while ((pos = temp.find(str_old1.str(), pos)) != std::string::npos) {
-				temp.replace(pos, str_old1.size(), str_new1.str());
+				temp = temp.replace(pos, str_old1.size(), str_new1.str());
 				pos += str_new1.size();  // Move past the new string to avoid infinite loop
 			}
 
-			return temp;
+			return to_mml(temp);
 
 		}
 	
