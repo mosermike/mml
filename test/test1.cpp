@@ -9,7 +9,5 @@ int main() {
 	std::cout << "Now you should see your date and time:" << std::endl;
 	std::cout << mml::date("Date+Time") << std::endl;
 	
-	
-
 	return 0;
 }

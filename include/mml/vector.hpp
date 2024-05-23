@@ -44,6 +44,13 @@ namespace mml{
         vector(int cols, T temp) : vec(cols, temp) {}
         vector(int cols, std::vector<T> temp) : vec(cols, temp) {}
 
+		/**
+		 * Initialise with a list
+		 * @param std::initializer_list<T>
+		 * @return this instance
+		*/
+		vector(std::initializer_list<T> initList) : vec(initList) {}	
+
 		vector operator=(const std::vector<T>& temp) {vec = temp; return *this;}	//for(uint32_t i = 0; i < temp.size(); temp++) vec.push_back(temp[i]); return *this;}
 		vector operator=(mml::vector<T> temp) {vec = temp.vec; return *this;}
 		
@@ -99,11 +106,26 @@ namespace mml{
 			Vec.push_back(temp);
 			return in;
 		}
+
 		/**
-		* @note Vektorinhalt ausgeben
-		* 
-		* @author Mike
-		*/
+		 * Count how many entries are equal to a value
+		 * @param T Value to be checked
+		 * @return std::size_t 
+		 */
+		std::size_t count(T value) {
+			std::size_t  counts = 0;
+			for(T i : vec) {
+				if(i == value)
+					counts++;
+			}
+			return counts;
+		}
+
+		/**
+		 * print elements in the vector
+		 * @param bool Print with line breaks
+		 *
+		 */
 		void cout(bool newline = false) noexcept{
 			if (vec.empty()) {
 				std::cout << "[cout] Vector is empty" << std::endl;
@@ -123,10 +145,10 @@ namespace mml{
 					std::cout << std::endl;
 			}
 		}
+
 		/**
-		 * @note Vektor leeren
-		 * 
-		 * @author Mike
+		 * Empties the vector
+		 * @return std::vector<T>
 		 */
 		std::vector<T>  del(){
 			while(!empty())
