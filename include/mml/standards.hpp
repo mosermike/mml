@@ -115,9 +115,9 @@ namespace mml {
 		/**
 		*  Operator add somehting at the end of this instance
 		*  @param templ Value to be added
-		*  @return std::string
+		*  @return mml::string
 		*/
-		template<typename templ> std::string operator+(templ Test) {return this->value + to_mml(Test).str();}
+		template<typename templ> mml::string operator+(templ Test) {return to_mml(this->value + to_mml(Test).str());}
 
 
 		/**
