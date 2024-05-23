@@ -1,4 +1,4 @@
-.TH "mml::vector< T >" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
+.TH "mml::vector< T >" 3 "Thu May 23 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -35,6 +35,9 @@ Inherits std::vector< T >\&.
 .RI "\fBvector\fP (int cols, std::vector< T > temp)"
 .br
 .ti -1c
+.RI "\fBvector\fP (std::initializer_list< T > initList)"
+.br
+.ti -1c
 .RI "\fBvector\fP \fBoperator=\fP (const std::vector< T > &temp)"
 .br
 .ti -1c
@@ -50,8 +53,13 @@ Inherits std::vector< T >\&.
 .RI "std::vector< T >::iterator \fBend\fP () noexcept"
 .br
 .ti -1c
-.RI "std::vector< T >::iterator \fBerase\fP (typename std::vector< T >::iterator start, typename std::vector< T >::iterator amount=0)"
+.RI "void \fBerase\fP (size_t position)"
 .br
+.RI "Erase an element from the vector\&. "
+.ti -1c
+.RI "void \fBerase\fP (size_t start, size_t \fBend\fP)"
+.br
+.RI "Erase a range from the vector\&. "
 .ti -1c
 .RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val)"
 .br
@@ -66,6 +74,9 @@ Inherits std::vector< T >\&.
 .br
 .ti -1c
 .RI "std::size_t \fBsize\fP () const noexcept"
+.br
+.ti -1c
+.RI "std::size_t \fBcount\fP (T value)"
 .br
 .ti -1c
 .RI "void \fBcout\fP (bool newline=false) noexcept"
@@ -158,6 +169,20 @@ Mike
 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (int cols, std::vector< T > temp)\fC [inline]\fP"
 
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (std::initializer_list< T > initList)\fC [inline]\fP"
+Initialise with a list 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::initializer_list<T>\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+this instance 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::begin ()\fC [inline]\fP, \fC [noexcept]\fP"
@@ -174,31 +199,35 @@ Mike
 .RE
 .PP
 
-.SS "template<class T > template void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
-
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::count (T value)\fC [inline]\fP"
+Count how many entries are equal to a value 
 .PP
-\fBNote\fP
+\fBParameters\fP
 .RS 4
-Vektorinhalt ausgeben
+\fIT\fP Value to be checked 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+std::size_t 
+.RE
+.PP
+
+.SS "template<class T > template void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+print elements in the vector 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbool\fP Print with line breaks 
 .RE
 .PP
 
 .SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::del ()\fC [inline]\fP"
-
+Empties the vector 
 .PP
-\fBNote\fP
+\fBReturns\fP
 .RS 4
-Vektor leeren
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+std::vector<T> 
 .RE
 .PP
 
@@ -213,7 +242,49 @@ Mike
 
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::end ()\fC [inline]\fP, \fC [noexcept]\fP"
 
-.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::erase (typename std::vector< T >::iterator start, typename std::vector< T >::iterator amount = \fC0\fP)\fC [inline]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::erase (size_t position)\fC [inline]\fP"
+
+.PP
+Erase an element from the vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP Position to be erase 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIout_of_range\fP if position >= \fBvector\&.size()\fP 
+.RE
+.PP
+
+.SS "template<class T > void \fBmml::vector\fP< T >::erase (size_t start, size_t end)\fC [inline]\fP"
+
+.PP
+Erase a range from the vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP Start position 
+.br
+\fIend\fP End position 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIout_of_range\fP if start > end || end > \fBvector\&.size()\fP 
+.RE
+.PP
 
 .SS "template<class T > template bool \fBmml::vector\fP< T >::exist (T const & value)\fC [inline]\fP"
 

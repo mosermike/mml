@@ -17,7 +17,7 @@
 \item 
 {\footnotesize template$<$typename templ $>$ }\\bool \mbox{\hyperlink{classmml_1_1string_ab04f755c55c2322d6dffca2e12cfa8dd}{operator!=}} (templ Test)
 \item 
-{\footnotesize template$<$typename templ $>$ }\\std\+::string \mbox{\hyperlink{classmml_1_1string_a5410120da43e7a117d22bb79a2480227}{operator+}} (templ Test)
+{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_aa288bb8a47b47af92f7d3f1462e30cc9}{operator+}} (templ Test)
 \item 
 {\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_ac30a41095a96b56d5498bea3e129bff1}{operator+=}} (templ Test)
 \item 
@@ -83,8 +83,8 @@ std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a82b51347412abdd14a5538cc
 \item 
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a422be5ccc494f3b1ed6039e84b229a17}{substr}} (std\+::size\+\_\+t pos1)
 \item 
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a70256e730794e650d332e213338e7d1c}{sub}} (std\+::size\+\_\+t beg, int32\+\_\+t end)
-\item 
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a1fb3525866e3386db11ec4b1c2ec2a36}{sub}} (std\+::size\+\_\+t beg, std\+::size\+\_\+t end)
+\begin{DoxyCompactList}\small\item\em Create a substring starting and ending of specific positions. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classmml_1_1string_a2006997f5084941e91472f8eaedb41c9}{stoi}} ()
 \item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_a16e0e25728c0b409616bfcf53f817a81}{str}} ()
@@ -504,12 +504,12 @@ bool
 \doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
 {\footnotesize\ttfamily std\+::string \& mml\+::string\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classmml_1_1string_a5410120da43e7a117d22bb79a2480227}\label{classmml_1_1string_a5410120da43e7a117d22bb79a2480227}} 
+\mbox{\Hypertarget{classmml_1_1string_aa288bb8a47b47af92f7d3f1462e30cc9}\label{classmml_1_1string_aa288bb8a47b47af92f7d3f1462e30cc9}} 
 \index{mml::string@{mml::string}!operator+@{operator+}}
 \index{operator+@{operator+}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-std\+::string mml\+::string\+::operator+ (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::operator+ (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Operator add somehting at the end of this instance 
 \begin{DoxyParams}{Parameters}
@@ -517,7 +517,7 @@ Operator add somehting at the end of this instance
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::string 
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1string_ac30a41095a96b56d5498bea3e129bff1}\label{classmml_1_1string_ac30a41095a96b56d5498bea3e129bff1}} 
 \index{mml::string@{mml::string}!operator+=@{operator+=}}
@@ -647,17 +647,21 @@ int
 Return the value of this instance as a std\+::string \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a70256e730794e650d332e213338e7d1c}\label{classmml_1_1string_a70256e730794e650d332e213338e7d1c}} 
+\mbox{\Hypertarget{classmml_1_1string_a1fb3525866e3386db11ec4b1c2ec2a36}\label{classmml_1_1string_a1fb3525866e3386db11ec4b1c2ec2a36}} 
 \index{mml::string@{mml::string}!sub@{sub}}
 \index{sub@{sub}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{sub()}{sub()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::sub (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{beg,  }\item[{int32\+\_\+t}]{end }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::sub (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{beg,  }\item[{std\+::size\+\_\+t}]{end }\end{DoxyParamCaption})}
 
-Create a substring starting and ending of specific positions 
+
+
+Create a substring starting and ending of specific positions. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em std\+::size\+\_\+t} & Start of the new string \\
+{\em beg} & Start of the new string \\
 \hline
-{\em std\+::size\+\_\+t} & End of the new string \\
+{\em end} & End of the new string \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -671,7 +675,7 @@ Create a substring starting and ending of specific positions
 
 Create a substring starting from this position to the end 
 \begin{DoxyParams}{Parameters}
-{\em size\+\_\+t} & Start position to the end \\
+{\em pos1} & Start position to the end \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -685,9 +689,9 @@ Create a substring starting from this position to the end
 
 Create substring 
 \begin{DoxyParams}{Parameters}
-{\em size\+\_\+t} & Start position \\
+{\em pos1} & Start position \\
 \hline
-{\em std\+::size\+\_\+t} & Length of the string \\
+{\em length1} & Length of the string \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

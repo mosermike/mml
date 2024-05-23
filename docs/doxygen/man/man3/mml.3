@@ -1,4 +1,4 @@
-.TH "mml" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
+.TH "mml" 3 "Thu May 23 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -85,6 +85,9 @@ Enthält verschiedene Standardfunktionen
 .br
 .ti -1c
 .RI "std::string \fBdate\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.')"
+.br
+.ti -1c
+.RI "bool \fBis_num\fP (char c)"
 .br
 .ti -1c
 .RI "bool \fBrange\fP (std::size_t number)"
@@ -260,6 +263,20 @@ std::string
 \fBAuthor\fP
 .RS 4
 Mike 
+.RE
+.PP
+
+.SS "bool mml::is_num (char c)"
+Checks if a character is a number 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP Character to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
 .RE
 .PP
 

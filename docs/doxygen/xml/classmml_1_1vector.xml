@@ -153,6 +153,35 @@
         </inbodydescription>
         <location file="include/mml/vector.hpp" line="45" column="9" bodyfile="include/mml/vector.hpp" bodystart="45" bodyend="45"/>
       </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::vector&lt; T &gt;::vector</definition>
+        <argsstring>(std::initializer_list&lt; T &gt; initList)</argsstring>
+        <name>vector</name>
+        <param>
+          <type>std::initializer_list&lt; T &gt;</type>
+          <declname>initList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise with a list <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::initializer_list&lt;T&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="52" column="1" bodyfile="include/mml/vector.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a52d2bb1a8ce2c1fe10784fe52d22803b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref></type>
         <definition>vector mml::vector&lt; T &gt;::operator=</definition>
@@ -168,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="47" column="8" bodyfile="include/mml/vector.hpp" bodystart="47" bodyend="47"/>
+        <location file="include/mml/vector.hpp" line="54" column="8" bodyfile="include/mml/vector.hpp" bodystart="54" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a72f4406c5722f9fb621ea2afdd722877" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref></type>
@@ -185,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="48" column="8" bodyfile="include/mml/vector.hpp" bodystart="48" bodyend="48"/>
+        <location file="include/mml/vector.hpp" line="55" column="8" bodyfile="include/mml/vector.hpp" bodystart="55" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -203,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="55" column="33" bodyfile="include/mml/vector.hpp" bodystart="55" bodyend="55"/>
+        <location file="include/mml/vector.hpp" line="62" column="33" bodyfile="include/mml/vector.hpp" bodystart="62" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -219,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="56" column="6" bodyfile="include/mml/vector.hpp" bodystart="56" bodyend="58"/>
+        <location file="include/mml/vector.hpp" line="63" column="6" bodyfile="include/mml/vector.hpp" bodystart="63" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -232,29 +261,97 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="59" column="33" bodyfile="include/mml/vector.hpp" bodystart="59" bodyend="59"/>
+        <location file="include/mml/vector.hpp" line="66" column="33" bodyfile="include/mml/vector.hpp" bodystart="66" bodyend="66"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a5a043eee4418d727d68b6f77ba0c5e5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; T &gt;::iterator</type>
-        <definition>std::vector&lt;T&gt;::iterator mml::vector&lt; T &gt;::erase</definition>
-        <argsstring>(typename std::vector&lt; T &gt;::iterator start, typename std::vector&lt; T &gt;::iterator amount=0)</argsstring>
+      <memberdef kind="function" id="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::vector&lt; T &gt;::erase</definition>
+        <argsstring>(size_t position)</argsstring>
         <name>erase</name>
         <param>
-          <type>typename std::vector&lt; T &gt;::iterator</type>
-          <declname>start</declname>
-        </param>
-        <param>
-          <type>typename std::vector&lt; T &gt;::iterator</type>
-          <declname>amount</declname>
-          <defval>0</defval>
+          <type>size_t</type>
+          <declname>position</declname>
         </param>
         <briefdescription>
+<para>Erase an element from the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to be erase </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if position &gt;= <ref refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" kindref="member">vector.size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="60" column="33" bodyfile="include/mml/vector.hpp" bodystart="60" bodyend="60"/>
+        <location file="include/mml/vector.hpp" line="74" column="6" bodyfile="include/mml/vector.hpp" bodystart="74" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::vector&lt; T &gt;::erase</definition>
+        <argsstring>(size_t start, size_t end)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Erase a range from the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if start &gt; end || end &gt; <ref refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" kindref="member">vector.size()</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="88" column="6" bodyfile="include/mml/vector.hpp" bodystart="88" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae4cae150b7b30e91e3b937d7a529a16f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -275,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="61" column="33" bodyfile="include/mml/vector.hpp" bodystart="61" bodyend="61"/>
+        <location file="include/mml/vector.hpp" line="96" column="33" bodyfile="include/mml/vector.hpp" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T &amp;</type>
@@ -292,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="62" column="3" bodyfile="include/mml/vector.hpp" bodystart="62" bodyend="67"/>
+        <location file="include/mml/vector.hpp" line="97" column="3" bodyfile="include/mml/vector.hpp" bodystart="97" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a9f0bde55f6f6514461e624c6426ef6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -305,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="68" column="6" bodyfile="include/mml/vector.hpp" bodystart="68" bodyend="70"/>
+        <location file="include/mml/vector.hpp" line="103" column="6" bodyfile="include/mml/vector.hpp" bodystart="103" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a0f23f42bb84218cdd6ec2cc523933e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -322,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="72" column="6" bodyfile="include/mml/vector.hpp" bodystart="72" bodyend="74"/>
+        <location file="include/mml/vector.hpp" line="107" column="6" bodyfile="include/mml/vector.hpp" bodystart="107" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -335,7 +432,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="75" column="13" bodyfile="include/mml/vector.hpp" bodystart="75" bodyend="75"/>
+        <location file="include/mml/vector.hpp" line="110" column="13" bodyfile="include/mml/vector.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::vector&lt; T &gt;::count</definition>
+        <argsstring>(T value)</argsstring>
+        <name>count</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count how many entries are equal to a value <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="143" column="13" bodyfile="include/mml/vector.hpp" bodystart="143" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -350,15 +476,20 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Vektorinhalt ausgeben</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<para>print elements in the vector <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print with line breaks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="107" column="6" bodyfile="include/mml/vector.hpp" bodystart="107" bodyend="125"/>
+        <location file="include/mml/vector.hpp" line="157" column="6" bodyfile="include/mml/vector.hpp" bodystart="157" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -368,15 +499,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Vektor leeren</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para>Empties the vector <simplesect kind="return"><para>std::vector&lt;T&gt; </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="131" column="14" bodyfile="include/mml/vector.hpp" bodystart="131" bodyend="135"/>
+        <location file="include/mml/vector.hpp" line="181" column="14" bodyfile="include/mml/vector.hpp" bodystart="181" bodyend="185"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -400,7 +529,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="142" column="6" bodyfile="include/mml/vector.hpp" bodystart="142" bodyend="167"/>
+        <location file="include/mml/vector.hpp" line="192" column="6" bodyfile="include/mml/vector.hpp" bodystart="192" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae2121141f484344e07345eddf7caa77c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -424,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="174" column="3" bodyfile="include/mml/vector.hpp" bodystart="174" bodyend="183"/>
+        <location file="include/mml/vector.hpp" line="224" column="3" bodyfile="include/mml/vector.hpp" bodystart="224" bodyend="233"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -451,7 +580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="189" column="7" bodyfile="include/mml/vector.hpp" bodystart="189" bodyend="210"/>
+        <location file="include/mml/vector.hpp" line="239" column="7" bodyfile="include/mml/vector.hpp" bodystart="239" bodyend="260"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -475,7 +604,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="218" column="13" bodyfile="include/mml/vector.hpp" bodystart="218" bodyend="230"/>
+        <location file="include/mml/vector.hpp" line="268" column="13" bodyfile="include/mml/vector.hpp" bodystart="268" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a35466b7dc2f7af8333b354edc7475001" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -512,7 +641,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="237" column="6" bodyfile="include/mml/vector.hpp" bodystart="237" bodyend="250"/>
+        <location file="include/mml/vector.hpp" line="287" column="6" bodyfile="include/mml/vector.hpp" bodystart="287" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1aff5f8402662b01d3eef81aab88dc112a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -540,7 +669,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="257" column="13" bodyfile="include/mml/vector.hpp" bodystart="257" bodyend="274"/>
+        <location file="include/mml/vector.hpp" line="307" column="13" bodyfile="include/mml/vector.hpp" bodystart="307" bodyend="324"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -564,7 +693,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="283" column="8" bodyfile="include/mml/vector.hpp" bodystart="283" bodyend="287"/>
+        <location file="include/mml/vector.hpp" line="333" column="8" bodyfile="include/mml/vector.hpp" bodystart="333" bodyend="337"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a901fab5579bf780856051f9493ffbb69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -590,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="299" column="6" bodyfile="include/mml/vector.hpp" bodystart="299" bodyend="301"/>
+        <location file="include/mml/vector.hpp" line="349" column="6" bodyfile="include/mml/vector.hpp" bodystart="349" bodyend="351"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a09c4bf51180082747d807fd1d8d5ae84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -614,7 +743,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="314" column="3" bodyfile="include/mml/vector.hpp" bodystart="314" bodyend="322"/>
+        <location file="include/mml/vector.hpp" line="364" column="3" bodyfile="include/mml/vector.hpp" bodystart="364" bodyend="372"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a521aa464534c98ecd70315632ad25f25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -638,7 +767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="329" column="13" bodyfile="include/mml/vector.hpp" bodystart="329" bodyend="339"/>
+        <location file="include/mml/vector.hpp" line="379" column="13" bodyfile="include/mml/vector.hpp" bodystart="379" bodyend="389"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a372daa94b7f21f06a70a755111114ee6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -655,7 +784,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="341" column="13" bodyfile="include/mml/vector.hpp" bodystart="341" bodyend="350"/>
+        <location file="include/mml/vector.hpp" line="391" column="13" bodyfile="include/mml/vector.hpp" bodystart="391" bodyend="400"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a935789a9cb1c2a8acdeedac8f5179278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -679,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="358" column="13" bodyfile="include/mml/vector.hpp" bodystart="358" bodyend="370"/>
+        <location file="include/mml/vector.hpp" line="408" column="13" bodyfile="include/mml/vector.hpp" bodystart="408" bodyend="420"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -699,7 +828,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="380" column="22" bodyfile="include/mml/vector.hpp" bodystart="380" bodyend="380"/>
+        <location file="include/mml/vector.hpp" line="430" column="22" bodyfile="include/mml/vector.hpp" bodystart="430" bodyend="430"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -727,7 +856,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="85" column="8" bodyfile="include/mml/vector.hpp" bodystart="85" bodyend="90"/>
+        <location file="include/mml/vector.hpp" line="120" column="8" bodyfile="include/mml/vector.hpp" bodystart="120" bodyend="125"/>
       </memberdef>
       <memberdef kind="friend" id="classmml_1_1vector_1a6684f15487209798bee55f69e848cb87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::istream &amp;</type>
@@ -753,7 +882,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="96" column="21" bodyfile="include/mml/vector.hpp" bodystart="96" bodyend="101"/>
+        <location file="include/mml/vector.hpp" line="131" column="21" bodyfile="include/mml/vector.hpp" bodystart="131" bodyend="136"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -782,14 +911,16 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="407"/>
+    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="457"/>
     <listofallmembers>
       <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>begin</name></member>
+      <member refid="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>count</name></member>
       <member refid="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>cout</name></member>
       <member refid="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>del</name></member>
       <member refid="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>empty</name></member>
       <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>end</name></member>
-      <member refid="classmml_1_1vector_1a5a043eee4418d727d68b6f77ba0c5e5b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>erase</name></member>
       <member refid="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>exist</name></member>
       <member refid="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>find</name></member>
       <member refid="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>get_data</name></member>
@@ -820,6 +951,7 @@
       <member refid="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>vector</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

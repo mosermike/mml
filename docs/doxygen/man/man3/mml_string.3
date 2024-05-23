@@ -1,4 +1,4 @@
-.TH "mml::string" 3 "Wed May 22 2024" "mml" \" -*- nroff -*-
+.TH "mml::string" 3 "Thu May 23 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -27,7 +27,7 @@ mml::string
 .RI "template<typename templ > bool \fBoperator!=\fP (templ Test)"
 .br
 .ti -1c
-.RI "template<typename templ > std::string \fBoperator+\fP (templ Test)"
+.RI "template<typename templ > \fBmml::string\fP \fBoperator+\fP (templ Test)"
 .br
 .ti -1c
 .RI "template<typename templ > \fBmml::string\fP \fBoperator+=\fP (templ Test)"
@@ -126,8 +126,9 @@ mml::string
 .RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1)"
 .br
 .ti -1c
-.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, int32_t end)"
+.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, std::size_t end)"
 .br
+.RI "Create a substring starting and ending of specific positions\&. "
 .ti -1c
 .RI "int \fBstoi\fP ()"
 .br
@@ -546,7 +547,7 @@ bool
 
 .SS "std::string & mml::string::operator() ()"
 
-.SS "template<typename templ > std::string mml::string::operator+ (templ Test)\fC [inline]\fP"
+.SS "template<typename templ > \fBmml::string\fP mml::string::operator+ (templ Test)\fC [inline]\fP"
 Operator add somehting at the end of this instance 
 .PP
 \fBParameters\fP
@@ -556,7 +557,7 @@ Operator add somehting at the end of this instance
 .PP
 \fBReturns\fP
 .RS 4
-std::string 
+\fBmml::string\fP 
 .RE
 .PP
 
@@ -684,14 +685,16 @@ std::string
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::sub (std::size_t beg, int32_t end)"
-Create a substring starting and ending of specific positions 
+.SS "\fBmml::string\fP mml::string::sub (std::size_t beg, std::size_t end)"
+
+.PP
+Create a substring starting and ending of specific positions\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstd::size_t\fP Start of the new string 
+\fIbeg\fP Start of the new string 
 .br
-\fIstd::size_t\fP End of the new string 
+\fIend\fP End of the new string 
 .RE
 .PP
 \fBReturns\fP
@@ -705,7 +708,7 @@ Create a substring starting from this position to the end
 .PP
 \fBParameters\fP
 .RS 4
-\fIsize_t\fP Start position to the end 
+\fIpos1\fP Start position to the end 
 .RE
 .PP
 \fBReturns\fP
@@ -719,9 +722,9 @@ Create substring
 .PP
 \fBParameters\fP
 .RS 4
-\fIsize_t\fP Start position 
+\fIpos1\fP Start position 
 .br
-\fIstd::size_t\fP Length of the string 
+\fIlength1\fP Length of the string 
 .RE
 .PP
 \fBReturns\fP

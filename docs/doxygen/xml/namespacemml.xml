@@ -171,6 +171,35 @@ Enthält verschiedene Standardfunktionen </para>
         </inbodydescription>
         <location file="include/mml/standards.hpp" line="522" column="13" bodyfile="src/standards.cpp" bodystart="108" bodyend="141" declfile="include/mml/standards.hpp" declline="522" declcolumn="13"/>
       </memberdef>
+      <memberdef kind="function" id="namespacemml_1a676559a7059429aac4066ebac5fbca36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::is_num</definition>
+        <argsstring>(char c)</argsstring>
+        <name>is_num</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a character is a number <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>char</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="529" column="6" bodyfile="src/standards.cpp" bodystart="143" bodyend="143" declfile="include/mml/standards.hpp" declline="529" declcolumn="6"/>
+      </memberdef>
       <memberdef kind="function" id="namespacemml_1a1d79d75734ea118c10fc391ab2231d56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool mml::range</definition>
@@ -202,7 +231,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="532" column="6" bodyfile="src/standards.cpp" bodystart="143" bodyend="145" declfile="include/mml/standards.hpp" declline="532" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="538" column="6" bodyfile="src/standards.cpp" bodystart="145" bodyend="147" declfile="include/mml/standards.hpp" declline="538" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1aef4479907a5a2ee42d0d0099e5525b5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -247,7 +276,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="542" column="6" bodyfile="src/standards.cpp" bodystart="147" bodyend="149" declfile="include/mml/standards.hpp" declline="542" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="549" column="6" bodyfile="src/standards.cpp" bodystart="149" bodyend="151" declfile="include/mml/standards.hpp" declline="549" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a2cf98422c1355b3c351820b70b2834ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -292,7 +321,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="553" column="8" bodyfile="src/standards.cpp" bodystart="151" bodyend="158" declfile="include/mml/standards.hpp" declline="553" declcolumn="8"/>
+        <location file="include/mml/standards.hpp" line="560" column="8" bodyfile="src/standards.cpp" bodystart="153" bodyend="160" declfile="include/mml/standards.hpp" declline="560" declcolumn="8"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -476,7 +505,7 @@ Enthält verschiedene Standardfunktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="562" column="24" bodyfile="include/mml/standards.hpp" bodystart="562" bodyend="568"/>
+        <location file="include/mml/standards.hpp" line="569" column="24" bodyfile="include/mml/standards.hpp" bodystart="569" bodyend="575"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -372,26 +372,26 @@ namespace mml {
 		
 		/**
 		 * Create substring 
-		 * @param size_t Start position
-		 * @param std::size_t Length of the string
+		 * @param pos1 Start position
+		 * @param length1 Length of the string
 		 * @return mml::string
 		*/
 		mml::string substr(std::size_t pos1, std::size_t length1);
 
 		/**
 		 * Create a substring starting from this position to the end
-		 * @param size_t Start position to the end
+		 * @param pos1 Start position to the end
 		 * @return mml::string
 		*/
 		mml::string substr(std::size_t pos1);
 		
 		/**
-		 * Create a substring starting and ending of specific positions
-		 * @param std::size_t Start of the new string
-		 * @param std::size_t End of the new string
+		 * @brief Create a substring starting and ending of specific positions
+		 * @param beg Start of the new string
+		 * @param end End of the new string
 		 * @return mml::string
 		 */
-		mml::string sub(std::size_t beg, int32_t end);
+		mml::string sub(std::size_t beg, std::size_t end);
 		
 		/**
 		* Transform this instance to an integer

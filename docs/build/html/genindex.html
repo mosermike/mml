@@ -1,8 +1,9 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -27,16 +28,18 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
@@ -300,6 +303,8 @@ document.write(`
 </li>
       <li><a href="standards.html#_CPPv4N3mml4dateEN3mml6stringENSt6stringENSt6stringE">mml::date (C++ function)</a>, <a href="standards.html#_CPPv4N3mml4dateEi6time_t">[1]</a>
 </li>
+      <li><a href="standards.html#_CPPv4N3mml6is_numEc">mml::is_num (C++ function)</a>
+</li>
       <li><a href="standards.html#_CPPv4N3mml6stringE">mml::string (C++ class)</a>
 </li>
       <li><a href="standards.html#_CPPv4N3mml6string4atofEv">mml::string::atof (C++ function)</a>
@@ -344,7 +349,7 @@ document.write(`
 </li>
       <li><a href="standards.html#_CPPv4I0EN3mml6stringneEb5templ">mml::string::operator!= (C++ function)</a>
 </li>
-      <li><a href="standards.html#_CPPv4I0EN3mml6stringplENSt6stringE5templ">mml::string::operator+ (C++ function)</a>
+      <li><a href="standards.html#_CPPv4I0EN3mml6stringplEN3mml6stringE5templ">mml::string::operator+ (C++ function)</a>
 </li>
       <li><a href="standards.html#_CPPv4I0EN3mml6stringpLEN3mml6stringE5templ">mml::string::operator+= (C++ function)</a>
 </li>
@@ -372,7 +377,7 @@ document.write(`
 </li>
       <li><a href="standards.html#_CPPv4I0EN3mml6string6stringE5templ">mml::string::string (C++ function)</a>, <a href="standards.html#_CPPv4N3mml6string6stringEv">[1]</a>
 </li>
-      <li><a href="standards.html#_CPPv4N3mml6string3subENSt6size_tE7int32_t">mml::string::sub (C++ function)</a>
+      <li><a href="standards.html#_CPPv4N3mml6string3subENSt6size_tENSt6size_tE">mml::string::sub (C++ function)</a>
 </li>
       <li><a href="standards.html#_CPPv4N3mml6string6substrENSt6size_tE">mml::string::substr (C++ function)</a>, <a href="standards.html#_CPPv4N3mml6string6substrENSt6size_tENSt6size_tE">[1]</a>
 </li>
@@ -433,7 +438,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
     <br/>
   </p>
 </div>

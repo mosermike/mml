@@ -1035,12 +1035,14 @@ Quelldatei args.cpp Enthält verschiedene Funktionen für die Klasse arg </para>
       <member refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" prot="protected" virt="non-virtual"><scope>mml::shell::arg</scope><name>argv</name></member>
       <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>begin</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a95b8109c95d6042e03a0263ee231bac6" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>beginArg</name></member>
+      <member refid="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>count</name></member>
       <member refid="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>cout</name></member>
       <member refid="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>del</name></member>
       <member refid="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>empty</name></member>
       <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>end</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>erase</name></member>
-      <member refid="classmml_1_1vector_1a5a043eee4418d727d68b6f77ba0c5e5b" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>erase</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a1e77af158fc020b40c2fae73b4be9df0" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a03ed3b9213c46a2262d639c1a9c3d57c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
@@ -1096,6 +1098,7 @@ Quelldatei args.cpp Enthält verschiedene Funktionen für die Klasse arg </para>
       <member refid="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>~arg</name></member>
     </listofallmembers>
   </compounddef>

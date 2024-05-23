@@ -208,14 +208,14 @@
         </inbodydescription>
         <location file="include/mml/standards.hpp" line="112" column="17" bodyfile="include/mml/standards.hpp" bodystart="112" bodyend="112"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1string_1a5410120da43e7a117d22bb79a2480227" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1string_1aa288bb8a47b47af92f7d3f1462e30cc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename templ</type>
           </param>
         </templateparamlist>
-        <type>std::string</type>
-        <definition>std::string mml::string::operator+</definition>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::operator+</definition>
         <argsstring>(templ Test)</argsstring>
         <name>operator+</name>
         <param>
@@ -234,7 +234,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::string </para>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="135" column="6" bodyfile="src/string.cpp" bodystart="30" bodyend="37"/>
+        <location file="include/mml/standards.hpp" line="135" column="6" bodyfile="src/string.cpp" bodystart="30" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a1220627cd229e5914b01ac19eba537e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string &amp;</type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="137" column="13" bodyfile="src/string.cpp" bodystart="39" bodyend="41"/>
+        <location file="include/mml/standards.hpp" line="137" column="13" bodyfile="src/string.cpp" bodystart="40" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a32311b133953994dfef6961c8a1580e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="143" column="8" bodyfile="src/string.cpp" bodystart="43" bodyend="47"/>
+        <location file="include/mml/standards.hpp" line="143" column="8" bodyfile="src/string.cpp" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a8441ef354393dd5da65206b6f5818087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="150" column="5" bodyfile="src/string.cpp" bodystart="49" bodyend="51"/>
+        <location file="include/mml/standards.hpp" line="150" column="5" bodyfile="src/string.cpp" bodystart="50" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1ae4e537d4e75a0878ea7277f58f0e5907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="157" column="12" bodyfile="src/string.cpp" bodystart="255" bodyend="257"/>
+        <location file="include/mml/standards.hpp" line="157" column="12" bodyfile="src/string.cpp" bodystart="256" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a88471aafcb78a860ec707bb140baa069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="165" column="10" bodyfile="src/string.cpp" bodystart="290" bodyend="305"/>
+        <location file="include/mml/standards.hpp" line="165" column="10" bodyfile="src/string.cpp" bodystart="291" bodyend="306"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a7bcf86627d31a8b085a1a3feaa12bad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="173" column="6" bodyfile="src/string.cpp" bodystart="306" bodyend="311"/>
+        <location file="include/mml/standards.hpp" line="173" column="6" bodyfile="src/string.cpp" bodystart="307" bodyend="312"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a148062ef838673354ed404876f6cb64d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -471,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="180" column="15" bodyfile="src/string.cpp" bodystart="312" bodyend="321"/>
+        <location file="include/mml/standards.hpp" line="180" column="15" bodyfile="src/string.cpp" bodystart="313" bodyend="322"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -502,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="188" column="13" bodyfile="src/string.cpp" bodystart="323" bodyend="332"/>
+        <location file="include/mml/standards.hpp" line="188" column="13" bodyfile="src/string.cpp" bodystart="324" bodyend="333"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1ae6020f11a4948d38de8ef91bfa6d20f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -533,7 +533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="195" column="15" bodyfile="src/string.cpp" bodystart="334" bodyend="344"/>
+        <location file="include/mml/standards.hpp" line="195" column="15" bodyfile="src/string.cpp" bodystart="335" bodyend="345"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1ae8e122861dd6eab71021afbe39c4bdef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -578,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="208" column="6" bodyfile="src/string.cpp" bodystart="346" bodyend="348"/>
+        <location file="include/mml/standards.hpp" line="208" column="6" bodyfile="src/string.cpp" bodystart="347" bodyend="349"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a48e1ff970fa494de2b797ddf358a3c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -647,7 +647,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="219" column="6" bodyfile="src/string.cpp" bodystart="351" bodyend="353"/>
+        <location file="include/mml/standards.hpp" line="219" column="6" bodyfile="src/string.cpp" bodystart="352" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a1033fe9d14c9bd1d6ca6f95702f8d586" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -798,7 +798,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="249" column="13" bodyfile="src/string.cpp" bodystart="54" bodyend="64"/>
+        <location file="include/mml/standards.hpp" line="249" column="13" bodyfile="src/string.cpp" bodystart="55" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a44600a161f7ad1c5daa8e343d4a99cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -827,7 +827,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="257" column="6" bodyfile="src/string.cpp" bodystart="274" bodyend="276"/>
+        <location file="include/mml/standards.hpp" line="257" column="6" bodyfile="src/string.cpp" bodystart="275" bodyend="277"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1adf5cf7012f74a47aab5b0c4fc6c2842f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -870,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="266" column="13" bodyfile="src/string.cpp" bodystart="279" bodyend="288"/>
+        <location file="include/mml/standards.hpp" line="266" column="13" bodyfile="src/string.cpp" bodystart="280" bodyend="289"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a9b735c067f74a7b4e324e19157338814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -886,7 +886,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="273" column="13" bodyfile="src/string.cpp" bodystart="233" bodyend="235"/>
+        <location file="include/mml/standards.hpp" line="273" column="13" bodyfile="src/string.cpp" bodystart="234" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a9f82d0c2131c9165e05adb386b233d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -903,7 +903,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="281" column="10" bodyfile="src/string.cpp" bodystart="264" bodyend="266"/>
+        <location file="include/mml/standards.hpp" line="281" column="10" bodyfile="src/string.cpp" bodystart="265" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -932,7 +932,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="288" column="6" bodyfile="src/string.cpp" bodystart="66" bodyend="90"/>
+        <location file="include/mml/standards.hpp" line="288" column="6" bodyfile="src/string.cpp" bodystart="67" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1aa35374da20cb9c18df75aa3897066ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -948,7 +948,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="294" column="13" bodyfile="src/string.cpp" bodystart="92" bodyend="97"/>
+        <location file="include/mml/standards.hpp" line="294" column="13" bodyfile="src/string.cpp" bodystart="93" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -1031,7 +1031,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="307" column="13" bodyfile="src/string.cpp" bodystart="99" bodyend="164"/>
+        <location file="include/mml/standards.hpp" line="307" column="13" bodyfile="src/string.cpp" bodystart="100" bodyend="165"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a126fa2767c6b4d20e7d7afa66e4feff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; std::string &gt;</type>
@@ -1104,7 +1104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="319" column="13" bodyfile="src/string.cpp" bodystart="166" bodyend="170"/>
+        <location file="include/mml/standards.hpp" line="319" column="13" bodyfile="src/string.cpp" bodystart="167" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a774c2bf7511d6c23cd25c8c8cda6bb06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1120,7 +1120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="325" column="6" bodyfile="src/string.cpp" bodystart="195" bodyend="225"/>
+        <location file="include/mml/standards.hpp" line="325" column="6" bodyfile="src/string.cpp" bodystart="196" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a97fa3ac4e196573c2ee3f39fdbb5ed5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1136,7 +1136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="331" column="6" bodyfile="src/string.cpp" bodystart="227" bodyend="230"/>
+        <location file="include/mml/standards.hpp" line="331" column="6" bodyfile="src/string.cpp" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a4b493ce495806a4dba04b14ae7a87347" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1240,7 +1240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="371" column="13" bodyfile="src/string.cpp" bodystart="237" bodyend="239"/>
+        <location file="include/mml/standards.hpp" line="371" column="13" bodyfile="src/string.cpp" bodystart="238" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a71a3dae3f16e17a67c213ee643a80587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -1260,7 +1260,7 @@
         <detaileddescription>
 <para>Create substring <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>size_t</parametername>
+<parametername>pos1</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Start position </para>
@@ -1268,7 +1268,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>std::size_t</parametername>
+<parametername>length1</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Length of the string </para>
@@ -1281,7 +1281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="379" column="13" bodyfile="src/string.cpp" bodystart="175" bodyend="177"/>
+        <location file="include/mml/standards.hpp" line="379" column="13" bodyfile="src/string.cpp" bodystart="176" bodyend="178"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a422be5ccc494f3b1ed6039e84b229a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -1297,7 +1297,7 @@
         <detaileddescription>
 <para>Create a substring starting from this position to the end <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>size_t</parametername>
+<parametername>pos1</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Start position to the end </para>
@@ -1310,27 +1310,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="386" column="13" bodyfile="src/string.cpp" bodystart="179" bodyend="182"/>
+        <location file="include/mml/standards.hpp" line="386" column="13" bodyfile="src/string.cpp" bodystart="180" bodyend="183"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1string_1a70256e730794e650d332e213338e7d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
         <definition>mml::string mml::string::sub</definition>
-        <argsstring>(std::size_t beg, int32_t end)</argsstring>
+        <argsstring>(std::size_t beg, std::size_t end)</argsstring>
         <name>sub</name>
         <param>
           <type>std::size_t</type>
           <declname>beg</declname>
         </param>
         <param>
-          <type>int32_t</type>
+          <type>std::size_t</type>
           <declname>end</declname>
         </param>
         <briefdescription>
+<para>Create a substring starting and ending of specific positions. </para>
         </briefdescription>
         <detaileddescription>
-<para>Create a substring starting and ending of specific positions <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>std::size_t</parametername>
+<parametername>beg</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Start of the new string </para>
@@ -1338,7 +1339,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>std::size_t</parametername>
+<parametername>end</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>End of the new string </para>
@@ -1351,7 +1352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="394" column="13" bodyfile="src/string.cpp" bodystart="184" bodyend="193"/>
+        <location file="include/mml/standards.hpp" line="394" column="13" bodyfile="src/string.cpp" bodystart="185" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a2006997f5084941e91472f8eaedb41c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1367,7 +1368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="400" column="5" bodyfile="src/string.cpp" bodystart="260" bodyend="262"/>
+        <location file="include/mml/standards.hpp" line="400" column="5" bodyfile="src/string.cpp" bodystart="261" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -1383,7 +1384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="406" column="13" bodyfile="src/string.cpp" bodystart="241" bodyend="243"/>
+        <location file="include/mml/standards.hpp" line="406" column="13" bodyfile="src/string.cpp" bodystart="242" bodyend="244"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a8e237d1326516f2d4e09006b55569d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1412,7 +1413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="413" column="6" bodyfile="src/string.cpp" bodystart="245" bodyend="247"/>
+        <location file="include/mml/standards.hpp" line="413" column="6" bodyfile="src/string.cpp" bodystart="246" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1aeb572bc17c49db9a0b358b1ce81af4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1441,7 +1442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="420" column="6" bodyfile="src/string.cpp" bodystart="249" bodyend="253"/>
+        <location file="include/mml/standards.hpp" line="420" column="6" bodyfile="src/string.cpp" bodystart="250" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -1557,7 +1558,7 @@
       <member refid="classmml_1_1string_1a774c2bf7511d6c23cd25c8c8cda6bb06" prot="public" virt="non-virtual"><scope>mml::string</scope><name>mkdir_p</name></member>
       <member refid="classmml_1_1string_1ab04f755c55c2322d6dffca2e12cfa8dd" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator!=</name></member>
       <member refid="classmml_1_1string_1a1220627cd229e5914b01ac19eba537e0" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator()</name></member>
-      <member refid="classmml_1_1string_1a5410120da43e7a117d22bb79a2480227" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+</name></member>
+      <member refid="classmml_1_1string_1aa288bb8a47b47af92f7d3f1462e30cc9" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+</name></member>
       <member refid="classmml_1_1string_1ac30a41095a96b56d5498bea3e129bff1" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+=</name></member>
       <member refid="classmml_1_1string_1a2cc8c87a16d53c8ebaacfd0eb0fa1c5f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator&lt;&lt;</name></member>
       <member refid="classmml_1_1string_1abf78a337e3fc0d9889f3e138a761f77c" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator=</name></member>
@@ -1572,7 +1573,7 @@
       <member refid="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" prot="public" virt="non-virtual"><scope>mml::string</scope><name>str</name></member>
       <member refid="classmml_1_1string_1a624785c3fee6ef75b50a3569b5234b5f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
       <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
-      <member refid="classmml_1_1string_1a70256e730794e650d332e213338e7d1c" prot="public" virt="non-virtual"><scope>mml::string</scope><name>sub</name></member>
+      <member refid="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" prot="public" virt="non-virtual"><scope>mml::string</scope><name>sub</name></member>
       <member refid="classmml_1_1string_1a71a3dae3f16e17a67c213ee643a80587" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
       <member refid="classmml_1_1string_1a422be5ccc494f3b1ed6039e84b229a17" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
       <member refid="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" prot="private" virt="non-virtual"><scope>mml::string</scope><name>temp</name></member>

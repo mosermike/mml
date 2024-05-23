@@ -20,6 +20,25 @@
       <node id="8">
         <label>float.h</label>
       </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="7">
+        <label>random</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
       <node id="2">
         <label>mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
@@ -40,8 +59,8 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>string</label>
+      <node id="9">
+        <label>iostream</label>
       </node>
       <node id="1">
         <label>include/mml/functions.hpp</label>
@@ -61,108 +80,15 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>random</label>
-      </node>
-      <node id="10">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="3">
-        <label>vector</label>
-      </node>
-      <node id="5">
-        <label>sstream</label>
-      </node>
-      <node id="9">
-        <label>iostream</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="14">
-        <label>src/arg.cpp</label>
-        <link refid="arg_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/Unix.cpp</label>
-        <link refid="Unix_8cpp"/>
-      </node>
-      <node id="12">
+      <node id="13">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
       </node>
-      <node id="4">
-        <label>src/file.cpp</label>
-        <link refid="file_8cpp"/>
-      </node>
-      <node id="11">
-        <label>src/string.cpp</label>
-        <link refid="string_8cpp"/>
-      </node>
-      <node id="7">
-        <label>src/Thread.cpp</label>
-        <link refid="Thread_8cpp"/>
-      </node>
-      <node id="2">
-        <label>include/mml/file.hpp</label>
-        <link refid="file_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
-      </node>
-      <node id="1">
-        <label>include/mml/functions.hpp</label>
-        <link refid="functions_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/help.cpp</label>
-        <link refid="help_8cpp"/>
-      </node>
-      <node id="13">
-        <label>include/mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
+      <node id="16">
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
       </node>
       <node id="3">
         <label>include/mml.hpp</label>
@@ -179,22 +105,102 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
-      <node id="10">
+      <node id="12">
+        <label>src/string.cpp</label>
+        <link refid="string_8cpp"/>
+      </node>
+      <node id="17">
+        <label>src/standards.cpp</label>
+        <link refid="standards_8cpp"/>
+      </node>
+      <node id="11">
         <label>src/log.cpp</label>
         <link refid="log_8cpp"/>
       </node>
-      <node id="15">
-        <label>src/functions.cpp</label>
-        <link refid="functions_8cpp"/>
+      <node id="5">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
+      <node id="10">
+        <label>test/test2.cpp</label>
+        <link refid="test2_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/mml/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="9">
         <label>test/test1.cpp</label>
         <link refid="test1_8cpp"/>
       </node>
-      <node id="16">
-        <label>src/standards.cpp</label>
-        <link refid="standards_8cpp"/>
+      <node id="14">
+        <label>include/mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/mml/functions.hpp</label>
+        <link refid="functions_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/arg.cpp</label>
+        <link refid="arg_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>

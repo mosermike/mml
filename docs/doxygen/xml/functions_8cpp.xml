@@ -16,102 +16,20 @@
     <includes refid="Thread_8hpp" local="yes">mml/Thread.hpp</includes>
     <includes refid="definitions_8hpp" local="yes">mml/definitions.hpp</includes>
     <incdepgraph>
-      <node id="8">
-        <label>sys/mount.h</label>
-      </node>
-      <node id="15">
-        <label>float.h</label>
-      </node>
-      <node id="11">
-        <label>mml/standards.hpp</label>
-        <link refid="standards_8hpp"/>
-        <childnode refid="5" relation="include">
+      <node id="19">
+        <label>mml/log.hpp</label>
+        <link refid="log_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="10">
-        <label>mml/functions.hpp</label>
-        <link refid="functions_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
       </node>
-      <node id="4">
-        <label>fstream</label>
-      </node>
-      <node id="21">
-        <label>mml/Thread.hpp</label>
-        <link refid="Thread_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="17">
-        <label>mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>random</label>
-      </node>
-      <node id="16">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="13">
-        <label>string.h</label>
-      </node>
-      <node id="6">
-        <label>unistd.h</label>
-      </node>
-      <node id="5">
-        <label>vector</label>
-      </node>
-      <node id="9">
-        <label>signal.h</label>
-      </node>
-      <node id="12">
-        <label>sstream</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
+      <node id="8">
+        <label>sys/mount.h</label>
       </node>
       <node id="1">
         <label>src/functions.cpp</label>
@@ -143,15 +61,34 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="23">
-        <label>chrono</label>
+      <node id="15">
+        <label>float.h</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>random</label>
+      </node>
+      <node id="13">
+        <label>string.h</label>
       </node>
       <node id="20">
         <label>mml/Unix.hpp</label>
         <link refid="Unix_8hpp"/>
       </node>
-      <node id="22">
-        <label>thread</label>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
       </node>
       <node id="18">
         <label>mml/vector.hpp</label>
@@ -169,20 +106,83 @@
         <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="19">
-        <label>mml/log.hpp</label>
-        <link refid="log_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
+      <node id="9">
+        <label>signal.h</label>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="11">
+        <label>mml/standards.hpp</label>
+        <link refid="standards_8hpp"/>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>mml/functions.hpp</label>
+        <link refid="functions_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>chrono</label>
+      </node>
+      <node id="22">
+        <label>thread</label>
       </node>
       <node id="7">
         <label>algorithm</label>
+      </node>
+      <node id="21">
+        <label>mml/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
       <sectiondef kind="user-defined">
@@ -432,7 +432,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="214"><highlight class="normal"></highlight></codeline>
 <codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Korrektur,<sp/>wenn<sp/>eine<sp/>ganze<sp/>Zahl<sp/>vorhanden</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[temp.<ref refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" kindref="member">size</ref>()-1]==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a70256e730794e650d332e213338e7d1c" kindref="member">sub</ref>(0,temp.<ref refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" kindref="member">size</ref>()-2);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" kindref="member">sub</ref>(0,temp.<ref refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" kindref="member">size</ref>()-2);</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.<ref refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" kindref="member">size</ref>();</highlight></codeline>
 <codeline lineno="220"><highlight class="normal">}</highlight></codeline>

@@ -182,7 +182,7 @@ mml::string mml::string::substr(std::size_t pos1){
 	return value.substr(pos1);
 }
 
-mml::string mml::string::sub(std::size_t beg, int32_t end) {
+mml::string mml::string::sub(std::size_t beg, std::size_t end) {
 	// beg is a negative number (negative means here very big)
 	if (beg > value.size() && (std::string::npos - beg < value.size()))
 		beg = value.size() - (std::string::npos - beg) -1;

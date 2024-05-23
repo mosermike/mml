@@ -64,7 +64,35 @@ namespace mml{
 			return this->vec.empty();
 		}
 		typename std::vector<T>::iterator end() noexcept{return vec.end();}
-		typename std::vector<T>::iterator erase(typename std::vector<T>::iterator start,typename std::vector<T>::iterator amount = 0) {vec.erase(start,start+amount);}
+		
+		/**
+		 * @brief Erase an element from the vector
+		 * @param position Position to be erase
+		 * @return None
+		 * @throw out_of_range if position >= vector.size()
+		*/
+		void erase(size_t position) {
+			if (position >= vec.size()) {
+				throw std::out_of_range("[vector::erase] Position " + std::to_string(position) + " out of range");
+			}
+			vec.erase(vec.begin() + position);
+		}
+
+		/**
+		 * @brief Erase a range from the vector
+		 * @param start Start position
+		 * @param end End position
+		 * @return None
+		 * @throw out_of_range if start > end || end > vector.size()
+		*/
+		void erase(size_t start, size_t end) {
+			if (start > end || end > vec.size()) {
+				throw std::out_of_range("[vector::erase] Invalid range [" + std::to_string(start) + "," + std::to_string(end) + "]");
+			}
+			vec.erase(vec.begin() + start, vec.begin() + end);
+		}
+
+
 		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) {return vec.insert(position,val);}
 		T &operator[](int index){
 			if (index < 0)
