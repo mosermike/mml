@@ -300,26 +300,16 @@ namespace mml{
 			}
 		/**
 		* @note Ersetzen eines Wertes in einem Vektor
-		* 
+		* @param old Value to be replaced
+		* @param new1 New value
 		* @return Vektor mit den ersetzten Werten
-		* @author Mike
 		*/
 		std::vector<T> replace(T old, T new1) {
-			if(typeid(T) == typeid(std::string)  || typeid(T) == typeid(mml::string)) {
-				for(uint32_t i = 0; i < vec.size(); i++) {
-					mml::string temp = mml::to_string(vec[i]);
-					if(temp.exist(mml::to_string(old).str())) {
-						temp = temp.replace(old,new1);
-						vec[i] = toT(temp);
-					}
-				}
+			for(uint32_t i = 0; i < vec.size(); i++) {
+				if(vec[i] == old)
+					vec[i] = new1;
 			}
-			else {
-				for(uint32_t i = 0; i < vec.size(); i++) {
-					if(vec[i] == old)
-						vec[i] = new1;
-				}
-			}
+			
 			return vec;
 		}
 			
