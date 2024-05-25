@@ -58,6 +58,13 @@ namespace mml {
     	}
 
 		/**
+		 * @brief Constructor creating n times the char c
+		 * @param n how often the character c should appear
+		 * @param c Character which appears n times
+		*/
+		string(size_t n, char c) : value(std::string(n,c)) {}
+		
+		/**
 		 * @brief Constructor without a value
 		*/
 		string(){}
