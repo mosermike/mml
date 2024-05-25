@@ -1,4 +1,4 @@
-.TH "mml::string" 3 "Thu May 23 2024" "mml" \" -*- nroff -*-
+.TH "mml::string" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,69 +8,112 @@ mml::string
 .PP
 .PP
 \fC#include <standards\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBiterator\fP = std::vector< char >::\fBiterator\fP"
+.br
+.ti -1c
+.RI "using \fBconst_iterator\fP = std::vector< char >::\fBconst_iterator\fP"
+.br
+.in -1c
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "template<typename templ > \fBstring\fP (templ \fBstr\fP)"
 .br
+.RI "Constructor with a value\&. "
 .ti -1c
 .RI "\fBstring\fP ()"
 .br
+.RI "Constructor without a value\&. "
 .ti -1c
 .RI "template<typename templ > \fBmml::string\fP & \fBoperator=\fP (templ \fBstr\fP)"
 .br
+.RI "Assign the value of the template type with the '=' sign\&. "
 .ti -1c
 .RI "template<typename templ > bool \fBoperator==\fP (templ Test)"
 .br
+.RI "Operator equal\&. "
 .ti -1c
 .RI "template<typename templ > bool \fBoperator!=\fP (templ Test)"
 .br
+.RI "Operator unequal\&. "
 .ti -1c
 .RI "template<typename templ > \fBmml::string\fP \fBoperator+\fP (templ Test)"
 .br
+.RI "Operator add somehting at the end of this instance\&. "
 .ti -1c
-.RI "template<typename templ > \fBmml::string\fP \fBoperator+=\fP (templ Test)"
+.RI "template<typename templ > \fBmml::string\fP \fBoperator+=\fP (templ add)"
 .br
+.RI "Operator add a char vector to this string\&. "
 .ti -1c
 .RI "char & \fBoperator[]\fP (int index)"
 .br
+.RI "Return a specific char from the string\&. "
 .ti -1c
 .RI "std::string & \fBoperator()\fP ()"
 .br
+.RI "Returns the value\&. "
 .ti -1c
 .RI "double \fBatof\fP ()"
 .br
+.RI "Converts this string into a double\&. "
 .ti -1c
 .RI "int \fBatoi\fP ()"
 .br
 .ti -1c
+.RI "std::string::iterator \fBbegin\fP ()"
+.br
+.RI "Returns an iterator that points to the beginning of the string\&. "
+.ti -1c
+.RI "std::string::const_iterator \fBbegin\fP () const"
+.br
+.ti -1c
 .RI "const char * \fBc_str\fP ()"
 .br
+.RI "Returns the string as a character pointer\&. "
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.RI "Clears the string\&. "
 .ti -1c
 .RI "uint32_t \fBcount\fP (\fBmml::string\fP name)"
 .br
+.RI "Count how often a string appears\&. "
 .ti -1c
 .RI "void \fBcout\fP (bool newline=true, std::string text='')"
 .br
+.RI "Print out the value of this instance\&. "
 .ti -1c
 .RI "std::string \fBdel_letter\fP (bool save=false)"
 .br
+.RI "Delete letters\&. "
 .ti -1c
 .RI "std::string \fBdel_number\fP (bool save=false)"
 .br
+.RI "Delete numbers\&. "
 .ti -1c
 .RI "std::string \fBdel_space\fP (bool save=false)"
 .br
+.RI "Remove everything after the first space\&. "
 .ti -1c
 .RI "bool \fBempty\fP ()"
 .br
+.RI "Checks if the string is empty\&. "
 .ti -1c
-.RI "bool \fBexist\fP (std::string name)"
+.RI "std::string::iterator \fBend\fP ()"
+.br
+.RI "Returns an iterator that points to the end of the string\&. "
+.ti -1c
+.RI "std::string::const_iterator \fBend\fP () const"
 .br
 .ti -1c
-.RI "bool \fBexist\fP (std::string name1, std::string name2, std::string name3='__________', std::string name4='__________')"
+.RI "template<typename\&.\&.\&. Args> bool \fBexist\fP (const Args &\&.\&.\&. args)"
 .br
+.RI "Check if one \fIor\fP another string exists\&. "
 .ti -1c
 .RI "std::size_t \fBfind\fP (char letter, std::size_t old=0)"
 .br
@@ -111,7 +154,7 @@ mml::string
 .RI "bool \fBremove\fP ()"
 .br
 .ti -1c
-.RI "template<typename T > std::string \fBreplace\fP (T str_old, T str_new, std::size_t pos=0)"
+.RI "template<typename T > \fBmml::string\fP \fBreplace\fP (T str_old, T str_new, std::size_t pos=0)"
 .br
 .ti -1c
 .RI "std::size_t \fBrfind\fP (char letter)"
@@ -126,7 +169,7 @@ mml::string
 .RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1)"
 .br
 .ti -1c
-.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, std::size_t end)"
+.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, std::size_t \fBend\fP)"
 .br
 .RI "Create a substring starting and ending of specific positions\&. "
 .ti -1c
@@ -151,39 +194,46 @@ mml::string
 .ti -1c
 .RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBstring\fP &String)"
 .br
+.RI "Output the value of the string via a stream\&. "
 .ti -1c
 .RI "std::istream & \fBoperator>>\fP (std::istream &in, \fBstring\fP &String)"
 .br
+.RI "Input the value of the string via a stream\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
 Class string which adds additional functions to std::string 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBmml::string::const_iterator\fP =  std::vector<char>::\fBconst_iterator\fP"
+
+.SS "using \fBmml::string::iterator\fP =  std::vector<char>::\fBiterator\fP"
+
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "template<typename templ > mml::string::string (templ str)\fC [inline]\fP"
 
 .PP
+Constructor with a value\&. 
+.PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fIstr\fP Value to be converted to a string 
 .RE
 .PP
 
 .SS "mml::string::string ()\fC [inline]\fP"
 
 .PP
-\fBReturns\fP
-.RS 4
-Instance of the class 
-.RE
-.PP
-
+Constructor without a value\&. 
 .SS "mml::string::~string ()\fC [inline]\fP"
 
 .SH "Member Function Documentation"
 .PP 
 .SS "double mml::string::atof ()"
-Converts this string into a double 
+
+.PP
+Converts this string into a double\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -200,8 +250,23 @@ int
 .RE
 .PP
 
+.SS "std::string::iterator mml::string::begin ()\fC [inline]\fP"
+
+.PP
+Returns an iterator that points to the beginning of the string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string::iterator 
+.RE
+.PP
+
+.SS "std::string::const_iterator mml::string::begin () const\fC [inline]\fP"
+
 .SS "const char * mml::string::c_str ()"
-Returns the string as a character pointer
+
+.PP
+Returns the string as a character pointer\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -209,12 +274,25 @@ char*
 .RE
 .PP
 
+.SS "void mml::string::clear ()\fC [inline]\fP"
+
+.PP
+Clears the string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
 .SS "uint32_t mml::string::count (\fBmml::string\fP name)"
-Count how often a string appears 
+
+.PP
+Count how often a string appears\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fI\fBmml::string\fP\fP String which is counted 
+\fIname\fP String which is counted 
 .RE
 .PP
 \fBReturns\fP
@@ -224,13 +302,15 @@ uint32_t
 .PP
 
 .SS "void mml::string::cout (bool newline = \fCtrue\fP, std::string text = \fC''\fP)"
-Print out the value of this instance 
+
+.PP
+Print out the value of this instance\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Print newline\&. 
+\fInewline,optional\fP Print newline\&. 
 .br
-\fIstd::string,optional\fP Additional text\&. 
+\fItext,optional\fP Additional text\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -240,11 +320,13 @@ None
 .PP
 
 .SS "std::string mml::string::del_letter (bool save = \fCfalse\fP)"
-Delete letters 
+
+.PP
+Delete letters\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. 
+\fIsave,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -254,11 +336,13 @@ std::string
 .PP
 
 .SS "std::string mml::string::del_number (bool save = \fCfalse\fP)"
-Delete numbers 
+
+.PP
+Delete numbers\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. 
+\fIsave,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -268,11 +352,13 @@ std::string
 .PP
 
 .SS "std::string mml::string::del_space (bool save = \fCfalse\fP)"
-Remove everything after the first space 
+
+.PP
+Remove everything after the first space\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool,optional\fP Save the changed string in this instance\&. 
+\fIsave,optional\fP Save the changed string in this instance\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -282,7 +368,9 @@ std::string
 .PP
 
 .SS "bool mml::string::empty ()\fC [inline]\fP"
-Checks if the string is empty 
+
+.PP
+Checks if the string is empty\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -290,32 +378,27 @@ bool
 .RE
 .PP
 
-.SS "bool mml::string::exist (std::string name)"
-Check if a string exists 
+.SS "std::string::iterator mml::string::end ()\fC [inline]\fP"
+
 .PP
-\fBParameters\fP
-.RS 4
-\fIstring\fP String to be checked 
-.RE
+Returns an iterator that points to the end of the string\&. 
 .PP
 \fBReturns\fP
 .RS 4
-bool 
+std::string::iterator 
 .RE
 .PP
 
-.SS "bool mml::string::exist (std::string name1, std::string name2, std::string name3 = \fC'__________'\fP, std::string name4 = \fC'__________'\fP)"
-Check if one \fIor\fP another string exists 
+.SS "std::string::const_iterator mml::string::end () const\fC [inline]\fP"
+
+.SS "template<typename\&.\&.\&. Args> bool mml::string::exist (const Args &\&.\&.\&. args)\fC [inline]\fP"
+
+.PP
+Check if one \fIor\fP another string exists\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP String to be checked 
-.br
-\fIstring\fP Second String to be checked\&. 
-.br
-\fIstring,optional\fP Third String to be checked\&. 
-.br
-\fIstring,optional\fP Fourth String to be checked\&.
+\fIargs\fP Parameters to be checked 
 .RE
 .PP
 \fBReturns\fP
@@ -532,11 +615,13 @@ bool
 .PP
 
 .SS "template<typename templ > bool mml::string::operator!= (templ Test)\fC [inline]\fP"
-Operator unequal 
+
+.PP
+Operator unequal\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fITest\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -547,12 +632,23 @@ bool
 
 .SS "std::string & mml::string::operator() ()"
 
+.PP
+Returns the value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Value of the instance as a std::string 
+.RE
+.PP
+
 .SS "template<typename templ > \fBmml::string\fP mml::string::operator+ (templ Test)\fC [inline]\fP"
-Operator add somehting at the end of this instance 
+
+.PP
+Operator add somehting at the end of this instance\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value to be added 
+\fITest\fP Value to be added 
 .RE
 .PP
 \fBReturns\fP
@@ -561,12 +657,14 @@ Operator add somehting at the end of this instance
 .RE
 .PP
 
-.SS "template<typename templ > \fBmml::string\fP mml::string::operator+= (templ Test)\fC [inline]\fP"
-Operator add a char vector to this string 
+.SS "template<typename templ > \fBmml::string\fP mml::string::operator+= (templ add)\fC [inline]\fP"
+
+.PP
+Operator add a char vector to this string\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItemplate\fP Value to be added 
+\fIadd\fP Value to be added 
 .RE
 .PP
 \fBReturns\fP
@@ -576,11 +674,13 @@ Operator add a char vector to this string
 .PP
 
 .SS "template<typename templ > \fBmml::string\fP& mml::string::operator= (templ str)\fC [inline]\fP"
-Assign the value of the template type with the '=' sign 
+
+.PP
+Assign the value of the template type with the '=' sign\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fIstr\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -590,11 +690,13 @@ Class instance
 .PP
 
 .SS "template<typename templ > bool mml::string::operator== (templ Test)\fC [inline]\fP"
-Operator equal 
+
+.PP
+Operator equal\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fITest\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -604,11 +706,13 @@ bool
 .PP
 
 .SS "char & mml::string::operator[] (int index)"
-Return a specific char from the string 
+
+.PP
+Return a specific char from the string\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIint\fP Index 
+\fIindex\fP Index of the character to be retured 
 .RE
 .PP
 \fBReturns\fP
@@ -626,21 +730,21 @@ bool
 .RE
 .PP
 
-.SS "template<typename T > std::string mml::string::replace (T str_old, T str_new, std::size_t pos = \fC0\fP)\fC [inline]\fP"
+.SS "template<typename T > \fBmml::string\fP mml::string::replace (T str_old, T str_new, std::size_t pos = \fC0\fP)\fC [inline]\fP"
 Replace sth in the string with sth else 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Replace this value 
+\fIstr_old\fP Replace this value 
 .br
-\fItemp\fP Replaced with this value 
+\fIstr_new\fP Replaced with this value 
 .br
-\fIsize_t\fP Start from this position to replace 
+\fIpos\fP Start from this position to replace 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-std::string 
+\fBmml::string\fP 
 .RE
 .PP
 
@@ -764,11 +868,13 @@ None
 .SH "Friends And Related Function Documentation"
 .PP 
 .SS "std::ostream& operator<< (std::ostream & out, const \fBstring\fP & String)\fC [friend]\fP"
-Output the value of the string via a stream 
+
+.PP
+Output the value of the string via a stream\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Value 
+\fIString\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -778,11 +884,13 @@ ostream
 .PP
 
 .SS "std::istream& operator>> (std::istream & in, \fBstring\fP & String)\fC [friend]\fP"
-Input the value of the string via a stream 
+
+.PP
+Input the value of the string via a stream\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Value 
+\fIString\fP Value 
 .RE
 .PP
 \fBReturns\fP

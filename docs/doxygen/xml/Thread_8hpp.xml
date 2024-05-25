@@ -9,15 +9,6 @@
     <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
     <includedby refid="Thread_8cpp" local="yes">src/Thread.cpp</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>chrono</label>
-      </node>
-      <node id="3">
-        <label>thread</label>
-      </node>
       <node id="1">
         <label>include/mml/Thread.hpp</label>
         <link refid="Thread_8hpp"/>
@@ -28,11 +19,46 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>chrono</label>
+      </node>
+      <node id="3">
+        <label>thread</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="10">
-        <label>src/functions.cpp</label>
-        <link refid="functions_8cpp"/>
+      <node id="7">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>include/mml.hpp</label>
@@ -49,46 +75,14 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/help.cpp</label>
-        <link refid="help_8cpp"/>
       </node>
       <node id="9">
-        <label>test/test2.cpp</label>
-        <link refid="test2_8cpp"/>
-      </node>
-      <node id="7">
-        <label>src/Unix.cpp</label>
-        <link refid="Unix_8cpp"/>
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
       </node>
       <node id="8">
         <label>test/test1.cpp</label>
         <link refid="test1_8cpp"/>
-      </node>
-      <node id="5">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
-      </node>
-      <node id="3">
-        <label>src/file.cpp</label>
-        <link refid="file_8cpp"/>
-      </node>
-      <node id="6">
-        <label>src/Thread.cpp</label>
-        <link refid="Thread_8cpp"/>
-      </node>
-      <node id="1">
-        <label>include/mml/Thread.hpp</label>
-        <link refid="Thread_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classmml_1_1thread_1_1Thread" prot="public">mml::thread::Thread</innerclass>

@@ -30,6 +30,9 @@
       <node id="17">
         <label>functional</label>
       </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
       <node id="1">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
@@ -64,56 +67,11 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>limits</label>
-      </node>
       <node id="11">
         <label>net/if.h</label>
       </node>
       <node id="22">
         <label>float.h</label>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="9">
-        <label>sys/ioctl.h</label>
-      </node>
-      <node id="23">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="7">
-        <label>fstream</label>
-      </node>
-      <node id="21">
-        <label>random</label>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="15">
-        <label>mml/Unix.hpp</label>
-        <link refid="Unix_8hpp"/>
-      </node>
-      <node id="12">
-        <label>unistd.h</label>
-      </node>
-      <node id="16">
-        <label>mml/file.hpp</label>
-        <link refid="file_8hpp"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>vector</label>
-      </node>
-      <node id="20">
-        <label>sstream</label>
       </node>
       <node id="19">
         <label>mml/standards.hpp</label>
@@ -135,8 +93,21 @@
         <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>iostream</label>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>mml/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>sys/ioctl.h</label>
       </node>
       <node id="18">
         <label>mml/functions.hpp</label>
@@ -156,8 +127,37 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="21">
+        <label>random</label>
+      </node>
+      <node id="23">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="20">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
       <node id="8">
         <label>sys/socket.h</label>
+      </node>
+      <node id="15">
+        <label>mml/Unix.hpp</label>
+        <link refid="Unix_8hpp"/>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -244,7 +244,7 @@
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>temp_str;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1functions_1ad25f2df1d22305eca7a0fecc4e139a71" kindref="member">std::getline</ref>(input,temp_str);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(((<ref refid="classmml_1_1string" kindref="compound">mml::string</ref>)temp_str).<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">exist</ref>(</highlight><highlight class="stringliteral">&quot;domain&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a4b493ce495806a4dba04b14ae7a87347" kindref="member">replace</ref>(</highlight><highlight class="stringliteral">&quot;domain<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(</highlight><highlight class="stringliteral">&quot;domain<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
