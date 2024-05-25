@@ -172,6 +172,11 @@ namespace mml {
 		const char* c_str();
 		
 		/**
+		 * @brief Clears the string
+		 * @return None
+		*/
+		void clear() {value.clear(); return;};
+		/**
 		 * @brief Count how often a string appears
 		 * @param name String which is counted
 		 * @return uint32_t
@@ -221,7 +226,7 @@ namespace mml {
 		*/
     	std::string::iterator end() { return value.end(); }
     	std::string::const_iterator end() const { return value.end(); }
-		
+
 	private:
 		/**
 		 * @brief Check if a string exists
