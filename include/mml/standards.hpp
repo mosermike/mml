@@ -47,7 +47,8 @@ namespace mml {
 
 	public:
 		/**
-		 * @param templ Value
+		 * @brief Constructor with a value
+		 * @param str Value to be converted to a string
 		*/
 		template <typename templ> string(templ str) {
 			std::ostringstream stream;
@@ -57,13 +58,13 @@ namespace mml {
     	}
 
 		/**
-		 * @return Instance of the class
+		 * @brief Constructor without a value
 		*/
 		string(){}
 		
 		/**
-		 * Assign the value of the template type with the '=' sign 
-		 * @param templ Value
+		 * @brief Assign the value of the template type with the '=' sign 
+		 * @param str Value
 		 * @return Class instance
 		*/
 		template <typename templ> mml::string& operator=(templ str) {
@@ -77,8 +78,8 @@ namespace mml {
 		
 
 		/**
-		 * Output the value of the string via a stream
-		 * @param string Value
+		 * @brief Output the value of the string via a stream
+		 * @param String Value
 		 * @return ostream
 		*/
 		friend std::ostream& operator<< (std::ostream &out, const string &String){
@@ -87,8 +88,8 @@ namespace mml {
 		}
 		
 		/**
-		 * Input the value of the string via a stream
-		 * @param string Value
+		 * @brief Input the value of the string via a stream
+		 * @param String Value
 		 * @return ostream
 		*/
 		friend std::istream& operator>> (std::istream &in, string &String){
@@ -97,45 +98,50 @@ namespace mml {
 		}
 		
 		/**
-		*  Operator equal
-		*  @param templ Value
+		*  @brief Operator equal
+		*  @param Test Value
 		*  @return bool
 		*/
 		template<typename templ> bool operator==(templ Test) {return to_mml(Test).str() == value ? true : false;}
 
 		/**
-		*  Operator unequal
-		*  @param templ Value
+		*  @brief Operator unequal
+		*  @param Test Value
 		*  @return bool
 		*/
 		template<typename templ> bool operator!=(templ Test) {return to_mml(Test).str() != value ? true : false;}
 
 
 		/**
-		*  Operator add somehting at the end of this instance
-		*  @param templ Value to be added
+		*  @brief Operator add somehting at the end of this instance
+		*  @param Test Value to be added
 		*  @return mml::string
 		*/
 		template<typename templ> mml::string operator+(templ Test) {return to_mml(this->value + to_mml(Test).str());}
 
 
 		/**
-		*  Operator add a char vector to this string
-		*  @param template Value to be added
+		*  @brief Operator add a char vector to this string
+		*  @param add Value to be added
 		*  @return mml::string
 		*/
-		template<typename templ> mml::string operator+=(templ Test) {this->value += to_mml(Test).str(); return *this;}
+		template<typename templ> mml::string operator+=(templ add) {this->value += to_mml(add).str(); return *this;}
 		
 		/**
-		 * Return a specific char from the string
-		 * @param int Index
+		 * @brief Return a specific char from the string
+		 * @param index Index of the character to be retured
 		 * @return char
 		*/
 		char &operator[](int index);		// bestimmte Position ausgeben
 		
-		std::string &operator()();		// value zurückgeben, wenn in Klammern
 		/**
-		 * Converts this string into a double
+		 * @brief Returns the value
+		 * @return Value of the instance as a std::string
+		*/
+		std::string &operator()();		// value zurückgeben, wenn in Klammern
+
+		/**
+		 * @brief Converts this string into a double
 		 * @return double
 		 * 
 		 */
@@ -148,74 +154,91 @@ namespace mml {
 		 */
 		int atoi();
 
+		// Define iterator types
+    using iterator = std::vector<char>::iterator;
+    using const_iterator = std::vector<char>::const_iterator;
+
 		/**
-		* Returns the string as a character pointer
-		* 
+		 * @brief Returns an iterator that points to the beginning of the string
+		 * @return std::string::iterator
+		*/
+		std::string::iterator begin() { return value.begin(); }
+   		std::string::const_iterator begin() const { return value.begin(); }
+
+		/**
+		* @brief Returns the string as a character pointer
 		* @return char*
 		*/
 		const char* c_str();
 		
 		/**
-		 * Count how often a string appears
-		 * @param mml::string String which is counted
+		 * @brief Count how often a string appears
+		 * @param name String which is counted
 		 * @return uint32_t
 		 * 
 		 */
 		uint32_t count(mml::string name);
 		
 		/**
-		 * Print out the value of this instance
-		 * @param bool,optional Print newline.
-		 * @param std::string,optional Additional text.
+		 * @brief Print out the value of this instance
+		 * @param newline,optional Print newline.
+		 * @param text,optional Additional text.
 		 * @return None
 		 */
 		void cout(bool newline = true, std::string text = "");
 		
 		/**
-		 * Delete letters
-		 * @param bool,optional Save the changed string in this instance.
+		 * @brief Delete letters
+		 * @param save,optional Save the changed string in this instance.
 		 * @return std::string
 		 */
 		  std::string del_letter(bool save = false);
 		
 		/**
-		 * Delete numbers
-		 * @param bool,optional Save the changed string in this instance.
+		 * @brief Delete numbers
+		 * @param save,optional Save the changed string in this instance.
 		 * @return std::string
 		 * 
 		 */
 		std::string del_number(bool save = false);
 		
 		/**
-		 * Remove everything after the first space
-		 * @param bool,optional Save the changed string in this instance.
+		 * @brief Remove everything after the first space
+		 * @param save,optional Save the changed string in this instance.
 		 * @return std::string
 		 */
 		  std::string del_space(bool save = false);
 
 		/**
-		 * Checks if the string is empty
+		 * @brief Checks if the string is empty
 		 * @return bool
 		 */
 		  bool empty() {return value.empty();};
 
 		/**
-		 * Check if a string exists
-		 * @param string String to be checked
-		 * @return bool
-		 */
-		bool exist(std::string name);
-
+		 * @brief Returns an iterator that points to the end of the string
+		 * @return std::string::iterator
+		*/
+    	std::string::iterator end() { return value.end(); }
+    	std::string::const_iterator end() const { return value.end(); }
+		
+	private:
 		/**
-		 * Check if one *or* another string exists
-		 * @param string String to be checked
-		 * @param string Second String to be checked.
-		 * @param string,optional Third String to be checked.
-		 * @param string,optional Fourth String to be checked.
-		 * 
+		 * @brief Check if a string exists
+		 * @param name String to be checked
 		 * @return bool
 		 */
-		bool exist(std::string name1, std::string name2, std::string name3 = "__________", std::string name4 = "__________");
+		bool _exist(std::string name);
+
+	public:
+		/**
+		 * @brief Check if one *or* another string exists
+		 * @param args Parameters to be checked
+		 * @return bool
+		 */
+		template<typename... Args> bool exist(const Args&... args) {
+    		return (... || _exist(to_mml(args).str()));
+		}
 		
 		/** 
 		 * Position of the first appearance of a character after a start position

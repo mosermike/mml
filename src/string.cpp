@@ -339,12 +339,12 @@ std::string mml::string::del_space(bool save) {
 	return temp;
 }
 
-bool mml::string::exist(std::string search) {
+bool mml::string::_exist(std::string search) {
 	return value.find(search) < std::string::npos ? true : false;
 }
 
 
-bool mml::string::exist(std::string name1, std::string name2, std::string name3, std::string name4) {
-	return exist(name1) || exist(name2) || exist(name3) || exist(name4);
-}
+
+
+
 
