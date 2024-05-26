@@ -187,8 +187,8 @@ mml::string mml::string::sub(std::size_t beg, std::size_t end) {
 	if (beg > value.size() && (std::string::npos - beg < value.size()))
 		beg = value.size() - (std::string::npos - beg) -1;
 	// End is negative
-	if (end < 0)
-		end = value.size() + end;
+	if (end > value.size() && (std::string::npos - end < value.size()))
+		end = value.size() - (std::string::npos - end) -1;
 		
 	return value.substr(beg,end-(beg-1));
 }
