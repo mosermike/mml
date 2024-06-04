@@ -1,4 +1,4 @@
-.TH "mml::file" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::file" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,76 +12,104 @@ mml::file
 .ti -1c
 .RI "void \fBadd_twofiles\fP (std::string filepath_input1, std::string filepath_input2, std::string filepath_output)"
 .br
+.RI "Opens two textfiles and writes it in another\&. "
 .ti -1c
-.RI "std::size_t \fBbyteCopy\fP (const std::string &src, const std::string &dest, std::size_t num, std::size_t blockSize, bool progress=false, std::string fullsize='')"
+.RI "bool \fBbyteCopy\fP (const std::string &src, const std::string &dest, std::size_t blockSize, bool progress=false)"
 .br
+.RI "Copy a file\&. "
 .ti -1c
-.RI "uint32_t \fBcopy\fP (\fBshell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in='', std::string name_ex='')"
+.RI "int \fBcopy\fP (\fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in='', std::string name_ex='', size_t blocksize=\fB_100MB\fP, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite=false)"
 .br
-.ti -1c
-.RI "std::size_t \fBcopyFile\fP (\fBshell::arg\fP args, std::string src, std::string dst)"
-.br
+.RI "Copy the content of the path to a new one\&. "
 .ti -1c
 .RI "bool \fBequal\fP (std::string src, std::string dst)"
 .br
+.RI "Compare two files by using the SHA256 algorithm\&. Only works for linux\&. "
 .ti -1c
 .RI "int32_t \fBfiletype\fP (std::string filepath)"
 .br
+.RI "Determine the type of an object (directory, file, etc\&.) "
 .ti -1c
 .RI "std::string \fBhumanread\fP (std::size_t number)"
 .br
+.RI "Convert number into human readable number\&. "
 .ti -1c
 .RI "std::size_t \fBnum_lines\fP (std::string path)"
 .br
+.RI "Determine number of lines in a file\&. "
 .ti -1c
 .RI "int \fBProgram_exist\fP (std::string program)"
 .br
+.RI "Checks if a program exists\&. "
 .ti -1c
 .RI "void \fBremove\fP (std::string file)"
 .br
 .ti -1c
-.RI "void \fBset_date\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, bool extend=true, bool verbose=false)"
+.RI "void \fBset_date_dir\fP (\fBmml::string\fP src, \fBmml::string\fP dst, std::vector< std::string > ends={'NEF','tif','JPG','jpg','MP4','MOV','PNG','HEIC','JPEG','jpeg','pdf', 'PDF'}, bool recursive=false, bool all=false, bool verbose=false)"
 .br
 .ti -1c
 .RI "std::size_t \fBsize\fP (const std::string &filename)"
 .br
+.RI "Calculates the size of a file\&. "
 .ti -1c
-.RI "std::string \fBsize_human\fP (const std::string &filename, bool ausgabe=true)"
+.RI "std::string \fBsize_human\fP (const std::string &filename, bool verbose=true)"
 .br
+.RI "Calculates the size of a file\&. "
 .ti -1c
-.RI "std::string \fBsize_dir\fP (\fBmml::shell::arg\fP args, \fBmml::string\fP &dir, bool ausgabe=false, std::string include='', std::string exclude='')"
+.RI "std::string \fBsize_dir\fP (\fBmml::string\fP &dir, std::string include='', std::string exclude='', bool verbose=false, bool recursive=false, bool all=false, bool human_readable=false) noexcept"
 .br
+.RI "Calculates the size of a directory structure\&. "
 .ti -1c
 .RI "time_t \fBtime_mod\fP (const std::string &filename)"
 .br
+.RI "Returns the last modified time of a file in seconds\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
 .SS "void mml::file::add_twofiles (std::string filepath_input1, std::string filepath_input2, std::string filepath_output)"
 
 .PP
-\fBNote\fP
+Opens two textfiles and writes it in another\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Zwei Dateien zu einer zusammenfügen
+\fIfilepath_input1\fP First file name to be written into a new one 
+.br
+\fIfilepath_input2\fP First file name to be written into a new one 
+.br
+\fIfilepath_output\fP where the content is written to 
 .RE
 .PP
-\fBAuthor\fP
+\fBExceptions\fP
 .RS 4
-Mike 
+\fIruntime_error\fP : if input1 or input2 cannot be read 
 .RE
 .PP
 
-.SS "std::size_t mml::file::byteCopy (const std::string & src, const std::string & dest, std::size_t num, std::size_t blockSize, bool progress = \fCfalse\fP, std::string fullsize = \fC''\fP)"
+.SS "bool mml::file::byteCopy (const std::string & src, const std::string & dest, std::size_t blockSize, bool progress = \fCfalse\fP)"
 
 .PP
-\fBNote\fP
+Copy a file\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Kopiervorgang einer Datei mit/ohne Fortschrittsanzeige
+\fIsrc\fP Source File 
+.br
+\fIdest\fP Destination file 
+.br
+\fIblockSize\fP Size of the block to be copied at once 
+.br
+\fIprogress\fP Print out a progress bar 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Länge von Gesamtgröße 
+bool 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if source file does not exist 
 .RE
 .PP
 \fBAuthor\fP
@@ -90,96 +118,115 @@ Mike, Lucas
 .RE
 .PP
 
-.SS "uint32_t mml::file::copy (\fBshell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in = \fC''\fP, std::string name_ex = \fC''\fP)"
+.SS "int mml::file::copy (\fBmml::string\fP src, \fBmml::string\fP dst, std::string name_in = \fC''\fP, std::string name_ex = \fC''\fP, size_t blocksize = \fC\fB_100MB\fP\fP, bool verbose = \fCfalse\fP, bool verbose_debug = \fCfalse\fP, bool all = \fCfalse\fP, bool recursive = \fCfalse\fP, bool force = \fCfalse\fP, bool progress = \fCfalse\fP, bool falsewrite = \fCfalse\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Kopiert einen Quellpfad zu einem Quellpfad
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "std::size_t mml::file::copyFile (\fBshell::arg\fP args, std::string src, std::string dst)"
-
-.PP
-\fBNote\fP
-.RS 4
-Copy a file with determining the block size from the arguments
-.RE
+Copy the content of the path to a new one\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIarg\fP Arguments from the shell 
+\fIsrc\fP Source Path 
 .br
-\fIstring\fP Source 
+\fIdst\fP Destination path 
 .br
-\fIstring\fP Destination 
+\fIname_in\fP Copy only files including this string in depth = 1 
 .br
-\fIstring\fP Copy only files where this string exists 
+\fIname_ex\fP Exclude all files and directories with this name 
 .br
-\fIstring\fP Copy only files where this string does not exist
+\fIblocksize\fP Blocksize to be copied at once 
+.br
+\fIverbose\fP Verbose output 
+.br
+\fIverbose_debug\fP Debugging output 
+.br
+\fIall\fP Copy also hidden files 
+.br
+\fIrecursive\fP Copy recursive 
+.br
+\fIprogress\fP Print out the progress while copying 
+.br
+\fIfalsewrite\fP Do not overwrite files in the destination 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+0 if successfull 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : If a file is to be copied but dst is a directory 
+.br
+\fIlogic_error\fP : If destination exists as a file if a directory is copied 
+.br
+\fIruntime_error\fP : If user is not permitted to write into the destination 
+.br
+\fIruntime_error\fP : If last directory in destionation is not a directory 
 .RE
 .PP
 
 .SS "bool mml::file::equal (std::string src, std::string dst)"
 
 .PP
-\fBNote\fP
+Compare two files by using the SHA256 algorithm\&. Only works for linux\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Compare two files by using the SHA256 algorithm\&. Only works for linux\&.
+\fIsrc\fP Source file 
+.br
+\fIdst\fP Destination file 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+bool if sha256 is the same 
 .RE
 .PP
 
 .SS "int32_t mml::file::filetype (std::string filepath)"
 
 .PP
-\fBNote\fP
-.RS 4
 Determine the type of an object (directory, file, etc\&.) 
-.RE
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Path to the object 
+\fIfilepath\fP Path to the object 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Returns a number\&. For interpretation look at \fBdefinitions\&.hpp\fP 
+Returns a number to identify the type of the object 
 .RE
 .PP
-\fBAuthor\fP
+\fBNote\fP
 .RS 4
-Mike 
+The numbers have the following meaning:
+.IP "\(bu" 2
+1: DT_FIFO
+.IP "\(bu" 2
+2: Serial connected device, mouse, etc\&.
+.IP "\(bu" 2
+4: Directory
+.IP "\(bu" 2
+6: Device or partition
+.IP "\(bu" 2
+8: normal file
+.IP "\(bu" 2
+10: symbolic link
+.IP "\(bu" 2
+12: Socket 
+.PP
 .RE
 .PP
 
 .SS "std::string mml::file::humanread (std::size_t number)"
 
 .PP
-\fBNote\fP
-.RS 4
-Convert number into human readable number 
-.RE
+Convert number into human readable number\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIsize_t\fP A number to be converted 
+\fInumber\fP A number to be converted 
 .RE
 .PP
 \fBReturns\fP
@@ -187,19 +234,11 @@ Convert number into human readable number
 std::string 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
 .SS "std::size_t mml::file::num_lines (std::string path)"
 
 .PP
-\fBNote\fP
-.RS 4
-Determine number of lines in a file 
-.RE
+Determine number of lines in a file\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -211,23 +250,15 @@ Determine number of lines in a file
 size_t Number of lines 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
 .SS "int mml::file::Program_exist (std::string program)"
 
 .PP
-\fBNote\fP
-.RS 4
-Exisiert das Programm
-.RE
+Checks if a program exists\&. 
 .PP
 \fBAuthor\fP
 .RS 4
-Mike 
+Mike/scratch/moser/gris_20150510_009/sir/Exp0 
 .RE
 .PP
 
@@ -250,40 +281,39 @@ Mike
 .RE
 .PP
 
-.SS "void mml::file::set_date (\fBmml::shell::arg\fP args, \fBmml::string\fP src, \fBmml::string\fP dst, bool extend = \fCtrue\fP, bool verbose = \fCfalse\fP)"
+.SS "void mml::file::set_date_dir (\fBmml::string\fP src, \fBmml::string\fP dst, std::vector< std::string > ends = \fC{'NEF','tif','JPG','jpg','MP4','MOV','PNG','HEIC','JPEG','jpeg','pdf', 'PDF'}\fP, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP, bool verbose = \fCfalse\fP)"
 
 .PP
 \fBNote\fP
 .RS 4
-Convert date of pictures\&. 
+Convert the date of files with specific endings in a directory 
 .RE
 .PP
 \fBParameters\fP
 .RS 4
-\fIarg\fP Arguments from shell 
-.br
 \fIstring\fP Source path 
 .br
 \fIstring\fP Destination path 
 .br
-\fIbool\fP Check extended endings\&. False => Only NEF and HEIC 
+\fIends\fP Endings to be checked 
 .br
-\fIbool\fP Verbose output\&.
+\fIrecursive\fP Recursive check 
+.br
+\fIall\fP Also check hidden files 
+.br
+\fIverbose\fP Verbose output 
 .RE
 .PP
-\fBAuthor\fP
+\fBNote\fP
 .RS 4
-Mike 
+This function is only defined for linux systems 
 .RE
 .PP
 
 .SS "std::size_t mml::file::size (const std::string & filename)"
 
 .PP
-\fBNote\fP
-.RS 4
-Calculates the size of a file 
-.RE
+Calculates the size of a file\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -292,7 +322,7 @@ Calculates the size of a file
 .PP
 \fBReturns\fP
 .RS 4
-size_t Size of the file 
+Size of the file 
 .RE
 .PP
 \fBAuthor\fP
@@ -300,57 +330,50 @@ size_t Size of the file
 Lucas 
 .RE
 .PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if file does not exist 
+.RE
+.PP
 
-.SS "std::string mml::file::size_dir (\fBmml::shell::arg\fP args, \fBmml::string\fP & dir, bool ausgabe = \fCfalse\fP, std::string include = \fC''\fP, std::string exclude = \fC''\fP)"
+.SS "std::string mml::file::size_dir (\fBmml::string\fP & dir, std::string include = \fC''\fP, std::string exclude = \fC''\fP, bool verbose = \fCfalse\fP, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP, bool human_readable = \fCfalse\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Calculates the size of a directory structure 
-.RE
+Calculates the size of a directory structure\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIarg\fP Arguments from the shell 
+\fIdir\fP Path to the directory 
 .br
-\fIstring\fP Path to the directory 
+\fIinclude\fP Include only count objects having this string in its name 
 .br
-\fIbool\fP print out 
+\fIexclude\fP Exclude objects with this name from the count 
 .br
-\fIstring\fP Include only count objects having this string in its name 
+\fIverbose\fP Verbose print out 
 .br
-\fIstring\fP Exclude objects with this name from the count 
-.RE
-.PP
-\fBAttention\fP
-.RS 4
-Arguments must be correct!
+\fIrecursive\fP Recursive check 
+.br
+\fIall\fP Also count hidden files 
+.br
+\fIhuman_readable\fP Print out in human readable form 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Gibt die Größe des Ordners zurück 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+Returns the size of the directory 
 .RE
 .PP
 
-.SS "std::string mml::file::size_human (const std::string & filename, bool ausgabe = \fCtrue\fP)"
+.SS "std::string mml::file::size_human (const std::string & filename, bool verbose = \fCtrue\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Calculates the size of a file 
-.RE
+Calculates the size of a file\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Path to the file 
+\fIfilename\fP Path to the file 
 .br
-\fIbool\fP Print out 
+\fIverbose\fP Print out 
 .RE
 .PP
 \fBReturns\fP
@@ -358,33 +381,25 @@ Calculates the size of a file
 Returns the size of a file in a readable form as a string 
 .RE
 .PP
-\fBAuthor\fP
+\fBExceptions\fP
 .RS 4
-Mike 
+\fIruntime_error\fP : if file does not exist 
 .RE
 .PP
 
 .SS "time_t mml::file::time_mod (const std::string & filename)"
 
 .PP
-\fBNote\fP
-.RS 4
-Returns the last modified time of a file in seconds 
-.RE
+Returns the last modified time of a file in seconds\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Path to the file 
+\fIfilename\fP Path to the file 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
 Seconds since 1970 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
 .RE
 .PP
 

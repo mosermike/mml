@@ -2,7 +2,7 @@
  * @author Mike Moser
  * 
  * @file vector.hpp 
- * @note Enthält verschiedene Standardfunktionen
+ * @brief Class vector
  * 
 */
 
@@ -12,29 +12,27 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "mml/standards.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cctype> // std::isdigit
 #include <algorithm> // std::sort
-//#include "shell.hpp"
+#include <type_traits> // std::is_same
+
+#include "mml/standards.hpp"
 #include "mml/log.hpp"
 
 // todo count how many entries the same
 
 namespace mml{
-	//class string;
-	// To print out things from mml::shell
 	template <class T> 
-	class vector : private std::vector<T> {
+	class vector {
 	protected:
 		std::vector<T> vec;    // elements 
 
 	public:
 		/**
-		* @note constructor
-		* 
-		* @author Mike
+		* @brief Constructors
 		*/
         vector() : vec() {}
         vector(const vector &temp) : vec(temp.vec) {}
@@ -45,25 +43,37 @@ namespace mml{
         vector(int cols, std::vector<T> temp) : vec(cols, temp) {}
 
 		/**
-		 * Initialise with a list
-		 * @param std::initializer_list<T>
+		 * @brief Construct with a list
+		 * @param initList Initializer_list
 		 * @return this instance
 		*/
 		vector(std::initializer_list<T> initList) : vec(initList) {}	
 
-		vector operator=(const std::vector<T>& temp) {vec = temp; return *this;}	//for(uint32_t i = 0; i < temp.size(); temp++) vec.push_back(temp[i]); return *this;}
-		vector operator=(mml::vector<T> temp) {vec = temp.vec; return *this;}
+		/**
+		 * @brief Assign value with equal sign
+		 * @param temp Vector with values
+		 * @return this instance
+		*/
+		vector operator=(const std::vector<T>& temp) noexcept {vec = temp; return *this;}
+		vector operator=(mml::vector<T> temp) noexcept {vec = temp.vec; return *this;}
 		
 		/**
-		* @note Standardfunktionen aus std::vector
-		* 
-		* @author Mike
+		* @brief iterator to the beginning of the vector
+		* @return iterator
 		*/
-		typename std::vector<T>::iterator begin() noexcept{return vec.begin();}
-		bool empty() noexcept {
-			return this->vec.empty();
-		}
-		typename std::vector<T>::iterator end() noexcept{return vec.end();}
+		typename std::vector<T>::iterator begin() noexcept {return vec.begin();}
+
+		/**
+		* @brief Checks whether the vector is empty
+		* @return iteratur
+		*/
+		bool empty() noexcept {return this->vec.empty();}
+
+		/**
+		* @brief iterator to the end of the vector
+		* @return iterator
+		*/
+		typename std::vector<T>::iterator end() noexcept {return vec.end();}
 		
 		/**
 		 * @brief Erase an element from the vector
@@ -72,9 +82,8 @@ namespace mml{
 		 * @throw out_of_range if position >= vector.size()
 		*/
 		void erase(size_t position) {
-			if (position >= vec.size()) {
+			if (position >= vec.size())
 				throw std::out_of_range("[vector::erase] Position " + std::to_string(position) + " out of range");
-			}
 			vec.erase(vec.begin() + position);
 		}
 
@@ -83,7 +92,7 @@ namespace mml{
 		 * @param start Start position
 		 * @param end End position
 		 * @return None
-		 * @throw out_of_range if start > end || end > vector.size()
+		 * @throw out_of_range : if start > end || end > vector.size()
 		*/
 		void erase(size_t start, size_t end) {
 			if (start > end || end > vec.size()) {
@@ -92,55 +101,84 @@ namespace mml{
 			vec.erase(vec.begin() + start, vec.begin() + end);
 		}
 
+		/**
+		 * @brief Insert a value at a specific position
+		 * @param position The position where the value is put
+		 * @param val Value
+		 * @return Iterator
+		*/
+		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) noexcept {return vec.insert(position,val);}
 
-		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) {return vec.insert(position,val);}
+		/**
+		 * @brief Returns a value at a specific index
+		 * @param index Index to be returned
+		 * @return value at this index
+		 * @throw out_of_range : if index not in range
+		*/
 		T &operator[](int index){
 			if (index < 0)
 				index = vec.size() + index;
-			
+			if(abs(index) > vec.size())	
+				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
 			return vec[index];
 		}
-		void pop_back(){
+
+		/**
+		 * @brief Removes the last entry
+		 * @return None
+		*/
+		void pop_back() noexcept {
 			vec.pop_back();
 		}
 
-		void push_back(T value){
+		/**
+		 * @brief Adds an element at the end
+		 * @param value to e added
+		*/
+		void push_back(T value) noexcept {
 			vec.push_back(value);
-		}
-		std::size_t size() const noexcept{return vec.size();}
-			
-// 			T& operator= (std::vector<T> temp){vec = temp;}
-			
-			
-		/**
-		* @note Vektorinhalt ausgeben
-		* 
-		* @author Mike
-		*/
-		friend std::ostream& operator<< (std::ostream &out, const vector<T> &Vec){		// Ausgabe über std::cout
-			for(uint32_t i = 0; i < Vec.size();i++) {
-				out << Vec.vec[i] << " ";
-			}
-			return out;
-		}
-		/**
-		* @note Wert in Vektor reinschreiben
-		* 
-		* @author Mike
-		*/
-		friend std::istream& operator>> (std::istream &in, vector<T> &Vec){
-			T temp;
-			in >> temp;
-			Vec.push_back(temp);
-			return in;
 		}
 
 		/**
+		 * @brief Size of the vector
+		 * @return Size of the vector
+		*/
+		std::size_t size() const noexcept {return vec.size();}
+			
+		/**
+		 * @brief Print the vector
+		 * @param out Output where it is written
+		 * @param Vec Vector which is written
+		 * @return output stream
+		*/
+		friend std::ostream& operator<< (std::ostream &out, const vector<T> &Vec) noexcept {		// Ausgabe über std::cout
+			for(T i : Vec.vec)
+				out << i << " ";
+			
+			return out;
+		}
+
+		/**
+		 * @brief Writes a value into the vector
+		 * @param in where it should be written in
+		 * @param v what should be written in
+		 * @return output stream
+		 */
+		friend std::istream& operator>> (std::istream &in, const vector<T>& v) noexcept {
+			T temp;
+			if (in >> temp) {
+            	v.vec.push_back(temp);
+        	}
+			return in;
+		}
+		// Friend function to overload the operator>>
+    
+		/**
 		 * Count how many entries are equal to a value
-		 * @param T Value to be checked
+		 * @param value Value to be checked
 		 * @return std::size_t 
 		 */
-		std::size_t count(T value) {
+		std::size_t count(T value) noexcept {
 			std::size_t  counts = 0;
 			for(T i : vec) {
 				if(i == value)
@@ -150,15 +188,15 @@ namespace mml{
 		}
 
 		/**
-		 * print elements in the vector
-		 * @param bool Print with line breaks
-		 *
+		 * @brief print elements in the vector
+		 * @param newline Print with line breaks
 		 */
-		void cout(bool newline = false) noexcept{
+		void cout(bool newline = false) noexcept {
 			if (vec.empty()) {
 				std::cout << "[cout] Vector is empty" << std::endl;
 				return;
 			}
+			
 			std::cout << vec[0];
 			if(newline) {
 				std::cout << std::endl;
@@ -170,321 +208,301 @@ namespace mml{
 					std::cout << ", ";
 					std::cout << vec[i];
 				}
-					std::cout << std::endl;
+				std::cout << std::endl;
 			}
 		}
 
 		/**
-		 * Empties the vector
+		 * @brief Empties the vector
 		 * @return std::vector<T>
 		 */
-		std::vector<T>  del(){
+		std::vector<T> del() noexcept {
 			while(!empty())
-					pop_back();	// Da eine Initialisierung stattfindet am Anfang
+					pop_back();
 			return this->vec;
 		}
-		/**
-		* @note exist
-		* 
-		* @return bool
-		* @author Mike
-		*/
-		bool exist(T const& value) {
-			// 	bool exist = false;
-				// 	if(typeid(T) == typeid(std::string)) {
-			//
-			// 		for(uint32_t i = 0; i < vec.size(); i++) {
-			// 			//exist = true;//vec[i].find(value) < std::string::npos ? true : false;
-			// 			if(exist)
-			// 				return true;
-			// 		}
-			// 	}
-			// 	else if(typeid(T) == typeid(mml::string)) {
-			// 		for(uint32_t i = 0; i < vec.size(); i++) {
-			// 			exist = true; //vec[i].find(value) < std::string::npos ? true : false;
-			// 			if(exist)
-			// 				return true;
-			// 		}
-			// 	}
-			// 	else {
-					for(uint32_t i = 0; i < vec.size(); i++) {
-						if(vec[i] == value)
-							return true;
-					}
-			// 	}
 
-				return false;
-			}
 		/**
-		 * @note String in T umwandeln
-		 *
-		 * @return T
-		 * @author Mike
+		 * @brief Checks if a value exists
+		 * @param value Value to be checked
+		 * @return bool
 		 */
-		T toT(mml::string s) {
-					std::istringstream stream (s.str());
-						if(typeid(T) == typeid(mml::string) || typeid(T) == typeid(std::string)) {
-						if(s.exist(" "))
-							std::cout << "[toT] everything after special character is ignored!" << std::endl;
-					}
-					T t;
-					stream >> t;
-					return t;
-		}
+		//bool exist(T const& value) noexcept {
+			
+		//}
+
+	private:
 		/**
-		 * @note get data from file
-		 * 
-		 * @author Mike
+		 * @brief Check if a string exists in the vector
+		 * @param name String to be checked
+		 * @return bool
 		 */
-		 void get_data( std::string filepath, int skip = -1) {	//Nach dem Zeichen border wird ausgegeben
-			// TODO doesnt work because of toT
-			std::string 		value1 	= "";			//String aus einer Linie
-			//Öffne die Datei:
-				std::fstream input(filepath);
+		bool _exist(const T& name)  noexcept {return std::find(this->vec.begin(), this->vec.end(), name) != this->vec.end();}
 
-			//Überprüfung, ob die Datei geöffnet wurde
-			if ( !input ){
-				std::cerr << "file not found" << std::endl;
-					//return ;
-				}
-				//Inhalt der Datei Zahl für Zahl einlesen
-			int i = 0;
-			while (! input.eof()){
-				std::getline(input, value1);
-				std::cout << toT(value1) << std::endl;
-				if (i > skip )	//Korrektur des Titels, das als Zahl 0 verwertet wird
-					this->vec.push_back(toT(value1));
-				i++;
-			}
-			return;
-		}
-
+	public:
 		/**
-		* @note Position zurückgeben
-		* 
+		 * @brief Check if one *or* another string exists
+		 * @param value Parameters to be checked if they exist
+		 * @return bool
+		 */
+		template <typename... values>
+		bool exist(const values&... value) noexcept {
+			return (... || _exist(value));
+		}
+		
+		/**
+		 * @brief Return a position of an element
+		 * @param value Value to be looked for
+		 * @param start Defines at what position to start to be looked for
 		* @return std::size_t
-		* @author Mike
 		*/
-		std::size_t find(const T value) {
-			if(typeid(T) != typeid(std::string)  || typeid(T) != typeid(mml::string)) {
-				std::cout << "[find] Umwandlung des Typids notwendig." << std::endl;
-				for(uint32_t i = 0; i < vec.size(); i++) {
-					if(vec[i] == value)
-						return i;
-				}
-			}
-			for(uint32_t i = 0; i < vec.size(); i++) {
-				return mml::to_string(vec[i]).find(mml::to_string(value).str()) < std::string::npos ? i : -1;
+		std::size_t find(const T value, size_t start = 0) noexcept {
+			for(size_t i = start; i < vec.size(); i++) {
+				if (mml::to_string(vec[i]).find(mml::to_string(value).str()) < std::string::npos)
+					return i;
 			}
 			return std::string::npos;
 		}
 
 		/**
-		 * @note Werte in eine Logdatei schreiben
-		 * 
-		 * @author Mike
+		 * @brief Write values into a logfile
+		 * @param logpath Path of the logfile
+		 * @param newline Print a newline
+		 * @param first Print this in the start of the logfile before any value
+		 * @param last Print this at the end of the logfile after all vlaues are written
+		 * @param separator Separation sign after each value if newline = false
 		 */
-		void log(mml::string logpath, bool newline = false, mml::string first = "", mml::string last = "") {
-			mml::log log(logpath);
-			// Etwas vorangehendes in die Logdatei
-			log.cout(first, false);
-			// Werte in die Logdatei
-			for(uint32_t i = 0; i < vec.size(); i++) {
-			log.cout(vec[i],newline);
-			// Newline oder , als Trennungszeichen
-				if(!newline && i < vec.size()-1)
-					log.cout(", ");
-			}
-			// Etwas nachgehendes in die Logdatei
-			log.cout(last, true);
-			}
-		/**
-		* @note Ersetzen eines Wertes in einem Vektor
-		* @param old Value to be replaced
-		* @param new1 New value
-		* @return Vektor mit den ersetzten Werten
-		*/
-		std::vector<T> replace(T old, T new1) {
-			for(uint32_t i = 0; i < vec.size(); i++) {
-				if(vec[i] == old)
-					vec[i] = new1;
-			}
+		void log(mml::string logpath, bool newline = false, mml::string first = "", mml::string last = "", mml::string separator = ",") noexcept {
 			
-			return vec;
+			// Log file
+			mml::log log(logpath);
+			
+			// Write this first in the logfile
+			log.cout<mml::string>(first, false);
+
+			// Write all the values into the logfile
+			for(uint32_t i = 0; i < vec.size(); i++) {
+				log.cout<mml::string>(vec[i],newline);
+				// Write separator if not newline
+				if(!newline && i < vec.size()-1)
+					log.cout<mml::string>(separator,false);
+			}
+
+			// Print sth at the end plus a new line
+			log.cout<mml::string>(last, true);
+		}
+
+		/**
+		* @brief Replace specific elements with another element
+		* @param Old Value to be replaced
+		* @param New New value
+		* @return Vector with the replaced values
+		*/
+		std::vector<T> replace(T Old, T New) noexcept {
+			std::vector<T> temp = vec;
+		
+			for(size_t i = 0; i < temp.size(); i++) {
+				if(temp[i] == Old)
+					temp[i] = New;
+			}
+			return temp;
 		}
 			
 			
 		/**
-		* @note Skalarmultiplikation
-		* 
-		* @return Vektor
-		* @author Mike
+		 * @brief Scalarmultiplication
+		 * @param value Value to be multiplied
+		 * @return Vektor
+		 * @throw logic_error : if vector empty or type is not a number
 		*/
 		vector<T> operator*(const T &value) {
+			if(vec.empty())
+				throw std::logic_error("[*] Vector empty");
+			
+			if(!std::isdigit(vec[0]))
+				throw std::logic_error("[*] Scalar multiplication for this type not defined!");
+			
+			std::vector<T> temp = vec;
+			for(uint32_t i = 0; i < temp.size(); i++)
+				temp[i] *= value;
+			return temp;
+		}
+
+		/**
+		 * @brief Scalarmultiplication
+		 * @param value Value to be multiplied
+		 * @return Instance of the class
+		 * @throw logic_error : if vector empty or type is not a number
+		*/
+		vector<T> operator*=(const T &value) {
+			if(vec.empty())
+				throw std::logic_error("[*] Vector empty");
+			
+			if(!std::isdigit(vec[0]))
+				throw std::logic_error("[*] Scalar multiplication for this type not defined!");
+			
 			for(uint32_t i = 0; i < vec.size(); i++)
 				vec[i] *= value;
-			return vec;
+			return *this;
 		}
+
 		/**
-		 * @note Skalare Addition
-		 * 
-		 * @author Mike
+		 * @brief Add a value to each element
+		 * @param value Value to be added
+		 * @return Vector with the added value
+		 * @throw logic_error : if vector is empty
 		 */
-// 			vector<T> s_add(const T &value);
-		/**
-		 * @note vec setzen
-		 * 
-		 * @author Mike
-		 */
-		void set(std::vector<T> temp) {
-			vec = temp;
+		vector<T> operator+(const T &value) {
+			if(vec.empty())
+				throw std::logic_error("[+] Vector empty");
+			
+			std::vector<T> temp = vec;
+			for(uint32_t i = 0; i < temp.size(); i++)
+				temp[i] += value;
+			return temp;
 		}
+
 		/**
-		 * @note vec sortieren
-		 * 
-		 * @author Mike
+		 * @brief Add a value to each element
+		 * @param value Value to be added
+		 * @return Instance of the class
+		 * @throw logic_error : if vector is empty
 		 */
-// 			std::vector<T> sort(bool save = true);
+		vector<T> operator+=(const T &value) {
+			if(vec.empty())
+				throw std::logic_error("[+] Vector empty");
+			
+			for(uint32_t i = 0; i < vec.size(); i++)
+				vec[i] += value;
+			return *this;
+		}
+
 		/**
-		* @note Summe des Vektors bestimmen
-		* 
-		* @return T
-		* @author Mike
-		*/
+		 * @brief Replace the vector with a new vector
+		 * @param Vec Vector
+		 */
+		void set(std::vector<T> Vec) noexcept {
+			vec = Vec;
+		}
+
+		/**
+		 * @brief Sort the vector
+		 * @return Return the sorted vector
+		 */
+		std::vector<T> sort() {std::vector<T> temp = vec; return std::sort(temp.begin(), temp.end());}
+		
+		/**
+		 * @brief Determine the sum of the vector
+		 * @return Sum of the vector
+		 * @throw logic_error : if vector is empty or if template is boolean
+		 */
 		T sum() {
-			// 	if(typeid(T) == typeid(std::string) || typeid(T) == typeid(mml::string))
-			// 		mml::shell::note("[operator^] Achtung Umwandlung u.U. notwendig.");
-				T temp = toT("0");
-					for(uint32_t i = 0; i < vec.size(); i++) {
-					temp += vec[i];
-				}
-					return temp;
-		}
-		/**
-		* @note Zwei Vektoren zeilenweise addieren
-		* 
-		* @return Vektor
-		* @author Mike
-		*/
-		std::vector<T> operator+(mml::vector<T> temp) {
-			// Summe nicht möglich
-			if(vec.size() != temp.size()) {
-				std::cout << "\e[" << "31" << "m" << "[SUM] Größe unterschiedlich." << "\e[" << "0" << "m" << std::endl;
-				exit(EXIT_FAILURE);
+			if(vec.empty())
+				throw std::logic_error("[sum] Vector empty");
+			
+			 if constexpr (std::is_same<T, bool>::value)
+        		throw std::logic_error("[sum] Summation for the type bool is not defined");
+
+			T temp; // Temp variable which is set to 0 
+
+			// Set temp as 0 if T is a number otherwise set it to a string ""
+			if constexpr (std::is_arithmetic_v<T>) {
+				std::string t = "0";
+				std::istringstream iss(t);
+				iss >> temp;
 			}
-				for(uint32_t i = 0; i < vec.size(); i++) {
-				vec[i] += temp[i];
+			else {
+				temp = "";
 			}
-			return vec;
+			
+			
+
+			for(std::size_t i = 0; i < vec.size(); i++) {
+				temp += vec[i];
+			}
+			return temp;
 		}
 
-		std::vector<T> operator+=(mml::vector<T> temp) {
-			// Summe nicht möglich
+		/**
+		 * @brief Add a vector to this vector
+		 * @param temp Vector to be added elementwise
+		 * @return resulting vector
+		 * @throw logic_error : if vector sizes are not the same
+		*/
+		mml::vector<T> operator+(vector<T> temp) {
+			// Check if possible
+			if(vec.size() != temp.size())
+				throw std::logic_error("[+] Vectors have different sizes (" + std::to_string(vec.size()) + " vs. " + std::to_string(temp.size()) + ")!");
+
+			for(size_t i = 0; i < vec.size(); i++)
+				temp[i] = vec[i] + temp[i];
+
+			return temp;
+		}
+
+		/**
+		 * @brief Add a vector to this vector
+		 * @param temp Vector to be added elementwise
+		 * @return Instance of this class
+		 * @throw logic_error : if vector sizes are not the same
+		*/
+		mml::vector<T> operator+=(mml::vector<T> temp) {
+			// Check if possible
 			if(vec.size() != temp.size()) {
-				std::cout << "\e[" << "31" << "m" << "[SUM] Größe unterschiedlich." << "\e[" << "0" << "m" << std::endl;
+				throw std::logic_error("[+] Vectors have different sizes (" + std::to_string(vec.size()) + " vs. " + std::to_string(temp.size()) + ")!");
 			}
+
 			for(uint32_t i = 0; i < vec.size(); i++) {
 				vec[i] += temp[i];
 			}
-			return vec;
+			return *this;
 		}
 			
 		/**
-		* @note Vektor hoch exponent
-		* 
-		* @return Vektor
-		* @author Mike
-		*/
-		std::vector<T> operator^(const double exponent) {
-			if(typeid(T) == typeid(std::string) || typeid(T) == typeid(mml::string)) {
-				std::cout << "\e[" << "31" << "m" << "[operator^] Inkompatibler Typid" << "\e[" << "0" << "m" << std::endl;
-				exit(EXIT_FAILURE);
+		 * @brief Vector^()
+		 * @param exponent Exponent
+		 * @return vector
+		 * @throw logic_error : if type is not numeric
+		 */
+		mml::vector<T> operator^(const T exponent) {
+			if(!std::is_arithmetic<T>::value)
+				throw std::logic_error("[^] Type of the vector is not arithmetic");
+			
+			mml::vector temp = vec;
+			for(size_t i = 0; i < vec.size(); i++) {
+				temp[i] = std::pow(vec[i],exponent);
 			}
-			if(typeid(T) != typeid(double)) {
-				std::cout << "\e[" << "31" << "m" << "[operator^] Achtung Umwandlung u.U. notwendig." << "\e[" << "0" << "m" << std::endl;
+
+			return temp;
+		}
+
+		/**
+		 * @brief Vector^()
+		 * @param exponent Exponent
+		 * @return Instance of the class
+		 * @throw logic_error : if type is not numeric
+		 */
+		mml::vector<T> operator^=(const T exponent) {
+			if(!std::is_arithmetic<T>::value)
+				throw std::logic_error("[^] Type of the vector is not arithmetic");
+			
+			for(size_t i = 0; i < vec.size(); i++) {
+				vec[i] = std::pow(vec[i],exponent);
 			}
-			for(uint32_t i = 0; i < vec.size(); i++) {
-				vec[i] = std::pow(mml::atof(vec[i]),exponent);
-			}
-			return vec;
+
+			return *this;
 		}
 			
 
 			
 		/**
-		* @note Vektor zurückgeben
-		* 
-		* @return Vektor
-		* @author Mike
-		*/
+		 * @brief Return the std::vector
+		 * @return Vector of the standard library
+		 */
 		typename std::vector<T> tovec() {return vec;}
 
-
-
-		// template <class T> std::vector<T> mml::vector<T>::sort(bool save) {
-		//
-		// 	// NOTE ineffizient
-		// 	std::vector<std::string> temp;
-		// 	std::vector<T> temp1;
-		// 	for(uint32_t i = 0; i < vec.size(); i++)
-		// 		temp[i] = mml::to_string(vec[i]).str();
-		//
-		// 	std::sort(temp.begin(),temp.end());
-		//
-		// 	for(uint32_t i = 0; i < vec.size(); i++)
-		// 			temp1[i] = toT(temp[i]);
-		// 	if(save)
-		// 		vec = temp1;
-		// 	return temp1;
-		// }
-
-		// template <class T> mml::vector<T> mml::vector<T>::s_add(const T &value) {
-		// 	for(uint32_t i = 0; i < vec.size(); i++) {
-		// 		vec[i] = vec[i] + value;
-		// 	}
-		// 	return vec;
-		// }
 	};
+
 }
-
-// namespace vec{
-// 	/**
-// 	 * @note std vector std string zu mml vector mml string
-// 	 * 
-// 	 * @return mml::vector<mml::string>
-// 	 * @author Mike
-// 	 */
-// // 	mml::vector<mml::string> tovec(std::vector<std::string> temp) {
-// // 		mml::vector<mml::string> temp1;
-// // 		for(uint32_t i = 0; i < temp.size(); i++)
-// // 			temp1.push_back(temp[i]);
-// // 		return temp1;
-// // 	}
-// 		
-// }
-
-
-/**
- * @note mml::string
- */
-//template <> mml::vector<mml::string>::vector();
-template bool mml::vector<mml::string>::empty() noexcept;
-template void mml::vector<mml::string>::cout(bool newline = false) noexcept;
-template std::vector<mml::string>  mml::vector<mml::string>::del();
-template bool mml::vector<mml::string>::exist(const mml::string& value);
-template void mml::vector<mml::string>::get_data( std::string filepath, int skip);
-template std::size_t mml::vector<mml::string>::find(const mml::string value);
-template void mml::vector<mml::string>::log(mml::string logpath, bool newline, mml::string first, mml::string last);
-template void mml::vector<mml::string>::pop_back();
-template void mml::vector<mml::string>::push_back(mml::string value);
-template std::vector<mml::string> mml::vector<mml::string>::replace(mml::string old, mml::string new1);
-// template mml::vector<mml::string> mml::vector<mml::string>::s_add(const mml::string &value);
-// template std::vector<mml::string> mml::vector<mml::string>::sort(bool save);
-template std::size_t mml::vector<mml::string>::size() const noexcept;
-template mml::string mml::vector<mml::string>::sum();
-template mml::string mml::vector<mml::string>::toT(mml::string s);
-template std::vector<mml::string> mml::vector<mml::string>::operator+(vector<mml::string> temp);
-template std::vector<mml::string> mml::vector<mml::string>::operator+=(vector<mml::string> temp);
-template std::vector<mml::string> mml::vector<mml::string>::operator^(const double exponent);
 
 #endif

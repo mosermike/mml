@@ -21,19 +21,19 @@ struct \mbox{\hyperlink{structmml_1_1Timer_1_1time}{time}}
 void \mbox{\hyperlink{classmml_1_1Timer_ad95a6cccf71bdcb1753affecb16ec19b}{break\+\_\+start}} ()
 \item 
 void \mbox{\hyperlink{classmml_1_1Timer_a13ab728d658a504ce2e39d47ff06a230}{break\+\_\+stop}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em continue the time measurement \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1Timer_a33c476f593ac89d840660a4bdddf7828}{cout}} (std\+::string text=\char`\"{}\char`\"{}, bool format\+\_\+print=false, bool newline=true)
 \item 
 void \mbox{\hyperlink{classmml_1_1Timer_a5be128b48dd7e5ccd73935b5d9cb639b}{start}} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Start time measurement. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Stops the time measurement. \end{DoxyCompactList}\item 
 uint64\+\_\+t \mbox{\hyperlink{classmml_1_1Timer_acbc5feb01146cf9067c08c52991300d4}{get\+US}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em get the time in µs \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classmml_1_1Timer_a7ab3c31ff55f77a5fb16740df5d056c1}{get\+MS}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Return time in ms without stopping. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classmml_1_1Timer_a5138fe5353603b4fd5d12dfa5e0f6a22}{getS}} (bool \mbox{\hyperlink{classmml_1_1Timer_aa33d1da476db3f9e46796f5875a8346b}{stop}}=true) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Return time in s without stopping. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classmml_1_1Timer_a1857a5be5649d7d640d89fa7e22763c5}{to\+Int}} () noexcept
 \item 
 std\+::string \mbox{\hyperlink{classmml_1_1Timer_a72f8a2da44ec59a76ac7884e2db9352c}{to\+String}} () noexcept
@@ -41,11 +41,8 @@ std\+::string \mbox{\hyperlink{classmml_1_1Timer_a72f8a2da44ec59a76ac7884e2db935
 std\+::string \mbox{\hyperlink{classmml_1_1Timer_aeadb046285a068a189a4359e9302ed3e}{clock}} () noexcept
 \item 
 std\+::string \mbox{\hyperlink{classmml_1_1Timer_a901cde7e7108eb41a97da7e3835844d8}{range}} () noexcept
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em return the time depending on the time value itself \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-\mbox{\hyperlink{classmml_1_1Timer}{Timer}} mit std\+::chrono (anstatt SDL\+\_\+\+Get\+Performance\+Counter()) 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmml_1_1Timer_a8388437a554236e800ef35d37ceba950}\label{classmml_1_1Timer_a8388437a554236e800ef35d37ceba950}} 
@@ -76,7 +73,7 @@ std\+::string \mbox{\hyperlink{classmml_1_1Timer_a901cde7e7108eb41a97da7e3835844
 {\footnotesize\ttfamily void mml\+::\+Timer\+::break\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \begin{DoxyNote}{Note}
-Pause starten
+stop the time measurement 
 \end{DoxyNote}
 \begin{DoxyAuthor}{Author}
 Mike 
@@ -87,9 +84,10 @@ Mike
 \doxysubsubsection{\texorpdfstring{break\_stop()}{break\_stop()}}
 {\footnotesize\ttfamily void mml\+::\+Timer\+::break\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Pause stoppen
-\end{DoxyNote}
+
+
+continue the time measurement 
+
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
@@ -106,8 +104,17 @@ Mike
 {\footnotesize\ttfamily void mml\+::\+Timer\+::cout (\begin{DoxyParamCaption}\item[{std\+::string}]{text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{format\+\_\+print = {\ttfamily false},  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
 
 \begin{DoxyNote}{Note}
-Zeit ausgeben (formatiert oder in Millisekunden)
+Pint time formatted or in ms 
 \end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em text} & A text printed first without a newline \\
+\hline
+{\em format\+\_\+print} & Print by using the function range (false \+: in ms) \\
+\hline
+{\em newline} & Print with a newline \\
+\hline
+\end{DoxyParams}
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
@@ -117,11 +124,12 @@ Mike
 \doxysubsubsection{\texorpdfstring{getMS()}{getMS()}}
 {\footnotesize\ttfamily double mml\+::\+Timer\+::get\+MS (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Zwischenergebnis zurückgegeben.
-\end{DoxyNote}
+
+
+Return time in ms without stopping. 
+
 \begin{DoxyReturn}{Returns}
-Zwischenergebnis 
+time in ms 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Lucas
@@ -140,11 +148,12 @@ Lucas
 \doxysubsubsection{\texorpdfstring{getS()}{getS()}}
 {\footnotesize\ttfamily double mml\+::\+Timer\+::getS (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Zwischenergebnis zurückgegeben in s.
-\end{DoxyNote}
+
+
+Return time in s without stopping. 
+
 \begin{DoxyReturn}{Returns}
-Zwischenergebnis 
+time in seconds 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike
@@ -163,11 +172,12 @@ Mike
 \doxysubsubsection{\texorpdfstring{getUS()}{getUS()}}
 {\footnotesize\ttfamily uint64\+\_\+t mml\+::\+Timer\+::get\+US (\begin{DoxyParamCaption}\item[{bool}]{stop = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Direkten Wert in Mikrosekunden zurückgegeben.
-\end{DoxyNote}
+
+
+get the time in µs 
+
 \begin{DoxyReturn}{Returns}
-Vergangene Zeit in Mikrosekunden (uint64\+\_\+t) 
+time in µs 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Lucas
@@ -186,11 +196,12 @@ Lucas
 \doxysubsubsection{\texorpdfstring{range()}{range()}}
 {\footnotesize\ttfamily std\+::string mml\+::\+Timer\+::range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Zeit abhängig von der Größe zurückgeben
-\end{DoxyNote}
+
+
+return the time depending on the time value itself 
+
 \begin{DoxyReturn}{Returns}
-Ausgabe der Zeit 
+returns the time in µs, ms, s or as a clock 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Mike 
@@ -201,9 +212,10 @@ Mike
 \doxysubsubsection{\texorpdfstring{start()}{start()}}
 {\footnotesize\ttfamily void mml\+::\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Beginnt die Zeitmessung.
-\end{DoxyNote}
+
+
+Start time measurement. 
+
 \begin{DoxyAuthor}{Author}
 Lucas
 \end{DoxyAuthor}
@@ -218,11 +230,12 @@ Lucas
 \doxysubsubsection{\texorpdfstring{stop()}{stop()}}
 {\footnotesize\ttfamily double mml\+::\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Stoppt die Zeitmessung.
-\end{DoxyNote}
+
+
+Stops the time measurement. 
+
 \begin{DoxyReturn}{Returns}
-Vergangene Zeit in Millisekunden 
+passed time in ms 
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Author}
 Lucas

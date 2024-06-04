@@ -1,16 +1,20 @@
 \hypertarget{help_8hpp}{}\doxysection{include/mml/help.hpp File Reference}
 \label{help_8hpp}\index{include/mml/help.hpp@{include/mml/help.hpp}}
-{\ttfamily \#include \char`\"{}mml/standards.\+hpp\char`\"{}}\newline
+
+
+Contains functions to print help pages.  
+
+
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
 Include dependency graph for help.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{help_8hpp__incl}
+\includegraphics[width=206pt]{help_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,52 +31,15 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespacemml_1_1help_a9dcb0812d703e4f61c7b94e1ba5b51ad}{mml\+::help\+::check\+\_\+root}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_af68a38a5b5edae14bb0c48e8ccad0492}{mml\+::help\+::cifs}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_af6ff7471d95837a6e357e83e23d81146}{mml\+::help\+::convert}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a3978351d7301b2be83bdc46e976d030e}{mml\+::help\+::cop}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_ab7c3684386d58dad93acae57b8605c2a}{mml\+::help\+::copy}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_ab01cf639d5ae44f4139d5861bd63ffdd}{mml\+::help\+::farben}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a8c7b528a6fdce332a92230ac90ea003d}{mml\+::help\+::finanzen}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a4fa535a397a367b86af91e61c151e283}{mml\+::help\+::hhelp}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_aa108f1fd9a7926224fa455f94ad56bd9}{mml\+::help\+::hhelp\+\_\+commands}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a0d3054a6b1494b5e6051238734bb8a30}{mml\+::help\+::\+R\+\_\+cop}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a8d391a507817cbce59f1117c7364a3b2}{mml\+::help\+::\+R\+\_\+dns\+\_\+filter}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a128b2bcdce2b677d3d2ceaea60070640}{mml\+::help\+::rechner}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a16ce13af175e32d8de860b816e83b6ff}{mml\+::help\+::sizeof\+\_\+h}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_af4841cdf2e481b424f11043dc912bbbc}{mml\+::help\+::statistik}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a7c4cd5cc193b9fe05c02fed824c5bccb}{mml\+::help\+::timer}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a6deeceeb5c1a37549f37f5133a17af15}{mml\+::help\+::todos}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_adada0110d9f8fa7c5ba95a35a8a017d6}{mml\+::help\+::userinfo}} ()
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_afe14f31b66244bc704fcaf2d819be286}{mml\+::help\+::foot}} (std\+::string version, std\+::string month, int year)
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_a9e7febbcf7bfe7817a766881fc57528d}{mml\+::help\+::header}} (std\+::string befehl, std\+::string option=\char`\"{}\char`\"{})
-\item 
-void \mbox{\hyperlink{namespacemml_1_1help_acfa6f75011432c10e311874b40084544}{mml\+::help\+::help}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} output)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{namespacemml_1_1help_a4f18d3adc05374c5e8502536a47a6410}{mml\+::help\+::foot}} (std\+::string version, std\+::string month, int year, std\+::string author) noexcept
+\begin{DoxyCompactList}\small\item\em Print the foot line with notes to author and date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemml_1_1help_a914f05aa5cabab6837d3228d1da1a3c1}{mml\+::help\+::header}} (std\+::string command) noexcept
+\begin{DoxyCompactList}\small\item\em Print out a header. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Contains functions to print help pages. 
+
 \begin{DoxyAuthor}{Author}
-Mike Moser
+Mike Moser 
 \end{DoxyAuthor}
-\begin{DoxyNote}{Note}
-Enthält verschiedene Hilfeseiten für C++-\/\+Programme 
-\end{DoxyNote}

@@ -1,4 +1,4 @@
-.TH "mml" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -48,56 +48,95 @@ mml
 
 .in +1c
 .ti -1c
-.RI "template<typename templ > double \fBatob\fP (const templ &t)"
+.RI "template<typename templ > double \fBatob\fP (const templ &t) noexcept"
+.br
+.RI "Converts value to bool\&. "
+.ti -1c
+.RI "template<typename T > double \fBatof\fP (const T &t) noexcept"
+.br
+.RI "Converts value to bool\&. "
+.ti -1c
+.RI "template<typename T > int \fBatoi\fP (const T &t) noexcept"
+.br
+.RI "Converts value to int\&. "
+.ti -1c
+.RI "template<typename templ > void \fBcout\fP (std::vector< templ > const &vec) noexcept"
 .br
 .ti -1c
-.RI "template<typename T > double \fBatof\fP (const T &t)"
+.RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t) noexcept"
 .br
+.RI "Convert value to \fBmml::string\fP\&. "
 .ti -1c
-.RI "template<typename T > int \fBatoi\fP (const T &t)"
+.RI "constexpr uint32_t \fBconst_string_hash\fP (const char *\fBstring\fP) noexcept"
 .br
+.RI "Forms a hash value of a string\&. "
 .ti -1c
-.RI "template<typename templ > void \fBcout\fP (std::vector< templ > const &vec)"
+.RI "template<typename templ > void \fBerase\fP (std::vector< templ > &data) noexcept"
 .br
-.ti -1c
-.RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t)"
-.br
+.RI "Empty a vector\&. "
 .in -1c
 .PP
 .RI "\fBstandards\&.cpp\fP"
 .br
-
+Contains different standard functions of this library
 .PP
 \fBAuthor\fP
 .RS 4
-Mike Moser
+Mike Moser 
 .RE
 .PP
-Enthält verschiedene Standardfunktionen 
+
 .PP
 .in +1c
 .in +1c
 .ti -1c
 .RI "bool \fBcheck_root\fP (std::string programme='')"
 .br
+.RI "Check if program executed as root\&. "
 .ti -1c
-.RI "uint32_t \fBdate\fP (int info, time_t time1=\-1)"
+.RI "uint32_t \fBdate\fP (int info, time_t time1=\-1) noexcept"
 .br
+.RI "Returns the wished info from the time (like date etc\&.) Options are: "
 .ti -1c
-.RI "std::string \fBdate\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.')"
+.RI "std::string \fBdate\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.') noexcept"
 .br
+.RI "Returns the actual date and/or time as a std::string\&. "
 .ti -1c
-.RI "bool \fBis_num\fP (char c)"
+.RI "bool \fBis_num\fP (char c) noexcept"
 .br
+.RI "Checks if a character is a number\&. "
 .ti -1c
-.RI "bool \fBrange\fP (std::size_t number)"
+.RI "bool \fBrange\fP (std::size_t number) noexcept"
 .br
+.RI "Checks if a number has reached the maximum value (std::string::npos) "
 .ti -1c
-.RI "bool \fBrange\fP (std::size_t, std::size_t)"
+.RI "bool \fBrange\fP (std::size_t, std::size_t) noexcept"
 .br
+.RI "Checks if one of two numbers has reached the maximum value\&. "
 .ti -1c
-.RI "double \fBround\fP (double number, uint16_t digits)"
+.RI "double \fBround\fP (double number, uint16_t \fBdigits\fP) noexcept"
 .br
+.RI "round a number "
+.ti -1c
+.RI "std::string \fBdeclare_month\fP (int month_nr) noexcept"
+.br
+.RI "Convert month number to month string\&. "
+.ti -1c
+.RI "template<typename templ > templ \fBget_random\fP (templ min=0, templ max=100) noexcept"
+.br
+.RI "Create a random number in a defined range\&. "
+.ti -1c
+.RI "template<typename templ > templ \fBsmallest_num\fP (std::vector< templ > values, std::size_t pos=0)"
+.br
+.RI "Return the smallest number\&. "
+.ti -1c
+.RI "std::string \fBrandom_str\fP (size_t letters=10, std::string start='') noexcept"
+.br
+.RI "Create a random, lower-case string\&. "
+.ti -1c
+.RI "std::size_t \fBdigits\fP (double number) noexcept"
+.br
+.RI "Determine number of digits of a double number\&. "
 .in -1c
 .in -1c
 .SH "Detailed Description"
@@ -112,12 +151,14 @@ Mike Moser
 Bibliothek shell\&.h Enthält verschiedene Funktionen mit namespace shell 
 .SH "Function Documentation"
 .PP 
-.SS "template<typename templ > double mml::atob (const templ & t)"
-Converts value to bool
+.SS "template<typename templ > double mml::atob (const templ & t)\fC [noexcept]\fP"
+
+.PP
+Converts value to bool\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fIt\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -125,18 +166,15 @@ Converts value to bool
 bool 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "template<typename T > double mml::atof (const T & t)"
-Converts value to bool
+.SS "template<typename T > double mml::atof (const T & t)\fC [noexcept]\fP"
+
+.PP
+Converts value to bool\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fIt\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -144,18 +182,15 @@ Converts value to bool
 double 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "template<typename T > int mml::atoi (const T & t)"
-Converts value to int
+.SS "template<typename T > int mml::atoi (const T & t)\fC [noexcept]\fP"
+
+.PP
+Converts value to int\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fItempl\fP Value 
+\fIt\fP Value 
 .RE
 .PP
 \fBReturns\fP
@@ -163,18 +198,15 @@ Converts value to int
 int 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
 .SS "bool mml::check_root (std::string programme = \fC''\fP)"
-Check if program executed as root 
+
+.PP
+Check if program executed as root\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstd::string,optional\fP Programme name 
+\fIprogramme\fP Programme name 
 .RE
 .PP
 \fBReturns\fP
@@ -182,18 +214,41 @@ Check if program executed as root
 bool 
 .RE
 .PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if user is not root 
+.RE
+.PP
 
-.SS "template<typename templ > void mml::cout (std::vector< templ > const & vec)"
+.SS "constexpr uint32_t mml::const_string_hash (const char * string)\fC [constexpr]\fP, \fC [noexcept]\fP"
+
+.PP
+Forms a hash value of a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstring\fP String to be converted 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Hash value 
+.RE
+.PP
+
+.SS "template<typename templ > void mml::cout (std::vector< templ > const & vec)\fC [noexcept]\fP"
 Prints the values of a vector
 .PP
 \fBParameters\fP
 .RS 4
-\fIstd::vector<templ>\fP Vector to be printed 
+\fIvec\fP Vector to be printed 
 .RE
 .PP
 
-.SS "uint32_t mml::date (int info, time_t time1 = \fC\-1\fP)"
-Returns the wished info from the time (like date etc\&.) Options are:
+.SS "uint32_t mml::date (int info, time_t time1 = \fC\-1\fP)\fC [noexcept]\fP"
+
+.PP
+Returns the wished info from the time (like date etc\&.) Options are: 
 .IP "\(bu" 2
 0: Seconds
 .IP "\(bu" 2
@@ -218,9 +273,9 @@ Returns the wished info from the time (like date etc\&.) Options are:
 .PP
 \fBParameters\fP
 .RS 4
-\fIint\fP Determines what information is printed 
+\fIinfo\fP Determines what information is printed 
 .br
-\fItime_t\fP Time for which the information is printed\&. -1 => Actual time now\&. 
+\fItime1\fP Time for which the information is printed\&. -1 => Actual time now\&. 
 .RE
 .PP
 \fBReturns\fP
@@ -234,12 +289,14 @@ Mike
 .RE
 .PP
 
-.SS "std::string mml::date (\fBmml::string\fP value, std::string separator1 = \fC':'\fP, std::string separator2 = \fC'\&.'\fP)"
-Returns the actual date and/or time as a std::string 
+.SS "std::string mml::date (\fBmml::string\fP value, std::string separator1 = \fC':'\fP, std::string separator2 = \fC'\&.'\fP)\fC [noexcept]\fP"
+
+.PP
+Returns the actual date and/or time as a std::string\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fI\fBmml::string\fP\fP Determines what information is printed\&.
+\fIvalue\fP Determines what information is printed\&.
 .IP "\(bu" 2
 'Date' : DD\&.MM\&.YYYY (based on separator1)
 .IP "\(bu" 2
@@ -250,9 +307,9 @@ Returns the actual date and/or time as a std::string
 'Date1+Time' : Compete date in format YYYY\&.MM\&.DD HH:MM:SS\&. 
 .PP
 .br
-\fIstd::string,optional\fP First separation sign for the date 
+\fIseparator1\fP First separation sign for the date 
 .br
-\fIstd::string,optional\fP Second separation sign for the time
+\fIseparator2\fP Second separation sign for the time
 .RE
 .PP
 \fBReturns\fP
@@ -266,12 +323,75 @@ Mike
 .RE
 .PP
 
-.SS "bool mml::is_num (char c)"
-Checks if a character is a number 
+.SS "std::string mml::declare_month (int month_nr)\fC [noexcept]\fP"
+
+.PP
+Convert month number to month string\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIchar\fP Character to be checked 
+\fImonth_nr\fP Month as a number 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Name of the month as a string 
+.RE
+.PP
+
+.SS "std::size_t mml::digits (double number)\fC [noexcept]\fP"
+
+.PP
+Determine number of digits of a double number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP the number 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of digits 
+.RE
+.PP
+
+.SS "template<typename templ > void mml::erase (std::vector< templ > & data)\fC [noexcept]\fP"
+
+.PP
+Empty a vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Reference to the vector to be erased 
+.RE
+.PP
+
+.SS "template<typename templ > templ mml::get_random (templ min = \fC0\fP, templ max = \fC100\fP)\fC [noexcept]\fP"
+
+.PP
+Create a random number in a defined range\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImin\fP Lowest Number 
+.br
+\fImax\fP Highes Number 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+generated random number 
+.RE
+.PP
+
+.SS "bool mml::is_num (char c)\fC [noexcept]\fP"
+
+.PP
+Checks if a character is a number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP Character to be checked 
 .RE
 .PP
 \fBReturns\fP
@@ -280,89 +400,103 @@ bool
 .RE
 .PP
 
-.SS "bool mml::range (std::size_t number)"
+.SS "std::string mml::random_str (size_t letters = \fC10\fP, std::string start = \fC''\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Überprüfen, ob maximalert Wert von std::size_t erreicht
-.RE
+Create a random, lower-case string\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fInumber\fP Number to be checked
+\fIletters\fP Number of letters 
+.br
+\fIstart\fP Add the generated characters to this string 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true (kleiner als max Wert) oder false 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+generated string 
 .RE
 .PP
 
-.SS "bool mml::range (std::size_t number1, std::size_t number2)"
+.SS "bool mml::range (std::size_t number)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Checks if a number has reached the maximum value (std::string::npos) 
+.PP
+\fBParameters\fP
 .RS 4
-Überprüfen, ob maximalert Wert von std::size_t erreicht
+\fInumber\fP Number to be checked 
 .RE
+.PP
+\fBReturns\fP
+.RS 4
+true : smaller than the maximum value 
+.RE
+.PP
+
+.SS "bool mml::range (std::size_t number1, std::size_t number2)\fC [noexcept]\fP"
+
+.PP
+Checks if one of two numbers has reached the maximum value\&. 
 .PP
 \fBParameters\fP
 .RS 4
 \fInumber1\fP Number to be checked 
 .br
-\fInumber2\fP Number to be checked
+\fInumber2\fP Number to be checked 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true (kleiner als max Wert) oder false 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+true : at least one number is smaller than the max\&. value 
 .RE
 .PP
 
-.SS "double mml::round (double number, uint16_t digits)"
+.SS "double mml::round (double number, uint16_t digits)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Zahl runden
-.RE
+round a number 
 .PP
 \fBParameters\fP
 .RS 4
 \fInumber\fP Number which is rounded 
 .br
-\fIdigits\fP To which digit it is rounded
+\fIdigits\fP To which digit it is rounded 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-gerundete double Zahl 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+round number 
 .RE
 .PP
 
-.SS "template<typename T > \fBmml::string\fP mml::to_string (const T & t)"
+.SS "template<typename templ > templ mml::smallest_num (std::vector< templ > values, std::size_t pos = \fC0\fP)"
 
 .PP
-\fBNote\fP
+Return the smallest number\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Wert in \fBmml::string\fP umwandeln
+\fIvalues\fP Values as a vector 
+.br
+\fIpos\fP Start position 
 .RE
+.PP
+\fBReturns\fP
+.RS 4
+smallest number 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if type is non-arithmetic 
+.RE
+.PP
+
+.SS "template<typename T > \fBmml::string\fP mml::to_string (const T & t)\fC [noexcept]\fP"
+
+.PP
+Convert value to \fBmml::string\fP\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -372,11 +506,6 @@ Wert in \fBmml::string\fP umwandeln
 \fBReturns\fP
 .RS 4
 \fBmml::string\fP 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
 .RE
 .PP
 

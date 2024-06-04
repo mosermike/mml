@@ -1,4 +1,4 @@
-.TH "mml::shell::arg" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::shell::arg" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,7 +14,7 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBarg\fP (int argc1, char **argv1, bool getarg=false, std::string except1='xxxxx', std::string except2='xxxxx', std::string except3='xxxxx', std::string except4='xxxxx', std::string except5='xxxxx', std::string except6='xxxxx', std::string except7='xxxxx')"
+.RI "template<typename\&.\&.\&. values> \fBarg\fP (int argc1, char **argv1, const values &\&.\&.\&. value)"
 .br
 .ti -1c
 .RI "\fBarg\fP (char **argv1, int argc1)"
@@ -41,89 +41,39 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .RI "\fBarg\fP & \fBoperator=\fP (const \fBarg\fP &vec_temp)"
 .br
 .ti -1c
-.RI "\fBarg\fP & \fBoperator=\fP (const std::vector< std::string > &vec_temp)"
+.RI "\fBarg\fP & \fBoperator=\fP (const std::vector< \fBmml::string\fP > &vec_temp)"
 .br
 .ti -1c
-.RI "std::vector< \fBmml::string\fP > & \fBoperator()\fP (char **argv1, int argc1, bool getarg=false)"
+.RI "template<typename\&.\&.\&. values> std::vector< \fBmml::string\fP > & \fBoperator()\fP (int argc1, char **argv1, const values &\&.\&.\&.value) noexcept"
+.br
+.RI "Initialise with the values from the terminal\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. values> std::vector< \fBmml::string\fP > & \fBoperator()\fP (char **argv1, int argc1, const values &\&.\&.\&.value) noexcept"
 .br
 .ti -1c
-.RI "std::vector< \fBmml::string\fP > & \fBoperator()\fP (int argc1, char **argv1, bool getarg=false)"
+.RI "std::size_t \fBbegin\fP (const std::string &str) noexcept"
 .br
+.RI "Determine position where an argument starts with a specific string\&. "
 .ti -1c
-.RI "std::size_t \fBbeginArg\fP (const std::string &\fBstr\fP)"
+.RI "template<typename\&.\&.\&. values> void \fBinit\fP (const values &\&.\&.\&. value) noexcept"
 .br
+.RI "Determine options given with one minus and separate them ignoring specific strings\&. "
 .ti -1c
-.RI "void \fBerase\fP (std::size_t pos1, std::size_t pos2=0)"
+.RI "template<typename\&.\&.\&. values> bool \fBnexist\fP (const values &\&.\&.\&. value) noexcept"
 .br
+.RI "Determine if an element does not exist\&. "
 .ti -1c
-.RI "bool \fBexist\fP (std::string search)"
+.RI "std::size_t \fBpos\fP (const std::string &str) noexcept"
 .br
+.RI "Determine the position of a searched string\&. "
 .ti -1c
-.RI "bool \fBexist\fP (std::string search1, std::string search2)"
+.RI "std::size_t \fBpos\fP (const std::string &str1, const std::string &str2) noexcept"
 .br
+.RI "Determine the position of a searched string or another\&. "
 .ti -1c
-.RI "bool \fBexist\fP (std::string search1, std::string search2, std::string search3)"
+.RI "template<typename T > std::vector< \fBmml::string\fP > \fBreplace\fP (T Old, T New) noexcept"
 .br
-.ti -1c
-.RI "bool \fBexist\fP (std::string search1, std::string search2, std::string search3, std::string search4)"
-.br
-.ti -1c
-.RI "bool \fBexist\fP (std::size_t pos, std::string name)"
-.br
-.ti -1c
-.RI "bool \fBfindArg\fP (const std::string &\fBstr\fP)"
-.br
-.ti -1c
-.RI "bool \fBfindArg\fP (const std::string &str1, const std::string &str2)"
-.br
-.ti -1c
-.RI "bool \fBfindArg\fP (const std::string &str1, const std::string &str2, const std::string &str3)"
-.br
-.ti -1c
-.RI "bool \fBfindArg\fP (const std::string &str1, const std::string &str2, const std::string &str3, const std::string &str4)"
-.br
-.ti -1c
-.RI "void \fBgetArg\fP (std::string except1='xxxxx', std::string except2='xxxxx', std::string except3='xxxxx', std::string except4='xxxxx', std::string except5='xxxxx', std::string except6='xxxxx', std::string excep7='xxxxx')"
-.br
-.ti -1c
-.RI "void \fBinit\fP (std::string except1='xxxxx', std::string except2='xxxxx', std::string except3='xxxxx', std::string except4='xxxxx', std::string except5='xxxxx', std::string except6='xxxxx', std::string except7='xxxxx')"
-.br
-.ti -1c
-.RI "bool \fBnotArg\fP (const std::string &str1)"
-.br
-.ti -1c
-.RI "bool \fBnotArg\fP (const std::string &str1, const std::string &str2)"
-.br
-.ti -1c
-.RI "bool \fBnotArg\fP (const std::string &str1, const std::string &str2, const std::string &str3)"
-.br
-.ti -1c
-.RI "bool \fBnotArg\fP (const std::string &str1, const std::string &str2, const std::string &str3, const std::string &str4)"
-.br
-.ti -1c
-.RI "std::size_t \fBpositionArg\fP (const std::string &\fBstr\fP)"
-.br
-.ti -1c
-.RI "std::size_t \fBpositionArg\fP (const std::string &\fBstr\fP, const std::string &str2)"
-.br
-.ti -1c
-.RI "std::vector< \fBmml::string\fP > \fBreplace\fP (char sign_old, char sign_new)"
-.br
-.ti -1c
-.RI "std::vector< \fBmml::string\fP > \fBreplace\fP (std::string str_old, std::string str_new)"
-.br
-.ti -1c
-.RI "void \fBsort\fP ()"
-.br
-.ti -1c
-.RI "std::vector< \fBmml::string\fP > \fBstr\fP ()"
-.br
-.ti -1c
-.RI "std::vector< std::string > \fBstr_change\fP ()"
-.br
-.ti -1c
-.RI "std::vector< \fBmml::string\fP > \fBtostr\fP (std::vector< std::string > temp)"
-.br
+.RI "Replace a string in each element\&. "
 .ti -1c
 .RI "\fB~arg\fP ()"
 .br
@@ -140,7 +90,7 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "mml::shell::arg::arg (int argc1, char ** argv1, bool getarg = \fCfalse\fP, std::string except1 = \fC'xxxxx'\fP, std::string except2 = \fC'xxxxx'\fP, std::string except3 = \fC'xxxxx'\fP, std::string except4 = \fC'xxxxx'\fP, std::string except5 = \fC'xxxxx'\fP, std::string except6 = \fC'xxxxx'\fP, std::string except7 = \fC'xxxxx'\fP)\fC [inline]\fP"
+.SS "template<typename\&.\&.\&. values> mml::shell::arg::arg (int argc1, char ** argv1, const values &\&.\&.\&. value)\fC [inline]\fP"
 
 .SS "mml::shell::arg::arg (char ** argv1, int argc1)\fC [inline]\fP"
 
@@ -160,12 +110,14 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "std::size_t mml::shell::arg::beginArg (const std::string & str)"
+.SS "std::size_t mml::shell::arg::begin (const std::string & str)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Determine position where an argument starts with a specific string\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Positionsbestimmung, sobald ein String beginnend am Anfang mit einem Wert übereinstimmt
+\fIstr\fP element starts with this string 
 .RE
 .PP
 \fBReturns\fP
@@ -173,258 +125,114 @@ Positionsbestimmung, sobald ein String beginnend am Anfang mit einem Wert übere
 Position 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike
-.PP
-Mike Moser
-.RE
-.PP
-Quelldatei args\&.cpp Enthält verschiedene Funktionen für die Klasse arg 
-.SS "void mml::shell::arg::erase (std::size_t pos1, std::size_t pos2 = \fC0\fP)"
+
+.SS "template<typename\&.\&.\&. values> void mml::shell::arg::init (const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Ausgabe aller Elemente im Vektor
-.RE
+Determine options given with one minus and separate them ignoring specific strings\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
-.RE
-.PP
-\fBNote\fP
-.RS 4
-Ein Element oder mehrere entfernen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIvalue\fP Values which are not separated 
 .RE
 .PP
 
-.SS "bool mml::shell::arg::exist (std::size_t pos, std::string name)"
+.SS "template<typename\&.\&.\&. values> bool mml::shell::arg::nexist (const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Determine if an element does not exist\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Nachschauen, ob ein String in einem bestimmten String vorkommt
+\fIvalue\fP values to be looked for 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true oder false 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+true, if values do not exist 
 .RE
 .PP
 
-.SS "bool mml::shell::arg::exist (std::string search)"
+.SS "template<typename\&.\&.\&. values> std::vector<\fBmml::string\fP>& mml::shell::arg::operator() (char ** argv1, int argc1, const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "template<typename\&.\&.\&. values> std::vector<\fBmml::string\fP>& mml::shell::arg::operator() (int argc1, char ** argv1, const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Initialise with the values from the terminal\&. 
+.PP
+\fBParameters\fP
 .RS 4
-nachschauen ob ein String im Vektor vec vorkommt
+\fIargv1\fP Character vector with the arguments from the shell 
+.br
+\fIargc\fP Number of arguments 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true oder false 
+Reference to this instance 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "bool mml::shell::arg::exist (std::string search1, std::string search2)"
-
-.SS "bool mml::shell::arg::exist (std::string search1, std::string search2, std::string search3)"
-
-.SS "bool mml::shell::arg::exist (std::string search1, std::string search2, std::string search3, std::string search4)"
-
-.SS "bool mml::shell::arg::findArg (const std::string & str)"
-
-.PP
-\fBNote\fP
-.RS 4
-Finden von Argumenten
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "bool mml::shell::arg::findArg (const std::string & str1, const std::string & str2)"
-
-.SS "bool mml::shell::arg::findArg (const std::string & str1, const std::string & str2, const std::string & str3)"
-
-.SS "bool mml::shell::arg::findArg (const std::string & str1, const std::string & str2, const std::string & str3, const std::string & str4)"
-
-.SS "void mml::shell::arg::getArg (std::string except1 = \fC'xxxxx'\fP, std::string except2 = \fC'xxxxx'\fP, std::string except3 = \fC'xxxxx'\fP, std::string except4 = \fC'xxxxx'\fP, std::string except5 = \fC'xxxxx'\fP, std::string except6 = \fC'xxxxx'\fP, std::string excep7 = \fC'xxxxx'\fP)"
-Argumente bei -xyz bestimmen
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "void mml::shell::arg::init (std::string except1 = \fC'xxxxx'\fP, std::string except2 = \fC'xxxxx'\fP, std::string except3 = \fC'xxxxx'\fP, std::string except4 = \fC'xxxxx'\fP, std::string except5 = \fC'xxxxx'\fP, std::string except6 = \fC'xxxxx'\fP, std::string except7 = \fC'xxxxx'\fP)"
-
-.PP
-\fBNote\fP
-.RS 4
-Initialisierung bei Start zum Ausführen von Standardoperationen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "bool mml::shell::arg::notArg (const std::string & str1)"
-
-.PP
-\fBNote\fP
-.RS 4
-Finden von nicht vorhandenen Argumenten
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-true, wenn nicht gefunden 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "bool mml::shell::arg::notArg (const std::string & str1, const std::string & str2)"
-
-.SS "bool mml::shell::arg::notArg (const std::string & str1, const std::string & str2, const std::string & str3)"
-
-.SS "bool mml::shell::arg::notArg (const std::string & str1, const std::string & str2, const std::string & str3, const std::string & str4)"
-
-.SS "std::vector< \fBmml::string\fP > & mml::shell::arg::operator() (char ** argv1, int argc1, bool getarg = \fCfalse\fP)"
-
-.PP
-\fBNote\fP
-.RS 4
-Initialisierung mit direkter Übergabe der argv und argc Werte
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "std::vector< \fBmml::string\fP > & mml::shell::arg::operator() (int argc1, char ** argv1, bool getarg = \fCfalse\fP)"
 
 .SS "\fBarg\fP& mml::shell::arg::operator= (const \fBarg\fP & vec_temp)\fC [inline]\fP"
 
-.SS "\fBarg\fP& mml::shell::arg::operator= (const std::vector< std::string > & vec_temp)\fC [inline]\fP"
+.SS "\fBarg\fP& mml::shell::arg::operator= (const std::vector< \fBmml::string\fP > & vec_temp)\fC [inline]\fP"
 
-.SS "std::size_t mml::shell::arg::positionArg (const std::string & str)"
+.SS "std::size_t mml::shell::arg::pos (const std::string & str)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Determine the position of a searched string\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Positionsbestimmungen, wo ein gesuchter String steht
+\fIstr\fP Value to be looked for 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Positionnamespace mml{ 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+position 
 .RE
 .PP
 
-.SS "std::size_t mml::shell::arg::positionArg (const std::string & str, const std::string & str2)"
-
-.SS "std::vector< \fBmml::string\fP > mml::shell::arg::replace (char sign_old, char sign_new)"
+.SS "std::size_t mml::shell::arg::pos (const std::string & str1, const std::string & str2)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Determine the position of a searched string or another\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Ersetzen eines chars oder eines Strings in einem Vektor
+\fIstr1\fP Value to be looked for 
+.br
+\fIstr2\fP 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Vektor mit den ersetzten Werten 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "std::vector< \fBmml::string\fP > mml::shell::arg::replace (std::string str_old, std::string str_new)"
-
-.SS "void mml::shell::arg::sort ()"
-
-.PP
-\fBNote\fP
-.RS 4
-Nachträgliche Initialisierung der Werte von übergebenen Werten
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+position 
 .RE
 .PP
 \fBNote\fP
 .RS 4
-Sortieren der Werte
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+If str1 exists, then the position of this string is returned\&. Only if not, then the position of str2 if it exists 
 .RE
 .PP
 
-.SS "std::vector< \fBmml::string\fP > mml::shell::arg::str ()"
+.SS "template<typename T > std::vector<\fBmml::string\fP> mml::shell::arg::replace (T Old, T New)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Replace a string in each element\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Umwandlungen der Werte in einen Standard String Vektor
+\fIOld\fP value to be replaced 
+.br
+\fINew\fP new value 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-String Vektor 
+Vector of this instance 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "std::vector< std::string > mml::shell::arg::str_change ()"
-
-.SS "std::vector< \fBmml::string\fP > mml::shell::arg::tostr (std::vector< std::string > temp)"
 
 .SH "Member Data Documentation"
 .PP 

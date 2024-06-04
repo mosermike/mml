@@ -20,6 +20,25 @@
       <node id="8">
         <label>float.h</label>
       </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="7">
+        <label>random</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
       <node id="2">
         <label>mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
@@ -40,8 +59,8 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>string</label>
+      <node id="9">
+        <label>iostream</label>
       </node>
       <node id="1">
         <label>include/mml/functions.hpp</label>
@@ -61,50 +80,51 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="7">
-        <label>random</label>
-      </node>
-      <node id="10">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="3">
-        <label>vector</label>
-      </node>
-      <node id="5">
-        <label>sstream</label>
-      </node>
-      <node id="9">
-        <label>iostream</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="14">
-        <label>src/arg.cpp</label>
-        <link refid="arg_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/Unix.cpp</label>
-        <link refid="Unix_8cpp"/>
-      </node>
       <node id="12">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
       </node>
-      <node id="4">
-        <label>src/file.cpp</label>
-        <link refid="file_8cpp"/>
+      <node id="15">
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
+      </node>
+      <node id="3">
+        <label>include/mml.hpp</label>
+        <link refid="mml_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
       <node id="11">
         <label>src/string.cpp</label>
         <link refid="string_8cpp"/>
       </node>
-      <node id="7">
-        <label>src/Thread.cpp</label>
-        <link refid="Thread_8cpp"/>
+      <node id="16">
+        <label>src/standards.cpp</label>
+        <link refid="standards_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/log.cpp</label>
+        <link refid="log_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
       </node>
       <node id="2">
         <label>include/mml/file.hpp</label>
@@ -122,9 +142,25 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
+      <node id="9">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="13">
+        <label>include/mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>include/mml/functions.hpp</label>
@@ -144,57 +180,21 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>src/help.cpp</label>
-        <link refid="help_8cpp"/>
+      <node id="14">
+        <label>src/arg.cpp</label>
+        <link refid="arg_8cpp"/>
       </node>
-      <node id="13">
-        <label>include/mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
+      <node id="6">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
       </node>
-      <node id="3">
-        <label>include/mml.hpp</label>
-        <link refid="mml_8hpp"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
+      <node id="4">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
       </node>
-      <node id="10">
-        <label>src/log.cpp</label>
-        <link refid="log_8cpp"/>
-      </node>
-      <node id="15">
-        <label>src/functions.cpp</label>
-        <link refid="functions_8cpp"/>
-      </node>
-      <node id="9">
-        <label>test/test1.cpp</label>
-        <link refid="test1_8cpp"/>
-      </node>
-      <node id="16">
-        <label>src/standards.cpp</label>
-        <link refid="standards_8cpp"/>
+      <node id="7">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>
@@ -230,6 +230,7 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="26" refid="namespacemml_1_1functions" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">functions<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="34" refid="namespacemml_1_1functions_1a294eb401efb2876d21d5401f34a0284c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/>uint32_t<sp/><ref refid="namespacemml_1_1functions_1a294eb401efb2876d21d5401f34a0284c" kindref="member">const_string_hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>hash_value<sp/><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>prim[169]<sp/><sp/><sp/>=<sp/>{</highlight></codeline>
@@ -262,103 +263,32 @@
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="namespacemml_1_1functions_1aed447bd3bda04bd6d996e1ab7a0215de" kindref="member">count_sym</ref>(std::string<sp/>test,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbol);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1ab329e8a7f124bca7f7f6ae254b05ac19" kindref="member">declare_month</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>month_nr);</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">cout</ref>(std::vector&lt;std::string&gt;<sp/>vec);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">cout</ref>(std::vector&lt;mml::string&gt;<sp/>vec);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">cout</ref>(std::vector&lt;double&gt;<sp/>vec);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kindref="member">cout</ref>(std::vector&lt;int&gt;<sp/>vec);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1ab329e8a7f124bca7f7f6ae254b05ac19" kindref="member">declare_month</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>month_nr);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" kindref="member">erase</ref>(std::vector&lt;std::string&gt;<sp/>data);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><ref refid="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" kindref="member">erase</ref>(std::vector&lt;mml::string&gt;<sp/>data);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" kindref="member">erase</ref>(std::vector&lt;double&gt;<sp/>data);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" kindref="member">erase</ref>(std::vector&lt;int&gt;<sp/>data);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" kindref="member">get_random</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max=100);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>getline(std::ifstream&amp;<sp/>input);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>smallest_num(std::vector&lt;double&gt;<sp/>values);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1functions_1a7d8132e164cdbeb2b7f165909f2d1bfb" kindref="member">smallest_num</ref>(std::vector&lt;std::size_t&gt;<sp/>values,<sp/>std::size_t<sp/>pos<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>ping(mml::shell::arg<sp/>args,<sp/>std::string<sp/>adresse);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1a7292b096bbe4bba8f51dad3ddcd17397" kindref="member">random_str</ref>(uint32_t<sp/>letters<sp/>=<sp/>10,<sp/>std::string<sp/>value<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::string<sp/>tmpfile(std::string<sp/>filename<sp/>=<sp/>&quot;/tmp/c++_XXXXXX&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1functions_1a26b19eed5d28eb73559fd7d70814874f" kindref="member">Add_Vector</ref>(<sp/>std::vector<sp/>&lt;double&gt;<sp/>vector1<sp/>,<sp/>std::vector<sp/>&lt;double&gt;<sp/>vector2);</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="namespacemml_1_1functions_1a26b19eed5d28eb73559fd7d70814874f" kindref="member">Add_Vector</ref>(<sp/>std::vector<sp/>&lt;std::string&gt;<sp/>vector1<sp/>,<sp/>std::vector<sp/>&lt;std::string&gt;<sp/>vector2);</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="namespacemml_1_1functions_1a96882f2e48261be8bb9ed69325c86858" kindref="member">cifs</ref>(std::string<sp/>src,<sp/>std::string<sp/>dst<sp/>,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>fstype,<sp/>std::string<sp/>user<sp/>,<sp/>std::string<sp/>pass);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1functions_1a7ad5e71dbc16eacd87aa365de8ad66be" kindref="member">digits</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//template&lt;class<sp/>T&gt;<sp/>T<sp/>fromString(const<sp/>std::string&amp;<sp/>s);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>std::string<sp/>toString(const<sp/>T&amp;<sp/>t);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>T<sp/>fromChartoNumber(const<sp/>char&amp;<sp/>c);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>T<sp/>fromChar(const<sp/>char&amp;<sp/>c);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1functions_1a0e96e0452d4751613aeb89406e7e5b88" kindref="member">Get_Values</ref>(<sp/>std::string<sp/>filepath,<sp/>int16_t<sp/>min_value<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1ad25f2df1d22305eca7a0fecc4e139a71" kindref="member">getline</ref>(std::ifstream&amp;<sp/>input,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref>&amp;<sp/>String);</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1a76ebf0e616c5163d81986062a58b5f82" kindref="member">lower</ref>(std::string<sp/>input);</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a15d9ea573c2898290db82cbb049559b9" kindref="member">Mean_of_Vector</ref>(<sp/>std::vector&lt;double&gt;<sp/>values,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a611b42b46de00443a41d65682f56881d" kindref="member">Mean_of_Array</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>array[]<sp/>,<sp/>uint16_t<sp/>length,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1a4c6ace1c6a5dff97fa85115618a217fa" kindref="member">mount_Dir</ref>(<ref refid="classmml_1_1shell_1_1arg" kindref="compound">mml::shell::arg</ref><sp/>args,<sp/>std::string<sp/>mountpath,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mountpoint,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>controlpoint,<sp/>std::string<sp/>user,<sp/>std::string<sp/>pass1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fstype,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1a9262c7cd8e5f4205b650e9eb756a9655" kindref="member">unmount_dir</ref>(std::string<sp/>mount_dir,<sp/>std::string<sp/>controlpoint<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//Von<sp/>String<sp/>zu<sp/>X:<sp/>Bsp.<sp/>double:<sp/>double<sp/>d<sp/>=<sp/>fromString&lt;double&gt;(string);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>T<sp/>fromString(const<sp/>std::string&amp;<sp/>s)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>std::istringstream<sp/>stream<sp/>(s);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>stream<sp/>&gt;&gt;<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//Von<sp/>X<sp/>zu<sp/>String:<sp/>std::string<sp/>name<sp/>=<sp/>toString&lt;int&gt;(integervarialbe);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>std::string<sp/>toString(const<sp/>T&amp;<sp/>t)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>stream;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>stream.str();</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight></codeline>
-<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Von<sp/>char<sp/>zu<sp/>Number<sp/>X</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>T<sp/>fromChartoNumber(const<sp/>char&amp;<sp/>c)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>char<sp/>stream<sp/>(c);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>t=(T)<sp/>stream;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>t-48;<sp/><sp/><sp/><sp/>//Ab<sp/>48<sp/>beginnen<sp/>die<sp/>Zahlen</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="267"><highlight class="normal"></highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Von<sp/>char<sp/>zu<sp/>Number<sp/>X</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>template&lt;class<sp/>T&gt;<sp/>T<sp/>fromChar(const<sp/>char&amp;<sp/>c)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="270"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>char<sp/>stream<sp/>(c);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>t;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>t=(T)<sp/>stream;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>t;<sp/><sp/><sp/>//Ab<sp/>48<sp/>beginnen<sp/>die<sp/>Zahlen</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"></highlight></codeline>
-<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="77" refid="namespacemml_1_1functions_1ad458f7336147842547d1af288206178c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>templ&gt;<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1functions_1ad458f7336147842547d1af288206178c" kindref="member">erase</ref>(std::vector&lt;templ&gt;<sp/>&amp;data)<sp/>{</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!data.empty())<sp/>{data.pop_back();};<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>templ&gt;<sp/>templ<sp/><ref refid="namespacemml_1_1functions_1a415ea7789bb08d474e9a709b02c96cf7" kindref="member">get_random</ref>(templ<sp/>min<sp/>=<sp/>0,<sp/>templ<sp/>max=100);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>templ&gt;<sp/>templ<sp/><ref refid="namespacemml_1_1functions_1a6001b3bc77e7c5baac5bfeb1d797c2bf" kindref="member">smallest_num</ref>(std::vector&lt;templ&gt;<sp/>values,<sp/>std::size_t<sp/>pos<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1ab0d3370a653b07fdec29ba0f7d502e78" kindref="member">random_str</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>letters<sp/>=<sp/>10,<sp/>std::string<sp/>start<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1functions_1a7ad5e71dbc16eacd87aa365de8ad66be" kindref="member">digits</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1functions_1a90bbb398e06af7218ffb55cb20d23bed" kindref="member">Get_Values</ref>(<sp/>std::string<sp/>filepath,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_value);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1functions_1a76ebf0e616c5163d81986062a58b5f82" kindref="member">lower</ref>(std::string<sp/>input);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/mml/functions.hpp"/>
   </compounddef>

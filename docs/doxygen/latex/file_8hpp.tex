@@ -1,8 +1,13 @@
 \hypertarget{file_8hpp}{}\doxysection{include/mml/file.hpp File Reference}
 \label{file_8hpp}\index{include/mml/file.hpp@{include/mml/file.hpp}}
+
+
+This file includes functions regarding the files. It might only work on linux as some commands might be os-\/dependent. The main function of here is to copy files. It also has other functions such as checking if a file exists.  
+
+
 {\ttfamily \#include $<$functional$>$}\newline
-{\ttfamily \#include \char`\"{}mml/functions.\+hpp\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}mml/standards.\+hpp\char`\"{}}\newline
 Include dependency graph for file.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -10,8 +15,7 @@ Include dependency graph for file.\+hpp\+:\nopagebreak
 \includegraphics[width=350pt]{file_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,39 +33,38 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{namespacemml_1_1file_a024fab60fe782292eeeab6b68408cef9}{mml\+::file\+::add\+\_\+twofiles}} (std\+::string filepath\+\_\+input1, std\+::string filepath\+\_\+input2, std\+::string filepath\+\_\+output)
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_ac0621b8370119515421b5b6f097151f8}{mml\+::file\+::byte\+Copy}} (const std\+::string \&src, const std\+::string \&dest, std\+::size\+\_\+t num, std\+::size\+\_\+t block\+Size, bool progress=false, std\+::string fullsize=\char`\"{}\char`\"{})
-\item 
-uint32\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_aec330f1b16f99b02f1e9d93fbd4f618a}{mml\+::file\+::copy}} (shell\+::arg args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, std\+::string name\+\_\+in=\char`\"{}\char`\"{}, std\+::string name\+\_\+ex=\char`\"{}\char`\"{})
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a56a2dd74ae51d87843c003bf055e67fd}{mml\+::file\+::copy\+File}} (shell\+::arg args, std\+::string src, std\+::string dst)
-\item 
+\begin{DoxyCompactList}\small\item\em Opens two textfiles and writes it in another. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_1_1file_a3d0906e356f3e22593e89fcbec5760d7}{mml\+::file\+::byte\+Copy}} (const std\+::string \&src, const std\+::string \&dest, std\+::size\+\_\+t block\+Size, bool progress=false)
+\begin{DoxyCompactList}\small\item\em Copy a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacemml_1_1file_ae8b01165891f2bd5e3c85a2e35a1c999}{mml\+::file\+::copy}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, std\+::string name\+\_\+in=\char`\"{}\char`\"{}, std\+::string name\+\_\+ex=\char`\"{}\char`\"{}, size\+\_\+t blocksize=\mbox{\hyperlink{definitions_8hpp_ab8fa1cabe38c95b1cb91247e6c3fc963}{\+\_\+100\+MB}}, bool verbose=false, bool verbose\+\_\+debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite=false)
+\begin{DoxyCompactList}\small\item\em Copy the content of the path to a new one. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_1_1file_a5c59971f2c51414f4ecbc2b3ab40909a}{mml\+::file\+::equal}} (std\+::string src, std\+::string dst)
-\item 
+\begin{DoxyCompactList}\small\item\em Compare two files by using the SHA256 algorithm. Only works for linux. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}{mml\+::file\+::filetype}} (std\+::string filepath)
-\item 
+\begin{DoxyCompactList}\small\item\em Determine the type of an object (directory, file, etc.) \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}{mml\+::file\+::humanread}} (std\+::size\+\_\+t number)
-\item 
+\begin{DoxyCompactList}\small\item\em Convert number into human readable number. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4037d2ecadff2ef72d423f1c6f867834}{mml\+::file\+::num\+\_\+lines}} (std\+::string path)
-\item 
+\begin{DoxyCompactList}\small\item\em Determine number of lines in a file. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacemml_1_1file_a25b3681154f917c6ff8701e0c158bda2}{mml\+::file\+::\+Program\+\_\+exist}} (std\+::string program)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if a program exists. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}{mml\+::file\+::remove}} (std\+::string file)
 \item 
-void \mbox{\hyperlink{namespacemml_1_1file_adf2596a9fc0056a8e22d59508a7c34f4}{mml\+::file\+::set\+\_\+date}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, bool extend=true, bool verbose=false)
+void \mbox{\hyperlink{namespacemml_1_1file_ab5ecf6e0c681e2247b280aa094213a00}{mml\+::file\+::set\+\_\+date\+\_\+dir}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} src, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} dst, std\+::vector$<$ std\+::string $>$ ends=\{\char`\"{}NEF\char`\"{},\char`\"{}tif\char`\"{},\char`\"{}JPG\char`\"{},\char`\"{}jpg\char`\"{},\char`\"{}MP4\char`\"{},\char`\"{}MOV\char`\"{},\char`\"{}PNG\char`\"{},\char`\"{}HEIC\char`\"{},\char`\"{}JPEG\char`\"{},\char`\"{}jpeg\char`\"{},\char`\"{}pdf\char`\"{}, \char`\"{}PDF\char`\"{}\}, bool recursive=false, bool all=false, bool verbose=false)
 \item 
 std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a97e554f98e4d84fd1ac488fc1e44640d}{mml\+::file\+::size}} (const std\+::string \&filename)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_1_1file_acb9416915b68523578fdd80b0371bd5a}{mml\+::file\+::size\+\_\+human}} (const std\+::string \&filename, bool ausgabe=true)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_1_1file_afc475319ec2ac8be0b35883e9b371a94}{mml\+::file\+::size\+\_\+dir}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} args, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \&dir, bool ausgabe=false, std\+::string include=\char`\"{}\char`\"{}, std\+::string exclude=\char`\"{}\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the size of a file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1file_a1e60700072106e647f20640b94ecba55}{mml\+::file\+::size\+\_\+human}} (const std\+::string \&filename, bool verbose=true)
+\begin{DoxyCompactList}\small\item\em Calculates the size of a file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1file_a40d0377087a89cba13e0171ab5172a31}{mml\+::file\+::size\+\_\+dir}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \&dir, std\+::string include=\char`\"{}\char`\"{}, std\+::string exclude=\char`\"{}\char`\"{}, bool verbose=false, bool recursive=false, bool all=false, bool human\+\_\+readable=false) noexcept
+\begin{DoxyCompactList}\small\item\em Calculates the size of a directory structure. \end{DoxyCompactList}\item 
 time\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_aa040614064fb83b0548804e7a2b4aeb5}{mml\+::file\+::time\+\_\+mod}} (const std\+::string \&filename)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the last modified time of a file in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+This file includes functions regarding the files. It might only work on linux as some commands might be os-\/dependent. The main function of here is to copy files. It also has other functions such as checking if a file exists. 
+
 \begin{DoxyAuthor}{Author}
-Mike Moser
+Mike Moser 
 \end{DoxyAuthor}
-@description This file includes functions regarding the files. It might only work on linux as some commands might be os-\/dependent. The main function of here is to copy files. It also has other functions such as checking if a file exists 

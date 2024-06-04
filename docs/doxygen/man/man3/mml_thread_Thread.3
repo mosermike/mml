@@ -1,4 +1,4 @@
-.TH "mml::thread::Thread" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::thread::Thread" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,7 +7,7 @@ mml::thread::Thread
 .br
 .PP
 .PP
-\fC#include <Thread\&.hpp>\fP
+\fC#include <thread\&.hpp>\fP
 .SS "Public Member Functions"
 
 .in +1c
@@ -29,21 +29,27 @@ mml::thread::Thread
 .ti -1c
 .RI "void \fBthread_writing_true\fP ()"
 .br
+.RI "Set this thread to active writing\&. "
 .ti -1c
 .RI "void \fBthread_writing_false\fP ()"
 .br
+.RI "Set this thread to not actively writing\&. "
 .ti -1c
 .RI "bool \fBis_writing_active\fP ()"
 .br
+.RI "Checks if the thread is writing\&. "
 .ti -1c
 .RI "void \fBthread_sleep\fP (float second)"
 .br
+.RI "Sleep for a while\&. "
 .ti -1c
 .RI "void \fBthread_sleep_millisecond\fP (uint32_t millisecond)"
 .br
+.RI "Sleep for a while\&. "
 .ti -1c
 .RI "bool \fBwaiting\fP (int a=0)"
 .br
+.RI "Waits if many threads are writing if a not used, not always the same order of writing\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -56,6 +62,15 @@ mml::thread::Thread
 .SH "Member Function Documentation"
 .PP 
 .SS "bool mml::thread::Thread::is_writing_active ()"
+
+.PP
+Checks if the thread is writing\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true = is writing 
+.RE
+.PP
 
 .SS "\fBThread\fP& mml::thread::Thread::operator= (const \fBThread\fP & thread_temp)\fC [inline]\fP"
 
@@ -76,55 +91,55 @@ Mike
 .SS "void mml::thread::Thread::thread_sleep (float second)"
 
 .PP
-\fBNote\fP
-.RS 4
-Versetzt den aktuellen \fBThread\fP in den Sleep-Modus
-.RE
+Sleep for a while\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fIsecond\fP Sleep for so many seconds 
 .RE
 .PP
 
 .SS "void mml::thread::Thread::thread_sleep_millisecond (uint32_t millisecond)"
 
+.PP
+Sleep for a while\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImillisecond\fP Sleep for so many miliseconds 
+.RE
+.PP
+
 .SS "void mml::thread::Thread::thread_writing_false ()"
 
+.PP
+Set this thread to not actively writing\&. 
 .SS "void mml::thread::Thread::thread_writing_true ()"
 
 .PP
-\fBNote\fP
-.RS 4
-aktuelles Schreiben aktiv oder nicht aktiv setzen und dessen Abfrage
-.RE
+Set this thread to active writing\&. 
 .PP
 \fBAuthor\fP
 .RS 4
-Mike
-.PP
 Mike Moser
 .RE
 .PP
-Programm: \fBThread\&.cpp\fP
+Programm: Thread\&.cpp
 .PP
 Enthält verschiedene Funktionen für Threads 
 .SS "bool mml::thread::Thread::waiting (int a = \fC0\fP)"
 
 .PP
-\fBNote\fP
+Waits if many threads are writing if a not used, not always the same order of writing\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Wartefunktion beim mehrfachen Schreiben Nicht immer gleiche Reihenfolge, wenn a nicht verwendet\&.
+\fIa\fP wait for so many miliseconds\&. if a = 0 => random number is created in milliseconds 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-true, wenn kein \fBThread\fP mehr schreiben will 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+true, when no thread is writing 
 .RE
 .PP
 

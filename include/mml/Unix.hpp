@@ -3,7 +3,7 @@
  * : 
  * : @name Unix.hpp
  * :
- * : @note Enthält verschiedene Funktionen für unixspezifische Funktionen
+ * : @brief Contains different functions and the class Unix for unix-specific things
  * : 
 */
 
@@ -65,69 +65,70 @@ namespace mml{
 				  
 			
 			/**
-			 * @note Gibt verschiedene Werte zurück zur Initialisierung
-			 * 
-			 * @return gesuchter Wert
-			 * @author Mike
+			 * @brief Returns different values for initialisation			 * 
+			 * @return searched value
 			 */
-			std::string geteuser();						// Gibt den effektiven User zurück, der den Prozess ausführt
+			std::string geteuser();						// Returns the effective user who executes this process
 			std::string getlocale();					// Returns the language of the user
-			std::string getloginname();					// Gibt den Loginname zurück
-			std::string gethomedir();					// Gibt den Home-Pfad zurück
-			std::string getip(std::string iface);		// Gibt die aktuelle IP-Adresse des Wlan-Moduls zurück
-			std::string getdefaultshell();				// Gibt die default Shell zurück
-			std::string getdomain();					// Gibt die aktuelle Domain zurück
-			std::string gethost();						// Gibt den Namen des PC's zurück
-			uid_t getloginuid();						// gibt die eingeloogte UID zurück
-			gid_t getlogingid();						// Gibt die eingeloggte GID zurück
-			std::vector<gid_t> getgrgid();				//** Gibt die verschiedenen GIDs zurück, in dem der aktuelle User ist @note Größe achten(50) **/ 
-// 			const std::vector<mml::string> getgrlist();	// Gibt alle Gruppen zurück, in dem der aktuelle User ist
-			const std::vector<mml::string> getgrlist();	// Gibt alle Gruppen zurück, in dem der aktuelle User ist
+			std::string getloginname();					// Returns the login name
+			std::string gethomedir();					// Returns the home path
+			std::string getip(std::string iface);		// Returns the actual IP address of the wifi module
+			std::string getdefaultshell();				// Returns the default shell
+			std::string getdomain();					// Returns the current domain name
+			std::string gethost();						// Returns the host name
+			uid_t getloginuid();						// Returns the UID of the logged in user
+			gid_t getlogingid();						// Returns the GID of the logged in user
+			std::vector<gid_t> getgrgid();				// Returns the different groups (only of the current user?)
+			const std::vector<mml::string> getgrlist();	// Returns the different groups of the current user
 			
 
 		public:
 			User() {};
-			// Mit Initialisierung eines Vektors:
-			User(const User &User_copy) {pw = User_copy.pw;}	// Kopierkonstruktor
 			
-			// Als Kopierkonstruktor:
+			User(const User &User_copy) {pw = User_copy.pw;}
+			
+			
 			User &operator=(const User &User_temp){
 				pw = User_temp.pw;
 				return *this;
 			}
 			
 			/**
-			 * @note Username vergleichen
-			 * 
-			 * @return true oder false
-			 * @author Mike
+			 * @brief User name equal to a user
+			 * @param testuser User Name
+			 * @return true if users are the same
 			 */
 			bool operator==(std::string testuser);
+			/**
+			 * @brief User not name equal to a user
+			 * @param testuser User Name
+			 * @return true if users are different
+			 */
 			bool operator!=(const std::string testuser);
 			
 			/**
-			 * @note UID vergleichen
-			 * 
-			 * @return true oder false
-			 * @author Mike
+			 * @brief Compare the UID (equal)
+			 * @param testuid UID to be tested
+			 * @return true if UID are the same
 			 */
 			bool operator==(uid_t testuid);
+			
+			/**
+			 * @brief Compare the UID (unequal)
+			 * @param testuid UID to be tested
+			 * @return true if UID are different
+			 */
 			bool operator!=(uid_t testuid);
 			
-			
-						
-
 			/**
-			 * @note Infos aktualisieren
-			 * 
-			 * @author Mike
+			 * @brief Refresh actual path
+			 * @return Actual path
 			 */
 			mml::string setPWD();
 			
 			/**
-			 *  @note User Daten zurückgeben an Programm
-			 * 
-			 * @author Mike
+			 * @brief Retur User Data
+			 * @return return the wished user information
 			 */
 			uid_t						get_euid()		{ return this->uid;}			// Executing UID
 			uid_t						get_uid()		{ return this->login_uid;}		// Login UID
@@ -148,18 +149,18 @@ namespace mml{
 
 			
 			/**
-			 * @note Printing out information
-			 * 
-			 * @author Mike
+			 * @brief Printing out information
+			 * @param output Determines which information is printed
+			 *         Options are: uid, login_uid, gid, login_gid, username, loginname, home, defaultshell, host, hostname, iw, ie, domain, path, pwd, groups
 			 */
 			void cout(mml::string output);
 			
 			/** 
-			 * @note Checking whether this option exists and if yes, then return 
+			 * @brief Checking whether this option exists and if yes, then return 
 			 * 
-			 * @param 
-			 * @return true, wenn gleich
-			 * @author Mike
+			 * @param option which option (the same values as the output variable in `cout`)
+			 * @param value Value to be checked for
+			 * @return true, if equal
 			 */
 			bool check(mml::string option, int value);
 			bool check(mml::string option, std::string value);
@@ -168,29 +169,32 @@ namespace mml{
 		};
 		
 		/**
-		 * @note Gibt die UID des Eigentümers einer Datei aus
+		 * @brief Mount a network partition of type CIFS
 		 * 
-		 * @param char* Path to file
-		 * @return UID Nummer der Datei/Ordner
 		 * @author Mike
+		 */
+		uint32_t cifs(std::string src, std::string dst , mml::string fstype, std::string user , std::string pass);
+
+		/**
+		 * @brief Determine UID of a file
+		 * @param char* Path to file
+		 * @return UID Number
 		 */
 		uid_t getFileUID (const char* file); 
 		
 		/**
-		 * @note Informationen über einen Benutzer
-		 * 
-		 * @return UID oder GID eines Benutzers
-		 * @author Mike
+		 * @brief Information about the user
+		 * @return UID or GID of a user
 		 */
 		char* getHost ();
 		uid_t getUserIdByName(const char *name);
 		gid_t getGroupIdByName(const char *name);
 		
 		/**
-		 * @note Überprüft, ob ein oder mehrerer Pfad existiert
+		 * @brief Checks if a path exists
 		 * 
 		 * @param string Path(s) to be checked
-		 * @return true, wenn existent
+		 * @return true, if all exists
 		 * @author Mike
 		 */
 		bool exist(std::string path);
@@ -198,73 +202,94 @@ namespace mml{
 		bool exist(std::string path1, std::string path2, std::string path3);
 		
 		/**
-		 * @note Typ bestimmen, ob das Ziel eine Datei, Ordner etc. ist
-		 * 
+		 * @brief Determine the type of an object
 		 * @param string Filepath
-		 * @return Gibt eine Zahl zurück. Interpretierung siehe definitions.hpp
-		 * @author Mike
+		 * @return number corresponding to the type of the object
+		 * @note The numbers have the following meaning:
+		 * -  1: DT_FIFO
+		 * -  2: Serial connected device, mouse, etc.
+		 * -  4: Directory
+		 * -  6: Device or partition
+		 * -  8: normal file
+		 * - 10: symbolic link
+		 * - 12: Socket
 		*/
 		int32_t  filetype(std::string filepath);
+
 		/**
-		 * @note Gibt den Namen zu einem PID zurück
-		 * 
+		 * @brief Returns the name of a PID
 		 * @param pid_t PID of the process
-		 * @return Prozessname zur passenden PID
-		 * @author Mike
+		 * @return process name
 		 */
 		mml::string get_process_name_by_pid(const pid_t pid);
 		
 		/**
-		 * @note Gibt die Prozesszahl zurück
-		 * 
+		 * @brief returns the process number of a process name
+		 * @param process Process Name
+		 * @param start Start Value to look for the PID number
 		 * @return PID
-		 * @author Mike
 		 */
 		pid_t get_pid_by_process_name(const std::string process, int start = 0);
 		
 		/**
-		 * @note Erstellen von Ordnern
-		 * 
-		 * @return true, wenn erfolgreich
-		 * @author Mike
+		 * @brief Create a directory
+		 * @return true, if successfull
+		 * @throw runtime_error : if directory already exists as a non-directory
 		 */		
 		bool mkdir_p(std::string value);
 		
 		/**
-		 * @note Berechtigung zurückgeben
-		 * 
-		 * @return mml::string
-		 * @author Mike
+		 * @brief mount a directory with password input
+		 * @param mountpath Path to the partition which should be mounted
+		 * @param mountpoint where the partition should be mounted
+		 * @param controlpoint diretory in the mounted partition to check if it is successfully mounted
+		 * @param user Username 
+		 * @return Password
+		*/
+		std::string mount_Dir(std::string mountpath, string mountpoint, string controlpoint, std::string user, std::string pass1, const char* fstype, int count);
+	
+		/**
+		 * @brief Check permissions
+		 * @param path Path to the object to be checked
+		 * @return permissions in octal format
 		 */
 		mml::string perms(std::string path);
 
 		/**
-		 * @note Berechtigung zu schreiben
-		 * 
+		 * @brief chekc if user has permission to write
+		 * @param path Path to check for the permission
 		 * @return bool
 		 * @author Mike
 		 */
 		bool perm_to_write(std::string path);
 
 		/**
-		 * @note Änderungsdatum setzen von einer Datei auf die andere
+		 * @brief Deletes a directory structure
+		 * 
+		 * @param file String to what should be removed
+		 * @return true, if successful
+		 **/
+		void remove(std::string file);
+
+		/**
+		 * @brief Change date of a file from another
 		 * 
 		 * @param src_file Source file
 		 * @param dst_file Destination file
 		 * @param verbose Verbose output
-		 * @return true, wenn erfolgreich
-		 * @author Mike
+		 * @return true, if successful
 		 **/
 		bool set_date(std::string src_file, std::string dst_file, bool verbose = false);
 
+
 		/**
-		 * @note Deletes a directory structure
+		 * @brief Unmount a partition
 		 * 
-		 * @param file String to what should be removed
-		 * @return true, wenn erfolgreich
-		 * @author Mike
-		 **/
-		void remove(std::string file);
+		 * @param args Arguments passed to the function
+		 * @param mountpath String, where the directory is mounted
+		 * @return bool
+		*/
+		bool unmount_dir(std::string mount_dir, std::string controlpoint = "");
 	}
 }
 

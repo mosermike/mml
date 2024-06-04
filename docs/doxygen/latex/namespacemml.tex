@@ -29,36 +29,52 @@ class \mbox{\hyperlink{classmml_1_1vector}{vector}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_a5e1f7079411db351da5fb53576413d38}{atob}} (const templ \&t)
+{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_ac91ad57c28ab9cecb7e82ef220f148c8}{atob}} (const templ \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to bool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a63d35e02eeb9557dfc874c351694a481}{atof}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to bool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_ac6c1c70d32321714808ae64e33404d71}{atoi}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to int. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_ae91f369e368b0941ddcb8b5be38c36f9}{cout}} (std\+::vector$<$ templ $>$ const \&vec) noexcept
 \item 
-{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}{atof}} (const T \&t)
-\item 
-{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_a149a900d1e48e37c56481964c79aa9b4}{atoi}} (const T \&t)
-\item 
-{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_af9e4a0ff0d5308ede2e315150e566529}{cout}} (std\+::vector$<$ templ $>$ const \&vec)
-\item 
-{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a21e76265e9a8d7091fe7068aee432c39}{to\+\_\+string}} (const T \&t)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a76d259a94d9ed50a9d33081caed25131}{to\+\_\+string}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Convert value to \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}. \end{DoxyCompactList}\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}{const\+\_\+string\+\_\+hash}} (const char $\ast$\mbox{\hyperlink{classmml_1_1string}{string}}) noexcept
+\begin{DoxyCompactList}\small\item\em Forms a hash value of a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_aed237a2c04babbcae30d180ab047666f}{erase}} (std\+::vector$<$ templ $>$ \&data) noexcept
+\begin{DoxyCompactList}\small\item\em Empty a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ standards.\+cpp}\par
-{\em \begin{DoxyAuthor}{Author}
-Mike Moser
+{\em Contains different standard functions of this library
+
+\begin{DoxyAuthor}{Author}
+Mike Moser 
 \end{DoxyAuthor}
-Enthält verschiedene Standardfunktionen }\begin{DoxyCompactItemize}
+}\begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{})
-\item 
-uint32\+\_\+t \mbox{\hyperlink{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}{date}} (int info, time\+\_\+t time1=-\/1)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_acd2059d85ff229714514fba5add6c391}{date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{})
-\item 
-bool \mbox{\hyperlink{namespacemml_a676559a7059429aac4066ebac5fbca36}{is\+\_\+num}} (char c)
-\item 
-bool \mbox{\hyperlink{namespacemml_a1d79d75734ea118c10fc391ab2231d56}{range}} (std\+::size\+\_\+t number)
-\item 
-bool \mbox{\hyperlink{namespacemml_aef4479907a5a2ee42d0d0099e5525b5c}{range}} (std\+::size\+\_\+t, std\+::size\+\_\+t)
-\item 
-double \mbox{\hyperlink{namespacemml_a2cf98422c1355b3c351820b70b2834ba}{round}} (double number, uint16\+\_\+t digits)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemml_a4e23041702a789444e71665de8e19b91}{date}} (int info, time\+\_\+t time1=-\/1) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the wished info from the time (like date etc.) Options are\+: \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}{date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the actual date and/or time as a std\+::string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_ac687254476eb5589ff145f7ccb8f203b}{is\+\_\+num}} (char c) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a character is a number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_ad1fcba2487a959000bac06da539b792c}{range}} (std\+::size\+\_\+t number) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a number has reached the maximum value (std\+::string\+::npos) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}{range}} (std\+::size\+\_\+t, std\+::size\+\_\+t) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if one of two numbers has reached the maximum value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}{round}} (double number, uint16\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{digits}}) noexcept
+\begin{DoxyCompactList}\small\item\em round a number \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a09b5d2051c67d0ee351b09f87c30126d}{declare\+\_\+month}} (int month\+\_\+nr) noexcept
+\begin{DoxyCompactList}\small\item\em Convert month number to month string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_a16e784b078d6a774ffaf01ef4d4c7647}{get\+\_\+random}} (templ min=0, templ max=100) noexcept
+\begin{DoxyCompactList}\small\item\em Create a random number in a defined range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_ae9a2f37b5fb1e8e463509077bbe11212}{smallest\+\_\+num}} (std\+::vector$<$ templ $>$ values, std\+::size\+\_\+t pos=0)
+\begin{DoxyCompactList}\small\item\em Return the smallest number. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a171afac262e291910b6f222216263b35}{random\+\_\+str}} (size\+\_\+t letters=10, std\+::string start=\char`\"{}\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Create a random, lower-\/case string. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{digits}} (double number) noexcept
+\begin{DoxyCompactList}\small\item\em Determine number of digits of a double number. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 
@@ -69,101 +85,129 @@ Mike Moser
 Bibliothek shell.\+h Enthält verschiedene Funktionen mit namespace shell 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacemml_a5e1f7079411db351da5fb53576413d38}\label{namespacemml_a5e1f7079411db351da5fb53576413d38}} 
+\mbox{\Hypertarget{namespacemml_ac91ad57c28ab9cecb7e82ef220f148c8}\label{namespacemml_ac91ad57c28ab9cecb7e82ef220f148c8}} 
 \index{mml@{mml}!atob@{atob}}
 \index{atob@{atob}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{atob()}{atob()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-double mml\+::atob (\begin{DoxyParamCaption}\item[{const templ \&}]{t }\end{DoxyParamCaption})}
+double mml\+::atob (\begin{DoxyParamCaption}\item[{const templ \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Converts value to bool
+
+
+Converts value to bool. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em templ} & Value \\
+{\em t} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}\label{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}} 
+\mbox{\Hypertarget{namespacemml_a63d35e02eeb9557dfc874c351694a481}\label{namespacemml_a63d35e02eeb9557dfc874c351694a481}} 
 \index{mml@{mml}!atof@{atof}}
 \index{atof@{atof}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{atof()}{atof()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-double mml\+::atof (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
+double mml\+::atof (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Converts value to bool
+
+
+Converts value to bool. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em templ} & Value \\
+{\em t} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 double 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a149a900d1e48e37c56481964c79aa9b4}\label{namespacemml_a149a900d1e48e37c56481964c79aa9b4}} 
+\mbox{\Hypertarget{namespacemml_ac6c1c70d32321714808ae64e33404d71}\label{namespacemml_ac6c1c70d32321714808ae64e33404d71}} 
 \index{mml@{mml}!atoi@{atoi}}
 \index{atoi@{atoi}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{atoi()}{atoi()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-int mml\+::atoi (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
+int mml\+::atoi (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Converts value to int
+
+
+Converts value to int. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em templ} & Value \\
+{\em t} & Value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 \mbox{\Hypertarget{namespacemml_af4da79098c1caf9501e3f4ad9313a573}\label{namespacemml_af4da79098c1caf9501e3f4ad9313a573}} 
 \index{mml@{mml}!check\_root@{check\_root}}
 \index{check\_root@{check\_root}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{check\_root()}{check\_root()}}
 {\footnotesize\ttfamily bool mml\+::check\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::string}]{programme = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
-Check if program executed as root 
+
+
+Check if program executed as root. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em std\+::string,optional} & Programme name \\
+{\em programme} & Programme name \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemml_af9e4a0ff0d5308ede2e315150e566529}\label{namespacemml_af9e4a0ff0d5308ede2e315150e566529}} 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if user is not root \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}\label{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}} 
+\index{mml@{mml}!const\_string\_hash@{const\_string\_hash}}
+\index{const\_string\_hash@{const\_string\_hash}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{const\_string\_hash()}{const\_string\_hash()}}
+{\footnotesize\ttfamily constexpr uint32\+\_\+t mml\+::const\+\_\+string\+\_\+hash (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Forms a hash value of a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & String to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Hash value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_ae91f369e368b0941ddcb8b5be38c36f9}\label{namespacemml_ae91f369e368b0941ddcb8b5be38c36f9}} 
 \index{mml@{mml}!cout@{cout}}
 \index{cout@{cout}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{cout()}{cout()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-void mml\+::cout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ templ $>$ const \&}]{vec }\end{DoxyParamCaption})}
+void mml\+::cout (\begin{DoxyParamCaption}\item[{std\+::vector$<$ templ $>$ const \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 Prints the values of a vector
 
 
 \begin{DoxyParams}{Parameters}
-{\em std\+::vector$<$templ$>$} & Vector to be printed \\
+{\em vec} & Vector to be printed \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}\label{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}} 
+\mbox{\Hypertarget{namespacemml_a4e23041702a789444e71665de8e19b91}\label{namespacemml_a4e23041702a789444e71665de8e19b91}} 
 \index{mml@{mml}!date@{date}}
 \index{date@{date}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{date()}{date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily uint32\+\_\+t mml\+::date (\begin{DoxyParamCaption}\item[{int}]{info,  }\item[{time\+\_\+t}]{time1 = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily uint32\+\_\+t mml\+::date (\begin{DoxyParamCaption}\item[{int}]{info,  }\item[{time\+\_\+t}]{time1 = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Returns the wished info from the time (like date etc.) Options are\+:
+
+
+Returns the wished info from the time (like date etc.) Options are\+: 
+
+
 \begin{DoxyItemize}
 \item 0\+: Seconds
 \item 1\+: Minutes
@@ -179,9 +223,9 @@ Returns the wished info from the time (like date etc.) Options are\+:
 
 
 \begin{DoxyParams}{Parameters}
-{\em int} & Determines what information is printed \\
+{\em info} & Determines what information is printed \\
 \hline
-{\em time\+\_\+t} & Time for which the information is printed. -\/1 =$>$ Actual time now. \\
+{\em time1} & Time for which the information is printed. -\/1 =$>$ Actual time now. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -190,15 +234,19 @@ unsigned integer
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_acd2059d85ff229714514fba5add6c391}\label{namespacemml_acd2059d85ff229714514fba5add6c391}} 
+\mbox{\Hypertarget{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}\label{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}} 
 \index{mml@{mml}!date@{date}}
 \index{date@{date}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{date()}{date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value,  }\item[{std\+::string}]{separator1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{separator2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value,  }\item[{std\+::string}]{separator1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{separator2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Returns the actual date and/or time as a std\+::string 
+
+
+Returns the actual date and/or time as a std\+::string. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}} & Determines what information is printed.
+{\em value} & Determines what information is printed.
 \begin{DoxyItemize}
 \item \char`\"{}\+Date\char`\"{} \+: DD.\+MM.\+YYYY (based on separator1)
 \item \char`\"{}\+Time\char`\"{} \+: HH\+:\+MM\+:SS (based on separator1)
@@ -206,9 +254,9 @@ Returns the actual date and/or time as a std\+::string
 \item \char`\"{}\+Date1+\+Time\char`\"{} \+: Compete date in format YYYY.\+MM.\+DD HH\+:\+MM\+:SS. 
 \end{DoxyItemize}\\
 \hline
-{\em std\+::string,optional} & First separation sign for the date \\
+{\em separator1} & First separation sign for the date \\
 \hline
-{\em std\+::string,optional} & Second separation sign for the time\\
+{\em separator2} & Second separation sign for the time\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -217,94 +265,212 @@ std\+::string
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a676559a7059429aac4066ebac5fbca36}\label{namespacemml_a676559a7059429aac4066ebac5fbca36}} 
+\mbox{\Hypertarget{namespacemml_a09b5d2051c67d0ee351b09f87c30126d}\label{namespacemml_a09b5d2051c67d0ee351b09f87c30126d}} 
+\index{mml@{mml}!declare\_month@{declare\_month}}
+\index{declare\_month@{declare\_month}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{declare\_month()}{declare\_month()}}
+{\footnotesize\ttfamily std\+::string mml\+::declare\+\_\+month (\begin{DoxyParamCaption}\item[{int}]{month\+\_\+nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Convert month number to month string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em month\+\_\+nr} & Month as a number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the month as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}\label{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}} 
+\index{mml@{mml}!digits@{digits}}
+\index{digits@{digits}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{digits()}{digits()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::digits (\begin{DoxyParamCaption}\item[{double}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Determine number of digits of a double number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & the number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of digits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_aed237a2c04babbcae30d180ab047666f}\label{namespacemml_aed237a2c04babbcae30d180ab047666f}} 
+\index{mml@{mml}!erase@{erase}}
+\index{erase@{erase}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename templ $>$ \\
+void mml\+::erase (\begin{DoxyParamCaption}\item[{std\+::vector$<$ templ $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Empty a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Reference to the vector to be erased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemml_a16e784b078d6a774ffaf01ef4d4c7647}\label{namespacemml_a16e784b078d6a774ffaf01ef4d4c7647}} 
+\index{mml@{mml}!get\_random@{get\_random}}
+\index{get\_random@{get\_random}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{get\_random()}{get\_random()}}
+{\footnotesize\ttfamily template$<$typename templ $>$ \\
+templ mml\+::get\+\_\+random (\begin{DoxyParamCaption}\item[{templ}]{min = {\ttfamily 0},  }\item[{templ}]{max = {\ttfamily 100} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Create a random number in a defined range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Lowest Number \\
+\hline
+{\em max} & Highes Number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+generated random number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_ac687254476eb5589ff145f7ccb8f203b}\label{namespacemml_ac687254476eb5589ff145f7ccb8f203b}} 
 \index{mml@{mml}!is\_num@{is\_num}}
 \index{is\_num@{is\_num}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{is\_num()}{is\_num()}}
-{\footnotesize\ttfamily bool mml\+::is\+\_\+num (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool mml\+::is\+\_\+num (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Checks if a character is a number 
+
+
+Checks if a character is a number. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em char} & Character to be checked \\
+{\em c} & Character to be checked \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemml_a1d79d75734ea118c10fc391ab2231d56}\label{namespacemml_a1d79d75734ea118c10fc391ab2231d56}} 
-\index{mml@{mml}!range@{range}}
-\index{range@{range}!mml@{mml}}
-\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool mml\+::range (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{number }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespacemml_a171afac262e291910b6f222216263b35}\label{namespacemml_a171afac262e291910b6f222216263b35}} 
+\index{mml@{mml}!random\_str@{random\_str}}
+\index{random\_str@{random\_str}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{random\_str()}{random\_str()}}
+{\footnotesize\ttfamily std\+::string mml\+::random\+\_\+str (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{letters = {\ttfamily 10},  }\item[{std\+::string}]{start = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Überprüfen, ob maximalert Wert von std\+::size\+\_\+t erreicht
-\end{DoxyNote}
+
+
+Create a random, lower-\/case string. 
+
 
 \begin{DoxyParams}{Parameters}
-{\em number} & Number to be checked\\
+{\em letters} & Number of letters \\
+\hline
+{\em start} & Add the generated characters to this string \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true (kleiner als max Wert) oder false 
+generated string 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_aef4479907a5a2ee42d0d0099e5525b5c}\label{namespacemml_aef4479907a5a2ee42d0d0099e5525b5c}} 
+\mbox{\Hypertarget{namespacemml_ad1fcba2487a959000bac06da539b792c}\label{namespacemml_ad1fcba2487a959000bac06da539b792c}} 
+\index{mml@{mml}!range@{range}}
+\index{range@{range}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool mml\+::range (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Checks if a number has reached the maximum value (std\+::string\+::npos) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \+: smaller than the maximum value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}\label{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}} 
 \index{mml@{mml}!range@{range}}
 \index{range@{range}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool mml\+::range (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{number1,  }\item[{std\+::size\+\_\+t}]{number2 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool mml\+::range (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{number1,  }\item[{std\+::size\+\_\+t}]{number2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Überprüfen, ob maximalert Wert von std\+::size\+\_\+t erreicht
-\end{DoxyNote}
+
+
+Checks if one of two numbers has reached the maximum value. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em number1} & Number to be checked \\
 \hline
-{\em number2} & Number to be checked\\
+{\em number2} & Number to be checked \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true (kleiner als max Wert) oder false 
+true \+: at least one number is smaller than the max. value 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a2cf98422c1355b3c351820b70b2834ba}\label{namespacemml_a2cf98422c1355b3c351820b70b2834ba}} 
+\mbox{\Hypertarget{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}\label{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}} 
 \index{mml@{mml}!round@{round}}
 \index{round@{round}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{round()}{round()}}
-{\footnotesize\ttfamily double mml\+::round (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{uint16\+\_\+t}]{digits }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double mml\+::round (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{uint16\+\_\+t}]{digits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Zahl runden
-\end{DoxyNote}
+
+
+round a number 
+
 
 \begin{DoxyParams}{Parameters}
 {\em number} & Number which is rounded \\
 \hline
-{\em digits} & To which digit it is rounded\\
+{\em digits} & To which digit it is rounded \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-gerundete double Zahl 
+round number 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a21e76265e9a8d7091fe7068aee432c39}\label{namespacemml_a21e76265e9a8d7091fe7068aee432c39}} 
+\mbox{\Hypertarget{namespacemml_ae9a2f37b5fb1e8e463509077bbe11212}\label{namespacemml_ae9a2f37b5fb1e8e463509077bbe11212}} 
+\index{mml@{mml}!smallest\_num@{smallest\_num}}
+\index{smallest\_num@{smallest\_num}!mml@{mml}}
+\doxysubsubsection{\texorpdfstring{smallest\_num()}{smallest\_num()}}
+{\footnotesize\ttfamily template$<$typename templ $>$ \\
+templ mml\+::smallest\+\_\+num (\begin{DoxyParamCaption}\item[{std\+::vector$<$ templ $>$}]{values,  }\item[{std\+::size\+\_\+t}]{pos = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Return the smallest number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Values as a vector \\
+\hline
+{\em pos} & Start position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+smallest number 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if type is non-\/arithmetic \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacemml_a76d259a94d9ed50a9d33081caed25131}\label{namespacemml_a76d259a94d9ed50a9d33081caed25131}} 
 \index{mml@{mml}!to\_string@{to\_string}}
 \index{to\_string@{to\_string}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})}
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Wert in \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} umwandeln
-\end{DoxyNote}
+
+
+Convert value to \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}. 
+
 
 \begin{DoxyParams}{Parameters}
 {\em t} & Value to be changed \\
@@ -313,6 +479,3 @@ Wert in \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} umwandeln
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}

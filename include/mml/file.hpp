@@ -2,7 +2,7 @@
  * @author Mike Moser
  * 
  * @file file.hpp
- * @description This file includes functions regarding the files. It might only work on linux as some
+ * @brief This file includes functions regarding the files. It might only work on linux as some
  *              commands might be os-dependent. The main function of here is to copy files. It also has
  *              other functions such as checking if a file exists
  * 
@@ -12,83 +12,97 @@
 #define MML_INCLUDE_MML_FILE_HPP
 
 #include <functional>
-#include "mml/functions.hpp"
 #include <iostream>
+
+#include "mml/standards.hpp"
 
 namespace mml{
 	namespace file{
 		
 		/**
-		 * @note Zwei Dateien zu einer zusammenfügen
-		 * 
-		 * @author Mike
+		 * @brief Opens two textfiles and writes it in another
+		 * @param filepath_input1 First file name to be written into a new one
+		 * @param filepath_input2 First file name to be written into a new one
+		 * @param filepath_output where the content is written to
+		 * @throw runtime_error : if input1 or input2 cannot be read
 		 */ 
 		void add_twofiles( std::string filepath_input1 , std::string filepath_input2 , std::string filepath_output);
 		
 		/**
-		 * @note Kopiervorgang einer Datei mit/ohne Fortschrittsanzeige
-		 * 
-		 * @return Länge von Gesamtgröße
+		 * @brief Copy a file
+		 * @param src Source File
+		 * @param dest Destination file
+		 * @param blockSize Size of the block to be copied at once
+		 * @param progress Print out a progress bar
+		 * @return bool
+		 * @throw runtime_error : if source file does not exist
 		 * @author Mike, Lucas
 		 */ 
-		std::size_t byteCopy(const std::string& src, const std::string& dest, std::size_t num, std::size_t blockSize, bool progress = false, std::string fullsize = "");
+		bool byteCopy(const std::string& src, const std::string& dest, std::size_t blockSize, bool progress = false);
 		
 		/**
-		 * @note Kopiert einen Quellpfad zu einem Quellpfad
-		 * 
-		 * @author Mike
+		 * @brief Copy the content of the path to a new one
+		 * @param src Source Path
+		 * @param dst Destination path
+		 * @param name_in Copy only files including this string in depth = 1
+		 * @param name_ex Exclude all files and directories with this name
+		 * @param blocksize Blocksize to be copied at once
+		 * @param verbose Verbose output
+		 * @param verbose_debug Debugging output
+		 * @param all Copy also hidden files
+		 * @param recursive Copy recursive
+		 * @param progress Print out the progress while copying
+		 * @param falsewrite Do not overwrite files in the destination
+		 * @return 0 if successfull
+		 * @throw logic_error : If a file is to be copied but dst is a directory
+		 * @throw logic_error : If destination exists as a file if a directory is copied
+		 * @throw runtime_error : If user is not permitted to write into the destination
+		 * @throw runtime_error : If last directory in destionation is not a directory
 		 */
-		uint32_t copy (shell::arg args, mml::string src, mml::string dst, std::string name_in = "", std::string name_ex = "");
-
-		/**
-		 * @note Copy a file with determining the block size from the arguments
-		 * 
-		 * @param arg Arguments from the shell
-		 * @param string Source
-		 * @param string Destination
-		 * @param string Copy only files where this string exists
-		 * @param string Copy only files where this string does not exist
-		 *
-		 * @author Mike
-		 */
-		std::size_t copyFile(shell::arg args,std::string src, std::string dst);
+		int copy (mml::string src, mml::string dst, std::string name_in = "", std::string name_ex = "", size_t blocksize = _100MB, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite = false);
 		
 		/**
-		 * @note Compare two files by using the SHA256 algorithm. Only works for linux.
-		 * 
-		 * @author Mike
+		 * @brief Compare two files by using the SHA256 algorithm. Only works for linux.
+		 * @param src Source file
+		 * @param dst Destination file
+		 * @return bool if sha256 is the same
 		 */
 		bool equal(std::string src, std::string dst);
 		
 		/**
-		 * @note Determine the type of an object (directory, file, etc.)
-		 * @param string Path to the object
-		 * @return Returns a number. For interpretation look at definitions.hpp
-		 * @author Mike
+		 * @brief Determine the type of an object (directory, file, etc.)
+		 * @param filepath Path to the object
+		 * @return Returns a number to identify the type of the object
+		 * @note The numbers have the following meaning:
+		 * -  1: DT_FIFO
+		 * -  2: Serial connected device, mouse, etc.
+		 * -  4: Directory
+		 * -  6: Device or partition
+		 * -  8: normal file
+		 * - 10: symbolic link
+		 * - 12: Socket
 		*/
 		int32_t  filetype(std::string filepath);
 		
 		/**
-		 * @note Convert number into human readable number
-		 * @param size_t A number to be converted
+		 * @brief Convert number into human readable number
+		 * @param number A number to be converted
 		 * @return std::string
-		 * @author Mike
 		 */
 		std::string humanread(std::size_t number);
 
 		/**
-		 * @note Determine number of lines in a file
+		 * @brief Determine number of lines in a file
 		 * @param string Path to the file
 		 * @return size_t Number of lines
-		 * @author Mike
 		 */
 		std::size_t num_lines(std::string path);
 		
 		// TODO ERROR DOES NOT WORK
 		/**
-		 * @note Exisiert das Programm
+		 * @brief Checks if a program exists
 		 * 
-		 * @author Mike
+		 * @author Mike/scratch/moser/gris_20150510_009/sir/Exp0
 		 */
 		int Program_exist( std::string program );
 		
@@ -101,53 +115,52 @@ namespace mml{
 		void remove(std::string file);
 		
 		/**
-		 * @note Convert date of pictures.
-		 * @param arg Arguments from shell
+		 * @note Convert the date of files with specific endings in a directory
 		 * @param string Source path
 		 * @param string Destination path
-		 * @param bool Check extended endings. False => Only NEF and HEIC
-		 * @param bool Verbose output.
-		 * 
-		 * @author Mike
+		 * @param ends Endings to be checked
+		 * @param recursive Recursive check
+		 * @param all Also check hidden files
+		 * @param verbose Verbose output
+		 * @note This function is only defined for linux systems
 		*/
-		void set_date(mml::shell::arg args, mml::string src, mml::string dst, bool extend = true, bool verbose = false);
+		void set_date_dir(mml::string src, mml::string dst, std::vector<std::string> ends={"NEF","tif","JPG","jpg","MP4","MOV","PNG","HEIC","JPEG","jpeg","pdf", "PDF"}, bool recursive= false, bool all = false, bool verbose = false);
 
 		/**
-		 * @note Calculates the size of a file
+		 * @brief Calculates the size of a file
 		 * @param string Path to the file
-		 * @return size_t Size of the file
+		 * @return Size of the file
 		 * @author Lucas
+		 * @throw runtime_error : if file does not exist
 		 */
 		std::size_t size(const std::string& filename);
 		
 		/**
-		 * @note Calculates the size of a file
-		 * @param string Path to the file
-         * @param bool Print out
+		 * @brief Calculates the size of a file
+		 * @param filename Path to the file
+         * @param verbose Print out
 		 * @return Returns the size of a file in a readable form as a string
-		 * @author Mike
+		 * @throw runtime_error : if file does not exist
 		 */
-		std::string size_human(const std::string& filename, bool ausgabe = true);
+		std::string size_human(const std::string& filename, bool verbose = true);
 		
 		/**
-		 * @note Calculates the size of a directory structure
-		 * @param arg Arguments from the shell
-         * @param string Path to the directory
-         * @param bool print out
-         * @param string Include only count objects having this string in its name
-         * @param string Exclude objects with this name from the count
-		 * @attention Arguments must be correct!
-		 * 
-		 * @return Gibt die Größe des Ordners zurück
-		 * @author Mike
+		 * @brief Calculates the size of a directory structure
+         * @param dir Path to the directory
+         * @param include Include only count objects having this string in its name
+         * @param exclude Exclude objects with this name from the count
+		 * @param verbose Verbose print out
+		 * @param recursive Recursive check
+		 * @param all Also count hidden files
+		 * @param human_readable Print out in human readable form
+		 * @return Returns the size of the directory
 		 */
-		std::string size_dir(mml::shell::arg args, mml::string& dir, bool ausgabe = false, std::string include = "", std::string exclude = "");
+		std::string size_dir(mml::string& dir, std::string include = "", std::string exclude = "", bool verbose=false, bool recursive=false, bool all=false, bool human_readable=false) noexcept;
 		
 		/**
-		 * @note Returns the last modified time of a file in seconds
-		 * @param string Path to the file
+		 * @brief Returns the last modified time of a file in seconds
+		 * @param filename Path to the file
 		 * @return Seconds since 1970
-		 * @author Mike
 		 */
 		time_t time_mod(const std::string& filename);
 	}

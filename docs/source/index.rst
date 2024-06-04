@@ -25,4 +25,12 @@ Contents
   :maxdepth: 1
 
   standards
+  vector
+  shell
+  file
+  help
+  log
+  Thread
+  Timer
+  Unix
   api

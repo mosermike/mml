@@ -1,4 +1,4 @@
-.TH "mml::vector< T >" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::vector< T >" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,14 +8,13 @@ mml::vector< T >
 .PP
 .PP
 \fC#include <vector\&.hpp>\fP
-.PP
-Inherits std::vector< T >\&.
 .SS "Public Member Functions"
 
 .in +1c
 .ti -1c
 .RI "\fBvector\fP ()"
 .br
+.RI "Constructors\&. "
 .ti -1c
 .RI "\fBvector\fP (const \fBvector\fP &temp)"
 .br
@@ -37,21 +36,26 @@ Inherits std::vector< T >\&.
 .ti -1c
 .RI "\fBvector\fP (std::initializer_list< T > initList)"
 .br
+.RI "Construct with a list\&. "
 .ti -1c
-.RI "\fBvector\fP \fBoperator=\fP (const std::vector< T > &temp)"
+.RI "\fBvector\fP \fBoperator=\fP (const std::vector< T > &temp) noexcept"
 .br
+.RI "Assign value with equal sign\&. "
 .ti -1c
-.RI "\fBvector\fP \fBoperator=\fP (\fBmml::vector\fP< T > temp)"
+.RI "\fBvector\fP \fBoperator=\fP (\fBmml::vector\fP< T > temp) noexcept"
 .br
 .ti -1c
 .RI "std::vector< T >::iterator \fBbegin\fP () noexcept"
 .br
+.RI "iterator to the beginning of the vector "
 .ti -1c
 .RI "bool \fBempty\fP () noexcept"
 .br
+.RI "Checks whether the vector is empty\&. "
 .ti -1c
 .RI "std::vector< T >::iterator \fBend\fP () noexcept"
 .br
+.RI "iterator to the end of the vector "
 .ti -1c
 .RI "void \fBerase\fP (size_t position)"
 .br
@@ -61,68 +65,100 @@ Inherits std::vector< T >\&.
 .br
 .RI "Erase a range from the vector\&. "
 .ti -1c
-.RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val)"
+.RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val) noexcept"
 .br
+.RI "Insert a value at a specific position\&. "
 .ti -1c
 .RI "T & \fBoperator[]\fP (int index)"
 .br
+.RI "Returns a value at a specific index\&. "
 .ti -1c
-.RI "void \fBpop_back\fP ()"
+.RI "void \fBpop_back\fP () noexcept"
 .br
+.RI "Removes the last entry\&. "
 .ti -1c
-.RI "void \fBpush_back\fP (T value)"
+.RI "void \fBpush_back\fP (T value) noexcept"
 .br
+.RI "Adds an element at the end\&. "
 .ti -1c
 .RI "std::size_t \fBsize\fP () const noexcept"
 .br
+.RI "Size of the vector\&. "
 .ti -1c
-.RI "std::size_t \fBcount\fP (T value)"
+.RI "std::size_t \fBcount\fP (T value) noexcept"
 .br
 .ti -1c
 .RI "void \fBcout\fP (bool newline=false) noexcept"
 .br
+.RI "print elements in the vector "
 .ti -1c
-.RI "std::vector< T > \fBdel\fP ()"
+.RI "std::vector< T > \fBdel\fP () noexcept"
 .br
+.RI "Empties the vector\&. "
 .ti -1c
-.RI "bool \fBexist\fP (T const &value)"
+.RI "template<typename\&.\&.\&. values> bool \fBexist\fP (const values &\&.\&.\&. value) noexcept"
 .br
+.RI "Check if one \fIor\fP another string exists\&. "
 .ti -1c
-.RI "T \fBtoT\fP (\fBmml::string\fP s)"
+.RI "std::size_t \fBfind\fP (const T value, size_t start=0) noexcept"
 .br
+.RI "Return a position of an element\&. "
 .ti -1c
-.RI "void \fBget_data\fP (std::string filepath, int skip=\-1)"
+.RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='', \fBmml::string\fP separator=',') noexcept"
 .br
+.RI "Write values into a logfile\&. "
 .ti -1c
-.RI "std::size_t \fBfind\fP (const T value)"
+.RI "std::vector< T > \fBreplace\fP (T Old, T New) noexcept"
 .br
-.ti -1c
-.RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='')"
-.br
-.ti -1c
-.RI "std::vector< T > \fBreplace\fP (T old, T new1)"
-.br
+.RI "Replace specific elements with another element\&. "
 .ti -1c
 .RI "\fBvector\fP< T > \fBoperator*\fP (const T &value)"
 .br
+.RI "Scalarmultiplication\&. "
 .ti -1c
-.RI "void \fBset\fP (std::vector< T > temp)"
+.RI "\fBvector\fP< T > \fBoperator*=\fP (const T &value)"
 .br
+.RI "Scalarmultiplication\&. "
+.ti -1c
+.RI "\fBvector\fP< T > \fBoperator+\fP (const T &value)"
+.br
+.RI "Add a value to each element\&. "
+.ti -1c
+.RI "\fBvector\fP< T > \fBoperator+=\fP (const T &value)"
+.br
+.RI "Add a value to each element\&. "
+.ti -1c
+.RI "void \fBset\fP (std::vector< T > Vec) noexcept"
+.br
+.RI "Replace the vector with a new vector\&. "
+.ti -1c
+.RI "std::vector< T > \fBsort\fP ()"
+.br
+.RI "Sort the vector\&. "
 .ti -1c
 .RI "T \fBsum\fP ()"
 .br
+.RI "Determine the sum of the vector\&. "
 .ti -1c
-.RI "std::vector< T > \fBoperator+\fP (\fBmml::vector\fP< T > temp)"
+.RI "\fBmml::vector\fP< T > \fBoperator+\fP (\fBvector\fP< T > temp)"
 .br
+.RI "Add a vector to this vector\&. "
 .ti -1c
-.RI "std::vector< T > \fBoperator+=\fP (\fBmml::vector\fP< T > temp)"
+.RI "\fBmml::vector\fP< T > \fBoperator+=\fP (\fBmml::vector\fP< T > temp)"
 .br
+.RI "Add a vector to this vector\&. "
 .ti -1c
-.RI "std::vector< T > \fBoperator^\fP (const double exponent)"
+.RI "\fBmml::vector\fP< T > \fBoperator^\fP (const T exponent)"
 .br
+.RI "Vector^() "
+.ti -1c
+.RI "\fBmml::vector\fP< T > \fBoperator^=\fP (const T exponent)"
+.br
+.RI "Vector^() "
 .ti -1c
 .RI "std::vector< T > \fBtovec\fP ()"
 .br
+.RI "Return the std::vector\&. "
 .in -1c
 .SS "Protected Attributes"
 
@@ -135,28 +171,20 @@ Inherits std::vector< T >\&.
 
 .in +1c
 .ti -1c
-.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBvector\fP< T > &Vec)"
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBvector\fP< T > &Vec) noexcept"
 .br
+.RI "Print the vector\&. "
 .ti -1c
-.RI "std::istream & \fBoperator>>\fP (std::istream &in, \fBvector\fP< T > &Vec)"
+.RI "std::istream & \fBoperator>>\fP (std::istream &in, const \fBvector\fP< T > &v) noexcept"
 .br
+.RI "Writes a value into the vector\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP ()\fC [inline]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-constructor
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
+Constructors\&. 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (const \fBvector\fP< T > & temp)\fC [inline]\fP"
 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (std::vector< T > & temp)\fC [inline]\fP"
@@ -170,11 +198,13 @@ Mike
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (int cols, std::vector< T > temp)\fC [inline]\fP"
 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (std::initializer_list< T > initList)\fC [inline]\fP"
-Initialise with a list 
+
+.PP
+Construct with a list\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIstd::initializer_list<T>\fP 
+\fIinitList\fP Initializer_list 
 .RE
 .PP
 \fBReturns\fP
@@ -188,23 +218,20 @@ this instance
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::begin ()\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Standardfunktionen aus std::vector
-.RE
+iterator to the beginning of the vector 
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+iterator 
 .RE
 .PP
 
-.SS "template<class T > std::size_t \fBmml::vector\fP< T >::count (T value)\fC [inline]\fP"
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::count (T value)\fC [inline]\fP, \fC [noexcept]\fP"
 Count how many entries are equal to a value 
 .PP
 \fBParameters\fP
 .RS 4
-\fIT\fP Value to be checked 
+\fIvalue\fP Value to be checked 
 .RE
 .PP
 \fBReturns\fP
@@ -213,17 +240,21 @@ std::size_t
 .RE
 .PP
 
-.SS "template<class T > template void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
 print elements in the vector 
 .PP
 \fBParameters\fP
 .RS 4
-\fIbool\fP Print with line breaks 
+\fInewline\fP Print with line breaks 
 .RE
 .PP
 
-.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::del ()\fC [inline]\fP"
-Empties the vector 
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::del ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Empties the vector\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -231,16 +262,27 @@ std::vector<T>
 .RE
 .PP
 
-.SS "template<class T > template bool \fBmml::vector\fP< T >::empty ()\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > bool \fBmml::vector\fP< T >::empty ()\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Checks whether the vector is empty\&. 
+.PP
+\fBReturns\fP
 .RS 4
-\fBmml::string\fP 
+iteratur 
 .RE
 .PP
 
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::end ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+iterator to the end of the vector 
+.PP
+\fBReturns\fP
+.RS 4
+iterator 
+.RE
+.PP
 
 .SS "template<class T > void \fBmml::vector\fP< T >::erase (size_t position)\fC [inline]\fP"
 
@@ -282,16 +324,18 @@ None
 .PP
 \fBExceptions\fP
 .RS 4
-\fIout_of_range\fP if start > end || end > \fBvector\&.size()\fP 
+\fIout_of_range\fP : if start > end || end > \fBvector\&.size()\fP 
 .RE
 .PP
 
-.SS "template<class T > template bool \fBmml::vector\fP< T >::exist (T const & value)\fC [inline]\fP"
+.SS "template<class T > template<typename\&.\&.\&. values> bool \fBmml::vector\fP< T >::exist (const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Check if one \fIor\fP another string exists\&. 
+.PP
+\fBParameters\fP
 .RS 4
-exist
+\fIvalue\fP Parameters to be checked if they exist 
 .RE
 .PP
 \fBReturns\fP
@@ -299,18 +343,17 @@ exist
 bool 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "template<class T > template std::size_t \fBmml::vector\fP< T >::find (const T value)\fC [inline]\fP"
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::find (const T value, size_t start = \fC0\fP)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Return a position of an element\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Position zurückgeben
+\fIvalue\fP Value to be looked for 
+.br
+\fIstart\fP Defines at what position to start to be looked for 
 .RE
 .PP
 \fBReturns\fP
@@ -318,222 +361,348 @@ Position zurückgeben
 std::size_t 
 .RE
 .PP
-\fBAuthor\fP
+
+.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::insert (const typename std::vector< T >::iterator position, const T & val)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Insert a value at a specific position\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Mike 
+\fIposition\fP The position where the value is put 
+.br
+\fIval\fP Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Iterator 
 .RE
 .PP
 
-.SS "template<class T > template void \fBmml::vector\fP< T >::get_data (std::string filepath, int skip = \fC\-1\fP)\fC [inline]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::\fBlog\fP (\fBmml::string\fP logpath, bool newline = \fCfalse\fP, \fBmml::string\fP first = \fC''\fP, \fBmml::string\fP last = \fC''\fP, \fBmml::string\fP separator = \fC','\fP)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-get data from file
-.RE
+Write values into a logfile\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
-.RE
-.PP
-
-.SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::insert (const typename std::vector< T >::iterator position, const T & val)\fC [inline]\fP"
-
-.SS "template<class T > template void \fBmml::vector\fP< T >::\fBlog\fP (\fBmml::string\fP logpath, bool newline = \fCfalse\fP, \fBmml::string\fP first = \fC''\fP, \fBmml::string\fP last = \fC''\fP)\fC [inline]\fP"
-
-.PP
-\fBNote\fP
-.RS 4
-Werte in eine Logdatei schreiben
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIlogpath\fP Path of the logfile 
+.br
+\fInewline\fP Print a newline 
+.br
+\fIfirst\fP Print this in the start of the logfile before any value 
+.br
+\fIlast\fP Print this at the end of the logfile after all vlaues are written 
+.br
+\fIseparator\fP Separation sign after each value if newline = false 
 .RE
 .PP
 
 .SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator* (const T & value)\fC [inline]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Skalarmultiplikation
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Vektor 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator+ (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
-
-.PP
-\fBNote\fP
-.RS 4
-Zwei Vektoren zeilenweise addieren
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Vektor 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator+= (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
-
-.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (const std::vector< T > & temp)\fC [inline]\fP"
-
-.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
-
-.SS "template<class T > T& \fBmml::vector\fP< T >::operator[] (int index)\fC [inline]\fP"
-
-.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::operator^ (const double exponent)\fC [inline]\fP"
-
-.PP
-\fBNote\fP
-.RS 4
-Vektor hoch exponent
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Vektor 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "template<class T > template void \fBmml::vector\fP< T >::pop_back ()\fC [inline]\fP"
-
-.SS "template<class T > template void \fBmml::vector\fP< T >::push_back (T value)\fC [inline]\fP"
-
-.SS "template<class T > template std::vector< \fBmml::string\fP > \fBmml::vector\fP< T >::replace (T old, T new1)\fC [inline]\fP"
-
-.PP
-\fBNote\fP
-.RS 4
-Ersetzen eines Wertes in einem Vektor 
-.RE
+Scalarmultiplication\&. 
 .PP
 \fBParameters\fP
 .RS 4
-\fIold\fP Value to be replaced 
+\fIvalue\fP Value to be multiplied 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vektor 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector empty or type is not a number 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator*= (const T & value)\fC [inline]\fP"
+
+.PP
+Scalarmultiplication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Value to be multiplied 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector empty or type is not a number 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator+ (const T & value)\fC [inline]\fP"
+
+.PP
+Add a value to each element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Vector with the added value 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector is empty 
+.RE
+.PP
+
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator+ (\fBvector\fP< T > temp)\fC [inline]\fP"
+
+.PP
+Add a vector to this vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Vector to be added elementwise 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+resulting vector 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector sizes are not the same 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator+= (const T & value)\fC [inline]\fP"
+
+.PP
+Add a value to each element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Value to be added 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector is empty 
+.RE
+.PP
+
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator+= (\fBmml::vector\fP< T > temp)\fC [inline]\fP"
+
+.PP
+Add a vector to this vector\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Vector to be added elementwise 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of this class 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector sizes are not the same 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (const std::vector< T > & temp)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Assign value with equal sign\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemp\fP Vector with values 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+this instance 
+.RE
+.PP
+
+.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (\fBmml::vector\fP< T > temp)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "template<class T > T& \fBmml::vector\fP< T >::operator[] (int index)\fC [inline]\fP"
+
+.PP
+Returns a value at a specific index\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP Index to be returned 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+value at this index 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIout_of_range\fP : if index not in range 
+.RE
+.PP
+
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator^ (const T exponent)\fC [inline]\fP"
+
+.PP
+Vector^() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexponent\fP Exponent 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+vector 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if type is not numeric 
+.RE
+.PP
+
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator^= (const T exponent)\fC [inline]\fP"
+
+.PP
+Vector^() 
+.PP
+\fBParameters\fP
+.RS 4
+\fIexponent\fP Exponent 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if type is not numeric 
+.RE
+.PP
+
+.SS "template<class T > void \fBmml::vector\fP< T >::pop_back ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Removes the last entry\&. 
+.PP
+\fBReturns\fP
+.RS 4
+None 
+.RE
+.PP
+
+.SS "template<class T > void \fBmml::vector\fP< T >::push_back (T value)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Adds an element at the end\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP to e added 
+.RE
+.PP
+
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::replace (T Old, T New)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Replace specific elements with another element\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIOld\fP Value to be replaced 
 .br
-\fInew1\fP New value 
+\fINew\fP New value 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-Vektor mit den ersetzten Werten 
+Vector with the replaced values 
 .RE
 .PP
 
-.SS "template<class T > void \fBmml::vector\fP< T >::set (std::vector< T > temp)\fC [inline]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::set (std::vector< T > Vec)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Skalare Addition
-.RE
+Replace the vector with a new vector\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
-.RE
-.PP
-\fBNote\fP
-.RS 4
-vec setzen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIVec\fP Vector 
 .RE
 .PP
 
-.SS "template<class T > template std::size_t \fBmml::vector\fP< T >::size () const\fC [inline]\fP, \fC [noexcept]\fP"
-
-.SS "template<class T > template \fBmml::string\fP \fBmml::vector\fP< T >::sum ()\fC [inline]\fP"
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::size () const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-vec sortieren
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-\fBNote\fP
-.RS 4
-Summe des Vektors bestimmen
-.RE
+Size of the vector\&. 
 .PP
 \fBReturns\fP
 .RS 4
-T 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+Size of the vector 
 .RE
 .PP
 
-.SS "template<class T > template \fBmml::string\fP \fBmml::vector\fP< T >::toT (\fBmml::string\fP s)\fC [inline]\fP"
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::sort ()\fC [inline]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-String in T umwandeln
-.RE
+Sort the vector\&. 
 .PP
 \fBReturns\fP
 .RS 4
-T 
+Return the sorted vector 
 .RE
 .PP
-\fBAuthor\fP
+
+.SS "template<class T > T \fBmml::vector\fP< T >::sum ()\fC [inline]\fP"
+
+.PP
+Determine the sum of the vector\&. 
+.PP
+\fBReturns\fP
 .RS 4
-Mike 
+Sum of the vector 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIlogic_error\fP : if vector is empty or if template is boolean 
 .RE
 .PP
 
 .SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::tovec ()\fC [inline]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Vektor zurückgeben
-.RE
+Return the std::vector\&. 
 .PP
 \fBReturns\fP
 .RS 4
-Vektor 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+Vector of the standard library 
 .RE
 .PP
 
@@ -542,28 +711,36 @@ Mike
 .SS "template<class T > std::ostream& operator<< (std::ostream & out, const \fBvector\fP< T > & Vec)\fC [friend]\fP"
 
 .PP
-\fBNote\fP
+Print the vector\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Vektorinhalt ausgeben
+\fIout\fP Output where it is written 
+.br
+\fIVec\fP Vector which is written 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+output stream 
 .RE
 .PP
 
-.SS "template<class T > std::istream& operator>> (std::istream & in, \fBvector\fP< T > & Vec)\fC [friend]\fP"
+.SS "template<class T > std::istream& operator>> (std::istream & in, const \fBvector\fP< T > & v)\fC [friend]\fP"
 
 .PP
-\fBNote\fP
+Writes a value into the vector\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Wert in Vektor reinschreiben
+\fIin\fP where it should be written in 
+.br
+\fIv\fP what should be written in 
 .RE
 .PP
-\fBAuthor\fP
+\fBReturns\fP
 .RS 4
-Mike 
+output stream 
 .RE
 .PP
 

@@ -2,7 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
     <compoundname>test</compoundname>
-    <innerfile refid="test1_8cpp">test1.cpp</innerfile>
+    <innerfile refid="args_8cpp">args.cpp</innerfile>
+    <innerfile refid="test_2standards_8cpp">standards.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,4 +1,4 @@
-.TH "mml::Timer" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::Timer" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,24 +33,30 @@ mml::Timer
 .ti -1c
 .RI "void \fBbreak_stop\fP ()"
 .br
+.RI "continue the time measurement "
 .ti -1c
 .RI "void \fBcout\fP (std::string text='', bool format_print=false, bool newline=true)"
 .br
 .ti -1c
 .RI "void \fBstart\fP () noexcept"
 .br
+.RI "Start time measurement\&. "
 .ti -1c
 .RI "double \fBstop\fP () noexcept"
 .br
+.RI "Stops the time measurement\&. "
 .ti -1c
 .RI "uint64_t \fBgetUS\fP (bool \fBstop\fP=true) noexcept"
 .br
+.RI "get the time in µs "
 .ti -1c
 .RI "double \fBgetMS\fP (bool \fBstop\fP=true) noexcept"
 .br
+.RI "Return time in ms without stopping\&. "
 .ti -1c
 .RI "double \fBgetS\fP (bool \fBstop\fP=true) noexcept"
 .br
+.RI "Return time in s without stopping\&. "
 .ti -1c
 .RI "int \fBtoInt\fP () noexcept"
 .br
@@ -63,10 +69,8 @@ mml::Timer
 .ti -1c
 .RI "std::string \fBrange\fP () noexcept"
 .br
+.RI "return the time depending on the time value itself "
 .in -1c
-.SH "Detailed Description"
-.PP 
-\fBTimer\fP mit std::chrono (anstatt SDL_GetPerformanceCounter()) 
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "mml::Timer::Timer ()\fC [inline]\fP"
@@ -82,7 +86,7 @@ mml::Timer
 .PP
 \fBNote\fP
 .RS 4
-Pause starten
+stop the time measurement 
 .RE
 .PP
 \fBAuthor\fP
@@ -94,10 +98,7 @@ Mike
 .SS "void mml::Timer::break_stop ()"
 
 .PP
-\fBNote\fP
-.RS 4
-Pause stoppen
-.RE
+continue the time measurement 
 .PP
 \fBAuthor\fP
 .RS 4
@@ -112,7 +113,16 @@ Mike
 .PP
 \fBNote\fP
 .RS 4
-Zeit ausgeben (formatiert oder in Millisekunden)
+Pint time formatted or in ms 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP A text printed first without a newline 
+.br
+\fIformat_print\fP Print by using the function range (false : in ms) 
+.br
+\fInewline\fP Print with a newline 
 .RE
 .PP
 \fBAuthor\fP
@@ -124,14 +134,11 @@ Mike
 .SS "double mml::Timer::getMS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Zwischenergebnis zurückgegeben\&.
-.RE
+Return time in ms without stopping\&. 
 .PP
 \fBReturns\fP
 .RS 4
-Zwischenergebnis 
+time in ms 
 .RE
 .PP
 \fBAuthor\fP
@@ -155,14 +162,11 @@ Lucas
 .SS "double mml::Timer::getS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Zwischenergebnis zurückgegeben in s\&.
-.RE
+Return time in s without stopping\&. 
 .PP
 \fBReturns\fP
 .RS 4
-Zwischenergebnis 
+time in seconds 
 .RE
 .PP
 \fBAuthor\fP
@@ -186,14 +190,11 @@ Mike
 .SS "uint64_t mml::Timer::getUS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Direkten Wert in Mikrosekunden zurückgegeben\&.
-.RE
+get the time in µs 
 .PP
 \fBReturns\fP
 .RS 4
-Vergangene Zeit in Mikrosekunden (uint64_t) 
+time in µs 
 .RE
 .PP
 \fBAuthor\fP
@@ -217,14 +218,11 @@ Lucas
 .SS "std::string mml::Timer::range ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Zeit abhängig von der Größe zurückgeben
-.RE
+return the time depending on the time value itself 
 .PP
 \fBReturns\fP
 .RS 4
-Ausgabe der Zeit 
+returns the time in µs, ms, s or as a clock 
 .RE
 .PP
 \fBAuthor\fP
@@ -236,10 +234,7 @@ Mike
 .SS "void mml::Timer::start ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Beginnt die Zeitmessung\&.
-.RE
+Start time measurement\&. 
 .PP
 \fBAuthor\fP
 .RS 4
@@ -257,14 +252,11 @@ Lucas
 .SS "double mml::Timer::stop ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Stoppt die Zeitmessung\&.
-.RE
+Stops the time measurement\&. 
 .PP
 \fBReturns\fP
 .RS 4
-Vergangene Zeit in Millisekunden 
+passed time in ms 
 .RE
 .PP
 \fBAuthor\fP

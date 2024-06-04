@@ -31,6 +31,7 @@ void mml::Timer::cout(std::string text, bool format_print, bool newline) {
 		std::cout << range();
 	else
 		std::cout << stop() << " ms";
+		
 	if(newline)
 		std::cout << std::endl;
 	

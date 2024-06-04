@@ -14,27 +14,29 @@
           <declname>s</declname>
         </param>
         <briefdescription>
+<para>Stop actual thread for a specific time. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Aktueller <ref refid="classmml_1_1thread_1_1Thread" kindref="compound">Thread</ref> eine bestimmte Zeit lang stoppen</para>
-</simplesect>
-<itemizedlist>
-<listitem><para>Second <simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
-</listitem>
-</itemizedlist>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seconds to wait </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="93" column="6" bodyfile="src/Thread.cpp" bodystart="69" bodyend="71" declfile="include/mml/Thread.hpp" declline="93" declcolumn="6"/>
+        <location file="include/mml/thread.hpp" line="93" column="6" bodyfile="src/thread.cpp" bodystart="69" bodyend="71" declfile="include/mml/thread.hpp" declline="93" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/Thread.hpp" line="18" column="1"/>
+    <location file="include/mml/thread.hpp" line="18" column="1"/>
   </compounddef>
 </doxygen>

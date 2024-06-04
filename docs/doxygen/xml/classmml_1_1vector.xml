@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classmml_1_1vector" kind="class" language="C++" prot="public">
     <compoundname>mml::vector</compoundname>
-    <basecompoundref prot="private" virt="non-virtual">std::vector&lt; T &gt;</basecompoundref>
     <includes refid="vector_8hpp" local="no">vector.hpp</includes>
     <templateparamlist>
       <param>
@@ -31,17 +30,13 @@
         <argsstring>()</argsstring>
         <name>vector</name>
         <briefdescription>
+<para>Constructors. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>constructor</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="39" column="9" bodyfile="include/mml/vector.hpp" bodystart="39" bodyend="39"/>
+        <location file="include/mml/vector.hpp" line="37" column="9" bodyfile="include/mml/vector.hpp" bodystart="37" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ad44c393d85ce94e01ae6d851abfe3a60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -58,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="40" column="9" bodyfile="include/mml/vector.hpp" bodystart="40" bodyend="40"/>
+        <location file="include/mml/vector.hpp" line="38" column="9" bodyfile="include/mml/vector.hpp" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ac6bb999219a514400d27c3ae0a1c38d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -75,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="41" column="9" bodyfile="include/mml/vector.hpp" bodystart="41" bodyend="41"/>
+        <location file="include/mml/vector.hpp" line="39" column="9" bodyfile="include/mml/vector.hpp" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a110a81cb89a1d8d3747a59ec4bb12ec3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -92,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="42" column="9" bodyfile="include/mml/vector.hpp" bodystart="42" bodyend="42"/>
+        <location file="include/mml/vector.hpp" line="40" column="9" bodyfile="include/mml/vector.hpp" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -109,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="43" column="9" bodyfile="include/mml/vector.hpp" bodystart="43" bodyend="43"/>
+        <location file="include/mml/vector.hpp" line="41" column="9" bodyfile="include/mml/vector.hpp" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -130,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="44" column="9" bodyfile="include/mml/vector.hpp" bodystart="44" bodyend="44"/>
+        <location file="include/mml/vector.hpp" line="42" column="9" bodyfile="include/mml/vector.hpp" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -151,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="45" column="9" bodyfile="include/mml/vector.hpp" bodystart="45" bodyend="45"/>
+        <location file="include/mml/vector.hpp" line="43" column="9" bodyfile="include/mml/vector.hpp" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -163,14 +158,15 @@
           <declname>initList</declname>
         </param>
         <briefdescription>
+<para>Construct with a list. </para>
         </briefdescription>
         <detaileddescription>
-<para>Initialise with a list <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>std::initializer_list&lt;T&gt;</parametername>
+<parametername>initList</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>Initializer_list </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -180,29 +176,42 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="52" column="1" bodyfile="include/mml/vector.hpp" bodystart="52" bodyend="52"/>
+        <location file="include/mml/vector.hpp" line="50" column="1" bodyfile="include/mml/vector.hpp" bodystart="50" bodyend="50"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a52d2bb1a8ce2c1fe10784fe52d22803b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a27bd93034429d512f0414f71e2da0448" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref></type>
         <definition>vector mml::vector&lt; T &gt;::operator=</definition>
-        <argsstring>(const std::vector&lt; T &gt; &amp;temp)</argsstring>
+        <argsstring>(const std::vector&lt; T &gt; &amp;temp) noexcept</argsstring>
         <name>operator=</name>
         <param>
           <type>const std::vector&lt; T &gt; &amp;</type>
           <declname>temp</declname>
         </param>
         <briefdescription>
+<para>Assign value with equal sign. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector with values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>this instance </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="54" column="8" bodyfile="include/mml/vector.hpp" bodystart="54" bodyend="54"/>
+        <location file="include/mml/vector.hpp" line="57" column="8" bodyfile="include/mml/vector.hpp" bodystart="57" bodyend="57"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a72f4406c5722f9fb621ea2afdd722877" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1ae5d5c7e921bc2c07453a8ef6ff4d9e47" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref></type>
         <definition>vector mml::vector&lt; T &gt;::operator=</definition>
-        <argsstring>(mml::vector&lt; T &gt; temp)</argsstring>
+        <argsstring>(mml::vector&lt; T &gt; temp) noexcept</argsstring>
         <name>operator=</name>
         <param>
           <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
@@ -214,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="55" column="8" bodyfile="include/mml/vector.hpp" bodystart="55" bodyend="55"/>
+        <location file="include/mml/vector.hpp" line="58" column="8" bodyfile="include/mml/vector.hpp" bodystart="58" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -222,33 +231,33 @@
         <argsstring>() noexcept</argsstring>
         <name>begin</name>
         <briefdescription>
+<para>iterator to the beginning of the vector </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Standardfunktionen aus std::vector</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><simplesect kind="return"><para>iterator </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="62" column="33" bodyfile="include/mml/vector.hpp" bodystart="62" bodyend="62"/>
+        <location file="include/mml/vector.hpp" line="64" column="33" bodyfile="include/mml/vector.hpp" bodystart="64" bodyend="64"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1af0fd2f8bb3bc757713694d12ebc919b8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>bool</type>
-        <definition>template bool mml::vector&lt; T &gt;::empty</definition>
+        <definition>bool mml::vector&lt; T &gt;::empty</definition>
         <argsstring>() noexcept</argsstring>
         <name>empty</name>
         <briefdescription>
+<para>Checks whether the vector is empty. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+<para><simplesect kind="return"><para>iteratur </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="63" column="6" bodyfile="include/mml/vector.hpp" bodystart="63" bodyend="65"/>
+        <location file="include/mml/vector.hpp" line="70" column="6" bodyfile="include/mml/vector.hpp" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
@@ -256,12 +265,16 @@
         <argsstring>() noexcept</argsstring>
         <name>end</name>
         <briefdescription>
+<para>iterator to the end of the vector </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="66" column="33" bodyfile="include/mml/vector.hpp" bodystart="66" bodyend="66"/>
+        <location file="include/mml/vector.hpp" line="76" column="33" bodyfile="include/mml/vector.hpp" bodystart="76" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -292,7 +305,7 @@
 <parametername>out_of_range</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if position &gt;= <ref refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" kindref="member">vector.size()</ref> </para>
+<para>if position &gt;= <ref refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" kindref="member">vector.size()</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -300,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="74" column="6" bodyfile="include/mml/vector.hpp" bodystart="74" bodyend="79"/>
+        <location file="include/mml/vector.hpp" line="84" column="6" bodyfile="include/mml/vector.hpp" bodystart="84" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -343,7 +356,7 @@
 <parametername>out_of_range</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>if start &gt; end || end &gt; <ref refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" kindref="member">vector.size()</ref> </para>
+<para>: if start &gt; end || end &gt; <ref refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" kindref="member">vector.size()</ref> </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -351,12 +364,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="88" column="6" bodyfile="include/mml/vector.hpp" bodystart="88" bodyend="93"/>
+        <location file="include/mml/vector.hpp" line="97" column="6" bodyfile="include/mml/vector.hpp" bodystart="97" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1ae4cae150b7b30e91e3b937d7a529a16f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;::iterator</type>
         <definition>std::vector&lt;T&gt;::iterator mml::vector&lt; T &gt;::insert</definition>
-        <argsstring>(const typename std::vector&lt; T &gt;::iterator position, const T &amp;val)</argsstring>
+        <argsstring>(const typename std::vector&lt; T &gt;::iterator position, const T &amp;val) noexcept</argsstring>
         <name>insert</name>
         <param>
           <type>const typename std::vector&lt; T &gt;::iterator</type>
@@ -367,12 +380,33 @@
           <declname>val</declname>
         </param>
         <briefdescription>
+<para>Insert a value at a specific position. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position where the value is put </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="96" column="33" bodyfile="include/mml/vector.hpp" bodystart="96" bodyend="96"/>
+        <location file="include/mml/vector.hpp" line="110" column="33" bodyfile="include/mml/vector.hpp" bodystart="110" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T &amp;</type>
@@ -384,60 +418,101 @@
           <declname>index</declname>
         </param>
         <briefdescription>
+<para>Returns a value at a specific index. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index to be returned </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>value at this index </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if index not in range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="97" column="3" bodyfile="include/mml/vector.hpp" bodystart="97" bodyend="102"/>
+        <location file="include/mml/vector.hpp" line="118" column="3" bodyfile="include/mml/vector.hpp" bodystart="118" bodyend="124"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a9f0bde55f6f6514461e624c6426ef6fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
-        <definition>template void mml::vector&lt; T &gt;::pop_back</definition>
-        <argsstring>()</argsstring>
+        <definition>void mml::vector&lt; T &gt;::pop_back</definition>
+        <argsstring>() noexcept</argsstring>
         <name>pop_back</name>
         <briefdescription>
+<para>Removes the last entry. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="103" column="6" bodyfile="include/mml/vector.hpp" bodystart="103" bodyend="105"/>
+        <location file="include/mml/vector.hpp" line="130" column="6" bodyfile="include/mml/vector.hpp" bodystart="130" bodyend="132"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a0f23f42bb84218cdd6ec2cc523933e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
-        <definition>template void mml::vector&lt; T &gt;::push_back</definition>
-        <argsstring>(T value)</argsstring>
+        <definition>void mml::vector&lt; T &gt;::push_back</definition>
+        <argsstring>(T value) noexcept</argsstring>
         <name>push_back</name>
         <param>
           <type>T</type>
           <declname>value</declname>
         </param>
         <briefdescription>
+<para>Adds an element at the end. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to e added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="107" column="6" bodyfile="include/mml/vector.hpp" bodystart="107" bodyend="109"/>
+        <location file="include/mml/vector.hpp" line="138" column="6" bodyfile="include/mml/vector.hpp" bodystart="138" bodyend="140"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
-        <definition>template std::size_t mml::vector&lt; T &gt;::size</definition>
+        <definition>std::size_t mml::vector&lt; T &gt;::size</definition>
         <argsstring>() const noexcept</argsstring>
         <name>size</name>
         <briefdescription>
+<para>Size of the vector. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>Size of the vector </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="110" column="13" bodyfile="include/mml/vector.hpp" bodystart="110" bodyend="110"/>
+        <location file="include/mml/vector.hpp" line="146" column="13" bodyfile="include/mml/vector.hpp" bodystart="146" bodyend="146"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a91e15fae7ebbb5a00391dfc3acb6987b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
         <definition>std::size_t mml::vector&lt; T &gt;::count</definition>
-        <argsstring>(T value)</argsstring>
+        <argsstring>(T value) noexcept</argsstring>
         <name>count</name>
         <param>
           <type>T</type>
@@ -448,7 +523,7 @@
         <detaileddescription>
 <para>Count how many entries are equal to a value <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>T</parametername>
+<parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Value to be checked </para>
@@ -461,11 +536,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="143" column="13" bodyfile="include/mml/vector.hpp" bodystart="143" bodyend="150"/>
+        <location file="include/mml/vector.hpp" line="181" column="13" bodyfile="include/mml/vector.hpp" bodystart="181" bodyend="188"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a861d552caf263eb37d7fe9bcd4ca8861" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
-        <definition>template void mml::vector&lt; T &gt;::cout</definition>
+        <definition>void mml::vector&lt; T &gt;::cout</definition>
         <argsstring>(bool newline=false) noexcept</argsstring>
         <name>cout</name>
         <param>
@@ -474,11 +549,12 @@
           <defval>false</defval>
         </param>
         <briefdescription>
+<para>print elements in the vector </para>
         </briefdescription>
         <detaileddescription>
-<para>print elements in the vector <parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>newline</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Print with line breaks </para>
@@ -489,127 +565,109 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="157" column="6" bodyfile="include/mml/vector.hpp" bodystart="157" bodyend="175"/>
+        <location file="include/mml/vector.hpp" line="194" column="6" bodyfile="include/mml/vector.hpp" bodystart="194" bodyend="213"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
-        <definition>template std::vector&lt; mml::string &gt; mml::vector&lt; T &gt;::del</definition>
-        <argsstring>()</argsstring>
+        <definition>std::vector&lt;T&gt; mml::vector&lt; T &gt;::del</definition>
+        <argsstring>() noexcept</argsstring>
         <name>del</name>
         <briefdescription>
+<para>Empties the vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Empties the vector <simplesect kind="return"><para>std::vector&lt;T&gt; </para>
+<para><simplesect kind="return"><para>std::vector&lt;T&gt; </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="181" column="14" bodyfile="include/mml/vector.hpp" bodystart="181" bodyend="185"/>
+        <location file="include/mml/vector.hpp" line="219" column="13" bodyfile="include/mml/vector.hpp" bodystart="219" bodyend="223"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a76e9ae37b4d92521fe84c5dd0878a7a0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>values</declname>
+            <defname>values</defname>
+          </param>
+        </templateparamlist>
         <type>bool</type>
-        <definition>template bool mml::vector&lt; T &gt;::exist</definition>
-        <argsstring>(T const &amp;value)</argsstring>
+        <definition>bool mml::vector&lt; T &gt;::exist</definition>
+        <argsstring>(const values &amp;... value) noexcept</argsstring>
         <name>exist</name>
         <param>
-          <type>T const &amp;</type>
+          <type>const values &amp;...</type>
           <declname>value</declname>
         </param>
         <briefdescription>
+<para>Check if one <emphasis>or</emphasis> another string exists. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>exist</para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to be checked if they exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 <simplesect kind="return"><para>bool </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="192" column="6" bodyfile="include/mml/vector.hpp" bodystart="192" bodyend="217"/>
+        <location file="include/mml/vector.hpp" line="249" column="6" bodyfile="include/mml/vector.hpp" bodystart="249" bodyend="251"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1ae2121141f484344e07345eddf7caa77c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>T</type>
-        <definition>template mml::string mml::vector&lt; T &gt;::toT</definition>
-        <argsstring>(mml::string s)</argsstring>
-        <name>toT</name>
-        <param>
-          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
-          <declname>s</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>String in T umwandeln</para>
-</simplesect>
-<simplesect kind="return"><para>T </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/vector.hpp" line="224" column="3" bodyfile="include/mml/vector.hpp" bodystart="224" bodyend="233"/>
-      </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>template void mml::vector&lt; T &gt;::get_data</definition>
-        <argsstring>(std::string filepath, int skip=-1)</argsstring>
-        <name>get_data</name>
-        <param>
-          <type>std::string</type>
-          <declname>filepath</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>skip</declname>
-          <defval>-1</defval>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>get data from file</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/vector.hpp" line="239" column="7" bodyfile="include/mml/vector.hpp" bodystart="239" bodyend="260"/>
-      </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a309bd325454ee39e8e6f71a5a3e52ac3" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
-        <definition>template std::size_t mml::vector&lt; T &gt;::find</definition>
-        <argsstring>(const T value)</argsstring>
+        <definition>std::size_t mml::vector&lt; T &gt;::find</definition>
+        <argsstring>(const T value, size_t start=0) noexcept</argsstring>
         <name>find</name>
         <param>
           <type>const T</type>
           <declname>value</declname>
         </param>
+        <param>
+          <type>size_t</type>
+          <declname>start</declname>
+          <defval>0</defval>
+        </param>
         <briefdescription>
+<para>Return a position of an element. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Position zurückgeben</para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be looked for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Defines at what position to start to be looked for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 <simplesect kind="return"><para>std::size_t </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="268" column="13" bodyfile="include/mml/vector.hpp" bodystart="268" bodyend="280"/>
+        <location file="include/mml/vector.hpp" line="259" column="13" bodyfile="include/mml/vector.hpp" bodystart="259" bodyend="265"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a35466b7dc2f7af8333b354edc7475001" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1ace5e48f1429007d82db0322b4ddc4977" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
-        <definition>template void mml::vector&lt; T &gt;::log</definition>
-        <argsstring>(mml::string logpath, bool newline=false, mml::string first=&quot;&quot;, mml::string last=&quot;&quot;)</argsstring>
+        <definition>void mml::vector&lt; T &gt;::log</definition>
+        <argsstring>(mml::string logpath, bool newline=false, mml::string first=&quot;&quot;, mml::string last=&quot;&quot;, mml::string separator=&quot;,&quot;) noexcept</argsstring>
         <name>log</name>
         <param>
           <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -630,40 +688,82 @@
           <declname>last</declname>
           <defval>&quot;&quot;</defval>
         </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>separator</declname>
+          <defval>&quot;,&quot;</defval>
+        </param>
         <briefdescription>
+<para>Write values into a logfile. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Werte in eine Logdatei schreiben</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the logfile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print a newline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print this in the start of the logfile before any value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print this at the end of the logfile after all vlaues are written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>separator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Separation sign after each value if newline = false </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="287" column="6" bodyfile="include/mml/vector.hpp" bodystart="287" bodyend="300"/>
+        <location file="include/mml/vector.hpp" line="275" column="6" bodyfile="include/mml/vector.hpp" bodystart="275" bodyend="293"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1aff5f8402662b01d3eef81aab88dc112a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
-        <definition>template std::vector&lt; mml::string &gt; mml::vector&lt; T &gt;::replace</definition>
-        <argsstring>(T old, T new1)</argsstring>
+        <definition>std::vector&lt;T&gt; mml::vector&lt; T &gt;::replace</definition>
+        <argsstring>(T Old, T New) noexcept</argsstring>
         <name>replace</name>
         <param>
           <type>T</type>
-          <declname>old</declname>
+          <declname>Old</declname>
         </param>
         <param>
           <type>T</type>
-          <declname>new1</declname>
+          <declname>New</declname>
         </param>
         <briefdescription>
+<para>Replace specific elements with another element. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Ersetzen eines Wertes in einem Vektor </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>old</parametername>
+<parametername>Old</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Value to be replaced </para>
@@ -671,20 +771,20 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>new1</parametername>
+<parametername>New</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>New value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Vektor mit den ersetzten Werten </para>
+<simplesect kind="return"><para>Vector with the replaced values </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="307" column="13" bodyfile="include/mml/vector.hpp" bodystart="307" bodyend="314"/>
+        <location file="include/mml/vector.hpp" line="301" column="13" bodyfile="include/mml/vector.hpp" bodystart="301" bodyend="309"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -696,97 +796,265 @@
           <declname>value</declname>
         </param>
         <briefdescription>
+<para>Scalarmultiplication. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Skalarmultiplikation</para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be multiplied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 <simplesect kind="return"><para>Vektor </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector empty or type is not a number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="323" column="8" bodyfile="include/mml/vector.hpp" bodystart="323" bodyend="327"/>
+        <location file="include/mml/vector.hpp" line="318" column="8" bodyfile="include/mml/vector.hpp" bodystart="318" bodyend="329"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a901fab5579bf780856051f9493ffbb69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1aa1e76ce928f0025c21b4ca42e227b4cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
+        <definition>vector&lt;T&gt; mml::vector&lt; T &gt;::operator*=</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Scalarmultiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be multiplied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of the class </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector empty or type is not a number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="337" column="8" bodyfile="include/mml/vector.hpp" bodystart="337" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1af988a06108c0ed0a54912ef79702c676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
+        <definition>vector&lt;T&gt; mml::vector&lt; T &gt;::operator+</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a value to each element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector with the added value </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector is empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="355" column="8" bodyfile="include/mml/vector.hpp" bodystart="355" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1a16d7de3e21e86095a82e23e99e6415b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
+        <definition>vector&lt;T&gt; mml::vector&lt; T &gt;::operator+=</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a value to each element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of the class </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector is empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="371" column="8" bodyfile="include/mml/vector.hpp" bodystart="371" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void mml::vector&lt; T &gt;::set</definition>
-        <argsstring>(std::vector&lt; T &gt; temp)</argsstring>
+        <argsstring>(std::vector&lt; T &gt; Vec) noexcept</argsstring>
         <name>set</name>
         <param>
           <type>std::vector&lt; T &gt;</type>
-          <declname>temp</declname>
+          <declname>Vec</declname>
         </param>
         <briefdescription>
+<para>Replace the vector with a new vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Skalare Addition</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-<simplesect kind="note"><para>vec setzen</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="384" column="6" bodyfile="include/mml/vector.hpp" bodystart="384" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; mml::vector&lt; T &gt;::sort</definition>
+        <argsstring>()</argsstring>
+        <name>sort</name>
+        <briefdescription>
+<para>Sort the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the sorted vector </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="339" column="6" bodyfile="include/mml/vector.hpp" bodystart="339" bodyend="341"/>
+        <location file="include/mml/vector.hpp" line="392" column="13" bodyfile="include/mml/vector.hpp" bodystart="392" bodyend="392"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a09c4bf51180082747d807fd1d8d5ae84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1vector_1a258b24c3d22bbc05ac46f41afa723724" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
-        <definition>template mml::string mml::vector&lt; T &gt;::sum</definition>
+        <definition>T mml::vector&lt; T &gt;::sum</definition>
         <argsstring>()</argsstring>
         <name>sum</name>
         <briefdescription>
+<para>Determine the sum of the vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>vec sortieren</para>
+<para><simplesect kind="return"><para>Sum of the vector </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-<simplesect kind="note"><para>Summe des Vektors bestimmen</para>
-</simplesect>
-<simplesect kind="return"><para>T </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector is empty or if template is boolean </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="354" column="3" bodyfile="include/mml/vector.hpp" bodystart="354" bodyend="362"/>
+        <location file="include/mml/vector.hpp" line="399" column="3" bodyfile="include/mml/vector.hpp" bodystart="399" bodyend="424"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a521aa464534c98ecd70315632ad25f25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; T &gt;</type>
-        <definition>template std::vector&lt; mml::string &gt; mml::vector&lt; T &gt;::operator+</definition>
-        <argsstring>(mml::vector&lt; T &gt; temp)</argsstring>
+      <memberdef kind="function" id="classmml_1_1vector_1a3a388590b5179b598664820f1c431e68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
+        <definition>mml::vector&lt;T&gt; mml::vector&lt; T &gt;::operator+</definition>
+        <argsstring>(vector&lt; T &gt; temp)</argsstring>
         <name>operator+</name>
         <param>
-          <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
+          <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
           <declname>temp</declname>
         </param>
         <briefdescription>
+<para>Add a vector to this vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Zwei Vektoren zeilenweise addieren</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be added elementwise </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>resulting vector </para>
 </simplesect>
-<simplesect kind="return"><para>Vektor </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector sizes are not the same </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="369" column="13" bodyfile="include/mml/vector.hpp" bodystart="369" bodyend="379"/>
+        <location file="include/mml/vector.hpp" line="432" column="13" bodyfile="include/mml/vector.hpp" bodystart="432" bodyend="441"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a372daa94b7f21f06a70a755111114ee6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; T &gt;</type>
-        <definition>template std::vector&lt; mml::string &gt; mml::vector&lt; T &gt;::operator+=</definition>
+      <memberdef kind="function" id="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
+        <definition>mml::vector&lt;T&gt; mml::vector&lt; T &gt;::operator+=</definition>
         <argsstring>(mml::vector&lt; T &gt; temp)</argsstring>
         <name>operator+=</name>
         <param>
@@ -794,36 +1062,112 @@
           <declname>temp</declname>
         </param>
         <briefdescription>
+<para>Add a vector to this vector. </para>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/vector.hpp" line="381" column="13" bodyfile="include/mml/vector.hpp" bodystart="381" bodyend="390"/>
-      </memberdef>
-      <memberdef kind="function" id="classmml_1_1vector_1a935789a9cb1c2a8acdeedac8f5179278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; T &gt;</type>
-        <definition>template std::vector&lt; mml::string &gt; mml::vector&lt; T &gt;::operator^</definition>
-        <argsstring>(const double exponent)</argsstring>
-        <name>operator^</name>
-        <param>
-          <type>const double</type>
-          <declname>exponent</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>Vektor hoch exponent</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to be added elementwise </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of this class </para>
 </simplesect>
-<simplesect kind="return"><para>Vektor </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if vector sizes are not the same </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="398" column="13" bodyfile="include/mml/vector.hpp" bodystart="398" bodyend="410"/>
+        <location file="include/mml/vector.hpp" line="449" column="13" bodyfile="include/mml/vector.hpp" bodystart="449" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1a94e947265d74fd8b17586bfe6e8f3e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
+        <definition>mml::vector&lt;T&gt; mml::vector&lt; T &gt;::operator^</definition>
+        <argsstring>(const T exponent)</argsstring>
+        <name>operator^</name>
+        <param>
+          <type>const T</type>
+          <declname>exponent</declname>
+        </param>
+        <briefdescription>
+<para>Vector^() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exponent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if type is not numeric </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="467" column="13" bodyfile="include/mml/vector.hpp" bodystart="467" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1vector_1ac971bc51f4e13b7829110ff3abb9b94a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
+        <definition>mml::vector&lt;T&gt; mml::vector&lt; T &gt;::operator^=</definition>
+        <argsstring>(const T exponent)</argsstring>
+        <name>operator^=</name>
+        <param>
+          <type>const T</type>
+          <declname>exponent</declname>
+        </param>
+        <briefdescription>
+<para>Vector^() </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exponent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of the class </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if type is not numeric </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="485" column="13" bodyfile="include/mml/vector.hpp" bodystart="485" bodyend="494"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -831,26 +1175,23 @@
         <argsstring>()</argsstring>
         <name>tovec</name>
         <briefdescription>
+<para>Return the std::vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Vektor zurückgeben</para>
-</simplesect>
-<simplesect kind="return"><para>Vektor </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><simplesect kind="return"><para>Vector of the standard library </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="420" column="22" bodyfile="include/mml/vector.hpp" bodystart="420" bodyend="420"/>
+        <location file="include/mml/vector.hpp" line="502" column="22" bodyfile="include/mml/vector.hpp" bodystart="502" bodyend="502"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
-      <memberdef kind="friend" id="classmml_1_1vector_1afdee463d65e61d05a5210e324b42e9ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="friend" id="classmml_1_1vector_1a7224e4650e76335a445d3577bb24e377" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::ostream &amp;</type>
         <definition>std::ostream&amp; operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;out, const vector&lt; T &gt; &amp;Vec)</argsstring>
+        <argsstring>(std::ostream &amp;out, const vector&lt; T &gt; &amp;Vec) noexcept</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
           <type>std::ostream &amp;</type>
@@ -861,102 +1202,159 @@
           <declname>Vec</declname>
         </param>
         <briefdescription>
+<para>Print the vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Vektorinhalt ausgeben</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output where it is written </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector which is written </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>output stream </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="120" column="8" bodyfile="include/mml/vector.hpp" bodystart="120" bodyend="125"/>
+        <location file="include/mml/vector.hpp" line="154" column="8" bodyfile="include/mml/vector.hpp" bodystart="154" bodyend="159"/>
       </memberdef>
-      <memberdef kind="friend" id="classmml_1_1vector_1a6684f15487209798bee55f69e848cb87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="friend" id="classmml_1_1vector_1a612263cfe9350459c56fd68000d2fb06" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::istream &amp;</type>
         <definition>std::istream&amp; operator&gt;&gt;</definition>
-        <argsstring>(std::istream &amp;in, vector&lt; T &gt; &amp;Vec)</argsstring>
+        <argsstring>(std::istream &amp;in, const vector&lt; T &gt; &amp;v) noexcept</argsstring>
         <name>operator&gt;&gt;</name>
         <param>
           <type>std::istream &amp;</type>
           <declname>in</declname>
         </param>
         <param>
-          <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt; &amp;</type>
-          <declname>Vec</declname>
+          <type>const <ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt; &amp;</type>
+          <declname>v</declname>
         </param>
         <briefdescription>
+<para>Writes a value into the vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Wert in Vektor reinschreiben</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where it should be written in </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>what should be written in </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>output stream </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="131" column="21" bodyfile="include/mml/vector.hpp" bodystart="131" bodyend="136"/>
+        <location file="include/mml/vector.hpp" line="167" column="21" bodyfile="include/mml/vector.hpp" bodystart="167" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmml_1_1vector_1a84512b3055a9ec49cfe977c10c8a2b79" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::vector&lt; T &gt;::_exist</definition>
+        <argsstring>(const T &amp;name) noexcept</argsstring>
+        <name>_exist</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a value exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool</para>
+</simplesect>
+Check if a string exists in the vector <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/vector.hpp" line="240" column="6" bodyfile="include/mml/vector.hpp" bodystart="240" bodyend="240"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <inheritancegraph>
-      <node id="2">
-        <label>std::vector&lt; T &gt;</label>
-      </node>
-      <node id="1">
-        <label>mml::vector&lt; T &gt;</label>
-        <link refid="classmml_1_1vector"/>
-        <childnode refid="2" relation="private-inheritance">
-        </childnode>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="2">
-        <label>std::vector&lt; T &gt;</label>
-      </node>
-      <node id="1">
-        <label>mml::vector&lt; T &gt;</label>
-        <link refid="classmml_1_1vector"/>
-        <childnode refid="2" relation="private-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="447"/>
+    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="504"/>
     <listofallmembers>
+      <member refid="classmml_1_1vector_1a84512b3055a9ec49cfe977c10c8a2b79" prot="private" virt="non-virtual"><scope>mml::vector</scope><name>_exist</name></member>
       <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>begin</name></member>
-      <member refid="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>count</name></member>
-      <member refid="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>cout</name></member>
-      <member refid="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>del</name></member>
-      <member refid="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>empty</name></member>
+      <member refid="classmml_1_1vector_1a91e15fae7ebbb5a00391dfc3acb6987b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>count</name></member>
+      <member refid="classmml_1_1vector_1a861d552caf263eb37d7fe9bcd4ca8861" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>cout</name></member>
+      <member refid="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>del</name></member>
+      <member refid="classmml_1_1vector_1af0fd2f8bb3bc757713694d12ebc919b8" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>empty</name></member>
       <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>end</name></member>
       <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>erase</name></member>
       <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>erase</name></member>
-      <member refid="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>exist</name></member>
-      <member refid="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>find</name></member>
-      <member refid="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>get_data</name></member>
-      <member refid="classmml_1_1vector_1ae4cae150b7b30e91e3b937d7a529a16f" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>insert</name></member>
-      <member refid="classmml_1_1vector_1a35466b7dc2f7af8333b354edc7475001" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>log</name></member>
+      <member refid="classmml_1_1vector_1a76e9ae37b4d92521fe84c5dd0878a7a0" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>exist</name></member>
+      <member refid="classmml_1_1vector_1a309bd325454ee39e8e6f71a5a3e52ac3" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>find</name></member>
+      <member refid="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>insert</name></member>
+      <member refid="classmml_1_1vector_1ace5e48f1429007d82db0322b4ddc4977" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>log</name></member>
       <member refid="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator*</name></member>
-      <member refid="classmml_1_1vector_1a521aa464534c98ecd70315632ad25f25" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+</name></member>
-      <member refid="classmml_1_1vector_1a372daa94b7f21f06a70a755111114ee6" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+=</name></member>
-      <member refid="classmml_1_1vector_1afdee463d65e61d05a5210e324b42e9ce" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator&lt;&lt;</name></member>
-      <member refid="classmml_1_1vector_1a52d2bb1a8ce2c1fe10784fe52d22803b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator=</name></member>
-      <member refid="classmml_1_1vector_1a72f4406c5722f9fb621ea2afdd722877" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator=</name></member>
-      <member refid="classmml_1_1vector_1a6684f15487209798bee55f69e848cb87" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classmml_1_1vector_1aa1e76ce928f0025c21b4ca42e227b4cf" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator*=</name></member>
+      <member refid="classmml_1_1vector_1af988a06108c0ed0a54912ef79702c676" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+</name></member>
+      <member refid="classmml_1_1vector_1a3a388590b5179b598664820f1c431e68" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+</name></member>
+      <member refid="classmml_1_1vector_1a16d7de3e21e86095a82e23e99e6415b7" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+=</name></member>
+      <member refid="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator+=</name></member>
+      <member refid="classmml_1_1vector_1a7224e4650e76335a445d3577bb24e377" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1vector_1a27bd93034429d512f0414f71e2da0448" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1ae5d5c7e921bc2c07453a8ef6ff4d9e47" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1a612263cfe9350459c56fd68000d2fb06" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator&gt;&gt;</name></member>
       <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator[]</name></member>
-      <member refid="classmml_1_1vector_1a935789a9cb1c2a8acdeedac8f5179278" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator^</name></member>
-      <member refid="classmml_1_1vector_1a9f0bde55f6f6514461e624c6426ef6fc" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>pop_back</name></member>
-      <member refid="classmml_1_1vector_1a0f23f42bb84218cdd6ec2cc523933e0e" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>push_back</name></member>
-      <member refid="classmml_1_1vector_1aff5f8402662b01d3eef81aab88dc112a" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>replace</name></member>
-      <member refid="classmml_1_1vector_1a901fab5579bf780856051f9493ffbb69" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>set</name></member>
-      <member refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>size</name></member>
-      <member refid="classmml_1_1vector_1a09c4bf51180082747d807fd1d8d5ae84" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>sum</name></member>
-      <member refid="classmml_1_1vector_1ae2121141f484344e07345eddf7caa77c" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>toT</name></member>
+      <member refid="classmml_1_1vector_1a94e947265d74fd8b17586bfe6e8f3e65" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator^</name></member>
+      <member refid="classmml_1_1vector_1ac971bc51f4e13b7829110ff3abb9b94a" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>operator^=</name></member>
+      <member refid="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>pop_back</name></member>
+      <member refid="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>push_back</name></member>
+      <member refid="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>replace</name></member>
+      <member refid="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>set</name></member>
+      <member refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>size</name></member>
+      <member refid="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>sort</name></member>
+      <member refid="classmml_1_1vector_1a258b24c3d22bbc05ac46f41afa723724" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>sum</name></member>
       <member refid="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>tovec</name></member>
       <member refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" prot="protected" virt="non-virtual"><scope>mml::vector</scope><name>vec</name></member>
       <member refid="classmml_1_1vector_1ae33ede1abf01d6d2579d554e0e4ece65" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>vector</name></member>

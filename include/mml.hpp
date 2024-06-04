@@ -22,12 +22,11 @@
 
 #include "mml/definitions.hpp"
 #include "mml/file.hpp"
-#include "mml/functions.hpp"
 #include "mml/help.hpp"
 #include "mml/log.hpp"
 #include "mml/shell.hpp"
 #include "mml/standards.hpp"
-#include "mml/Thread.hpp"
+#include "mml/thread.hpp"
 #include "mml/Timer.hpp"
 #include "mml/Unix.hpp"
 #include "mml/vector.hpp"

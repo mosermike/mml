@@ -21,10 +21,14 @@
 #include <time.h>
 #include <utime.h>
 #include <filesystem>
+#include <sys/mount.h>
 
 #include "mml.hpp"
 #include "mml/file.hpp"
 #include "mml/Unix.hpp"
+
+mml::string mml_pass;
+mml::string mml_mount_name;
 
 uid_t mml::Unix::getUserIdByName(const char *name)
 {
@@ -53,6 +57,25 @@ uid_t mml::Unix::getFileUID (const char* file){
 		exit(EXIT_FAILURE);
 	}
 	return sb.st_uid;
+}
+
+uint32_t mml::Unix::cifs(std::string src, std::string dst , mml::string fstype, std::string user , std::string mml_pass){
+	std::string data = "";
+	
+	if(user != "")
+		data = data + "username=" + user + ",";
+	
+	if(mml_pass != "")
+		data = data + "password=" + mml_pass + ",";
+	
+	data += "gid=1000,uid=1000";
+	
+	if(fstype.exist("cifs"))
+		data += ",vers=3.0";
+	
+	int16_t mount_return = mount(src.c_str(), dst.c_str(),fstype.c_str(),0,data.c_str());
+	return mount_return;
+	
 }
 
 bool mml::Unix::exist(std::string path){
@@ -114,7 +137,7 @@ mml::string mml::Unix::get_process_name_by_pid(const pid_t pid){
 
 pid_t mml::Unix::get_pid_by_process_name(const std::string process, int start) {
 	
-	for( pid_t i = start; i < 10000; i++) {
+	for( pid_t i = start; i < 100000; i++) {
 		if(mml::Unix::exist((std::string)"/proc/" + std::to_string(i))) {
 			std::ifstream	process1			((std::string)"/proc/" + std::to_string(i) + "/comm");
 			std::string		process_name	= "";
@@ -126,7 +149,7 @@ pid_t mml::Unix::get_pid_by_process_name(const std::string process, int start) {
 		}
 	}
 	
-	mml::shell::warn("[PID] keine PID gefunden");
+	mml::shell::warn("[PID] No PID found to the process '" + process + "'");
 	return 0;
 }
 
@@ -146,7 +169,7 @@ bool mml::Unix::mkdir_p(std::string value) {
 
 		// Check if the dir exists as a non-directory, otherwise create it
 		if(mml::Unix::exist(make_dir.c_str()) && mml::Unix::filetype(make_dir.str()) != S_DIR)
-			mml::shell::error("[mkdir_p] Cannot create directory " + make_dir.str() + " as it already exists as a non-directory!");
+			throw std::runtime_error("[mkdir_p] Cannot create directory " + make_dir.str() + " as it already exists as a non-directory!");
 		else
 			mkdir(make_dir.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH | S_IWOTH);
 
@@ -160,6 +183,61 @@ bool mml::Unix::mkdir_p(std::string value) {
 
 	return mml::Unix::exist(value);
 	
+}
+
+
+std::string mml::Unix::mount_Dir (std::string mountpath, mml::string mountpoint, mml::string controlpoint, std::string user, std::string pass1, const char* fstype, int count )
+{
+	
+	std::string		dir 				= mountpath;
+	std::string 	mml_mount_name		= mountpoint.str(); // nur zur Ausgabe von Mount the dev...
+	int				mount_return		= 0;
+	
+	mml::check_root("mount_dir");
+	
+	for(uint32_t i = mml_mount_name.size(); i >= 0;i--) {
+		if(mml_mount_name[i] == '/') {
+			mml_mount_name = mml_mount_name.substr(i+1);
+			break;
+		}
+	}
+   
+	std::cout << "Mount the device "<< mml_mount_name << std::endl;
+	
+	if(!mml::Unix::exist(mountpoint.str())) {
+		if(mountpoint[mountpoint.size()-1] != '/')
+			mountpoint += "/";
+		mountpoint.mkdir_p();
+	
+	}
+
+	if(mml::Unix::exist(controlpoint.str()) && !(controlpoint == "")) {
+		return pass1;
+	}
+
+	mount_return = cifs(mountpath, mountpoint.c_str(),fstype,user.c_str() ,pass1.c_str());
+	
+	if (mount_return != 0 && count < 2 && !mml::Unix::exist(controlpoint.str())){
+	
+		std::cout << "This did not work, try again!" << std::endl;
+		
+		count++;
+		mml::thread::sleep(1);
+		
+		mount_Dir(mountpath, mountpoint, controlpoint, user, pass1 = shell::password("[cifs] Password for device ",mml_mount_name), fstype, count);
+	}
+	
+	if (mount_return != 0 && count == 2 && !mml::Unix::exist(controlpoint.str())){
+	
+		count ++;
+		
+		std::cout << "mount: 3 incorrect password attempts" << std::endl;
+		exit(EXIT_FAILURE);
+	}
+
+	count = 0;
+	
+	return pass1;
 }
 
 mml::string mml::Unix::perms(std::string path) {
@@ -253,3 +331,24 @@ bool mml::Unix::set_date(std::string src_file, std::string dst_file, bool verbos
 	return mtime_new == mtime ? true : false;
 }
 
+
+bool mml::Unix::unmount_dir(std::string mount_dir, std::string controlpoint){
+	std::string dir = mount_dir;
+	std::size_t 	pos	= 0;
+	bool				return_unmount = false;
+	
+	do{
+		pos = dir.find("/");
+		dir = dir.substr(pos+1);
+	} while(pos < std::string::npos);
+	
+	std::cout << "Unmount the device: "<< dir << std::endl;
+
+	do {
+		return_unmount = umount2(mount_dir.c_str(),MNT_FORCE);
+		if(controlpoint == "")
+			break;
+	} while(mml::Unix::exist(controlpoint));
+	
+	return return_unmount;
+}

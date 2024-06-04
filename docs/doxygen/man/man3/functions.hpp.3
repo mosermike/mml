@@ -1,4 +1,4 @@
-.TH "include/mml/functions.hpp" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "include/mml/functions.hpp" 3 "Sat Jun 1 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -40,6 +40,11 @@ include/mml/functions.hpp
 .ti -1c
 .RI "constexpr uint32_t \fBmml::functions::const_string_hash\fP (const char *string)"
 .br
+.RI "Forms a hash value of a string\&. "
+.ti -1c
+.RI "template<typename templ > void \fBmml::functions::erase\fP (std::vector< templ > &data)"
+.br
+.RI "Empty a vector\&. "
 .in -1c
 .PP
 .RI "\fBfunctions\&.cpp\fP"
@@ -56,77 +61,33 @@ Enthält verschiedene Funktionen
 .in +1c
 .in +1c
 .ti -1c
-.RI "uint32_t \fBmml::functions::count_sym\fP (std::string test, char symbol)"
-.br
-.ti -1c
-.RI "void \fBmml::functions::cout\fP (std::vector< std::string > vec)"
-.br
-.ti -1c
-.RI "void \fBmml::functions::cout\fP (std::vector< \fBmml::string\fP > vec)"
-.br
-.ti -1c
-.RI "void \fBmml::functions::cout\fP (std::vector< double > vec)"
-.br
-.ti -1c
-.RI "void \fBmml::functions::cout\fP (std::vector< int > vec)"
-.br
-.ti -1c
 .RI "std::string \fBmml::functions::declare_month\fP (int month_nr)"
 .br
+.RI "Convert month number to month string\&. "
 .ti -1c
-.RI "std::vector< std::string > \fBmml::functions::erase\fP (std::vector< std::string > data)"
+.RI "template<typename templ > templ \fBmml::functions::get_random\fP (templ min=0, templ max=100)"
 .br
+.RI "Create a random number in a defined range\&. "
 .ti -1c
-.RI "std::vector< \fBmml::string\fP > \fBmml::functions::erase\fP (std::vector< \fBmml::string\fP > data)"
+.RI "template<typename templ > templ \fBmml::functions::smallest_num\fP (std::vector< templ > values, std::size_t pos=0)"
 .br
+.RI "Return the smallest number\&. "
 .ti -1c
-.RI "std::vector< double > \fBmml::functions::erase\fP (std::vector< double > data)"
+.RI "std::string \fBmml::functions::random_str\fP (size_t letters=10, std::string start='')"
 .br
-.ti -1c
-.RI "std::vector< int > \fBmml::functions::erase\fP (std::vector< int > data)"
-.br
-.ti -1c
-.RI "int \fBmml::functions::get_random\fP (int min=0, int max=100)"
-.br
-.ti -1c
-.RI "std::size_t \fBmml::functions::smallest_num\fP (std::vector< std::size_t > values, std::size_t pos=0)"
-.br
-.ti -1c
-.RI "std::string \fBmml::functions::random_str\fP (uint32_t letters=10, std::string value='')"
-.br
-.ti -1c
-.RI "std::vector< double > \fBmml::functions::Add_Vector\fP (std::vector< double > vector1, std::vector< double > vector2)"
-.br
-.ti -1c
-.RI "std::vector< std::string > \fBmml::functions::Add_Vector\fP (std::vector< std::string > vector1, std::vector< std::string > vector2)"
-.br
-.ti -1c
-.RI "uint32_t \fBmml::functions::cifs\fP (std::string src, std::string dst, \fBmml::string\fP fstype, std::string user, std::string pass)"
-.br
+.RI "Create a random, lower-case string\&. "
 .ti -1c
 .RI "std::size_t \fBmml::functions::digits\fP (double number)"
 .br
+.RI "Determine number of digits of a double number\&. "
 .ti -1c
-.RI "std::vector< double > \fBmml::functions::Get_Values\fP (std::string filepath, int16_t min_value=0)"
+.RI "std::vector< double > \fBmml::functions::Get_Values\fP (std::string filepath, double min_value)"
 .br
-.ti -1c
-.RI "void \fBmml::functions::getline\fP (std::ifstream &input, \fBmml::string\fP &String)"
-.br
+.RI "Write numbers after an equal sign from a file into a vector (format: [sth]=1\&.0) "
 .ti -1c
 .RI "std::string \fBmml::functions::lower\fP (std::string input)"
 .br
-.ti -1c
-.RI "double \fBmml::functions::Mean_of_Vector\fP (std::vector< double > values, bool ausgabe=false)"
-.br
-.ti -1c
-.RI "double \fBmml::functions::Mean_of_Array\fP (double array[], uint16_t length, bool ausgabe=false)"
-.br
-.ti -1c
-.RI "std::string \fBmml::functions::mount_Dir\fP (\fBmml::shell::arg\fP args, std::string mountpath, string mountpoint, string controlpoint, std::string user, std::string pass1, const char *fstype, int count)"
-.br
-.ti -1c
-.RI "bool \fBmml::functions::unmount_dir\fP (std::string mount_dir, std::string controlpoint='')"
-.br
+.RI "Alle Werte im String als Kleinbuchstaben\&. "
 .in -1c
 .in -1c
 .SH "Detailed Description"

@@ -9,76 +9,28 @@
 #include <fstream>
 
 #include "mml/help.hpp"
-#include "mml.hpp"
+#include "mml/shell.hpp"
 
 
-void mml::help::header(std::string befehl, std::string option) {
+void mml::help::header(std::string command) noexcept {
 	
 	mml::shell::chapter("NAME",true);
-	std::cout << "\t" << befehl << " - " << befehl << std::endl;
+	std::cout << "\t" << command << " - " << command << std::endl;
 	mml::shell::letter("white");
 	mml::shell::chapter("CALL",true);
-	mml::shell::chapter("\t" + befehl,false);
-	std::cout << option << " [OPTION]" << std::endl;
+	mml::shell::chapter("\t" + command,false);
 	mml::shell::chapter("DESCRIPTION",true);
 }
 
-void mml::help::foot(std::string version, std::string month, int year) {
+void mml::help::foot(std::string version, std::string month, int year, std::string author) noexcept {
 	
 	mml::shell::chapter("AUTHOR",true);
-	std::cout << "Written from Mike Moser" << std::endl << std::endl;
+	std::cout << "Written from " << author << std::endl << std::endl;
 	std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << " " << year << std::endl;
 }
 
+
 /*
-void mml::help::status(mml::string befehl) {
-	mml::Unix::User user;
-	std::ifstream	input;
-	mml::string		value	= "";
-	std::size_t		pos1	= 0;
-	std::size_t		pos2	= 0;
-
-	std::string		path = "";
-	// Check if the defined location exists
-	if(mml::Unix::exist(_location))
-		path = (std::string) _location + "/../" + befehl.str() + "/" + befehl.str() + ".cpp";
-	else {
-		MONTH	= "n.a.";
-		YEAR = -1;
-		BEFEHL = "n.a.";
-		return;
-	}
-	
-	input.open(path.c_str());
-	mml::functions::getline(input,value);
-	while(!input.eof()) {
-		value.getline(input);
-		
-		if(value.exist("@date")) {
-			pos1	= value.find('.');
-			pos2	= value.find('.',pos1+1);
-			MONTH	= mml::functions::declare_month(value.substr(pos1+1,pos2-pos1).atoi());
-			YEAR	= value.substr(pos2 + 1).atoi();
-			value.getline(input);
-		}
-		
-		if(value.exist("@version")) {
-			pos1	= value.find("@version");
-			VERSION	= value.substr(pos1 + 9).atof();
-			value.getline(input);
-		}
-		
-		if(value.exist("@name")) {
-			std::size_t pos1 = value.find("@name");
-			BEFEHL	= value.substr(pos1 + 6).str();
-			value.getline(input);
-			break;
-		}
-	}
-	input.close();
-}
-*/
-
 void mml::help::check_root() {
 	
 	//mml::help::status("check_root");
@@ -544,49 +496,43 @@ void mml::help::userinfo() {
 
 void mml::help::help(mml::string output) {
 	switch(output.hash()) {
-		case mml::functions::const_string_hash("check_root") :
+		case mml::const_string_hash("check_root") :
 			mml::help::check_root();
 			break;
-		case mml::functions::const_string_hash("cifs") :
+		case mml::const_string_hash("cifs") :
 			mml::help::cifs();
 			break;
-		case mml::functions::const_string_hash("Convert") :
+		case mml::const_string_hash("Convert") :
 			mml::help::convert();
 			break;
-		case mml::functions::const_string_hash("cop") :
+		case mml::const_string_hash("cop") :
 			mml::help::cop();
 			break;
-			
-		case mml::functions::const_string_hash("copy") :
+		case mml::const_string_hash("copy") :
 			mml::help::copy();
 			break;
 		
-		case mml::functions::const_string_hash("farben") :
+		case mml::const_string_hash("farben") :
 			mml::help::farben();
 			break;
 
-		case mml::functions::const_string_hash("finanzen") :
+		case mml::const_string_hash("finanzen") :
 			mml::help::finanzen();
 			break;
 
-		case mml::functions::const_string_hash("hhelp") :
-			std::cout << "Test" << std::endl;
+		case mml::const_string_hash("hhelp") :
 			mml::help::hhelp();
 			break;
 			
-		case mml::functions::const_string_hash("hhelp_commands") :
+		case mml::const_string_hash("hhelp_commands") :
 			mml::help::hhelp_commands();
 			break;
-			
-		/*case mml::functions::const_string_hash("movebyte") :
-			mml::help::movebyte();
-			break;*/
 		
-		case mml::functions::const_string_hash("R_cop") :
+		case mml::const_string_hash("R_cop") :
 			mml::help::R_cop();
 			break;
 		
-		case mml::functions::const_string_hash("R_dns_filter") :
+		case mml::const_string_hash("R_dns_filter") :
 			mml::help::R_dns_filter();
 			break;
 			
@@ -594,27 +540,27 @@ void mml::help::help(mml::string output) {
 			//mml::help::R_nas();
 		//	break;
 			
-		case mml::functions::const_string_hash("rechner") :
+		case mml::const_string_hash("rechner") :
 			mml::help::rechner();
 			break;
 			
-		case mml::functions::const_string_hash("sizeof") :
+		case mml::const_string_hash("sizeof") :
 			mml::help::sizeof_h();
 			break;
 			
-		case mml::functions::const_string_hash("statistik") :
+		case mml::const_string_hash("statistik") :
 			mml::help::statistik();
 			break;
 			
-		case mml::functions::const_string_hash("timer") :
+		case mml::const_string_hash("timer") :
 			mml::help::timer();
 			break;
 			
-		case mml::functions::const_string_hash("todos") :
+		case mml::const_string_hash("todos") :
 			mml::help::todos();
 			break;
 			
-		case mml::functions::const_string_hash("userinfo") :
+		case mml::const_string_hash("userinfo") :
 			mml::help::userinfo();
 			break;
 		
@@ -628,6 +574,6 @@ void mml::help::help(mml::string output) {
 	
 }
 
-
+*/
 
 

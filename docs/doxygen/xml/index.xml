@@ -3,7 +3,7 @@
   <compound refid="classmml_1_1shell_1_1arg" kind="class"><name>mml::shell::arg</name>
     <member refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kind="variable"><name>argc</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kind="variable"><name>argv</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a0939900c2df4f70544a8a0403e39cdb2" kind="function"><name>arg</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a3b497e58786fb81131c24152c1f6f197" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" kind="function"><name>arg</name></member>
@@ -12,115 +12,95 @@
     <member refid="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a28fe3e99a59020810e69e619604c28eb" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a99936bb70b9cdd6260567670ff21df21" kind="function"><name>operator()</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a2141771685e1a8d924d0317cb2d994ea" kind="function"><name>operator()</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a95b8109c95d6042e03a0263ee231bac6" kind="function"><name>beginArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" kind="function"><name>erase</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a1e77af158fc020b40c2fae73b4be9df0" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a03ed3b9213c46a2262d639c1a9c3d57c" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a9432d048dd8ebdba3e6b7664f4ea0385" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a8eb78e58f89e85f3035d915aaf1e105f" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" kind="function"><name>findArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1ae74ce127cebc1bd5a0ebb6d04180a1ef" kind="function"><name>findArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a6164de1ffaa01a41895e62d31a61d17f" kind="function"><name>findArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1ac9243a71288ca0af76260f7ddc9f171b" kind="function"><name>findArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a4aee1c5181a0cccc14c7a219a8969d85" kind="function"><name>getArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a3a5ffe4ef50e17eac746e7f47eceb8cf" kind="function"><name>init</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" kind="function"><name>notArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a227253b8afad8794c6d084ba85787362" kind="function"><name>notArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1ac3aa4ba516a47e736020cb649c38c6b5" kind="function"><name>notArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1afc0255ef6d1d47d31d59451b0d04e1fe" kind="function"><name>notArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a4bc61588a188b42495d326ca18a0563c" kind="function"><name>positionArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a6710a60fba797b62cc0c2779e29ba4c3" kind="function"><name>positionArg</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a466d76ae0d4cc5c8d4f70f5afbad8d58" kind="function"><name>replace</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1aaf34e8664b98323584ef1e4586f71536" kind="function"><name>replace</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a6a5bb96cdd99de1ab52aadb3cba7ef56" kind="function"><name>sort</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kind="function"><name>str</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a56ee16d9987b1fd90b4e57596f3e6edf" kind="function"><name>str_change</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1acb1530a2a45ef924ff80e6e36bc75bba" kind="function"><name>tostr</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1af940491905058f07818cb7a613b1c917" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a6803b86ef3d63eb9c8f65d48586f148c" kind="function"><name>operator()</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a0d3883a51dd4012f770892aa41d857d5" kind="function"><name>operator()</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a9acf696f93656013a6515b3c1ce2a4fa" kind="function"><name>begin</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a02e44039b017a4f781be19a8014e037e" kind="function"><name>init</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a641b5dd2acbb18b032d7666649448fe2" kind="function"><name>nexist</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a2fd200cb84b0a25149e81b7c9a5e5ddd" kind="function"><name>pos</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a2955766a51d32939dd723a905bfda337" kind="function"><name>pos</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a919f80e695b5fd3367835108e61fe2a0" kind="function"><name>replace</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" kind="function"><name>~arg</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1aee2720830d4177be9650e1da9ab528f8" kind="function"><name>_init</name></member>
   </compound>
   <compound refid="classmml_1_1log" kind="class"><name>mml::log</name>
     <member refid="classmml_1_1log_1a61ab29dce1138f2ab61595fb615019b4" kind="variable"><name>logpath</name></member>
     <member refid="classmml_1_1log_1abc8ca2efb832ed83a1a1773fe19d7e7e" kind="variable"><name>output</name></member>
     <member refid="classmml_1_1log_1a3f65b8bb3b61c6ce2cdd595e012fac44" kind="function"><name>log</name></member>
     <member refid="classmml_1_1log_1a53b0ce1eb331eef0eed64e6f41b2d01a" kind="function"><name>log</name></member>
-    <member refid="classmml_1_1log_1a9e81b5bdf88da8af532a4c4c26f7b19a" kind="function"><name>~log</name></member>
-    <member refid="classmml_1_1log_1a253c95b2ce0e92a8c60ffaed841b3379" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1log_1a9925165fb0c2429a2e79c539c6152865" kind="function"><name>backup</name></member>
-    <member refid="classmml_1_1log_1a19b0de574610fb97b9aafbd507f674f8" kind="function"><name>close</name></member>
-    <member refid="classmml_1_1log_1a72650d1fb6ec84bed9874d087f542af6" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1log_1a7d52a4a5f893fe34e0f51c2e073ce39c" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1log_1a5c613fef84b2c896d249f67127445c2a" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1log_1a771fce3aeab314bae0a409fb95d5eadf" kind="function"><name>getline</name></member>
-    <member refid="classmml_1_1log_1a2f476b5c6467a8f8b45667fb24067507" kind="function"><name>getline_back</name></member>
-    <member refid="classmml_1_1log_1a6914f662b32fb1156cdd66bed86e3891" kind="function"><name>lastline</name></member>
-    <member refid="classmml_1_1log_1ad5079bc3b22102e15a1c4d62e566a63d" kind="function"><name>header</name></member>
-    <member refid="classmml_1_1log_1a52f8a08a6293ec9fcc3c3ce22c4200cf" kind="function"><name>open</name></member>
-    <member refid="classmml_1_1log_1a4828b229d2e77a323c1835d7b4b4104d" kind="function"><name>print</name></member>
-    <member refid="classmml_1_1log_1ab5481d9ed02f62fd30dc16a24e4f04ae" kind="function"><name>reset</name></member>
-    <member refid="classmml_1_1log_1a8fc9c7bb563438b53583937245c17489" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classmml_1_1log_1af08163a9d603b51c31615a91ffcc55f2" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classmml_1_1log_1a9698aaef8477ec90a27fe4324af5ef01" kind="function"><name>~log</name></member>
+    <member refid="classmml_1_1log_1a519038f7f2dcf5c107957eefa2b18be1" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1log_1af5ae373d3beb516f18aeb682fc003d75" kind="function"><name>backup</name></member>
+    <member refid="classmml_1_1log_1a6b14f403e075a081f9d9a27e5cd85bc5" kind="function"><name>close</name></member>
+    <member refid="classmml_1_1log_1a181f2207f8d222645f1802ac46269ac2" kind="function"><name>cout</name></member>
+    <member refid="classmml_1_1log_1af53a9d163c02452f0288be2bf0ca9c63" kind="function"><name>getline</name></member>
+    <member refid="classmml_1_1log_1aa1c5624176da9858966d55572f07e3b7" kind="function"><name>getline_back</name></member>
+    <member refid="classmml_1_1log_1a37a5c288ca3ea55368443a187edaa632" kind="function"><name>lastline</name></member>
+    <member refid="classmml_1_1log_1a3ccd92d9205471330411e539e29da7f1" kind="function"><name>header</name></member>
+    <member refid="classmml_1_1log_1ab35c6647cb3117ce3bdc2d9ae8b3249f" kind="function"><name>open</name></member>
+    <member refid="classmml_1_1log_1a7cdf620bab72e285569ae9a6fbb3aae1" kind="function"><name>print</name></member>
+    <member refid="classmml_1_1log_1a9921b093028374a7a0c0db1887edee37" kind="function"><name>reset</name></member>
+    <member refid="classmml_1_1log_1a244ec7e1c6b0c021cb10265728676dc1" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classmml_1_1string" kind="class"><name>mml::string</name>
     <member refid="classmml_1_1string_1a3da80d33f5aa244511801c6eba736c91" kind="typedef"><name>iterator</name></member>
     <member refid="classmml_1_1string_1a35e3e6685c5364e0ddfd68f1a7d60bdf" kind="typedef"><name>const_iterator</name></member>
     <member refid="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" kind="variable"><name>value</name></member>
     <member refid="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" kind="variable"><name>temp</name></member>
-    <member refid="classmml_1_1string_1a1e72bd0d0e35cc359b256916fd57da2a" kind="function"><name>to_mml</name></member>
-    <member refid="classmml_1_1string_1a517142575429693d71fae8507719ef81" kind="function"><name>_exist</name></member>
-    <member refid="classmml_1_1string_1a624785c3fee6ef75b50a3569b5234b5f" kind="function"><name>string</name></member>
+    <member refid="classmml_1_1string_1acf44ff6b3b903b878c28bfd8ea83f079" kind="function"><name>to_mml</name></member>
+    <member refid="classmml_1_1string_1a7ed87d2beab5be00ca14dcd8bebcf134" kind="function"><name>_exist</name></member>
+    <member refid="classmml_1_1string_1a027b118294677870eccf9ff59d4b1e96" kind="function"><name>string</name></member>
+    <member refid="classmml_1_1string_1aa83d5b5500921e4d782ef18e16ac83dc" kind="function"><name>string</name></member>
     <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" kind="function"><name>string</name></member>
-    <member refid="classmml_1_1string_1abf78a337e3fc0d9889f3e138a761f77c" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1string_1ae135c56481a1e24845498efda41aeb84" kind="function"><name>operator==</name></member>
-    <member refid="classmml_1_1string_1ab04f755c55c2322d6dffca2e12cfa8dd" kind="function"><name>operator!=</name></member>
-    <member refid="classmml_1_1string_1aa288bb8a47b47af92f7d3f1462e30cc9" kind="function"><name>operator+</name></member>
-    <member refid="classmml_1_1string_1ab1faf29711092d4e230837a0d697cefd" kind="function"><name>operator+=</name></member>
+    <member refid="classmml_1_1string_1a44ceac8e8ff4252b607c882cb2fafb51" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1string_1ac4a64b7794a0078b7beb3c3a8d395fe8" kind="function"><name>operator==</name></member>
+    <member refid="classmml_1_1string_1ab7ed3001a890ac8da6e8302981661a0a" kind="function"><name>operator!=</name></member>
+    <member refid="classmml_1_1string_1af7ac5b518d5f3f1a56718577bfb0bd97" kind="function"><name>operator+</name></member>
+    <member refid="classmml_1_1string_1a02cafc3fa2871839d9e234651a989c4d" kind="function"><name>operator+=</name></member>
     <member refid="classmml_1_1string_1a754a104abb34fd9842cd5869566bfdb5" kind="function"><name>operator[]</name></member>
-    <member refid="classmml_1_1string_1a1220627cd229e5914b01ac19eba537e0" kind="function"><name>operator()</name></member>
-    <member refid="classmml_1_1string_1a32311b133953994dfef6961c8a1580e8" kind="function"><name>atof</name></member>
-    <member refid="classmml_1_1string_1a8441ef354393dd5da65206b6f5818087" kind="function"><name>atoi</name></member>
-    <member refid="classmml_1_1string_1a76ed2fd33dfc39f219daf4e5e27b3be9" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1string_1afcbe44ec9c0c3dbb9b42bbaa1347d223" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1string_1ae4e537d4e75a0878ea7277f58f0e5907" kind="function"><name>c_str</name></member>
-    <member refid="classmml_1_1string_1ab1bb8f6e0335ba8bfb6eb3e8e126f68e" kind="function"><name>clear</name></member>
-    <member refid="classmml_1_1string_1a88471aafcb78a860ec707bb140baa069" kind="function"><name>count</name></member>
-    <member refid="classmml_1_1string_1a7bcf86627d31a8b085a1a3feaa12bad3" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1string_1a148062ef838673354ed404876f6cb64d" kind="function"><name>del_letter</name></member>
-    <member refid="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" kind="function"><name>del_number</name></member>
-    <member refid="classmml_1_1string_1ae6020f11a4948d38de8ef91bfa6d20f6" kind="function"><name>del_space</name></member>
-    <member refid="classmml_1_1string_1ae8e122861dd6eab71021afbe39c4bdef" kind="function"><name>empty</name></member>
-    <member refid="classmml_1_1string_1a86a03d20cc2b250ef66dec04a695495f" kind="function"><name>end</name></member>
-    <member refid="classmml_1_1string_1a1e226f607264acb0866efc92df5c200a" kind="function"><name>end</name></member>
-    <member refid="classmml_1_1string_1a539be364f93bbb5ee56c5a49ea694dd1" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1string_1a1033fe9d14c9bd1d6ca6f95702f8d586" kind="function"><name>find</name></member>
-    <member refid="classmml_1_1string_1ac273292618a768ff100f9e4dfa397009" kind="function"><name>find</name></member>
-    <member refid="classmml_1_1string_1a41759a0809cc18124733db34fabca24d" kind="function"><name>find_back</name></member>
-    <member refid="classmml_1_1string_1a44600a161f7ad1c5daa8e343d4a99cf0" kind="function"><name>getline</name></member>
-    <member refid="classmml_1_1string_1adf5cf7012f74a47aab5b0c4fc6c2842f" kind="function"><name>getline</name></member>
-    <member refid="classmml_1_1string_1a9b735c067f74a7b4e324e19157338814" kind="function"><name>getValue</name></member>
-    <member refid="classmml_1_1string_1a9f82d0c2131c9165e05adb386b233d21" kind="function"><name>hash</name></member>
+    <member refid="classmml_1_1string_1a65172ea4fe29abb123ac12f905d6c51b" kind="function"><name>operator()</name></member>
+    <member refid="classmml_1_1string_1ac9de49b90b0bdfc2a06bef54870f450e" kind="function"><name>atof</name></member>
+    <member refid="classmml_1_1string_1ac0006bb0f5c473159ba07ac516a1f0f7" kind="function"><name>atoi</name></member>
+    <member refid="classmml_1_1string_1a66057297d6504b42f1c397b15c377359" kind="function"><name>begin</name></member>
+    <member refid="classmml_1_1string_1ab05ba61105f8c99256c2828593a87528" kind="function"><name>begin</name></member>
+    <member refid="classmml_1_1string_1a3e6b150967878ef73ac82f196ed6f83f" kind="function"><name>c_str</name></member>
+    <member refid="classmml_1_1string_1a948f7256bc8c59fc12e7a1fcb2d761a1" kind="function"><name>clear</name></member>
+    <member refid="classmml_1_1string_1acf3840270f4531fb625fcf7593c8835f" kind="function"><name>count</name></member>
+    <member refid="classmml_1_1string_1ad6fc608ad98d065da4f93d8f5fabc9cc" kind="function"><name>cout</name></member>
+    <member refid="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" kind="function"><name>del_letter</name></member>
+    <member refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" kind="function"><name>del_number</name></member>
+    <member refid="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" kind="function"><name>del_space</name></member>
+    <member refid="classmml_1_1string_1ae3340aec48652e49410441d77649846e" kind="function"><name>empty</name></member>
+    <member refid="classmml_1_1string_1a80c23eafaa8bd703214a915eadb08892" kind="function"><name>end</name></member>
+    <member refid="classmml_1_1string_1a81b4a8f4b92871877fd9fbe01e3e169f" kind="function"><name>end</name></member>
+    <member refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kind="function"><name>exist</name></member>
+    <member refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" kind="function"><name>find</name></member>
+    <member refid="classmml_1_1string_1aecf3c5f531a87495b56805100e0db095" kind="function"><name>find</name></member>
+    <member refid="classmml_1_1string_1ab8fb7c879803123ace2fb3fdc89204b2" kind="function"><name>find_back</name></member>
+    <member refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kind="function"><name>getline</name></member>
+    <member refid="classmml_1_1string_1a83806c5e9d92585f57f9ef2dbaf67e07" kind="function"><name>getline</name></member>
+    <member refid="classmml_1_1string_1ae7d9615789f946626b4aa04159854187" kind="function"><name>getValue</name></member>
+    <member refid="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" kind="function"><name>hash</name></member>
     <member refid="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" kind="function"><name>log</name></member>
-    <member refid="classmml_1_1string_1aa35374da20cb9c18df75aa3897066ecf" kind="function"><name>lower</name></member>
+    <member refid="classmml_1_1string_1a4860b64f242e6602b3be8b8ee2e71b02" kind="function"><name>lower</name></member>
     <member refid="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" kind="function"><name>ls</name></member>
     <member refid="classmml_1_1string_1a126fa2767c6b4d20e7d7afa66e4feff5" kind="function"><name>ls</name></member>
-    <member refid="classmml_1_1string_1a774c2bf7511d6c23cd25c8c8cda6bb06" kind="function"><name>mkdir_p</name></member>
-    <member refid="classmml_1_1string_1a97fa3ac4e196573c2ee3f39fdbb5ed5e" kind="function"><name>remove</name></member>
+    <member refid="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" kind="function"><name>mkdir_p</name></member>
+    <member refid="classmml_1_1string_1ae7bee7b5a1a67a3069abf52a234583cb" kind="function"><name>remove</name></member>
     <member refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kind="function"><name>replace</name></member>
-    <member refid="classmml_1_1string_1a66452b29f6a4e98839344c675f2cd164" kind="function"><name>rfind</name></member>
-    <member refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" kind="function"><name>size</name></member>
-    <member refid="classmml_1_1string_1a71a3dae3f16e17a67c213ee643a80587" kind="function"><name>substr</name></member>
-    <member refid="classmml_1_1string_1a422be5ccc494f3b1ed6039e84b229a17" kind="function"><name>substr</name></member>
-    <member refid="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" kind="function"><name>sub</name></member>
-    <member refid="classmml_1_1string_1a2006997f5084941e91472f8eaedb41c9" kind="function"><name>stoi</name></member>
-    <member refid="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" kind="function"><name>str</name></member>
-    <member refid="classmml_1_1string_1a8e237d1326516f2d4e09006b55569d7d" kind="function"><name>writeline</name></member>
-    <member refid="classmml_1_1string_1aeb572bc17c49db9a0b358b1ce81af4e0" kind="function"><name>writeline</name></member>
+    <member refid="classmml_1_1string_1a872ada9f67c793066ce58181119ec73b" kind="function"><name>rfind</name></member>
+    <member refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kind="function"><name>size</name></member>
+    <member refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kind="function"><name>substr</name></member>
+    <member refid="classmml_1_1string_1a365c211d42efb38ad424f6c3bc6fa6f3" kind="function"><name>substr</name></member>
+    <member refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" kind="function"><name>sub</name></member>
+    <member refid="classmml_1_1string_1ae36494e952a47b87efce6d67a44de3cb" kind="function"><name>stoi</name></member>
+    <member refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kind="function"><name>str</name></member>
+    <member refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" kind="function"><name>writeline</name></member>
+    <member refid="classmml_1_1string_1ae6bd14b8261e69dc0e61b698ae2dffaa" kind="function"><name>writeline</name></member>
     <member refid="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" kind="function"><name>~string</name></member>
-    <member refid="classmml_1_1string_1a2cc8c87a16d53c8ebaacfd0eb0fa1c5f" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classmml_1_1string_1a5f49a70c3fdd792a1913cf41ad043da0" kind="friend"><name>operator&gt;&gt;</name></member>
+    <member refid="classmml_1_1string_1a745716a55996ec76c24b86ae15b93b8e" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classmml_1_1string_1ae2969aae0d5dae67e02f7e8f82d6c342" kind="friend"><name>operator&gt;&gt;</name></member>
   </compound>
   <compound refid="classmml_1_1thread_1_1Thread" kind="class"><name>mml::thread::Thread</name>
     <member refid="classmml_1_1thread_1_1Thread_1a91bae489f2ee7d28a1324c67547884a4" kind="variable"><name>thread_writing_active</name></member>
@@ -177,36 +157,40 @@
     <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" kind="function"><name>vector</name></member>
-    <member refid="classmml_1_1vector_1a52d2bb1a8ce2c1fe10784fe52d22803b" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1vector_1a72f4406c5722f9fb621ea2afdd722877" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1vector_1a27bd93034429d512f0414f71e2da0448" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1vector_1ae5d5c7e921bc2c07453a8ef6ff4d9e47" kind="function"><name>operator=</name></member>
     <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" kind="function"><name>empty</name></member>
+    <member refid="classmml_1_1vector_1af0fd2f8bb3bc757713694d12ebc919b8" kind="function"><name>empty</name></member>
     <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" kind="function"><name>end</name></member>
     <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" kind="function"><name>erase</name></member>
     <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" kind="function"><name>erase</name></member>
-    <member refid="classmml_1_1vector_1ae4cae150b7b30e91e3b937d7a529a16f" kind="function"><name>insert</name></member>
+    <member refid="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" kind="function"><name>insert</name></member>
     <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" kind="function"><name>operator[]</name></member>
-    <member refid="classmml_1_1vector_1a9f0bde55f6f6514461e624c6426ef6fc" kind="function"><name>pop_back</name></member>
-    <member refid="classmml_1_1vector_1a0f23f42bb84218cdd6ec2cc523933e0e" kind="function"><name>push_back</name></member>
-    <member refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" kind="function"><name>size</name></member>
-    <member refid="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" kind="function"><name>count</name></member>
-    <member refid="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" kind="function"><name>del</name></member>
-    <member refid="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1vector_1ae2121141f484344e07345eddf7caa77c" kind="function"><name>toT</name></member>
-    <member refid="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" kind="function"><name>get_data</name></member>
-    <member refid="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" kind="function"><name>find</name></member>
-    <member refid="classmml_1_1vector_1a35466b7dc2f7af8333b354edc7475001" kind="function"><name>log</name></member>
-    <member refid="classmml_1_1vector_1aff5f8402662b01d3eef81aab88dc112a" kind="function"><name>replace</name></member>
+    <member refid="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877" kind="function"><name>pop_back</name></member>
+    <member refid="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0" kind="function"><name>push_back</name></member>
+    <member refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" kind="function"><name>size</name></member>
+    <member refid="classmml_1_1vector_1a91e15fae7ebbb5a00391dfc3acb6987b" kind="function"><name>count</name></member>
+    <member refid="classmml_1_1vector_1a861d552caf263eb37d7fe9bcd4ca8861" kind="function"><name>cout</name></member>
+    <member refid="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591" kind="function"><name>del</name></member>
+    <member refid="classmml_1_1vector_1a76e9ae37b4d92521fe84c5dd0878a7a0" kind="function"><name>exist</name></member>
+    <member refid="classmml_1_1vector_1a309bd325454ee39e8e6f71a5a3e52ac3" kind="function"><name>find</name></member>
+    <member refid="classmml_1_1vector_1ace5e48f1429007d82db0322b4ddc4977" kind="function"><name>log</name></member>
+    <member refid="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" kind="function"><name>replace</name></member>
     <member refid="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" kind="function"><name>operator*</name></member>
-    <member refid="classmml_1_1vector_1a901fab5579bf780856051f9493ffbb69" kind="function"><name>set</name></member>
-    <member refid="classmml_1_1vector_1a09c4bf51180082747d807fd1d8d5ae84" kind="function"><name>sum</name></member>
-    <member refid="classmml_1_1vector_1a521aa464534c98ecd70315632ad25f25" kind="function"><name>operator+</name></member>
-    <member refid="classmml_1_1vector_1a372daa94b7f21f06a70a755111114ee6" kind="function"><name>operator+=</name></member>
-    <member refid="classmml_1_1vector_1a935789a9cb1c2a8acdeedac8f5179278" kind="function"><name>operator^</name></member>
+    <member refid="classmml_1_1vector_1aa1e76ce928f0025c21b4ca42e227b4cf" kind="function"><name>operator*=</name></member>
+    <member refid="classmml_1_1vector_1af988a06108c0ed0a54912ef79702c676" kind="function"><name>operator+</name></member>
+    <member refid="classmml_1_1vector_1a16d7de3e21e86095a82e23e99e6415b7" kind="function"><name>operator+=</name></member>
+    <member refid="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" kind="function"><name>set</name></member>
+    <member refid="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" kind="function"><name>sort</name></member>
+    <member refid="classmml_1_1vector_1a258b24c3d22bbc05ac46f41afa723724" kind="function"><name>sum</name></member>
+    <member refid="classmml_1_1vector_1a3a388590b5179b598664820f1c431e68" kind="function"><name>operator+</name></member>
+    <member refid="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" kind="function"><name>operator+=</name></member>
+    <member refid="classmml_1_1vector_1a94e947265d74fd8b17586bfe6e8f3e65" kind="function"><name>operator^</name></member>
+    <member refid="classmml_1_1vector_1ac971bc51f4e13b7829110ff3abb9b94a" kind="function"><name>operator^=</name></member>
     <member refid="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" kind="function"><name>tovec</name></member>
-    <member refid="classmml_1_1vector_1afdee463d65e61d05a5210e324b42e9ce" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classmml_1_1vector_1a6684f15487209798bee55f69e848cb87" kind="friend"><name>operator&gt;&gt;</name></member>
+    <member refid="classmml_1_1vector_1a7224e4650e76335a445d3577bb24e377" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classmml_1_1vector_1a612263cfe9350459c56fd68000d2fb06" kind="friend"><name>operator&gt;&gt;</name></member>
+    <member refid="classmml_1_1vector_1a84512b3055a9ec49cfe977c10c8a2b79" kind="function"><name>_exist</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
@@ -223,84 +207,47 @@
   </compound>
   <compound refid="namespacemml" kind="namespace"><name>mml</name>
     <member refid="namespacemml_1af4da79098c1caf9501e3f4ad9313a573" kind="function"><name>check_root</name></member>
-    <member refid="namespacemml_1a2f67fa9c2ab3cc2f1c104ebfd97c7e11" kind="function"><name>date</name></member>
-    <member refid="namespacemml_1acd2059d85ff229714514fba5add6c391" kind="function"><name>date</name></member>
-    <member refid="namespacemml_1a676559a7059429aac4066ebac5fbca36" kind="function"><name>is_num</name></member>
-    <member refid="namespacemml_1a1d79d75734ea118c10fc391ab2231d56" kind="function"><name>range</name></member>
-    <member refid="namespacemml_1aef4479907a5a2ee42d0d0099e5525b5c" kind="function"><name>range</name></member>
-    <member refid="namespacemml_1a2cf98422c1355b3c351820b70b2834ba" kind="function"><name>round</name></member>
-    <member refid="namespacemml_1a5e1f7079411db351da5fb53576413d38" kind="function"><name>atob</name></member>
-    <member refid="namespacemml_1a55ee60d6d3fb41858d5c3f151044c200" kind="function"><name>atof</name></member>
-    <member refid="namespacemml_1a149a900d1e48e37c56481964c79aa9b4" kind="function"><name>atoi</name></member>
-    <member refid="namespacemml_1af9e4a0ff0d5308ede2e315150e566529" kind="function"><name>cout</name></member>
-    <member refid="namespacemml_1a21e76265e9a8d7091fe7068aee432c39" kind="function"><name>to_string</name></member>
+    <member refid="namespacemml_1a4e23041702a789444e71665de8e19b91" kind="function"><name>date</name></member>
+    <member refid="namespacemml_1a7ea9b81bab64fa6148ccd5252a5281b6" kind="function"><name>date</name></member>
+    <member refid="namespacemml_1ac687254476eb5589ff145f7ccb8f203b" kind="function"><name>is_num</name></member>
+    <member refid="namespacemml_1ad1fcba2487a959000bac06da539b792c" kind="function"><name>range</name></member>
+    <member refid="namespacemml_1a27d9d9cbd2f2498ec71acbe2db69b68a" kind="function"><name>range</name></member>
+    <member refid="namespacemml_1a5aa66f758c7e5b3bde73a72428c60db7" kind="function"><name>round</name></member>
+    <member refid="namespacemml_1a09b5d2051c67d0ee351b09f87c30126d" kind="function"><name>declare_month</name></member>
+    <member refid="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" kind="function"><name>get_random</name></member>
+    <member refid="namespacemml_1ae9a2f37b5fb1e8e463509077bbe11212" kind="function"><name>smallest_num</name></member>
+    <member refid="namespacemml_1a171afac262e291910b6f222216263b35" kind="function"><name>random_str</name></member>
+    <member refid="namespacemml_1aa309b7ac991a2e8bb06209b9bb7b44fb" kind="function"><name>digits</name></member>
+    <member refid="namespacemml_1ac91ad57c28ab9cecb7e82ef220f148c8" kind="function"><name>atob</name></member>
+    <member refid="namespacemml_1a63d35e02eeb9557dfc874c351694a481" kind="function"><name>atof</name></member>
+    <member refid="namespacemml_1ac6c1c70d32321714808ae64e33404d71" kind="function"><name>atoi</name></member>
+    <member refid="namespacemml_1ae91f369e368b0941ddcb8b5be38c36f9" kind="function"><name>cout</name></member>
+    <member refid="namespacemml_1a76d259a94d9ed50a9d33081caed25131" kind="function"><name>to_string</name></member>
+    <member refid="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" kind="function"><name>const_string_hash</name></member>
+    <member refid="namespacemml_1aed237a2c04babbcae30d180ab047666f" kind="function"><name>erase</name></member>
   </compound>
   <compound refid="namespacemml_1_1file" kind="namespace"><name>mml::file</name>
     <member refid="namespacemml_1_1file_1a024fab60fe782292eeeab6b68408cef9" kind="function"><name>add_twofiles</name></member>
-    <member refid="namespacemml_1_1file_1ac0621b8370119515421b5b6f097151f8" kind="function"><name>byteCopy</name></member>
-    <member refid="namespacemml_1_1file_1aec330f1b16f99b02f1e9d93fbd4f618a" kind="function"><name>copy</name></member>
-    <member refid="namespacemml_1_1file_1a56a2dd74ae51d87843c003bf055e67fd" kind="function"><name>copyFile</name></member>
+    <member refid="namespacemml_1_1file_1a3d0906e356f3e22593e89fcbec5760d7" kind="function"><name>byteCopy</name></member>
+    <member refid="namespacemml_1_1file_1ae8b01165891f2bd5e3c85a2e35a1c999" kind="function"><name>copy</name></member>
     <member refid="namespacemml_1_1file_1a5c59971f2c51414f4ecbc2b3ab40909a" kind="function"><name>equal</name></member>
     <member refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kind="function"><name>filetype</name></member>
     <member refid="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c" kind="function"><name>humanread</name></member>
     <member refid="namespacemml_1_1file_1a4037d2ecadff2ef72d423f1c6f867834" kind="function"><name>num_lines</name></member>
     <member refid="namespacemml_1_1file_1a25b3681154f917c6ff8701e0c158bda2" kind="function"><name>Program_exist</name></member>
     <member refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kind="function"><name>remove</name></member>
-    <member refid="namespacemml_1_1file_1adf2596a9fc0056a8e22d59508a7c34f4" kind="function"><name>set_date</name></member>
+    <member refid="namespacemml_1_1file_1ab5ecf6e0c681e2247b280aa094213a00" kind="function"><name>set_date_dir</name></member>
     <member refid="namespacemml_1_1file_1a97e554f98e4d84fd1ac488fc1e44640d" kind="function"><name>size</name></member>
-    <member refid="namespacemml_1_1file_1acb9416915b68523578fdd80b0371bd5a" kind="function"><name>size_human</name></member>
-    <member refid="namespacemml_1_1file_1afc475319ec2ac8be0b35883e9b371a94" kind="function"><name>size_dir</name></member>
+    <member refid="namespacemml_1_1file_1a1e60700072106e647f20640b94ecba55" kind="function"><name>size_human</name></member>
+    <member refid="namespacemml_1_1file_1a40d0377087a89cba13e0171ab5172a31" kind="function"><name>size_dir</name></member>
     <member refid="namespacemml_1_1file_1aa040614064fb83b0548804e7a2b4aeb5" kind="function"><name>time_mod</name></member>
   </compound>
   <compound refid="namespacemml_1_1functions" kind="namespace"><name>mml::functions</name>
-    <member refid="namespacemml_1_1functions_1aed447bd3bda04bd6d996e1ab7a0215de" kind="function"><name>count_sym</name></member>
-    <member refid="namespacemml_1_1functions_1a5a85af79e53e85778f1f4f71d74abcff" kind="function"><name>cout</name></member>
-    <member refid="namespacemml_1_1functions_1a45b7650e7b0cdffee9f33b8841274d2b" kind="function"><name>cout</name></member>
-    <member refid="namespacemml_1_1functions_1ac38212043b94eebcd39dafa61ab4f6bf" kind="function"><name>cout</name></member>
-    <member refid="namespacemml_1_1functions_1aab19815bc6c5988253ef00f76ef8c4f5" kind="function"><name>cout</name></member>
-    <member refid="namespacemml_1_1functions_1ab329e8a7f124bca7f7f6ae254b05ac19" kind="function"><name>declare_month</name></member>
-    <member refid="namespacemml_1_1functions_1a8639fcc5e87c478c7a197f829e033048" kind="function"><name>erase</name></member>
-    <member refid="namespacemml_1_1functions_1a955b1a9bf2b1b4042a542071fff5d6e7" kind="function"><name>erase</name></member>
-    <member refid="namespacemml_1_1functions_1a545e2cce4a554164b63a8f3d999069eb" kind="function"><name>erase</name></member>
-    <member refid="namespacemml_1_1functions_1a29d42b19532064af399a6c526da85f6c" kind="function"><name>erase</name></member>
-    <member refid="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" kind="function"><name>get_random</name></member>
-    <member refid="namespacemml_1_1functions_1a7d8132e164cdbeb2b7f165909f2d1bfb" kind="function"><name>smallest_num</name></member>
-    <member refid="namespacemml_1_1functions_1a7292b096bbe4bba8f51dad3ddcd17397" kind="function"><name>random_str</name></member>
-    <member refid="namespacemml_1_1functions_1a26b19eed5d28eb73559fd7d70814874f" kind="function"><name>Add_Vector</name></member>
-    <member refid="namespacemml_1_1functions_1aa44cc5b5a5e8ba0767dbdd25373222cb" kind="function"><name>Add_Vector</name></member>
-    <member refid="namespacemml_1_1functions_1a96882f2e48261be8bb9ed69325c86858" kind="function"><name>cifs</name></member>
-    <member refid="namespacemml_1_1functions_1a7ad5e71dbc16eacd87aa365de8ad66be" kind="function"><name>digits</name></member>
-    <member refid="namespacemml_1_1functions_1a0e96e0452d4751613aeb89406e7e5b88" kind="function"><name>Get_Values</name></member>
-    <member refid="namespacemml_1_1functions_1ad25f2df1d22305eca7a0fecc4e139a71" kind="function"><name>getline</name></member>
-    <member refid="namespacemml_1_1functions_1a76ebf0e616c5163d81986062a58b5f82" kind="function"><name>lower</name></member>
-    <member refid="namespacemml_1_1functions_1a15d9ea573c2898290db82cbb049559b9" kind="function"><name>Mean_of_Vector</name></member>
-    <member refid="namespacemml_1_1functions_1a611b42b46de00443a41d65682f56881d" kind="function"><name>Mean_of_Array</name></member>
-    <member refid="namespacemml_1_1functions_1a4c6ace1c6a5dff97fa85115618a217fa" kind="function"><name>mount_Dir</name></member>
-    <member refid="namespacemml_1_1functions_1a9262c7cd8e5f4205b650e9eb756a9655" kind="function"><name>unmount_dir</name></member>
     <member refid="namespacemml_1_1functions_1aed3e32c593011593a726a6c90cf24be5" kind="typedef"><name>vector</name></member>
-    <member refid="namespacemml_1_1functions_1a294eb401efb2876d21d5401f34a0284c" kind="function"><name>const_string_hash</name></member>
   </compound>
   <compound refid="namespacemml_1_1help" kind="namespace"><name>mml::help</name>
-    <member refid="namespacemml_1_1help_1a9dcb0812d703e4f61c7b94e1ba5b51ad" kind="function"><name>check_root</name></member>
-    <member refid="namespacemml_1_1help_1af68a38a5b5edae14bb0c48e8ccad0492" kind="function"><name>cifs</name></member>
-    <member refid="namespacemml_1_1help_1af6ff7471d95837a6e357e83e23d81146" kind="function"><name>convert</name></member>
-    <member refid="namespacemml_1_1help_1a3978351d7301b2be83bdc46e976d030e" kind="function"><name>cop</name></member>
-    <member refid="namespacemml_1_1help_1ab7c3684386d58dad93acae57b8605c2a" kind="function"><name>copy</name></member>
-    <member refid="namespacemml_1_1help_1ab01cf639d5ae44f4139d5861bd63ffdd" kind="function"><name>farben</name></member>
-    <member refid="namespacemml_1_1help_1a8c7b528a6fdce332a92230ac90ea003d" kind="function"><name>finanzen</name></member>
-    <member refid="namespacemml_1_1help_1a4fa535a397a367b86af91e61c151e283" kind="function"><name>hhelp</name></member>
-    <member refid="namespacemml_1_1help_1aa108f1fd9a7926224fa455f94ad56bd9" kind="function"><name>hhelp_commands</name></member>
-    <member refid="namespacemml_1_1help_1a0d3054a6b1494b5e6051238734bb8a30" kind="function"><name>R_cop</name></member>
-    <member refid="namespacemml_1_1help_1a8d391a507817cbce59f1117c7364a3b2" kind="function"><name>R_dns_filter</name></member>
-    <member refid="namespacemml_1_1help_1a128b2bcdce2b677d3d2ceaea60070640" kind="function"><name>rechner</name></member>
-    <member refid="namespacemml_1_1help_1a16ce13af175e32d8de860b816e83b6ff" kind="function"><name>sizeof_h</name></member>
-    <member refid="namespacemml_1_1help_1af4841cdf2e481b424f11043dc912bbbc" kind="function"><name>statistik</name></member>
-    <member refid="namespacemml_1_1help_1a7c4cd5cc193b9fe05c02fed824c5bccb" kind="function"><name>timer</name></member>
-    <member refid="namespacemml_1_1help_1a6deeceeb5c1a37549f37f5133a17af15" kind="function"><name>todos</name></member>
-    <member refid="namespacemml_1_1help_1adada0110d9f8fa7c5ba95a35a8a017d6" kind="function"><name>userinfo</name></member>
-    <member refid="namespacemml_1_1help_1afe14f31b66244bc704fcaf2d819be286" kind="function"><name>foot</name></member>
-    <member refid="namespacemml_1_1help_1a9e7febbcf7bfe7817a766881fc57528d" kind="function"><name>header</name></member>
-    <member refid="namespacemml_1_1help_1acfa6f75011432c10e311874b40084544" kind="function"><name>help</name></member>
+    <member refid="namespacemml_1_1help_1a4f18d3adc05374c5e8502536a47a6410" kind="function"><name>foot</name></member>
+    <member refid="namespacemml_1_1help_1a914f05aa5cabab6837d3228d1da1a3c1" kind="function"><name>header</name></member>
   </compound>
   <compound refid="namespacemml_1_1shell" kind="namespace"><name>mml::shell</name>
     <member refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kind="function"><name>error</name></member>
@@ -321,8 +268,6 @@
   </compound>
   <compound refid="namespacemml_1_1Unix" kind="namespace"><name>mml::Unix</name>
     <member refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kind="function"><name>exist</name></member>
-  </compound>
-  <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="conf_8py" kind="file"><name>conf.py</name>
   </compound>
@@ -373,8 +318,6 @@
   </compound>
   <compound refid="file_8hpp" kind="file"><name>file.hpp</name>
   </compound>
-  <compound refid="functions_8hpp" kind="file"><name>functions.hpp</name>
-  </compound>
   <compound refid="help_8hpp" kind="file"><name>help.hpp</name>
   </compound>
   <compound refid="log_8hpp" kind="file"><name>log.hpp</name>
@@ -383,7 +326,7 @@
   </compound>
   <compound refid="standards_8hpp" kind="file"><name>standards.hpp</name>
   </compound>
-  <compound refid="Thread_8hpp" kind="file"><name>Thread.hpp</name>
+  <compound refid="thread_8hpp" kind="file"><name>thread.hpp</name>
   </compound>
   <compound refid="Timer_8hpp" kind="file"><name>Timer.hpp</name>
     <member refid="Timer_8hpp_1a8c64f1849169fec46f30321ccbbf9848" kind="function"><name>operator&lt;&lt;</name></member>
@@ -399,10 +342,6 @@
     <member refid="file_8cpp_1a758b36574da5ff53ba636af4440c4a13" kind="variable"><name>mml_actual_file</name></member>
     <member refid="file_8cpp_1a74ac812c35d79087d51dabd11e12be40" kind="variable"><name>mml_progressing</name></member>
   </compound>
-  <compound refid="functions_8cpp" kind="file"><name>functions.cpp</name>
-    <member refid="functions_8cpp_1ab09a88ec6ae84ccf267effce77697179" kind="variable"><name>mml_pass</name></member>
-    <member refid="functions_8cpp_1a91dc68df52a34592eeceff0723d9d809" kind="variable"><name>mml_mount_name</name></member>
-  </compound>
   <compound refid="help_8cpp" kind="file"><name>help.cpp</name>
   </compound>
   <compound refid="log_8cpp" kind="file"><name>log.cpp</name>
@@ -410,21 +349,26 @@
   <compound refid="shell_8cpp" kind="file"><name>shell.cpp</name>
     <member refid="shell_8cpp_1ab09a88ec6ae84ccf267effce77697179" kind="variable"><name>mml_pass</name></member>
   </compound>
-  <compound refid="standards_8cpp" kind="file"><name>standards.cpp</name>
+  <compound refid="src_2standards_8cpp" kind="file"><name>standards.cpp</name>
+  </compound>
+  <compound refid="test_2standards_8cpp" kind="file"><name>standards.cpp</name>
+    <member refid="test_2standards_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="string_8cpp" kind="file"><name>string.cpp</name>
   </compound>
-  <compound refid="Thread_8cpp" kind="file"><name>Thread.cpp</name>
+  <compound refid="thread_8cpp" kind="file"><name>thread.cpp</name>
   </compound>
   <compound refid="Timer_8cpp" kind="file"><name>Timer.cpp</name>
     <member refid="Timer_8cpp_1a8c64f1849169fec46f30321ccbbf9848" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="Unix_8cpp" kind="file"><name>Unix.cpp</name>
+    <member refid="Unix_8cpp_1ab09a88ec6ae84ccf267effce77697179" kind="variable"><name>mml_pass</name></member>
+    <member refid="Unix_8cpp_1a91dc68df52a34592eeceff0723d9d809" kind="variable"><name>mml_mount_name</name></member>
   </compound>
   <compound refid="User_8cpp" kind="file"><name>User.cpp</name>
   </compound>
-  <compound refid="test1_8cpp" kind="file"><name>test1.cpp</name>
-    <member refid="test1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  <compound refid="args_8cpp" kind="file"><name>args.cpp</name>
+    <member refid="args_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
   </compound>

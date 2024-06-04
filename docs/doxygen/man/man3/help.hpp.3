@@ -1,14 +1,15 @@
-.TH "include/mml/help.hpp" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "include/mml/help.hpp" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/mml/help.hpp
+include/mml/help.hpp \- Contains functions to print help pages\&.  
+
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'mml/standards\&.hpp'\fP
-.br
 \fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
 .br
 
 .SS "Namespaces"
@@ -25,78 +26,23 @@ include/mml/help.hpp
 
 .in +1c
 .ti -1c
-.RI "void \fBmml::help::check_root\fP ()"
+.RI "void \fBmml::help::foot\fP (std::string version, std::string month, int year, std::string author) noexcept"
 .br
+.RI "Print the foot line with notes to author and date\&. "
 .ti -1c
-.RI "void \fBmml::help::cifs\fP ()"
+.RI "void \fBmml::help::header\fP (std::string command) noexcept"
 .br
-.ti -1c
-.RI "void \fBmml::help::convert\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::cop\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::copy\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::farben\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::finanzen\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::hhelp\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::hhelp_commands\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::R_cop\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::R_dns_filter\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::rechner\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::sizeof_h\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::statistik\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::timer\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::todos\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::userinfo\fP ()"
-.br
-.ti -1c
-.RI "void \fBmml::help::foot\fP (std::string version, std::string month, int year)"
-.br
-.ti -1c
-.RI "void \fBmml::help::header\fP (std::string befehl, std::string option='')"
-.br
-.ti -1c
-.RI "void \fBmml::help::help\fP (\fBmml::string\fP output)"
-.br
+.RI "Print out a header\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
+Contains functions to print help pages\&. 
+
 
 .PP
 \fBAuthor\fP
 .RS 4
-Mike Moser
-.RE
-.PP
-\fBNote\fP
-.RS 4
-Enthält verschiedene Hilfeseiten für C++-Programme 
+Mike Moser 
 .RE
 .PP
 

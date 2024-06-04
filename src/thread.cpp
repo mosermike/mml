@@ -7,7 +7,7 @@
  * 
 */
 #include <iostream>
-#include "mml/Thread.hpp"
+#include "mml/thread.hpp"
 #include "mml.hpp"
 
 
@@ -37,11 +37,11 @@ bool mml::thread::Thread::waiting(int a) {
 	while(this->is_writing_active()) {this->thread_sleep(0.1);}
 
 	if( a == 0)
-		this->thread_sleep_millisecond(i + mml::functions::get_random(1, max_i * 4) + mml::functions::get_random(1, max_i * 4));
+		this->thread_sleep_millisecond(i + mml::get_random(1, max_i * 4) + mml::get_random(1, max_i * 4));
 	else
 		this->thread_sleep_millisecond(a);
 	
-	while(this->is_writing_active()) { this->thread_sleep_millisecond(10 * mml::functions::get_random(1, max_i * 2)); }
+	while(this->is_writing_active()) { this->thread_sleep_millisecond(10 * mml::get_random(1, max_i * 2)); }
 	
 	this->thread_writing_true();
 	if( a == 0) {

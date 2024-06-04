@@ -21,22 +21,53 @@
           <declname>filepath_output</declname>
         </param>
         <briefdescription>
+<para>Opens two textfiles and writes it in another. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Zwei Dateien zu einer zusammenfügen</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filepath_input1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First file name to be written into a new one </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filepath_input2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First file name to be written into a new one </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filepath_output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where the content is written to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if input1 or input2 cannot be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="26" column="6" bodyfile="src/file.cpp" bodystart="190" bodyend="223" declfile="include/mml/file.hpp" declline="26" declcolumn="6"/>
+        <location file="include/mml/file.hpp" line="29" column="6" bodyfile="src/file.cpp" bodystart="190" bodyend="219" declfile="include/mml/file.hpp" declline="29" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1ac0621b8370119515421b5b6f097151f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::size_t</type>
-        <definition>std::size_t mml::file::byteCopy</definition>
-        <argsstring>(const std::string &amp;src, const std::string &amp;dest, std::size_t num, std::size_t blockSize, bool progress=false, std::string fullsize=&quot;&quot;)</argsstring>
+      <memberdef kind="function" id="namespacemml_1_1file_1a3d0906e356f3e22593e89fcbec5760d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::file::byteCopy</definition>
+        <argsstring>(const std::string &amp;src, const std::string &amp;dest, std::size_t blockSize, bool progress=false)</argsstring>
         <name>byteCopy</name>
         <param>
           <type>const std::string &amp;</type>
@@ -48,10 +79,6 @@
         </param>
         <param>
           <type>std::size_t</type>
-          <declname>num</declname>
-        </param>
-        <param>
-          <type>std::size_t</type>
           <declname>blockSize</declname>
         </param>
         <param>
@@ -59,35 +86,67 @@
           <declname>progress</declname>
           <defval>false</defval>
         </param>
-        <param>
-          <type>std::string</type>
-          <declname>fullsize</declname>
-          <defval>&quot;&quot;</defval>
-        </param>
         <briefdescription>
+<para>Copy a file. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Kopiervorgang einer Datei mit/ohne Fortschrittsanzeige</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source File </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the block to be copied at once </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>progress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print out a progress bar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
 </simplesect>
-<simplesect kind="return"><para>Länge von Gesamtgröße </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if source file does not exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 <simplesect kind="author"><para>Mike, Lucas </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="34" column="13" bodyfile="src/file.cpp" bodystart="32" bodyend="119" declfile="include/mml/file.hpp" declline="34" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="41" column="6" bodyfile="src/file.cpp" bodystart="32" bodyend="119" declfile="include/mml/file.hpp" declline="41" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1aec330f1b16f99b02f1e9d93fbd4f618a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>uint32_t</type>
-        <definition>uint32_t mml::file::copy</definition>
-        <argsstring>(shell::arg args, mml::string src, mml::string dst, std::string name_in=&quot;&quot;, std::string name_ex=&quot;&quot;)</argsstring>
+      <memberdef kind="function" id="namespacemml_1_1file_1ae8b01165891f2bd5e3c85a2e35a1c999" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::file::copy</definition>
+        <argsstring>(mml::string src, mml::string dst, std::string name_in=&quot;&quot;, std::string name_ex=&quot;&quot;, size_t blocksize=_100MB, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite=false)</argsstring>
         <name>copy</name>
-        <param>
-          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">shell::arg</ref></type>
-          <declname>args</declname>
-        </param>
         <param>
           <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
           <declname>src</declname>
@@ -106,89 +165,179 @@
           <declname>name_ex</declname>
           <defval>&quot;&quot;</defval>
         </param>
+        <param>
+          <type>size_t</type>
+          <declname>blocksize</declname>
+          <defval><ref refid="definitions_8hpp_1ab8fa1cabe38c95b1cb91247e6c3fc963" kindref="member">_100MB</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose_debug</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>progress</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>falsewrite</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
+<para>Copy the content of the path to a new one. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Kopiert einen Quellpfad zu einem Quellpfad</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/file.hpp" line="41" column="10" bodyfile="src/file.cpp" bodystart="283" bodyend="717" declfile="include/mml/file.hpp" declline="41" declcolumn="10"/>
-      </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1a56a2dd74ae51d87843c003bf055e67fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::size_t</type>
-        <definition>std::size_t mml::file::copyFile</definition>
-        <argsstring>(shell::arg args, std::string src, std::string dst)</argsstring>
-        <name>copyFile</name>
-        <param>
-          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">shell::arg</ref></type>
-          <declname>args</declname>
-        </param>
-        <param>
-          <type>std::string</type>
-          <declname>src</declname>
-        </param>
-        <param>
-          <type>std::string</type>
-          <declname>dst</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="note"><para>Copy a file with determining the block size from the arguments</para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>arg</parametername>
+<parametername>src</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Arguments from the shell </para>
+<para>Source Path </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>dst</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Source </para>
+<para>Destination path </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>name_in</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Destination </para>
+<para>Copy only files including this string in depth = 1 </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>name_ex</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Copy only files where this string exists </para>
+<para>Exclude all files and directories with this name </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>blocksize</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Copy only files where this string does not exist</para>
+<para>Blocksize to be copied at once </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose_debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Debugging output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Copy also hidden files </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Copy recursive </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>progress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print out the progress while copying </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>falsewrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Do not overwrite files in the destination </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="author"><para>Mike </para>
+<simplesect kind="return"><para>0 if successfull </para>
 </simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If a file is to be copied but dst is a directory </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If destination exists as a file if a directory is copied </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If user is not permitted to write into the destination </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: If last directory in destionation is not a directory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="54" column="13" bodyfile="src/file.cpp" bodystart="225" bodyend="281" declfile="include/mml/file.hpp" declline="54" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="62" column="5" bodyfile="src/file.cpp" bodystart="281" bodyend="708" declfile="include/mml/file.hpp" declline="62" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a5c59971f2c51414f4ecbc2b3ab40909a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -204,17 +353,33 @@
           <declname>dst</declname>
         </param>
         <briefdescription>
+<para>Compare two files by using the SHA256 algorithm. Only works for linux. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Compare two files by using the SHA256 algorithm. Only works for linux.</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool if sha256 is the same </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="61" column="6" bodyfile="src/file.cpp" bodystart="123" bodyend="154" declfile="include/mml/file.hpp" declline="61" declcolumn="6"/>
+        <location file="include/mml/file.hpp" line="70" column="6" bodyfile="src/file.cpp" bodystart="123" bodyend="154" declfile="include/mml/file.hpp" declline="70" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int32_t</type>
@@ -226,28 +391,36 @@
           <declname>filepath</declname>
         </param>
         <briefdescription>
+<para>Determine the type of an object (directory, file, etc.) </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Determine the type of an object (directory, file, etc.) </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>filepath</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Path to the object </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Returns a number. For interpretation look at <ref refid="definitions_8hpp" kindref="compound">definitions.hpp</ref> </para>
+<simplesect kind="return"><para>Returns a number to identify the type of the object </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
+<simplesect kind="note"><para>The numbers have the following meaning:<itemizedlist>
+<listitem><para>1: DT_FIFO</para>
+</listitem><listitem><para>2: Serial connected device, mouse, etc.</para>
+</listitem><listitem><para>4: Directory</para>
+</listitem><listitem><para>6: Device or partition</para>
+</listitem><listitem><para>8: normal file</para>
+</listitem><listitem><para>10: symbolic link</para>
+</listitem><listitem><para>12: Socket </para>
+</listitem></itemizedlist>
+</para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="69" column="10" bodyfile="src/file.cpp" bodystart="156" bodyend="174" declfile="include/mml/file.hpp" declline="69" declcolumn="10"/>
+        <location file="include/mml/file.hpp" line="85" column="10" bodyfile="src/file.cpp" bodystart="156" bodyend="174" declfile="include/mml/file.hpp" declline="85" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -259,13 +432,12 @@
           <declname>number</declname>
         </param>
         <briefdescription>
+<para>Convert number into human readable number. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Convert number into human readable number </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>size_t</parametername>
+<parametername>number</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>A number to be converted </para>
@@ -274,13 +446,11 @@
 </parameterlist>
 <simplesect kind="return"><para>std::string </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="77" column="13" bodyfile="src/file.cpp" bodystart="821" bodyend="833" declfile="include/mml/file.hpp" declline="77" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="92" column="13" bodyfile="src/file.cpp" bodystart="806" bodyend="818" declfile="include/mml/file.hpp" declline="92" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a4037d2ecadff2ef72d423f1c6f867834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::size_t</type>
@@ -292,11 +462,10 @@
           <declname>path</declname>
         </param>
         <briefdescription>
+<para>Determine number of lines in a file. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Determine number of lines in a file </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>string</parametername>
 </parameternamelist>
@@ -307,13 +476,11 @@
 </parameterlist>
 <simplesect kind="return"><para>size_t Number of lines </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="85" column="13" bodyfile="src/file.cpp" bodystart="176" bodyend="187" declfile="include/mml/file.hpp" declline="85" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="99" column="13" bodyfile="src/file.cpp" bodystart="176" bodyend="187" declfile="include/mml/file.hpp" declline="99" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a25b3681154f917c6ff8701e0c158bda2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -325,17 +492,16 @@
           <declname>program</declname>
         </param>
         <briefdescription>
+<para>Checks if a program exists. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Exisiert das Programm</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><simplesect kind="author"><para>Mike/scratch/moser/gris_20150510_009/sir/Exp0 </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="93" column="5" bodyfile="src/file.cpp" bodystart="720" bodyend="757" declfile="include/mml/file.hpp" declline="93" declcolumn="5"/>
+        <location file="include/mml/file.hpp" line="107" column="5" bodyfile="src/file.cpp" bodystart="711" bodyend="748" declfile="include/mml/file.hpp" declline="107" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -366,17 +532,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="101" column="6" bodyfile="src/file.cpp" bodystart="759" bodyend="761" declfile="include/mml/file.hpp" declline="101" declcolumn="6"/>
+        <location file="include/mml/file.hpp" line="115" column="6" bodyfile="src/file.cpp" bodystart="750" bodyend="752" declfile="include/mml/file.hpp" declline="115" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1adf2596a9fc0056a8e22d59508a7c34f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1_1file_1ab5ecf6e0c681e2247b280aa094213a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void mml::file::set_date</definition>
-        <argsstring>(mml::shell::arg args, mml::string src, mml::string dst, bool extend=true, bool verbose=false)</argsstring>
-        <name>set_date</name>
-        <param>
-          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">mml::shell::arg</ref></type>
-          <declname>args</declname>
-        </param>
+        <definition>void mml::file::set_date_dir</definition>
+        <argsstring>(mml::string src, mml::string dst, std::vector&lt; std::string &gt; ends={&quot;NEF&quot;,&quot;tif&quot;,&quot;JPG&quot;,&quot;jpg&quot;,&quot;MP4&quot;,&quot;MOV&quot;,&quot;PNG&quot;,&quot;HEIC&quot;,&quot;JPEG&quot;,&quot;jpeg&quot;,&quot;pdf&quot;, &quot;PDF&quot;}, bool recursive=false, bool all=false, bool verbose=false)</argsstring>
+        <name>set_date_dir</name>
         <param>
           <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
           <declname>src</declname>
@@ -386,9 +548,19 @@
           <declname>dst</declname>
         </param>
         <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>ends</declname>
+          <defval>{&quot;NEF&quot;,&quot;tif&quot;,&quot;JPG&quot;,&quot;jpg&quot;,&quot;MP4&quot;,&quot;MOV&quot;,&quot;PNG&quot;,&quot;HEIC&quot;,&quot;JPEG&quot;,&quot;jpeg&quot;,&quot;pdf&quot;, &quot;PDF&quot;}</defval>
+        </param>
+        <param>
           <type>bool</type>
-          <declname>extend</declname>
-          <defval>true</defval>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
         </param>
         <param>
           <type>bool</type>
@@ -398,17 +570,9 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Convert date of pictures. </para>
+<para><simplesect kind="note"><para>Convert the date of files with specific endings in a directory </para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>arg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Arguments from shell </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
 <parameternamelist>
 <parametername>string</parametername>
 </parameternamelist>
@@ -426,28 +590,44 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>ends</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Check extended endings. False =&gt; Only NEF and HEIC </para>
+<para>Endings to be checked </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>recursive</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Verbose output.</para>
+<para>Recursive check </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also check hidden files </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="author"><para>Mike </para>
+<simplesect kind="note"><para>This function is only defined for linux systems </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="113" column="6" bodyfile="src/file.cpp" bodystart="763" bodyend="809" declfile="include/mml/file.hpp" declline="113" declcolumn="6"/>
+        <location file="include/mml/file.hpp" line="127" column="6" bodyfile="src/file.cpp" bodystart="754" bodyend="790" declfile="include/mml/file.hpp" declline="127" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1a97e554f98e4d84fd1ac488fc1e44640d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::size_t</type>
@@ -459,11 +639,10 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
+<para>Calculates the size of a file. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Calculates the size of a file </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>string</parametername>
 </parameternamelist>
@@ -472,20 +651,29 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>size_t Size of the file </para>
+<simplesect kind="return"><para>Size of the file </para>
 </simplesect>
 <simplesect kind="author"><para>Lucas </para>
 </simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if file does not exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="121" column="13" bodyfile="src/file.cpp" bodystart="811" bodyend="819" declfile="include/mml/file.hpp" declline="121" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="136" column="13" bodyfile="src/file.cpp" bodystart="792" bodyend="804" declfile="include/mml/file.hpp" declline="136" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1acb9416915b68523578fdd80b0371bd5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1_1file_1a1e60700072106e647f20640b94ecba55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string mml::file::size_human</definition>
-        <argsstring>(const std::string &amp;filename, bool ausgabe=true)</argsstring>
+        <argsstring>(const std::string &amp;filename, bool verbose=true)</argsstring>
         <name>size_human</name>
         <param>
           <type>const std::string &amp;</type>
@@ -493,17 +681,16 @@
         </param>
         <param>
           <type>bool</type>
-          <declname>ausgabe</declname>
+          <declname>verbose</declname>
           <defval>true</defval>
         </param>
         <briefdescription>
+<para>Calculates the size of a file. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Calculates the size of a file </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>filename</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Path to the file </para>
@@ -511,7 +698,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
+<parametername>verbose</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Print out </para>
@@ -520,31 +707,29 @@
 </parameterlist>
 <simplesect kind="return"><para>Returns the size of a file in a readable form as a string </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if file does not exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="130" column="13" bodyfile="src/file.cpp" bodystart="834" bodyend="850" declfile="include/mml/file.hpp" declline="130" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="145" column="13" bodyfile="src/file.cpp" bodystart="819" bodyend="834" declfile="include/mml/file.hpp" declline="145" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1file_1afc475319ec2ac8be0b35883e9b371a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1_1file_1a40d0377087a89cba13e0171ab5172a31" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string mml::file::size_dir</definition>
-        <argsstring>(mml::shell::arg args, mml::string &amp;dir, bool ausgabe=false, std::string include=&quot;&quot;, std::string exclude=&quot;&quot;)</argsstring>
+        <argsstring>(mml::string &amp;dir, std::string include=&quot;&quot;, std::string exclude=&quot;&quot;, bool verbose=false, bool recursive=false, bool all=false, bool human_readable=false) noexcept</argsstring>
         <name>size_dir</name>
-        <param>
-          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">mml::shell::arg</ref></type>
-          <declname>args</declname>
-        </param>
         <param>
           <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &amp;</type>
           <declname>dir</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>ausgabe</declname>
-          <defval>false</defval>
         </param>
         <param>
           <type>std::string</type>
@@ -556,22 +741,33 @@
           <declname>exclude</declname>
           <defval>&quot;&quot;</defval>
         </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>human_readable</declname>
+          <defval>false</defval>
+        </param>
         <briefdescription>
+<para>Calculates the size of a directory structure. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Calculates the size of a directory structure </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>arg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Arguments from the shell </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>string</parametername>
+<parametername>dir</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Path to the directory </para>
@@ -579,15 +775,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>bool</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>print out </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>string</parametername>
+<parametername>include</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Include only count objects having this string in its name </para>
@@ -595,24 +783,52 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>exclude</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Exclude objects with this name from the count </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose print out </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Recursive check </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also count hidden files </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>human_readable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print out in human readable form </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
-<simplesect kind="attention"><para>Arguments must be correct!</para>
-</simplesect>
-<simplesect kind="return"><para>Gibt die Größe des Ordners zurück </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<simplesect kind="return"><para>Returns the size of the directory </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="144" column="13" bodyfile="src/file.cpp" bodystart="852" bodyend="870" declfile="include/mml/file.hpp" declline="144" declcolumn="13"/>
+        <location file="include/mml/file.hpp" line="158" column="13" bodyfile="src/file.cpp" bodystart="836" bodyend="854" declfile="include/mml/file.hpp" declline="158" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1file_1aa040614064fb83b0548804e7a2b4aeb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>time_t</type>
@@ -624,13 +840,12 @@
           <declname>filename</declname>
         </param>
         <briefdescription>
+<para>Returns the last modified time of a file in seconds. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Returns the last modified time of a file in seconds </para>
-</simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>string</parametername>
+<parametername>filename</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Path to the file </para>
@@ -639,19 +854,17 @@
 </parameterlist>
 <simplesect kind="return"><para>Seconds since 1970 </para>
 </simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/file.hpp" line="152" column="8" bodyfile="src/file.cpp" bodystart="872" bodyend="876" declfile="include/mml/file.hpp" declline="152" declcolumn="8"/>
+        <location file="include/mml/file.hpp" line="165" column="8" bodyfile="src/file.cpp" bodystart="856" bodyend="860" declfile="include/mml/file.hpp" declline="165" declcolumn="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/file.hpp" line="19" column="1"/>
+    <location file="include/mml/file.hpp" line="20" column="1"/>
   </compounddef>
 </doxygen>

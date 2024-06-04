@@ -1,4 +1,4 @@
-.TH "include/mml/standards.hpp" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "include/mml/standards.hpp" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -36,64 +36,100 @@ include/mml/standards.hpp
 .ti -1c
 .RI " \fBmml\fP"
 .br
-.ti -1c
-.RI " \fBmml::shell\fP"
-.br
 .in -1c
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "template<typename templ > double \fBmml::atob\fP (const templ &t)"
+.RI "template<typename templ > double \fBmml::atob\fP (const templ &t) noexcept"
+.br
+.RI "Converts value to bool\&. "
+.ti -1c
+.RI "template<typename T > double \fBmml::atof\fP (const T &t) noexcept"
+.br
+.RI "Converts value to bool\&. "
+.ti -1c
+.RI "template<typename T > int \fBmml::atoi\fP (const T &t) noexcept"
+.br
+.RI "Converts value to int\&. "
+.ti -1c
+.RI "template<typename templ > void \fBmml::cout\fP (std::vector< templ > const &vec) noexcept"
 .br
 .ti -1c
-.RI "template<typename T > double \fBmml::atof\fP (const T &t)"
+.RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t) noexcept"
 .br
+.RI "Convert value to \fBmml::string\fP\&. "
 .ti -1c
-.RI "template<typename T > int \fBmml::atoi\fP (const T &t)"
+.RI "constexpr uint32_t \fBmml::const_string_hash\fP (const char *string) noexcept"
 .br
+.RI "Forms a hash value of a string\&. "
 .ti -1c
-.RI "template<typename templ > void \fBmml::cout\fP (std::vector< templ > const &vec)"
+.RI "template<typename templ > void \fBmml::erase\fP (std::vector< templ > &data) noexcept"
 .br
-.ti -1c
-.RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t)"
-.br
+.RI "Empty a vector\&. "
 .in -1c
 .PP
 .RI "\fBstandards\&.cpp\fP"
 .br
-
+Contains different standard functions of this library
 .PP
 \fBAuthor\fP
 .RS 4
-Mike Moser
+Mike Moser 
 .RE
 .PP
-Enthält verschiedene Standardfunktionen 
+
 .PP
 .in +1c
 .in +1c
 .ti -1c
 .RI "bool \fBmml::check_root\fP (std::string programme='')"
 .br
+.RI "Check if program executed as root\&. "
 .ti -1c
-.RI "uint32_t \fBmml::date\fP (int info, time_t time1=\-1)"
+.RI "uint32_t \fBmml::date\fP (int info, time_t time1=\-1) noexcept"
 .br
+.RI "Returns the wished info from the time (like date etc\&.) Options are: "
 .ti -1c
-.RI "std::string \fBmml::date\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.')"
+.RI "std::string \fBmml::date\fP (\fBmml::string\fP value, std::string separator1=':', std::string separator2='\&.') noexcept"
 .br
+.RI "Returns the actual date and/or time as a std::string\&. "
 .ti -1c
-.RI "bool \fBmml::is_num\fP (char c)"
+.RI "bool \fBmml::is_num\fP (char c) noexcept"
 .br
+.RI "Checks if a character is a number\&. "
 .ti -1c
-.RI "bool \fBmml::range\fP (std::size_t number)"
+.RI "bool \fBmml::range\fP (std::size_t number) noexcept"
 .br
+.RI "Checks if a number has reached the maximum value (std::string::npos) "
 .ti -1c
-.RI "bool \fBmml::range\fP (std::size_t, std::size_t)"
+.RI "bool \fBmml::range\fP (std::size_t, std::size_t) noexcept"
 .br
+.RI "Checks if one of two numbers has reached the maximum value\&. "
 .ti -1c
-.RI "double \fBmml::round\fP (double number, uint16_t digits)"
+.RI "double \fBmml::round\fP (double number, uint16_t digits) noexcept"
 .br
+.RI "round a number "
+.ti -1c
+.RI "std::string \fBmml::declare_month\fP (int month_nr) noexcept"
+.br
+.RI "Convert month number to month string\&. "
+.ti -1c
+.RI "template<typename templ > templ \fBmml::get_random\fP (templ min=0, templ max=100) noexcept"
+.br
+.RI "Create a random number in a defined range\&. "
+.ti -1c
+.RI "template<typename templ > templ \fBmml::smallest_num\fP (std::vector< templ > values, std::size_t pos=0)"
+.br
+.RI "Return the smallest number\&. "
+.ti -1c
+.RI "std::string \fBmml::random_str\fP (size_t letters=10, std::string start='') noexcept"
+.br
+.RI "Create a random, lower-case string\&. "
+.ti -1c
+.RI "std::size_t \fBmml::digits\fP (double number) noexcept"
+.br
+.RI "Determine number of digits of a double number\&. "
 .in -1c
 .in -1c
 .SH "Detailed Description"

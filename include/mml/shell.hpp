@@ -11,7 +11,6 @@
 #include <iostream>
 #include <vector>
 #include "mml/vector.hpp"
-#include "mml/functions.hpp"
 
 namespace mml{
 
@@ -24,17 +23,12 @@ namespace mml{
 		protected:
 		
 			int argc = 0;
-		
 			char **argv = {};
- 			//std::vector<mml::string> vec = {};
-		
+
 		public:
 		
-			// Mit Initialisierung eins Vektors:
-// 			arg(std::vector<mml::string> vec_temp) :  vec(vec_temp){}
-			
-			// Mit direkter Initialisierung der Argumenten:
-			arg(int argc1, char **argv1, bool getarg = false, std::string except1 = "xxxxx", std::string except2 = "xxxxx", std::string except3 = "xxxxx", std::string except4 = "xxxxx", std::string except5 = "xxxxx", std::string except6 = "xxxxx", std::string except7 = "xxxxx") {
+			template <typename... values>
+			arg(int argc1, char **argv1, const values&... value) {
 				argc	=	argc1;
 				argv	=	argv1;
 				
@@ -42,8 +36,7 @@ namespace mml{
 				
 				vec = vec_temp;
 				
-				if(getarg)
-					getArg(except1, except2, except3, except4,except5,except6,except7);
+				init(value...); // Separate options
 			}	// Aufruf mml::shell::arg arg(argc,argv);
 			
 			arg(char **argv1, int argc1) {
@@ -74,201 +67,129 @@ namespace mml{
 					vec.push_back(vec_temp[i]);
 			}
 			
-			// Mit direkter Wertübergabe:
-			//arg(std::vector<mml::string> val) :  arg(val){}
-			//arg(const arg &val) :  vec(val.vec){}
-
-			/*arg(mml::vector<mml::string> vec_temp){
-				for(uint32_t i = 0; i < vec_temp.size(); i++)
-					vec.push_back(vec_temp[i]);
-			};*/
-			// Ohne direkte Initialisierung:
 			arg() {}
 			
 			arg(arg &vec_copy) {vec = vec_copy.tovec();}	// Kopierkonstruktor
 			
-// 			arg(const std::vector<mml::string> vec_temp) :  vec(vec_temp){}
-			
-// 			arg &operator=(std::vector<mml::string> vec_temp){
-// 				this->vec = vec_temp;
-// 				return *this;
-// 			}	// Zuweisung über = an value
-// 			
 			// Als Kopierkonstruktor:
 			arg &operator=(const arg &vec_temp){
 				vec = vec_temp.vec;
 				return *this;
-			}	// Zuweisung über = an value
+			}
 			
-			arg &operator=(const std::vector<std::string> &vec_temp){
-				vec = tostr(vec_temp);
-				
+			arg &operator=(const std::vector<mml::string> &vec_temp){
+				vec = vec_temp;	
 				return *this;
-			}	// Zuweisung über = an value
-			/**
-			 * @note Initialisierung mit direkter Übergabe der argv und argc Werte
-			 * 
-			 * @author Mike
-			 */
-			std::vector<mml::string> &operator()(char **argv1, int argc1, bool getarg = false);		// bestimmte Position ausgeben
-			std::vector<mml::string> &operator()(int argc1, char **argv1, bool getarg = false);
-			
-			
-// 			mml::string &operator[](int index);		// bestimmte Position ausgeben
-			
-			/**
-			 * @note Positionsbestimmung, sobald ein String beginnend am Anfang mit einem Wert übereinstimmt
-			 * 
-			 * @return Position
-			 * @author Mike
-			 */
-			std::size_t beginArg(const std::string& str);
-			
-			
-			/**
-			* @note Ausgabe aller Elemente im Vektor
-			* 
-			* @author Mike
-			*/
-// 			void cout();
-			
-			/**
-			* @note Ein Element oder mehrere entfernen
-			* 
-			* @author Mike
-			*/
-			void erase(std::size_t pos1, std::size_t pos2 = 0);
-			
-			
-			/**
-			 * @note nachschauen ob ein String im Vektor vec vorkommt
-			 * 
-			 * @return true oder false
-			 * @author Mike
-			 */
-			bool exist(std::string search);
-			bool exist(std::string search1, std::string search2);
-			bool exist(std::string search1, std::string search2, std::string search3);
-			bool exist(std::string search1, std::string search2, std::string search3, std::string search4);
-			
-			/**
-			 * @note Nachschauen, ob ein String in einem bestimmten String vorkommt
-			 * 
-			 * @return true oder false
-			 * @author Mike
-			 */
-			bool exist(std::size_t pos,std::string name);
-			
-			/**
-			 * @note Finden von Argumenten
-			 * 
-			 * @author Mike
-			 */
-			bool findArg (const std::string& str);
-			bool findArg (const std::string& str1,const std::string& str2) ;
-			bool findArg (const std::string& str1,const std::string& str2, const std::string& str3);
-			bool findArg (const std::string& str1,const std::string& str2, const std::string& str3, const std::string& str4);
-			
-			/**
-			 * Argumente bei -xyz bestimmen
-			 * 
-			 * @author Mike
-			 */
-			void getArg(std::string except1 = "xxxxx", std::string except2 = "xxxxx", std::string except3 = "xxxxx", std::string except4 = "xxxxx", std::string except5 = "xxxxx", std::string except6 = "xxxxx", std::string excep7 = "xxxxx");
-			
-			/**
-			 * @note Initialisierung bei Start zum Ausführen von Standardoperationen
-			 * 
-			 * @author Mike
-			 */
-			void init(std::string except1 = "xxxxx", std::string except2 = "xxxxx", std::string except3 = "xxxxx", std::string except4 = "xxxxx", std::string except5 = "xxxxx", std::string except6 = "xxxxx", std::string except7 = "xxxxx");
-			
-			/**
-			 * @note Finden von nicht vorhandenen Argumenten
-			 * 
-			 * @return true, wenn nicht gefunden
-			 * @author Mike
-			 */
-			bool notArg (const std::string& str1);
-			bool notArg (const std::string& str1, const std::string& str2);
-			bool notArg (const std::string& str1,const std::string& str2, const std::string& str3);
-			bool notArg (const std::string& str1,const std::string& str2, const std::string& str3, const std::string& str4);
-			
-			/**
-			 * @note Positionsbestimmungen, wo ein gesuchter String steht
-			 * 
-			 * @return Positionnamespace mml{
-			 * @author Mike
-			 */
-			std::size_t positionArg(const std::string& str);
-			std::size_t positionArg(const std::string& str, const std::string& str2);
-			
-			/**
-			 * @note Ersetzen eines chars oder eines Strings in einem Vektor
-			 * 
-			 * @return Vektor mit den ersetzten Werten
-			 * @author Mike
-			 */
-			std::vector<mml::string> replace(char sign_old, char sign_new);
-			std::vector<mml::string> replace(std::string str_old, std::string str_new);
-			
-			/**
-			 * @note Nachträgliche Initialisierung der Werte von übergebenen Werten
-			 * 
-			 * @author Mike
-			 */
-			
-			/**
-			 * @note Sortieren der Werte
-			 * 
-			 * @author Mike
-			 */
-			void sort();
-			
-			/**
-			 * @note Umwandlungen der Werte in einen Standard String Vektor
-			 * 
-			 * @return String Vektor
-			 * @author Mike
-			 */
-			std::vector<mml::string> str();	// Umwandlung zu string
-			std::vector<std::string> str_change();	// Umwandlung zu std::string
-			std::vector<mml::string> tostr(std::vector<std::string> temp); 	// Umwandlung zu mml::string
-		
-			
+			}
 
+			/**
+			 * @brief Initialise with the values from the terminal
+			 * @param argv1 Character vector with the arguments from the shell
+			 * @param argc Number of arguments
+			 * @return Reference to this instance
+			 */
+			
+			template <typename... values>
+			std::vector<mml::string> &operator()(int argc1, char **argv1, const values& ...value) noexcept {
+				vec = std::vector<mml::string>(argv1,argv1 + argc1);	
+				init(value...);
+				return vec;
+			}
+
+			template <typename... values>
+			std::vector<mml::string> &operator()(char **argv1, int argc1, const values& ...value) noexcept {return operator()(argc1,argv1,value...);}
+			
+			/**
+			 * @brief Determine position where an argument starts with a specific string
+			 * @param str element starts with this string
+			 * @return Position
+			 */
+			std::size_t begin(const std::string& str) noexcept;
+			
+		private:
+			void _init(std::vector<mml::string>& excepts) noexcept;
+		public:
+			/**
+			 * @brief Determine options given with one minus and separate them ignoring specific strings
+			 * @param value Values which are not separated
+			 */
+			template <typename... values>
+			void init(const values&... value) noexcept  {
+				std::vector<mml::string> excepts = {value...};
+				_init(excepts);
+			}
+			
+			/**
+			 * @brief Determine if an element does not exist
+			 * @param value values to be looked for
+			 * @return true, if values do not exist
+			 */
+			template <typename... values>
+			bool nexist(const values&... value) noexcept {
+				return !exist(value...);
+			}
+			
+			/**
+			 * @brief Determine the position of a searched string
+			 * @param str Value to be looked for
+			 * @return position
+			 */
+			std::size_t pos(const std::string& str) noexcept;
+			/**
+			 * @brief Determine the position of a searched string or another
+			 * @param str1 Value to be looked for
+			 * @param str2
+			 * @return position
+			 * @note If str1 exists, then the position of this string is returned. Only if not, then the position of str2 if it exists
+			 */
+			std::size_t pos(const std::string& str1, const std::string& str2) noexcept;
+			
+			/**
+			 * @brief Replace a string in each element
+			 * @param Old value to be replaced
+			 * @param New new value
+			 * @return Vector of this instance
+			 */
+			template<typename T> std::vector<mml::string> replace(T Old, T New) noexcept {
+				for(std::size_t i = 0; i < vec.size(); i++)
+					vec[i] = vec[i].replace(Old,New);
+
+				return vec;
+
+			}
 			
 			~arg(){	}
 	
 };
 
 
-		/**
-		 * @note Hintergrund ändern
-		 * 
-		 * @author Mike
-		 */
-		void background(string colour);
+/**
+ * @note Hintergrund ändern
+ * 
+ * @author Mike
+ */
+void background(string colour);
 		
-		/**
-		 * @note Hilfeseiteausgabe eines Kapitels 
-		 * 
-		 * @author Mike
-		*/
-		void chapter(std::string text,bool newline = true);
+/**
+ * @note Hilfeseiteausgabe eines Kapitels 
+ * 
+ * @author Mike
+*/
+void chapter(std::string text,bool newline = true);
 		
-		/**
-		 * @note Ausgabe mit Werten in Klammern in einer Farbe
-		 * 
-		 * @author Mike
-		 */
-		void cout(mml::string text, bool newline = true, std::string colour = "lightgreen");
-		/**
-		 * @note Ausgabe eines Errors
-		 * 
-		 * @author Mike
-		 */
-		void error(std::string text);
+/**
+ * @note Ausgabe mit Werten in Klammern in einer Farbe
+ * 
+ * @author Mike
+ */
+void cout(mml::string text, bool newline = true, std::string colour = "lightgreen");
+		
+/**
+ * @note Ausgabe eines Errors
+ * 
+ * @author Mike
+ */
+void error(std::string text);
 		
 		/**
 		 * @note Formatierung ändern

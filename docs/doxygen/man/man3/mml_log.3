@@ -1,4 +1,4 @@
-.TH "mml::log" 3 "Sat May 25 2024" "mml" \" -*- nroff -*-
+.TH "mml::log" 3 "Tue Jun 4 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,124 +14,133 @@ mml::log
 .ti -1c
 .RI "\fBlog\fP (\fBmml::string\fP path)"
 .br
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBlog\fP ()"
 .br
+.RI "Empty constructor\&. "
 .ti -1c
-.RI "\fB~log\fP ()"
+.RI "\fB~log\fP () noexcept"
+.br
+.RI "Deconstructor\&. "
+.ti -1c
+.RI "\fBmml::log\fP & \fBoperator=\fP (std::string value) noexcept"
+.br
+.RI "Open new log file;\&. "
+.ti -1c
+.RI "void \fBbackup\fP (bool verbose=true, bool Reset=true) noexcept"
+.br
+.RI "Backups the log file by copying it to [filename]\&.bak\&. "
+.ti -1c
+.RI "void \fBclose\fP () noexcept"
+.br
+.RI "Close log file\&. "
+.ti -1c
+.RI "template<typename T > void \fBcout\fP (T value, bool newline) noexcept"
+.br
+.RI "Write sth\&. into the log file\&. "
+.ti -1c
+.RI "\fBmml::string\fP \fBgetline\fP (size_t line) noexcept"
+.br
+.RI "Return a specific line form the log file\&. "
+.ti -1c
+.RI "\fBmml::string\fP \fBgetline_back\fP (size_t line)"
+.br
+.RI "Get a specific line from the log file\&. "
+.ti -1c
+.RI "\fBmml::string\fP \fBlastline\fP () noexcept"
+.br
+.RI "Get the last line of a logfile\&. "
+.ti -1c
+.RI "void \fBheader\fP () noexcept"
 .br
 .ti -1c
-.RI "\fBmml::log\fP & \fBoperator=\fP (std::string value)"
+.RI "void \fBopen\fP (\fBmml::string\fP path='') noexcept"
 .br
+.RI "open a logfile "
 .ti -1c
-.RI "void \fBbackup\fP (bool verbose=true, bool Reset=true)"
+.RI "void \fBprint\fP (bool linenumber=false) noexcept"
 .br
+.RI "Print log file\&. "
 .ti -1c
-.RI "void \fBclose\fP ()"
+.RI "void \fBreset\fP (bool verbose=true) noexcept"
 .br
-.ti -1c
-.RI "void \fBcout\fP (\fBmml::string\fP value, bool newline=false)"
-.br
-.ti -1c
-.RI "void \fBcout\fP (double value, bool newline=false)"
-.br
-.ti -1c
-.RI "void \fBcout\fP (int value, bool newline=false)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBgetline\fP (uint32_t line)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBgetline_back\fP (uint32_t line)"
-.br
-.ti -1c
-.RI "\fBmml::string\fP \fBlastline\fP ()"
-.br
-.ti -1c
-.RI "void \fBheader\fP ()"
-.br
-.ti -1c
-.RI "void \fBopen\fP (\fBmml::string\fP path='')"
-.br
-.ti -1c
-.RI "void \fBprint\fP (bool linenumber=false)"
-.br
-.ti -1c
-.RI "void \fBreset\fP (bool verbose=true)"
-.br
+.RI "Reset logfile\&. "
 .in -1c
 .SS "Friends"
 
 .in +1c
 .ti -1c
-.RI "void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const \fBmml::string\fP &String)"
+.RI "template<typename T > void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const T &String) noexcept"
 .br
-.ti -1c
-.RI "void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const double &String)"
-.br
+.RI "Writes a value into the logfile\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "mml::log::log (\fBmml::string\fP path)\fC [inline]\fP"
 
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP Path to the logfile 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if log file is not created 
+.RE
+.PP
+
 .SS "mml::log::log ()\fC [inline]\fP"
 
-.SS "mml::log::~log ()\fC [inline]\fP"
+.PP
+Empty constructor\&. 
+.SS "mml::log::~log ()\fC [inline]\fP, \fC [noexcept]\fP"
 
+.PP
+Deconstructor\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "void mml::log::backup (bool verbose = \fCtrue\fP, bool Reset = \fCtrue\fP)"
+.SS "void mml::log::backup (bool verbose = \fCtrue\fP, bool Reset = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Logdatei sichern
-.RE
+Backups the log file by copying it to [filename]\&.bak\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
-.RE
-.PP
-
-.SS "void mml::log::close ()"
-
-.PP
-\fBNote\fP
-.RS 4
-Logdatei schließen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIverbose\fP Verbose output 
+.br
+\fIReset\fP reset the actual log file so that it is empty 
 .RE
 .PP
 
-.SS "void mml::log::cout (double value, bool newline = \fCfalse\fP)"
-
-.SS "void mml::log::cout (int value, bool newline = \fCfalse\fP)"
-
-.SS "void mml::log::cout (\fBmml::string\fP value, bool newline = \fCfalse\fP)"
+.SS "void mml::log::close ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Close log file\&. 
+.SS "template<typename T > void mml::log::cout (T value, bool newline)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Write sth\&. into the log file\&. 
+.PP
+\fBParameters\fP
 .RS 4
-in Logdatei schreiben
+\fIvalue\fP 
+.br
+\fInewline\fP Write a newline after the value 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "\fBmml::string\fP mml::log::getline (uint32_t line)"
+.SS "\fBmml::string\fP mml::log::getline (size_t line)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Return a specific line form the log file\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Eine bestimmte Zeile aus der Logdatei zurückgeben
+\fIline\fP Line Number 
 .RE
 .PP
 \fBReturns\fP
@@ -139,18 +148,15 @@ Eine bestimmte Zeile aus der Logdatei zurückgeben
 string 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "\fBmml::string\fP mml::log::getline_back (uint32_t line)"
+.SS "\fBmml::string\fP mml::log::getline_back (size_t line)"
 
 .PP
-\fBNote\fP
+Get a specific line from the log file\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Eine bestimmte Zeile aus der Logdatei zurückgeben, dabei vom Ende aus Rechnen
+\fIline\fP Line number from the last line 
 .RE
 .PP
 \fBReturns\fP
@@ -158,108 +164,88 @@ Eine bestimmte Zeile aus der Logdatei zurückgeben, dabei vom Ende aus Rechnen
 string 
 .RE
 .PP
-\fBAuthor\fP
+\fBExceptions\fP
 .RS 4
-Mike 
+\fIruntime_error\fP : if line number exceeds lines 
 .RE
 .PP
 
-.SS "void mml::log::header ()"
-
-.PP
-\fBNote\fP
-.RS 4
-Neuen Kopf erstellen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
-.SS "\fBmml::string\fP mml::log::lastline ()"
+.SS "void mml::log::header ()\fC [noexcept]\fP"
 
 .PP
 \fBNote\fP
 .RS 4
-Die letzte Zeile aus der Logdatei zurückgeben
+Neuen Kopf erstellen 
 .RE
+.PP
+
+.SS "\fBmml::string\fP mml::log::lastline ()\fC [noexcept]\fP"
+
+.PP
+Get the last line of a logfile\&. 
 .PP
 \fBReturns\fP
 .RS 4
-stirng 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+string 
 .RE
 .PP
 
-.SS "void mml::log::open (\fBmml::string\fP path = \fC''\fP)"
+.SS "void mml::log::open (\fBmml::string\fP path = \fC''\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Logdatei öffnen
-.RE
+open a logfile 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fIpath\fP Path to log file 
 .RE
 .PP
 
-.SS "\fBmml::log\fP & mml::log::operator= (std::string value)"
+.SS "\fBmml::log\fP & mml::log::operator= (std::string value)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Open new log file;\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Neue Logfile öffnen;
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike
-.PP
-Mike Moser
-.RE
-.PP
-Quelldatei args\&.cpp Enthält verschiedene Funktionen für die Klasse args 
-.SS "void mml::log::print (bool linenumber = \fCfalse\fP)"
-
-.PP
-\fBNote\fP
-.RS 4
-Logdatei ausgeben
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fIvalue\fP Path to the logfile 
 .RE
 .PP
 
-.SS "void mml::log::reset (bool verbose = \fCtrue\fP)"
+.SS "void mml::log::print (bool linenumber = \fCfalse\fP)\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
+Print log file\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Logdatei neu erstellen
+\fIlinenumber\fP Print the linenumber 
 .RE
 .PP
-\fBAuthor\fP
+
+.SS "void mml::log::reset (bool verbose = \fCtrue\fP)\fC [noexcept]\fP"
+
+.PP
+Reset logfile\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Mike 
+\fIverbose\fP Verbose output what is performed 
 .RE
 .PP
 
 .SH "Friends And Related Function Documentation"
 .PP 
-.SS "void operator<< (\fBmml::log\fP & log, const double & String)\fC [friend]\fP"
+.SS "template<typename T > void operator<< (\fBmml::log\fP & log, const T & String)\fC [friend]\fP"
 
-.SS "void operator<< (\fBmml::log\fP & log, const \fBmml::string\fP & String)\fC [friend]\fP"
+.PP
+Writes a value into the logfile\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIString\fP Value to be written into the log file 
+.RE
+.PP
 
 
 .SH "Author"

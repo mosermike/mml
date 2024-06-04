@@ -2,7 +2,8 @@
  * @author Mike Moser
  * 
  * @name standards.cpp
- * Enthält verschiedene Standardfunktionen
+ * 
+ * @brief Contains different standard functions of this library
  * 
 */
 
@@ -13,29 +14,12 @@
 #include <unistd.h>		// fsync(),stdin_fileno,getpass
 #include <ctime>
 #include <algorithm>	// std::replace
-#include <sys/mount.h>
 #include <signal.h>
 
-#include "mml/standards.hpp"
-#include "mml/functions.hpp"
+#include "mml/Thread.hpp"
 #include "mml/definitions.hpp"
 #include "mml/Unix.hpp"
 
-// bool mml::atob(const char* a) {
-// 	 return (std::atoi(a) > 0) ? true : false;
-// }
-// 
-// bool mml::atob(int a) {
-// 	 return (a == 0) ? false : true;
-// }
-
-// double mml::atof(std::string value)  {
-// 	return std::atof(value.c_str());
-// }
-
-// int mml::atoi(std::string value)  {
-// 	return std::atoi(value.c_str());
-// }
 
 bool mml::check_root(std::string programme){
 	static bool check = false;
@@ -55,17 +39,13 @@ bool mml::check_root(std::string programme){
 		// call from another c++ programme
 		if(mml::Unix::get_process_name_by_pid(parent_pid) == "bash"){
 			log.cout("[check_root] " + programme + " failed at " + mml::date("Date+Time") + ".", true);
-			
-
-			shell::warn_opt("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".",true);
-			exit(EXIT_FAILURE);
+			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
 		}
 		
 		// Call from the terminal
 		else {
 			log.cout("[check_root] " + programme  + " failed at " + mml::date("Date+Time") + ".", true);
-			shell::warn_opt("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".",true);
-			exit(EXIT_FAILURE);
+			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
 		}
 	}
 	log.cout("[check_root] " + programme  + " accepted at " + mml::date("Date+Time") + ".", true);
@@ -75,7 +55,7 @@ bool mml::check_root(std::string programme){
 
 
 // Uhrzeit:
-uint32_t mml::date(int info, time_t time1){
+uint32_t mml::date(int info, time_t time1) noexcept {
 	std::tm*		nun;
 	if(time1 == -1) {
 		std::time_t t = std::time(0);   // get time now
@@ -105,7 +85,7 @@ uint32_t mml::date(int info, time_t time1){
 	}
 }
 
- std::string mml::date(mml::string value, std::string separator1, std::string separator2){
+ std::string mml::date(mml::string value, std::string separator1, std::string separator2) noexcept {
 		std::string year = std::to_string(mml::date(_year)); // Get actual year
 
 		uint32_t info = _month;
@@ -120,18 +100,18 @@ uint32_t mml::date(int info, time_t time1){
 			std::string second = mml::date(info) > 9	?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));	
 
 
-		switch(mml::functions::const_string_hash(value.c_str())) {
+		switch(mml::const_string_hash(value.c_str())) {
 			
-			case mml::functions::const_string_hash("Date") :	// YY.MM.DD
+			case mml::const_string_hash("Date") :	// YY.MM.DD
 				return year + separator2 + month + separator2 + day;
 			
-			case mml::functions::const_string_hash("Time") :	// HH:MM:SS
+			case mml::const_string_hash("Time") :	// HH:MM:SS
 				return hour + separator1 + minute + separator1 + second; 
 			
-			case mml::functions::const_string_hash("Date+Time") :	// DD MM YYYY HH:MM:SS
+			case mml::const_string_hash("Date+Time") :	// DD MM YYYY HH:MM:SS
 				return day + separator2 + month + separator2 + year + " " + hour + separator1 + minute + separator1 + second;
 			
-			case mml::functions::const_string_hash("Date1+Time") :	// YYYY MM DD HH:MM:SS
+			case mml::const_string_hash("Date1+Time") :	// YYYY MM DD HH:MM:SS
 				return year + separator2 + month + separator2 + day + " " + hour + separator1 + minute + separator1 + second; 
 			
 			default:
@@ -140,17 +120,17 @@ uint32_t mml::date(int info, time_t time1){
 		return "";
 }
 
-bool mml::is_num(char c) {return ((int) c >= 48 && (int) c <= 57) ? true : false;}
+bool mml::is_num(char c) noexcept {return ((int) c >= 48 && (int) c <= 57) ? true : false;}
 
-bool mml::range(std::size_t number) {
+bool mml::range(std::size_t number) noexcept {
 	return number < std::string::npos ? true : false;
 }
 
-bool mml::range(std::size_t number1, std::size_t number2) {
+bool mml::range(std::size_t number1, std::size_t number2) noexcept {
 	return range(number1) || range(number2);
 }
 
-double mml::round(double number, uint16_t digit) {
+double mml::round(double number, uint16_t digit) noexcept {
     double temp = number*std::pow(10,digit);
     int64_t temp1 = (int) (number*(std::pow(10,digit+1)));
     if (temp1 % 10 > 4)
@@ -159,3 +139,107 @@ double mml::round(double number, uint16_t digit) {
         return ((int) temp)/std::pow(10,digit);
 }
 
+
+
+
+
+
+
+std::string mml::declare_month(int month_nr) noexcept {
+	switch(month_nr) {
+		case(1) :	return "January";
+		case(2) :	return "February";
+		case(3) :	return "March";
+		case(4) :	return "April";
+		case(5) :	return "Mai";
+		case(6) :	return "June";
+		case(7) :	return "July";
+		case(8) :	return "August";
+		case(9) :	return "September";
+		case(10) :	return "Oktober";
+		case(11) :	return "November";
+		case(12) :	return "December";
+		default  :	return "";
+	}
+}
+
+std::size_t mml::digits(double number) noexcept {
+	mml::string temp = mml::to_string(number);
+
+	// Correction if number is an integer
+	if(temp[temp.size()-1]== '.')
+		temp = temp.sub(0,temp.size()-2);
+	
+	return temp.size();
+}
+
+
+
+template <typename templ> templ mml::get_random(templ min, templ max) noexcept {
+	
+	std::random_device rd;     // only used once to initialise (seed) engine
+	
+	std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
+	
+	std::uniform_int_distribution<templ> uni(min,max); // guaranteed unbiased
+
+	return uni(rng);
+}
+
+/*
+std::vector<double> Get_Values( std::string filepath, double min_value) {
+	
+	std::vector<double> values;
+	std::string 		value 	= "";
+	std::size_t			pos		= 0;
+	double 				value1	= 0;
+	//Öffne die Datei:
+	std::fstream input(filepath);
+    
+	
+    // Check if the file was opened
+    if ( !input ){
+		throw std::runtime_error("file not found");
+	}
+    
+	// Read the text line by line
+	while (! input.eof()){
+		std::getline(input, value );
+		
+		pos = value.find("=");
+		
+		value = value.substr (pos+1);
+		value1 = std::atof(value.c_str());
+	
+		if (abs(value1) >= abs(min_value) )	// Minmum this value
+			values.push_back(value1);
+    }
+    
+    return values;
+}
+
+std::string mml::lower(std::string input) noexcept {
+
+	for(uint16_t i = 0; i < (uint16_t) input.size(); i++)
+		input[i] = tolower(input[i]);
+	return input;
+
+}
+
+*/
+
+std::string mml::random_str(size_t letters, std::string start) noexcept {
+	
+	for(uint32_t i = 0; i < letters; i++)
+		start += static_cast<char> (mml::get_random(97,122));
+	
+	return start;
+}
+
+template <typename templ> templ mml::smallest_num(std::vector<templ> values, std::size_t pos) {
+	if(!std::is_arithmetic_v<templ>)
+		throw std::logic_error("[smallest_num] Vector type is not arithmetic!");
+		
+	std::sort(values.begin(), values.end());
+	return values[pos];
+}

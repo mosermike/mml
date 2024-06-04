@@ -15,8 +15,7 @@ Include dependency graph for standards.\+hpp\+:\nopagebreak
 \includegraphics[width=350pt]{standards_8hpp__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,42 +31,56 @@ class \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacemml}{mml}}
-\item 
- \mbox{\hyperlink{namespacemml_1_1shell}{mml\+::shell}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_a5e1f7079411db351da5fb53576413d38}{mml\+::atob}} (const templ \&t)
+{\footnotesize template$<$typename templ $>$ }\\double \mbox{\hyperlink{namespacemml_ac91ad57c28ab9cecb7e82ef220f148c8}{mml\+::atob}} (const templ \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to bool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a63d35e02eeb9557dfc874c351694a481}{mml\+::atof}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to bool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_ac6c1c70d32321714808ae64e33404d71}{mml\+::atoi}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Converts value to int. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_ae91f369e368b0941ddcb8b5be38c36f9}{mml\+::cout}} (std\+::vector$<$ templ $>$ const \&vec) noexcept
 \item 
-{\footnotesize template$<$typename T $>$ }\\double \mbox{\hyperlink{namespacemml_a55ee60d6d3fb41858d5c3f151044c200}{mml\+::atof}} (const T \&t)
-\item 
-{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_a149a900d1e48e37c56481964c79aa9b4}{mml\+::atoi}} (const T \&t)
-\item 
-{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_af9e4a0ff0d5308ede2e315150e566529}{mml\+::cout}} (std\+::vector$<$ templ $>$ const \&vec)
-\item 
-{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a21e76265e9a8d7091fe7068aee432c39}{mml\+::to\+\_\+string}} (const T \&t)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a76d259a94d9ed50a9d33081caed25131}{mml\+::to\+\_\+string}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Convert value to \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}. \end{DoxyCompactList}\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}{mml\+::const\+\_\+string\+\_\+hash}} (const char $\ast$string) noexcept
+\begin{DoxyCompactList}\small\item\em Forms a hash value of a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_aed237a2c04babbcae30d180ab047666f}{mml\+::erase}} (std\+::vector$<$ templ $>$ \&data) noexcept
+\begin{DoxyCompactList}\small\item\em Empty a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \begin{Indent}\textbf{ standards.\+cpp}\par
-{\em \begin{DoxyAuthor}{Author}
-Mike Moser
+{\em Contains different standard functions of this library
+
+\begin{DoxyAuthor}{Author}
+Mike Moser 
 \end{DoxyAuthor}
-Enthält verschiedene Standardfunktionen }\begin{DoxyCompactItemize}
+}\begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{mml\+::check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{})
-\item 
-uint32\+\_\+t \mbox{\hyperlink{namespacemml_a2f67fa9c2ab3cc2f1c104ebfd97c7e11}{mml\+::date}} (int info, time\+\_\+t time1=-\/1)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_acd2059d85ff229714514fba5add6c391}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{})
-\item 
-bool \mbox{\hyperlink{namespacemml_a676559a7059429aac4066ebac5fbca36}{mml\+::is\+\_\+num}} (char c)
-\item 
-bool \mbox{\hyperlink{namespacemml_a1d79d75734ea118c10fc391ab2231d56}{mml\+::range}} (std\+::size\+\_\+t number)
-\item 
-bool \mbox{\hyperlink{namespacemml_aef4479907a5a2ee42d0d0099e5525b5c}{mml\+::range}} (std\+::size\+\_\+t, std\+::size\+\_\+t)
-\item 
-double \mbox{\hyperlink{namespacemml_a2cf98422c1355b3c351820b70b2834ba}{mml\+::round}} (double number, uint16\+\_\+t digits)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemml_a4e23041702a789444e71665de8e19b91}{mml\+::date}} (int info, time\+\_\+t time1=-\/1) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the wished info from the time (like date etc.) Options are\+: \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the actual date and/or time as a std\+::string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_ac687254476eb5589ff145f7ccb8f203b}{mml\+::is\+\_\+num}} (char c) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a character is a number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_ad1fcba2487a959000bac06da539b792c}{mml\+::range}} (std\+::size\+\_\+t number) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if a number has reached the maximum value (std\+::string\+::npos) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}{mml\+::range}} (std\+::size\+\_\+t, std\+::size\+\_\+t) noexcept
+\begin{DoxyCompactList}\small\item\em Checks if one of two numbers has reached the maximum value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}{mml\+::round}} (double number, uint16\+\_\+t digits) noexcept
+\begin{DoxyCompactList}\small\item\em round a number \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a09b5d2051c67d0ee351b09f87c30126d}{mml\+::declare\+\_\+month}} (int month\+\_\+nr) noexcept
+\begin{DoxyCompactList}\small\item\em Convert month number to month string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_a16e784b078d6a774ffaf01ef4d4c7647}{mml\+::get\+\_\+random}} (templ min=0, templ max=100) noexcept
+\begin{DoxyCompactList}\small\item\em Create a random number in a defined range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_ae9a2f37b5fb1e8e463509077bbe11212}{mml\+::smallest\+\_\+num}} (std\+::vector$<$ templ $>$ values, std\+::size\+\_\+t pos=0)
+\begin{DoxyCompactList}\small\item\em Return the smallest number. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_a171afac262e291910b6f222216263b35}{mml\+::random\+\_\+str}} (size\+\_\+t letters=10, std\+::string start=\char`\"{}\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Create a random, lower-\/case string. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{mml\+::digits}} (double number) noexcept
+\begin{DoxyCompactList}\small\item\em Determine number of digits of a double number. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \end{Indent}
 
 

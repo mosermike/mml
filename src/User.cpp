@@ -104,7 +104,7 @@ uid_t mml::Unix::User::getloginuid() {
 	const passwd *pw1 = getpwnam(getlogin());
 	
 	if(pw1 == NULL)
-		mml::shell::error("ERROR: user function getloginuid @ User.cpp line 101");
+		throw std::runtime_error("ERROR: user function getloginuid @ User.cpp line 101");
 	
 	return pw1->pw_uid;
 }
@@ -113,7 +113,7 @@ gid_t mml::Unix::User::getlogingid() {
 	const passwd *pw1 = getpwnam(getlogin());
 	
 	if(pw1 == NULL)
-		mml::shell::error("ERROR: user function getlogingid @ User.cpp line 110");
+		throw std::runtime_error("ERROR: user function getlogingid @ User.cpp line 110");
 	
 	return pw1->pw_gid;    
 }
@@ -132,7 +132,7 @@ std::vector<gid_t> mml::Unix::User::getgrgid(){
 	gid_t* groups_gid = gids_temp.data();
 		
 	if(groups_gid == NULL)
-		mml::shell::error("ERROR: user function getgrgid @ User.cpp line 118");
+		throw std::runtime_error("ERROR: user function getgrgid @ User.cpp line 118");
 	
 	if ((getgrouplist(geteuser().c_str(), uid, groups_gid, &ngroups)) == -1)
 		getgrouplist(geteuser().c_str(), uid, groups_gid, &ngroups);
@@ -188,67 +188,67 @@ mml::string mml::Unix::User::setPWD() {
 void mml::Unix::User::cout(mml::string output) {
 
 	switch(output.hash()) {
-		case mml::functions::const_string_hash("uid") :
+		case mml::const_string_hash("uid") :
 			std::cout << "UID: \t\t\t"		<< this->uid << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("login_uid") :
+		case mml::const_string_hash("login_uid") :
 			std::cout << "LOGIN_UID: \t\t"	<< this->login_uid << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("gid") :
+		case mml::const_string_hash("gid") :
 			std::cout << "GID: \t\t\t"		<< this->gid << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("login_gid") :
+		case mml::const_string_hash("login_gid") :
 			std::cout << "LOGIN_GID \t\t"		<< this->login_gid << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("username") :
+		case mml::const_string_hash("username") :
 			std::cout << "USERNAME: \t\t"		<< this->username<< std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("loginname") :
+		case mml::const_string_hash("loginname") :
 			std::cout << "LOGINNAME: \t\t"	<< this->loginname << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("home") :
+		case mml::const_string_hash("home") :
 			std::cout << "HOME: \t\t\t"		<< this->home << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("defaultshell") :
+		case mml::const_string_hash("defaultshell") :
 			std::cout << "SHELL: \t\t\t"		<< this->defaultshell << std::endl;
 			break;
 		
-		case mml::functions::const_string_hash("host") :
+		case mml::const_string_hash("host") :
 			std::cout << "HOSTNAME: \t\t" 	<< this->hostname << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("hostname") :
+		case mml::const_string_hash("hostname") :
 			std::cout << "HOSTNAME: \t\t" 	<< this->hostname << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("iw") :
+		case mml::const_string_hash("iw") :
 			std::cout << "WLAN IP-ADRESSE: \t" 	<< this->ip_w << std::endl;
 			break;
 		
-		case mml::functions::const_string_hash("ie") :
+		case mml::const_string_hash("ie") :
 			std::cout << "LAN IP-ADRESSE: \t" 	<< this->ip_e << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("domain") :
+		case mml::const_string_hash("domain") :
 			std::cout << "DOMAIN: \t\t" 	<< this->domain << std::endl;
 			break;
 		
-		case mml::functions::const_string_hash("path") :
+		case mml::const_string_hash("path") :
 			std::cout << "PATH: \t\t\t" 	<< this->path << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("pwd") :
+		case mml::const_string_hash("pwd") :
 			std::cout << "PWD: \t\t\t"		<< this->pwd << std::endl;
 			break;
 			
-		case mml::functions::const_string_hash("groups") :
+		case mml::const_string_hash("groups") :
 			std::cout << "GROUPS: \t\t";
 			for(uint32_t i = 0; i < this->groups.size(); i++)
 				std::cout << this->gids[i] << " (" << this->groups[i] << ") ";
@@ -273,63 +273,63 @@ bool mml::Unix::User::check(mml::string option, std::string value) {
 	std:: string temp = "";
 	
 	switch(option.hash()) {
-		case mml::functions::const_string_hash("uid") :
+		case mml::const_string_hash("uid") :
 			return std::to_string(this->uid) == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("login_uid") :
+		case mml::const_string_hash("login_uid") :
 			return std::to_string(this->login_uid) == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("gid") :
+		case mml::const_string_hash("gid") :
 			return std::to_string(this->gid) == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("login_gid") :
+		case mml::const_string_hash("login_gid") :
 			return std::to_string(this->login_gid) == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("username") :
+		case mml::const_string_hash("username") :
 			return this->username == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("loginname") :
+		case mml::const_string_hash("loginname") :
 			return this->loginname == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("home") :
+		case mml::const_string_hash("home") :
 			return this->home == value ? true : false;
 			break;
 			 
-		case mml::functions::const_string_hash("defaultshell") :
+		case mml::const_string_hash("defaultshell") :
 			return this->defaultshell == value ? true : false;
 			break;
 		
-		case mml::functions::const_string_hash("host") :
+		case mml::const_string_hash("host") :
 			return this->hostname == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("hostname") :
+		case mml::const_string_hash("hostname") :
 			return this->hostname == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("iw") :
+		case mml::const_string_hash("iw") :
 			return this->ip_w == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("ie") :
+		case mml::const_string_hash("ie") :
 			return this->ip_e == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("domain") :
+		case mml::const_string_hash("domain") :
 			return this->domain == value ? true : false;
 			break;
 		
-		case mml::functions::const_string_hash("pwd") :
+		case mml::const_string_hash("pwd") :
 			return this->pwd == value ? true : false;
 			break;
 			
-		case mml::functions::const_string_hash("path") :
+		case mml::const_string_hash("path") :
 
 			
 			for(uint32_t i = 0; i < path_str.size(); i++) {
@@ -348,7 +348,7 @@ bool mml::Unix::User::check(mml::string option, std::string value) {
 			
 			break;
 		
-		case mml::functions::const_string_hash("groups") :
+		case mml::const_string_hash("groups") :
 			
 			for(uint32_t i = 0; i < this->groups.size(); i++) {
 				if(this->groups[i] == value)

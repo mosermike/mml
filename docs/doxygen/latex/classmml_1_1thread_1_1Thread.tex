@@ -2,7 +2,7 @@
 \label{classmml_1_1thread_1_1Thread}\index{mml::thread::Thread@{mml::thread::Thread}}
 
 
-{\ttfamily \#include $<$Thread.\+hpp$>$}
+{\ttfamily \#include $<$thread.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -18,17 +18,17 @@
 void \mbox{\hyperlink{classmml_1_1thread_1_1Thread_a390497ea41f30dd2f48d433e275f4be0}{set\+\_\+max\+\_\+i}} (int max\+\_\+temp)
 \item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Thread_aea68ae5d90affb2ec9bd0148e508d2e5}{thread\+\_\+writing\+\_\+true}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Set this thread to active writing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Thread_a54d5be439315782c43ecb4f6e78e99e5}{thread\+\_\+writing\+\_\+false}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Set this thread to not actively writing. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classmml_1_1thread_1_1Thread_a2a309c3e1f84b51ae205beec2c22bf3d}{is\+\_\+writing\+\_\+active}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the thread is writing. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Thread_aa1f1dbc2ea0f6bf44347990ed5e044b1}{thread\+\_\+sleep}} (float second)
-\item 
+\begin{DoxyCompactList}\small\item\em Sleep for a while. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Thread_a471f18a979691ba155a9cc8e84917acd}{thread\+\_\+sleep\+\_\+millisecond}} (uint32\+\_\+t millisecond)
-\item 
+\begin{DoxyCompactList}\small\item\em Sleep for a while. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classmml_1_1thread_1_1Thread_af0f8af249ce24749198b7e990a78abc0}{waiting}} (int a=0)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Waits if many threads are writing if a not used, not always the same order of writing. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -59,6 +59,13 @@ bool \mbox{\hyperlink{classmml_1_1thread_1_1Thread_af0f8af249ce24749198b7e990a78
 \doxysubsubsection{\texorpdfstring{is\_writing\_active()}{is\_writing\_active()}}
 {\footnotesize\ttfamily bool mml\+::thread\+::\+Thread\+::is\+\_\+writing\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Checks if the thread is writing. 
+
+\begin{DoxyReturn}{Returns}
+true = is writing 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1thread_1_1Thread_a41f19eb3e364ab6da47b9f24fcf8d402}\label{classmml_1_1thread_1_1Thread_a41f19eb3e364ab6da47b9f24fcf8d402}} 
 \index{mml::thread::Thread@{mml::thread::Thread}!operator=@{operator=}}
 \index{operator=@{operator=}!mml::thread::Thread@{mml::thread::Thread}}
@@ -83,23 +90,39 @@ Mike
 \doxysubsubsection{\texorpdfstring{thread\_sleep()}{thread\_sleep()}}
 {\footnotesize\ttfamily void mml\+::thread\+::\+Thread\+::thread\+\_\+sleep (\begin{DoxyParamCaption}\item[{float}]{second }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Versetzt den aktuellen \mbox{\hyperlink{classmml_1_1thread_1_1Thread}{Thread}} in den Sleep-\/\+Modus
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Sleep for a while. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em second} & Sleep for so many seconds \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classmml_1_1thread_1_1Thread_a471f18a979691ba155a9cc8e84917acd}\label{classmml_1_1thread_1_1Thread_a471f18a979691ba155a9cc8e84917acd}} 
 \index{mml::thread::Thread@{mml::thread::Thread}!thread\_sleep\_millisecond@{thread\_sleep\_millisecond}}
 \index{thread\_sleep\_millisecond@{thread\_sleep\_millisecond}!mml::thread::Thread@{mml::thread::Thread}}
 \doxysubsubsection{\texorpdfstring{thread\_sleep\_millisecond()}{thread\_sleep\_millisecond()}}
 {\footnotesize\ttfamily void mml\+::thread\+::\+Thread\+::thread\+\_\+sleep\+\_\+millisecond (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{millisecond }\end{DoxyParamCaption})}
 
+
+
+Sleep for a while. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em millisecond} & Sleep for so many miliseconds \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classmml_1_1thread_1_1Thread_a54d5be439315782c43ecb4f6e78e99e5}\label{classmml_1_1thread_1_1Thread_a54d5be439315782c43ecb4f6e78e99e5}} 
 \index{mml::thread::Thread@{mml::thread::Thread}!thread\_writing\_false@{thread\_writing\_false}}
 \index{thread\_writing\_false@{thread\_writing\_false}!mml::thread::Thread@{mml::thread::Thread}}
 \doxysubsubsection{\texorpdfstring{thread\_writing\_false()}{thread\_writing\_false()}}
 {\footnotesize\ttfamily void mml\+::thread\+::\+Thread\+::thread\+\_\+writing\+\_\+false (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set this thread to not actively writing. 
 
 \mbox{\Hypertarget{classmml_1_1thread_1_1Thread_aea68ae5d90affb2ec9bd0148e508d2e5}\label{classmml_1_1thread_1_1Thread_aea68ae5d90affb2ec9bd0148e508d2e5}} 
 \index{mml::thread::Thread@{mml::thread::Thread}!thread\_writing\_true@{thread\_writing\_true}}
@@ -107,15 +130,14 @@ Mike
 \doxysubsubsection{\texorpdfstring{thread\_writing\_true()}{thread\_writing\_true()}}
 {\footnotesize\ttfamily void mml\+::thread\+::\+Thread\+::thread\+\_\+writing\+\_\+true (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-aktuelles Schreiben aktiv oder nicht aktiv setzen und dessen Abfrage
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike
 
+
+Set this thread to active writing. 
+
+\begin{DoxyAuthor}{Author}
 Mike Moser
 \end{DoxyAuthor}
-Programm\+: \mbox{\hyperlink{Thread_8cpp}{Thread.\+cpp}}
+Programm\+: Thread.\+cpp
 
 Enthält verschiedene Funktionen für Threads \mbox{\Hypertarget{classmml_1_1thread_1_1Thread_af0f8af249ce24749198b7e990a78abc0}\label{classmml_1_1thread_1_1Thread_af0f8af249ce24749198b7e990a78abc0}} 
 \index{mml::thread::Thread@{mml::thread::Thread}!waiting@{waiting}}
@@ -123,18 +145,21 @@ Enthält verschiedene Funktionen für Threads \mbox{\Hypertarget{classmml_1_1thr
 \doxysubsubsection{\texorpdfstring{waiting()}{waiting()}}
 {\footnotesize\ttfamily bool mml\+::thread\+::\+Thread\+::waiting (\begin{DoxyParamCaption}\item[{int}]{a = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Wartefunktion beim mehrfachen Schreiben Nicht immer gleiche Reihenfolge, wenn a nicht verwendet.
-\end{DoxyNote}
+
+
+Waits if many threads are writing if a not used, not always the same order of writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & wait for so many miliseconds. if a = 0 =$>$ random number is created in milliseconds \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true, wenn kein \mbox{\hyperlink{classmml_1_1thread_1_1Thread}{Thread}} mehr schreiben will 
+true, when no thread is writing 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/mml/\mbox{\hyperlink{Thread_8hpp}{Thread.\+hpp}}\item 
-src/\mbox{\hyperlink{Thread_8cpp}{Thread.\+cpp}}\end{DoxyCompactItemize}
+include/mml/\mbox{\hyperlink{thread_8hpp}{thread.\+hpp}}\item 
+src/\mbox{\hyperlink{thread_8cpp}{thread.\+cpp}}\end{DoxyCompactItemize}

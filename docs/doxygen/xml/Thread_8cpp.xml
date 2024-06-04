@@ -7,76 +7,109 @@
     <includes refid="mml_8hpp" local="yes">mml.hpp</includes>
     <incdepgraph>
       <node id="18">
-        <label>mml/help.hpp</label>
-        <link refid="help_8hpp"/>
-        <childnode refid="11" relation="include">
-        </childnode>
+        <label>mml/log.hpp</label>
+        <link refid="log_8hpp"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="9">
         <label>functional</label>
       </node>
-      <node id="17">
-        <label>float.h</label>
-      </node>
-      <node id="25">
-        <label>cstdint</label>
-      </node>
-      <node id="24">
-        <label>mml/Timer.hpp</label>
-        <link refid="Timer_8hpp"/>
-        <childnode refid="5" relation="include">
+      <node id="6">
+        <label>mml.hpp</label>
+        <link refid="mml_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>src/Thread.cpp</label>
-        <link refid="Thread_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>mml/standards.hpp</label>
-        <link refid="standards_8hpp"/>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="2" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="13">
+      <node id="16">
+        <label>float.h</label>
+      </node>
+      <node id="26">
+        <label>cstdint</label>
+      </node>
+      <node id="12">
         <label>string</label>
+      </node>
+      <node id="7">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="19">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="14">
+        <label>string.h</label>
+      </node>
+      <node id="27">
+        <label>mml/Unix.hpp</label>
+        <link refid="Unix_8hpp"/>
       </node>
       <node id="8">
         <label>mml/file.hpp</label>
         <link refid="file_8hpp"/>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>mml/vector.hpp</label>
+        <link refid="vector_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>sstream</label>
       </node>
       <node id="10">
-        <label>mml/functions.hpp</label>
-        <link refid="functions_8hpp"/>
+        <label>mml/standards.hpp</label>
+        <link refid="standards_8hpp"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -89,11 +122,56 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="20">
-        <label>fstream</label>
+        <label>mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>cctype</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>mml/help.hpp</label>
+        <link refid="help_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>thread</label>
+      </node>
+      <node id="24">
+        <label>type_traits</label>
+      </node>
+      <node id="23">
+        <label>algorithm</label>
+      </node>
+      <node id="25">
+        <label>mml/Timer.hpp</label>
+        <link refid="Timer_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
       <node id="3">
         <label>mml/Thread.hpp</label>
@@ -105,103 +183,15 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="21">
-        <label>mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
+      <node id="1">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-      </node>
-      <node id="16">
-        <label>random</label>
-      </node>
-      <node id="7">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="6">
-        <label>mml.hpp</label>
-        <link refid="mml_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>string.h</label>
-      </node>
-      <node id="12">
-        <label>vector</label>
-      </node>
-      <node id="14">
-        <label>sstream</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
-      </node>
-      <node id="5">
-        <label>chrono</label>
-      </node>
-      <node id="26">
-        <label>mml/Unix.hpp</label>
-        <link refid="Unix_8hpp"/>
-      </node>
-      <node id="4">
-        <label>thread</label>
-      </node>
-      <node id="22">
-        <label>mml/vector.hpp</label>
-        <link refid="vector_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="23" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>mml/log.hpp</label>
-        <link refid="log_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="20" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
-      <node id="23">
-        <label>algorithm</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -241,11 +231,11 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(this-&gt;is_writing_active())<sp/>{this-&gt;thread_sleep(0.1);}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>a<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;thread_sleep_millisecond(i<sp/>+<sp/><ref refid="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" kindref="member">mml::functions::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>4)<sp/>+<sp/><ref refid="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" kindref="member">mml::functions::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>4));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;thread_sleep_millisecond(i<sp/>+<sp/><ref refid="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" kindref="member">mml::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>4)<sp/>+<sp/><ref refid="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" kindref="member">mml::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>4));</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;thread_sleep_millisecond(a);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(this-&gt;is_writing_active())<sp/>{<sp/>this-&gt;thread_sleep_millisecond(10<sp/>*<sp/><ref refid="namespacemml_1_1functions_1ab0e3f9a7184313f2bedbb09500f2b784" kindref="member">mml::functions::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>2));<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(this-&gt;is_writing_active())<sp/>{<sp/>this-&gt;thread_sleep_millisecond(10<sp/>*<sp/><ref refid="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" kindref="member">mml::get_random</ref>(1,<sp/>max_i<sp/>*<sp/>2));<sp/>}</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;thread_writing_true();</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>a<sp/>==<sp/>0)<sp/>{</highlight></codeline>

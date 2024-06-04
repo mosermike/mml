@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="classmml_1_1thread_1_1Thread" kind="class" language="C++" prot="public">
     <compoundname>mml::thread::Thread</compoundname>
-    <includes refid="Thread_8hpp" local="no">Thread.hpp</includes>
+    <includes refid="thread_8hpp" local="no">thread.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classmml_1_1thread_1_1Thread_1a91bae489f2ee7d28a1324c67547884a4" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="21" column="6" bodyfile="include/mml/Thread.hpp" bodystart="21" bodyend="-1"/>
+        <location file="include/mml/thread.hpp" line="21" column="6" bodyfile="include/mml/thread.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmml_1_1thread_1_1Thread_1a657e848c50b525367ce820ece964e80f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="22" column="5" bodyfile="include/mml/Thread.hpp" bodystart="22" bodyend="-1"/>
+        <location file="include/mml/thread.hpp" line="22" column="5" bodyfile="include/mml/thread.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmml_1_1thread_1_1Thread_1a3ea4fcd4d546fcbfc2b2fbd6ce75c33f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="23" column="5" bodyfile="include/mml/Thread.hpp" bodystart="23" bodyend="-1"/>
+        <location file="include/mml/thread.hpp" line="23" column="5" bodyfile="include/mml/thread.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="28" column="1" bodyfile="include/mml/Thread.hpp" bodystart="28" bodyend="28"/>
+        <location file="include/mml/thread.hpp" line="28" column="1" bodyfile="include/mml/thread.hpp" bodystart="28" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1ab6188b06bb0e650f6e9a307c58182e82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="30" column="1" bodyfile="include/mml/Thread.hpp" bodystart="30" bodyend="30"/>
+        <location file="include/mml/thread.hpp" line="30" column="1" bodyfile="include/mml/thread.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1aaa5137ada2f6563d759ae1067d3e89db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="33" column="1" bodyfile="include/mml/Thread.hpp" bodystart="33" bodyend="35"/>
+        <location file="include/mml/thread.hpp" line="33" column="1" bodyfile="include/mml/thread.hpp" bodystart="33" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1a41f19eb3e364ab6da47b9f24fcf8d402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1thread_1_1Thread" kindref="compound">Thread</ref> &amp;</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="38" column="8" bodyfile="include/mml/Thread.hpp" bodystart="38" bodyend="42"/>
+        <location file="include/mml/thread.hpp" line="38" column="8" bodyfile="include/mml/thread.hpp" bodystart="38" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1a390497ea41f30dd2f48d433e275f4be0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="49" column="6" bodyfile="include/mml/Thread.hpp" bodystart="49" bodyend="49"/>
+        <location file="include/mml/thread.hpp" line="49" column="6" bodyfile="include/mml/thread.hpp" bodystart="49" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1aea68ae5d90affb2ec9bd0148e508d2e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,20 +140,17 @@
         <argsstring>()</argsstring>
         <name>thread_writing_true</name>
         <briefdescription>
+<para>Set this thread to active writing. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>aktuelles Schreiben aktiv oder nicht aktiv setzen und dessen Abfrage</para>
+<para><simplesect kind="author"><para>Mike Moser</para>
 </simplesect>
-<simplesect kind="author"><para>Mike</para>
-</simplesect>
-<simplesect kind="author"><para>Mike Moser</para>
-</simplesect>
-Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
+Programm: Thread.cpp</para>
 <para>Enthält verschiedene Funktionen für Threads </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="56" column="6" bodyfile="src/Thread.cpp" bodystart="14" bodyend="16"/>
+        <location file="include/mml/thread.hpp" line="54" column="6" bodyfile="src/thread.cpp" bodystart="14" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1a54d5be439315782c43ecb4f6e78e99e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -161,12 +158,13 @@ Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
         <argsstring>()</argsstring>
         <name>thread_writing_false</name>
         <briefdescription>
+<para>Set this thread to not actively writing. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="57" column="6" bodyfile="src/Thread.cpp" bodystart="18" bodyend="20"/>
+        <location file="include/mml/thread.hpp" line="59" column="6" bodyfile="src/thread.cpp" bodystart="18" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1a2a309c3e1f84b51ae205beec2c22bf3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -174,12 +172,16 @@ Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
         <argsstring>()</argsstring>
         <name>is_writing_active</name>
         <briefdescription>
+<para>Checks if the thread is writing. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>true = is writing </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="58" column="6" bodyfile="src/Thread.cpp" bodystart="22" bodyend="24"/>
+        <location file="include/mml/thread.hpp" line="65" column="6" bodyfile="src/thread.cpp" bodystart="22" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1aa1f1dbc2ea0f6bf44347990ed5e044b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,17 +193,23 @@ Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
           <declname>second</declname>
         </param>
         <briefdescription>
+<para>Sleep for a while. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Versetzt den aktuellen <ref refid="classmml_1_1thread_1_1Thread" kindref="compound">Thread</ref> in den Sleep-Modus</para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
-</simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sleep for so many seconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="65" column="6" bodyfile="src/Thread.cpp" bodystart="27" bodyend="29"/>
+        <location file="include/mml/thread.hpp" line="71" column="6" bodyfile="src/thread.cpp" bodystart="27" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1a471f18a979691ba155a9cc8e84917acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,12 +221,23 @@ Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
           <declname>millisecond</declname>
         </param>
         <briefdescription>
+<para>Sleep for a while. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>millisecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sleep for so many miliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="66" column="6" bodyfile="src/Thread.cpp" bodystart="31" bodyend="33"/>
+        <location file="include/mml/thread.hpp" line="77" column="6" bodyfile="src/thread.cpp" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1thread_1_1Thread_1af0f8af249ce24749198b7e990a78abc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -231,26 +250,32 @@ Programm: <ref refid="Thread_8cpp" kindref="compound">Thread.cpp</ref></para>
           <defval>0</defval>
         </param>
         <briefdescription>
+<para>Waits if many threads are writing if a not used, not always the same order of writing. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="note"><para>Wartefunktion beim mehrfachen Schreiben Nicht immer gleiche Reihenfolge, wenn a nicht verwendet.</para>
-</simplesect>
-<simplesect kind="return"><para>true, wenn kein <ref refid="classmml_1_1thread_1_1Thread" kindref="compound">Thread</ref> mehr schreiben will </para>
-</simplesect>
-<simplesect kind="author"><para>Mike </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>wait for so many miliseconds. if a = 0 =&gt; random number is created in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true, when no thread is writing </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/Thread.hpp" line="76" column="6" bodyfile="src/Thread.cpp" bodystart="35" bodyend="53"/>
+        <location file="include/mml/thread.hpp" line="86" column="6" bodyfile="src/thread.cpp" bodystart="35" bodyend="53"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/Thread.hpp" line="19" column="1" bodyfile="include/mml/Thread.hpp" bodystart="19" bodyend="85"/>
+    <location file="include/mml/thread.hpp" line="19" column="1" bodyfile="include/mml/thread.hpp" bodystart="19" bodyend="87"/>
     <listofallmembers>
       <member refid="classmml_1_1thread_1_1Thread_1a657e848c50b525367ce820ece964e80f" prot="private" virt="non-virtual"><scope>mml::thread::Thread</scope><name>i</name></member>
       <member refid="classmml_1_1thread_1_1Thread_1a2a309c3e1f84b51ae205beec2c22bf3d" prot="public" virt="non-virtual"><scope>mml::thread::Thread</scope><name>is_writing_active</name></member>

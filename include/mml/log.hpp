@@ -2,7 +2,7 @@
  * @author Mike Moser
  * 
  * @file log.hpp
- * @note Enthält verschiedene Funktionen fürs logging
+ * @brief Contains different functions for logging
  * 
 */
 
@@ -40,125 +40,116 @@ namespace mml{
 			
 		public:
 			
-			// Constructor
+			/**
+			 * @brief Constructor
+			 * @param path Path to the logfile
+			 * @throw runtime_error : if log file is not created
+			*/
 			log(mml::string path) : logpath(path), output() {
 				logpath = path;
 				if(!mml::Unix::exist(logpath.str())) {
 					output.open(logpath.c_str(),std::ios::out | std::ios::app);
 					header();
 					if(!mml::Unix::exist(logpath.str()))
-						mml::shell::error("[LOG] Erstellung der Logdatei nicht möglich. Berechtigung prüfen!");
+						throw std::runtime_error("[LOG] Creation of logfile '" + logpath.str() + "' not possible. Check permissions!");
 				}
 				else
 					output.open(logpath.c_str(),std::ios::out | std::ios::app);
 			}
+
+			/**
+			 * @brief Empty constructor
+			*/
 			log() : logpath(""), output() {}
 		
-			// Deconstructor
-			~log(){output.close();}
+			/**
+			 * @brief Deconstructor
+			*/
+			~log() noexcept {output.close();}
 			
  			/**
-			 * @note Neue Logfile öffnen;
-			 * 
-			 * @author Mike
+			 * @brief  Open new log file;
+			 * @param value Path to the logfile
 			 */
-			mml::log &operator=(std::string value);
+			mml::log &operator=(std::string value) noexcept;
 			
-// 			friend void operator<< (mml::log &log, const char* &String){
-// 				log.output << String << std::endl;
-// 				return;
-// 			}
-			
-// 			friend void operator<< (mml::log &log, const std::string &String){
-// 				log.output << String << std::endl;
-// 				return;
-// 			}
-			
-			friend void operator<< (mml::log &log, const mml::string &String){
+			/**
+			 * @brief Writes a value into the logfile
+			 * @param String Value to be written into the log file
+			*/
+			template <typename T> friend void operator<< (mml::log &log, const T &String) noexcept{
 				log.output << String << std::endl;
 				return;
 			}
+			
+			/**
+			 * @brief Backups the log file by copying it to [filename].bak 
+			 * @param verbose Verbose output
+			 * @param Reset reset the actual log file so that it is empty
+			 */
+			void backup(bool verbose = true, bool Reset = true) noexcept;
+			
+			/**
+			 * @brief Close log file
+			 */
+			void close() noexcept;
+			
+			/**
+			 * @brief Write sth. into the log file
+			 * @param value
+			 * @param newline Write a newline after the value
+			 */
+			//template <typename T> void cout(T value,bool newline=false) noexcept;
+			template <typename T> void cout(T value,bool newline) noexcept {
+				this->output << value;
+				if(newline)
+					this->output << std::endl;
+			}
+			
+			/**
+			 * @brief Return a specific line form the log file
+			 * @param line Line Number
+			 * @return string
+			 */
+			mml::string getline(size_t line) noexcept;
+			
+			/**
+			 * @brief Get a specific line from the log file
+			 * @param line Line number from the last line
+			 * @return string
+			 * @throw runtime_error : if line number exceeds lines
+			 */
+			mml::string getline_back(size_t line);
+			
+			/**
+			 * @brief Get the last line of a logfile
+			 * @return string
+			 */
+			mml::string lastline() noexcept;
 
-			
-			friend void operator<< (mml::log &log, const double &String){
-				log.output << String << std::endl;
-				return;
-			}
-			
-			/**
-			 * @note Logdatei sichern
-			 * 
-			 * @author Mike
-			 */
-			void backup(bool verbose = true, bool Reset = true);
-			
-			/**
-			 * @note Logdatei schließen
-			 * 
-			 * @author Mike
-			 */
-			void close();
-			
-			/**
-			 * @note in Logdatei schreiben
-			 * 
-			 * @author Mike
-			 */
-			void cout(mml::string value,bool newline=false);
-// 			void cout(std::string value,bool newline=false);
-			void cout(double value,bool newline=false);
-			void cout(int value,bool newline=false);
-			//void compress(std::size_t filesize);
-			
-			/**
-			 * @note Eine bestimmte Zeile aus der Logdatei zurückgeben
-			 * 
-			 * @return string
-			 * @author Mike
-			 */
-			mml::string getline(uint32_t line);
-			
-			/**
-			 * @note Eine bestimmte Zeile aus der Logdatei zurückgeben, dabei vom Ende aus Rechnen
-			 * 
-			 * @return string
-			 * @author Mike
-			 */
-			mml::string getline_back(uint32_t line);
-			
-			/**
-			 * @note Die letzte Zeile aus der Logdatei zurückgeben
-			 * 
-			 * @return stirng
-			 * @author Mike
-			 */
-			mml::string lastline();
 			/**
 			 * @note Neuen Kopf erstellen
 			 * 
-			 * @author Mike
 			 */
-			void header();
+			void header() noexcept;
+
 			/**
-			 * @note Logdatei öffnen
-			 * 
-			 * @author Mike
+			 * @brief open a logfile
+			 * @param path Path to log file
 			 */
-			void open(mml::string path = "");
+			void open(mml::string path = "") noexcept;
 			
 			/**
-			 * @note Logdatei ausgeben
-			 * 
-			 * @author Mike
+			 * @brief Print log file
+			 * @param linenumber Print the linenumber
 			 */
-			void print(bool linenumber = false);
+			void print(bool linenumber = false) noexcept;
 			
 			/**
-			 * @note Logdatei neu erstellen
-			 * 
-			 * @author Mike
+			 * @brief Reset logfile
+			 * @param verbose Verbose output what is performed
 			 */
-			void reset(bool verbose = true);
+			void reset(bool verbose = true) noexcept;
 			
 			
 		};

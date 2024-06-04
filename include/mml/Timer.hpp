@@ -2,7 +2,7 @@
  * @author Lucas, Mike
  * 
  * @file Timer.hpp 
- * @note Enthält verschiedene Timerfunktionen
+ * @brief Contains different functions and a class concerning timing
  * 
 */
 
@@ -11,19 +11,14 @@
 
 #include <chrono>
 #include <cstdint>
-
+#include <string>
 
 namespace mml {
-	/**
-	 * Timer mit std::chrono (anstatt SDL_GetPerformanceCounter())
-	 */
 	class Timer {
 	private:
 		/**
-		 * Variablen für Beginn und Ende der Zeitmessung.
-		 * 
-		 * microseconds für bessere genauigkeit bei Millisekunden
-		 * (Teilen durch 1000.0)
+		 * Variables for begin and end of the time measurement
+		 * microseconds for better precision for millisecond
 		 */
 		std::chrono::high_resolution_clock::time_point ticksStart;
 		std::chrono::high_resolution_clock::time_point ticksEnd;
@@ -48,60 +43,55 @@ namespace mml {
 		//~Timer();
 		
 		/**
-		 * @note Pause starten
-		 * 
+		 * @note stop the time measurement
 		 * @author Mike
 		 */
 		void break_start();
 		/**
-		 * @note Pause stoppen
-		 * 
+		 * @brief continue the time measurement
 		 * @author Mike
 		 */
 		void break_stop();
 		
 		
 		/**
-		 * @note Zeit ausgeben (formatiert oder in Millisekunden)
-		 * 
+		 * @note Pint time formatted or in ms
+		 * @param text A text printed first without a newline
+		 * @param format_print Print by using the function range (false : in ms)
+		 * @param newline Print with a newline
 		 * @author Mike
 		 */
 		void cout(std::string text = "", bool format_print = false, bool newline = true);
 		/**
-		 * @note Beginnt die Zeitmessung.
-		 * 
+		 * @brief Start time measurement
 		 * @author Lucas
 		 */
 		void start() noexcept;
 
 		/**
-		 * @note Stoppt die Zeitmessung.
-		 * 
-		 * @return Vergangene Zeit in Millisekunden
+		 * @brief Stops the time measurement
+		 * @return passed time in ms
 		 * @author Lucas
 		 */
 		double stop() noexcept;
 		
 		/**
-		 * @note Direkten Wert in Mikrosekunden zurückgegeben.
-		 * 
-		 * @return Vergangene Zeit in Mikrosekunden (uint64_t)
+		 * @brief get the time in µs
+		 * @return time in µs
 		 * @author Lucas
 		 */
 		uint64_t getUS(bool stop = true) noexcept;
 				
 		/**
-		 * @note Zwischenergebnis zurückgegeben.
-		 * 
-		 * @return Zwischenergebnis
+		 * @brief Return time in ms without stopping
+		 * @return time in ms
 		 * @author Lucas
 		 */
 		double getMS(bool stop = true) noexcept;
         
 		/**
-		 * @note Zwischenergebnis zurückgegeben in s.
-		 * 
-		 * @return Zwischenergebnis
+		 * @brief Return time in s without stopping
+		 * @return time in seconds
 		 * @author Mike
 		 */
 		double getS(bool stop = true) noexcept;
@@ -111,18 +101,16 @@ namespace mml {
         std::string toString() noexcept;
 	
 		/** 
-		 * @note ticks in Zeitformat ändern
-		 * 
-		 * @return Ausgabe der Zeit im Format 'hh:mm:ss,ms'
+		 * @brief Convert ticks to time format
+		 * @return time in the format 'hh:mm:ss,ms'
 		 * @author Mike
 		 */
 		struct time;
 		std::string clock() noexcept;
 	
 		/** 
-		 * @note Zeit abhängig von der Größe zurückgeben
-		 * 
-		 * @return Ausgabe der Zeit
+		 * @brief return the time depending on the time value itself
+		 * @return returns the time in µs, ms, s or as a clock
 		 * @author Mike
 		 */
 		std::string range() noexcept;

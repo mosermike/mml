@@ -4,29 +4,11 @@
 
 {\ttfamily \#include $<$vector.\+hpp$>$}
 
-
-
-Inheritance diagram for mml\+::vector$<$ T $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=184pt]{classmml_1_1vector__inherit__graph}
-\end{center}
-\end{figure}
-
-
-Collaboration diagram for mml\+::vector$<$ T $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=184pt]{classmml_1_1vector__coll__graph}
-\end{center}
-\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmml_1_1vector_ae33ede1abf01d6d2579d554e0e4ece65}{vector}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructors. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}{vector}} (const \mbox{\hyperlink{classmml_1_1vector}{vector}} \&temp)
 \item 
 \mbox{\hyperlink{classmml_1_1vector_ac6bb999219a514400d27c3ae0a1c38d8}{vector}} (std\+::vector$<$ T $>$ \&temp)
@@ -40,63 +22,69 @@ Collaboration diagram for mml\+::vector$<$ T $>$\+:\nopagebreak
 \mbox{\hyperlink{classmml_1_1vector_aab00229f585e0382fc1ff5c89cd77816}{vector}} (int cols, std\+::vector$<$ T $>$ temp)
 \item 
 \mbox{\hyperlink{classmml_1_1vector_add2b8c228c9f3be8fcad971b7e22a429}{vector}} (std\+::initializer\+\_\+list$<$ T $>$ init\+List)
-\item 
-\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}{operator=}} (const std\+::vector$<$ T $>$ \&temp)
-\item 
-\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}{operator=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
+\begin{DoxyCompactList}\small\item\em Construct with a list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_a27bd93034429d512f0414f71e2da0448}{operator=}} (const std\+::vector$<$ T $>$ \&temp) noexcept
+\begin{DoxyCompactList}\small\item\em Assign value with equal sign. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector_ae5d5c7e921bc2c07453a8ef6ff4d9e47}{operator=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp) noexcept
 \item 
 std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a8dcf3737728770802554ed5183d4bb23}{begin}} () noexcept
-\item 
-bool \mbox{\hyperlink{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}{empty}} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em iterator to the beginning of the vector \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmml_1_1vector_af0fd2f8bb3bc757713694d12ebc919b8}{empty}} () noexcept
+\begin{DoxyCompactList}\small\item\em Checks whether the vector is empty. \end{DoxyCompactList}\item 
 std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}{end}} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em iterator to the end of the vector \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1vector_a9c6ac6de56377585c640f7cf4526b865}{erase}} (size\+\_\+t position)
 \begin{DoxyCompactList}\small\item\em Erase an element from the vector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1vector_a45f83c9f49ea3cf4b6bd2544bfdd808c}{erase}} (size\+\_\+t start, size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}{end}})
 \begin{DoxyCompactList}\small\item\em Erase a range from the vector. \end{DoxyCompactList}\item 
-std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}{insert}} (const typename std\+::vector$<$ T $>$\+::iterator position, const T \&val)
-\item 
+std\+::vector$<$ T $>$\+::iterator \mbox{\hyperlink{classmml_1_1vector_a15c357eea5a88f6903fbbf2f902449d3}{insert}} (const typename std\+::vector$<$ T $>$\+::iterator position, const T \&val) noexcept
+\begin{DoxyCompactList}\small\item\em Insert a value at a specific position. \end{DoxyCompactList}\item 
 T \& \mbox{\hyperlink{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns a value at a specific index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1vector_a1393d9931fe936f267791067f2bea877}{pop\+\_\+back}} () noexcept
+\begin{DoxyCompactList}\small\item\em Removes the last entry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1vector_a27424a774d46cbbf509f47ab8c801de0}{push\+\_\+back}} (T value) noexcept
+\begin{DoxyCompactList}\small\item\em Adds an element at the end. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a009b3e42dba375229367bf85a5018e36}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Size of the vector. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a91e15fae7ebbb5a00391dfc3acb6987b}{count}} (T value) noexcept
 \item 
-void \mbox{\hyperlink{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}{pop\+\_\+back}} ()
-\item 
-void \mbox{\hyperlink{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}{push\+\_\+back}} (T value)
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}{size}} () const noexcept
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a116b25064a0299e5cd4658fad09a0539}{count}} (T value)
-\item 
-void \mbox{\hyperlink{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}{cout}} (bool newline=false) noexcept
-\item 
-std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}{del}} ()
-\item 
-bool \mbox{\hyperlink{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}{exist}} (T const \&value)
-\item 
-T \mbox{\hyperlink{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}{toT}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} s)
-\item 
-void \mbox{\hyperlink{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}{get\+\_\+data}} (std\+::string filepath, int skip=-\/1)
-\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}{find}} (const T value)
-\item 
-void \mbox{\hyperlink{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}{log}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} logpath, bool newline=false, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} first=\char`\"{}\char`\"{}, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} last=\char`\"{}\char`\"{})
-\item 
-std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}{replace}} (T old, T new1)
-\item 
+void \mbox{\hyperlink{classmml_1_1vector_a861d552caf263eb37d7fe9bcd4ca8861}{cout}} (bool newline=false) noexcept
+\begin{DoxyCompactList}\small\item\em print elements in the vector \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a1e7183f3df81ba57b2b161091119d591}{del}} () noexcept
+\begin{DoxyCompactList}\small\item\em Empties the vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... values$>$ }\\bool \mbox{\hyperlink{classmml_1_1vector_a76e9ae37b4d92521fe84c5dd0878a7a0}{exist}} (const values \&... value) noexcept
+\begin{DoxyCompactList}\small\item\em Check if one {\itshape or} another string exists. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector_a309bd325454ee39e8e6f71a5a3e52ac3}{find}} (const T value, size\+\_\+t start=0) noexcept
+\begin{DoxyCompactList}\small\item\em Return a position of an element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1vector_ace5e48f1429007d82db0322b4ddc4977}{log}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} logpath, bool newline=false, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} first=\char`\"{}\char`\"{}, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} last=\char`\"{}\char`\"{}, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} separator=\char`\"{},\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Write values into a logfile. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a70cdc7cc551a2c5e9acd0c1f18fc6d1b}{replace}} (T Old, T New) noexcept
+\begin{DoxyCompactList}\small\item\em Replace specific elements with another element. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}{operator$\ast$}} (const T \&value)
-\item 
-void \mbox{\hyperlink{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}{set}} (std\+::vector$<$ T $>$ temp)
-\item 
-T \mbox{\hyperlink{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}{sum}} ()
-\item 
-std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}{operator+}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
-\item 
-std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}{operator+=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
-\item 
-std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}{operator$^\wedge$}} (const double exponent)
-\item 
+\begin{DoxyCompactList}\small\item\em Scalarmultiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_aa1e76ce928f0025c21b4ca42e227b4cf}{operator$\ast$=}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Scalarmultiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_af988a06108c0ed0a54912ef79702c676}{operator+}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Add a value to each element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a16d7de3e21e86095a82e23e99e6415b7}{operator+=}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Add a value to each element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1vector_a6e15f0519463ea24dbfeb014f9381656}{set}} (std\+::vector$<$ T $>$ Vec) noexcept
+\begin{DoxyCompactList}\small\item\em Replace the vector with a new vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_acfacaf78023f4f300cfad46a666740d2}{sort}} ()
+\begin{DoxyCompactList}\small\item\em Sort the vector. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classmml_1_1vector_a258b24c3d22bbc05ac46f41afa723724}{sum}} ()
+\begin{DoxyCompactList}\small\item\em Determine the sum of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a3a388590b5179b598664820f1c431e68}{operator+}} (\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ temp)
+\begin{DoxyCompactList}\small\item\em Add a vector to this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_ae42b8172bc702bff9d2f3dcc41d21db6}{operator+=}} (\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ temp)
+\begin{DoxyCompactList}\small\item\em Add a vector to this vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a94e947265d74fd8b17586bfe6e8f3e65}{operator$^\wedge$}} (const T exponent)
+\begin{DoxyCompactList}\small\item\em Vector$^\wedge$() \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_ac971bc51f4e13b7829110ff3abb9b94a}{operator$^\wedge$=}} (const T exponent)
+\begin{DoxyCompactList}\small\item\em Vector$^\wedge$() \end{DoxyCompactList}\item 
 std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}{tovec}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Return the std\+::vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -105,10 +93,10 @@ std\+::vector$<$ T $>$ \mbox{\hyperlink{classmml_1_1vector_a3b2d65ffa645eff2e560
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-std\+::ostream \& \mbox{\hyperlink{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&Vec)
-\item 
-std\+::istream \& \mbox{\hyperlink{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&Vec)
-\end{DoxyCompactItemize}
+std\+::ostream \& \mbox{\hyperlink{classmml_1_1vector_a7224e4650e76335a445d3577bb24e377}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&Vec) noexcept
+\begin{DoxyCompactList}\small\item\em Print the vector. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classmml_1_1vector_a612263cfe9350459c56fd68000d2fb06}{operator$>$$>$}} (std\+::istream \&in, const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&v) noexcept
+\begin{DoxyCompactList}\small\item\em Writes a value into the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -119,12 +107,10 @@ std\+::istream \& \mbox{\hyperlink{classmml_1_1vector_a6684f15487209798bee55f69e
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-constructor
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Constructors. 
+
 \mbox{\Hypertarget{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}\label{classmml_1_1vector_ad44c393d85ce94e01ae6d851abfe3a60}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!vector@{vector}}
 \index{vector@{vector}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
@@ -174,9 +160,13 @@ Mike
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1vector}{vector}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ T $>$}]{init\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Initialise with a list 
+
+
+Construct with a list. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em std\+::initializer\+\_\+list$<$\+T$>$} & \\
+{\em init\+List} & Initializer\+\_\+list \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -192,59 +182,72 @@ this instance
 {\footnotesize\ttfamily template$<$class T $>$ \\
 std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Standardfunktionen aus std\+::vector
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a116b25064a0299e5cd4658fad09a0539}\label{classmml_1_1vector_a116b25064a0299e5cd4658fad09a0539}} 
+
+
+iterator to the beginning of the vector 
+
+\begin{DoxyReturn}{Returns}
+iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_a91e15fae7ebbb5a00391dfc3acb6987b}\label{classmml_1_1vector_a91e15fae7ebbb5a00391dfc3acb6987b}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!count@{count}}
 \index{count@{count}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{count()}{count()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::count (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::count (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 Count how many entries are equal to a value 
 \begin{DoxyParams}{Parameters}
-{\em T} & Value to be checked \\
+{\em value} & Value to be checked \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::size\+\_\+t 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}\label{classmml_1_1vector_a5f13b0c1d8c38fa1641a3af44af9416b}} 
+\mbox{\Hypertarget{classmml_1_1vector_a861d552caf263eb37d7fe9bcd4ca8861}\label{classmml_1_1vector_a861d552caf263eb37d7fe9bcd4ca8861}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!cout@{cout}}
 \index{cout@{cout}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{cout()}{cout()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::cout (\begin{DoxyParamCaption}\item[{bool}]{newline = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::cout (\begin{DoxyParamCaption}\item[{bool}]{newline = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
 
 print elements in the vector 
+
+
 \begin{DoxyParams}{Parameters}
-{\em bool} & Print with line breaks \\
+{\em newline} & Print with line breaks \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}\label{classmml_1_1vector_a6277254d3ae5f6921c1d7d854feac214}} 
+\mbox{\Hypertarget{classmml_1_1vector_a1e7183f3df81ba57b2b161091119d591}\label{classmml_1_1vector_a1e7183f3df81ba57b2b161091119d591}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!del@{del}}
 \index{del@{del}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{del()}{del()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::del (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-Empties the vector \begin{DoxyReturn}{Returns}
+
+
+Empties the vector. 
+
+\begin{DoxyReturn}{Returns}
 std\+::vector$<$\+T$>$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}\label{classmml_1_1vector_a3853ad9b92cb418a26057005f11c1b23}} 
+\mbox{\Hypertarget{classmml_1_1vector_af0fd2f8bb3bc757713694d12ebc919b8}\label{classmml_1_1vector_af0fd2f8bb3bc757713694d12ebc919b8}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!empty@{empty}}
 \index{empty@{empty}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{empty()}{empty()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
-\end{DoxyNote}
+
+
+Checks whether the vector is empty. 
+
+\begin{DoxyReturn}{Returns}
+iteratur 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}\label{classmml_1_1vector_a58a162fc048ef944b8196a4051982ed8}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!end@{end}}
 \index{end@{end}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
@@ -252,6 +255,13 @@ template bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::e
 {\footnotesize\ttfamily template$<$class T $>$ \\
 std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
+
+
+iterator to the end of the vector 
+
+\begin{DoxyReturn}{Returns}
+iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1vector_a9c6ac6de56377585c640f7cf4526b865}\label{classmml_1_1vector_a9c6ac6de56377585c640f7cf4526b865}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!erase@{erase}}
 \index{erase@{erase}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
@@ -273,7 +283,7 @@ None
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}
-{\em out\+\_\+of\+\_\+range} & if position $>$= \mbox{\hyperlink{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}{vector.\+size()}} \\
+{\em out\+\_\+of\+\_\+range} & if position $>$= \mbox{\hyperlink{classmml_1_1vector_a009b3e42dba375229367bf85a5018e36}{vector.\+size()}} \\
 \hline
 \end{DoxyExceptions}
 \mbox{\Hypertarget{classmml_1_1vector_a45f83c9f49ea3cf4b6bd2544bfdd808c}\label{classmml_1_1vector_a45f83c9f49ea3cf4b6bd2544bfdd808c}} 
@@ -299,74 +309,95 @@ None
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}
-{\em out\+\_\+of\+\_\+range} & if start $>$ end $\vert$$\vert$ end $>$ \mbox{\hyperlink{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}{vector.\+size()}} \\
+{\em out\+\_\+of\+\_\+range} & \+: if start $>$ end $\vert$$\vert$ end $>$ \mbox{\hyperlink{classmml_1_1vector_a009b3e42dba375229367bf85a5018e36}{vector.\+size()}} \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}\label{classmml_1_1vector_ac4b25f2693130108499bb71f565cc558}} 
+\mbox{\Hypertarget{classmml_1_1vector_a76e9ae37b4d92521fe84c5dd0878a7a0}\label{classmml_1_1vector_a76e9ae37b4d92521fe84c5dd0878a7a0}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!exist@{exist}}
 \index{exist@{exist}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{exist()}{exist()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::exist (\begin{DoxyParamCaption}\item[{T const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+template$<$typename... values$>$ \\
+bool \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::exist (\begin{DoxyParamCaption}\item[{const values \&...}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-exist
-\end{DoxyNote}
+
+
+Check if one {\itshape or} another string exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Parameters to be checked if they exist \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}\label{classmml_1_1vector_a50fbac82c7e83bc826d02ff2b3c44820}} 
+\mbox{\Hypertarget{classmml_1_1vector_a309bd325454ee39e8e6f71a5a3e52ac3}\label{classmml_1_1vector_a309bd325454ee39e8e6f71a5a3e52ac3}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!find@{find}}
 \index{find@{find}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{find()}{find()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T}]{value,  }\item[{size\+\_\+t}]{start = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Position zurückgeben
-\end{DoxyNote}
+
+
+Return a position of an element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be looked for \\
+\hline
+{\em start} & Defines at what position to start to be looked for \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::size\+\_\+t 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}\label{classmml_1_1vector_a846b3b92f10f17eee061c39ef2b1848f}} 
-\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!get\_data@{get\_data}}
-\index{get\_data@{get\_data}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::get\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath,  }\item[{int}]{skip = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\begin{DoxyNote}{Note}
-get data from file
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}\label{classmml_1_1vector_ae4cae150b7b30e91e3b937d7a529a16f}} 
+\mbox{\Hypertarget{classmml_1_1vector_a15c357eea5a88f6903fbbf2f902449d3}\label{classmml_1_1vector_a15c357eea5a88f6903fbbf2f902449d3}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!insert@{insert}}
 \index{insert@{insert}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{insert()}{insert()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const typename std\+::vector$<$ T $>$\+::iterator}]{position,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::vector$<$T$>$\+::iterator \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const typename std\+::vector$<$ T $>$\+::iterator}]{position,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}\label{classmml_1_1vector_a35466b7dc2f7af8333b354edc7475001}} 
+
+
+Insert a value at a specific position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position where the value is put \\
+\hline
+{\em val} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_ace5e48f1429007d82db0322b4ddc4977}\label{classmml_1_1vector_ace5e48f1429007d82db0322b4ddc4977}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!log@{log}}
 \index{log@{log}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{log()}{log()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1log}{log}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{logpath,  }\item[{bool}]{newline = {\ttfamily false},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{first = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{last = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::\mbox{\hyperlink{classmml_1_1log}{log}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{logpath,  }\item[{bool}]{newline = {\ttfamily false},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{first = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{last = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{separator = {\ttfamily \char`\"{},\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Werte in eine Logdatei schreiben
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Write values into a logfile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logpath} & Path of the logfile \\
+\hline
+{\em newline} & Print a newline \\
+\hline
+{\em first} & Print this in the start of the logfile before any value \\
+\hline
+{\em last} & Print this at the end of the logfile after all vlaues are written \\
+\hline
+{\em separator} & Separation sign after each value if newline = false \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}\label{classmml_1_1vector_ae12feeb04e187d250995d67b327eac9d}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
@@ -374,51 +405,168 @@ Mike
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-Skalarmultiplikation
-\end{DoxyNote}
+
+
+Scalarmultiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be multiplied \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Vektor 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}\label{classmml_1_1vector_a521aa464534c98ecd70315632ad25f25}} 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector empty or type is not a number \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_aa1e76ce928f0025c21b4ca42e227b4cf}\label{classmml_1_1vector_aa1e76ce928f0025c21b4ca42e227b4cf}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scalarmultiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be multiplied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector empty or type is not a number \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_af988a06108c0ed0a54912ef79702c676}\label{classmml_1_1vector_af988a06108c0ed0a54912ef79702c676}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-Zwei Vektoren zeilenweise addieren
-\end{DoxyNote}
+
+
+Add a value to each element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be added \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Vektor 
+Vector with the added value 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}\label{classmml_1_1vector_a372daa94b7f21f06a70a755111114ee6}} 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_a3a388590b5179b598664820f1c431e68}\label{classmml_1_1vector_a3a388590b5179b598664820f1c431e68}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a vector to this vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Vector to be added elementwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting vector 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector sizes are not the same \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_a16d7de3e21e86095a82e23e99e6415b7}\label{classmml_1_1vector_a16d7de3e21e86095a82e23e99e6415b7}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+=@{operator+=}}
 \index{operator+=@{operator+=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}\label{classmml_1_1vector_a52d2bb1a8ce2c1fe10784fe52d22803b}} 
+
+
+Add a value to each element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector is empty \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_ae42b8172bc702bff9d2f3dcc41d21db6}\label{classmml_1_1vector_ae42b8172bc702bff9d2f3dcc41d21db6}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a vector to this vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Vector to be added elementwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of this class 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector sizes are not the same \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_a27bd93034429d512f0414f71e2da0448}\label{classmml_1_1vector_a27bd93034429d512f0414f71e2da0448}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}\label{classmml_1_1vector_a72f4406c5722f9fb621ea2afdd722877}} 
+
+
+Assign value with equal sign. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp} & Vector with values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_ae5d5c7e921bc2c07453a8ef6ff4d9e47}\label{classmml_1_1vector_ae5d5c7e921bc2c07453a8ef6ff4d9e47}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator=@{operator=}}
 \index{operator=@{operator=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1vector}{vector}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 \mbox{\Hypertarget{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}\label{classmml_1_1vector_ade81b1e79cf8cfdf66c28cf9ea3da910}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
@@ -427,120 +575,185 @@ template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $
 {\footnotesize\ttfamily template$<$class T $>$ \\
 T\& \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}\label{classmml_1_1vector_a935789a9cb1c2a8acdeedac8f5179278}} 
+
+
+Returns a value at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value at this index 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em out\+\_\+of\+\_\+range} & \+: if index not in range \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_a94e947265d74fd8b17586bfe6e8f3e65}\label{classmml_1_1vector_a94e947265d74fd8b17586bfe6e8f3e65}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$^\wedge$@{operator$^\wedge$}}
 \index{operator$^\wedge$@{operator$^\wedge$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{const double}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{const T}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-Vektor hoch exponent
-\end{DoxyNote}
+
+
+Vector$^\wedge$() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exponent} & Exponent \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Vektor 
+vector 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}\label{classmml_1_1vector_a9f0bde55f6f6514461e624c6426ef6fc}} 
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if type is not numeric \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_ac971bc51f4e13b7829110ff3abb9b94a}\label{classmml_1_1vector_ac971bc51f4e13b7829110ff3abb9b94a}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$^\wedge$=@{operator$^\wedge$=}}
+\index{operator$^\wedge$=@{operator$^\wedge$=}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$=()}{operator^=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::operator$^\wedge$= (\begin{DoxyParamCaption}\item[{const T}]{exponent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vector$^\wedge$() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exponent} & Exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if type is not numeric \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1vector_a1393d9931fe936f267791067f2bea877}\label{classmml_1_1vector_a1393d9931fe936f267791067f2bea877}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!pop\_back@{pop\_back}}
 \index{pop\_back@{pop\_back}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}\label{classmml_1_1vector_a0f23f42bb84218cdd6ec2cc523933e0e}} 
+
+
+Removes the last entry. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_a27424a774d46cbbf509f47ab8c801de0}\label{classmml_1_1vector_a27424a774d46cbbf509f47ab8c801de0}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!push\_back@{push\_back}}
 \index{push\_back@{push\_back}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}\label{classmml_1_1vector_aff5f8402662b01d3eef81aab88dc112a}} 
+
+
+Adds an element at the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & to e added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmml_1_1vector_a70cdc7cc551a2c5e9acd0c1f18fc6d1b}\label{classmml_1_1vector_a70cdc7cc551a2c5e9acd0c1f18fc6d1b}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!replace@{replace}}
 \index{replace@{replace}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{replace()}{replace()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::replace (\begin{DoxyParamCaption}\item[{T}]{old,  }\item[{T}]{new1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::replace (\begin{DoxyParamCaption}\item[{T}]{Old,  }\item[{T}]{New }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Ersetzen eines Wertes in einem Vektor 
-\end{DoxyNote}
+
+
+Replace specific elements with another element. 
+
 
 \begin{DoxyParams}{Parameters}
-{\em old} & Value to be replaced \\
+{\em Old} & Value to be replaced \\
 \hline
-{\em new1} & New value \\
+{\em New} & New value \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Vektor mit den ersetzten Werten 
+Vector with the replaced values 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}\label{classmml_1_1vector_a901fab5579bf780856051f9493ffbb69}} 
+\mbox{\Hypertarget{classmml_1_1vector_a6e15f0519463ea24dbfeb014f9381656}\label{classmml_1_1vector_a6e15f0519463ea24dbfeb014f9381656}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!set@{set}}
 \index{set@{set}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{set()}{set()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Skalare Addition
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\begin{DoxyNote}{Note}
-vec setzen
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}\label{classmml_1_1vector_a4acab0d5c924664fe2b216b94f06c9b2}} 
+
+
+Replace the vector with a new vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Vec} & Vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmml_1_1vector_a009b3e42dba375229367bf85a5018e36}\label{classmml_1_1vector_a009b3e42dba375229367bf85a5018e36}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!size@{size}}
 \index{size@{size}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{size()}{size()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
-\mbox{\Hypertarget{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}\label{classmml_1_1vector_a09c4bf51180082747d807fd1d8d5ae84}} 
+
+
+Size of the vector. 
+
+\begin{DoxyReturn}{Returns}
+Size of the vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_acfacaf78023f4f300cfad46a666740d2}\label{classmml_1_1vector_acfacaf78023f4f300cfad46a666740d2}} 
+\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sort the vector. 
+
+\begin{DoxyReturn}{Returns}
+Return the sorted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_a258b24c3d22bbc05ac46f41afa723724}\label{classmml_1_1vector_a258b24c3d22bbc05ac46f41afa723724}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!sum@{sum}}
 \index{sum@{sum}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{sum()}{sum()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-template \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+T \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-vec sortieren
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\begin{DoxyNote}{Note}
-Summe des Vektors bestimmen
-\end{DoxyNote}
-\begin{DoxyReturn}{Returns}
-T 
-\end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}\label{classmml_1_1vector_ae2121141f484344e07345eddf7caa77c}} 
-\index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!toT@{toT}}
-\index{toT@{toT}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{toT()}{toT()}}
-{\footnotesize\ttfamily template$<$class T $>$ \\
-template \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::toT (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-String in T umwandeln
-\end{DoxyNote}
+
+Determine the sum of the vector. 
+
 \begin{DoxyReturn}{Returns}
-T 
+Sum of the vector 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\+\_\+error} & \+: if vector is empty or if template is boolean \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}\label{classmml_1_1vector_a4526d4a08cea6b802ee229868250a7b3}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!tovec@{tovec}}
 \index{tovec@{tovec}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
@@ -548,44 +761,58 @@ Mike
 {\footnotesize\ttfamily template$<$class T $>$ \\
 std\+::vector$<$T$>$ \mbox{\hyperlink{classmml_1_1vector}{mml\+::vector}}$<$ T $>$\+::tovec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\begin{DoxyNote}{Note}
-Vektor zurückgeben
-\end{DoxyNote}
+
+
+Return the std\+::vector. 
+
 \begin{DoxyReturn}{Returns}
-Vektor 
+Vector of the standard library 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}\label{classmml_1_1vector_afdee463d65e61d05a5210e324b42e9ce}} 
+\mbox{\Hypertarget{classmml_1_1vector_a7224e4650e76335a445d3577bb24e377}\label{classmml_1_1vector_a7224e4650e76335a445d3577bb24e377}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-\begin{DoxyNote}{Note}
-Vektorinhalt ausgeben
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}\label{classmml_1_1vector_a6684f15487209798bee55f69e848cb87}} 
+
+
+Print the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output where it is written \\
+\hline
+{\em Vec} & Vector which is written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1vector_a612263cfe9350459c56fd68000d2fb06}\label{classmml_1_1vector_a612263cfe9350459c56fd68000d2fb06}} 
 \index{mml::vector$<$ T $>$@{mml::vector$<$ T $>$}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!mml::vector$<$ T $>$@{mml::vector$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{Vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{const \mbox{\hyperlink{classmml_1_1vector}{vector}}$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-\begin{DoxyNote}{Note}
-Wert in Vektor reinschreiben
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Writes a value into the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & where it should be written in \\
+\hline
+{\em v} & what should be written in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output stream 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}

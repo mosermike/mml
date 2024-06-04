@@ -3,7 +3,7 @@
  * : 
  * : @name Thread.hpp
  * :
- * : @note Enthält verschiedene Funktionen für Threads, insbesonder eine Art Semaphore
+ * : @brief Contains the class Thread which can be used for using threads
  * : 
 */
 
@@ -49,46 +49,46 @@ namespace mml {
 			void set_max_i(int max_temp) { this->max_i = max_temp;}
 			
 			/**
-			* @note aktuelles Schreiben aktiv oder nicht aktiv setzen und dessen Abfrage
-			* 
-			* @author Mike
+			* @brief Set this thread to active writing
 			*/
 			void thread_writing_true();
+		
+			/**
+			* @brief Set this thread to not actively writing
+			*/
 			void thread_writing_false();
+
+			/**
+			 * @brief Checks if the thread is writing
+			 * @return true = is writing
+			 */
 			bool is_writing_active();
 			
 			/**
-			* @note Versetzt den aktuellen Thread in den Sleep-Modus
-			* 
-			* @author Mike
+			* @brief Sleep for a while
+			* @param second Sleep for so many seconds
 			*/
 			void thread_sleep(float second);
+
+			/**
+			* @brief Sleep for a while
+			* @param millisecond Sleep for so many miliseconds
+			*/
 			void thread_sleep_millisecond(uint32_t millisecond);
 			
 
 			/**
-			* @note Wartefunktion beim mehrfachen Schreiben
-			* 		Nicht immer gleiche Reihenfolge, wenn a nicht verwendet.
-			* 
-			* @return true, wenn kein Thread mehr schreiben will
-			* @author Mike
+			* @brief Waits if many threads are writing
+			* 		if a not used, not always the same order of writing
+			* @param a wait for so many miliseconds. if a = 0 => random number is created in milliseconds
+			* @return true, when no thread is writing
 			*/ 
 			bool waiting(int a = 0);
-
-			/**
-			* @note Wartefunktion beim mehrfachen Schreiben, nicht immer gleiche Reihenfolge
-			* 
-			* @return true, wenn kein Thread mehr schreiben will
-			* @author Mike
-			*/ 
-			//bool waiting(int a);
 		};
 
 		/**
-		 * @note Aktueller Thread eine bestimmte Zeit lang stoppen 
-		 * 
-		 * @arg Second
-		 * @author Mike
+		 * @brief Stop actual thread for a specific time
+		 * @param s Seconds to wait
 		 */
 		void sleep(float s);
 	}

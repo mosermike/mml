@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="251" column="6" bodyfile="src/shell.cpp" bodystart="78" bodyend="99" declfile="include/mml/shell.hpp" declline="251" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="171" column="6" bodyfile="src/shell.cpp" bodystart="78" bodyend="99" declfile="include/mml/shell.hpp" declline="171" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="258" column="6" bodyfile="src/shell.cpp" bodystart="102" bodyend="108" declfile="include/mml/shell.hpp" declline="258" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="178" column="6" bodyfile="src/shell.cpp" bodystart="102" bodyend="108" declfile="include/mml/shell.hpp" declline="178" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="265" column="6" bodyfile="src/shell.cpp" bodystart="110" bodyend="137" declfile="include/mml/shell.hpp" declline="265" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="185" column="6" bodyfile="src/shell.cpp" bodystart="110" bodyend="137" declfile="include/mml/shell.hpp" declline="185" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a4edbe4309f804bb4d8552b8f5734c9f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="278" column="6" bodyfile="src/shell.cpp" bodystart="57" bodyend="77" declfile="include/mml/shell.hpp" declline="278" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="199" column="6" bodyfile="src/shell.cpp" bodystart="57" bodyend="77" declfile="include/mml/shell.hpp" declline="199" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a6c84d770587829ca7dc7c8147329d139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +153,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="286" column="6" bodyfile="src/shell.cpp" bodystart="26" bodyend="55" declfile="include/mml/shell.hpp" declline="286" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="207" column="6" bodyfile="src/shell.cpp" bodystart="26" bodyend="55" declfile="include/mml/shell.hpp" declline="207" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a00c8e2a2ee520b8270b9f8898906231b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +171,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="293" column="6" bodyfile="src/shell.cpp" bodystart="139" bodyend="141" declfile="include/mml/shell.hpp" declline="293" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="214" column="6" bodyfile="src/shell.cpp" bodystart="139" bodyend="141" declfile="include/mml/shell.hpp" declline="214" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1adbd82f8c931de0e11499c651fcbbce70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -198,7 +198,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="300" column="6" bodyfile="src/shell.cpp" bodystart="143" bodyend="150" declfile="include/mml/shell.hpp" declline="300" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="221" column="6" bodyfile="src/shell.cpp" bodystart="143" bodyend="150" declfile="include/mml/shell.hpp" declline="221" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="318" column="6" bodyfile="src/shell.cpp" bodystart="155" bodyend="160" declfile="include/mml/shell.hpp" declline="318" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="239" column="6" bodyfile="src/shell.cpp" bodystart="155" bodyend="160" declfile="include/mml/shell.hpp" declline="239" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a1a1a82593cac384a3d698003740cd408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -256,7 +256,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="326" column="13" bodyfile="src/shell.cpp" bodystart="192" bodyend="196" declfile="include/mml/shell.hpp" declline="326" declcolumn="13"/>
+        <location file="include/mml/shell.hpp" line="247" column="13" bodyfile="src/shell.cpp" bodystart="192" bodyend="196" declfile="include/mml/shell.hpp" declline="247" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1a1beda25649ea427bb646ea6be704904c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -283,7 +283,7 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="333" column="6" bodyfile="src/shell.cpp" bodystart="163" bodyend="170" declfile="include/mml/shell.hpp" declline="333" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="254" column="6" bodyfile="src/shell.cpp" bodystart="163" bodyend="170" declfile="include/mml/shell.hpp" declline="254" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1_1shell_1ad39babde10f8181169d97a1600e30cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,13 +310,13 @@ Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält ver
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="339" column="6" bodyfile="src/shell.cpp" bodystart="173" bodyend="180" declfile="include/mml/shell.hpp" declline="339" declcolumn="6"/>
+        <location file="include/mml/shell.hpp" line="260" column="6" bodyfile="src/shell.cpp" bodystart="173" bodyend="180" declfile="include/mml/shell.hpp" declline="260" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/functions.hpp" line="22" column="1"/>
+    <location file="include/mml/log.hpp" line="32" column="1"/>
   </compounddef>
 </doxygen>
