@@ -27,8 +27,7 @@ namespace mml{
 
 		public:
 		
-			template <typename... values>
-			arg(int argc1, char **argv1, const values&... value) {
+			arg(int argc1, char **argv1) {
 				argc	=	argc1;
 				argv	=	argv1;
 				
@@ -36,7 +35,6 @@ namespace mml{
 				
 				vec = vec_temp;
 				
-				init(value...); // Separate options
 			}	// Aufruf mml::shell::arg arg(argc,argv);
 			
 			arg(char **argv1, int argc1) {
