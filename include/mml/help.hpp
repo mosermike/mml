@@ -47,7 +47,7 @@ namespace mml {
 		 * @brief Print out a header
 		 * @param command Command of the program
 		 */
-		void header(std::string command) noexcept;
+		void header(std::string command, std::string option="") noexcept;
 		
 	}
 }

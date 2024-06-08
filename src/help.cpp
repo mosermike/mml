@@ -12,13 +12,14 @@
 #include "mml/shell.hpp"
 
 
-void mml::help::header(std::string command) noexcept {
+void mml::help::header(std::string command, std::string option) noexcept {
 	
 	mml::shell::chapter("NAME",true);
 	std::cout << "\t" << command << " - " << command << std::endl;
 	mml::shell::letter("white");
 	mml::shell::chapter("CALL",true);
 	mml::shell::chapter("\t" + command,false);
+	std::cout << option << " [OPTION]" << std::endl;
 	mml::shell::chapter("DESCRIPTION",true);
 }
 

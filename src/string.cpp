@@ -124,16 +124,17 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 	for (auto const& dir_entry : std::filesystem::recursive_directory_iterator{path}) {
 		// Remove leading and ending '"'
 		temp1 = mml::to_string(dir_entry).sub(1,-2);
-
+		
 		// Don't add files recursively
-		if (recursive && temp1.substr(path.size()+2).exist("/"))
+		if (!recursive && temp1.substr(path.size()+2).exist("/"))
 			continue;
 		// Don't add hidden files
-		if (all && (temp1.exist("/.")))
+		if (!all && (temp1.exist("/.")))
 			continue;
 		// Exclude a string
 		if (name_exclude != "" && temp1.exist(name_exclude))
 			continue;
+		
 		// Object is a directory
 		if (mml::Unix::filetype(temp1.str()) == S_DIR) {
 			temp1 += "/";
@@ -144,6 +145,7 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 			}
 					
 		}
+
 		// If directory in path does not contain include => skip everything
 		temp2 = temp1.replace(path.c_str(),"");
 		if (temp2.substr(0,temp2.find('/')).exist(name_include))
