@@ -135,6 +135,14 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 		if (name_exclude != "" && temp1.exist(name_exclude))
 			continue;
 		
+		// Correction for backslashes being read as two backslashes
+		if(temp1.exist("\\")) {
+			for (uint32_t i = 0; i < temp1.size();i++) {
+				if(temp1[i] == '\\' && temp1[i] == '\\')
+					temp1 = temp1.sub(0,i-1) + temp1.substr(i+1);
+			}
+		}
+
 		// Object is a directory
 		if (mml::Unix::filetype(temp1.str()) == S_DIR) {
 			temp1 += "/";

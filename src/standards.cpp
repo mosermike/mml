@@ -38,17 +38,17 @@ bool mml::check_root(std::string programme){
 		
 		// call from another c++ programme
 		if(mml::Unix::get_process_name_by_pid(parent_pid) == "bash"){
-			log.cout("[check_root] " + programme + " failed at " + mml::date("Date+Time") + ".", true);
+			log.cout("[check_root] " + programme + " failed at " + mml::date(-1, "Date+Time") + ".", true);
 			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
 		}
 		
 		// Call from the terminal
 		else {
-			log.cout("[check_root] " + programme  + " failed at " + mml::date("Date+Time") + ".", true);
+			log.cout("[check_root] " + programme  + " failed at " + mml::date(-1, "Date+Time") + ".", true);
 			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
 		}
 	}
-	log.cout("[check_root] " + programme  + " accepted at " + mml::date("Date+Time") + ".", true);
+	log.cout("[check_root] " + programme  + " accepted at " + mml::date(-1, "Date+Time") + ".", true);
 	return false;
 }
 
@@ -85,19 +85,19 @@ uint32_t mml::date(int info, time_t time1) noexcept {
 	}
 }
 
- std::string mml::date(mml::string value, std::string separator1, std::string separator2) noexcept {
-		std::string year = std::to_string(mml::date(_year)); // Get actual year
+ std::string mml::date(time_t time1, mml::string value, std::string separator1, std::string separator2) noexcept {
+		std::string year = std::to_string(mml::date(_year,time1)); // Get actual year
 
 		uint32_t info = _month;
-			std::string month = mml::date(info) > 9		?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));
+			std::string month = mml::date(info,time1) > 9		?	std::to_string(mml::date(info,time1)) : "0" + std::to_string(mml::date(info,time1));
 		info = _day;
-			std::string day = mml::date(info) > 9 		?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));
+			std::string day = mml::date(info,time1) > 9 		?	std::to_string(mml::date(info,time1)) : "0" + std::to_string(mml::date(info,time1));
 		info = _hour;
-			std::string hour = mml::date(info) > 9		?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));
+			std::string hour = mml::date(info,time1) > 9		?	std::to_string(mml::date(info,time1)) : "0" + std::to_string(mml::date(info,time1));
 		info = _min;
-			std::string minute = mml::date(info) > 9	?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));
+			std::string minute = mml::date(info,time1) > 9	?	std::to_string(mml::date(info,time1)) : "0" + std::to_string(mml::date(info,time1));
 		info = _sec;
-			std::string second = mml::date(info) > 9	?	std::to_string(mml::date(info)) : "0" + std::to_string(mml::date(info));	
+			std::string second = mml::date(info,time1) > 9	?	std::to_string(mml::date(info,time1)) : "0" + std::to_string(mml::date(info,time1));	
 
 
 		switch(mml::const_string_hash(value.c_str())) {

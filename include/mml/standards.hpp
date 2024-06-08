@@ -524,7 +524,8 @@ namespace mml {
 	uint32_t date(int info, time_t time1 = -1) noexcept;
 
 	/**
-	 * @brief Returns the actual date and/or time as a std::string
+	 * @brief Returns the date and/or time as a std::string
+	 * @param time1 Time for which the information is printed. -1 => Actual time now
 	 * @param value Determines what information is printed.
 	 *              - "Date" : DD.MM.YYYY (based on separator1)
 	 *              - "Time" : HH:MM:SS  (based on separator1)
@@ -536,7 +537,7 @@ namespace mml {
 	 * @return std::string
 	 * @author Mike
 	*/
-	std::string date(mml::string value, std::string separator1 = ":", std::string separator2 = ".") noexcept;
+	std::string date(time_t time1 = -1, mml::string value = "Date+Time", std::string separator1 = ":", std::string separator2 = ".") noexcept;
 
 	/**
 	 * @brief Checks if a character is a number

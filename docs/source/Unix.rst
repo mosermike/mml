@@ -6,3 +6,4 @@ Here, functions for the operating system `Unix` and the class `Unix` are shown a
 
 .. doxygennamespace:: mml::Unix
   :members:
+

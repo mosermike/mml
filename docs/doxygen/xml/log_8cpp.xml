@@ -272,7 +272,7 @@
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;|<sp/>Reset<sp/>logfile...&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;output.close();</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;output.open(this-&gt;logpath.c_str());</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1help_1a914f05aa5cabab6837d3228d1da1a3c1" kindref="member">header</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" kindref="member">header</ref>();</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(verbose)</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="143"><highlight class="normal">}</highlight></codeline>

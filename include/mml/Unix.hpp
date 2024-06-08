@@ -24,12 +24,12 @@
 #include "mml/vector.hpp"
 
 namespace mml{
-	namespace shell{
-		class arg;
-	}
-	namespace functions{
-		typedef mml::shell::arg vector;	
-	}
+	//namespace shell{
+	//	class arg;
+	//}
+	//namespace functions{
+	//	typedef mml::shell::arg vector;	
+	//}
 	namespace Unix{
 		
 		
@@ -59,7 +59,7 @@ namespace mml{
 				  mml::string			ip_w			= getip("wlan0");
 				  mml::string			ip_e			= getip("eth0");
 #else
-#error "Architektur nicht definiert"
+#error "Architectur not defined"
 #endif
 				  std::vector<mml::string> groups			= getgrlist();
 				  

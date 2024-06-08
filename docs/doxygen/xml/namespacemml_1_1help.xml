@@ -65,16 +65,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="44" column="6" bodyfile="src/help.cpp" bodystart="25" bodyend="30" declfile="include/mml/help.hpp" declline="44" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="44" column="6" bodyfile="src/help.cpp" bodystart="26" bodyend="31" declfile="include/mml/help.hpp" declline="44" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemml_1_1help_1a914f05aa5cabab6837d3228d1da1a3c1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void mml::help::header</definition>
-        <argsstring>(std::string command) noexcept</argsstring>
+        <argsstring>(std::string command, std::string option=&quot;&quot;) noexcept</argsstring>
         <name>header</name>
         <param>
           <type>std::string</type>
           <declname>command</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>option</declname>
+          <defval>&quot;&quot;</defval>
         </param>
         <briefdescription>
 <para>Print out a header. </para>
@@ -93,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="50" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="23" declfile="include/mml/help.hpp" declline="50" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="50" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="24" declfile="include/mml/help.hpp" declline="50" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

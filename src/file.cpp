@@ -29,6 +29,37 @@ mml::string mml_actual_file = "";
 bool mml_progressing = false;
 
 
+void mml::file::add_twofiles( std::string filepath_input1 , std::string filepath_input2 , std::string filepath_output){
+	
+	std::string value;
+	
+	//Öffne die Dateien:
+	std::ifstream input1(filepath_input1);
+	std::ifstream input2(filepath_input2);
+	std::ofstream output(filepath_output);
+	
+	// Checks whether both files are opened
+    if ( !input1 || !input2 ){
+        throw std::runtime_error("[add_twofiles] file not found");
+    }
+	
+	// Read the first data
+	while (! input1.eof()) {
+        std::getline(input1, value );	// Get content of the file
+		output << value;				// Write the line into the output
+		output << "\n";					// Write new line
+    }
+    
+	// Read the second data
+	while (! input2.eof()) {
+        std::getline(input2, value );	// Get content of the file
+		output << value;				// Write the line into the output
+		output << "\n";					// Write new line
+    }
+    
+    return;
+}
+
 bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::size_t blockSize, bool progress) {
 	if(!mml::Unix::exist(src))
 		throw std::runtime_error("[byteCopy] Source file" + src +  "does not exist!");
@@ -61,11 +92,11 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 				double actual_size = static_cast<double>(dst.st_size);
 
 				if(gigabit)
-					printf("\rPercent: %6.2f    Time: %7.3fs    Speed: %7.3f MBit/s    Size: %6.3f GBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1G);
+					printf("\rPercent: %6.2f%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f GBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1G);
 				else if (megabit)
-					printf("\rPercent: %6.2f    Time: %7.3fs    Speed: %7.3f MBit/s    Size: %6.3f MBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1M);
+					printf("\rPercent: %6.2f%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f MBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1M);
 				else
-					printf("\rProzent: %6.2f    Time: %7.3fs    Speed: %7.3f MBit/s    Size: %6.3f KBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1K);
+					printf("\rProzent: %6.2f%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f KBit", 100 * (actual_size / fileSize), time.getS(), actual_size /_1M/time.getS(), (double) fileSize /_1K);
 				std::cout.flush();
 			}
 		}
@@ -95,11 +126,11 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 	if(progress) {
 		
 		if(gigabit)
-			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed %7.3f MBit/s  Size: %7.3f GBit", time.stop()/1000, (double) (fileSize/_1M)/time.stop()*1000 ,(double) fileSize/_1G);
+			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f GBit", time.stop()/1000, (double) (fileSize/_1M)/time.stop()*1000 ,(double) fileSize/_1G);
 		else if(megabit)
-			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed %7.3f MBit/s  Size: %7.3f MBit", time.stop()/1000, (double) (fileSize/_1M)/time.stop()*1000,  (double) fileSize/_1M);
+			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f MBit", time.stop()/1000, (double) (fileSize/_1M)/time.stop()*1000,  (double) fileSize/_1M);
 		else
-			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed %7.3f MBit/s  Size: %7.3f KBit", time.stop()/1000, (double) (fileSize/_1M /time.stop()),  (double) fileSize/_1K);
+			printf("\rPercent: 100.00%%   Time: %7.3fs  Speed: %7.3f MBit/s  Size: %6.2f KBit", time.stop()/1000, (double) (fileSize/_1M /time.stop()),  (double) fileSize/_1K);
 		std::cout.flush();
 	}
         
@@ -186,97 +217,6 @@ std::size_t mml::file::num_lines(std::string path) {
 	return num;
 }
 
-//Zwei Dateien zu einer Datei machen:
-void mml::file::add_twofiles( std::string filepath_input1 , std::string filepath_input2 , std::string filepath_output){
-	
-	std::string value;
-	
-	//Öffne die Dateien:
-	std::ifstream input1(filepath_input1);
-	std::ifstream input2(filepath_input2);
-	std::ofstream output(filepath_output);
-	
-	// Checks whether both files are opened
-    if ( !input1 || !input2 ){
-        throw std::runtime_error("[add_twofiles] file not found");
-    }
-	
-	// Read the first data
-	while (! input1.eof()) {
-        std::getline(input1, value );	// Get content of the file
-		output << value;				// Write the line into the output
-		output << "\n";					// Write new line
-    }
-    
-	// Read the second data
-	while (! input2.eof()) {
-        std::getline(input2, value );	// Get content of the file
-		output << value;				// Write the line into the output
-		output << "\n";					// Write new line
-    }
-    
-    return;
-}
-
-/*
-std::size_t mml::file::copyFile(mml::shell::arg args,std::string src, std::string dst) {
-	// Copy a file and determine the blocksize of how to be copied
-	//
-	bool progress = false;
-	std::string fullsize = "";
-	if(args.exist("-m","--human"))
-		fullsize = mml::file::humanread(mml::file::size(src));
-	else
-		fullsize = std::to_string(mml::file::size(src));
-
-	if(args.exist("-p","--progress"))
-		progress = true;
-
-	if (args.exist("bs=1KB"))
-		return mml::file::byteCopy(src,dst,_1KB,progress);
-	
-	else if (args.exist("bs=1K"))
-		return mml::file::byteCopy(src,dst,_1K,progress);
-	
-	else if (args.exist("bs=1MB"))
-		return mml::file::byteCopy(src,dst,_1MB,progress);
-	
-	else if (args.exist("bs=1M"))
-		return mml::file::byteCopy(src,dst,_1M,progress);
-	
-	else if (args.exist("bs=10MB"))
-		return mml::file::byteCopy(src,dst,_10MB,progress);
-	
-	else if (args.exist("bs=10M"))
-		return mml::file::byteCopy(src,dst,_10M,progress);
-	
-	else if (args.exist("bs=100MB"))
-		return mml::file::byteCopy(src,dst,_100MB,progress);
-	
-	else if (args.exist("bs=100M"))
-		return mml::file::byteCopy(src,dst,_100M,progress);
-	
-	else if (args.exist("bs=1G") )
-		return mml::file::byteCopy(src,dst,_1G,progress);
-
-	else if (args.exist("bs=10G") )
-#ifdef __ENVIRONMENT64__
-		return mml::file::byteCopy(src,dst,_10G,progress);
-#else
-		return mml::file::byteCopy(src,dst,_1G,progress);
-#endif
-	else {
-
-		std::size_t pos = args.beginArg("bs=");
-		uint32_t blocksize = _100MB;
-
-		if(pos < std::string::npos)	//bs mit angegeben
-			blocksize = (uint32_t) std::atoi(((args[pos]).replace("bs=","")).c_str());
-
-		return mml::file::byteCopy(src,dst,blocksize,progress);
-	}
-}
-*/
 
 int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::string name_ex, size_t blocksize, bool verbose, bool verbose_debug, bool all, bool recursive, bool force, bool progress, bool falsewrite){
 
@@ -291,6 +231,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	mml::string				temp_string			= "";	// Temporary string
 	uint32_t				num_of_files		= 0; 	// how many files are to be copied
 	uint32_t				copied_files		= 0; 	// how many files are already copied
+	uint32_t				copied_files_print	= 0; 	// file number for the print
 	if(verbose_debug)
 		std::cout << "[copy] Start of function 'copy'!" << std::endl;
 	/*
@@ -458,16 +399,16 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	
 	// Save directories separately and additionally to save time when creating directories.
 	std::vector<std::string> directories;
-	std::vector<std::string> structure = src.ls(name_in, name_ex, directories, recursive,all); // list dir. tree
+	std::vector<std::string> structure = src.ls(name_in, name_ex, directories, recursive, all); // list dir. tree
 	
 	num_of_files = structure.size() - directories.size(); // Number of files to be copied
 	
 	if(verbose_debug)
 		std::cout << "[copy] Create the destination ..." << std::endl;
 
-	// Für Wartungsarbeiten ausgabe der ls Funktion:
-	//for(uint32_t i = 0; i < input.size(); i++){
-		//std::cout << input[i] << std::endl;		
+	// For debugging of the ls function
+	//for(uint32_t i = 0; i < structure.size(); i++){
+	//	std::cout << structure[i] << std::endl;		
 	//}
 	
 		
@@ -567,12 +508,12 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 		 * *	Check things if file exists		*
 		 * **************************************
 		 */
-		copied_files++;
 		if (mml::Unix::exist(goal_dst.str())) {
 			// Größe unterschiedlich von beiden Dateien nochmals nachfragen
 			if((mml::file::size(goal_src.str()) != mml::file::size(goal_dst.str()) || mml::file::time_mod(goal_src.str()) < mml::file::time_mod(goal_dst.str())) && !overwrite && mml::Unix::exist(goal_dst.str()) && !falsewrite)
 				ask_anyway = true;
 			
+			copied_files_print++; // One file will be copied
 			// Nicht überschreiben, show three points while skipping
 			if(falsewrite && mml::Unix::exist(goal_dst.str()) && !ask_anyway) {
 				status++;
@@ -600,22 +541,32 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			// Check file size and ask if it is different
 			fileSize = mml::file::size(goal_src.str());
 			
+			
 			if(!falsewrite) {
 				if((mml::Unix::exist(goal_dst.str()) && !force && !overwrite) || (ask_anyway && !overwrite_anyway)){
+					// Different Size					
+					if(mml::file::size(goal_src.str()) != mml::file::size(goal_dst.str())) {
+						if(fileSize > _1GB)
+							std::cout << "| Size of source file is " << ((double) mml::file::size(goal_src.str()))/_1GB << " GB and size of destination file is " << ((double) mml::file::size(goal_dst.str()))/_1GB << " GB!";
+						else if(fileSize > _1MB)
+							std::cout << "| Size of source file is " << ((double) mml::file::size(goal_src.str()))/_1MB << " MB and size of destination file is " << ((double) mml::file::size(goal_dst.str()))/_1MB << " MB!";
+						else
+							std::cout << "| Size of source file is " << ((double) mml::file::size(goal_src.str()))/_1KB << " KB and size of destination file is " << ((double) mml::file::size(goal_dst.str()))/_1KB << " KB!";
+						if(mml::file::size(goal_src.str()) != mml::file::size(goal_dst.str()))
+							std::cout << " Size different!" << std::endl;
+						else
+							std::cout << std::endl;
+					}
+
+					// Different modifed size
+					if(mml::file::time_mod(goal_src.str()) != mml::file::time_mod(goal_dst.str())) {
+						std::cout << "| Modified time of source file is " << mml::date(mml::file::time_mod(goal_src.str())) << " and of destination file is " << mml::date(mml::file::time_mod(goal_dst.str())) << "!";
+						if(mml::file::time_mod(goal_src.str()) < mml::file::time_mod(goal_dst.str()))
+							std::cout << " Destination is more recent!" << std::endl;
+						else
+							std::cout << std::endl;
+					}
 					
-					// Größenangabe der beiden Dateienf
-					if(fileSize > _1GB)
-						std::cout << "| Size of source file is " << mml::file::size(goal_src.str())/_1GB << " GB and size of destination file is " << mml::file::size(goal_dst.str())/_1GB << " GB!";
-					else if(fileSize > _1MB)
-						std::cout << "| Size of source file is " << mml::file::size(goal_src.str())/_1MB << " MB and size of destination file is " << mml::file::size(goal_dst.str())/_1MB << " MB!";
-					else
-						std::cout << "| Size of source file is " << mml::file::size(goal_src.str())/_1KB << " KB and size of destination file is " << mml::file::size(goal_dst.str())/_1KB << " KB!";
-					if(mml::file::size(goal_src.str()) != mml::file::size(goal_dst.str()))
-						std::cout << " Size different!";
-					if(mml::file::time_mod(goal_src.str()) < mml::file::time_mod(goal_dst.str()))
-						std::cout << " Destination is more recent!";
-					
-					std::cout << std::endl;
 					
 					std::cout << "| " << goal_dst << " exists. Overwrite? [y|n|A|N] ";
 					input = std::cin.get();
@@ -641,9 +592,10 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 				continue;
 		}
 		
+		copied_files++; // One file will be copied
 		// Copy stuff
 		if(verbose)	// verbose Ausgabe
-			std::cout << "[" << copied_files << "/" << num_of_files << "] " << goal_src << " -> " << goal_dst;
+			std::cout << "[" << copied_files_print << "/" << num_of_files << "] " << goal_src << " -> " << goal_dst;
 		
 		if(progress)
 			std::cout << std::endl;

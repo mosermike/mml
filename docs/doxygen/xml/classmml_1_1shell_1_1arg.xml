@@ -35,17 +35,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a3b497e58786fb81131c24152c1f6f197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>typename...</type>
-            <declname>values</declname>
-            <defname>values</defname>
-          </param>
-        </templateparamlist>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a747b9774f1126f21cf5c306a1723d006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>mml::shell::arg::arg</definition>
-        <argsstring>(int argc1, char **argv1, const values &amp;... value)</argsstring>
+        <argsstring>(int argc1, char **argv1)</argsstring>
         <name>arg</name>
         <param>
           <type>int</type>
@@ -55,17 +48,13 @@
           <type>char **</type>
           <declname>argv1</declname>
         </param>
-        <param>
-          <type>const values &amp;...</type>
-          <declname>value</declname>
-        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="31" column="1" bodyfile="include/mml/shell.hpp" bodystart="31" bodyend="40"/>
+        <location file="include/mml/shell.hpp" line="30" column="1" bodyfile="include/mml/shell.hpp" bodystart="30" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -86,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="42" column="1" bodyfile="include/mml/shell.hpp" bodystart="42" bodyend="50"/>
+        <location file="include/mml/shell.hpp" line="40" column="1" bodyfile="include/mml/shell.hpp" bodystart="40" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -103,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="53" column="1" bodyfile="include/mml/shell.hpp" bodystart="53" bodyend="55"/>
+        <location file="include/mml/shell.hpp" line="51" column="1" bodyfile="include/mml/shell.hpp" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -124,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="56" column="1" bodyfile="include/mml/shell.hpp" bodystart="56" bodyend="59"/>
+        <location file="include/mml/shell.hpp" line="54" column="1" bodyfile="include/mml/shell.hpp" bodystart="54" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a442600800a4d78ca1fad60923d64ac75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -149,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="60" column="1" bodyfile="include/mml/shell.hpp" bodystart="60" bodyend="64"/>
+        <location file="include/mml/shell.hpp" line="58" column="1" bodyfile="include/mml/shell.hpp" bodystart="58" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -166,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="65" column="1" bodyfile="include/mml/shell.hpp" bodystart="65" bodyend="68"/>
+        <location file="include/mml/shell.hpp" line="63" column="1" bodyfile="include/mml/shell.hpp" bodystart="63" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -179,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="70" column="1" bodyfile="include/mml/shell.hpp" bodystart="70" bodyend="70"/>
+        <location file="include/mml/shell.hpp" line="68" column="1" bodyfile="include/mml/shell.hpp" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -196,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="72" column="1" bodyfile="include/mml/shell.hpp" bodystart="72" bodyend="72"/>
+        <location file="include/mml/shell.hpp" line="70" column="1" bodyfile="include/mml/shell.hpp" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
@@ -213,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="75" column="5" bodyfile="include/mml/shell.hpp" bodystart="75" bodyend="78"/>
+        <location file="include/mml/shell.hpp" line="73" column="5" bodyfile="include/mml/shell.hpp" bodystart="73" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1af940491905058f07818cb7a613b1c917" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
@@ -230,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="80" column="5" bodyfile="include/mml/shell.hpp" bodystart="80" bodyend="83"/>
+        <location file="include/mml/shell.hpp" line="78" column="5" bodyfile="include/mml/shell.hpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a6803b86ef3d63eb9c8f65d48586f148c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -283,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="93" column="13" bodyfile="include/mml/shell.hpp" bodystart="93" bodyend="97"/>
+        <location file="include/mml/shell.hpp" line="91" column="13" bodyfile="include/mml/shell.hpp" bodystart="91" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a0d3883a51dd4012f770892aa41d857d5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -315,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="100" column="13" bodyfile="include/mml/shell.hpp" bodystart="100" bodyend="100"/>
+        <location file="include/mml/shell.hpp" line="98" column="13" bodyfile="include/mml/shell.hpp" bodystart="98" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a9acf696f93656013a6515b3c1ce2a4fa" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -345,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="107" column="13" bodyfile="src/arg.cpp" bodystart="16" bodyend="22"/>
+        <location file="include/mml/shell.hpp" line="105" column="13" bodyfile="src/arg.cpp" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a02e44039b017a4f781be19a8014e037e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -380,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="117" column="6" bodyfile="include/mml/shell.hpp" bodystart="117" bodyend="120"/>
+        <location file="include/mml/shell.hpp" line="115" column="6" bodyfile="include/mml/shell.hpp" bodystart="115" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a641b5dd2acbb18b032d7666649448fe2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -417,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="128" column="6" bodyfile="include/mml/shell.hpp" bodystart="128" bodyend="130"/>
+        <location file="include/mml/shell.hpp" line="126" column="6" bodyfile="include/mml/shell.hpp" bodystart="126" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a2fd200cb84b0a25149e81b7c9a5e5ddd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -447,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="137" column="13" bodyfile="src/arg.cpp" bodystart="62" bodyend="67"/>
+        <location file="include/mml/shell.hpp" line="135" column="13" bodyfile="src/arg.cpp" bodystart="62" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a2955766a51d32939dd723a905bfda337" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -491,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="145" column="13" bodyfile="src/arg.cpp" bodystart="69" bodyend="72"/>
+        <location file="include/mml/shell.hpp" line="143" column="13" bodyfile="src/arg.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a919f80e695b5fd3367835108e61fe2a0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -538,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="153" column="24" bodyfile="include/mml/shell.hpp" bodystart="153" bodyend="159"/>
+        <location file="include/mml/shell.hpp" line="151" column="24" bodyfile="include/mml/shell.hpp" bodystart="151" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -551,7 +540,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="161" column="1" bodyfile="include/mml/shell.hpp" bodystart="161" bodyend="161"/>
+        <location file="include/mml/shell.hpp" line="159" column="1" bodyfile="include/mml/shell.hpp" bodystart="159" bodyend="159"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -570,7 +559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="110" column="6" bodyfile="src/arg.cpp" bodystart="24" bodyend="57"/>
+        <location file="include/mml/shell.hpp" line="108" column="6" bodyfile="src/arg.cpp" bodystart="24" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -601,10 +590,10 @@
         <link refid="classmml_1_1vector"/>
       </node>
     </collaborationgraph>
-    <location file="include/mml/shell.hpp" line="22" column="1" bodyfile="include/mml/shell.hpp" bodystart="22" bodyend="163"/>
+    <location file="include/mml/shell.hpp" line="22" column="1" bodyfile="include/mml/shell.hpp" bodystart="22" bodyend="161"/>
     <listofallmembers>
       <member refid="classmml_1_1shell_1_1arg_1aee2720830d4177be9650e1da9ab528f8" prot="private" virt="non-virtual"><scope>mml::shell::arg</scope><name>_init</name></member>
-      <member refid="classmml_1_1shell_1_1arg_1a3b497e58786fb81131c24152c1f6f197" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a747b9774f1126f21cf5c306a1723d006" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
       <member refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
       <member refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>

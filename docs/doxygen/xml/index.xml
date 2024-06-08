@@ -3,7 +3,7 @@
   <compound refid="classmml_1_1shell_1_1arg" kind="class"><name>mml::shell::arg</name>
     <member refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kind="variable"><name>argc</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kind="variable"><name>argv</name></member>
-    <member refid="classmml_1_1shell_1_1arg_1a3b497e58786fb81131c24152c1f6f197" kind="function"><name>arg</name></member>
+    <member refid="classmml_1_1shell_1_1arg_1a747b9774f1126f21cf5c306a1723d006" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" kind="function"><name>arg</name></member>
     <member refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" kind="function"><name>arg</name></member>
@@ -247,7 +247,7 @@
   </compound>
   <compound refid="namespacemml_1_1help" kind="namespace"><name>mml::help</name>
     <member refid="namespacemml_1_1help_1a4f18d3adc05374c5e8502536a47a6410" kind="function"><name>foot</name></member>
-    <member refid="namespacemml_1_1help_1a914f05aa5cabab6837d3228d1da1a3c1" kind="function"><name>header</name></member>
+    <member refid="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" kind="function"><name>header</name></member>
   </compound>
   <compound refid="namespacemml_1_1shell" kind="namespace"><name>mml::shell</name>
     <member refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kind="function"><name>error</name></member>

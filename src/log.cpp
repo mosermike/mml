@@ -23,7 +23,7 @@ void mml::log::backup(bool verbose, bool Reset) noexcept {
 		std::cout << "| Backup logfile...";
 	
 	// Write into log that a backup is executed
-	this->output << "[check_root] backup is executed at " + mml::date("Date+Time") + "." << std::endl;
+	this->output << "[check_root] backup is executed at " + mml::date(-1, "Date+Time") + "." << std::endl;
 
 	// Execute backup
 	for(int32_t i = 4; i >= 0; i--) {
@@ -100,7 +100,7 @@ mml::string mml::log::lastline() noexcept {
 	
 void mml::log::header() noexcept {
 	output << "| Log-File " << logpath << std::endl;
-	output << "| Timestamp: " << date("Date+Time") << std::endl;
+	output << "| Timestamp: " << date(-1,"Date+Time") << std::endl;
 }
 
 void mml::log::open(mml::string path) noexcept {
