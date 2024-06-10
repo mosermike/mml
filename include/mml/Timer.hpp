@@ -46,12 +46,12 @@ namespace mml {
 		 * @note stop the time measurement
 		 * @author Mike
 		 */
-		void break_start();
+		void break_start () noexcept;
 		/**
 		 * @brief continue the time measurement
 		 * @author Mike
 		 */
-		void break_stop();
+		void break_stop() noexcept;
 		
 		
 		/**
@@ -61,7 +61,7 @@ namespace mml {
 		 * @param newline Print with a newline
 		 * @author Mike
 		 */
-		void cout(std::string text = "", bool format_print = false, bool newline = true);
+		void cout(std::string text = "", bool format_print = false, bool newline = true) noexcept;
 		/**
 		 * @brief Start time measurement
 		 * @author Lucas

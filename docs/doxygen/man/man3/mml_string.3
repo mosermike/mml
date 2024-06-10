@@ -1,4 +1,4 @@
-.TH "mml::string" 3 "Sat Jun 8 2024" "mml" \" -*- nroff -*-
+.TH "mml::string" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -8,16 +8,6 @@ mml::string
 .PP
 .PP
 \fC#include <standards\&.hpp>\fP
-.SS "Public Types"
-
-.in +1c
-.ti -1c
-.RI "using \fBiterator\fP = std::vector< char >::\fBiterator\fP"
-.br
-.ti -1c
-.RI "using \fBconst_iterator\fP = std::vector< char >::\fBconst_iterator\fP"
-.br
-.in -1c
 .SS "Public Member Functions"
 
 .in +1c
@@ -76,6 +66,7 @@ mml::string
 .ti -1c
 .RI "std::string::const_iterator \fBbegin\fP () const noexcept"
 .br
+.RI "Returns an iterator that points to the beginning of the string\&. "
 .ti -1c
 .RI "const char * \fBc_str\fP () noexcept"
 .br
@@ -115,6 +106,7 @@ mml::string
 .ti -1c
 .RI "std::string::const_iterator \fBend\fP () const noexcept"
 .br
+.RI "Returns an iterator that points to the end of the string\&. "
 .ti -1c
 .RI "template<typename\&.\&.\&. Args> bool \fBexist\fP (const Args &\&.\&.\&. args) noexcept"
 .br
@@ -230,12 +222,6 @@ mml::string
 .SH "Detailed Description"
 .PP 
 Class string which adds additional functions to std::string 
-.SH "Member Typedef Documentation"
-.PP 
-.SS "using \fBmml::string::const_iterator\fP =  std::vector<char>::\fBconst_iterator\fP"
-
-.SS "using \fBmml::string::iterator\fP =  std::vector<char>::\fBiterator\fP"
-
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "template<typename templ > mml::string::string (templ str)\fC [inline]\fP, \fC [noexcept]\fP"
@@ -293,6 +279,15 @@ int
 .PP
 
 .SS "std::string::const_iterator mml::string::begin () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Returns an iterator that points to the beginning of the string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string::const_iterator 
+.RE
+.PP
 
 .SS "std::string::iterator mml::string::begin ()\fC [inline]\fP, \fC [noexcept]\fP"
 
@@ -421,6 +416,15 @@ bool
 .PP
 
 .SS "std::string::const_iterator mml::string::end () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Returns an iterator that points to the end of the string\&. 
+.PP
+\fBReturns\fP
+.RS 4
+std::string::const_iterator 
+.RE
+.PP
 
 .SS "std::string::iterator mml::string::end ()\fC [inline]\fP, \fC [noexcept]\fP"
 

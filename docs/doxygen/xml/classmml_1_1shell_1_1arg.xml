@@ -246,10 +246,18 @@
           <declname>value</declname>
         </param>
         <briefdescription>
-<para>Initialise with the values from the terminal. </para>
+<para>Initialise with the values from the terminal and separated flags given with one minus sign. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>argv1</parametername>
 </parameternamelist>
@@ -259,10 +267,10 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>argc</parametername>
+<parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Number of arguments </para>
+<para>Values which are not separated </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -272,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="91" column="13" bodyfile="include/mml/shell.hpp" bodystart="91" bodyend="95"/>
+        <location file="include/mml/shell.hpp" line="92" column="13" bodyfile="include/mml/shell.hpp" bodystart="92" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a0d3883a51dd4012f770892aa41d857d5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -304,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="98" column="13" bodyfile="include/mml/shell.hpp" bodystart="98" bodyend="98"/>
+        <location file="include/mml/shell.hpp" line="99" column="13" bodyfile="include/mml/shell.hpp" bodystart="99" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a9acf696f93656013a6515b3c1ce2a4fa" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -334,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="105" column="13" bodyfile="src/arg.cpp" bodystart="16" bodyend="22"/>
+        <location file="include/mml/shell.hpp" line="106" column="13" bodyfile="src/arg.cpp" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a02e44039b017a4f781be19a8014e037e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -369,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="115" column="6" bodyfile="include/mml/shell.hpp" bodystart="115" bodyend="118"/>
+        <location file="include/mml/shell.hpp" line="116" column="6" bodyfile="include/mml/shell.hpp" bodystart="116" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a641b5dd2acbb18b032d7666649448fe2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -406,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="126" column="6" bodyfile="include/mml/shell.hpp" bodystart="126" bodyend="128"/>
+        <location file="include/mml/shell.hpp" line="127" column="6" bodyfile="include/mml/shell.hpp" bodystart="127" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a2fd200cb84b0a25149e81b7c9a5e5ddd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -436,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="135" column="13" bodyfile="src/arg.cpp" bodystart="62" bodyend="67"/>
+        <location file="include/mml/shell.hpp" line="136" column="13" bodyfile="src/arg.cpp" bodystart="62" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a2955766a51d32939dd723a905bfda337" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -480,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="143" column="13" bodyfile="src/arg.cpp" bodystart="69" bodyend="72"/>
+        <location file="include/mml/shell.hpp" line="144" column="13" bodyfile="src/arg.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a919f80e695b5fd3367835108e61fe2a0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -527,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="151" column="24" bodyfile="include/mml/shell.hpp" bodystart="151" bodyend="157"/>
+        <location file="include/mml/shell.hpp" line="152" column="24" bodyfile="include/mml/shell.hpp" bodystart="152" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -540,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="159" column="1" bodyfile="include/mml/shell.hpp" bodystart="159" bodyend="159"/>
+        <location file="include/mml/shell.hpp" line="160" column="1" bodyfile="include/mml/shell.hpp" bodystart="160" bodyend="160"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -559,7 +567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/shell.hpp" line="108" column="6" bodyfile="src/arg.cpp" bodystart="24" bodyend="57"/>
+        <location file="include/mml/shell.hpp" line="109" column="6" bodyfile="src/arg.cpp" bodystart="24" bodyend="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -590,7 +598,7 @@
         <link refid="classmml_1_1vector"/>
       </node>
     </collaborationgraph>
-    <location file="include/mml/shell.hpp" line="22" column="1" bodyfile="include/mml/shell.hpp" bodystart="22" bodyend="161"/>
+    <location file="include/mml/shell.hpp" line="22" column="1" bodyfile="include/mml/shell.hpp" bodystart="22" bodyend="162"/>
     <listofallmembers>
       <member refid="classmml_1_1shell_1_1arg_1aee2720830d4177be9650e1da9ab528f8" prot="private" virt="non-virtual"><scope>mml::shell::arg</scope><name>_init</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a747b9774f1126f21cf5c306a1723d006" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>

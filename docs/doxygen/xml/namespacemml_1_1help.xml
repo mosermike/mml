@@ -93,12 +93,20 @@
 <para>Command of the program </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Necessary options </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/help.hpp" line="50" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="24" declfile="include/mml/help.hpp" declline="50" declcolumn="6"/>
+        <location file="include/mml/help.hpp" line="51" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="24" declfile="include/mml/help.hpp" declline="51" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

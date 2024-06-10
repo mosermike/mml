@@ -46,7 +46,7 @@ Collaboration diagram for mml\+::shell\+::arg\+:\nopagebreak
 \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_af940491905058f07818cb7a613b1c917}{operator=}} (const std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \&vec\+\_\+temp)
 \item 
 {\footnotesize template$<$typename... values$>$ }\\std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_a6803b86ef3d63eb9c8f65d48586f148c}{operator()}} (int argc1, char $\ast$$\ast$argv1, const values \&...value) noexcept
-\begin{DoxyCompactList}\small\item\em Initialise with the values from the terminal. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initialise with the values from the terminal and separated flags given with one minus sign. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... values$>$ }\\std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_a0d3883a51dd4012f770892aa41d857d5}{operator()}} (char $\ast$$\ast$argv1, int argc1, const values \&...value) noexcept
 \item 
 std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a9acf696f93656013a6515b3c1ce2a4fa}{begin}} (const std\+::string \&str) noexcept
@@ -199,13 +199,15 @@ std\+::vector$<$\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}$>$\& mml\+:
 
 
 
-Initialise with the values from the terminal. 
+Initialise with the values from the terminal and separated flags given with one minus sign. 
 
 
 \begin{DoxyParams}{Parameters}
+{\em argc1} & Number of arguments \\
+\hline
 {\em argv1} & Character vector with the arguments from the shell \\
 \hline
-{\em argc} & Number of arguments \\
+{\em value} & Values which are not separated \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

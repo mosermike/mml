@@ -24,9 +24,8 @@
 #include "mml.hpp"
 #include "mml/file.hpp"
 
-mml::thread::Thread mml_thread;
 mml::string mml_actual_file = "";
-bool mml_progressing = false;
+bool mml_progressing = false; // For stopping the progress print out in copying a file
 
 
 void mml::file::add_twofiles( std::string filepath_input1 , std::string filepath_input2 , std::string filepath_output){

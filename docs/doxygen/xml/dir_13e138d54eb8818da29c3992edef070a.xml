@@ -4,6 +4,8 @@
     <compoundname>test</compoundname>
     <innerfile refid="args_8cpp">args.cpp</innerfile>
     <innerfile refid="test_2standards_8cpp">standards.cpp</innerfile>
+    <innerfile refid="test_8cpp">test.cpp</innerfile>
+    <innerfile refid="test_2thread_8cpp">thread.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

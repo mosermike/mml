@@ -55,13 +55,13 @@ bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{check\+\_\
 \begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{namespacemml_a4e23041702a789444e71665de8e19b91}{date}} (int info, time\+\_\+t time1=-\/1) noexcept
 \begin{DoxyCompactList}\small\item\em Returns the wished info from the time (like date etc.) Options are\+: \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}{date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
-\begin{DoxyCompactList}\small\item\em Returns the actual date and/or time as a std\+::string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_ae53fc572ec720a1c9aebc3ba5458ff5d}{date}} (time\+\_\+t time1=-\/1, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Date+Time\char`\"{}, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the date and/or time as a std\+::string. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_ac687254476eb5589ff145f7ccb8f203b}{is\+\_\+num}} (char c) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if a character is a number. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_ad1fcba2487a959000bac06da539b792c}{range}} (std\+::size\+\_\+t number) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if a number has reached the maximum value (std\+::string\+::npos) \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}{range}} (std\+::size\+\_\+t, std\+::size\+\_\+t) noexcept
+bool \mbox{\hyperlink{namespacemml_a8648c76abb82d5eb1745f91e4201b247}{range}} (std\+::size\+\_\+t number1, std\+::size\+\_\+t number2) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if one of two numbers has reached the maximum value. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}{round}} (double number, uint16\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{digits}}) noexcept
 \begin{DoxyCompactList}\small\item\em round a number \end{DoxyCompactList}\item 
@@ -234,18 +234,20 @@ unsigned integer
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}\label{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}} 
+\mbox{\Hypertarget{namespacemml_ae53fc572ec720a1c9aebc3ba5458ff5d}\label{namespacemml_ae53fc572ec720a1c9aebc3ba5458ff5d}} 
 \index{mml@{mml}!date@{date}}
 \index{date@{date}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{date()}{date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value,  }\item[{std\+::string}]{separator1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{separator2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::string mml\+::date (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{time1 = {\ttfamily -\/1},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{value = {\ttfamily \char`\"{}Date+Time\char`\"{}},  }\item[{std\+::string}]{separator1 = {\ttfamily \char`\"{}\+:\char`\"{}},  }\item[{std\+::string}]{separator2 = {\ttfamily \char`\"{}.\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
-Returns the actual date and/or time as a std\+::string. 
+Returns the date and/or time as a std\+::string. 
 
 
 \begin{DoxyParams}{Parameters}
+{\em time1} & Time for which the information is printed. -\/1 =$>$ Actual time now \\
+\hline
 {\em value} & Determines what information is printed.
 \begin{DoxyItemize}
 \item \char`\"{}\+Date\char`\"{} \+: DD.\+MM.\+YYYY (based on separator1)
@@ -394,7 +396,7 @@ Checks if a number has reached the maximum value (std\+::string\+::npos)
 \begin{DoxyReturn}{Returns}
 true \+: smaller than the maximum value 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}\label{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}} 
+\mbox{\Hypertarget{namespacemml_a8648c76abb82d5eb1745f91e4201b247}\label{namespacemml_a8648c76abb82d5eb1745f91e4201b247}} 
 \index{mml@{mml}!range@{range}}
 \index{range@{range}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{range()}{range()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}

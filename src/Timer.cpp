@@ -13,17 +13,17 @@ std::chrono::high_resolution_clock::time_point mml::Timer::_now() const noexcept
     return std::chrono::high_resolution_clock::now();
 }
 
-void mml::Timer::break_start() {
+void mml::Timer::break_start() noexcept {
 			ticksEnd = _now();
 			break_time_mus = std::chrono::duration_cast<std::chrono::microseconds>(ticksEnd - ticksStart).count() - break_time_mus;
 }
 
-void mml::Timer::break_stop() {
+void mml::Timer::break_stop() noexcept {
 			ticksEnd = _now();
 			break_time_mus = std::chrono::duration_cast<std::chrono::microseconds>(ticksEnd - ticksStart).count() - break_time_mus;
 }
 
-void mml::Timer::cout(std::string text, bool format_print, bool newline) {
+void mml::Timer::cout(std::string text, bool format_print, bool newline) noexcept {
 	ticksEnd = _now();
 	std::cout << text;
 	

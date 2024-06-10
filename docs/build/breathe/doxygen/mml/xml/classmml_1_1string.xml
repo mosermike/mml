@@ -1,0 +1,1795 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1string" kind="class" language="C++" prot="public">
+    <compoundname>mml::string</compoundname>
+    <includes refid="standards_8hpp" local="no">standards.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classmml_1_1string_1a3da80d33f5aa244511801c6eba736c91" prot="private" static="no">
+        <type>std::vector&lt; char &gt;::iterator</type>
+        <definition>using mml::string::iterator =  std::vector&lt;char&gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="43" column="1" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmml_1_1string_1a35e3e6685c5364e0ddfd68f1a7d60bdf" prot="private" static="no">
+        <type>std::vector&lt; char &gt;::const_iterator</type>
+        <definition>using mml::string::const_iterator =  std::vector&lt;char&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="44" column="5" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mml::string::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="30" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mml::string::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="31" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmml_1_1string_1acf44ff6b3b903b878c28bfd8ea83f079" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::to_mml</definition>
+        <argsstring>(templ val) noexcept</argsstring>
+        <name>to_mml</name>
+        <param>
+          <type>templ</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="34" column="25" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a7ed87d2beab5be00ca14dcd8bebcf134" prot="private" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::_exist</definition>
+        <argsstring>(std::string name) noexcept</argsstring>
+        <name>_exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Check if a string exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="248" column="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1string_1a027b118294677870eccf9ff59d4b1e96" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>mml::string::string</definition>
+        <argsstring>(templ str) noexcept</argsstring>
+        <name>string</name>
+        <param>
+          <type>templ</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with a value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be converted to a string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="50" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1aa83d5b5500921e4d782ef18e16ac83dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::string::string</definition>
+        <argsstring>(size_t n, char c)</argsstring>
+        <name>string</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Constructor creating n times the char c. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how often the character c should appear </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character which appears n times </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="62" column="1" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::string::string</definition>
+        <argsstring>()</argsstring>
+        <name>string</name>
+        <briefdescription>
+<para>Constructor without a value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="67" column="1" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a44ceac8e8ff4252b607c882cb2fafb51" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &amp;</type>
+        <definition>mml::string&amp; mml::string::operator=</definition>
+        <argsstring>(templ str) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>templ</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Assign the value of the template type with the &apos;=&apos; sign. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Class instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="74" column="25" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac4a64b7794a0078b7beb3c3a8d395fe8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool mml::string::operator==</definition>
+        <argsstring>(templ Test) noexcept</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+<para>Operator equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="111" column="17" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab7ed3001a890ac8da6e8302981661a0a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool mml::string::operator!=</definition>
+        <argsstring>(templ Test) noexcept</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+<para>Operator unequal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="118" column="17" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1af7ac5b518d5f3f1a56718577bfb0bd97" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::operator+</definition>
+        <argsstring>(templ Test) noexcept</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+<para>Operator add somehting at the end of this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="126" column="24" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a02cafc3fa2871839d9e234651a989c4d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::operator+=</definition>
+        <argsstring>(templ add) noexcept</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>templ</type>
+          <declname>add</declname>
+        </param>
+        <briefdescription>
+<para>Operator add a char vector to this string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>add</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="134" column="24" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a465850faf0d88bc48ec7270fb976898e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char &amp;</type>
+        <definition>char&amp; mml::string::operator[]</definition>
+        <argsstring>(int index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Return a specific char from the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the character to be retured </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>logic_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if out of range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="142" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1afe04ceb90ea7ed8033810bdce5d18e3a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string&amp; mml::string::operator()</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+<para>Returns the value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Value of the instance as a std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="148" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac9de49b90b0bdfc2a06bef54870f450e" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::string::atof</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>atof</name>
+        <briefdescription>
+<para>Converts this string into a double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="154" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac0006bb0f5c473159ba07ac516a1f0f7" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::string::atoi</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>atoi</name>
+        <briefdescription>
+<para>Convert this string into an integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="160" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a66057297d6504b42f1c397b15c377359" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string::iterator</type>
+        <definition>std::string::iterator mml::string::begin</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Returns an iterator that points to the beginning of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string::iterator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="168" column="23" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="168" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab05ba61105f8c99256c2828593a87528" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string::const_iterator</type>
+        <definition>std::string::const_iterator mml::string::begin</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Returns an iterator that points to the beginning of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string::const_iterator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="174" column="32" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="174" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a6867d70b0c9e5b541a3a89b810b50c89" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mml::string::c_str</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>c_str</name>
+        <briefdescription>
+<para>Returns the string as a character pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>char* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="180" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a948f7256bc8c59fc12e7a1fcb2d761a1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::clear</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clears the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="186" column="6" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="186" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1acf3840270f4531fb625fcf7593c8835f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t mml::string::count</definition>
+        <argsstring>(mml::string name) noexcept</argsstring>
+        <name>count</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Count how often a string appears. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String which is counted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="193" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ad6fc608ad98d065da4f93d8f5fabc9cc" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::cout</definition>
+        <argsstring>(bool newline=true, std::string text=&quot;&quot;) noexcept</argsstring>
+        <name>cout</name>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Print out the value of this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print newline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional text. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="201" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_letter</definition>
+        <argsstring>(bool save=false) noexcept</argsstring>
+        <name>del_letter</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Delete letters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>save</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="208" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_number</definition>
+        <argsstring>(bool save=false) noexcept</argsstring>
+        <name>del_number</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Delete numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>save</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="215" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_space</definition>
+        <argsstring>(bool save=false) noexcept</argsstring>
+        <name>del_space</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Remove everything after the first space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>save</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="222" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae3340aec48652e49410441d77649846e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::empty</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>Checks if the string is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="228" column="8" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="228" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a80c23eafaa8bd703214a915eadb08892" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string::iterator</type>
+        <definition>std::string::iterator mml::string::end</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Returns an iterator that points to the end of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string::iterator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="234" column="27" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="234" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a81b4a8f4b92871877fd9fbe01e3e169f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string::const_iterator</type>
+        <definition>std::string::const_iterator mml::string::end</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Returns an iterator that points to the end of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string::const_iterator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="240" column="33" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="240" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool mml::string::exist</definition>
+        <argsstring>(const Args &amp;... args) noexcept</argsstring>
+        <name>exist</name>
+        <param>
+          <type>const Args &amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Check if one <emphasis>or</emphasis> another string exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="256" column="17" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="256" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find</definition>
+        <argsstring>(char letter, std::size_t old=0) noexcept</argsstring>
+        <name>find</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>old</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Position of the first appearance of a character after a start position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>old</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the char. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="266" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="266" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1aecf3c5f531a87495b56805100e0db095" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find</definition>
+        <argsstring>(mml::string name, std::size_t old=0) noexcept</argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>old</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Position of the first appearance of a string after a start position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>old</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the char. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="273" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="273" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab8fb7c879803123ace2fb3fdc89204b2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find_back</definition>
+        <argsstring>(mml::string name, std::size_t pos=0, std::size_t low=0) noexcept</argsstring>
+        <name>find_back</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>low</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Check if a string exists but starting from the right side. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to look for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the string. 0 means that it is not used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower limit to which point is searched for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="282" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::getline</definition>
+        <argsstring>(std::ifstream &amp;input) noexcept</argsstring>
+        <name>getline</name>
+        <param>
+          <type>std::ifstream &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Reads a line from an input file stream and assigns it to the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="289" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a83806c5e9d92585f57f9ef2dbaf67e07" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::getline</definition>
+        <argsstring>(std::string input, std::size_t line=0) noexcept</argsstring>
+        <name>getline</name>
+        <param>
+          <type>std::string</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>line</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Reads a line from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::tring </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="298" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae7d9615789f946626b4aa04159854187" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::getValue</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+<para>Get the value of this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="304" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t mml::string::hash</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>hash</name>
+        <briefdescription>
+<para>Creates a hash value of this instance. This hash value can then be used for example in an switch ... case with strings by using hash values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="310" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::log</definition>
+        <argsstring>(std::string logpath)</argsstring>
+        <name>log</name>
+        <param>
+          <type>std::string</type>
+          <declname>logpath</declname>
+        </param>
+        <briefdescription>
+<para>Writes the value of this instance into a log file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logpath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if permission to create log file is denied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="318" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a4860b64f242e6602b3be8b8ee2e71b02" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::lower</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>lower</name>
+        <briefdescription>
+<para>Transforms all letters into low case letters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="324" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac6496cb1267d45c470f940050237ebed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; mml::string::ls</definition>
+        <argsstring>(std::string name_include, std::string name_exclude, std::vector&lt; std::string &gt; &amp;directories, bool recursive=false, bool all=false)</argsstring>
+        <name>ls</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_include</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_exclude</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>directories</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>List all files and directories in a path. Directories end with &apos;/&apos; in the entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name_include</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only list files or directories which include this string in the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name_exclude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exclude files or directories with this string in the name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>directories</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a vector where the directories are added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Check directory recursively </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also list hidden files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::string&gt; </para>
+</simplesect>
+<simplesect kind="note"><para>If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if the string does not exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="337" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1adc7baa917ff99c67a9338c85aabbf928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; mml::string::ls</definition>
+        <argsstring>(std::string name_include=&quot;&quot;, std::string name_exclude=&quot;&quot;, bool recursive=false, bool all=false)</argsstring>
+        <name>ls</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_include</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_exclude</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>List all files and directories in a path. Directories end with &apos;/&apos; in the entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name_include</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only list files or directories which include this string in the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name_exclude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exclude files or directories with this string in the name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Check directory recursively </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>all</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also list hidden files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::string&gt; </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if the string does not exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="349" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::mkdir_p</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>mkdir_p</name>
+        <briefdescription>
+<para>Create directory with creating parent directories. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="355" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae7bee7b5a1a67a3069abf52a234583cb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::remove</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>remove</name>
+        <briefdescription>
+<para>Remove the file with the value of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="361" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::replace</definition>
+        <argsstring>(T str_old, T str_new, std::size_t pos=0)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>T</type>
+          <declname>str_old</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>str_new</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Replace sth in the string with sth else. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str_old</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace this value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str_new</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replaced with this value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start from this position to replace </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if str_old is empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="371" column="25" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="371" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a872ada9f67c793066ce58181119ec73b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::rfind</definition>
+        <argsstring>(char letter) noexcept</argsstring>
+        <name>rfind</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+<para>Get position of last occurance of a character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>letter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be found </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="395" column="13" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="395" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::size</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Compute size of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="402" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::substr</definition>
+        <argsstring>(std::size_t pos1, std::size_t length1) noexcept</argsstring>
+        <name>substr</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos1</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>length1</declname>
+        </param>
+        <briefdescription>
+<para>Create substring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="410" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a365c211d42efb38ad424f6c3bc6fa6f3" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::substr</definition>
+        <argsstring>(std::size_t pos1) noexcept</argsstring>
+        <name>substr</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos1</declname>
+        </param>
+        <briefdescription>
+<para>Create a substring starting from this position to the end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position to the end </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="417" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::sub</definition>
+        <argsstring>(std::size_t beg, std::size_t end) noexcept</argsstring>
+        <name>sub</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Create a substring starting and ending of specific positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>beg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start of the new string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of the new string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="425" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae36494e952a47b87efce6d67a44de3cb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::string::stoi</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>stoi</name>
+        <briefdescription>
+<para>Transform this instance to an integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="431" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::str</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>str</name>
+        <briefdescription>
+<para>Return the value of this instance as a std::string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="437" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::writeline</definition>
+        <argsstring>(std::ofstream &amp;output) noexcept</argsstring>
+        <name>writeline</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Write this instance into the end of a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write to this output file stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="444" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae6bd14b8261e69dc0e61b698ae2dffaa" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::writeline</definition>
+        <argsstring>(std::string output) noexcept</argsstring>
+        <name>writeline</name>
+        <param>
+          <type>std::string</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Write this instance into the end of a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="451" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::string::~string</definition>
+        <argsstring>()</argsstring>
+        <name>~string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="453" column="1" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="453" bodyend="453"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmml_1_1string_1a745716a55996ec76c24b86ae15b93b8e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const string &amp;String) noexcept</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmml_1_1string" kindref="compound">string</ref> &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+<para>Output the value of the string via a stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="90" column="8" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmml_1_1string_1ae2969aae0d5dae67e02f7e8f82d6c342" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, string &amp;String) noexcept</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">string</ref> &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+<para>Input the value of the string via a stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>istream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="101" column="21" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class string which adds additional functions to std::string </para>
+    </detaileddescription>
+    <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="27" column="1" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="27" bodyend="454"/>
+    <listofallmembers>
+      <member refid="classmml_1_1string_1a7ed87d2beab5be00ca14dcd8bebcf134" prot="private" virt="non-virtual"><scope>mml::string</scope><name>_exist</name></member>
+      <member refid="classmml_1_1string_1ac9de49b90b0bdfc2a06bef54870f450e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>atof</name></member>
+      <member refid="classmml_1_1string_1ac0006bb0f5c473159ba07ac516a1f0f7" prot="public" virt="non-virtual"><scope>mml::string</scope><name>atoi</name></member>
+      <member refid="classmml_1_1string_1a66057297d6504b42f1c397b15c377359" prot="public" virt="non-virtual"><scope>mml::string</scope><name>begin</name></member>
+      <member refid="classmml_1_1string_1ab05ba61105f8c99256c2828593a87528" prot="public" virt="non-virtual"><scope>mml::string</scope><name>begin</name></member>
+      <member refid="classmml_1_1string_1a6867d70b0c9e5b541a3a89b810b50c89" prot="public" virt="non-virtual"><scope>mml::string</scope><name>c_str</name></member>
+      <member refid="classmml_1_1string_1a948f7256bc8c59fc12e7a1fcb2d761a1" prot="public" virt="non-virtual"><scope>mml::string</scope><name>clear</name></member>
+      <member refid="classmml_1_1string_1a35e3e6685c5364e0ddfd68f1a7d60bdf" prot="private" virt="non-virtual"><scope>mml::string</scope><name>const_iterator</name></member>
+      <member refid="classmml_1_1string_1acf3840270f4531fb625fcf7593c8835f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>count</name></member>
+      <member refid="classmml_1_1string_1ad6fc608ad98d065da4f93d8f5fabc9cc" prot="public" virt="non-virtual"><scope>mml::string</scope><name>cout</name></member>
+      <member refid="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_letter</name></member>
+      <member refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_number</name></member>
+      <member refid="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_space</name></member>
+      <member refid="classmml_1_1string_1ae3340aec48652e49410441d77649846e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>empty</name></member>
+      <member refid="classmml_1_1string_1a80c23eafaa8bd703214a915eadb08892" prot="public" virt="non-virtual"><scope>mml::string</scope><name>end</name></member>
+      <member refid="classmml_1_1string_1a81b4a8f4b92871877fd9fbe01e3e169f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>end</name></member>
+      <member refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>exist</name></member>
+      <member refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find</name></member>
+      <member refid="classmml_1_1string_1aecf3c5f531a87495b56805100e0db095" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find</name></member>
+      <member refid="classmml_1_1string_1ab8fb7c879803123ace2fb3fdc89204b2" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find_back</name></member>
+      <member refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getline</name></member>
+      <member refid="classmml_1_1string_1a83806c5e9d92585f57f9ef2dbaf67e07" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getline</name></member>
+      <member refid="classmml_1_1string_1ae7d9615789f946626b4aa04159854187" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getValue</name></member>
+      <member refid="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" prot="public" virt="non-virtual"><scope>mml::string</scope><name>hash</name></member>
+      <member refid="classmml_1_1string_1a3da80d33f5aa244511801c6eba736c91" prot="private" virt="non-virtual"><scope>mml::string</scope><name>iterator</name></member>
+      <member refid="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" prot="public" virt="non-virtual"><scope>mml::string</scope><name>log</name></member>
+      <member refid="classmml_1_1string_1a4860b64f242e6602b3be8b8ee2e71b02" prot="public" virt="non-virtual"><scope>mml::string</scope><name>lower</name></member>
+      <member refid="classmml_1_1string_1ac6496cb1267d45c470f940050237ebed" prot="public" virt="non-virtual"><scope>mml::string</scope><name>ls</name></member>
+      <member refid="classmml_1_1string_1adc7baa917ff99c67a9338c85aabbf928" prot="public" virt="non-virtual"><scope>mml::string</scope><name>ls</name></member>
+      <member refid="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" prot="public" virt="non-virtual"><scope>mml::string</scope><name>mkdir_p</name></member>
+      <member refid="classmml_1_1string_1ab7ed3001a890ac8da6e8302981661a0a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator!=</name></member>
+      <member refid="classmml_1_1string_1afe04ceb90ea7ed8033810bdce5d18e3a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator()</name></member>
+      <member refid="classmml_1_1string_1af7ac5b518d5f3f1a56718577bfb0bd97" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+</name></member>
+      <member refid="classmml_1_1string_1a02cafc3fa2871839d9e234651a989c4d" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+=</name></member>
+      <member refid="classmml_1_1string_1a745716a55996ec76c24b86ae15b93b8e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1string_1a44ceac8e8ff4252b607c882cb2fafb51" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator=</name></member>
+      <member refid="classmml_1_1string_1ac4a64b7794a0078b7beb3c3a8d395fe8" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator==</name></member>
+      <member refid="classmml_1_1string_1ae2969aae0d5dae67e02f7e8f82d6c342" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classmml_1_1string_1a465850faf0d88bc48ec7270fb976898e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator[]</name></member>
+      <member refid="classmml_1_1string_1ae7bee7b5a1a67a3069abf52a234583cb" prot="public" virt="non-virtual"><scope>mml::string</scope><name>remove</name></member>
+      <member refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" prot="public" virt="non-virtual"><scope>mml::string</scope><name>replace</name></member>
+      <member refid="classmml_1_1string_1a872ada9f67c793066ce58181119ec73b" prot="public" virt="non-virtual"><scope>mml::string</scope><name>rfind</name></member>
+      <member refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" prot="public" virt="non-virtual"><scope>mml::string</scope><name>size</name></member>
+      <member refid="classmml_1_1string_1ae36494e952a47b87efce6d67a44de3cb" prot="public" virt="non-virtual"><scope>mml::string</scope><name>stoi</name></member>
+      <member refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" prot="public" virt="non-virtual"><scope>mml::string</scope><name>str</name></member>
+      <member refid="classmml_1_1string_1a027b118294677870eccf9ff59d4b1e96" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
+      <member refid="classmml_1_1string_1aa83d5b5500921e4d782ef18e16ac83dc" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
+      <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
+      <member refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" prot="public" virt="non-virtual"><scope>mml::string</scope><name>sub</name></member>
+      <member refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
+      <member refid="classmml_1_1string_1a365c211d42efb38ad424f6c3bc6fa6f3" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
+      <member refid="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" prot="private" virt="non-virtual"><scope>mml::string</scope><name>temp</name></member>
+      <member refid="classmml_1_1string_1acf44ff6b3b903b878c28bfd8ea83f079" prot="private" virt="non-virtual"><scope>mml::string</scope><name>to_mml</name></member>
+      <member refid="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" prot="private" virt="non-virtual"><scope>mml::string</scope><name>value</name></member>
+      <member refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" prot="public" virt="non-virtual"><scope>mml::string</scope><name>writeline</name></member>
+      <member refid="classmml_1_1string_1ae6bd14b8261e69dc0e61b698ae2dffaa" prot="public" virt="non-virtual"><scope>mml::string</scope><name>writeline</name></member>
+      <member refid="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" prot="public" virt="non-virtual"><scope>mml::string</scope><name>~string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

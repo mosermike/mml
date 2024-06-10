@@ -8,27 +8,13 @@
 */
 #include <iostream>
 #include "mml/thread.hpp"
-#include "mml.hpp"
-
-
-void mml::thread::Thread::thread_writing_true() {
-	this->thread_writing_active = true;
-}
-
-void mml::thread::Thread::thread_writing_false() {
-	this->thread_writing_active = false;
-}
-
-bool mml::thread::Thread::is_writing_active() { 
-	return this->thread_writing_active;
-}
+#include "mml.hpp"	
 	
-	
-void mml::thread::Thread::thread_sleep(float second) {
+/*void mml::thread::Threads::thread_sleep(float second) {
 		std::this_thread::sleep_for(std::chrono::milliseconds((int) second * 1000));
 }
 
-void mml::thread::Thread::thread_sleep_millisecond(uint32_t millisecond) {
+void mml::thread::Threads::thread_sleep_millisecond(uint32_t millisecond) {
 	std::this_thread::sleep_for(std::chrono::milliseconds(millisecond));
 }
 	
@@ -51,7 +37,7 @@ bool mml::thread::Thread::waiting(int a) {
 	}
 	return true;
 }
-
+*/
 /*bool waiting(int a) {
 	
 	while(this->is_writing_active()) {this->thread_sleep(0.1);}
@@ -66,6 +52,4 @@ bool mml::thread::Thread::waiting(int a) {
 }*/
 
 // sleep function
-void mml::thread::sleep(float s) {
-	std::this_thread::sleep_for(std::chrono::milliseconds((int)(s * 1000)));
-}
+

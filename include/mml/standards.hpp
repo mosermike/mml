@@ -2,7 +2,7 @@
  * @author Mike Moser
  * 
  * @file standards.hpp 
- * @note Contains several standard functions
+ * @details Contains several standard functions and the class string
  * 
 */
 
@@ -39,7 +39,9 @@ namespace mml {
 			temp.value = stream.str();
 			return temp;
 		}
-
+		// Define iterator types
+		using iterator = std::vector<char>::iterator;
+    	using const_iterator = std::vector<char>::const_iterator;
 	public:
 		/**
 		 * @brief Constructor with a value
@@ -157,15 +159,18 @@ namespace mml {
 		 */
 		int atoi() noexcept;
 
-		// Define iterator types
-    using iterator = std::vector<char>::iterator;
-    using const_iterator = std::vector<char>::const_iterator;
+		
 
 		/**
 		 * @brief Returns an iterator that points to the beginning of the string
 		 * @return std::string::iterator
 		*/
 		std::string::iterator begin() noexcept { return value.begin(); }
+
+		/**
+		 * @brief Returns an iterator that points to the beginning of the string
+		 * @return std::string::const_iterator
+		*/
    		std::string::const_iterator begin() const noexcept { return value.begin(); }
 
 		/**
@@ -227,6 +232,11 @@ namespace mml {
 		 * @return std::string::iterator
 		*/
     	std::string::iterator end()  noexcept { return value.end(); }
+
+		/**
+		 * @brief Returns an iterator that points to the end of the string
+		 * @return std::string::const_iterator
+		*/
     	std::string::const_iterator end() const  noexcept { return value.end(); }
 
 	private:
@@ -558,7 +568,7 @@ namespace mml {
 	 * @param number2 Number to be checked
 	 * @return true : at least one number is smaller than the max. value
 	 */
-	bool range(std::size_t, std::size_t) noexcept;
+	bool range(std::size_t number1, std::size_t number2) noexcept;
 	
 	/**
 	 * @brief round a number

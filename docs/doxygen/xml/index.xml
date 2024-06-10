@@ -102,21 +102,21 @@
     <member refid="classmml_1_1string_1a745716a55996ec76c24b86ae15b93b8e" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classmml_1_1string_1ae2969aae0d5dae67e02f7e8f82d6c342" kind="friend"><name>operator&gt;&gt;</name></member>
   </compound>
-  <compound refid="classmml_1_1thread_1_1Thread" kind="class"><name>mml::thread::Thread</name>
-    <member refid="classmml_1_1thread_1_1Thread_1a91bae489f2ee7d28a1324c67547884a4" kind="variable"><name>thread_writing_active</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a657e848c50b525367ce820ece964e80f" kind="variable"><name>i</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a3ea4fcd4d546fcbfc2b2fbd6ce75c33f" kind="variable"><name>max_i</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a8d08a3614525c022f8067a181c4e3b89" kind="function"><name>Thread</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1ab6188b06bb0e650f6e9a307c58182e82" kind="function"><name>Thread</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1aaa5137ada2f6563d759ae1067d3e89db" kind="function"><name>Thread</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a41f19eb3e364ab6da47b9f24fcf8d402" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a390497ea41f30dd2f48d433e275f4be0" kind="function"><name>set_max_i</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1aea68ae5d90affb2ec9bd0148e508d2e5" kind="function"><name>thread_writing_true</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a54d5be439315782c43ecb4f6e78e99e5" kind="function"><name>thread_writing_false</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a2a309c3e1f84b51ae205beec2c22bf3d" kind="function"><name>is_writing_active</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1aa1f1dbc2ea0f6bf44347990ed5e044b1" kind="function"><name>thread_sleep</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1a471f18a979691ba155a9cc8e84917acd" kind="function"><name>thread_sleep_millisecond</name></member>
-    <member refid="classmml_1_1thread_1_1Thread_1af0f8af249ce24749198b7e990a78abc0" kind="function"><name>waiting</name></member>
+  <compound refid="classmml_1_1thread_1_1Threads" kind="class"><name>mml::thread::Threads</name>
+    <member refid="classmml_1_1thread_1_1Threads_1ad4ced761a7a3483f630f27c9bb6b52dd" kind="variable"><name>threads</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1af79252a112a75f28ca34d28a8e569760" kind="variable"><name>futures</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a9e37650a0ec27751a55137801f0736e9" kind="variable"><name>mtx</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a22bc4fc933c6376e38bb57159d03bf71" kind="variable"><name>size</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1abfbf4c61f0f0dee0a5e397e87d1b796b" kind="function"><name>Threads</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a3e88e7f2b8a451e91ca561b92ce2feb1" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a73748ee939990829c8a6fcd29ecca82c" kind="function"><name>~Threads</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a162a1bd5841d4f2310d8ba474a14d029" kind="function"><name>start</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a4449909d0fde1723ab3aea63516656ea" kind="function"><name>start</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a051998a4103c4c83d0a7a79aa616b41f" kind="function"><name>sleep</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1af8cba3532c1ff2d7c19685a93e4e8524" kind="function"><name>getResults</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a6bd14235eb4f54301a8df885c3f90b46" kind="function"><name>join</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1a75965dea579aafe9bca1c2e908efbe78" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classmml_1_1thread_1_1Threads_1abd0b51b14bbeb03b4d80648c8a19dc0a" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="structmml_1_1Timer_1_1time" kind="struct"><name>mml::Timer::time</name>
     <member refid="structmml_1_1Timer_1_1time_1a7c172c1fcfbe0cec0b61779a7b043939" kind="variable"><name>hour</name></member>
@@ -134,9 +134,9 @@
     <member refid="classmml_1_1Timer_1a8388437a554236e800ef35d37ceba950" kind="function"><name>Timer</name></member>
     <member refid="classmml_1_1Timer_1abe0acc0023a0116c764232929c0adcb2" kind="function"><name>Timer</name></member>
     <member refid="classmml_1_1Timer_1ad28f8000cda033d3eb7dadab5554a9b5" kind="function"><name>~Timer</name></member>
-    <member refid="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" kind="function"><name>break_start</name></member>
-    <member refid="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" kind="function"><name>break_stop</name></member>
-    <member refid="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" kind="function"><name>cout</name></member>
+    <member refid="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" kind="function"><name>break_start</name></member>
+    <member refid="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" kind="function"><name>break_stop</name></member>
+    <member refid="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8" kind="function"><name>cout</name></member>
     <member refid="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b" kind="function"><name>start</name></member>
     <member refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kind="function"><name>stop</name></member>
     <member refid="classmml_1_1Timer_1acbc5feb01146cf9067c08c52991300d4" kind="function"><name>getUS</name></member>
@@ -204,14 +204,15 @@
     <member refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
     <member refid="namespaceconf_1a7f1b143ff25817758abd21a7db110510" kind="variable"><name>html_theme</name></member>
     <member refid="namespaceconf_1af4fb5d8851ccaade135c2668dd3ced41" kind="variable"><name>html_static_path</name></member>
+    <member refid="namespaceconf_1a55b6f943346f1b21f833b276f8375160" kind="variable"><name>breathe_projects_source</name></member>
   </compound>
   <compound refid="namespacemml" kind="namespace"><name>mml</name>
     <member refid="namespacemml_1af4da79098c1caf9501e3f4ad9313a573" kind="function"><name>check_root</name></member>
     <member refid="namespacemml_1a4e23041702a789444e71665de8e19b91" kind="function"><name>date</name></member>
-    <member refid="namespacemml_1a7ea9b81bab64fa6148ccd5252a5281b6" kind="function"><name>date</name></member>
+    <member refid="namespacemml_1ae53fc572ec720a1c9aebc3ba5458ff5d" kind="function"><name>date</name></member>
     <member refid="namespacemml_1ac687254476eb5589ff145f7ccb8f203b" kind="function"><name>is_num</name></member>
     <member refid="namespacemml_1ad1fcba2487a959000bac06da539b792c" kind="function"><name>range</name></member>
-    <member refid="namespacemml_1a27d9d9cbd2f2498ec71acbe2db69b68a" kind="function"><name>range</name></member>
+    <member refid="namespacemml_1a8648c76abb82d5eb1745f91e4201b247" kind="function"><name>range</name></member>
     <member refid="namespacemml_1a5aa66f758c7e5b3bde73a72428c60db7" kind="function"><name>round</name></member>
     <member refid="namespacemml_1a09b5d2051c67d0ee351b09f87c30126d" kind="function"><name>declare_month</name></member>
     <member refid="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" kind="function"><name>get_random</name></member>
@@ -264,7 +265,7 @@
     <member refid="namespacemml_1_1shell_1ad39babde10f8181169d97a1600e30cb8" kind="function"><name>warn_opt</name></member>
   </compound>
   <compound refid="namespacemml_1_1thread" kind="namespace"><name>mml::thread</name>
-    <member refid="namespacemml_1_1thread_1a579ddecc00f3ee6fbdd8fe06fd030e95" kind="function"><name>sleep</name></member>
+    <member refid="namespacemml_1_1thread_1a3e2a5898babfb719ccf10277fad3e290" kind="function"><name>sleep</name></member>
   </compound>
   <compound refid="namespacemml_1_1Unix" kind="namespace"><name>mml::Unix</name>
     <member refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kind="function"><name>exist</name></member>
@@ -338,7 +339,6 @@
   <compound refid="arg_8cpp" kind="file"><name>arg.cpp</name>
   </compound>
   <compound refid="file_8cpp" kind="file"><name>file.cpp</name>
-    <member refid="file_8cpp_1aaa42715afd2d14de06bc8e9996b26f36" kind="variable"><name>mml_thread</name></member>
     <member refid="file_8cpp_1a758b36574da5ff53ba636af4440c4a13" kind="variable"><name>mml_actual_file</name></member>
     <member refid="file_8cpp_1a74ac812c35d79087d51dabd11e12be40" kind="variable"><name>mml_progressing</name></member>
   </compound>
@@ -356,7 +356,13 @@
   </compound>
   <compound refid="string_8cpp" kind="file"><name>string.cpp</name>
   </compound>
-  <compound refid="thread_8cpp" kind="file"><name>thread.cpp</name>
+  <compound refid="src_2thread_8cpp" kind="file"><name>thread.cpp</name>
+  </compound>
+  <compound refid="test_2thread_8cpp" kind="file"><name>thread.cpp</name>
+    <member refid="test_2thread_8cpp_1a3a792810f66760fd026480867ea44776" kind="function"><name>exampleTaskWithMultipleParams</name></member>
+    <member refid="test_2thread_8cpp_1a0f0d38e38549c02b27672fd35dd7465f" kind="function"><name>isPrime</name></member>
+    <member refid="test_2thread_8cpp_1a293827f133ce2ff42fccc32336769103" kind="function"><name>search_prime</name></member>
+    <member refid="test_2thread_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="Timer_8cpp" kind="file"><name>Timer.cpp</name>
     <member refid="Timer_8cpp_1a8c64f1849169fec46f30321ccbbf9848" kind="function"><name>operator&lt;&lt;</name></member>
@@ -369,6 +375,10 @@
   </compound>
   <compound refid="args_8cpp" kind="file"><name>args.cpp</name>
     <member refid="args_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_8cpp" kind="file"><name>test.cpp</name>
+    <member refid="test_8cpp_1a0f0d38e38549c02b27672fd35dd7465f" kind="function"><name>isPrime</name></member>
+    <member refid="test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
   </compound>

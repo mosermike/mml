@@ -120,6 +120,8 @@ Copy the content of the path to a new one.
 \hline
 {\em recursive} & Copy recursive \\
 \hline
+{\em force} & Overwrite everything without asking \\
+\hline
 {\em progress} & Print out the progress while copying \\
 \hline
 {\em falsewrite} & Do not overwrite files in the destination \\
@@ -219,7 +221,7 @@ Determine number of lines in a file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em string} & Path to the file \\
+{\em path} & Path to the file \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -235,9 +237,11 @@ size\+\_\+t Number of lines
 
 Checks if a program exists. 
 
-\begin{DoxyAuthor}{Author}
-Mike/scratch/moser/gris\+\_\+20150510\+\_\+009/sir/\+Exp0 
-\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em program} & Program to be checked \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}\label{namespacemml_1_1file_a1e440fc12176ba6c207cef7160c5276b}} 
 \index{mml::file@{mml::file}!remove@{remove}}
 \index{remove@{remove}!mml::file@{mml::file}}
@@ -249,7 +253,7 @@ Delete a single file
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em string} & path to the file \\
+{\em file} & path to the file \\
 \hline
 \end{DoxyParams}
 \begin{DoxyAuthor}{Author}
@@ -266,9 +270,9 @@ Convert the date of files with specific endings in a directory
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em string} & Source path \\
+{\em src} & Source path \\
 \hline
-{\em string} & Destination path \\
+{\em dst} & Destination path \\
 \hline
 {\em ends} & Endings to be checked \\
 \hline
@@ -294,7 +298,7 @@ Calculates the size of a file.
 
 
 \begin{DoxyParams}{Parameters}
-{\em string} & Path to the file \\
+{\em filename} & Path to the file \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

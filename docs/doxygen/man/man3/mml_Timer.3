@@ -1,4 +1,4 @@
-.TH "mml::Timer" 3 "Sat Jun 8 2024" "mml" \" -*- nroff -*-
+.TH "mml::Timer" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,14 +28,14 @@ mml::Timer
 .RI "\fB~Timer\fP ()"
 .br
 .ti -1c
-.RI "void \fBbreak_start\fP ()"
+.RI "void \fBbreak_start\fP () noexcept"
 .br
 .ti -1c
-.RI "void \fBbreak_stop\fP ()"
+.RI "void \fBbreak_stop\fP () noexcept"
 .br
 .RI "continue the time measurement "
 .ti -1c
-.RI "void \fBcout\fP (std::string text='', bool format_print=false, bool newline=true)"
+.RI "void \fBcout\fP (std::string text='', bool format_print=false, bool newline=true) noexcept"
 .br
 .ti -1c
 .RI "void \fBstart\fP () noexcept"
@@ -81,7 +81,7 @@ mml::Timer
 
 .SH "Member Function Documentation"
 .PP 
-.SS "void mml::Timer::break_start ()"
+.SS "void mml::Timer::break_start ()\fC [noexcept]\fP"
 
 .PP
 \fBNote\fP
@@ -95,7 +95,7 @@ Mike
 .RE
 .PP
 
-.SS "void mml::Timer::break_stop ()"
+.SS "void mml::Timer::break_stop ()\fC [noexcept]\fP"
 
 .PP
 continue the time measurement 
@@ -108,7 +108,7 @@ Mike
 
 .SS "std::string mml::Timer::clock ()\fC [noexcept]\fP"
 
-.SS "void mml::Timer::cout (std::string text = \fC''\fP, bool format_print = \fCfalse\fP, bool newline = \fCtrue\fP)"
+.SS "void mml::Timer::cout (std::string text = \fC''\fP, bool format_print = \fCfalse\fP, bool newline = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
 \fBNote\fP

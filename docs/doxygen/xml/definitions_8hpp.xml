@@ -147,7 +147,7 @@
       </node>
       <node id="7">
         <label>src/thread.cpp</label>
-        <link refid="thread_8cpp"/>
+        <link refid="src_2thread_8cpp"/>
       </node>
       <node id="6">
         <label>src/shell.cpp</label>

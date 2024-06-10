@@ -619,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="249" column="6" bodyfile="include/mml/vector.hpp" bodystart="249" bodyend="251"/>
+        <location file="include/mml/vector.hpp" line="240" column="6" bodyfile="include/mml/vector.hpp" bodystart="240" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a309bd325454ee39e8e6f71a5a3e52ac3" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -662,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="259" column="13" bodyfile="include/mml/vector.hpp" bodystart="259" bodyend="265"/>
+        <location file="include/mml/vector.hpp" line="250" column="13" bodyfile="include/mml/vector.hpp" bodystart="250" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ace5e48f1429007d82db0322b4ddc4977" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -742,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="275" column="6" bodyfile="include/mml/vector.hpp" bodystart="275" bodyend="293"/>
+        <location file="include/mml/vector.hpp" line="266" column="6" bodyfile="include/mml/vector.hpp" bodystart="266" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -784,7 +784,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="301" column="13" bodyfile="include/mml/vector.hpp" bodystart="301" bodyend="309"/>
+        <location file="include/mml/vector.hpp" line="292" column="13" bodyfile="include/mml/vector.hpp" bodystart="292" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -823,7 +823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="318" column="8" bodyfile="include/mml/vector.hpp" bodystart="318" bodyend="329"/>
+        <location file="include/mml/vector.hpp" line="309" column="8" bodyfile="include/mml/vector.hpp" bodystart="309" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1aa1e76ce928f0025c21b4ca42e227b4cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -862,7 +862,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="337" column="8" bodyfile="include/mml/vector.hpp" bodystart="337" bodyend="347"/>
+        <location file="include/mml/vector.hpp" line="328" column="8" bodyfile="include/mml/vector.hpp" bodystart="328" bodyend="338"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1af988a06108c0ed0a54912ef79702c676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -901,7 +901,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="355" column="8" bodyfile="include/mml/vector.hpp" bodystart="355" bodyend="363"/>
+        <location file="include/mml/vector.hpp" line="346" column="8" bodyfile="include/mml/vector.hpp" bodystart="346" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a16d7de3e21e86095a82e23e99e6415b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">vector</ref>&lt; T &gt;</type>
@@ -940,7 +940,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="371" column="8" bodyfile="include/mml/vector.hpp" bodystart="371" bodyend="378"/>
+        <location file="include/mml/vector.hpp" line="362" column="8" bodyfile="include/mml/vector.hpp" bodystart="362" bodyend="369"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -968,7 +968,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="384" column="6" bodyfile="include/mml/vector.hpp" bodystart="384" bodyend="386"/>
+        <location file="include/mml/vector.hpp" line="375" column="6" bodyfile="include/mml/vector.hpp" bodystart="375" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -985,7 +985,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="392" column="13" bodyfile="include/mml/vector.hpp" bodystart="392" bodyend="392"/>
+        <location file="include/mml/vector.hpp" line="383" column="13" bodyfile="include/mml/vector.hpp" bodystart="383" bodyend="383"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a258b24c3d22bbc05ac46f41afa723724" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -1011,7 +1011,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="399" column="3" bodyfile="include/mml/vector.hpp" bodystart="399" bodyend="424"/>
+        <location file="include/mml/vector.hpp" line="390" column="3" bodyfile="include/mml/vector.hpp" bodystart="390" bodyend="415"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a3a388590b5179b598664820f1c431e68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
@@ -1050,7 +1050,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="432" column="13" bodyfile="include/mml/vector.hpp" bodystart="432" bodyend="441"/>
+        <location file="include/mml/vector.hpp" line="423" column="13" bodyfile="include/mml/vector.hpp" bodystart="423" bodyend="432"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
@@ -1089,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="449" column="13" bodyfile="include/mml/vector.hpp" bodystart="449" bodyend="459"/>
+        <location file="include/mml/vector.hpp" line="440" column="13" bodyfile="include/mml/vector.hpp" bodystart="440" bodyend="450"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a94e947265d74fd8b17586bfe6e8f3e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
@@ -1128,7 +1128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="467" column="13" bodyfile="include/mml/vector.hpp" bodystart="467" bodyend="477"/>
+        <location file="include/mml/vector.hpp" line="458" column="13" bodyfile="include/mml/vector.hpp" bodystart="458" bodyend="468"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1ac971bc51f4e13b7829110ff3abb9b94a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt; T &gt;</type>
@@ -1167,7 +1167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="485" column="13" bodyfile="include/mml/vector.hpp" bodystart="485" bodyend="494"/>
+        <location file="include/mml/vector.hpp" line="476" column="13" bodyfile="include/mml/vector.hpp" bodystart="476" bodyend="485"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; T &gt;</type>
@@ -1184,7 +1184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="502" column="22" bodyfile="include/mml/vector.hpp" bodystart="502" bodyend="502"/>
+        <location file="include/mml/vector.hpp" line="493" column="22" bodyfile="include/mml/vector.hpp" bodystart="493" bodyend="493"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -1284,21 +1284,10 @@
           <declname>name</declname>
         </param>
         <briefdescription>
-<para>Checks if a value exists. </para>
+<para>Check if a string exists in the vector. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>value</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Value to be checked </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>bool</para>
-</simplesect>
-Check if a string exists in the vector <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>name</parametername>
 </parameternamelist>
@@ -1313,14 +1302,14 @@ Check if a string exists in the vector <parameterlist kind="param"><parameterite
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/vector.hpp" line="240" column="6" bodyfile="include/mml/vector.hpp" bodystart="240" bodyend="240"/>
+        <location file="include/mml/vector.hpp" line="231" column="6" bodyfile="include/mml/vector.hpp" bodystart="231" bodyend="231"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="504"/>
+    <location file="include/mml/vector.hpp" line="29" column="1" bodyfile="include/mml/vector.hpp" bodystart="29" bodyend="495"/>
     <listofallmembers>
       <member refid="classmml_1_1vector_1a84512b3055a9ec49cfe977c10c8a2b79" prot="private" virt="non-virtual"><scope>mml::vector</scope><name>_exist</name></member>
       <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual"><scope>mml::vector</scope><name>begin</name></member>

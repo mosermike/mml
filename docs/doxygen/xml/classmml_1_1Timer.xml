@@ -119,10 +119,10 @@
         </inbodydescription>
         <location file="include/mml/Timer.hpp" line="39" column="1" bodyfile="include/mml/Timer.hpp" bodystart="39" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void mml::Timer::break_start</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>break_start</name>
         <briefdescription>
         </briefdescription>
@@ -137,10 +137,10 @@
         </inbodydescription>
         <location file="include/mml/Timer.hpp" line="49" column="6" bodyfile="src/Timer.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void mml::Timer::break_stop</definition>
-        <argsstring>()</argsstring>
+        <argsstring>() noexcept</argsstring>
         <name>break_stop</name>
         <briefdescription>
 <para>continue the time measurement </para>
@@ -154,10 +154,10 @@
         </inbodydescription>
         <location file="include/mml/Timer.hpp" line="54" column="6" bodyfile="src/Timer.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
         <definition>void mml::Timer::cout</definition>
-        <argsstring>(std::string text=&quot;&quot;, bool format_print=false, bool newline=true)</argsstring>
+        <argsstring>(std::string text=&quot;&quot;, bool format_print=false, bool newline=true) noexcept</argsstring>
         <name>cout</name>
         <param>
           <type>std::string</type>
@@ -409,11 +409,11 @@ Zwischenergebnis zurückgegeben.</para>
     <location file="include/mml/Timer.hpp" line="17" column="1" bodyfile="include/mml/Timer.hpp" bodystart="17" bodyend="117"/>
     <listofallmembers>
       <member refid="classmml_1_1Timer_1aad5afab8a116b1d8f0f8dc53f1157bbb" prot="private" virt="non-virtual"><scope>mml::Timer</scope><name>_now</name></member>
-      <member refid="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>break_start</name></member>
-      <member refid="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>break_stop</name></member>
+      <member refid="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>break_start</name></member>
+      <member refid="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>break_stop</name></member>
       <member refid="classmml_1_1Timer_1aaf59bb2b41686ee455dccc49bd6ab070" prot="private" virt="non-virtual"><scope>mml::Timer</scope><name>break_time_mus</name></member>
       <member refid="classmml_1_1Timer_1aeadb046285a068a189a4359e9302ed3e" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>clock</name></member>
-      <member refid="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>cout</name></member>
+      <member refid="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>cout</name></member>
       <member refid="classmml_1_1Timer_1a7ab3c31ff55f77a5fb16740df5d056c1" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>getMS</name></member>
       <member refid="classmml_1_1Timer_1a5138fe5353603b4fd5d12dfa5e0f6a22" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>getS</name></member>
       <member refid="classmml_1_1Timer_1acbc5feb01146cf9067c08c52991300d4" prot="public" virt="non-virtual"><scope>mml::Timer</scope><name>getUS</name></member>

@@ -57,7 +57,7 @@
       </node>
       <node id="5">
         <label>src/thread.cpp</label>
-        <link refid="thread_8cpp"/>
+        <link refid="src_2thread_8cpp"/>
       </node>
       <node id="4">
         <label>src/shell.cpp</label>
@@ -143,11 +143,11 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Timer(const<sp/>Timer&amp;<sp/>t);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~Timer();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" kindref="member">break_start</ref>();</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" kindref="member">break_stop</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" kindref="member">break_start</ref><sp/>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" kindref="member">break_stop</ref>()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" kindref="member">cout</ref>(std::string<sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>format_print<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8" kindref="member">cout</ref>(std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>text<sp/>=<sp/>&quot;&quot;,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>format_print<sp/>=<sp/>false,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/>true)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b" kindref="member">start</ref>()<sp/>noexcept;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kindref="member">stop</ref>()<sp/>noexcept;</highlight></codeline>

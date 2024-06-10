@@ -3,11 +3,15 @@
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$thread$>$}\newline
 {\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$future$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
 Include dependency graph for thread.\+hpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=274pt]{thread_8hpp__incl}
+\includegraphics[width=350pt]{thread_8hpp__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:\nopagebreak
@@ -20,8 +24,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classmml_1_1thread_1_1Thread}{mml\+::thread\+::\+Thread}}
-\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads$<$ result $>$}}
+\begin{DoxyCompactList}\small\item\em Class \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,5 +36,5 @@ class \mbox{\hyperlink{classmml_1_1thread_1_1Thread}{mml\+::thread\+::\+Thread}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespacemml_1_1thread_a579ddecc00f3ee6fbdd8fe06fd030e95}{mml\+::thread\+::sleep}} (float s)
+void \mbox{\hyperlink{namespacemml_1_1thread_a3e2a5898babfb719ccf10277fad3e290}{mml\+::thread\+::sleep}} (float s) noexcept
 \begin{DoxyCompactList}\small\item\em Stop actual thread for a specific time. \end{DoxyCompactList}\end{DoxyCompactItemize}

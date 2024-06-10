@@ -66,6 +66,10 @@
 <codeline lineno="56"><highlight class="normal">html_static_path<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;_static&apos;</highlight><highlight class="normal">]</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal">html_theme<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;pydata_sphinx_theme&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">breathe_projects_source<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;mml&quot;</highlight><highlight class="normal"><sp/>:<sp/>(<sp/></highlight><highlight class="stringliteral">&quot;../../include/mml&quot;</highlight><highlight class="normal">,<sp/>[</highlight><highlight class="stringliteral">&quot;standards.hpp&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;thread.hpp&quot;</highlight><highlight class="normal">]<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="docs/source/conf.py"/>
   </compounddef>

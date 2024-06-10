@@ -452,13 +452,16 @@ document.write(`
 <h1>Thread<a class="headerlink" href="#thread" title="Link to this heading">#</a></h1>
 <p>Here, the class <cite>Thread</cite> are shown and described.</p>
 <dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43mml">
+<span id="_CPPv33mml"></span><span id="_CPPv23mml"></span><span id="mml"></span><span class="target" id="namespacemml"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mml</span></span></span><br /></dt>
+<dd><dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml6threadE">
 <span id="_CPPv3N3mml6threadE"></span><span id="_CPPv2N3mml6threadE"></span><span id="mml::thread"></span><span class="target" id="namespacemml_1_1thread"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread</span></span></span><a class="headerlink" href="#_CPPv4N3mml6threadE" title="Link to this definition">#</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml6thread5sleepEf">
-<span id="_CPPv3N3mml6thread5sleepEf"></span><span id="_CPPv2N3mml6thread5sleepEf"></span><span id="mml::thread::sleep__float"></span><span class="target" id="namespacemml_1_1thread_1a579ddecc00f3ee6fbdd8fe06fd030e95"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread5sleepEf" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N3mml6thread5sleepEf"></span><span id="_CPPv2N3mml6thread5sleepEf"></span><span id="mml::thread::sleep__float"></span><span class="target" id="thread_8hpp_1a3e2a5898babfb719ccf10277fad3e290"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread5sleepEf" title="Link to this definition">#</a><br /></dt>
 <dd><p>Stop actual thread for a specific time. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -469,93 +472,191 @@ document.write(`
 
 </div>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6ThreadE">
-<span id="_CPPv3N3mml6thread6ThreadE"></span><span id="_CPPv2N3mml6thread6ThreadE"></span><span id="mml::thread::Thread"></span><span class="target" id="classmml_1_1thread_1_1Thread"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Thread</span></span></span><a class="headerlink" href="#_CPPv4N3mml6thread6ThreadE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3mml6thread7ThreadsE">
+<span id="_CPPv3I0EN3mml6thread7ThreadsE"></span><span id="_CPPv2I0EN3mml6thread7ThreadsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1thread_1_1_threads"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Threads</span></span></span><a class="headerlink" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="Link to this definition">#</a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;thread.hpp&gt;</em></div>
+<p>Class <a class="reference internal" href="#classmml_1_1thread_1_1_threads"><span class="std std-ref">Threads</span></a>. </p>
+<p>This class provides functions which can be used to start a task with multiple threads </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread9set_max_iEi">
-<span id="_CPPv3N3mml6thread6Thread9set_max_iEi"></span><span id="_CPPv2N3mml6thread6Thread9set_max_iEi"></span><span id="mml::thread::Thread::set_max_i__i"></span><span class="target" id="classmml_1_1thread_1_1Thread_1a390497ea41f30dd2f48d433e275f4be0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_max_i</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_temp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread9set_max_iEi" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Die maximale Anzahl an vorhandenen Threads</p>
-</div>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread19thread_writing_trueEv">
-<span id="_CPPv3N3mml6thread6Thread19thread_writing_trueEv"></span><span id="_CPPv2N3mml6thread6Thread19thread_writing_trueEv"></span><span id="mml::thread::Thread::thread_writing_true"></span><span class="target" id="classmml_1_1thread_1_1Thread_1aea68ae5d90affb2ec9bd0148e508d2e5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_writing_true</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread19thread_writing_trueEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set this thread to active writing. </p>
-<p>
-Programm: Thread.cpp<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike Moser</p>
-</dd>
-</dl>
-</p>
-<p>Enthält verschiedene Funktionen für Threads </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread20thread_writing_falseEv">
-<span id="_CPPv3N3mml6thread6Thread20thread_writing_falseEv"></span><span id="_CPPv2N3mml6thread6Thread20thread_writing_falseEv"></span><span id="mml::thread::Thread::thread_writing_false"></span><span class="target" id="classmml_1_1thread_1_1Thread_1a54d5be439315782c43ecb4f6e78e99e5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_writing_false</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread20thread_writing_falseEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Set this thread to not actively writing. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread17is_writing_activeEv">
-<span id="_CPPv3N3mml6thread6Thread17is_writing_activeEv"></span><span id="_CPPv2N3mml6thread6Thread17is_writing_activeEv"></span><span id="mml::thread::Thread::is_writing_active"></span><span class="target" id="classmml_1_1thread_1_1Thread_1a2a309c3e1f84b51ae205beec2c22bf3d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_writing_active</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread17is_writing_activeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Checks if the thread is writing. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>true = is writing </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread12thread_sleepEf">
-<span id="_CPPv3N3mml6thread6Thread12thread_sleepEf"></span><span id="_CPPv2N3mml6thread6Thread12thread_sleepEf"></span><span id="mml::thread::Thread::thread_sleep__float"></span><span class="target" id="classmml_1_1thread_1_1Thread_1aa1f1dbc2ea0f6bf44347990ed5e044b1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_sleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">second</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread12thread_sleepEf" title="Link to this definition">#</a><br /></dt>
-<dd><p>Sleep for a while. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads7ThreadsEi">
+<span id="_CPPv3N3mml6thread7Threads7ThreadsEi"></span><span id="_CPPv2N3mml6thread7Threads7ThreadsEi"></span><span id="mml::thread::Threads::Threads__i"></span><span class="target" id="classmml_1_1thread_1_1_threads_1abfbf4c61f0f0dee0a5e397e87d1b796b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Threads</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads7ThreadsEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Initialize with a number of threads. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>second</strong> – Sleep for so many seconds </p>
+<dd class="field-odd"><p><strong>num</strong> – Number of <a class="reference internal" href="#classmml_1_1thread_1_1_threads"><span class="std std-ref">Threads</span></a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread24thread_sleep_millisecondE8uint32_t">
-<span id="_CPPv3N3mml6thread6Thread24thread_sleep_millisecondE8uint32_t"></span><span id="_CPPv2N3mml6thread6Thread24thread_sleep_millisecondE8uint32_t"></span><span id="mml::thread::Thread::thread_sleep_millisecond__uint32_t"></span><span class="target" id="classmml_1_1thread_1_1Thread_1a471f18a979691ba155a9cc8e84917acd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_sleep_millisecond</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">millisecond</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread24thread_sleep_millisecondE8uint32_t" title="Link to this definition">#</a><br /></dt>
-<dd><p>Sleep for a while. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7ThreadsaSERK7Threads">
+<span id="_CPPv3N3mml6thread7ThreadsaSERK7Threads"></span><span id="_CPPv2N3mml6thread7ThreadsaSERK7Threads"></span><span id="mml::thread::Threads::assign-operator__ThreadsCR"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a3e88e7f2b8a451e91ca561b92ce2feb1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">thread</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7ThreadsaSERK7Threads" title="Link to this definition">#</a><br /></dt>
+<dd><p>Operator =. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>millisecond</strong> – Sleep for so many miliseconds </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread6Thread7waitingEi">
-<span id="_CPPv3N3mml6thread6Thread7waitingEi"></span><span id="_CPPv2N3mml6thread6Thread7waitingEi"></span><span id="mml::thread::Thread::waiting__i"></span><span class="target" id="classmml_1_1thread_1_1Thread_1af0f8af249ce24749198b7e990a78abc0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waiting</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread6Thread7waitingEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>Waits if many threads are writing if a not used, not always the same order of writing. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>a</strong> – wait for so many miliseconds. if a = 0 =&gt; random number is created in milliseconds </p>
+<dd class="field-odd"><p><strong>thread</strong> – to be copied </p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true, when no thread is writing </p>
+<dd class="field-even"><p>Instance of this class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7ThreadsD0Ev">
+<span id="_CPPv3N3mml6thread7ThreadsD0Ev"></span><span id="_CPPv2N3mml6thread7ThreadsD0Ev"></span><span id="mml::thread::Threads::~Threads"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a73748ee939990829c8a6fcd29ecca82c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Threads</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread7ThreadsD0Ev" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEEi">
+<span id="_CPPv3N3mml6thread7Threads5startERKNSt8functionIF6resultiEEEi"></span><span id="_CPPv2N3mml6thread7Threads5startERKNSt8functionIF6resultiEEEi"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a162a1bd5841d4f2310d8ba474a14d029"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads::result"><span class="n"><span class="pre">result</span></span></a><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Starts a function with a specific thread. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first argument of the function must be the threadID </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -&gt; [return type of the function] {return exampleTask(threadId, arg1, arg2);}; </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> – Function to be executed </p></li>
+<li><p><strong>id</strong> – Thread id which should execute this function </p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">runtime_error</span></span></span> – : if id &gt; number of threads </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEE">
+<span id="_CPPv3N3mml6thread7Threads5startERKNSt8functionIF6resultiEEE"></span><span id="_CPPv2N3mml6thread7Threads5startERKNSt8functionIF6resultiEEE"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a4449909d0fde1723ab3aea63516656ea"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads::result"><span class="n"><span class="pre">result</span></span></a><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">task</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Put a specific thread to sleep. </p>
+<p>Starts a function for all threads </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first argument of the function must be the threadId </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -&gt; [return type of the function] {return exampleTask(threadId, arg1, arg2);}; </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>task</strong> – Function to be executed </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads5sleepEiid">
+<span id="_CPPv3N3mml6thread7Threads5sleepEiid"></span><span id="_CPPv2N3mml6thread7Threads5sleepEiid"></span><span id="mml::thread::Threads::sleep__i.i.double"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a051998a4103c4c83d0a7a79aa616b41f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threadId</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads5sleepEiid" title="Link to this definition">#</a><br /></dt>
+<dd><p>Puts a specific thread to sleep. This is should be used inside a lambda function when the function start is started! </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threadId</strong> – The threadId of the thread </p></li>
+<li><p><strong>id</strong> – Thread id to sleep </p></li>
+<li><p><strong>seconds</strong> – Duration in seconds to sleep </p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">runtime_error</span></span></span> – : if id is bigger than the size </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads10getResultsEv">
+<span id="_CPPv3N3mml6thread7Threads10getResultsEv"></span><span id="_CPPv2N3mml6thread7Threads10getResultsEv"></span><span id="mml::thread::Threads::getResults"></span><span class="target" id="classmml_1_1thread_1_1_threads_1af8cba3532c1ff2d7c19685a93e4e8524"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads::result"><span class="n"><span class="pre">result</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getResults</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads10getResultsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the results from each thread. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vector with the results of each thread </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads4joinEv">
+<span id="_CPPv3N3mml6thread7Threads4joinEv"></span><span id="_CPPv2N3mml6thread7Threads4joinEv"></span><span id="mml::thread::Threads::join"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a6bd14235eb4f54301a8df885c3f90b46"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">join</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads4joinEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Joins all threads and waits for unfinished threads. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads4sizeE">
+<span id="_CPPv3N3mml6thread7Threads4sizeE"></span><span id="_CPPv2N3mml6thread7Threads4sizeE"></span><span id="mml::thread::Threads::size__i"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a22bc4fc933c6376e38bb57159d03bf71"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads4sizeE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Number of <a class="reference internal" href="#classmml_1_1thread_1_1_threads"><span class="std std-ref">Threads</span></a>. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads7threadsE">
+<span id="_CPPv3N3mml6thread7Threads7threadsE"></span><span id="_CPPv2N3mml6thread7Threads7threadsE"></span><span id="mml::thread::Threads::threads__std::vector:std::thread:"></span><span class="target" id="classmml_1_1thread_1_1_threads_1ad4ced761a7a3483f630f27c9bb6b52dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threads</span></span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads7threadsE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads7futuresE">
+<span id="_CPPv3N3mml6thread7Threads7futuresE"></span><span id="_CPPv2N3mml6thread7Threads7futuresE"></span><span id="mml::thread::Threads::futures__std::vector:std::future:result::"></span><span class="target" id="classmml_1_1thread_1_1_threads_1af79252a112a75f28ca34d28a8e569760"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">future</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads::result"><span class="n"><span class="pre">result</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">futures</span></span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads7futuresE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7Threads3mtxE">
+<span id="_CPPv3N3mml6thread7Threads3mtxE"></span><span id="_CPPv2N3mml6thread7Threads3mtxE"></span><span id="mml::thread::Threads::mtx__std::mutex"></span><span class="target" id="classmml_1_1thread_1_1_threads_1a9e37650a0ec27751a55137801f0736e9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mtx</span></span></span><a class="headerlink" href="#_CPPv4N3mml6thread7Threads3mtxE" title="Link to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3mml6thread7ThreadslsER7ThreadsR7ThreadsRK5templ">
+<span id="_CPPv3I0EN3mml6thread7ThreadslsER7ThreadsRK5templ"></span><span id="_CPPv2I0EN3mml6thread7ThreadslsER7ThreadsRK5templ"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">templ</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1thread_1_1_threads_1a75965dea579aafe9bca1c2e908efbe78"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">threads</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadslsER7ThreadsR7ThreadsRK5templ" title="mml::thread::Threads::operator&lt;&lt;::templ"><span class="n"><span class="pre">templ</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0EN3mml6thread7ThreadslsER7ThreadsR7ThreadsRK5templ" title="Link to this definition">#</a><br /></dt>
+<dd><p>Output a text while taking into account if another thread is writing. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threads</strong> – Instance of the class used to print </p></li>
+<li><p><strong>value</strong> – to be printed </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ostream </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6thread7ThreadslsER7ThreadsPFRNSt7ostreamERNSt7ostreamEE">
+<span id="_CPPv3N3mml6thread7ThreadslsER7ThreadsPFRNSt7ostreamERNSt7ostreamEE"></span><span id="_CPPv2N3mml6thread7ThreadslsER7ThreadsPFRNSt7ostreamERNSt7ostreamEE"></span><span class="target" id="classmml_1_1thread_1_1_threads_1abd0b51b14bbeb03b4d80648c8a19dc0a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6thread7ThreadsE" title="mml::thread::Threads"><span class="n"><span class="pre">Threads</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">threads</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">manip</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6thread7ThreadslsER7ThreadsPFRNSt7ostreamERNSt7ostreamEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Output special characters like std::endl. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threads</strong> – Instance of the class used to print </p></li>
+<li><p><strong>manip</strong> – to be printed </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ostream </p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -608,16 +709,26 @@ Programm: Thread.cpp<dl class="simple">
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6threadE"><code class="docutils literal notranslate"><span class="pre">thread</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread5sleepEf"><code class="docutils literal notranslate"><span class="pre">thread::sleep()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6ThreadE"><code class="docutils literal notranslate"><span class="pre">thread::Thread</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread9set_max_iEi"><code class="docutils literal notranslate"><span class="pre">thread::Thread::set_max_i()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread19thread_writing_trueEv"><code class="docutils literal notranslate"><span class="pre">thread::Thread::thread_writing_true()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread20thread_writing_falseEv"><code class="docutils literal notranslate"><span class="pre">thread::Thread::thread_writing_false()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread17is_writing_activeEv"><code class="docutils literal notranslate"><span class="pre">thread::Thread::is_writing_active()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread12thread_sleepEf"><code class="docutils literal notranslate"><span class="pre">thread::Thread::thread_sleep()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread24thread_sleep_millisecondE8uint32_t"><code class="docutils literal notranslate"><span class="pre">thread::Thread::thread_sleep_millisecond()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread6Thread7waitingEi"><code class="docutils literal notranslate"><span class="pre">thread::Thread::waiting()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv43mml"><code class="docutils literal notranslate"><span class="pre">mml</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6threadE"><code class="docutils literal notranslate"><span class="pre">mml::thread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread5sleepEf"><code class="docutils literal notranslate"><span class="pre">mml::thread::sleep()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN3mml6thread7ThreadsE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads7ThreadsEi"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::Threads()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7ThreadsaSERK7Threads"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::operator=()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7ThreadsD0Ev"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::~Threads()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEEi"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads5startERKNSt8functionIF6resultiEEE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::start()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads5sleepEiid"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::sleep()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads10getResultsEv"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::getResults()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads4joinEv"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::join()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads4sizeE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::size</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads7threadsE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::threads</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads7futuresE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::futures</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7Threads3mtxE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::mtx</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN3mml6thread7ThreadslsER7ThreadsR7ThreadsRK5templ"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::operator&lt;&lt;()</span></code></a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6thread7ThreadslsER7ThreadsPFRNSt7ostreamERNSt7ostreamEE"><code class="docutils literal notranslate"><span class="pre">mml::thread::Threads::operator&lt;&lt;()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

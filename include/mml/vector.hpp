@@ -222,15 +222,6 @@ namespace mml{
 			return this->vec;
 		}
 
-		/**
-		 * @brief Checks if a value exists
-		 * @param value Value to be checked
-		 * @return bool
-		 */
-		//bool exist(T const& value) noexcept {
-			
-		//}
-
 	private:
 		/**
 		 * @brief Check if a string exists in the vector

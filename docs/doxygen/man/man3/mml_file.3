@@ -1,4 +1,4 @@
-.TH "mml::file" 3 "Sat Jun 8 2024" "mml" \" -*- nroff -*-
+.TH "mml::file" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -143,6 +143,8 @@ Copy the content of the path to a new one\&.
 .br
 \fIrecursive\fP Copy recursive 
 .br
+\fIforce\fP Overwrite everything without asking 
+.br
 \fIprogress\fP Print out the progress while copying 
 .br
 \fIfalsewrite\fP Do not overwrite files in the destination 
@@ -242,7 +244,7 @@ Determine number of lines in a file\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Path to the file 
+\fIpath\fP Path to the file 
 .RE
 .PP
 \fBReturns\fP
@@ -256,9 +258,9 @@ size_t Number of lines
 .PP
 Checks if a program exists\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike/scratch/moser/gris_20150510_009/sir/Exp0 
+\fIprogram\fP Program to be checked 
 .RE
 .PP
 
@@ -272,7 +274,7 @@ Delete a single file
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP path to the file 
+\fIfile\fP path to the file 
 .RE
 .PP
 \fBAuthor\fP
@@ -291,9 +293,9 @@ Convert the date of files with specific endings in a directory
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Source path 
+\fIsrc\fP Source path 
 .br
-\fIstring\fP Destination path 
+\fIdst\fP Destination path 
 .br
 \fIends\fP Endings to be checked 
 .br
@@ -317,7 +319,7 @@ Calculates the size of a file\&.
 .PP
 \fBParameters\fP
 .RS 4
-\fIstring\fP Path to the file 
+\fIfilename\fP Path to the file 
 .RE
 .PP
 \fBReturns\fP

@@ -1,0 +1,262 @@
+\hypertarget{classmml_1_1thread_1_1Threads}{}\doxysection{mml\+::thread\+::Threads$<$ result $>$ Class Template Reference}
+\label{classmml_1_1thread_1_1Threads}\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+
+
+Class \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}.  
+
+
+
+
+{\ttfamily \#include $<$thread.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads_abfbf4c61f0f0dee0a5e397e87d1b796b}{Threads}} (int num)
+\begin{DoxyCompactList}\small\item\em Initialize with a number of threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \& \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a3e88e7f2b8a451e91ca561b92ce2feb1}{operator=}} (const \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \&thread) noexcept
+\begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads_a73748ee939990829c8a6fcd29ecca82c}{$\sim$\+Threads}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a162a1bd5841d4f2310d8ba474a14d029}{start}} (const std\+::function$<$ result(int)$>$ \&task, int id)
+\begin{DoxyCompactList}\small\item\em Starts a function with a specific thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a4449909d0fde1723ab3aea63516656ea}{start}} (const std\+::function$<$ result(int)$>$ \&task) noexcept
+\begin{DoxyCompactList}\small\item\em Put a specific thread to sleep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a051998a4103c4c83d0a7a79aa616b41f}{sleep}} (int thread\+Id, int id, double seconds)
+\begin{DoxyCompactList}\small\item\em Puts a specific thread to sleep. This is should be used inside a lambda function when the function start is started! \end{DoxyCompactList}\item 
+std\+::vector$<$ result $>$ \mbox{\hyperlink{classmml_1_1thread_1_1Threads_af8cba3532c1ff2d7c19685a93e4e8524}{get\+Results}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the results from each thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a6bd14235eb4f54301a8df885c3f90b46}{join}} () noexcept
+\begin{DoxyCompactList}\small\item\em Joins all threads and waits for unfinished threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a22bc4fc933c6376e38bb57159d03bf71}{size}} = 0
+\begin{DoxyCompactList}\small\item\em Number of \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \& \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a75965dea579aafe9bca1c2e908efbe78}{operator$<$$<$}} (\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \&threads, const templ \&value) noexcept
+\begin{DoxyCompactList}\small\item\em Output a text while taking into account if another thread is writing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \& \mbox{\hyperlink{classmml_1_1thread_1_1Threads_abd0b51b14bbeb03b4d80648c8a19dc0a}{operator$<$$<$}} (\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \&threads, std\+::ostream \&($\ast$manip)(std\+::ostream \&)) noexcept
+\begin{DoxyCompactList}\small\item\em Output special characters like std\+::endl. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename result$>$\newline
+class mml\+::thread\+::\+Threads$<$ result $>$}
+
+Class \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}. 
+
+This class provides functions which can be used to start a task with multiple threads 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_abfbf4c61f0f0dee0a5e397e87d1b796b}\label{classmml_1_1thread_1_1Threads_abfbf4c61f0f0dee0a5e397e87d1b796b}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!Threads@{Threads}}
+\index{Threads@{Threads}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{Threads()}{Threads()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize with a number of threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Number of \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a73748ee939990829c8a6fcd29ecca82c}\label{classmml_1_1thread_1_1Threads_a73748ee939990829c8a6fcd29ecca82c}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!````~Threads@{$\sim$Threads}}
+\index{````~Threads@{$\sim$Threads}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Threads()}{~Threads()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::$\sim$\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_af8cba3532c1ff2d7c19685a93e4e8524}\label{classmml_1_1thread_1_1Threads_af8cba3532c1ff2d7c19685a93e4e8524}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!getResults@{getResults}}
+\index{getResults@{getResults}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{getResults()}{getResults()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+std\+::vector$<$result$>$ \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::get\+Results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the results from each thread. 
+
+\begin{DoxyReturn}{Returns}
+Vector with the results of each thread 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a6bd14235eb4f54301a8df885c3f90b46}\label{classmml_1_1thread_1_1Threads_a6bd14235eb4f54301a8df885c3f90b46}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!join@{join}}
+\index{join@{join}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Joins all threads and waits for unfinished threads. 
+
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a3e88e7f2b8a451e91ca561b92ce2feb1}\label{classmml_1_1thread_1_1Threads_a3e88e7f2b8a451e91ca561b92ce2feb1}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}\& \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}$<$ result $>$ \&}]{thread }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Operator =. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread} & to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of this class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a051998a4103c4c83d0a7a79aa616b41f}\label{classmml_1_1thread_1_1Threads_a051998a4103c4c83d0a7a79aa616b41f}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!sleep@{sleep}}
+\index{sleep@{sleep}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::sleep (\begin{DoxyParamCaption}\item[{int}]{thread\+Id,  }\item[{int}]{id,  }\item[{double}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Puts a specific thread to sleep. This is should be used inside a lambda function when the function start is started! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+Id} & The thread\+Id of the thread \\
+\hline
+{\em id} & Thread id to sleep \\
+\hline
+{\em seconds} & Duration in seconds to sleep \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if id is bigger than the size \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a4449909d0fde1723ab3aea63516656ea}\label{classmml_1_1thread_1_1Threads_a4449909d0fde1723ab3aea63516656ea}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!start@{start}}
+\index{start@{start}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::start (\begin{DoxyParamCaption}\item[{const std\+::function$<$ result(int)$>$ \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Put a specific thread to sleep. 
+
+Starts a function for all threads 
+\begin{DoxyParams}{Parameters}
+{\em task} & Function to be executed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The first argument of the function must be the thread\+Id 
+
+If task has parameters besides the thread id, one needs to create a lambda function\+: auto task = \mbox{[}arg1, arg2\mbox{]}(int thread\+Id) -\/$>$ \mbox{[}return type of the function\mbox{]} \{return example\+Task(thread\+Id, arg1, arg2);\}; 
+\end{DoxyNote}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a162a1bd5841d4f2310d8ba474a14d029}\label{classmml_1_1thread_1_1Threads_a162a1bd5841d4f2310d8ba474a14d029}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!start@{start}}
+\index{start@{start}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+void \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::start (\begin{DoxyParamCaption}\item[{const std\+::function$<$ result(int)$>$ \&}]{task,  }\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts a function with a specific thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & Function to be executed \\
+\hline
+{\em id} & Thread id which should execute this function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if id $>$ number of threads \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+The first argument of the function must be the thread\+ID 
+
+If task has parameters besides the thread id, one needs to create a lambda function\+: auto task = \mbox{[}arg1, arg2\mbox{]}(int thread\+Id) -\/$>$ \mbox{[}return type of the function\mbox{]} \{return example\+Task(thread\+Id, arg1, arg2);\}; 
+\end{DoxyNote}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a75965dea579aafe9bca1c2e908efbe78}\label{classmml_1_1thread_1_1Threads_a75965dea579aafe9bca1c2e908efbe78}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+template$<$typename templ $>$ \\
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}$<$ result $>$ \&}]{threads,  }\item[{const templ \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output a text while taking into account if another thread is writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threads} & Instance of the class used to print \\
+\hline
+{\em value} & to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_abd0b51b14bbeb03b4d80648c8a19dc0a}\label{classmml_1_1thread_1_1Threads_abd0b51b14bbeb03b4d80648c8a19dc0a}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}$<$ result $>$ \&}]{threads,  }\item[{std\+::ostream \&($\ast$)(std\+::ostream \&)}]{manip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output special characters like std\+::endl. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threads} & Instance of the class used to print \\
+\hline
+{\em manip} & to be printed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmml_1_1thread_1_1Threads_a22bc4fc933c6376e38bb57159d03bf71}\label{classmml_1_1thread_1_1Threads_a22bc4fc933c6376e38bb57159d03bf71}} 
+\index{mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}!size@{size}}
+\index{size@{size}!mml::thread::Threads$<$ result $>$@{mml::thread::Threads$<$ result $>$}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename result $>$ \\
+int \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::size = 0}
+
+
+
+Number of \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mml/\mbox{\hyperlink{thread_8hpp}{thread.\+hpp}}\end{DoxyCompactItemize}

@@ -140,17 +140,17 @@
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::chrono::high_resolution_clock::now();</highlight></codeline>
 <codeline lineno="14"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" kindref="member">mml::Timer::break_start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" kindref="member">mml::Timer::break_start</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ticksEnd<sp/>=<sp/>_now();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break_time_mus<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(ticksEnd<sp/>-<sp/>ticksStart).count()<sp/>-<sp/>break_time_mus;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" kindref="member">mml::Timer::break_stop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" kindref="member">mml::Timer::break_stop</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ticksEnd<sp/>=<sp/>_now();</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break_time_mus<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(ticksEnd<sp/>-<sp/>ticksStart).count()<sp/>-<sp/>break_time_mus;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" kindref="member">mml::Timer::cout</ref>(std::string<sp/>text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>format_print,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8" kindref="member">mml::Timer::cout</ref>(std::string<sp/>text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>format_print,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline)<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>ticksEnd<sp/>=<sp/>_now();</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>text;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>

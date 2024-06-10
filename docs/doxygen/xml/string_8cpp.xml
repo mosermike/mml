@@ -315,213 +315,221 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(name_exclude<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>temp1.<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(name_exclude))</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Object<sp/>is<sp/>a<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>())<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)<sp/>{</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp1<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(save_dirs)<sp/>{</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp2<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(path.c_str(),</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>name_include<sp/>exists<sp/>in<sp/>the<sp/>part<sp/>after<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp2.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(0,temp2.<ref refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" kindref="member">find</ref>(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)).<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(name_include))</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>directories.push_back(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>());</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>directory<sp/>in<sp/>path<sp/>does<sp/>not<sp/>contain<sp/>include<sp/>=&gt;<sp/>skip<sp/>everything</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp2<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(path.c_str(),</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp2.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(0,temp2.<ref refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" kindref="member">find</ref>(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)).<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(name_include))</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LS.push_back(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>());</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>List<sp/>if<sp/>include<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(temp1.exist(name_include))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>LS.push_back(temp1.str());</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>LS;</highlight></codeline>
-<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" kindref="member">mml::string::ls</ref>(std::string<sp/>name_include,<sp/>std::string<sp/>name_exclude,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all)<sp/>{</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>directories<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;---&quot;</highlight><highlight class="normal">};</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>LS<sp/>=<sp/>ls(name_include,<sp/>name_exclude,<sp/>directories,<sp/>recursive,<sp/>all);</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>LS;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Correction<sp/>for<sp/>backslashes<sp/>being<sp/>read<sp/>as<sp/>two<sp/>backslashes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp1.<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(</highlight><highlight class="stringliteral">&quot;\\&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>temp1.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>();i++)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp1[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\\&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>temp1[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\\&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp1<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" kindref="member">sub</ref>(0,i-1)<sp/>+<sp/>temp1.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(i+1);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Object<sp/>is<sp/>a<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>())<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp1<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(save_dirs)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp2<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(path.c_str(),</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>name_include<sp/>exists<sp/>in<sp/>the<sp/>part<sp/>after<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp2.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(0,temp2.<ref refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" kindref="member">find</ref>(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)).<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(name_include))</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>directories.push_back(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>());</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>directory<sp/>in<sp/>path<sp/>does<sp/>not<sp/>contain<sp/>include<sp/>=&gt;<sp/>skip<sp/>everything</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp2<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(path.c_str(),</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp2.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(0,temp2.<ref refid="classmml_1_1string_1a77b559320f1f1ffbda08eb713a5dd8ab" kindref="member">find</ref>(</highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">)).<ref refid="classmml_1_1string_1a6abba5a305b4ced911f2a61438455a4e" kindref="member">exist</ref>(name_include))</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LS.push_back(temp1.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>());</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>List<sp/>if<sp/>include<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(temp1.exist(name_include))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>LS.push_back(temp1.str());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>LS;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">mml::string::substr</ref>(std::size_t<sp/>pos1,<sp/>std::size_t<sp/>length1)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(pos1,length1);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">mml::string::substr</ref>(std::size_t<sp/>pos1)<sp/>noexcept{</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(pos1);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" kindref="member">mml::string::sub</ref>(std::size_t<sp/>beg,<sp/>std::size_t<sp/>end)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>beg<sp/>is<sp/>a<sp/>negative<sp/>number<sp/>(negative<sp/>means<sp/>here<sp/>very<sp/>big)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(beg<sp/>&gt;<sp/>value.size()<sp/>&amp;&amp;<sp/>(std::string::npos<sp/>-<sp/>beg<sp/>&lt;<sp/>value.size()))</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>beg<sp/>=<sp/>value.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>()<sp/>-<sp/>(std::string::npos<sp/>-<sp/>beg)<sp/>-1;</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>is<sp/>negative</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(end<sp/>&gt;<sp/>value.size()<sp/>&amp;&amp;<sp/>(std::string::npos<sp/>-<sp/>end<sp/>&lt;<sp/>value.size()))</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>=<sp/>value.size()<sp/>-<sp/>(std::string::npos<sp/>-<sp/>end)<sp/>-1;</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.substr(beg,end-(beg-1));</highlight></codeline>
-<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" kindref="member">mml::string::mkdir_p</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>make_dir<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>string<sp/>to<sp/>create<sp/>the<sp/>directories</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>temp=value;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>value<sp/>to<sp/>create<sp/>directories<sp/>step<sp/>by<sp/>step</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>pos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>of<sp/>&apos;/&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>temp.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,1);</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>directory<sp/>exists<sp/>already<sp/>to<sp/>save<sp/>computing<sp/>time</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value)<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(value)<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>make_dir<sp/>+=<sp/>temp.substr(0,pos);</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.substr(pos,temp.size()-pos);</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>dir<sp/>exists<sp/>as<sp/>a<sp/>non-directory,<sp/>otherwise<sp/>create<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(make_dir.c_str())<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(<sp/>make_dir<sp/>)<sp/>!=<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kindref="member">mml::shell::error</ref>(</highlight><highlight class="stringliteral">&quot;[mkdir_p]<sp/>Cannot<sp/>create<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>make_dir<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>as<sp/>it<sp/>already<sp/>exists<sp/>as<sp/>a<sp/>non-directory!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mkdir(make_dir.c_str(),<sp/>S_IRWXU<sp/>|<sp/>S_IRWXG<sp/>|<sp/>S_IROTH<sp/>|<sp/>S_IXOTH<sp/>|<sp/>S_IWOTH);</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>new<sp/>position<sp/>for<sp/>the<sp/>new<sp/>directory<sp/>if<sp/>not<sp/>at<sp/>the<sp/>end</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>temp.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,1);</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(pos<sp/>&lt;<sp/>std::string::npos);</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"></highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>create<sp/>the<sp/>last<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value.c_str()))</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mkdir(value.c_str(),<sp/>S_IRWXU<sp/>|<sp/>S_IRWXG<sp/>|<sp/>S_IROTH<sp/>|<sp/>S_IXOTH<sp/>|<sp/>S_IWOTH);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">std::vector&lt;std::string&gt;<sp/><ref refid="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" kindref="member">mml::string::ls</ref>(std::string<sp/>name_include,<sp/>std::string<sp/>name_exclude,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>directories<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;---&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>LS<sp/>=<sp/>ls(name_include,<sp/>name_exclude,<sp/>directories,<sp/>recursive,<sp/>all);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>LS;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">mml::string::substr</ref>(std::size_t<sp/>pos1,<sp/>std::size_t<sp/>length1)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(pos1,length1);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">mml::string::substr</ref>(std::size_t<sp/>pos1)<sp/>noexcept{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.<ref refid="classmml_1_1string_1a093ab1d9253b402afa3cd3391c45d216" kindref="member">substr</ref>(pos1);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" kindref="member">mml::string::sub</ref>(std::size_t<sp/>beg,<sp/>std::size_t<sp/>end)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>beg<sp/>is<sp/>a<sp/>negative<sp/>number<sp/>(negative<sp/>means<sp/>here<sp/>very<sp/>big)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(beg<sp/>&gt;<sp/>value.size()<sp/>&amp;&amp;<sp/>(std::string::npos<sp/>-<sp/>beg<sp/>&lt;<sp/>value.size()))</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>beg<sp/>=<sp/>value.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>()<sp/>-<sp/>(std::string::npos<sp/>-<sp/>beg)<sp/>-1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>is<sp/>negative</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(end<sp/>&gt;<sp/>value.size()<sp/>&amp;&amp;<sp/>(std::string::npos<sp/>-<sp/>end<sp/>&lt;<sp/>value.size()))</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end<sp/>=<sp/>value.size()<sp/>-<sp/>(std::string::npos<sp/>-<sp/>end)<sp/>-1;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.substr(beg,end-(beg-1));</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" kindref="member">mml::string::mkdir_p</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>make_dir<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>string<sp/>to<sp/>create<sp/>the<sp/>directories</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>temp=value;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>value<sp/>to<sp/>create<sp/>directories<sp/>step<sp/>by<sp/>step</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/>pos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>of<sp/>&apos;/&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>temp.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,1);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>directory<sp/>exists<sp/>already<sp/>to<sp/>save<sp/>computing<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value)<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(value)<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>make_dir<sp/>+=<sp/>temp.substr(0,pos);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.substr(pos,temp.size()-pos);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>dir<sp/>exists<sp/>as<sp/>a<sp/>non-directory,<sp/>otherwise<sp/>create<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(make_dir.c_str())<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(<sp/>make_dir<sp/>)<sp/>!=<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kindref="member">mml::shell::error</ref>(</highlight><highlight class="stringliteral">&quot;[mkdir_p]<sp/>Cannot<sp/>create<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>make_dir<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>as<sp/>it<sp/>already<sp/>exists<sp/>as<sp/>a<sp/>non-directory!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mkdir(make_dir.c_str(),<sp/>S_IRWXU<sp/>|<sp/>S_IRWXG<sp/>|<sp/>S_IROTH<sp/>|<sp/>S_IXOTH<sp/>|<sp/>S_IWOTH);</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae7bee7b5a1a67a3069abf52a234583cb" kindref="member">mml::string::remove</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::file::filetype</ref>(this-&gt;value)<sp/>==<sp/><ref refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" kindref="member">S_FILE</ref><sp/>?<sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">std::remove</ref>(this-&gt;value.c_str())<sp/>:<sp/>false;</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>new<sp/>position<sp/>for<sp/>the<sp/>new<sp/>directory<sp/>if<sp/>not<sp/>at<sp/>the<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>temp.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,1);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(pos<sp/>&lt;<sp/>std::string::npos);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>create<sp/>the<sp/>last<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value.c_str()))</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mkdir(value.c_str(),<sp/>S_IRWXU<sp/>|<sp/>S_IRWXG<sp/>|<sp/>S_IROTH<sp/>|<sp/>S_IXOTH<sp/>|<sp/>S_IWOTH);</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="normal"></highlight></codeline>
-<codeline lineno="228"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae7d9615789f946626b4aa04159854187" kindref="member">mml::string::getValue</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;value;</highlight></codeline>
-<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"></highlight></codeline>
-<codeline lineno="232"><highlight class="normal">std::size_t<sp/><ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">mml::string::size</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.size();</highlight></codeline>
-<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae7bee7b5a1a67a3069abf52a234583cb" kindref="member">mml::string::remove</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::file::filetype</ref>(this-&gt;value)<sp/>==<sp/><ref refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" kindref="member">S_FILE</ref><sp/>?<sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">std::remove</ref>(this-&gt;value.c_str())<sp/>:<sp/>false;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
 <codeline lineno="235"><highlight class="normal"></highlight></codeline>
-<codeline lineno="236"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">mml::string::str</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae7d9615789f946626b4aa04159854187" kindref="member">mml::string::getValue</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;value;</highlight></codeline>
 <codeline lineno="238"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" kindref="member">mml::string::writeline</ref>(std::ofstream&amp;<sp/>output)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>&lt;&lt;<sp/>this-&gt;value<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">std::size_t<sp/><ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">mml::string::size</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.size();</highlight></codeline>
 <codeline lineno="242"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" kindref="member">mml::string::writeline</ref>(std::string<sp/>file)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>output(file);</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>&lt;&lt;<sp/>this-&gt;value<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>output.close();</highlight></codeline>
-<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classmml_1_1string_1a3e6b150967878ef73ac82f196ed6f83f" kindref="member">mml::string::c_str</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;value.c_str();</highlight></codeline>
-<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae36494e952a47b87efce6d67a44de3cb" kindref="member">mml::string::stoi</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::stoi(this-&gt;value);</highlight></codeline>
-<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="258"><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal">uint32_t<sp/><ref refid="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" kindref="member">mml::string::hash</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" kindref="member">mml::const_string_hash</ref>(this-&gt;value.c_str());</highlight></codeline>
-<codeline lineno="261"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">mml::string::str</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;value;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" kindref="member">mml::string::writeline</ref>(std::ofstream&amp;<sp/>output)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>&lt;&lt;<sp/>this-&gt;value<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ac4c745060ab997329f4be69b2d122a73" kindref="member">mml::string::writeline</ref>(std::string<sp/>file)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>output(file);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>&lt;&lt;<sp/>this-&gt;value<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>output.close();</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classmml_1_1string_1a3e6b150967878ef73ac82f196ed6f83f" kindref="member">mml::string::c_str</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;value.c_str();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
 <codeline lineno="262"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="264"><highlight class="comment">std::string<sp/>mml::string::getline(std::ifstream&amp;<sp/>input)<sp/>{</highlight></codeline>
-<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/>std::getline(input,this-&gt;value);</highlight></codeline>
-<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>this-&gt;value;</highlight></codeline>
-<codeline lineno="267"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="268"><highlight class="normal"></highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kindref="member">mml::string::getline</ref>(std::ifstream&amp;<sp/>input)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(input,this-&gt;value);</highlight></codeline>
-<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight></codeline>
-<codeline lineno="273"><highlight class="normal"></highlight></codeline>
-<codeline lineno="274"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kindref="member">mml::string::getline</ref>(std::string<sp/>input,<sp/>std::size_t<sp/>line)<sp/>noexcept{</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>input1(input);</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>del;</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>line;<sp/>i++)</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::getline(input1,del);</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(input1,value);</highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>input1.close();</highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
-<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"></highlight></codeline>
-<codeline lineno="285"><highlight class="normal">uint32_t<sp/><ref refid="classmml_1_1string_1acf3840270f4531fb625fcf7593c8835f" kindref="member">mml::string::count</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>name)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>value.find(name.str());</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>value.find(name.str(),<sp/>pos<sp/>+<sp/>name.size());</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"></highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
-<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ad6fc608ad98d065da4f93d8f5fabc9cc" kindref="member">mml::string::cout</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline,<sp/>std::string<sp/>text)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>text<sp/>&lt;&lt;<sp/>this-&gt;value;</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newline)</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="301"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="302"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" kindref="member">mml::string::del_letter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>&lt;<sp/>65<sp/>||<sp/>value[i]<sp/>&gt;<sp/>122)</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
-<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
-<codeline lineno="311"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"></highlight></codeline>
-<codeline lineno="313"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" kindref="member">mml::string::del_number</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>&lt;<sp/>48<sp/>||<sp/>value[i]<sp/>&gt;<sp/>57)</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
-<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"></highlight></codeline>
-<codeline lineno="324"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" kindref="member">mml::string::del_space</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
-<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"></highlight></codeline>
-<codeline lineno="336"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::string::_exist(std::string<sp/>search)<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.find(search)<sp/>&lt;<sp/>std::string::npos<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="339"><highlight class="normal"></highlight></codeline>
-<codeline lineno="340"><highlight class="normal"></highlight></codeline>
-<codeline lineno="341"><highlight class="normal"></highlight></codeline>
-<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae36494e952a47b87efce6d67a44de3cb" kindref="member">mml::string::stoi</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::stoi(this-&gt;value);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">uint32_t<sp/><ref refid="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" kindref="member">mml::string::hash</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" kindref="member">mml::const_string_hash</ref>(this-&gt;value.c_str());</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="272"><highlight class="comment">std::string<sp/>mml::string::getline(std::ifstream&amp;<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/>std::getline(input,this-&gt;value);</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>this-&gt;value;</highlight></codeline>
+<codeline lineno="275"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kindref="member">mml::string::getline</ref>(std::ifstream&amp;<sp/>input)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(input,this-&gt;value);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kindref="member">mml::string::getline</ref>(std::string<sp/>input,<sp/>std::size_t<sp/>line)<sp/>noexcept{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>input1(input);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>del;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>line;<sp/>i++)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::getline(input1,del);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(input1,value);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>input1.close();</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal">uint32_t<sp/><ref refid="classmml_1_1string_1acf3840270f4531fb625fcf7593c8835f" kindref="member">mml::string::count</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>name)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos<sp/>=<sp/>value.find(name.str());</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++count;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>value.find(name.str(),<sp/>pos<sp/>+<sp/>name.size());</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1ad6fc608ad98d065da4f93d8f5fabc9cc" kindref="member">mml::string::cout</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline,<sp/>std::string<sp/>text)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>text<sp/>&lt;&lt;<sp/>this-&gt;value;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(newline)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" kindref="member">mml::string::del_letter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>&lt;<sp/>65<sp/>||<sp/>value[i]<sp/>&gt;<sp/>122)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" kindref="member">mml::string::del_number</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>&lt;<sp/>48<sp/>||<sp/>value[i]<sp/>&gt;<sp/>57)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal">std::string<sp/><ref refid="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" kindref="member">mml::string::del_space</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>save)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;value.length();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>+=<sp/>value[i];</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(value[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(save)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;value<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"></highlight></codeline>
-<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::string::_exist(std::string<sp/>search)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value.find(search)<sp/>&lt;<sp/>std::string::npos<sp/>?<sp/>true<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/string.cpp"/>
   </compounddef>

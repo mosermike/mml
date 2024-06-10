@@ -1,4 +1,4 @@
-.TH "conf" 3 "Sat Jun 8 2024" "mml" \" -*- nroff -*-
+.TH "conf" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -42,6 +42,9 @@ conf
 .ti -1c
 .RI "list \fBhtml_static_path\fP = ['_static']"
 .br
+.ti -1c
+.RI "dictionary \fBbreathe_projects_source\fP"
+.br
 .in -1c
 .SH "Variable Documentation"
 .PP 
@@ -51,6 +54,14 @@ conf
 
 .SS "dictionary conf\&.breathe_projects = { 'mml': '\&.\&./doxygen/xml/' }"
 
+.SS "dictionary conf\&.breathe_projects_source"
+\fBInitial value:\fP
+.PP
+.nf
+1 =  {
+2     "mml" : ( "\&.\&./\&.\&./include/mml", ["standards\&.hpp","thread\&.hpp"] )
+3 }
+.fi
 .SS "string conf\&.copyright = '2024, Mike Moser'"
 
 .SS "list conf\&.exclude_patterns = []"

@@ -61,13 +61,13 @@ bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{mml\+::che
 \begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{namespacemml_a4e23041702a789444e71665de8e19b91}{mml\+::date}} (int info, time\+\_\+t time1=-\/1) noexcept
 \begin{DoxyCompactList}\small\item\em Returns the wished info from the time (like date etc.) Options are\+: \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespacemml_a7ea9b81bab64fa6148ccd5252a5281b6}{mml\+::date}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
-\begin{DoxyCompactList}\small\item\em Returns the actual date and/or time as a std\+::string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_ae53fc572ec720a1c9aebc3ba5458ff5d}{mml\+::date}} (time\+\_\+t time1=-\/1, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Date+Time\char`\"{}, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
+\begin{DoxyCompactList}\small\item\em Returns the date and/or time as a std\+::string. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_ac687254476eb5589ff145f7ccb8f203b}{mml\+::is\+\_\+num}} (char c) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if a character is a number. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_ad1fcba2487a959000bac06da539b792c}{mml\+::range}} (std\+::size\+\_\+t number) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if a number has reached the maximum value (std\+::string\+::npos) \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacemml_a27d9d9cbd2f2498ec71acbe2db69b68a}{mml\+::range}} (std\+::size\+\_\+t, std\+::size\+\_\+t) noexcept
+bool \mbox{\hyperlink{namespacemml_a8648c76abb82d5eb1745f91e4201b247}{mml\+::range}} (std\+::size\+\_\+t number1, std\+::size\+\_\+t number2) noexcept
 \begin{DoxyCompactList}\small\item\em Checks if one of two numbers has reached the maximum value. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}{mml\+::round}} (double number, uint16\+\_\+t digits) noexcept
 \begin{DoxyCompactList}\small\item\em round a number \end{DoxyCompactList}\item 
@@ -88,6 +88,4 @@ std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44
 \begin{DoxyAuthor}{Author}
 Mike Moser
 \end{DoxyAuthor}
-\begin{DoxyNote}{Note}
-Contains several standard functions 
-\end{DoxyNote}
+Contains several standard functions and the class string 

@@ -51,6 +51,7 @@ namespace mml{
 		 * @param verbose_debug Debugging output
 		 * @param all Copy also hidden files
 		 * @param recursive Copy recursive
+		 * @param force Overwrite everything without asking
 		 * @param progress Print out the progress while copying
 		 * @param falsewrite Do not overwrite files in the destination
 		 * @return 0 if successfull
@@ -93,7 +94,7 @@ namespace mml{
 
 		/**
 		 * @brief Determine number of lines in a file
-		 * @param string Path to the file
+		 * @param path Path to the file
 		 * @return size_t Number of lines
 		 */
 		std::size_t num_lines(std::string path);
@@ -101,23 +102,22 @@ namespace mml{
 		// TODO ERROR DOES NOT WORK
 		/**
 		 * @brief Checks if a program exists
-		 * 
-		 * @author Mike/scratch/moser/gris_20150510_009/sir/Exp0
+		 * @param program Program to be checked
 		 */
 		int Program_exist( std::string program );
 		
 		
 		/**
 		 * @note Delete a single file
-		 * @param string path to the file
+		 * @param file path to the file
 		 * @author Mike
 		 */
 		void remove(std::string file);
 		
 		/**
 		 * @note Convert the date of files with specific endings in a directory
-		 * @param string Source path
-		 * @param string Destination path
+		 * @param src Source path
+		 * @param dst Destination path
 		 * @param ends Endings to be checked
 		 * @param recursive Recursive check
 		 * @param all Also check hidden files
@@ -128,7 +128,7 @@ namespace mml{
 
 		/**
 		 * @brief Calculates the size of a file
-		 * @param string Path to the file
+		 * @param filename Path to the file
 		 * @return Size of the file
 		 * @author Lucas
 		 * @throw runtime_error : if file does not exist

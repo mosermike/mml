@@ -73,8 +73,9 @@ namespace mml{
 			 */
 			mml::log &operator=(std::string value) noexcept;
 			
-			/**
+			/** 
 			 * @brief Writes a value into the logfile
+			 * @param log Instance of the class to be used
 			 * @param String Value to be written into the log file
 			*/
 			template <typename T> friend void operator<< (mml::log &log, const T &String) noexcept{

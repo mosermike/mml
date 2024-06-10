@@ -9,7 +9,7 @@
     <innerfile refid="shell_8cpp">shell.cpp</innerfile>
     <innerfile refid="src_2standards_8cpp">standards.cpp</innerfile>
     <innerfile refid="string_8cpp">string.cpp</innerfile>
-    <innerfile refid="thread_8cpp">thread.cpp</innerfile>
+    <innerfile refid="src_2thread_8cpp">thread.cpp</innerfile>
     <innerfile refid="Timer_8cpp">Timer.cpp</innerfile>
     <innerfile refid="Unix_8cpp">Unix.cpp</innerfile>
     <innerfile refid="User_8cpp">User.cpp</innerfile>

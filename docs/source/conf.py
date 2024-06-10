@@ -56,3 +56,7 @@ html_theme = ''
 html_static_path = ['_static']
 
 html_theme = 'pydata_sphinx_theme'
+
+breathe_projects_source = {
+    "mml" : ( "../../include/mml", ["standards.hpp","thread.hpp"] )
+}

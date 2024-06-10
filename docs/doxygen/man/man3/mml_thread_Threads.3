@@ -1,0 +1,234 @@
+.TH "mml::thread::Threads< result >" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mml::thread::Threads< result > \- Class \fBThreads\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <thread\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThreads\fP (int num)"
+.br
+.RI "Initialize with a number of threads\&. "
+.ti -1c
+.RI "\fBThreads\fP & \fBoperator=\fP (const \fBThreads\fP &thread) noexcept"
+.br
+.RI "Operator =\&. "
+.ti -1c
+.RI "\fB~Threads\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP (const std::function< result(int)> &task, int id)"
+.br
+.RI "Starts a function with a specific thread\&. "
+.ti -1c
+.RI "void \fBstart\fP (const std::function< result(int)> &task) noexcept"
+.br
+.RI "Put a specific thread to sleep\&. "
+.ti -1c
+.RI "void \fBsleep\fP (int threadId, int id, double seconds)"
+.br
+.RI "Puts a specific thread to sleep\&. This is should be used inside a lambda function when the function start is started! "
+.ti -1c
+.RI "std::vector< result > \fBgetResults\fP () noexcept"
+.br
+.RI "Get the results from each thread\&. "
+.ti -1c
+.RI "void \fBjoin\fP () noexcept"
+.br
+.RI "Joins all threads and waits for unfinished threads\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBsize\fP = 0"
+.br
+.RI "Number of \fBThreads\fP\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename templ > \fBThreads\fP & \fBoperator<<\fP (\fBThreads\fP &threads, const templ &value) noexcept"
+.br
+.RI "Output a text while taking into account if another thread is writing\&. "
+.ti -1c
+.RI "\fBThreads\fP & \fBoperator<<\fP (\fBThreads\fP &threads, std::ostream &(*manip)(std::ostream &)) noexcept"
+.br
+.RI "Output special characters like std::endl\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename result>
+.br
+class mml::thread::Threads< result >"
+Class \fBThreads\fP\&. 
+
+This class provides functions which can be used to start a task with multiple threads 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename result > \fBmml::thread::Threads\fP< result >::\fBThreads\fP (int num)\fC [inline]\fP"
+
+.PP
+Initialize with a number of threads\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInum\fP Number of \fBThreads\fP 
+.RE
+.PP
+
+.SS "template<typename result > \fBmml::thread::Threads\fP< result >::~\fBThreads\fP ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename result > std::vector<result> \fBmml::thread::Threads\fP< result >::getResults ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Get the results from each thread\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Vector with the results of each thread 
+.RE
+.PP
+
+.SS "template<typename result > void \fBmml::thread::Threads\fP< result >::join ()\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Joins all threads and waits for unfinished threads\&. 
+.SS "template<typename result > \fBThreads\fP& \fBmml::thread::Threads\fP< result >::operator= (const \fBThreads\fP< result > & thread)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Operator =\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthread\fP to be copied 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of this class 
+.RE
+.PP
+
+.SS "template<typename result > void \fBmml::thread::Threads\fP< result >::sleep (int threadId, int id, double seconds)\fC [inline]\fP"
+
+.PP
+Puts a specific thread to sleep\&. This is should be used inside a lambda function when the function start is started! 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreadId\fP The threadId of the thread 
+.br
+\fIid\fP Thread id to sleep 
+.br
+\fIseconds\fP Duration in seconds to sleep 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if id is bigger than the size 
+.RE
+.PP
+
+.SS "template<typename result > void \fBmml::thread::Threads\fP< result >::start (const std::function< result(int)> & task)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Put a specific thread to sleep\&. Starts a function for all threads 
+.PP
+\fBParameters\fP
+.RS 4
+\fItask\fP Function to be executed 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The first argument of the function must be the threadId 
+.PP
+If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -> [return type of the function] {return exampleTask(threadId, arg1, arg2);}; 
+.RE
+.PP
+
+.SS "template<typename result > void \fBmml::thread::Threads\fP< result >::start (const std::function< result(int)> & task, int id)\fC [inline]\fP"
+
+.PP
+Starts a function with a specific thread\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItask\fP Function to be executed 
+.br
+\fIid\fP Thread id which should execute this function 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if id > number of threads 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The first argument of the function must be the threadID 
+.PP
+If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -> [return type of the function] {return exampleTask(threadId, arg1, arg2);}; 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename result > template<typename templ > \fBThreads\fP& operator<< (\fBThreads\fP< result > & threads, const templ & value)\fC [friend]\fP"
+
+.PP
+Output a text while taking into account if another thread is writing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreads\fP Instance of the class used to print 
+.br
+\fIvalue\fP to be printed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
+.RE
+.PP
+
+.SS "template<typename result > \fBThreads\fP& operator<< (\fBThreads\fP< result > & threads, std::ostream &(*)(std::ostream &) manip)\fC [friend]\fP"
+
+.PP
+Output special characters like std::endl\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreads\fP Instance of the class used to print 
+.br
+\fImanip\fP to be printed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename result > int \fBmml::thread::Threads\fP< result >::size = 0"
+
+.PP
+Number of \fBThreads\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

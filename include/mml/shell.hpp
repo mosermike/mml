@@ -81,9 +81,10 @@ namespace mml{
 			}
 
 			/**
-			 * @brief Initialise with the values from the terminal
+			 * @brief Initialise with the values from the terminal and separated flags given with one minus sign
+			 * @param argc1 Number of arguments
 			 * @param argv1 Character vector with the arguments from the shell
-			 * @param argc Number of arguments
+			 * @param value Values which are not separated
 			 * @return Reference to this instance
 			 */
 			

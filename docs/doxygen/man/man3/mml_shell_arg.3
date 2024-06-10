@@ -1,4 +1,4 @@
-.TH "mml::shell::arg" 3 "Sat Jun 8 2024" "mml" \" -*- nroff -*-
+.TH "mml::shell::arg" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -46,7 +46,7 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .ti -1c
 .RI "template<typename\&.\&.\&. values> std::vector< \fBmml::string\fP > & \fBoperator()\fP (int argc1, char **argv1, const values &\&.\&.\&.value) noexcept"
 .br
-.RI "Initialise with the values from the terminal\&. "
+.RI "Initialise with the values from the terminal and separated flags given with one minus sign\&. "
 .ti -1c
 .RI "template<typename\&.\&.\&. values> std::vector< \fBmml::string\fP > & \fBoperator()\fP (char **argv1, int argc1, const values &\&.\&.\&.value) noexcept"
 .br
@@ -158,13 +158,15 @@ true, if values do not exist
 .SS "template<typename\&.\&.\&. values> std::vector<\fBmml::string\fP>& mml::shell::arg::operator() (int argc1, char ** argv1, const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-Initialise with the values from the terminal\&. 
+Initialise with the values from the terminal and separated flags given with one minus sign\&. 
 .PP
 \fBParameters\fP
 .RS 4
+\fIargc1\fP Number of arguments 
+.br
 \fIargv1\fP Character vector with the arguments from the shell 
 .br
-\fIargc\fP Number of arguments 
+\fIvalue\fP Values which are not separated 
 .RE
 .PP
 \fBReturns\fP

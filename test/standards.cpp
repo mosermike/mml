@@ -11,7 +11,7 @@ int main() {
 	test.del_number(true);
 	std::cout << test << std::endl;
 	std::cout << "Now you should see your date and time:" << std::endl;
-	std::cout << mml::date("Date+Time") << std::endl;
+	std::cout << mml::date(-1, "Date+Time") << std::endl;
 	
 	return 0;
 }

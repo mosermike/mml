@@ -38,9 +38,9 @@
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="25" relation="include">
-        </childnode>
         <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -54,11 +54,19 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
       </node>
       <node id="8">
         <label>float.h</label>
       </node>
-      <node id="26">
+      <node id="28">
         <label>cstdint</label>
       </node>
       <node id="4">
@@ -87,7 +95,10 @@
       <node id="6">
         <label>string.h</label>
       </node>
-      <node id="27">
+      <node id="25">
+        <label>future</label>
+      </node>
+      <node id="29">
         <label>mml/Unix.hpp</label>
         <link refid="Unix_8hpp"/>
       </node>
@@ -163,6 +174,9 @@
       <node id="9">
         <label>iostream</label>
       </node>
+      <node id="26">
+        <label>mutex</label>
+      </node>
       <node id="24">
         <label>chrono</label>
       </node>
@@ -183,12 +197,12 @@
       <node id="20">
         <label>algorithm</label>
       </node>
-      <node id="25">
+      <node id="27">
         <label>mml/Timer.hpp</label>
         <link refid="Timer_8hpp"/>
         <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="26" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
@@ -227,7 +241,7 @@
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>test.<ref refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" kindref="member">del_number</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/>test<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Now<sp/>you<sp/>should<sp/>see<sp/>your<sp/>date<sp/>and<sp/>time:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/><ref refid="namespacemml_1a4e23041702a789444e71665de8e19b91" kindref="member">mml::date</ref>(</highlight><highlight class="stringliteral">&quot;Date+Time&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/><ref refid="namespacemml_1a4e23041702a789444e71665de8e19b91" kindref="member">mml::date</ref>(-1,<sp/></highlight><highlight class="stringliteral">&quot;Date+Time&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="17"><highlight class="normal">}</highlight></codeline>

@@ -4,13 +4,6 @@
 
 {\ttfamily \#include $<$standards.\+hpp$>$}
 
-\doxysubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-using \mbox{\hyperlink{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}{iterator}} = std\+::vector$<$ char $>$\+::\mbox{\hyperlink{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}{iterator}}
-\item 
-using \mbox{\hyperlink{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}{const\+\_\+iterator}} = std\+::vector$<$ char $>$\+::\mbox{\hyperlink{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}{const\+\_\+iterator}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +34,7 @@ int \mbox{\hyperlink{classmml_1_1string_ac0006bb0f5c473159ba07ac516a1f0f7}{atoi}
 std\+::string\+::iterator \mbox{\hyperlink{classmml_1_1string_a66057297d6504b42f1c397b15c377359}{begin}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the beginning of the string. \end{DoxyCompactList}\item 
 std\+::string\+::const\+\_\+iterator \mbox{\hyperlink{classmml_1_1string_ab05ba61105f8c99256c2828593a87528}{begin}} () const noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an iterator that points to the beginning of the string. \end{DoxyCompactList}\item 
 const char $\ast$ \mbox{\hyperlink{classmml_1_1string_a3e6b150967878ef73ac82f196ed6f83f}{c\+\_\+str}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns the string as a character pointer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1string_a948f7256bc8c59fc12e7a1fcb2d761a1}{clear}} () noexcept
@@ -61,7 +54,7 @@ bool \mbox{\hyperlink{classmml_1_1string_ae3340aec48652e49410441d77649846e}{empt
 std\+::string\+::iterator \mbox{\hyperlink{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}{end}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the end of the string. \end{DoxyCompactList}\item 
 std\+::string\+::const\+\_\+iterator \mbox{\hyperlink{classmml_1_1string_a81b4a8f4b92871877fd9fbe01e3e169f}{end}} () const noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an iterator that points to the end of the string. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Args$>$ }\\bool \mbox{\hyperlink{classmml_1_1string_a6abba5a305b4ced911f2a61438455a4e}{exist}} (const Args \&... args) noexcept
 \begin{DoxyCompactList}\small\item\em Check if one {\itshape or} another string exists. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a77b559320f1f1ffbda08eb713a5dd8ab}{find}} (char letter, std\+::size\+\_\+t old=0) noexcept
@@ -123,21 +116,6 @@ std\+::istream \& \mbox{\hyperlink{classmml_1_1string_ae2969aae0d5dae67e02f7e8f8
 
 \doxysubsection{Detailed Description}
 Class string which adds additional functions to std\+::string 
-
-\doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}\label{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}} 
-\index{mml::string@{mml::string}!const\_iterator@{const\_iterator}}
-\index{const\_iterator@{const\_iterator}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}{mml\+::string\+::const\+\_\+iterator}} =  std\+::vector$<$char$>$\+::\mbox{\hyperlink{classmml_1_1string_a35e3e6685c5364e0ddfd68f1a7d60bdf}{const\+\_\+iterator}}}
-
-\mbox{\Hypertarget{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}\label{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}} 
-\index{mml::string@{mml::string}!iterator@{iterator}}
-\index{iterator@{iterator}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}{mml\+::string\+::iterator}} =  std\+::vector$<$char$>$\+::\mbox{\hyperlink{classmml_1_1string_a3da80d33f5aa244511801c6eba736c91}{iterator}}}
-
-
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmml_1_1string_a027b118294677870eccf9ff59d4b1e96}\label{classmml_1_1string_a027b118294677870eccf9ff59d4b1e96}} 
@@ -224,6 +202,13 @@ int
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::string\+::const\+\_\+iterator mml\+::string\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
+
+
+Returns an iterator that points to the beginning of the string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string\+::const\+\_\+iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1string_a66057297d6504b42f1c397b15c377359}\label{classmml_1_1string_a66057297d6504b42f1c397b15c377359}} 
 \index{mml::string@{mml::string}!begin@{begin}}
 \index{begin@{begin}!mml::string@{mml::string}}
@@ -374,6 +359,13 @@ bool
 \doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily std\+::string\+::const\+\_\+iterator mml\+::string\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
+
+
+Returns an iterator that points to the end of the string. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string\+::const\+\_\+iterator 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}\label{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}} 
 \index{mml::string@{mml::string}!end@{end}}
 \index{end@{end}!mml::string@{mml::string}}

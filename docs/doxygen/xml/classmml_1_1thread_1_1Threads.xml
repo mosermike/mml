@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1thread_1_1Threads" kind="class" language="C++" prot="public">
+    <compoundname>mml::thread::Threads</compoundname>
+    <includes refid="thread_8hpp" local="no">thread.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename result</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1thread_1_1Threads_1ad4ced761a7a3483f630f27c9bb6b52dd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::thread &gt;</type>
+        <definition>std::vector&lt;std::thread&gt; mml::thread::Threads&lt; result &gt;::threads</definition>
+        <argsstring></argsstring>
+        <name>threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="32" column="25" bodyfile="include/mml/thread.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1thread_1_1Threads_1af79252a112a75f28ca34d28a8e569760" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::future&lt; result &gt; &gt;</type>
+        <definition>std::vector&lt;std::future&lt;result&gt; &gt; mml::thread::Threads&lt; result &gt;::futures</definition>
+        <argsstring></argsstring>
+        <name>futures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="33" column="25" bodyfile="include/mml/thread.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1thread_1_1Threads_1a9e37650a0ec27751a55137801f0736e9" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex mml::thread::Threads&lt; result &gt;::mtx</definition>
+        <argsstring></argsstring>
+        <name>mtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="34" column="12" bodyfile="include/mml/thread.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmml_1_1thread_1_1Threads_1a22bc4fc933c6376e38bb57159d03bf71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::thread::Threads&lt; result &gt;::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of <ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="39" column="5" bodyfile="include/mml/thread.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1abfbf4c61f0f0dee0a5e397e87d1b796b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::thread::Threads&lt; result &gt;::Threads</definition>
+        <argsstring>(int num)</argsstring>
+        <name>Threads</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Initialize with a number of threads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of <ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="45" column="13" bodyfile="include/mml/thread.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a3e88e7f2b8a451e91ca561b92ce2feb1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+        <definition>Threads&amp; mml::thread::Threads&lt; result &gt;::operator=</definition>
+        <argsstring>(const Threads &amp;thread) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+          <declname>thread</declname>
+        </param>
+        <briefdescription>
+<para>Operator =. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>thread</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be copied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of this class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="52" column="21" bodyfile="include/mml/thread.hpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a73748ee939990829c8a6fcd29ecca82c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::thread::Threads&lt; result &gt;::~Threads</definition>
+        <argsstring>()</argsstring>
+        <name>~Threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="59" column="13" bodyfile="include/mml/thread.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a162a1bd5841d4f2310d8ba474a14d029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::thread::Threads&lt; result &gt;::start</definition>
+        <argsstring>(const std::function&lt; result(int)&gt; &amp;task, int id)</argsstring>
+        <name>start</name>
+        <param>
+          <type>const std::function&lt; result(int)&gt; &amp;</type>
+          <declname>task</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Starts a function with a specific thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>task</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to be executed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thread id which should execute this function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if id &gt; number of threads </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The first argument of the function must be the threadID </para>
+</simplesect>
+<simplesect kind="note"><para>If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -&gt; [return type of the function] {return exampleTask(threadId, arg1, arg2);}; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="95" column="18" bodyfile="include/mml/thread.hpp" bodystart="95" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a4449909d0fde1723ab3aea63516656ea" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::thread::Threads&lt; result &gt;::start</definition>
+        <argsstring>(const std::function&lt; result(int)&gt; &amp;task) noexcept</argsstring>
+        <name>start</name>
+        <param>
+          <type>const std::function&lt; result(int)&gt; &amp;</type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+<para>Put a specific thread to sleep. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts a function for all threads <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>task</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to be executed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The first argument of the function must be the threadId </para>
+</simplesect>
+<simplesect kind="note"><para>If task has parameters besides the thread id, one needs to create a lambda function: auto task = [arg1, arg2](int threadId) -&gt; [return type of the function] {return exampleTask(threadId, arg1, arg2);}; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="114" column="18" bodyfile="include/mml/thread.hpp" bodystart="114" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a051998a4103c4c83d0a7a79aa616b41f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::thread::Threads&lt; result &gt;::sleep</definition>
+        <argsstring>(int threadId, int id, double seconds)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>int</type>
+          <declname>threadId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+<para>Puts a specific thread to sleep. This is should be used inside a lambda function when the function start is started! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threadId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threadId of the thread </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thread id to sleep </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration in seconds to sleep </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if id is bigger than the size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="129" column="6" bodyfile="include/mml/thread.hpp" bodystart="129" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1af8cba3532c1ff2d7c19685a93e4e8524" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::vector&lt; result &gt;</type>
+        <definition>std::vector&lt;result&gt; mml::thread::Threads&lt; result &gt;::getResults</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getResults</name>
+        <briefdescription>
+<para>Get the results from each thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector with the results of each thread </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="142" column="25" bodyfile="include/mml/thread.hpp" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1thread_1_1Threads_1a6bd14235eb4f54301a8df885c3f90b46" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::thread::Threads&lt; result &gt;::join</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>join</name>
+        <briefdescription>
+<para>Joins all threads and waits for unfinished threads. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="153" column="18" bodyfile="include/mml/thread.hpp" bodystart="153" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmml_1_1thread_1_1Threads_1a75965dea579aafe9bca1c2e908efbe78" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+        <definition>Threads&amp; operator&lt;&lt;</definition>
+        <argsstring>(Threads &amp;threads, const templ &amp;value) noexcept</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+          <declname>threads</declname>
+        </param>
+        <param>
+          <type>const templ &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Output a text while taking into account if another thread is writing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance of the class used to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="69" column="19" bodyfile="include/mml/thread.hpp" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmml_1_1thread_1_1Threads_1abd0b51b14bbeb03b4d80648c8a19dc0a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+        <definition>Threads&amp; operator&lt;&lt;</definition>
+        <argsstring>(Threads &amp;threads, std::ostream &amp;(*manip)(std::ostream &amp;)) noexcept</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref> &amp;</type>
+          <declname>threads</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;(*)(std::ostream &amp;)</type>
+          <declname>manip</declname>
+        </param>
+        <briefdescription>
+<para>Output special characters like std::endl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance of the class used to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>manip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/thread.hpp" line="81" column="20" bodyfile="include/mml/thread.hpp" bodystart="81" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class <ref refid="classmml_1_1thread_1_1Threads" kindref="compound">Threads</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functions which can be used to start a task with multiple threads </para>
+    </detaileddescription>
+    <location file="include/mml/thread.hpp" line="30" column="9" bodyfile="include/mml/thread.hpp" bodystart="30" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classmml_1_1thread_1_1Threads_1af79252a112a75f28ca34d28a8e569760" prot="private" virt="non-virtual"><scope>mml::thread::Threads</scope><name>futures</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1af8cba3532c1ff2d7c19685a93e4e8524" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>getResults</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a6bd14235eb4f54301a8df885c3f90b46" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>join</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a9e37650a0ec27751a55137801f0736e9" prot="private" virt="non-virtual"><scope>mml::thread::Threads</scope><name>mtx</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a75965dea579aafe9bca1c2e908efbe78" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1abd0b51b14bbeb03b4d80648c8a19dc0a" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a3e88e7f2b8a451e91ca561b92ce2feb1" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>operator=</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a22bc4fc933c6376e38bb57159d03bf71" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>size</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a051998a4103c4c83d0a7a79aa616b41f" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>sleep</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a162a1bd5841d4f2310d8ba474a14d029" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>start</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a4449909d0fde1723ab3aea63516656ea" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>start</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1ad4ced761a7a3483f630f27c9bb6b52dd" prot="private" virt="non-virtual"><scope>mml::thread::Threads</scope><name>threads</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1abfbf4c61f0f0dee0a5e397e87d1b796b" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>Threads</name></member>
+      <member refid="classmml_1_1thread_1_1Threads_1a73748ee939990829c8a6fcd29ecca82c" prot="public" virt="non-virtual"><scope>mml::thread::Threads</scope><name>~Threads</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
