@@ -20,13 +20,13 @@ int exampleTaskWithMultipleParams(int threadId, mml::thread::Threads<int> &threa
 		threads.sleep(threadId, 1,100);
 	}
 	
-	threads << "Thread " << threadId << " is running." << std::endl;
+	threads << "Thread " + std::to_string(threadId) + " is running.\n";
     
 	
 	// Simulate some work with sleep
 	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 
-    threads << "Thread " << threadId << " has finished." << std::endl;
+    threads << "Thread " + std::to_string(threadId) + " has finished.\n";
 	
     return 0;
 }

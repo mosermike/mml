@@ -59,6 +59,7 @@ namespace mml{
 		 * @throw logic_error : If destination exists as a file if a directory is copied
 		 * @throw runtime_error : If user is not permitted to write into the destination
 		 * @throw runtime_error : If last directory in destionation is not a directory
+		 * @todo Copy symbolic and hard link file by creating them
 		 */
 		int copy (mml::string src, mml::string dst, std::string name_in = "", std::string name_ex = "", size_t blocksize = _100MB, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite = false);
 		
@@ -82,6 +83,7 @@ namespace mml{
 		 * -  8: normal file
 		 * - 10: symbolic link
 		 * - 12: Socket
+		 * @todo use library to detect what it is and also then use hard link and symbolic link
 		*/
 		int32_t  filetype(std::string filepath);
 		

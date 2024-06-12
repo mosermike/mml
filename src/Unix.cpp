@@ -22,6 +22,8 @@
 #include <utime.h>
 #include <filesystem>
 #include <sys/mount.h>
+#include <thread>
+#include <chrono>
 
 #include "mml.hpp"
 #include "mml/file.hpp"
@@ -222,7 +224,7 @@ std::string mml::Unix::mount_Dir (std::string mountpath, mml::string mountpoint,
 		std::cout << "This did not work, try again!" << std::endl;
 		
 		count++;
-		mml::thread::sleep(1);
+		std::this_thread::sleep_for(std::chrono::milliseconds(1));
 		
 		mount_Dir(mountpath, mountpoint, controlpoint, user, pass1 = shell::password("[cifs] Password for device ",mml_mount_name), fstype, count);
 	}

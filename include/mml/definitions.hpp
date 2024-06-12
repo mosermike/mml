@@ -59,7 +59,7 @@
 #define _cop_log 			"/var/log/cop.log"
 #define _copy_log 			"/var/log/copy.log"
 //#define _rechner_log 		"/var/log/rechner.log"
-#define _statistik_log 		"/var/log/statistik.log"
+//#define _statistik_log 		"/var/log/statistik.log"
 #define _timer_log			"/var/log/timer.log"
 
 // Logdateien Raspberry

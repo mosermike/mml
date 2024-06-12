@@ -16,7 +16,7 @@
 #include <algorithm>	// std::replace
 #include <signal.h>
 
-#include "mml/Thread.hpp"
+//#include "mml/thread.hpp"
 #include "mml/definitions.hpp"
 #include "mml/Unix.hpp"
 

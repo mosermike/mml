@@ -1,6 +1,6 @@
 /**
  * @author Mike Moser
- * @name Thread.hpp
+ * @name thread.hpp
  * @brief Contains the class Thread which can be used for using threads
  * @details When you want to start a task, you need to use a lambda function. For instance, you can define a task like
  * @details         auto task = [arg1, arg2](int threadId) -> [return type of the function] {return exampleTask(threadId, arg1, arg2);};
@@ -9,6 +9,7 @@
  * @details         useful to use a reference to the class as an argument.
  */
 
+#pragma once
 #ifndef MML_INCLUDE_MML_THREAD_HPP
 #define MML_INCLUDE_MML_THREAD_HPP
 
@@ -22,11 +23,12 @@
 
 namespace mml {
     namespace thread {
-        template<typename result>
+        
 		/**
 		 * @brief Class Threads
 		 * @details This class provides functions which can be used to start a task with multiple threads
 		 */
+		template<typename result>
         class Threads {
         private:
             std::vector<std::thread> threads; // Vector with the threads
@@ -158,14 +160,6 @@ namespace mml {
                 }
             }
         };
-
-		/**
-		 * @brief Stop actual thread for a specific time
-		 * @param s Seconds to wait
-		 */
-		void sleep(float s) noexcept {
-			std::this_thread::sleep_for(std::chrono::milliseconds((int)(s * 1000)));
-		}
     }
 }
 
