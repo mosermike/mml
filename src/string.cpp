@@ -24,7 +24,7 @@
 #include "mml/Unix.hpp"
 
 
-char &mml::string::operator[](int index){		// bestimmte Position ausgeben
+char &mml::string::operator[](int index) {		// bestimmte Position ausgeben
 		if (index < 0 && abs(index) < value.size())
 			index = value.size() + index;
 		
@@ -34,31 +34,35 @@ char &mml::string::operator[](int index){		// bestimmte Position ausgeben
 		return value[index];
 }
 
+const char &mml::string::operator[](int index) const {		// bestimmte Position ausgeben
+		if (index < 0 && abs(index) < value.size())
+			index = value.size() + index;
+		
+		if(index >= (int) value.size())
+			throw std::logic_error("[operator[]] Out of range");
+
+		return value[index];
+}
+
+
 std::string &mml::string::operator()() noexcept{		// value zurückgeben, wenn in Klammern
 	return value;
 }
 
-double mml::string::atof()  noexcept{
+const std::string &mml::string::operator()() const noexcept{		// value zurückgeben, wenn in Klammern
+	return value;
+}
+
+double mml::string::atof() const  noexcept{
 	return std::atof(this->value.c_str());
 }
 
-int mml::string::atoi() noexcept {
+int mml::string::atoi() const noexcept {
 	return std::atoi(this->value.c_str());
 }
 
-std::size_t mml::string::find_back(mml::string name, std::size_t pos, std::size_t low) noexcept {
-	// pos is defined as the position where to start. If pos is too close to the size of the string
-	// it should be reset
-	if(pos == 0 || (value.size() - name.size()) < pos)
-		pos = this->value.size() - name.size() - pos;
-	for(std::size_t i = pos; i >= low; i--) {
-		if(value.substr(i,name.size()) == name.str())
-			return i;
-	}
-	return std::string::npos;
-}
 
-void mml::string::log(std::string logpath) {
+void mml::string::log(std::string logpath) const {
 	
 	mml::Unix::User user;
 	std::size_t		folder = 0;
@@ -78,7 +82,7 @@ void mml::string::log(std::string logpath) {
 	}
 	
 	std::ofstream output;
-	output.open(logpath.c_str(),std::ios::out | std::ios::app);   // mit ans Ende springen
+	output.open(logpath.c_str(),std::ios::out | std::ios::app); // going to the end
 	output << value << std::endl;
 }
 
@@ -89,7 +93,7 @@ std::string mml::string::lower() noexcept {
 	return temp;
 }
 
-std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive, bool all) {
+std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive, bool all) const {
 	std::vector<std::string> 	LS;
 	mml::string 				temp1;
 	mml::string 				temp2; // for name_include used
@@ -147,7 +151,7 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 		if (mml::Unix::filetype(temp1.str()) == S_DIR) {
 			temp1 += "/";
 			if (save_dirs) {
-				temp2 = temp1.replace(path.c_str(),""); // Check if name_include exists in the part after the path
+				temp2 = temp1.replace(path,""); // Check if name_include exists in the part after the path
 				if (temp2.substr(0,temp2.find('/')).exist(name_include))
 					directories.push_back(temp1.str());
 			}
@@ -155,7 +159,7 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 		}
 
 		// If directory in path does not contain include => skip everything
-		temp2 = temp1.replace(path.c_str(),"");
+		temp2 = temp1.replace(path,"");
 		if (temp2.substr(0,temp2.find('/')).exist(name_include))
 			LS.push_back(temp1.str());
 		// List if include exists
@@ -166,25 +170,23 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 	return LS;
 }
 
-std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, bool recursive, bool all) {
+std::vector<std::string> mml::string::ls(std::string name_include, std::string name_exclude, bool recursive, bool all) const {
 	std::vector<std::string> directories = {"---"};
 	std::vector<std::string> LS = ls(name_include, name_exclude, directories, recursive, all);
 	return LS;
 }
 
-
-
 	
-mml::string mml::string::substr(std::size_t pos1, std::size_t length1) noexcept {
+mml::string mml::string::substr(std::size_t pos1, std::size_t length1) const noexcept {
 	return value.substr(pos1,length1);
 }
 
-mml::string mml::string::substr(std::size_t pos1) noexcept{
+mml::string mml::string::substr(std::size_t pos1) const noexcept{
 	
 	return value.substr(pos1);
 }
 
-mml::string mml::string::sub(std::size_t beg, std::size_t end) noexcept {
+mml::string mml::string::sub(std::size_t beg, std::size_t end) const noexcept {
 	// beg is a negative number (negative means here very big)
 	if (beg > value.size() && (std::string::npos - beg < value.size()))
 		beg = value.size() - (std::string::npos - beg) -1;
@@ -227,52 +229,47 @@ bool mml::string::mkdir_p() noexcept {
 	return 0;
 }
 
-bool mml::string::remove() noexcept {
+bool mml::string::remove() const noexcept {
 	return mml::file::filetype(this->value) == S_FILE ? std::remove(this->value.c_str()) : false;
 	
 }
 
 
-std::string mml::string::getValue() noexcept {
+std::string mml::string::getValue() const noexcept {
 	return this->value;
 }
 
-std::size_t mml::string::size() noexcept {
+std::size_t mml::string::size() const noexcept {
 	return value.size();
 }
 
-std::string mml::string::str() noexcept {
+std::string mml::string::str() const noexcept {
 	return this->value;
 }
 
-void mml::string::writeline(std::ofstream& output) noexcept {
+void mml::string::writeline(std::ofstream& output) const noexcept {
 	output << this->value << std::endl;
 }
 
-void mml::string::writeline(std::string file) noexcept {
+void mml::string::writeline(std::string file) const noexcept {
 	std::ofstream output(file);
 	output << this->value << std::endl;
 	output.close();
 }
 
-const char* mml::string::c_str() noexcept {
+const char* mml::string::c_str() const noexcept {
 	return this->value.c_str();
 }
 
 
-int mml::string::stoi() noexcept {
+int mml::string::stoi() const noexcept {
 	return std::stoi(this->value);
 }
 
-uint32_t mml::string::hash() noexcept {
+uint32_t mml::string::hash() const noexcept {
 	return mml::const_string_hash(this->value.c_str());
 }
 
-/*
-std::string mml::string::getline(std::ifstream& input) {
-	std::getline(input,this->value);
-	return this->value;
-}*/
 
 void mml::string::getline(std::ifstream& input) noexcept {
 	std::getline(input,this->value);
@@ -290,7 +287,7 @@ std::string mml::string::getline(std::string input, std::size_t line) noexcept{
 	return value;
 }
 
-uint32_t mml::string::count(mml::string name) noexcept {
+uint32_t mml::string::count(mml::string name) const noexcept {
 	int count = 0;
     size_t pos = value.find(name.str());
 
@@ -301,7 +298,7 @@ uint32_t mml::string::count(mml::string name) noexcept {
 
 	return count;
 }
-void mml::string::cout(bool newline, std::string text) noexcept {
+void mml::string::cout(bool newline, std::string text) const noexcept {
 	std::cout << text << this->value;
 	if(newline)
 		std::cout << std::endl;
@@ -341,7 +338,7 @@ std::string mml::string::del_space(bool save) noexcept {
 	return temp;
 }
 
-bool mml::string::_exist(std::string search) noexcept {
+bool mml::string::_exist(std::string search) const noexcept {
 	return value.find(search) < std::string::npos ? true : false;
 }
 

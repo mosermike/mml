@@ -32,7 +32,7 @@ namespace mml {
 		std::string 				temp		= ""; // Temporary saved string (only for intern functions)
 		
 		// only for internal conversions
-		template <typename templ> mml::string to_mml(templ val) noexcept {
+		template <typename templ> mml::string to_mml(templ val) const noexcept {
 			std::ostringstream stream;
 			stream << val;
 
@@ -109,14 +109,14 @@ namespace mml {
 		*  @param Test Value
 		*  @return bool
 		*/
-		template<typename templ> bool operator==(templ Test) noexcept {return to_mml(Test).str() == value ? true : false;}
+		template<typename templ> bool operator==(templ Test) const noexcept {return to_mml(Test).str() == value ? true : false;}
 
 		/**
 		*  @brief Operator unequal
 		*  @param Test Value
 		*  @return bool
 		*/
-		template<typename templ> bool operator!=(templ Test)  noexcept {return to_mml(Test).str() != value ? true : false;}
+		template<typename templ> bool operator!=(templ Test) const noexcept {return to_mml(Test).str() != value ? true : false;}
 
 
 		/**
@@ -124,7 +124,7 @@ namespace mml {
 		*  @param Test Value to be added
 		*  @return mml::string
 		*/
-		template<typename templ> mml::string operator+(templ Test)  noexcept{return to_mml(this->value + to_mml(Test).str());}
+		template<typename templ> mml::string operator+(templ Test) const noexcept{return to_mml(this->value + to_mml(Test).str());}
 
 
 		/**
@@ -140,27 +140,27 @@ namespace mml {
 		 * @return char
 		 * @throw logic_error : if out of range
 		*/
-		char &operator[](int index);		// bestimmte Position ausgeben
+		char& operator[](int index);
+		const char& operator[](int index) const;
 		
 		/**
 		 * @brief Returns the value
 		 * @return Value of the instance as a std::string
 		*/
-		std::string &operator()() noexcept;		// value zurückgeben, wenn in Klammern
+		std::string &operator()() noexcept;
+		const std::string &operator()() const noexcept;
 
 		/**
 		 * @brief Converts this string into a double
 		 * @return double
 		 */
-		double atof() noexcept;
+		double atof() const noexcept;
 
 		/**
 		 * @brief Convert this string into an integer
 		 * @return int
 		 */
-		int atoi() noexcept;
-
-		
+		int atoi() const noexcept;
 
 		/**
 		 * @brief Returns an iterator that points to the beginning of the string
@@ -178,7 +178,7 @@ namespace mml {
 		* @brief Returns the string as a character pointer
 		* @return char*
 		*/
-		const char* c_str() noexcept;
+		const char* c_str() const noexcept;
 		
 		/**
 		 * @brief Clears the string
@@ -191,7 +191,7 @@ namespace mml {
 		 * @return uint32_t
 		 * 
 		 */
-		uint32_t count(mml::string name)  noexcept;
+		uint32_t count(mml::string name) const noexcept;
 		
 		/**
 		 * @brief Print out the value of this instance
@@ -199,7 +199,7 @@ namespace mml {
 		 * @param text Additional text.
 		 * @return None
 		 */
-		void cout(bool newline = true, std::string text = "") noexcept;
+		void cout(bool newline = true, std::string text = "") const noexcept;
 		
 		/**
 		 * @brief Delete letters
@@ -226,13 +226,13 @@ namespace mml {
 		 * @brief Checks if the string is empty
 		 * @return bool
 		 */
-		  bool empty()  noexcept {return value.empty();};
+		  bool empty() const noexcept {return value.empty();};
 
 		/**
 		 * @brief Returns an iterator that points to the end of the string
 		 * @return std::string::iterator
 		*/
-    	std::string::iterator end()  noexcept { return value.end(); }
+    	std::string::iterator end() noexcept { return value.end(); }
 
 		/**
 		 * @brief Returns an iterator that points to the end of the string
@@ -246,7 +246,7 @@ namespace mml {
 		 * @param name String to be checked
 		 * @return bool
 		 */
-		bool _exist(std::string name)  noexcept;
+		bool _exist(std::string name) const  noexcept;
 
 	public:
 		/**
@@ -254,7 +254,7 @@ namespace mml {
 		 * @param args Parameters to be checked
 		 * @return bool
 		 */
-		template<typename... Args> bool exist(const Args&... args) noexcept {
+		template<typename... Args> bool exist(const Args&... args) const noexcept {
     		return (... || _exist(to_mml(args).str()));
 		}
 		
@@ -264,23 +264,14 @@ namespace mml {
 		 * @param old Value from where to search for the char.
 		 * @return Position
 		 */
-		std::size_t find(char letter,std::size_t old = 0) noexcept {return value.find(letter,old);}
+		std::size_t find(char letter,std::size_t old = 0) const noexcept {return value.find(letter,old);}
 		/** 
 		 * @brief Position of the first appearance of a string after a start position
 		 * @param name Value
 		 * @param old Value from where to search for the char.
 		 * @return Position
 		 */
-		std::size_t find(mml::string name,std::size_t old = 0) noexcept {return value.find(name.str(),old);}
-		
-		/**
-		 * @brief  Check if a string exists but starting from the right side
-		 * @param name String to look for
-		 * @param pos Value from where to search for the string. 0 means that it is not used.
-		 * @param low Lower limit to which point is searched for.
-		 * @return std::size_t
-		 */
-		std::size_t find_back(mml::string name, std::size_t pos = 0, std::size_t low = 0) noexcept;
+		std::size_t find(mml::string name,std::size_t old = 0) const noexcept {return value.find(name.str(),old);}
 
 		/**
 		 * @brief Reads a line from an input file stream and assigns it to the instance
@@ -293,7 +284,7 @@ namespace mml {
 		 * @brief Reads a line from a file
 		 * @param input File name
 		 * @param line Line number.
-		 * @return std::tring
+		 * @return std::string
 		 * 
 		 */
 		std::string getline(std::string input,std::size_t line = 0) noexcept;
@@ -302,13 +293,13 @@ namespace mml {
 		* @brief Get the value of this instance
 		* @return std::string
 		*/
-		std::string getValue() noexcept;
+		std::string getValue() const noexcept;
 		
 		/**
 		 * @brief Creates a hash value of this instance. This hash value can then be used for example in an switch ... case with strings by using hash values.
 		 * @return uint32_t
 		 */
-		uint32_t hash()  noexcept;
+		uint32_t hash() const  noexcept;
            
 		/**
 		 * @brief Writes the value of this instance into a log file
@@ -316,7 +307,7 @@ namespace mml {
 		 * @return None
 		 * @throw runtime_error : if permission to create log file is denied
 		 */
-		void log (std::string logpath);
+		void log (std::string logpath) const;
 		
 		/**
 		* @brief Transforms all letters into low case letters
@@ -335,7 +326,7 @@ namespace mml {
 		 * @note If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively.
 		 * @throw runtime_error : if the string does not exist
 		 */
-		std::vector<std::string> ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive = false, bool all = false);
+		std::vector<std::string> ls(std::string name_include, std::string name_exclude, std::vector<std::string> &directories, bool recursive = false, bool all = false) const;
 		
 		/**
 		 * @brief List all files and directories in a path. Directories end with '/' in the entry
@@ -347,7 +338,7 @@ namespace mml {
 		 * @throw runtime_error : if the string does not exist
 		 * @note If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively.
 		 */
-		std::vector<std::string> ls(std::string name_include = "", std::string name_exclude = "", bool recursive = false, bool all = false);
+		std::vector<std::string> ls(std::string name_include = "", std::string name_exclude = "", bool recursive = false, bool all = false) const;
 			
 		/**
 		* @brief Create directory with creating parent directories
@@ -359,7 +350,7 @@ namespace mml {
 		 * @brief Remove the file with the value of the instance
 		 * @return bool
 		 */
-		bool remove() noexcept;
+		bool remove() const noexcept;
 			
 		/**
 		 * @brief Replace sth in the string with sth else
@@ -369,9 +360,9 @@ namespace mml {
 		 * @return mml::string
 		 * @throw invalid_argument : if str_old is empty
 		 */
-		template <typename T> mml::string replace(T str_old, T str_new, std::size_t pos = 0) {
-			mml::string str_old1(str_old);
-			mml::string str_new1(str_new);
+		template <typename T1,typename T2> mml::string replace(T1&& str_old, T2&& str_new, std::size_t pos = 0) {
+			 mml::string str_old1(std::forward<T1>(str_old)); // Convert str_old to mml::string
+            mml::string str_new1(std::forward<T2>(str_new));
 
 			if (str_old1.empty()) {
 				throw std::invalid_argument("The value to be replaced must not be empty.");
@@ -391,31 +382,33 @@ namespace mml {
 		/** 
 		 * @brief Get position of last occurance of a character
 		 * @param letter Value to be found
+		 * @param pos Position where to begin to search to the right
+		 * @param end Position where to stop the search from the right
 		 * @return std::size_t
 		 */
-		std::size_t rfind(char letter) noexcept {return value.rfind(letter);}
+		std::size_t rfind(char letter, std::size_t pos = std::string::npos, std::size_t end = 0) const noexcept {return value.substr(end).rfind(letter, pos)+end;}
 		
 		/**
 		 * @brief Compute size of the string
 		 * @return std::size_t
 		 */
 		
-		std::size_t size() noexcept;
-		
-		/**
-		 * @brief Create substring 
-		 * @param pos1 Start position
-		 * @param length1 Length of the string
-		 * @return mml::string
-		*/
-		mml::string substr(std::size_t pos1, std::size_t length1) noexcept;
+		std::size_t size() const noexcept;
 
 		/**
 		 * @brief Create a substring starting from this position to the end
 		 * @param pos1 Start position to the end
 		 * @return mml::string
 		*/
-		mml::string substr(std::size_t pos1) noexcept;
+		mml::string substr(std::size_t pos1) const noexcept;
+
+		/**
+		 * @brief Create substring 
+		 * @param pos1 Start position
+		 * @param length1 Length of the string
+		 * @return mml::string
+		*/
+		mml::string substr(std::size_t pos1, std::size_t length1) const noexcept;
 		
 		/**
 		 * @brief Create a substring starting and ending of specific positions
@@ -423,33 +416,33 @@ namespace mml {
 		 * @param end End of the new string
 		 * @return mml::string
 		 */
-		mml::string sub(std::size_t beg, std::size_t end) noexcept;
+		mml::string sub(std::size_t beg, std::size_t end) const noexcept;
 		
 		/**
 		* @brief Transform this instance to an integer
 		* @return int
 		*/
-		int stoi() noexcept;
+		int stoi() const noexcept;
 		
 		/**
 		 * @brief Return the value of this instance as a std::string
 		 * @return std::string
 		*/
-		std::string str() noexcept;
+		std::string str() const noexcept;
 		
 		/**
 		 * @brief Write this instance into the end of a file 
 		 * @param output Write to this output file stream
 		 * @return None
 		 */
-		void writeline(std::ofstream& output) noexcept;
+		void writeline(std::ofstream& output) const noexcept;
 
 		/**
 		 * @brief Write this instance into the end of a file
 		 * @param output Path to the file
 		 * @return None
 		 */
-		void writeline(std::string output) noexcept;
+		void writeline(std::string output) const noexcept;
 		
 		~string(){} // Destruktor
 	};

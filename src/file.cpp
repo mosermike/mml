@@ -262,7 +262,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
         if(mml::file::filetype(actual_src_dir.getValue()) == S_FILE){
         	if(actual_dst_dir[-1] == '/'){
         		// Search last part from source to determine the name of the goal path
-        		temp_size = actual_src_dir.find_back("/",0,0);
+        		temp_size = actual_src_dir.rfind('/',std::string::npos,0);
         		if(temp_size == std::string::npos)
         			dst += src;
         		else {
@@ -305,7 +305,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			else {
 				temp_size = 0;
 				do {
-					temp_size = actual_dst_check.find_back("/",0,1);
+					temp_size = actual_dst_check.rfind('/',std::string::npos,1);
 					actual_dst_check = actual_dst_check.substr(0,temp_size);
 				} while(temp_size < std::string::npos && (!mml::Unix::exist(actual_dst_check.str())));
 
@@ -319,7 +319,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
             // **************************************************
             // *	Create the directory to the point needed	*
             // **************************************************
-			temp_size = dst.find_back("/",0,0);
+			temp_size = dst.rfind('/',std::string::npos,0);
 			if(!mml::Unix::exist(dst.substr(0,temp_size).str()))
             	dst.substr(0,temp_size).mkdir_p();
 			else if(mml::file::filetype(dst.substr(0,temp_size).str()) != S_DIR)
@@ -432,7 +432,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	else {
 		temp_size = 0;
 		do {
-			temp_size = actual_dst_check.find_back("/",0,1);
+			temp_size = actual_dst_check.rfind('/',std::string::npos,1);
 			actual_dst_check = actual_dst_check.substr(0,temp_size);
 		} while(temp_size < std::string::npos && (!mml::Unix::exist(actual_dst_check.str())));
 

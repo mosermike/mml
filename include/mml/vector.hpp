@@ -58,16 +58,37 @@ namespace mml{
 		vector operator=(mml::vector<T> temp) noexcept {vec = temp.vec; return *this;}
 		
 		/**
+		 * @brief Returns a value at a specific index
+		 * @param index Index to be returned
+		 * @return value at this index
+		 * @throw out_of_range : if index not in range
+		*/
+		T &operator[](int index) {
+			if (index < 0)
+				index = vec.size() + index;
+			if(abs(index) > vec.size())	
+				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
+			return vec[index];
+		}
+		const T &operator[](int index) const {
+			if (index < 0)
+				index = vec.size() + index;
+			if(abs(index) > vec.size())	
+				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
+			return vec[index];
+		}
+		
+		/**
 		* @brief iterator to the beginning of the vector
 		* @return iterator
 		*/
-		typename std::vector<T>::iterator begin() noexcept {return vec.begin();}
+		typename std::vector<T>::iterator begin() const noexcept {return vec.begin();}
 
 		/**
 		* @brief Checks whether the vector is empty
 		* @return iteratur
 		*/
-		bool empty() noexcept {return this->vec.empty();}
+		bool empty() const noexcept {return this->vec.empty();}
 
 		/**
 		* @brief iterator to the end of the vector
@@ -108,20 +129,6 @@ namespace mml{
 		 * @return Iterator
 		*/
 		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) noexcept {return vec.insert(position,val);}
-
-		/**
-		 * @brief Returns a value at a specific index
-		 * @param index Index to be returned
-		 * @return value at this index
-		 * @throw out_of_range : if index not in range
-		*/
-		T &operator[](int index){
-			if (index < 0)
-				index = vec.size() + index;
-			if(abs(index) > vec.size())	
-				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
-			return vec[index];
-		}
 
 		/**
 		 * @brief Removes the last entry
@@ -178,7 +185,7 @@ namespace mml{
 		 * @param value Value to be checked
 		 * @return std::size_t 
 		 */
-		std::size_t count(T value) noexcept {
+		std::size_t count(T value) const noexcept {
 			std::size_t  counts = 0;
 			for(T i : vec) {
 				if(i == value)
@@ -191,7 +198,7 @@ namespace mml{
 		 * @brief print elements in the vector
 		 * @param newline Print with line breaks
 		 */
-		void cout(bool newline = false) noexcept {
+		void cout(bool newline = false) const noexcept {
 			if (vec.empty()) {
 				std::cout << "[cout] Vector is empty" << std::endl;
 				return;
@@ -228,7 +235,7 @@ namespace mml{
 		 * @param name String to be checked
 		 * @return bool
 		 */
-		bool _exist(const T& name)  noexcept {return std::find(this->vec.begin(), this->vec.end(), name) != this->vec.end();}
+		bool _exist(const T& name) const noexcept {return std::find(this->vec.begin(), this->vec.end(), name) != this->vec.end();}
 
 	public:
 		/**
@@ -237,7 +244,7 @@ namespace mml{
 		 * @return bool
 		 */
 		template <typename... values>
-		bool exist(const values&... value) noexcept {
+		bool exist(const values&... value) const noexcept {
 			return (... || _exist(value));
 		}
 		
@@ -247,7 +254,7 @@ namespace mml{
 		 * @param start Defines at what position to start to be looked for
 		* @return std::size_t
 		*/
-		std::size_t find(const T value, size_t start = 0) noexcept {
+		std::size_t find(const T value, size_t start = 0) const noexcept {
 			for(size_t i = start; i < vec.size(); i++) {
 				if (mml::to_string(vec[i]).find(mml::to_string(value).str()) < std::string::npos)
 					return i;
@@ -263,7 +270,7 @@ namespace mml{
 		 * @param last Print this at the end of the logfile after all vlaues are written
 		 * @param separator Separation sign after each value if newline = false
 		 */
-		void log(mml::string logpath, bool newline = false, mml::string first = "", mml::string last = "", mml::string separator = ",") noexcept {
+		void log(mml::string logpath, bool newline = false, mml::string first = "", mml::string last = "", mml::string separator = ",") const noexcept {
 			
 			// Log file
 			mml::log log(logpath);
@@ -306,7 +313,7 @@ namespace mml{
 		 * @return Vektor
 		 * @throw logic_error : if vector empty or type is not a number
 		*/
-		vector<T> operator*(const T &value) {
+		vector<T> operator*(const T &value) const {
 			if(vec.empty())
 				throw std::logic_error("[*] Vector empty");
 			
@@ -343,7 +350,7 @@ namespace mml{
 		 * @return Vector with the added value
 		 * @throw logic_error : if vector is empty
 		 */
-		vector<T> operator+(const T &value) {
+		vector<T> operator+(const T &value) const {
 			if(vec.empty())
 				throw std::logic_error("[+] Vector empty");
 			
@@ -387,7 +394,7 @@ namespace mml{
 		 * @return Sum of the vector
 		 * @throw logic_error : if vector is empty or if template is boolean
 		 */
-		T sum() {
+		T sum() const {
 			if(vec.empty())
 				throw std::logic_error("[sum] Vector empty");
 			
@@ -420,7 +427,7 @@ namespace mml{
 		 * @return resulting vector
 		 * @throw logic_error : if vector sizes are not the same
 		*/
-		mml::vector<T> operator+(vector<T> temp) {
+		mml::vector<T> operator+(vector<T> temp) const {
 			// Check if possible
 			if(vec.size() != temp.size())
 				throw std::logic_error("[+] Vectors have different sizes (" + std::to_string(vec.size()) + " vs. " + std::to_string(temp.size()) + ")!");
@@ -455,7 +462,7 @@ namespace mml{
 		 * @return vector
 		 * @throw logic_error : if type is not numeric
 		 */
-		mml::vector<T> operator^(const T exponent) {
+		mml::vector<T> operator^(const T exponent) const {
 			if(!std::is_arithmetic<T>::value)
 				throw std::logic_error("[^] Type of the vector is not arithmetic");
 			
@@ -490,7 +497,7 @@ namespace mml{
 		 * @brief Return the std::vector
 		 * @return Vector of the standard library
 		 */
-		typename std::vector<T> tovec() {return vec;}
+		typename std::vector<T> tovec() const noexcept {return vec;}
 
 	};
 
