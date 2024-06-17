@@ -82,7 +82,7 @@ namespace mml{
 		* @brief iterator to the beginning of the vector
 		* @return iterator
 		*/
-		typename std::vector<T>::iterator begin() const noexcept {return vec.begin();}
+		typename std::vector<T>::iterator begin() noexcept {return vec.begin();}
 
 		/**
 		* @brief Checks whether the vector is empty

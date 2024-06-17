@@ -16,7 +16,7 @@
 int exampleTaskWithMultipleParams(int threadId, mml::thread::Threads<int> &threads) {
     // Put thread 0 and 1 to sleep
 	if(threads.size > 2) {
-		threads.sleep(threadId, 0,20000);
+		threads.sleep(threadId, 0,5000);
 		threads.sleep(threadId, 1,100);
 	}
 	
@@ -69,14 +69,17 @@ int main() {
 	std::cout << "│ Performing test for thread.hpp │" << std::endl;
 	std::cout << "╰────────────────────────────────╯" << std::endl;
     
-	// Parameter
+	// Parameters
 	const int n = std::thread::hardware_concurrency();  // Number of threads (maximum of the hardware)
     const int rangeStart = 1;
     const int rangeEnd = 12500000*8; // Range for prime numbers per thread
 	const int rangePerThread = 12500000/n;
 
+	std::cout << "Start Example Task" << std::endl;
+	if(n > 2)
+		std::cout << "Task 0 should finish last" << std::endl;
+
     mml::thread::Threads<int> threads(n);
-	
 
     // Use a lambda to bind the additional parameters to the task function
     auto task = [&threads](int threadId) -> int {
@@ -88,6 +91,12 @@ int main() {
 	
     // Join all threads
     threads.join();
+
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
+	
+	std::cout << "Start Searching Prime Numbers" << std::endl;
 
 	auto task1 = [&threads, &rangeStart, &rangePerThread, &rangeEnd](int threadId) -> int {
 		int start = rangeStart + threadId * rangePerThread;

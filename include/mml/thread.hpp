@@ -57,11 +57,7 @@ namespace mml {
                 futures = thread.futures;
                 return *this;
             }
-
-            ~Threads() {
-                join();
-            }
-
+			
 			/**
 			 * @brief Output a text while taking into account if another thread is writing
 			 * @param threads Instance of the class used to print
@@ -159,6 +155,13 @@ namespace mml {
                     }
                 }
             }
+
+			/**
+			 * @brief Deconstructor which executes the functino join
+			 */
+			~Threads() {
+				join();
+			}
         };
     }
 }

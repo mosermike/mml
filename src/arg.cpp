@@ -13,7 +13,7 @@
 
 #include "mml/shell.hpp"
 
-std::size_t mml::shell::arg::begin(const std::string& str) noexcept {
+std::size_t mml::shell::arg::begin(const std::string& str) const noexcept {
 	for(std::size_t i = 0; i < vec.size() ; ++i)
 		for(std::size_t a = 0; a < (vec[i]).size() ; a++)
 			if(vec[i].substr(0,a) == str)
@@ -59,14 +59,14 @@ void mml::shell::arg::_init(std::vector<mml::string>& excepts) noexcept {
 
 
 
-std::size_t mml::shell::arg::pos(const std::string& str) noexcept {
+std::size_t mml::shell::arg::pos(const std::string& str) const noexcept {
 	for(std::size_t i = 0; i < vec.size() ; ++i)
 		if(vec[i].getValue() == str)
 			return i;
 	return std::string::npos;
 }
 	
-std::size_t mml::shell::arg::pos(const std::string& str1, const std::string& str2) noexcept {
+std::size_t mml::shell::arg::pos(const std::string& str1, const std::string& str2) const noexcept {
 	std::size_t pos1 = pos(str1);
 	return pos1 < vec.size() ?  pos1 : pos(str2);
 }

@@ -59,15 +59,15 @@ void mml::shell::formation(mml::string format1) {
 	//DEFINITION
 	std::map < std::string , int > format;
 
-	//FORMATIERUNGEN
+	//Options
     format [ "normal" ] = 0;
 	format [ "fat" ] = 1;
 	format [ "cursive" ] = 2;          //Kursiv
     format [ "underline"] = 4;
     format[ "blink" ] = 5;
-    format[ "rblink" ] = 25;
+    //format[ "rblink" ] = 25;
     format[ "reverse" ] = 7;
-    format[ "rreverse" ] = 27;
+   // format[ "rreverse" ] = 27;
 	
 	if ( format[format1.getValue()] == 0 && format1 != "normal" ) {
 		std::cout << "Your colour doesn't exist or something went wrong." << "\nPlease check the uncompiled file, if available. Otherwise use another code for the colour!" << std::endl;
@@ -117,7 +117,7 @@ void mml::shell::cout(mml::string text, bool newline, std::string colour) {
 		std::size_t temp = text.find("[");
 		if(temp != 0) {
 			output = text.sub(0,temp-1);
-			text = text.replace(output.c_str(),"");
+			text = text.replace(output, "");
 			std::cout << output;
 		}
 		// Farbe ändern
@@ -126,7 +126,7 @@ void mml::shell::cout(mml::string text, bool newline, std::string colour) {
 		// Ende der Klammer finden
 		temp = text.find("]");
 		output = text.sub(0,temp+1);
-		text = text.replace(output.c_str(),"");
+		text = text.replace(output,"");
 		std::cout << output;
 		mml::shell::normal();
 		std::cout << text;
@@ -189,8 +189,8 @@ void mml::shell::error(std::string text){
 extern mml::string mml_pass;
 
 // Passwort von der Shell lesen
-std::string mml::shell::password(std::string ausgabe, std::string source){
-	std::string data = ausgabe + source + ": ";
+std::string mml::shell::password(std::string print, std::string add){
+	std::string data = print + add + ": ";
 	mml_pass = getpass(data.c_str());
 	return mml_pass.str();
 }
