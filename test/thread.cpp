@@ -73,7 +73,7 @@ int main() {
 	const int n = std::thread::hardware_concurrency();  // Number of threads (maximum of the hardware)
     const int rangeStart = 1;
     const int rangeEnd = 12500000*8; // Range for prime numbers per thread
-	const int rangePerThread = 12500000/n;
+	const int rangePerThread = rangeEnd/n;
 
 	std::cout << "Start Example Task" << std::endl;
 	if(n > 2)
@@ -101,7 +101,7 @@ int main() {
 	auto task1 = [&threads, &rangeStart, &rangePerThread, &rangeEnd](int threadId) -> int {
 		int start = rangeStart + threadId * rangePerThread;
         int end = (threadId == threads.size - 1) ? rangeEnd : start + rangePerThread - 1;
-
+		threads << std::to_string(threadId) + "from " + std::to_string(start)  + " to " + std::to_string(end) << std::endl;
         return search_prime(threadId, start, end);
     };
 
@@ -127,6 +127,9 @@ int main() {
 	else
 		std::cout << "Found " << res << " primes in range " << rangeStart << " to " << rangeEnd << " but 5761455 were expected." << std::endl;
 	
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
 	
     return 0;
 }
