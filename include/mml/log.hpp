@@ -78,10 +78,20 @@ namespace mml{
 			 * @param log Instance of the class to be used
 			 * @param String Value to be written into the log file
 			*/
-			template <typename T> friend void operator<< (mml::log &log, const T &String) noexcept{
-				log.output << String << std::endl;
-				return;
+			template <typename T> friend log& operator<< (mml::log &log, const T &String) noexcept{
+				log.output << String;
+				return log;
 			}
+
+			/**
+			 * @brief Output special characters like std::endl
+			 * @param manip to be printed
+			 * @return ostream
+			*/
+            friend log& operator<<(mml::log &log, std::ostream& (*manip)(std::ostream&)) noexcept {
+                log.output << manip;
+                return log;
+            }
 			
 			/**
 			 * @brief Backups the log file by copying it to [filename].bak 
