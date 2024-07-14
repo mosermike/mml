@@ -1,14 +1,17 @@
-.TH "include/mml/shell.hpp" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "include/mml/shell.hpp" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-include/mml/shell.hpp
+include/mml/shell.hpp \- Functions and a class concerning the shell\&.  
+
 .SH SYNOPSIS
 .br
 .PP
 \fC#include <iostream>\fP
 .br
 \fC#include <vector>\fP
+.br
+\fC#include 'mml/standards\&.hpp'\fP
 .br
 \fC#include 'mml/vector\&.hpp'\fP
 .br
@@ -29,16 +32,6 @@ include/mml/shell.hpp
 .ti -1c
 .RI " \fBmml::shell\fP"
 .br
-.ti -1c
-.RI " \fBmml::functions\fP"
-.br
-.in -1c
-.SS "Typedefs"
-
-.in +1c
-.ti -1c
-.RI "typedef \fBmml::shell::arg\fP \fBmml::functions::vector\fP"
-.br
 .in -1c
 .SS "Functions"
 
@@ -46,40 +39,64 @@ include/mml/shell.hpp
 .ti -1c
 .RI "void \fBmml::shell::background\fP (string colour)"
 .br
+.RI "Change background of the shell\&. "
 .ti -1c
 .RI "void \fBmml::shell::chapter\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a chapter of a help page\&. "
 .ti -1c
 .RI "void \fBmml::shell::cout\fP (\fBmml::string\fP text, bool newline=true, std::string colour='lightgreen')"
 .br
+.RI "Print to the shell\&. "
 .ti -1c
 .RI "void \fBmml::shell::error\fP (std::string text)"
 .br
+.RI "Print an error in red colour and exit the program\&. "
 .ti -1c
-.RI "void \fBmml::shell::formation\fP (string format1)"
+.RI "void \fBmml::shell::formation\fP (string format)"
 .br
+.RI "Change the formation of printed texts in the shell\&. "
 .ti -1c
 .RI "void \fBmml::shell::letter\fP (string colour)"
 .br
+.RI "Change printed text colour\&. "
 .ti -1c
 .RI "void \fBmml::shell::normal\fP ()"
 .br
+.RI "Reverse changes in the print behaviour of the shell\&. "
 .ti -1c
 .RI "void \fBmml::shell::note\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a note in lightgray\&. "
 .ti -1c
-.RI "void \fBmml::shell::option\fP (std::string chapter, std::string option)"
+.RI "void \fBmml::shell::option\fP (std::string option, std::string descr)"
 .br
+.RI "Print an option in a help page\&. "
 .ti -1c
-.RI "std::string \fBmml::shell::password\fP (std::string ausgabe, std::string source)"
+.RI "std::string \fBmml::shell::password\fP (std::string print, std::string add)"
 .br
+.RI "Input of a password\&. "
 .ti -1c
 .RI "void \fBmml::shell::warn\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a warning and exit the program\&. "
 .ti -1c
 .RI "void \fBmml::shell::warn_opt\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a warning without exiting the program\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Functions and a class concerning the shell\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser 
+.RE
+.PP
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for mml from the source code\&.

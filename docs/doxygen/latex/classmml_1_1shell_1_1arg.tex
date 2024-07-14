@@ -26,21 +26,17 @@ Collaboration diagram for mml\+::shell\+::arg\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_a747b9774f1126f21cf5c306a1723d006}{arg}} (int argc1, char $\ast$$\ast$argv1)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize with the arguments from the main class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_aa6622e4fe1d8757b9b5548d8c4228e7b}{arg}} (char $\ast$$\ast$argv1, int argc1)
-\item 
-\mbox{\hyperlink{classmml_1_1shell_1_1arg_abace6a9091a7b2ddd74c1cb5e1e73311}{arg}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} a)
-\item 
-\mbox{\hyperlink{classmml_1_1shell_1_1arg_a961d8826d7d997e969554eb1f17113a3}{arg}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} a, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} b)
-\item 
-\mbox{\hyperlink{classmml_1_1shell_1_1arg_a442600800a4d78ca1fad60923d64ac75}{arg}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} a, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} b, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize with the arguments from the main class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... T$>$ }\\\mbox{\hyperlink{classmml_1_1shell_1_1arg_acc1ae3ac77dd64129ea1bfd92b9acd51}{arg}} (const T \&... args)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_ab53c609890f3535dc7c2357513e53fb0}{arg}} (std\+::vector$<$ std\+::string $>$ vec\+\_\+temp)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_af44c7cca70d975a2e084e4044032fbf4}{arg}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_a25993080b5a2c1694d5659fa97640be7}{arg}} (\mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \&vec\+\_\+copy)
-\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_abaed096f0d4a7151beb3cfaa447b93ab}{operator=}} (const \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \&vec\+\_\+temp)
 \item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_af940491905058f07818cb7a613b1c917}{operator=}} (const std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \&vec\+\_\+temp)
@@ -49,78 +45,121 @@ Collaboration diagram for mml\+::shell\+::arg\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Initialise with the values from the terminal and separated flags given with one minus sign. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... values$>$ }\\std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \& \mbox{\hyperlink{classmml_1_1shell_1_1arg_a0d3883a51dd4012f770892aa41d857d5}{operator()}} (char $\ast$$\ast$argv1, int argc1, const values \&...value) noexcept
 \item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a9acf696f93656013a6515b3c1ce2a4fa}{begin}} (const std\+::string \&str) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a1230d5ca78a279f31eb463750e38ef04}{begin}} (const std\+::string \&str) const noexcept
 \begin{DoxyCompactList}\small\item\em Determine position where an argument starts with a specific string. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... values$>$ }\\void \mbox{\hyperlink{classmml_1_1shell_1_1arg_a02e44039b017a4f781be19a8014e037e}{init}} (const values \&... value) noexcept
 \begin{DoxyCompactList}\small\item\em Determine options given with one minus and separate them ignoring specific strings. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename... values$>$ }\\bool \mbox{\hyperlink{classmml_1_1shell_1_1arg_a641b5dd2acbb18b032d7666649448fe2}{nexist}} (const values \&... value) noexcept
+{\footnotesize template$<$typename... values$>$ }\\bool \mbox{\hyperlink{classmml_1_1shell_1_1arg_a318065c8db20353c8e806c18886880ae}{nexist}} (const values \&... value) const noexcept
 \begin{DoxyCompactList}\small\item\em Determine if an element does not exist. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a2fd200cb84b0a25149e81b7c9a5e5ddd}{pos}} (const std\+::string \&str) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_adf0a7a692eac8250d4090da2c20d10ff}{pos}} (const std\+::string \&str) const noexcept
 \begin{DoxyCompactList}\small\item\em Determine the position of a searched string. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a2955766a51d32939dd723a905bfda337}{pos}} (const std\+::string \&str1, const std\+::string \&str2) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1shell_1_1arg_a458009345398b09e87cd05f8f743fcec}{pos}} (const std\+::string \&str1, const std\+::string \&str2) const noexcept
 \begin{DoxyCompactList}\small\item\em Determine the position of a searched string or another. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \mbox{\hyperlink{classmml_1_1shell_1_1arg_a919f80e695b5fd3367835108e61fe2a0}{replace}} (T Old, T New) noexcept
 \begin{DoxyCompactList}\small\item\em Replace a string in each element. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1shell_1_1arg_a225c1fad4652407d495f60fddd0ce118}{$\sim$arg}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{classmml_1_1shell_1_1arg_adc4d7547233ccee2ca6f20c394a4754d}{argc}} = 0
-\item 
-char $\ast$$\ast$ \mbox{\hyperlink{classmml_1_1shell_1_1arg_a46c90e04ef02da028cdbc5ba12fbe938}{argv}} = \{\}
-\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_a747b9774f1126f21cf5c306a1723d006}\label{classmml_1_1shell_1_1arg_a747b9774f1126f21cf5c306a1723d006}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
 {\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{int}]{argc1,  }\item[{char $\ast$$\ast$}]{argv1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Initialize with the arguments from the main class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc1} & Number of arguments \\
+\hline
+{\em argv1} & Arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_aa6622e4fe1d8757b9b5548d8c4228e7b}\label{classmml_1_1shell_1_1arg_aa6622e4fe1d8757b9b5548d8c4228e7b}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{argv1,  }\item[{int}]{argc1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_abace6a9091a7b2ddd74c1cb5e1e73311}\label{classmml_1_1shell_1_1arg_abace6a9091a7b2ddd74c1cb5e1e73311}} 
+
+
+Initialize with the arguments from the main class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argv1} & Arguments \\
+\hline
+{\em argc1} & Number of arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1shell_1_1arg_acc1ae3ac77dd64129ea1bfd92b9acd51}\label{classmml_1_1shell_1_1arg_acc1ae3ac77dd64129ea1bfd92b9acd51}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
-{\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{const T \&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a961d8826d7d997e969554eb1f17113a3}\label{classmml_1_1shell_1_1arg_a961d8826d7d997e969554eb1f17113a3}} 
-\index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
-\index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
-{\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{a,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a442600800a4d78ca1fad60923d64ac75}\label{classmml_1_1shell_1_1arg_a442600800a4d78ca1fad60923d64ac75}} 
-\index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
-\index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
-{\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{a,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{b,  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Values to be put into the class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the class 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_ab53c609890f3535dc7c2357513e53fb0}\label{classmml_1_1shell_1_1arg_ab53c609890f3535dc7c2357513e53fb0}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
 {\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{vec\+\_\+temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
 
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_af44c7cca70d975a2e084e4044032fbf4}\label{classmml_1_1shell_1_1arg_af44c7cca70d975a2e084e4044032fbf4}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
 {\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
 
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_a25993080b5a2c1694d5659fa97640be7}\label{classmml_1_1shell_1_1arg_a25993080b5a2c1694d5659fa97640be7}} 
 \index{mml::shell::arg@{mml::shell::arg}!arg@{arg}}
 \index{arg@{arg}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+\doxysubsubsection{\texorpdfstring{arg()}{arg()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily mml\+::shell\+::arg\+::arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}} \&}]{vec\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+\_\+copy} & Instance of this class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of the new created class 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1shell_1_1arg_a225c1fad4652407d495f60fddd0ce118}\label{classmml_1_1shell_1_1arg_a225c1fad4652407d495f60fddd0ce118}} 
 \index{mml::shell::arg@{mml::shell::arg}!````~arg@{$\sim$arg}}
 \index{````~arg@{$\sim$arg}!mml::shell::arg@{mml::shell::arg}}
@@ -130,11 +169,11 @@ char $\ast$$\ast$ \mbox{\hyperlink{classmml_1_1shell_1_1arg_a46c90e04ef02da028cd
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a9acf696f93656013a6515b3c1ce2a4fa}\label{classmml_1_1shell_1_1arg_a9acf696f93656013a6515b3c1ce2a4fa}} 
+\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a1230d5ca78a279f31eb463750e38ef04}\label{classmml_1_1shell_1_1arg_a1230d5ca78a279f31eb463750e38ef04}} 
 \index{mml::shell::arg@{mml::shell::arg}!begin@{begin}}
 \index{begin@{begin}!mml::shell::arg@{mml::shell::arg}}
 \doxysubsubsection{\texorpdfstring{begin()}{begin()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::begin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::begin (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -164,12 +203,12 @@ Determine options given with one minus and separate them ignoring specific strin
 {\em value} & Values which are not separated \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a641b5dd2acbb18b032d7666649448fe2}\label{classmml_1_1shell_1_1arg_a641b5dd2acbb18b032d7666649448fe2}} 
+\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a318065c8db20353c8e806c18886880ae}\label{classmml_1_1shell_1_1arg_a318065c8db20353c8e806c18886880ae}} 
 \index{mml::shell::arg@{mml::shell::arg}!nexist@{nexist}}
 \index{nexist@{nexist}!mml::shell::arg@{mml::shell::arg}}
 \doxysubsubsection{\texorpdfstring{nexist()}{nexist()}}
 {\footnotesize\ttfamily template$<$typename... values$>$ \\
-bool mml\+::shell\+::arg\+::nexist (\begin{DoxyParamCaption}\item[{const values \&...}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+bool mml\+::shell\+::arg\+::nexist (\begin{DoxyParamCaption}\item[{const values \&...}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -225,11 +264,11 @@ Reference to this instance
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}}\& mml\+::shell\+::arg\+::operator= (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} $>$ \&}]{vec\+\_\+temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a2fd200cb84b0a25149e81b7c9a5e5ddd}\label{classmml_1_1shell_1_1arg_a2fd200cb84b0a25149e81b7c9a5e5ddd}} 
+\mbox{\Hypertarget{classmml_1_1shell_1_1arg_adf0a7a692eac8250d4090da2c20d10ff}\label{classmml_1_1shell_1_1arg_adf0a7a692eac8250d4090da2c20d10ff}} 
 \index{mml::shell::arg@{mml::shell::arg}!pos@{pos}}
 \index{pos@{pos}!mml::shell::arg@{mml::shell::arg}}
 \doxysubsubsection{\texorpdfstring{pos()}{pos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::pos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::pos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -243,11 +282,11 @@ Determine the position of a searched string.
 \begin{DoxyReturn}{Returns}
 position 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a2955766a51d32939dd723a905bfda337}\label{classmml_1_1shell_1_1arg_a2955766a51d32939dd723a905bfda337}} 
+\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a458009345398b09e87cd05f8f743fcec}\label{classmml_1_1shell_1_1arg_a458009345398b09e87cd05f8f743fcec}} 
 \index{mml::shell::arg@{mml::shell::arg}!pos@{pos}}
 \index{pos@{pos}!mml::shell::arg@{mml::shell::arg}}
 \doxysubsubsection{\texorpdfstring{pos()}{pos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::pos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str1,  }\item[{const std\+::string \&}]{str2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::shell\+::arg\+::pos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str1,  }\item[{const std\+::string \&}]{str2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -287,21 +326,6 @@ Replace a string in each element.
 \begin{DoxyReturn}{Returns}
 Vector of this instance 
 \end{DoxyReturn}
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_adc4d7547233ccee2ca6f20c394a4754d}\label{classmml_1_1shell_1_1arg_adc4d7547233ccee2ca6f20c394a4754d}} 
-\index{mml::shell::arg@{mml::shell::arg}!argc@{argc}}
-\index{argc@{argc}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{argc}{argc}}
-{\footnotesize\ttfamily int mml\+::shell\+::arg\+::argc = 0\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classmml_1_1shell_1_1arg_a46c90e04ef02da028cdbc5ba12fbe938}\label{classmml_1_1shell_1_1arg_a46c90e04ef02da028cdbc5ba12fbe938}} 
-\index{mml::shell::arg@{mml::shell::arg}!argv@{argv}}
-\index{argv@{argv}!mml::shell::arg@{mml::shell::arg}}
-\doxysubsubsection{\texorpdfstring{argv}{argv}}
-{\footnotesize\ttfamily char$\ast$$\ast$ mml\+::shell\+::arg\+::argv = \{\}\hspace{0.3cm}{\ttfamily [protected]}}
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

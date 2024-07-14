@@ -1,7 +1,13 @@
 \hypertarget{shell_8hpp}{}\doxysection{include/mml/shell.hpp File Reference}
 \label{shell_8hpp}\index{include/mml/shell.hpp@{include/mml/shell.hpp}}
+
+
+Functions and a class concerning the shell.  
+
+
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}mml/standards.\+hpp\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}mml/vector.\+hpp\char`\"{}}\newline
 Include dependency graph for shell.\+hpp\+:\nopagebreak
 \begin{figure}[H]
@@ -28,38 +34,39 @@ class \mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}}
  \mbox{\hyperlink{namespacemml}{mml}}
 \item 
  \mbox{\hyperlink{namespacemml_1_1shell}{mml\+::shell}}
-\item 
- \mbox{\hyperlink{namespacemml_1_1functions}{mml\+::functions}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef \mbox{\hyperlink{classmml_1_1shell_1_1arg}{mml\+::shell\+::arg}} \mbox{\hyperlink{namespacemml_1_1functions_aed3e32c593011593a726a6c90cf24be5}{mml\+::functions\+::vector}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{namespacemml_1_1shell_ab1339179fc2b533a1b07704d734a3006}{mml\+::shell\+::background}} (string colour)
-\item 
+\begin{DoxyCompactList}\small\item\em Change background of the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a0f52651c4d20d63a2276d13239c00189}{mml\+::shell\+::chapter}} (std\+::string text, bool newline=true)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a chapter of a help page. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a6fdea2a309969573d0f01bf2bc832e04}{mml\+::shell\+::cout}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} text, bool newline=true, std\+::string colour=\char`\"{}lightgreen\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Print to the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a7cc39c00b4f3c918c1380a04fbd180f5}{mml\+::shell\+::error}} (std\+::string text)
-\item 
-void \mbox{\hyperlink{namespacemml_1_1shell_a4edbe4309f804bb4d8552b8f5734c9f6}{mml\+::shell\+::formation}} (string format1)
-\item 
+\begin{DoxyCompactList}\small\item\em Print an error in red colour and exit the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemml_1_1shell_adf0bff15c3a27eb1c69c00420e557124}{mml\+::shell\+::formation}} (string format)
+\begin{DoxyCompactList}\small\item\em Change the formation of printed texts in the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a6c84d770587829ca7dc7c8147329d139}{mml\+::shell\+::letter}} (string colour)
-\item 
+\begin{DoxyCompactList}\small\item\em Change printed text colour. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a00c8e2a2ee520b8270b9f8898906231b}{mml\+::shell\+::normal}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reverse changes in the print behaviour of the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_adbd82f8c931de0e11499c651fcbbce70}{mml\+::shell\+::note}} (std\+::string text, bool newline=true)
-\item 
-void \mbox{\hyperlink{namespacemml_1_1shell_a8b511d7cd5acf56b224558cf2ab59034}{mml\+::shell\+::option}} (std\+::string chapter, std\+::string option)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_1_1shell_a1a1a82593cac384a3d698003740cd408}{mml\+::shell\+::password}} (std\+::string ausgabe, std\+::string source)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a note in lightgray. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemml_1_1shell_acebfa40db0dbf8ce99ba8baf8c6d919d}{mml\+::shell\+::option}} (std\+::string option, std\+::string descr)
+\begin{DoxyCompactList}\small\item\em Print an option in a help page. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1shell_ab7578091ec640c1c1f9d4c27674e4025}{mml\+::shell\+::password}} (std\+::string print, std\+::string add)
+\begin{DoxyCompactList}\small\item\em Input of a password. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a1beda25649ea427bb646ea6be704904c}{mml\+::shell\+::warn}} (std\+::string text, bool newline=true)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a warning and exit the program. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_ad39babde10f8181169d97a1600e30cb8}{mml\+::shell\+::warn\+\_\+opt}} (std\+::string text, bool newline=true)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print a warning without exiting the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and a class concerning the shell. 
+
+\begin{DoxyAuthor}{Author}
+Mike Moser 
+\end{DoxyAuthor}

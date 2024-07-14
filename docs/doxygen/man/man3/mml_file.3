@@ -1,4 +1,4 @@
-.TH "mml::file" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::file" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -166,6 +166,11 @@ Copy the content of the path to a new one\&.
 \fIruntime_error\fP : If last directory in destionation is not a directory 
 .RE
 .PP
+\fBTodo\fP
+.RS 4
+Copy symbolic and hard link file by creating them 
+.RE
+.PP
 
 .SS "bool mml::file::equal (std::string src, std::string dst)"
 
@@ -218,6 +223,11 @@ The numbers have the following meaning:
 .IP "\(bu" 2
 12: Socket 
 .PP
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+use library to detect what it is and also then use hard link and symbolic link 
 .RE
 .PP
 

@@ -3,36 +3,6 @@
   <compounddef id="namespacemml_1_1thread" kind="namespace" language="C++">
     <compoundname>mml::thread</compoundname>
     <innerclass refid="classmml_1_1thread_1_1Threads" prot="public">mml::thread::Threads</innerclass>
-      <sectiondef kind="func">
-      <memberdef kind="function" id="namespacemml_1_1thread_1a3e2a5898babfb719ccf10277fad3e290" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void mml::thread::sleep</definition>
-        <argsstring>(float s) noexcept</argsstring>
-        <name>sleep</name>
-        <param>
-          <type>float</type>
-          <declname>s</declname>
-        </param>
-        <briefdescription>
-<para>Stop actual thread for a specific time. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>s</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Seconds to wait </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/thread.hpp" line="166" column="6" bodyfile="include/mml/thread.hpp" bodystart="166" bodyend="168"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

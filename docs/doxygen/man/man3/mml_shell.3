@@ -1,4 +1,4 @@
-.TH "mml::shell" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::shell" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,105 +19,125 @@ mml::shell
 .ti -1c
 .RI "void \fBerror\fP (std::string text)"
 .br
+.RI "Print an error in red colour and exit the program\&. "
 .ti -1c
 .RI "void \fBbackground\fP (\fBstring\fP colour)"
 .br
+.RI "Change background of the shell\&. "
 .ti -1c
 .RI "void \fBchapter\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a chapter of a help page\&. "
 .ti -1c
 .RI "void \fBcout\fP (\fBmml::string\fP text, bool newline=true, std::string colour='lightgreen')"
 .br
+.RI "Print to the shell\&. "
 .ti -1c
-.RI "void \fBformation\fP (\fBstring\fP format1)"
+.RI "void \fBformation\fP (\fBstring\fP format)"
 .br
+.RI "Change the formation of printed texts in the shell\&. "
 .ti -1c
 .RI "void \fBletter\fP (\fBstring\fP colour)"
 .br
+.RI "Change printed text colour\&. "
 .ti -1c
 .RI "void \fBnormal\fP ()"
 .br
+.RI "Reverse changes in the print behaviour of the shell\&. "
 .ti -1c
 .RI "void \fBnote\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a note in lightgray\&. "
 .ti -1c
-.RI "void \fBoption\fP (std::string \fBchapter\fP, std::string option)"
+.RI "void \fBoption\fP (std::string option, std::string descr)"
 .br
+.RI "Print an option in a help page\&. "
 .ti -1c
-.RI "std::string \fBpassword\fP (std::string ausgabe, std::string source)"
+.RI "std::string \fBpassword\fP (std::string print, std::string add)"
 .br
+.RI "Input of a password\&. "
 .ti -1c
 .RI "void \fBwarn\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a warning and exit the program\&. "
 .ti -1c
 .RI "void \fBwarn_opt\fP (std::string text, bool newline=true)"
 .br
+.RI "Print a warning without exiting the program\&. "
 .in -1c
 .SH "Function Documentation"
 .PP 
 .SS "void mml::shell::background (\fBmml::string\fP colour)"
 
 .PP
-\fBNote\fP
-.RS 4
-Hintergrund ändern
-.RE
+Change background of the shell\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fIcolour\fP background colour 
 .RE
 .PP
 
 .SS "void mml::shell::chapter (std::string text, bool newline = \fCtrue\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Hilfeseiteausgabe eines Kapitels
-.RE
+Print a chapter of a help page\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fItext\fP chapter title 
+.br
+\fInewline\fP Print a new line 
 .RE
 .PP
 
 .SS "void mml::shell::cout (\fBmml::string\fP text, bool newline = \fCtrue\fP, std::string colour = \fC'lightgreen'\fP)"
 
 .PP
-\fBNote\fP
+Print to the shell\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Ausgabe mit Werten in Klammern in einer Farbe
+\fItext\fP The text to be printed 
+.br
+\fInewline\fP New line at the end 
+.br
+\fIcolour\fP which colour is used for highligting 
 .RE
 .PP
-\fBAuthor\fP
+\fBNote\fP
 .RS 4
-Mike 
+Text within [] is highlighted 
 .RE
 .PP
 
 .SS "void mml::shell::error (std::string text)"
 
 .PP
-\fBNote\fP
+Print an error in red colour and exit the program\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Ausgabe eines Errors
+\fItext\fP to be printed 
 .RE
 .PP
-\fBAuthor\fP
+\fBNote\fP
 .RS 4
-Mike 
+This function exits the program 
 .RE
 .PP
 
 .SS "void mml::shell::formation (\fBmml::string\fP format1)"
 
 .PP
-\fBNote\fP
+Change the formation of printed texts in the shell\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Formatierung ändern
+\fIformat\fP Format
 .RE
+.PP
+Possible options are 'normal', 'fat', 'cursive', 'underline', 'blink', 'reverse'
 .PP
 \fBAuthor\fP
 .RS 4
@@ -128,19 +148,17 @@ Mike
 .SS "void mml::shell::letter (\fBmml::string\fP colour)"
 
 .PP
-\fBNote\fP
+Change printed text colour\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Schriftfarbe ändern
+\fIcolour\fP paint of the letters
 .RE
 .PP
-\fBReturns\fP
-.RS 4
-.RE
+Options are black, darkgray, (light)red, (light)green, brown, yellow, (light)blue, (light)purple, (light)cyan, white, lightgray, normal
 .PP
 \fBAuthor\fP
 .RS 4
-Mike
-.PP
 Mike Moser
 .RE
 .PP
@@ -148,99 +166,74 @@ Programm \fBshell\&.cpp\fP Enthält verschiedene Funktionen
 .SS "void mml::shell::normal ()"
 
 .PP
-\fBNote\fP
-.RS 4
-Alle Änderungen an der Ausgabe zurücksetzen
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
+Reverse changes in the print behaviour of the shell\&. 
 .SS "void mml::shell::note (std::string text, bool newline = \fCtrue\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Eine Notiz ausgeben
-.RE
+Print a note in lightgray\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
-.RE
-.PP
-
-.SS "void mml::shell::option (std::string chapter, std::string option)"
-
-.PP
-\fBNote\fP
-.RS 4
-Finden von übergebenen Argumente(n)
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-\fBNote\fP
-.RS 4
-Ausgabe einer Option von einer Hilfeseite
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+\fItext\fP to be printed 
+.br
+\fInewline\fP print newline 
 .RE
 .PP
 
-.SS "std::string mml::shell::password (std::string ausgabe, std::string source)"
+.SS "void mml::shell::option (std::string option, std::string descr)"
 
 .PP
-\fBNote\fP
+Print an option in a help page\&. 
+.PP
+\fBParameters\fP
 .RS 4
-Eingabe eines verdeckten Strings
+\fIoption\fP Name of the option used 
+.br
+\fIdescr\fP Description of the option 
+.RE
+.PP
+
+.SS "std::string mml::shell::password (std::string print, std::string add)"
+
+.PP
+Input of a password\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprint\fP text to be printed when the code asks for the password 
+.br
+\fIadd\fP additional text printed after \fCprint\fP 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-eingegebener String 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+input 
 .RE
 .PP
 
 .SS "void mml::shell::warn (std::string text, bool newline = \fCtrue\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)
-.RE
+Print a warning and exit the program\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fItext\fP Text to be printed 
+.br
+\fInewline\fP Print new line 
 .RE
 .PP
 
 .SS "void mml::shell::warn_opt (std::string text, bool newline = \fCtrue\fP)"
 
 .PP
-\fBNote\fP
-.RS 4
-Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)
-.RE
+Print a warning without exiting the program\&. 
 .PP
-\fBAuthor\fP
+\fBParameters\fP
 .RS 4
-Mike 
+\fItext\fP Text to be printed 
+.br
+\fInewline\fP Print a new line 
 .RE
 .PP
 

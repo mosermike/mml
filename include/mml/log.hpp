@@ -37,7 +37,8 @@ namespace mml{
 		private:
 			mml::string logpath = "";
 			std::ofstream output;
-			
+			int num_backups = 4; // Number of backups
+
 		public:
 			
 			/**
@@ -48,10 +49,10 @@ namespace mml{
 			log(mml::string path) : logpath(path), output() {
 				logpath = path;
 				if(!mml::Unix::exist(logpath.str())) {
-					output.open(logpath.c_str(),std::ios::out | std::ios::app);
-					header();
+					output.open(logpath.c_str(), std::ios::out | std::ios::app); // std::ios::app => Jump to the end of the file
+					header(); // Write header to the new file
 					if(!mml::Unix::exist(logpath.str()))
-						throw std::runtime_error("[LOG] Creation of logfile '" + logpath.str() + "' not possible. Check permissions!");
+						throw std::runtime_error("[log] Creation of logfile '" + logpath.str() + "' not possible. Check permissions!");
 				}
 				else
 					output.open(logpath.c_str(),std::ios::out | std::ios::app);
@@ -147,8 +148,9 @@ namespace mml{
 			/**
 			 * @brief open a logfile
 			 * @param path Path to log file
+			 * @throw runtime_error : if logpath is not set
 			 */
-			void open(mml::string path = "") noexcept;
+			void open();
 			
 			/**
 			 * @brief Print log file
@@ -162,8 +164,25 @@ namespace mml{
 			 */
 			void reset(bool verbose = true) noexcept;
 			
-			
+			/**
+			 * @brief Set number of backup files
+			 * @param num Number of backup files
+			 */
+			void set_num(int num) noexcept {
+				this->num_backups = num;
+				return;
+			}
+
+			/**
+			 * @brief Set path of the logfile
+			 * @param path New path of the logfile
+			 */
+			void set_path(mml::string path) noexcept {
+				this->logpath = path;
+				return;
+			}
 		};
 		
 }
-#endif // __LOG_HPP__
+
+#endif

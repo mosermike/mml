@@ -1,4 +1,4 @@
-.TH "mml::string" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::string" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,15 +28,15 @@ mml::string
 .br
 .RI "Assign the value of the template type with the '=' sign\&. "
 .ti -1c
-.RI "template<typename templ > bool \fBoperator==\fP (templ Test) noexcept"
+.RI "template<typename templ > bool \fBoperator==\fP (templ Test) const noexcept"
 .br
 .RI "Operator equal\&. "
 .ti -1c
-.RI "template<typename templ > bool \fBoperator!=\fP (templ Test) noexcept"
+.RI "template<typename templ > bool \fBoperator!=\fP (templ Test) const noexcept"
 .br
 .RI "Operator unequal\&. "
 .ti -1c
-.RI "template<typename templ > \fBmml::string\fP \fBoperator+\fP (templ Test) noexcept"
+.RI "template<typename templ > \fBmml::string\fP \fBoperator+\fP (templ Test) const noexcept"
 .br
 .RI "Operator add somehting at the end of this instance\&. "
 .ti -1c
@@ -48,15 +48,21 @@ mml::string
 .br
 .RI "Return a specific char from the string\&. "
 .ti -1c
+.RI "const char & \fBoperator[]\fP (int index) const"
+.br
+.ti -1c
 .RI "std::string & \fBoperator()\fP () noexcept"
 .br
 .RI "Returns the value\&. "
 .ti -1c
-.RI "double \fBatof\fP () noexcept"
+.RI "const std::string & \fBoperator()\fP () const noexcept"
+.br
+.ti -1c
+.RI "double \fBatof\fP () const noexcept"
 .br
 .RI "Converts this string into a double\&. "
 .ti -1c
-.RI "int \fBatoi\fP () noexcept"
+.RI "int \fBatoi\fP () const noexcept"
 .br
 .RI "Convert this string into an integer\&. "
 .ti -1c
@@ -68,7 +74,7 @@ mml::string
 .br
 .RI "Returns an iterator that points to the beginning of the string\&. "
 .ti -1c
-.RI "const char * \fBc_str\fP () noexcept"
+.RI "const char * \fBc_str\fP () const noexcept"
 .br
 .RI "Returns the string as a character pointer\&. "
 .ti -1c
@@ -76,11 +82,11 @@ mml::string
 .br
 .RI "Clears the string\&. "
 .ti -1c
-.RI "uint32_t \fBcount\fP (\fBmml::string\fP name) noexcept"
+.RI "uint32_t \fBcount\fP (\fBmml::string\fP name) const noexcept"
 .br
 .RI "Count how often a string appears\&. "
 .ti -1c
-.RI "void \fBcout\fP (bool newline=true, std::string text='') noexcept"
+.RI "void \fBcout\fP (bool newline=true, std::string text='') const noexcept"
 .br
 .RI "Print out the value of this instance\&. "
 .ti -1c
@@ -96,7 +102,7 @@ mml::string
 .br
 .RI "Remove everything after the first space\&. "
 .ti -1c
-.RI "bool \fBempty\fP () noexcept"
+.RI "bool \fBempty\fP () const noexcept"
 .br
 .RI "Checks if the string is empty\&. "
 .ti -1c
@@ -108,21 +114,17 @@ mml::string
 .br
 .RI "Returns an iterator that points to the end of the string\&. "
 .ti -1c
-.RI "template<typename\&.\&.\&. Args> bool \fBexist\fP (const Args &\&.\&.\&. args) noexcept"
+.RI "template<typename\&.\&.\&. Args> bool \fBexist\fP (const Args &\&.\&.\&. args) const noexcept"
 .br
 .RI "Check if one \fIor\fP another string exists\&. "
 .ti -1c
-.RI "std::size_t \fBfind\fP (char letter, std::size_t old=0) noexcept"
+.RI "std::size_t \fBfind\fP (char letter, std::size_t old=0) const noexcept"
 .br
 .RI "Position of the first appearance of a character after a start position\&. "
 .ti -1c
-.RI "std::size_t \fBfind\fP (\fBmml::string\fP name, std::size_t old=0) noexcept"
+.RI "std::size_t \fBfind\fP (\fBmml::string\fP name, std::size_t old=0) const noexcept"
 .br
 .RI "Position of the first appearance of a string after a start position\&. "
-.ti -1c
-.RI "std::size_t \fBfind_back\fP (\fBmml::string\fP name, std::size_t pos=0, std::size_t low=0) noexcept"
-.br
-.RI "Check if a string exists but starting from the right side\&. "
 .ti -1c
 .RI "void \fBgetline\fP (std::ifstream &input) noexcept"
 .br
@@ -132,15 +134,15 @@ mml::string
 .br
 .RI "Reads a line from a file\&. "
 .ti -1c
-.RI "std::string \fBgetValue\fP () noexcept"
+.RI "std::string \fBgetValue\fP () const noexcept"
 .br
 .RI "Get the value of this instance\&. "
 .ti -1c
-.RI "uint32_t \fBhash\fP () noexcept"
+.RI "uint32_t \fBhash\fP () const noexcept"
 .br
 .RI "Creates a hash value of this instance\&. This hash value can then be used for example in an switch \&.\&.\&. case with strings by using hash values\&. "
 .ti -1c
-.RI "void \fBlog\fP (std::string logpath)"
+.RI "void \fBlog\fP (std::string logpath) const"
 .br
 .RI "Writes the value of this instance into a log file\&. "
 .ti -1c
@@ -148,11 +150,11 @@ mml::string
 .br
 .RI "Transforms all letters into low case letters\&. "
 .ti -1c
-.RI "std::vector< std::string > \fBls\fP (std::string name_include, std::string name_exclude, std::vector< std::string > &directories, bool recursive=false, bool all=false)"
+.RI "std::vector< std::string > \fBls\fP (std::string name_include, std::string name_exclude, std::vector< std::string > &directories, bool recursive=false, bool all=false) const"
 .br
 .RI "List all files and directories in a path\&. Directories end with '/' in the entry\&. "
 .ti -1c
-.RI "std::vector< std::string > \fBls\fP (std::string name_include='', std::string name_exclude='', bool recursive=false, bool all=false)"
+.RI "std::vector< std::string > \fBls\fP (std::string name_include='', std::string name_exclude='', bool recursive=false, bool all=false) const"
 .br
 .RI "List all files and directories in a path\&. Directories end with '/' in the entry\&. "
 .ti -1c
@@ -160,47 +162,47 @@ mml::string
 .br
 .RI "Create directory with creating parent directories\&. "
 .ti -1c
-.RI "bool \fBremove\fP () noexcept"
+.RI "bool \fBremove\fP () const noexcept"
 .br
 .RI "Remove the file with the value of the instance\&. "
 .ti -1c
-.RI "template<typename T > \fBmml::string\fP \fBreplace\fP (T str_old, T str_new, std::size_t pos=0)"
+.RI "template<typename T1 , typename T2 > \fBmml::string\fP \fBreplace\fP (T1 &&str_old, T2 &&str_new, std::size_t pos=0)"
 .br
 .RI "Replace sth in the string with sth else\&. "
 .ti -1c
-.RI "std::size_t \fBrfind\fP (char letter) noexcept"
+.RI "std::size_t \fBrfind\fP (char letter, std::size_t pos=std::string::npos, std::size_t \fBend\fP=0) const noexcept"
 .br
 .RI "Get position of last occurance of a character\&. "
 .ti -1c
-.RI "std::size_t \fBsize\fP () noexcept"
+.RI "std::size_t \fBsize\fP () const noexcept"
 .br
 .RI "Compute size of the string\&. "
 .ti -1c
-.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1, std::size_t length1) noexcept"
-.br
-.RI "Create substring\&. "
-.ti -1c
-.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1) noexcept"
+.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1) const noexcept"
 .br
 .RI "Create a substring starting from this position to the end\&. "
 .ti -1c
-.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, std::size_t \fBend\fP) noexcept"
+.RI "\fBmml::string\fP \fBsubstr\fP (std::size_t pos1, std::size_t length1) const noexcept"
+.br
+.RI "Create substring\&. "
+.ti -1c
+.RI "\fBmml::string\fP \fBsub\fP (std::size_t beg, std::size_t \fBend\fP) const noexcept"
 .br
 .RI "Create a substring starting and ending of specific positions\&. "
 .ti -1c
-.RI "int \fBstoi\fP () noexcept"
+.RI "int \fBstoi\fP () const noexcept"
 .br
 .RI "Transform this instance to an integer\&. "
 .ti -1c
-.RI "std::string \fBstr\fP () noexcept"
+.RI "std::string \fBstr\fP () const noexcept"
 .br
 .RI "Return the value of this instance as a std::string\&. "
 .ti -1c
-.RI "void \fBwriteline\fP (std::ofstream &output) noexcept"
+.RI "void \fBwriteline\fP (std::ofstream &output) const noexcept"
 .br
 .RI "Write this instance into the end of a file\&. "
 .ti -1c
-.RI "void \fBwriteline\fP (std::string output) noexcept"
+.RI "void \fBwriteline\fP (std::string output) const noexcept"
 .br
 .RI "Write this instance into the end of a file\&. "
 .ti -1c
@@ -256,7 +258,7 @@ Constructor without a value\&.
 
 .SH "Member Function Documentation"
 .PP 
-.SS "double mml::string::atof ()\fC [noexcept]\fP"
+.SS "double mml::string::atof () const\fC [noexcept]\fP"
 
 .PP
 Converts this string into a double\&. 
@@ -267,7 +269,7 @@ double
 .RE
 .PP
 
-.SS "int mml::string::atoi ()\fC [noexcept]\fP"
+.SS "int mml::string::atoi () const\fC [noexcept]\fP"
 
 .PP
 Convert this string into an integer\&. 
@@ -300,7 +302,7 @@ std::string::iterator
 .RE
 .PP
 
-.SS "const char * mml::string::c_str ()\fC [noexcept]\fP"
+.SS "const char * mml::string::c_str () const\fC [noexcept]\fP"
 
 .PP
 Returns the string as a character pointer\&. 
@@ -322,7 +324,7 @@ None
 .RE
 .PP
 
-.SS "uint32_t mml::string::count (\fBmml::string\fP name)\fC [noexcept]\fP"
+.SS "uint32_t mml::string::count (\fBmml::string\fP name) const\fC [noexcept]\fP"
 
 .PP
 Count how often a string appears\&. 
@@ -338,7 +340,7 @@ uint32_t
 .RE
 .PP
 
-.SS "void mml::string::cout (bool newline = \fCtrue\fP, std::string text = \fC''\fP)\fC [noexcept]\fP"
+.SS "void mml::string::cout (bool newline = \fCtrue\fP, std::string text = \fC''\fP) const\fC [noexcept]\fP"
 
 .PP
 Print out the value of this instance\&. 
@@ -404,7 +406,7 @@ std::string
 .RE
 .PP
 
-.SS "bool mml::string::empty ()\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "bool mml::string::empty () const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Checks if the string is empty\&. 
@@ -437,7 +439,7 @@ std::string::iterator
 .RE
 .PP
 
-.SS "template<typename\&.\&.\&. Args> bool mml::string::exist (const Args &\&.\&.\&. args)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename\&.\&.\&. Args> bool mml::string::exist (const Args &\&.\&.\&. args) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Check if one \fIor\fP another string exists\&. 
@@ -453,7 +455,7 @@ bool
 .RE
 .PP
 
-.SS "std::size_t mml::string::find (char letter, std::size_t old = \fC0\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "std::size_t mml::string::find (char letter, std::size_t old = \fC0\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Position of the first appearance of a character after a start position\&. 
@@ -471,7 +473,7 @@ Position
 .RE
 .PP
 
-.SS "std::size_t mml::string::find (\fBmml::string\fP name, std::size_t old = \fC0\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "std::size_t mml::string::find (\fBmml::string\fP name, std::size_t old = \fC0\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Position of the first appearance of a string after a start position\&. 
@@ -486,26 +488,6 @@ Position of the first appearance of a string after a start position\&.
 \fBReturns\fP
 .RS 4
 Position 
-.RE
-.PP
-
-.SS "std::size_t mml::string::find_back (\fBmml::string\fP name, std::size_t pos = \fC0\fP, std::size_t low = \fC0\fP)\fC [noexcept]\fP"
-
-.PP
-Check if a string exists but starting from the right side\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIname\fP String to look for 
-.br
-\fIpos\fP Value from where to search for the string\&. 0 means that it is not used\&. 
-.br
-\fIlow\fP Lower limit to which point is searched for\&. 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-std::size_t 
 .RE
 .PP
 
@@ -539,11 +521,11 @@ Reads a line from a file\&.
 .PP
 \fBReturns\fP
 .RS 4
-std::tring 
+std::string 
 .RE
 .PP
 
-.SS "std::string mml::string::getValue ()\fC [noexcept]\fP"
+.SS "std::string mml::string::getValue () const\fC [noexcept]\fP"
 
 .PP
 Get the value of this instance\&. 
@@ -554,7 +536,7 @@ std::string
 .RE
 .PP
 
-.SS "uint32_t mml::string::hash ()\fC [noexcept]\fP"
+.SS "uint32_t mml::string::hash () const\fC [noexcept]\fP"
 
 .PP
 Creates a hash value of this instance\&. This hash value can then be used for example in an switch \&.\&.\&. case with strings by using hash values\&. 
@@ -565,7 +547,7 @@ uint32_t
 .RE
 .PP
 
-.SS "void mml::string::log (std::string logpath)"
+.SS "void mml::string::log (std::string logpath) const"
 
 .PP
 Writes the value of this instance into a log file\&. 
@@ -597,7 +579,7 @@ std::string
 .RE
 .PP
 
-.SS "std::vector< std::string > mml::string::ls (std::string name_include, std::string name_exclude, std::vector< std::string > & directories, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP)"
+.SS "std::vector< std::string > mml::string::ls (std::string name_include, std::string name_exclude, std::vector< std::string > & directories, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP) const"
 
 .PP
 List all files and directories in a path\&. Directories end with '/' in the entry\&. 
@@ -631,7 +613,7 @@ If name_include or name_exclude is detected for a directory, all the elements in
 .RE
 .PP
 
-.SS "std::vector< std::string > mml::string::ls (std::string name_include = \fC''\fP, std::string name_exclude = \fC''\fP, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP)"
+.SS "std::vector< std::string > mml::string::ls (std::string name_include = \fC''\fP, std::string name_exclude = \fC''\fP, bool recursive = \fCfalse\fP, bool all = \fCfalse\fP) const"
 
 .PP
 List all files and directories in a path\&. Directories end with '/' in the entry\&. 
@@ -674,7 +656,7 @@ bool
 .RE
 .PP
 
-.SS "template<typename templ > bool mml::string::operator!= (templ Test)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename templ > bool mml::string::operator!= (templ Test) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Operator unequal\&. 
@@ -690,6 +672,8 @@ bool
 .RE
 .PP
 
+.SS "const std::string & mml::string::operator() () const\fC [noexcept]\fP"
+
 .SS "std::string & mml::string::operator() ()\fC [noexcept]\fP"
 
 .PP
@@ -701,7 +685,7 @@ Value of the instance as a std::string
 .RE
 .PP
 
-.SS "template<typename templ > \fBmml::string\fP mml::string::operator+ (templ Test)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename templ > \fBmml::string\fP mml::string::operator+ (templ Test) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Operator add somehting at the end of this instance\&. 
@@ -749,7 +733,7 @@ Class instance
 .RE
 .PP
 
-.SS "template<typename templ > bool mml::string::operator== (templ Test)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename templ > bool mml::string::operator== (templ Test) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Operator equal\&. 
@@ -786,7 +770,9 @@ char
 .RE
 .PP
 
-.SS "bool mml::string::remove ()\fC [noexcept]\fP"
+.SS "const char & mml::string::operator[] (int index) const"
+
+.SS "bool mml::string::remove () const\fC [noexcept]\fP"
 
 .PP
 Remove the file with the value of the instance\&. 
@@ -797,7 +783,7 @@ bool
 .RE
 .PP
 
-.SS "template<typename T > \fBmml::string\fP mml::string::replace (T str_old, T str_new, std::size_t pos = \fC0\fP)\fC [inline]\fP"
+.SS "template<typename T1 , typename T2 > \fBmml::string\fP mml::string::replace (T1 && str_old, T2 && str_new, std::size_t pos = \fC0\fP)\fC [inline]\fP"
 
 .PP
 Replace sth in the string with sth else\&. 
@@ -822,7 +808,7 @@ Replace sth in the string with sth else\&.
 .RE
 .PP
 
-.SS "std::size_t mml::string::rfind (char letter)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "std::size_t mml::string::rfind (char letter, std::size_t pos = \fCstd::string::npos\fP, std::size_t end = \fC0\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Get position of last occurance of a character\&. 
@@ -830,6 +816,10 @@ Get position of last occurance of a character\&.
 \fBParameters\fP
 .RS 4
 \fIletter\fP Value to be found 
+.br
+\fIpos\fP Position where to begin to search to the right 
+.br
+\fIend\fP Position where to stop the search from the right 
 .RE
 .PP
 \fBReturns\fP
@@ -838,7 +828,7 @@ std::size_t
 .RE
 .PP
 
-.SS "std::size_t mml::string::size ()\fC [noexcept]\fP"
+.SS "std::size_t mml::string::size () const\fC [noexcept]\fP"
 
 .PP
 Compute size of the string\&. 
@@ -849,7 +839,7 @@ std::size_t
 .RE
 .PP
 
-.SS "int mml::string::stoi ()\fC [noexcept]\fP"
+.SS "int mml::string::stoi () const\fC [noexcept]\fP"
 
 .PP
 Transform this instance to an integer\&. 
@@ -860,7 +850,7 @@ int
 .RE
 .PP
 
-.SS "std::string mml::string::str ()\fC [noexcept]\fP"
+.SS "std::string mml::string::str () const\fC [noexcept]\fP"
 
 .PP
 Return the value of this instance as a std::string\&. 
@@ -871,7 +861,7 @@ std::string
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::sub (std::size_t beg, std::size_t end)\fC [noexcept]\fP"
+.SS "\fBmml::string\fP mml::string::sub (std::size_t beg, std::size_t end) const\fC [noexcept]\fP"
 
 .PP
 Create a substring starting and ending of specific positions\&. 
@@ -889,7 +879,7 @@ Create a substring starting and ending of specific positions\&.
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1)\fC [noexcept]\fP"
+.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1) const\fC [noexcept]\fP"
 
 .PP
 Create a substring starting from this position to the end\&. 
@@ -905,7 +895,7 @@ Create a substring starting from this position to the end\&.
 .RE
 .PP
 
-.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1, std::size_t length1)\fC [noexcept]\fP"
+.SS "\fBmml::string\fP mml::string::substr (std::size_t pos1, std::size_t length1) const\fC [noexcept]\fP"
 
 .PP
 Create substring\&. 
@@ -923,7 +913,7 @@ Create substring\&.
 .RE
 .PP
 
-.SS "void mml::string::writeline (std::ofstream & output)\fC [noexcept]\fP"
+.SS "void mml::string::writeline (std::ofstream & output) const\fC [noexcept]\fP"
 
 .PP
 Write this instance into the end of a file\&. 
@@ -939,7 +929,7 @@ None
 .RE
 .PP
 
-.SS "void mml::string::writeline (std::string output)\fC [noexcept]\fP"
+.SS "void mml::string::writeline (std::string output) const\fC [noexcept]\fP"
 
 .PP
 Write this instance into the end of a file\&. 

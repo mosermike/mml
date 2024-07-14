@@ -65,7 +65,7 @@ libmml.so: $(OBJ)
 	$(GCC) -shared $(LDFLAGS) -o lib/$(DST) $(OBJ)
 
 libmml.a: $(OBJ)
-	mkdir -p lib
+	@mkdir -p lib
 	ar rcs lib/libmml.a $(OBJ)
 
 

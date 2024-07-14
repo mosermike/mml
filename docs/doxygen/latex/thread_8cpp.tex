@@ -1,8 +1,11 @@
-\hypertarget{thread_8cpp}{}\doxysection{src/thread.cpp File Reference}
-\label{thread_8cpp}\index{src/thread.cpp@{src/thread.cpp}}
+\hypertarget{thread_8cpp}{}\doxysection{test/thread.cpp File Reference}
+\label{thread_8cpp}\index{test/thread.cpp@{test/thread.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
 {\ttfamily \#include \char`\"{}mml/thread.\+hpp\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}mml.\+hpp\char`\"{}}\newline
 Include dependency graph for thread.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -10,3 +13,83 @@ Include dependency graph for thread.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{thread_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{thread_8cpp_a3a792810f66760fd026480867ea44776}{example\+Task\+With\+Multiple\+Params}} (int thread\+Id, \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ int $>$ \&threads)
+\begin{DoxyCompactList}\small\item\em Testing threading if they run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{thread_8cpp_a0f0d38e38549c02b27672fd35dd7465f}{is\+Prime}} (int number)
+\begin{DoxyCompactList}\small\item\em Checks if a number is a prime number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{thread_8cpp_a293827f133ce2ff42fccc32336769103}{search\+\_\+prime}} (int thread\+Id, int start, int end)
+\begin{DoxyCompactList}\small\item\em Search prime numbers in a range. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{thread_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{thread_8cpp_a3a792810f66760fd026480867ea44776}\label{thread_8cpp_a3a792810f66760fd026480867ea44776}} 
+\index{thread.cpp@{thread.cpp}!exampleTaskWithMultipleParams@{exampleTaskWithMultipleParams}}
+\index{exampleTaskWithMultipleParams@{exampleTaskWithMultipleParams}!thread.cpp@{thread.cpp}}
+\doxysubsubsection{\texorpdfstring{exampleTaskWithMultipleParams()}{exampleTaskWithMultipleParams()}}
+{\footnotesize\ttfamily int example\+Task\+With\+Multiple\+Params (\begin{DoxyParamCaption}\item[{int}]{thread\+Id,  }\item[{\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ int $>$ \&}]{threads }\end{DoxyParamCaption})}
+
+
+
+Testing threading if they run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+Id} & Id of the thread \\
+\hline
+{\em threads} & the class with the threads for printout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int with no real information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{thread_8cpp_a0f0d38e38549c02b27672fd35dd7465f}\label{thread_8cpp_a0f0d38e38549c02b27672fd35dd7465f}} 
+\index{thread.cpp@{thread.cpp}!isPrime@{isPrime}}
+\index{isPrime@{isPrime}!thread.cpp@{thread.cpp}}
+\doxysubsubsection{\texorpdfstring{isPrime()}{isPrime()}}
+{\footnotesize\ttfamily bool is\+Prime (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Checks if a number is a prime number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number to be checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{thread_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{thread_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{thread.cpp@{thread.cpp}!main@{main}}
+\index{main@{main}!thread.cpp@{thread.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{thread_8cpp_a293827f133ce2ff42fccc32336769103}\label{thread_8cpp_a293827f133ce2ff42fccc32336769103}} 
+\index{thread.cpp@{thread.cpp}!search\_prime@{search\_prime}}
+\index{search\_prime@{search\_prime}!thread.cpp@{thread.cpp}}
+\doxysubsubsection{\texorpdfstring{search\_prime()}{search\_prime()}}
+{\footnotesize\ttfamily int search\+\_\+prime (\begin{DoxyParamCaption}\item[{int}]{thread\+Id,  }\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+Search prime numbers in a range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+Id} & Id of the thread \\
+\hline
+{\em start} & Start Value \\
+\hline
+{\em end} & End Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of Prime Numbers 
+\end{DoxyReturn}

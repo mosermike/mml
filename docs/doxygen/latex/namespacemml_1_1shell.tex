@@ -9,29 +9,29 @@ class \mbox{\hyperlink{classmml_1_1shell_1_1arg}{arg}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a7cc39c00b4f3c918c1380a04fbd180f5}{error}} (std\+::string text)
-\item 
+\begin{DoxyCompactList}\small\item\em Print an error in red colour and exit the program. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_ab1339179fc2b533a1b07704d734a3006}{background}} (\mbox{\hyperlink{classmml_1_1string}{string}} colour)
-\item 
+\begin{DoxyCompactList}\small\item\em Change background of the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a0f52651c4d20d63a2276d13239c00189}{chapter}} (std\+::string text, bool newline=true)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a chapter of a help page. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a6fdea2a309969573d0f01bf2bc832e04}{cout}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} text, bool newline=true, std\+::string colour=\char`\"{}lightgreen\char`\"{})
-\item 
-void \mbox{\hyperlink{namespacemml_1_1shell_a4edbe4309f804bb4d8552b8f5734c9f6}{formation}} (\mbox{\hyperlink{classmml_1_1string}{string}} format1)
-\item 
+\begin{DoxyCompactList}\small\item\em Print to the shell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemml_1_1shell_adf0bff15c3a27eb1c69c00420e557124}{formation}} (\mbox{\hyperlink{classmml_1_1string}{string}} format)
+\begin{DoxyCompactList}\small\item\em Change the formation of printed texts in the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a6c84d770587829ca7dc7c8147329d139}{letter}} (\mbox{\hyperlink{classmml_1_1string}{string}} colour)
-\item 
+\begin{DoxyCompactList}\small\item\em Change printed text colour. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a00c8e2a2ee520b8270b9f8898906231b}{normal}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reverse changes in the print behaviour of the shell. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_adbd82f8c931de0e11499c651fcbbce70}{note}} (std\+::string text, bool newline=true)
-\item 
-void \mbox{\hyperlink{namespacemml_1_1shell_a8b511d7cd5acf56b224558cf2ab59034}{option}} (std\+::string \mbox{\hyperlink{namespacemml_1_1shell_a0f52651c4d20d63a2276d13239c00189}{chapter}}, std\+::string option)
-\item 
-std\+::string \mbox{\hyperlink{namespacemml_1_1shell_a1a1a82593cac384a3d698003740cd408}{password}} (std\+::string ausgabe, std\+::string source)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a note in lightgray. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacemml_1_1shell_acebfa40db0dbf8ce99ba8baf8c6d919d}{option}} (std\+::string option, std\+::string descr)
+\begin{DoxyCompactList}\small\item\em Print an option in a help page. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacemml_1_1shell_ab7578091ec640c1c1f9d4c27674e4025}{password}} (std\+::string print, std\+::string add)
+\begin{DoxyCompactList}\small\item\em Input of a password. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_a1beda25649ea427bb646ea6be704904c}{warn}} (std\+::string text, bool newline=true)
-\item 
+\begin{DoxyCompactList}\small\item\em Print a warning and exit the program. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacemml_1_1shell_ad39babde10f8181169d97a1600e30cb8}{warn\+\_\+opt}} (std\+::string text, bool newline=true)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print a warning without exiting the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -41,57 +41,89 @@ void \mbox{\hyperlink{namespacemml_1_1shell_ad39babde10f8181169d97a1600e30cb8}{w
 \doxysubsubsection{\texorpdfstring{background()}{background()}}
 {\footnotesize\ttfamily void mml\+::shell\+::background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{colour }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Hintergrund ändern
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Change background of the shell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & background colour \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacemml_1_1shell_a0f52651c4d20d63a2276d13239c00189}\label{namespacemml_1_1shell_a0f52651c4d20d63a2276d13239c00189}} 
 \index{mml::shell@{mml::shell}!chapter@{chapter}}
 \index{chapter@{chapter}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{chapter()}{chapter()}}
 {\footnotesize\ttfamily void mml\+::shell\+::chapter (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Hilfeseiteausgabe eines Kapitels
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Print a chapter of a help page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & chapter title \\
+\hline
+{\em newline} & Print a new line \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacemml_1_1shell_a6fdea2a309969573d0f01bf2bc832e04}\label{namespacemml_1_1shell_a6fdea2a309969573d0f01bf2bc832e04}} 
 \index{mml::shell@{mml::shell}!cout@{cout}}
 \index{cout@{cout}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{cout()}{cout()}}
 {\footnotesize\ttfamily void mml\+::shell\+::cout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{text,  }\item[{bool}]{newline = {\ttfamily true},  }\item[{std\+::string}]{colour = {\ttfamily \char`\"{}lightgreen\char`\"{}} }\end{DoxyParamCaption})}
 
+
+
+Print to the shell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text to be printed \\
+\hline
+{\em newline} & New line at the end \\
+\hline
+{\em colour} & which colour is used for highligting \\
+\hline
+\end{DoxyParams}
 \begin{DoxyNote}{Note}
-Ausgabe mit Werten in Klammern in einer Farbe
+Text within \mbox{[}\mbox{]} is highlighted 
 \end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 \mbox{\Hypertarget{namespacemml_1_1shell_a7cc39c00b4f3c918c1380a04fbd180f5}\label{namespacemml_1_1shell_a7cc39c00b4f3c918c1380a04fbd180f5}} 
 \index{mml::shell@{mml::shell}!error@{error}}
 \index{error@{error}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{error()}{error()}}
 {\footnotesize\ttfamily void mml\+::shell\+::error (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
 
+
+
+Print an error in red colour and exit the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & to be printed \\
+\hline
+\end{DoxyParams}
 \begin{DoxyNote}{Note}
-Ausgabe eines Errors
+This function exits the program 
 \end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_1_1shell_a4edbe4309f804bb4d8552b8f5734c9f6}\label{namespacemml_1_1shell_a4edbe4309f804bb4d8552b8f5734c9f6}} 
+\mbox{\Hypertarget{namespacemml_1_1shell_adf0bff15c3a27eb1c69c00420e557124}\label{namespacemml_1_1shell_adf0bff15c3a27eb1c69c00420e557124}} 
 \index{mml::shell@{mml::shell}!formation@{formation}}
 \index{formation@{formation}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{formation()}{formation()}}
 {\footnotesize\ttfamily void mml\+::shell\+::formation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{format1 }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Formatierung ändern
-\end{DoxyNote}
+
+
+Change the formation of printed texts in the shell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Format\\
+\hline
+\end{DoxyParams}
+Possible options are \char`\"{}normal\char`\"{}, \char`\"{}fat\char`\"{}, \char`\"{}cursive\char`\"{}, \char`\"{}underline\char`\"{}, \char`\"{}blink\char`\"{}, \char`\"{}reverse\char`\"{}
+
 \begin{DoxyAuthor}{Author}
 Mike 
 \end{DoxyAuthor}
@@ -101,15 +133,18 @@ Mike
 \doxysubsubsection{\texorpdfstring{letter()}{letter()}}
 {\footnotesize\ttfamily void mml\+::shell\+::letter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{colour }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Schriftfarbe ändern
-\end{DoxyNote}
-\begin{DoxyReturn}{Returns}
 
-\end{DoxyReturn}
+
+Change printed text colour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & paint of the letters\\
+\hline
+\end{DoxyParams}
+Options are black, darkgray, (light)red, (light)green, brown, yellow, (light)blue, (light)purple, (light)cyan, white, lightgray, normal
+
 \begin{DoxyAuthor}{Author}
-Mike
-
 Mike Moser
 \end{DoxyAuthor}
 Programm \mbox{\hyperlink{shell_8cpp}{shell.\+cpp}} Enthält verschiedene Funktionen \mbox{\Hypertarget{namespacemml_1_1shell_a00c8e2a2ee520b8270b9f8898906231b}\label{namespacemml_1_1shell_a00c8e2a2ee520b8270b9f8898906231b}} 
@@ -118,78 +153,95 @@ Programm \mbox{\hyperlink{shell_8cpp}{shell.\+cpp}} Enthält verschiedene Funkti
 \doxysubsubsection{\texorpdfstring{normal()}{normal()}}
 {\footnotesize\ttfamily void mml\+::shell\+::normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Alle Änderungen an der Ausgabe zurücksetzen
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Reverse changes in the print behaviour of the shell. 
+
 \mbox{\Hypertarget{namespacemml_1_1shell_adbd82f8c931de0e11499c651fcbbce70}\label{namespacemml_1_1shell_adbd82f8c931de0e11499c651fcbbce70}} 
 \index{mml::shell@{mml::shell}!note@{note}}
 \index{note@{note}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{note()}{note()}}
 {\footnotesize\ttfamily void mml\+::shell\+::note (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Eine Notiz ausgeben
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_1_1shell_a8b511d7cd5acf56b224558cf2ab59034}\label{namespacemml_1_1shell_a8b511d7cd5acf56b224558cf2ab59034}} 
+
+
+Print a note in lightgray. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & to be printed \\
+\hline
+{\em newline} & print newline \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemml_1_1shell_acebfa40db0dbf8ce99ba8baf8c6d919d}\label{namespacemml_1_1shell_acebfa40db0dbf8ce99ba8baf8c6d919d}} 
 \index{mml::shell@{mml::shell}!option@{option}}
 \index{option@{option}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{option()}{option()}}
-{\footnotesize\ttfamily void mml\+::shell\+::option (\begin{DoxyParamCaption}\item[{std\+::string}]{chapter,  }\item[{std\+::string}]{option }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void mml\+::shell\+::option (\begin{DoxyParamCaption}\item[{std\+::string}]{option,  }\item[{std\+::string}]{descr }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Finden von übergebenen Argumente(n)
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\begin{DoxyNote}{Note}
-Ausgabe einer Option von einer Hilfeseite
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
-\mbox{\Hypertarget{namespacemml_1_1shell_a1a1a82593cac384a3d698003740cd408}\label{namespacemml_1_1shell_a1a1a82593cac384a3d698003740cd408}} 
+
+
+Print an option in a help page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & Name of the option used \\
+\hline
+{\em descr} & Description of the option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemml_1_1shell_ab7578091ec640c1c1f9d4c27674e4025}\label{namespacemml_1_1shell_ab7578091ec640c1c1f9d4c27674e4025}} 
 \index{mml::shell@{mml::shell}!password@{password}}
 \index{password@{password}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{password()}{password()}}
-{\footnotesize\ttfamily std\+::string mml\+::shell\+::password (\begin{DoxyParamCaption}\item[{std\+::string}]{ausgabe,  }\item[{std\+::string}]{source }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::string mml\+::shell\+::password (\begin{DoxyParamCaption}\item[{std\+::string}]{print,  }\item[{std\+::string}]{add }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Eingabe eines verdeckten Strings
-\end{DoxyNote}
+
+
+Input of a password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em print} & text to be printed when the code asks for the password \\
+\hline
+{\em add} & additional text printed after {\ttfamily print} \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-eingegebener String 
+input 
 \end{DoxyReturn}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
 \mbox{\Hypertarget{namespacemml_1_1shell_a1beda25649ea427bb646ea6be704904c}\label{namespacemml_1_1shell_a1beda25649ea427bb646ea6be704904c}} 
 \index{mml::shell@{mml::shell}!warn@{warn}}
 \index{warn@{warn}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{warn()}{warn()}}
 {\footnotesize\ttfamily void mml\+::shell\+::warn (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn\+\_\+opt)
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Print a warning and exit the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to be printed \\
+\hline
+{\em newline} & Print new line \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespacemml_1_1shell_ad39babde10f8181169d97a1600e30cb8}\label{namespacemml_1_1shell_ad39babde10f8181169d97a1600e30cb8}} 
 \index{mml::shell@{mml::shell}!warn\_opt@{warn\_opt}}
 \index{warn\_opt@{warn\_opt}!mml::shell@{mml::shell}}
 \doxysubsubsection{\texorpdfstring{warn\_opt()}{warn\_opt()}}
 {\footnotesize\ttfamily void mml\+::shell\+::warn\+\_\+opt (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})}
 
-\begin{DoxyNote}{Note}
-Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn\+\_\+opt)
-\end{DoxyNote}
-\begin{DoxyAuthor}{Author}
-Mike 
-\end{DoxyAuthor}
+
+
+Print a warning without exiting the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to be printed \\
+\hline
+{\em newline} & Print a new line \\
+\hline
+\end{DoxyParams}

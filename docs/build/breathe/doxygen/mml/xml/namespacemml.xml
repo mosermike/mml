@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="461" column="19" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="461" bodyend="468"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="455" column="19" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="455" bodyend="462"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a63d35e02eeb9557dfc874c351694a481" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="475" column="19" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="475" bodyend="481"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="469" column="19" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="469" bodyend="475"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ac6c1c70d32321714808ae64e33404d71" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="489" column="16" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="489" bodyend="495"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="483" column="16" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="483" bodyend="489"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1af4da79098c1caf9501e3f4ad9313a573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="503" column="6" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="503" declcolumn="6"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="497" column="6" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="497" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ae91f369e368b0941ddcb8b5be38c36f9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -181,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="510" column="18" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="510" bodyend="513"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="504" column="18" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="504" bodyend="507"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a4e23041702a789444e71665de8e19b91" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="534" column="10" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="534" declcolumn="10"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="528" column="10" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="528" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ae53fc572ec720a1c9aebc3ba5458ff5d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="550" column="13" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="550" declcolumn="13"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="544" column="13" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="544" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ac687254476eb5589ff145f7ccb8f203b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -347,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="557" column="6" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="557" declcolumn="6"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="551" column="6" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="551" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ad1fcba2487a959000bac06da539b792c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -377,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="563" column="6" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="563" declcolumn="6"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="557" column="6" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="557" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a8648c76abb82d5eb1745f91e4201b247" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -419,7 +419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="571" column="6" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="571" declcolumn="6"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="565" column="6" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="565" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a5aa66f758c7e5b3bde73a72428c60db7" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -461,7 +461,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="579" column="8" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="579" declcolumn="8"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="573" column="8" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="573" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a76d259a94d9ed50a9d33081caed25131" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -496,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="586" column="24" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="586" bodyend="590"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="580" column="24" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="580" bodyend="584"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a3edf33524b8d67442b6b8fd75b66afc4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>constexpr uint32_t</type>
@@ -526,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="599" column="20" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="599" bodyend="627"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="593" column="20" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="593" bodyend="621"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a09b5d2051c67d0ee351b09f87c30126d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -556,7 +556,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="634" column="13" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="634" declcolumn="13"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="628" column="13" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="628" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1aed237a2c04babbcae30d180ab047666f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -589,7 +589,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="640" column="18" bodyfile="/home/moser/codes/mml/include/mml/standards.hpp" bodystart="640" bodyend="640"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="634" column="18" bodyfile="/home/mike/codes/mml/include/mml/standards.hpp" bodystart="634" bodyend="634"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a16e784b078d6a774ffaf01ef4d4c7647" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -638,7 +638,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="648" column="19" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="648" declcolumn="19"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="642" column="19" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="642" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1ae9a2f37b5fb1e8e463509077bbe11212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -695,7 +695,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="657" column="19" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="657" declcolumn="19"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="651" column="19" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="651" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1a171afac262e291910b6f222216263b35" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -739,7 +739,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="665" column="13" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="665" declcolumn="13"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="659" column="13" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="659" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="standards_8hpp_1aa309b7ac991a2e8bb06209b9bb7b44fb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -769,13 +769,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="672" column="13" declfile="/home/moser/codes/mml/include/mml/standards.hpp" declline="672" declcolumn="13"/>
+        <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="666" column="13" declfile="/home/mike/codes/mml/include/mml/standards.hpp" declline="666" declcolumn="13"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/moser/codes/mml/include/mml/standards.hpp" line="22" column="1"/>
+    <location file="/home/mike/codes/mml/include/mml/standards.hpp" line="23" column="1"/>
   </compounddef>
 </doxygen>

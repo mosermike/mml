@@ -23,7 +23,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="25" column="13" bodyfile="src/Unix.cpp" bodystart="81" bodyend="87" declfile="include/mml/log.hpp" declline="25" declcolumn="13"/>
+        <location file="include/mml/log.hpp" line="25" column="13" bodyfile="src/Unix.cpp" bodystart="83" bodyend="89" declfile="include/mml/log.hpp" declline="25" declcolumn="13"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -1,4 +1,4 @@
-.TH "mml::Timer" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::Timer" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -7,7 +7,7 @@ mml::Timer
 .br
 .PP
 .PP
-\fC#include <Timer\&.hpp>\fP
+\fC#include <timer\&.hpp>\fP
 .SS "Classes"
 
 .in +1c
@@ -21,22 +21,46 @@ mml::Timer
 .ti -1c
 .RI "\fBTimer\fP ()"
 .br
+.RI "Constructor which sets the start time to now\&. "
 .ti -1c
-.RI "\fBTimer\fP (const \fBTimer\fP &t)"
+.RI "\fBTimer\fP (const \fBTimer\fP &\fBtime\fP)"
 .br
+.RI "Constructor which sets the start and end time to a specific time\&. "
 .ti -1c
 .RI "\fB~Timer\fP ()"
 .br
 .ti -1c
 .RI "void \fBbreak_start\fP () noexcept"
 .br
+.RI "Stop the time measurement temporarily\&. "
 .ti -1c
 .RI "void \fBbreak_stop\fP () noexcept"
 .br
-.RI "continue the time measurement "
+.RI "Continue the time measurement after a temporary break\&. "
 .ti -1c
-.RI "void \fBcout\fP (std::string text='', bool format_print=false, bool newline=true) noexcept"
+.RI "std::string \fBclock\fP () noexcept"
 .br
+.RI "Convert ticks to time format\&. "
+.ti -1c
+.RI "double \fBgetMS\fP () noexcept"
+.br
+.RI "Get actual passed time in ms\&. "
+.ti -1c
+.RI "double \fBgetS\fP () noexcept"
+.br
+.RI "Get actual passed time in s\&. "
+.ti -1c
+.RI "uint64_t \fBgetUS\fP () noexcept"
+.br
+.RI "Get actual passed time in µs\&. "
+.ti -1c
+.RI "void \fBprint\fP (std::string text='', bool format_print=false, bool newline=true) noexcept"
+.br
+.RI "Pint time formatted or in ms\&. "
+.ti -1c
+.RI "std::string \fBrange\fP () noexcept"
+.br
+.RI "return the time depending on the time value itself "
 .ti -1c
 .RI "void \fBstart\fP () noexcept"
 .br
@@ -46,36 +70,50 @@ mml::Timer
 .br
 .RI "Stops the time measurement\&. "
 .ti -1c
-.RI "uint64_t \fBgetUS\fP (bool \fBstop\fP=true) noexcept"
+.RI "std::string \fBstr\fP () noexcept"
 .br
-.RI "get the time in µs "
+.RI "Returns the milliseconds between start and end as a string\&. "
 .ti -1c
-.RI "double \fBgetMS\fP (bool \fBstop\fP=true) noexcept"
+.RI "\fBtime\fP \fBstrct\fP () noexcept"
 .br
-.RI "Return time in ms without stopping\&. "
+.RI "Get a structure with the meantime\&. "
 .ti -1c
-.RI "double \fBgetS\fP (bool \fBstop\fP=true) noexcept"
+.RI "\fBtime\fP \fBstrct_clock\fP () noexcept"
 .br
-.RI "Return time in s without stopping\&. "
+.RI "Get a structure with the meantime in the format of a clock hh:mm::ss,ms\&. "
+.ti -1c
+.RI "double \fBticks_to_double\fP (std::chrono::high_resolution_clock::time_point ticks, double f=1\&.0)"
+.br
+.RI "Convert ticks to double\&. "
 .ti -1c
 .RI "int \fBtoInt\fP () noexcept"
 .br
+.RI "Returns the milliseconds between start and end\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
 .ti -1c
-.RI "std::string \fBtoString\fP () noexcept"
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, \fBmml::Timer\fP &\fBtime\fP) noexcept"
 .br
-.ti -1c
-.RI "std::string \fBclock\fP () noexcept"
-.br
-.ti -1c
-.RI "std::string \fBrange\fP () noexcept"
-.br
-.RI "return the time depending on the time value itself "
+.RI "Output the time as a string via a stream in ms\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "mml::Timer::Timer ()\fC [inline]\fP"
 
-.SS "mml::Timer::Timer (const \fBTimer\fP & t)\fC [inline]\fP"
+.PP
+Constructor which sets the start time to now\&. 
+.SS "mml::Timer::Timer (const \fBTimer\fP & time)\fC [inline]\fP"
+
+.PP
+Constructor which sets the start and end time to a specific time\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItime\fP \fBTimer\fP which has a start and end time 
+.RE
+.PP
 
 .SS "mml::Timer::~Timer ()\fC [inline]\fP"
 
@@ -84,57 +122,31 @@ mml::Timer
 .SS "void mml::Timer::break_start ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-stop the time measurement 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
+Stop the time measurement temporarily\&. 
 .SS "void mml::Timer::break_stop ()\fC [noexcept]\fP"
 
 .PP
-continue the time measurement 
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
-
+Continue the time measurement after a temporary break\&. 
 .SS "std::string mml::Timer::clock ()\fC [noexcept]\fP"
 
-.SS "void mml::Timer::cout (std::string text = \fC''\fP, bool format_print = \fCfalse\fP, bool newline = \fCtrue\fP)\fC [noexcept]\fP"
-
+.PP
+Convert ticks to time format\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Time in the format 'hh:mm:ss,ms' 
+.RE
 .PP
 \fBNote\fP
 .RS 4
-Pint time formatted or in ms 
-.RE
-.PP
-\fBParameters\fP
-.RS 4
-\fItext\fP A text printed first without a newline 
-.br
-\fIformat_print\fP Print by using the function range (false : in ms) 
-.br
-\fInewline\fP Print with a newline 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
+Prints a warning if the timer was not stopped before 
 .RE
 .PP
 
-.SS "double mml::Timer::getMS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+.SS "double mml::Timer::getMS ()\fC [noexcept]\fP"
 
 .PP
-Return time in ms without stopping\&. 
+Get actual passed time in ms\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -143,54 +155,25 @@ time in ms
 .PP
 \fBAuthor\fP
 .RS 4
-Lucas
-.RE
-.PP
-Zwischenergebnis in ms zurückgegeben\&. (stop muss vorher aufgerufen werden)
-.PP
-\fBReturns\fP
-.RS 4
-Zwischenergebnis 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
 Lucas 
 .RE
 .PP
 
-.SS "double mml::Timer::getS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+.SS "double mml::Timer::getS ()\fC [noexcept]\fP"
 
 .PP
-Return time in s without stopping\&. 
+Get actual passed time in s\&. 
 .PP
 \fBReturns\fP
 .RS 4
 time in seconds 
 .RE
 .PP
-\fBAuthor\fP
-.RS 4
-Mike
-.RE
-.PP
-Zwischenergebnis zurückgegeben\&.
-.PP
-\fBReturns\fP
-.RS 4
-Zwischenergebnis 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
-Mike 
-.RE
-.PP
 
-.SS "uint64_t mml::Timer::getUS (bool stop = \fCtrue\fP)\fC [noexcept]\fP"
+.SS "uint64_t mml::Timer::getUS ()\fC [noexcept]\fP"
 
 .PP
-get the time in µs 
+Get actual passed time in µs\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -199,19 +182,22 @@ time in µs
 .PP
 \fBAuthor\fP
 .RS 4
-Lucas
-.RE
-.PP
-Direkten Wert in Mikrosekunden zurückgegeben\&.
-.PP
-\fBReturns\fP
-.RS 4
-Vergangene Zeit in Mikrosekunden (uint64_t) 
-.RE
-.PP
-\fBAuthor\fP
-.RS 4
 Lucas 
+.RE
+.PP
+
+.SS "void mml::Timer::print (std::string text = \fC''\fP, bool format_print = \fCfalse\fP, bool newline = \fCtrue\fP)\fC [noexcept]\fP"
+
+.PP
+Pint time formatted or in ms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItext\fP A text printed first without a newline 
+.br
+\fIformat_print\fP Print by using the function range (false : in ms) 
+.br
+\fInewline\fP Print with a newline 
 .RE
 .PP
 
@@ -238,13 +224,6 @@ Start time measurement\&.
 .PP
 \fBAuthor\fP
 .RS 4
-Lucas
-.RE
-.PP
-Beginnt die Zeitmessung\&.
-.PP
-\fBAuthor\fP
-.RS 4
 Lucas 
 .RE
 .PP
@@ -261,25 +240,106 @@ passed time in ms
 .PP
 \fBAuthor\fP
 .RS 4
-Lucas
+Lucas 
 .RE
 .PP
-Stoppt die Zeitmessung\&.
+
+.SS "std::string mml::Timer::str ()\fC [noexcept]\fP"
+
+.PP
+Returns the milliseconds between start and end as a string\&. 
 .PP
 \fBReturns\fP
 .RS 4
-Vergangene Zeit in Millisekunden 
+Time with the unit 'ms' 
 .RE
 .PP
-\fBAuthor\fP
+\fBNote\fP
 .RS 4
-Lucas 
+Prints a warning if the timer was not stopped before 
+.RE
+.PP
+
+.SS "\fBmml::Timer::time\fP mml::Timer::strct ()\fC [noexcept]\fP"
+
+.PP
+Get a structure with the meantime\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Structure with the meantime in µs, ms, s, min and hours 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The structure is not in the format of a time\&. If the meantime is 1 ms, the structure will have s=0, ms = 1 and µs = 1000 
+.RE
+.PP
+
+.SS "\fBmml::Timer::time\fP mml::Timer::strct_clock ()\fC [noexcept]\fP"
+
+.PP
+Get a structure with the meantime in the format of a clock hh:mm::ss,ms\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Structure with the meantime in µs, ms, s, min and hours 
+.RE
+.PP
+
+.SS "double mml::Timer::ticks_to_double (std::chrono::high_resolution_clock::time_point ticks, double f = \fC1\&.0\fP)"
+
+.PP
+Convert ticks to double\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIticks\fP Time point to which the passed time is computed 
+.br
+\fIf\fP Factor which determines the unit (1\&.0 = µs, 1000\&.0 = ms, 1\&.0e6 = s) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Return time passed between start and end 
 .RE
 .PP
 
 .SS "int mml::Timer::toInt ()\fC [noexcept]\fP"
 
-.SS "std::string mml::Timer::toString ()\fC [noexcept]\fP"
+.PP
+Returns the milliseconds between start and end\&. 
+.PP
+\fBReturns\fP
+.RS 4
+milliseconds as an integer 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Prints a warning if the timer was not stopped before 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & out, \fBmml::Timer\fP & time)\fC [friend]\fP"
+
+.PP
+Output the time as a string via a stream in ms\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIout\fP output stream 
+.br
+\fItime\fP \fBTimer\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
+.RE
+.PP
 
 
 .SH "Author"

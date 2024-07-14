@@ -7,12 +7,6 @@
     <includedby refid="mml_8hpp" local="yes">include/mml.hpp</includedby>
     <includedby refid="help_8cpp" local="yes">src/help.cpp</includedby>
     <incdepgraph>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
-      </node>
       <node id="1">
         <label>include/mml/help.hpp</label>
         <link refid="help_8hpp"/>
@@ -21,8 +15,38 @@
         <childnode refid="3" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="1">
+        <label>include/mml/help.hpp</label>
+        <link refid="help_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
       <node id="2">
         <label>include/mml.hpp</label>
         <link refid="mml_8hpp"/>
@@ -34,40 +58,10 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>src/help.cpp</label>
-        <link refid="help_8cpp"/>
-      </node>
-      <node id="7">
-        <label>test/standards.cpp</label>
-        <link refid="test_2standards_8cpp"/>
       </node>
       <node id="6">
-        <label>src/Unix.cpp</label>
-        <link refid="Unix_8cpp"/>
-      </node>
-      <node id="1">
-        <label>include/mml/help.hpp</label>
-        <link refid="help_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>src/thread.cpp</label>
-        <link refid="src_2thread_8cpp"/>
-      </node>
-      <node id="4">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
-      </node>
-      <node id="3">
-        <label>src/file.cpp</label>
-        <link refid="file_8cpp"/>
+        <label>test/standards.cpp</label>
+        <link refid="test_2standards_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>
@@ -112,7 +106,7 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1help_1a4f18d3adc05374c5e8502536a47a6410" kindref="member">foot</ref>(std::string<sp/>version,<sp/>std::string<sp/>month,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>year,<sp/>std::string<sp/><ref refid="namespaceconf_1a637c239d256432248aa8d9f3ab0b8c52" kindref="member">author</ref>)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" kindref="member">header</ref>(std::string<sp/>command,<sp/>std::string<sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" kindref="member">header</ref>(std::string<sp/>command,<sp/>std::string<sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">}</highlight></codeline>

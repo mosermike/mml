@@ -1,4 +1,4 @@
-.TH "mml::vector< T >" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::vector< T >" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -45,11 +45,18 @@ mml::vector< T >
 .RI "\fBvector\fP \fBoperator=\fP (\fBmml::vector\fP< T > temp) noexcept"
 .br
 .ti -1c
+.RI "T & \fBoperator[]\fP (int index)"
+.br
+.RI "Returns a value at a specific index\&. "
+.ti -1c
+.RI "const T & \fBoperator[]\fP (int index) const"
+.br
+.ti -1c
 .RI "std::vector< T >::iterator \fBbegin\fP () noexcept"
 .br
 .RI "iterator to the beginning of the vector "
 .ti -1c
-.RI "bool \fBempty\fP () noexcept"
+.RI "bool \fBempty\fP () const noexcept"
 .br
 .RI "Checks whether the vector is empty\&. "
 .ti -1c
@@ -69,10 +76,6 @@ mml::vector< T >
 .br
 .RI "Insert a value at a specific position\&. "
 .ti -1c
-.RI "T & \fBoperator[]\fP (int index)"
-.br
-.RI "Returns a value at a specific index\&. "
-.ti -1c
 .RI "void \fBpop_back\fP () noexcept"
 .br
 .RI "Removes the last entry\&. "
@@ -85,10 +88,10 @@ mml::vector< T >
 .br
 .RI "Size of the vector\&. "
 .ti -1c
-.RI "std::size_t \fBcount\fP (T value) noexcept"
+.RI "std::size_t \fBcount\fP (T value) const noexcept"
 .br
 .ti -1c
-.RI "void \fBcout\fP (bool newline=false) noexcept"
+.RI "void \fBcout\fP (bool newline=false) const noexcept"
 .br
 .RI "print elements in the vector "
 .ti -1c
@@ -96,15 +99,15 @@ mml::vector< T >
 .br
 .RI "Empties the vector\&. "
 .ti -1c
-.RI "template<typename\&.\&.\&. values> bool \fBexist\fP (const values &\&.\&.\&. value) noexcept"
+.RI "template<typename\&.\&.\&. values> bool \fBexist\fP (const values &\&.\&.\&. value) const noexcept"
 .br
 .RI "Check if one \fIor\fP another string exists\&. "
 .ti -1c
-.RI "std::size_t \fBfind\fP (const T value, size_t start=0) noexcept"
+.RI "std::size_t \fBfind\fP (const T value, size_t start=0) const noexcept"
 .br
 .RI "Return a position of an element\&. "
 .ti -1c
-.RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='', \fBmml::string\fP separator=',') noexcept"
+.RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='', \fBmml::string\fP separator=',') const noexcept"
 .br
 .RI "Write values into a logfile\&. "
 .ti -1c
@@ -112,7 +115,7 @@ mml::vector< T >
 .br
 .RI "Replace specific elements with another element\&. "
 .ti -1c
-.RI "\fBvector\fP< T > \fBoperator*\fP (const T &value)"
+.RI "\fBvector\fP< T > \fBoperator*\fP (const T &value) const"
 .br
 .RI "Scalarmultiplication\&. "
 .ti -1c
@@ -120,7 +123,7 @@ mml::vector< T >
 .br
 .RI "Scalarmultiplication\&. "
 .ti -1c
-.RI "\fBvector\fP< T > \fBoperator+\fP (const T &value)"
+.RI "\fBvector\fP< T > \fBoperator+\fP (const T &value) const"
 .br
 .RI "Add a value to each element\&. "
 .ti -1c
@@ -136,11 +139,11 @@ mml::vector< T >
 .br
 .RI "Sort the vector\&. "
 .ti -1c
-.RI "T \fBsum\fP ()"
+.RI "T \fBsum\fP () const"
 .br
 .RI "Determine the sum of the vector\&. "
 .ti -1c
-.RI "\fBmml::vector\fP< T > \fBoperator+\fP (\fBvector\fP< T > temp)"
+.RI "\fBmml::vector\fP< T > \fBoperator+\fP (\fBvector\fP< T > temp) const"
 .br
 .RI "Add a vector to this vector\&. "
 .ti -1c
@@ -148,7 +151,7 @@ mml::vector< T >
 .br
 .RI "Add a vector to this vector\&. "
 .ti -1c
-.RI "\fBmml::vector\fP< T > \fBoperator^\fP (const T exponent)"
+.RI "\fBmml::vector\fP< T > \fBoperator^\fP (const T exponent) const"
 .br
 .RI "Vector^() "
 .ti -1c
@@ -156,7 +159,7 @@ mml::vector< T >
 .br
 .RI "Vector^() "
 .ti -1c
-.RI "std::vector< T > \fBtovec\fP ()"
+.RI "std::vector< T > \fBtovec\fP () const noexcept"
 .br
 .RI "Return the std::vector\&. "
 .in -1c
@@ -226,7 +229,7 @@ iterator
 .RE
 .PP
 
-.SS "template<class T > std::size_t \fBmml::vector\fP< T >::count (T value)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::count (T value) const\fC [inline]\fP, \fC [noexcept]\fP"
 Count how many entries are equal to a value 
 .PP
 \fBParameters\fP
@@ -240,7 +243,7 @@ std::size_t
 .RE
 .PP
 
-.SS "template<class T > void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::cout (bool newline = \fCfalse\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 print elements in the vector 
@@ -262,7 +265,7 @@ std::vector<T>
 .RE
 .PP
 
-.SS "template<class T > bool \fBmml::vector\fP< T >::empty ()\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > bool \fBmml::vector\fP< T >::empty () const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Checks whether the vector is empty\&. 
@@ -328,7 +331,7 @@ None
 .RE
 .PP
 
-.SS "template<class T > template<typename\&.\&.\&. values> bool \fBmml::vector\fP< T >::exist (const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > template<typename\&.\&.\&. values> bool \fBmml::vector\fP< T >::exist (const values &\&.\&.\&. value) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Check if one \fIor\fP another string exists\&. 
@@ -344,7 +347,7 @@ bool
 .RE
 .PP
 
-.SS "template<class T > std::size_t \fBmml::vector\fP< T >::find (const T value, size_t start = \fC0\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > std::size_t \fBmml::vector\fP< T >::find (const T value, size_t start = \fC0\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Return a position of an element\&. 
@@ -380,7 +383,7 @@ Iterator
 .RE
 .PP
 
-.SS "template<class T > void \fBmml::vector\fP< T >::\fBlog\fP (\fBmml::string\fP logpath, bool newline = \fCfalse\fP, \fBmml::string\fP first = \fC''\fP, \fBmml::string\fP last = \fC''\fP, \fBmml::string\fP separator = \fC','\fP)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > void \fBmml::vector\fP< T >::\fBlog\fP (\fBmml::string\fP logpath, bool newline = \fCfalse\fP, \fBmml::string\fP first = \fC''\fP, \fBmml::string\fP last = \fC''\fP, \fBmml::string\fP separator = \fC','\fP) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Write values into a logfile\&. 
@@ -399,7 +402,7 @@ Write values into a logfile\&.
 .RE
 .PP
 
-.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator* (const T & value)\fC [inline]\fP"
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator* (const T & value) const\fC [inline]\fP"
 
 .PP
 Scalarmultiplication\&. 
@@ -441,7 +444,7 @@ Instance of the class
 .RE
 .PP
 
-.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator+ (const T & value)\fC [inline]\fP"
+.SS "template<class T > \fBvector\fP<T> \fBmml::vector\fP< T >::operator+ (const T & value) const\fC [inline]\fP"
 
 .PP
 Add a value to each element\&. 
@@ -462,7 +465,7 @@ Vector with the added value
 .RE
 .PP
 
-.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator+ (\fBvector\fP< T > temp)\fC [inline]\fP"
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator+ (\fBvector\fP< T > temp) const\fC [inline]\fP"
 
 .PP
 Add a vector to this vector\&. 
@@ -564,7 +567,9 @@ value at this index
 .RE
 .PP
 
-.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator^ (const T exponent)\fC [inline]\fP"
+.SS "template<class T > const T& \fBmml::vector\fP< T >::operator[] (int index) const\fC [inline]\fP"
+
+.SS "template<class T > \fBmml::vector\fP<T> \fBmml::vector\fP< T >::operator^ (const T exponent) const\fC [inline]\fP"
 
 .PP
 Vector^() 
@@ -679,7 +684,7 @@ Return the sorted vector
 .RE
 .PP
 
-.SS "template<class T > T \fBmml::vector\fP< T >::sum ()\fC [inline]\fP"
+.SS "template<class T > T \fBmml::vector\fP< T >::sum () const\fC [inline]\fP"
 
 .PP
 Determine the sum of the vector\&. 
@@ -695,7 +700,7 @@ Sum of the vector
 .RE
 .PP
 
-.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::tovec ()\fC [inline]\fP"
+.SS "template<class T > std::vector<T> \fBmml::vector\fP< T >::tovec () const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Return the std::vector\&. 

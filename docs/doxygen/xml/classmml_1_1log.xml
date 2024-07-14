@@ -31,6 +31,20 @@
         </inbodydescription>
         <location file="include/mml/log.hpp" line="39" column="15" bodyfile="include/mml/log.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classmml_1_1log_1a66a6d82abd7b979c110c24f82423b6d8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::log::num_backups</definition>
+        <argsstring></argsstring>
+        <name>num_backups</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="40" column="5" bodyfile="include/mml/log.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classmml_1_1log_1a3f65b8bb3b61c6ce2cdd595e012fac44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -68,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="48" column="1" bodyfile="include/mml/log.hpp" bodystart="48" bodyend="58"/>
+        <location file="include/mml/log.hpp" line="49" column="1" bodyfile="include/mml/log.hpp" bodystart="49" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a53b0ce1eb331eef0eed64e6f41b2d01a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -82,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="63" column="1" bodyfile="include/mml/log.hpp" bodystart="63" bodyend="63"/>
+        <location file="include/mml/log.hpp" line="64" column="1" bodyfile="include/mml/log.hpp" bodystart="64" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a9698aaef8477ec90a27fe4324af5ef01" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <type></type>
@@ -96,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="68" column="1" bodyfile="include/mml/log.hpp" bodystart="68" bodyend="68"/>
+        <location file="include/mml/log.hpp" line="69" column="1" bodyfile="include/mml/log.hpp" bodystart="69" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a519038f7f2dcf5c107957eefa2b18be1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1log" kindref="compound">mml::log</ref> &amp;</type>
@@ -124,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="74" column="10" bodyfile="src/log.cpp" bodystart="16" bodyend="19"/>
+        <location file="include/mml/log.hpp" line="75" column="10" bodyfile="src/log.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1af5ae373d3beb516f18aeb682fc003d75" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -166,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="91" column="6" bodyfile="src/log.cpp" bodystart="21" bodyend="45"/>
+        <location file="include/mml/log.hpp" line="102" column="6" bodyfile="src/log.cpp" bodystart="21" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a6b14f403e075a081f9d9a27e5cd85bc5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -180,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="96" column="6" bodyfile="src/log.cpp" bodystart="47" bodyend="49"/>
+        <location file="include/mml/log.hpp" line="107" column="6" bodyfile="src/log.cpp" bodystart="47" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a181f2207f8d222645f1802ac46269ac2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -225,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="104" column="18" bodyfile="include/mml/log.hpp" bodystart="104" bodyend="108"/>
+        <location file="include/mml/log.hpp" line="115" column="18" bodyfile="include/mml/log.hpp" bodystart="115" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1af53a9d163c02452f0288be2bf0ca9c63" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -255,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="115" column="13" bodyfile="src/log.cpp" bodystart="57" bodyend="63"/>
+        <location file="include/mml/log.hpp" line="126" column="13" bodyfile="src/log.cpp" bodystart="57" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1aa1c5624176da9858966d55572f07e3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -294,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="123" column="13" bodyfile="src/log.cpp" bodystart="65" bodyend="91"/>
+        <location file="include/mml/log.hpp" line="134" column="13" bodyfile="src/log.cpp" bodystart="65" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a37a5c288ca3ea55368443a187edaa632" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
@@ -311,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="129" column="13" bodyfile="src/log.cpp" bodystart="93" bodyend="99"/>
+        <location file="include/mml/log.hpp" line="140" column="13" bodyfile="src/log.cpp" bodystart="93" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a3ccd92d9205471330411e539e29da7f1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -327,18 +341,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="135" column="6" bodyfile="src/log.cpp" bodystart="101" bodyend="104"/>
+        <location file="include/mml/log.hpp" line="146" column="6" bodyfile="src/log.cpp" bodystart="101" bodyend="104"/>
       </memberdef>
-      <memberdef kind="function" id="classmml_1_1log_1ab35c6647cb3117ce3bdc2d9ae8b3249f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+      <memberdef kind="function" id="classmml_1_1log_1a0abf178855b3479d0432d709973a6336" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void mml::log::open</definition>
-        <argsstring>(mml::string path=&quot;&quot;) noexcept</argsstring>
+        <argsstring>()</argsstring>
         <name>open</name>
-        <param>
-          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
-          <declname>path</declname>
-          <defval>&quot;&quot;</defval>
-        </param>
         <briefdescription>
 <para>open a logfile </para>
         </briefdescription>
@@ -352,11 +361,20 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if logpath is not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="141" column="6" bodyfile="src/log.cpp" bodystart="106" bodyend="113"/>
+        <location file="include/mml/log.hpp" line="153" column="6" bodyfile="src/log.cpp" bodystart="106" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a7cdf620bab72e285569ae9a6fbb3aae1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -385,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="147" column="6" bodyfile="src/log.cpp" bodystart="115" bodyend="133"/>
+        <location file="include/mml/log.hpp" line="159" column="6" bodyfile="src/log.cpp" bodystart="113" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1log_1a9921b093028374a7a0c0db1887edee37" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -414,18 +432,74 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="153" column="6" bodyfile="src/log.cpp" bodystart="135" bodyend="143"/>
+        <location file="include/mml/log.hpp" line="165" column="6" bodyfile="src/log.cpp" bodystart="133" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a168c367d000f308793691061100062b4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::set_num</definition>
+        <argsstring>(int num) noexcept</argsstring>
+        <name>set_num</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Set number of backup files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of backup files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="171" column="6" bodyfile="include/mml/log.hpp" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a36f30eb1d41682cdb45090e3d832601e" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::set_path</definition>
+        <argsstring>(mml::string path) noexcept</argsstring>
+        <name>set_path</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Set path of the logfile. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New path of the logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="180" column="6" bodyfile="include/mml/log.hpp" bodystart="180" bodyend="183"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
-      <memberdef kind="friend" id="classmml_1_1log_1a244ec7e1c6b0c021cb10265728676dc1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+      <memberdef kind="friend" id="classmml_1_1log_1ae1541a56e571aa3ab49a51ed586927d4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type>void</type>
-        <definition>void operator&lt;&lt;</definition>
+        <type><ref refid="classmml_1_1log" kindref="compound">log</ref> &amp;</type>
+        <definition>log&amp; operator&lt;&lt;</definition>
         <argsstring>(mml::log &amp;log, const T &amp;String) noexcept</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
@@ -461,14 +535,48 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="81" column="20" bodyfile="include/mml/log.hpp" bodystart="81" bodyend="84"/>
+        <location file="include/mml/log.hpp" line="82" column="20" bodyfile="include/mml/log.hpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmml_1_1log_1a5e1eeee04c53f7450037156d743a24d8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1log" kindref="compound">log</ref> &amp;</type>
+        <definition>log&amp; operator&lt;&lt;</definition>
+        <argsstring>(mml::log &amp;log, std::ostream &amp;(*manip)(std::ostream &amp;)) noexcept</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1log" kindref="compound">mml::log</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;(*)(std::ostream &amp;)</type>
+          <declname>manip</declname>
+        </param>
+        <briefdescription>
+<para>Output special characters like std::endl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>manip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be printed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="92" column="20" bodyfile="include/mml/log.hpp" bodystart="92" bodyend="95"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/mml/log.hpp" line="36" column="1" bodyfile="include/mml/log.hpp" bodystart="36" bodyend="156"/>
+    <location file="include/mml/log.hpp" line="36" column="1" bodyfile="include/mml/log.hpp" bodystart="36" bodyend="184"/>
     <listofallmembers>
       <member refid="classmml_1_1log_1af5ae373d3beb516f18aeb682fc003d75" prot="public" virt="non-virtual"><scope>mml::log</scope><name>backup</name></member>
       <member refid="classmml_1_1log_1a6b14f403e075a081f9d9a27e5cd85bc5" prot="public" virt="non-virtual"><scope>mml::log</scope><name>close</name></member>
@@ -480,12 +588,16 @@
       <member refid="classmml_1_1log_1a3f65b8bb3b61c6ce2cdd595e012fac44" prot="public" virt="non-virtual"><scope>mml::log</scope><name>log</name></member>
       <member refid="classmml_1_1log_1a53b0ce1eb331eef0eed64e6f41b2d01a" prot="public" virt="non-virtual"><scope>mml::log</scope><name>log</name></member>
       <member refid="classmml_1_1log_1a61ab29dce1138f2ab61595fb615019b4" prot="private" virt="non-virtual"><scope>mml::log</scope><name>logpath</name></member>
-      <member refid="classmml_1_1log_1ab35c6647cb3117ce3bdc2d9ae8b3249f" prot="public" virt="non-virtual"><scope>mml::log</scope><name>open</name></member>
-      <member refid="classmml_1_1log_1a244ec7e1c6b0c021cb10265728676dc1" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1log_1a66a6d82abd7b979c110c24f82423b6d8" prot="private" virt="non-virtual"><scope>mml::log</scope><name>num_backups</name></member>
+      <member refid="classmml_1_1log_1a0abf178855b3479d0432d709973a6336" prot="public" virt="non-virtual"><scope>mml::log</scope><name>open</name></member>
+      <member refid="classmml_1_1log_1ae1541a56e571aa3ab49a51ed586927d4" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1log_1a5e1eeee04c53f7450037156d743a24d8" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator&lt;&lt;</name></member>
       <member refid="classmml_1_1log_1a519038f7f2dcf5c107957eefa2b18be1" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator=</name></member>
       <member refid="classmml_1_1log_1abc8ca2efb832ed83a1a1773fe19d7e7e" prot="private" virt="non-virtual"><scope>mml::log</scope><name>output</name></member>
       <member refid="classmml_1_1log_1a7cdf620bab72e285569ae9a6fbb3aae1" prot="public" virt="non-virtual"><scope>mml::log</scope><name>print</name></member>
       <member refid="classmml_1_1log_1a9921b093028374a7a0c0db1887edee37" prot="public" virt="non-virtual"><scope>mml::log</scope><name>reset</name></member>
+      <member refid="classmml_1_1log_1a168c367d000f308793691061100062b4" prot="public" virt="non-virtual"><scope>mml::log</scope><name>set_num</name></member>
+      <member refid="classmml_1_1log_1a36f30eb1d41682cdb45090e3d832601e" prot="public" virt="non-virtual"><scope>mml::log</scope><name>set_path</name></member>
       <member refid="classmml_1_1log_1a9698aaef8477ec90a27fe4324af5ef01" prot="public" virt="non-virtual"><scope>mml::log</scope><name>~log</name></member>
     </listofallmembers>
   </compounddef>

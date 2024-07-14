@@ -101,7 +101,7 @@ int main() {
 	auto task1 = [&threads, &rangeStart, &rangePerThread, &rangeEnd](int threadId) -> int {
 		int start = rangeStart + threadId * rangePerThread;
         int end = (threadId == threads.size - 1) ? rangeEnd : start + rangePerThread - 1;
-		threads << std::to_string(threadId) + "from " + std::to_string(start)  + " to " + std::to_string(end) << std::endl;
+		threads << std::to_string(threadId) + " from " + std::to_string(start)  + " to " + std::to_string(end) << std::endl;
         return search_prime(threadId, start, end);
     };
 
@@ -129,6 +129,10 @@ int main() {
 	
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
 	std::cout << std::endl;
 	
     return 0;

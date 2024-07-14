@@ -1,4 +1,4 @@
-.TH "mml::thread::Threads< result >" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::thread::Threads< result >" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -21,9 +21,6 @@ mml::thread::Threads< result > \- Class \fBThreads\fP\&.
 .br
 .RI "Operator =\&. "
 .ti -1c
-.RI "\fB~Threads\fP ()"
-.br
-.ti -1c
 .RI "void \fBstart\fP (const std::function< result(int)> &task, int id)"
 .br
 .RI "Starts a function with a specific thread\&. "
@@ -43,6 +40,10 @@ mml::thread::Threads< result > \- Class \fBThreads\fP\&.
 .RI "void \fBjoin\fP () noexcept"
 .br
 .RI "Joins all threads and waits for unfinished threads\&. "
+.ti -1c
+.RI "\fB~Threads\fP ()"
+.br
+.RI "Deconstructor which executes the functino join\&. "
 .in -1c
 .SS "Public Attributes"
 
@@ -88,6 +89,8 @@ Initialize with a number of threads\&.
 
 .SS "template<typename result > \fBmml::thread::Threads\fP< result >::~\fBThreads\fP ()\fC [inline]\fP"
 
+.PP
+Deconstructor which executes the functino join\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "template<typename result > std::vector<result> \fBmml::thread::Threads\fP< result >::getResults ()\fC [inline]\fP, \fC [noexcept]\fP"

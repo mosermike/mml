@@ -7,7 +7,6 @@
     <innerclass refid="classmml_1_1Timer" prot="public">mml::Timer</innerclass>
     <innerclass refid="classmml_1_1vector" prot="public">mml::vector</innerclass>
     <innernamespace refid="namespacemml_1_1file">mml::file</innernamespace>
-    <innernamespace refid="namespacemml_1_1functions">mml::functions</innernamespace>
     <innernamespace refid="namespacemml_1_1help">mml::help</innernamespace>
     <innernamespace refid="namespacemml_1_1shell">mml::shell</innernamespace>
     <innernamespace refid="namespacemml_1_1thread">mml::thread</innernamespace>
@@ -57,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="503" column="6" bodyfile="src/standards.cpp" bodystart="24" bodyend="53" declfile="include/mml/standards.hpp" declline="503" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="497" column="6" bodyfile="src/standards.cpp" bodystart="24" bodyend="53" declfile="include/mml/standards.hpp" declline="497" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a4e23041702a789444e71665de8e19b91" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>uint32_t</type>
@@ -115,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="534" column="10" bodyfile="src/standards.cpp" bodystart="58" bodyend="86" declfile="include/mml/standards.hpp" declline="534" declcolumn="10"/>
+        <location file="include/mml/standards.hpp" line="528" column="10" bodyfile="src/standards.cpp" bodystart="58" bodyend="86" declfile="include/mml/standards.hpp" declline="528" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ae53fc572ec720a1c9aebc3ba5458ff5d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -193,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="550" column="13" bodyfile="src/standards.cpp" bodystart="88" bodyend="121" declfile="include/mml/standards.hpp" declline="550" declcolumn="13"/>
+        <location file="include/mml/standards.hpp" line="544" column="13" bodyfile="src/standards.cpp" bodystart="88" bodyend="121" declfile="include/mml/standards.hpp" declline="544" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ac687254476eb5589ff145f7ccb8f203b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -223,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="557" column="6" bodyfile="src/standards.cpp" bodystart="123" bodyend="123" declfile="include/mml/standards.hpp" declline="557" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="551" column="6" bodyfile="src/standards.cpp" bodystart="123" bodyend="123" declfile="include/mml/standards.hpp" declline="551" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ad1fcba2487a959000bac06da539b792c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -253,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="563" column="6" bodyfile="src/standards.cpp" bodystart="125" bodyend="127" declfile="include/mml/standards.hpp" declline="563" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="557" column="6" bodyfile="src/standards.cpp" bodystart="125" bodyend="127" declfile="include/mml/standards.hpp" declline="557" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a8648c76abb82d5eb1745f91e4201b247" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="571" column="6" bodyfile="src/standards.cpp" bodystart="129" bodyend="131" declfile="include/mml/standards.hpp" declline="571" declcolumn="6"/>
+        <location file="include/mml/standards.hpp" line="565" column="6" bodyfile="src/standards.cpp" bodystart="129" bodyend="131" declfile="include/mml/standards.hpp" declline="565" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a5aa66f758c7e5b3bde73a72428c60db7" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -337,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="579" column="8" bodyfile="src/standards.cpp" bodystart="133" bodyend="140" declfile="include/mml/standards.hpp" declline="579" declcolumn="8"/>
+        <location file="include/mml/standards.hpp" line="573" column="8" bodyfile="src/standards.cpp" bodystart="133" bodyend="140" declfile="include/mml/standards.hpp" declline="573" declcolumn="8"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a09b5d2051c67d0ee351b09f87c30126d" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -367,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="634" column="13" bodyfile="src/standards.cpp" bodystart="148" bodyend="164" declfile="include/mml/standards.hpp" declline="634" declcolumn="13"/>
+        <location file="include/mml/standards.hpp" line="628" column="13" bodyfile="src/standards.cpp" bodystart="148" bodyend="164" declfile="include/mml/standards.hpp" declline="628" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a16e784b078d6a774ffaf01ef4d4c7647" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -416,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="648" column="19" bodyfile="src/standards.cpp" bodystart="178" bodyend="187" declfile="include/mml/standards.hpp" declline="648" declcolumn="19"/>
+        <location file="include/mml/standards.hpp" line="642" column="19" bodyfile="src/standards.cpp" bodystart="178" bodyend="187" declfile="include/mml/standards.hpp" declline="642" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ae9a2f37b5fb1e8e463509077bbe11212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -473,7 +472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="657" column="19" bodyfile="src/standards.cpp" bodystart="239" bodyend="245" declfile="include/mml/standards.hpp" declline="657" declcolumn="19"/>
+        <location file="include/mml/standards.hpp" line="651" column="19" bodyfile="src/standards.cpp" bodystart="239" bodyend="245" declfile="include/mml/standards.hpp" declline="651" declcolumn="19"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a171afac262e291910b6f222216263b35" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -517,7 +516,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="665" column="13" bodyfile="src/standards.cpp" bodystart="231" bodyend="237" declfile="include/mml/standards.hpp" declline="665" declcolumn="13"/>
+        <location file="include/mml/standards.hpp" line="659" column="13" bodyfile="src/standards.cpp" bodystart="231" bodyend="237" declfile="include/mml/standards.hpp" declline="659" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1aa309b7ac991a2e8bb06209b9bb7b44fb" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::size_t</type>
@@ -547,7 +546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="672" column="13" bodyfile="src/standards.cpp" bodystart="166" bodyend="174" declfile="include/mml/standards.hpp" declline="672" declcolumn="13"/>
+        <location file="include/mml/standards.hpp" line="666" column="13" bodyfile="src/standards.cpp" bodystart="166" bodyend="174" declfile="include/mml/standards.hpp" declline="666" declcolumn="13"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -584,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="461" column="19" bodyfile="include/mml/standards.hpp" bodystart="461" bodyend="468"/>
+        <location file="include/mml/standards.hpp" line="455" column="19" bodyfile="include/mml/standards.hpp" bodystart="455" bodyend="462"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a63d35e02eeb9557dfc874c351694a481" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -619,7 +618,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="475" column="19" bodyfile="include/mml/standards.hpp" bodystart="475" bodyend="481"/>
+        <location file="include/mml/standards.hpp" line="469" column="19" bodyfile="include/mml/standards.hpp" bodystart="469" bodyend="475"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ac6c1c70d32321714808ae64e33404d71" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -654,7 +653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="489" column="16" bodyfile="include/mml/standards.hpp" bodystart="489" bodyend="495"/>
+        <location file="include/mml/standards.hpp" line="483" column="16" bodyfile="include/mml/standards.hpp" bodystart="483" bodyend="489"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1ae91f369e368b0941ddcb8b5be38c36f9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -687,7 +686,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="510" column="18" bodyfile="include/mml/standards.hpp" bodystart="510" bodyend="513"/>
+        <location file="include/mml/standards.hpp" line="504" column="18" bodyfile="include/mml/standards.hpp" bodystart="504" bodyend="507"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a76d259a94d9ed50a9d33081caed25131" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -722,7 +721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="586" column="24" bodyfile="include/mml/standards.hpp" bodystart="586" bodyend="590"/>
+        <location file="include/mml/standards.hpp" line="580" column="24" bodyfile="include/mml/standards.hpp" bodystart="580" bodyend="584"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>constexpr uint32_t</type>
@@ -752,7 +751,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="599" column="20" bodyfile="include/mml/standards.hpp" bodystart="599" bodyend="627"/>
+        <location file="include/mml/standards.hpp" line="593" column="20" bodyfile="include/mml/standards.hpp" bodystart="593" bodyend="621"/>
       </memberdef>
       <memberdef kind="function" id="namespacemml_1aed237a2c04babbcae30d180ab047666f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <templateparamlist>
@@ -785,15 +784,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/standards.hpp" line="640" column="18" bodyfile="include/mml/standards.hpp" bodystart="640" bodyend="640"/>
+        <location file="include/mml/standards.hpp" line="634" column="18" bodyfile="include/mml/standards.hpp" bodystart="634" bodyend="634"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Mike Moser</para>
-</simplesect>
-Bibliothek shell.h Enthält verschiedene Funktionen mit namespace shell </para>
     </detaileddescription>
     <location file="include/mml/file.hpp" line="19" column="1"/>
   </compounddef>

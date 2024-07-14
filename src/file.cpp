@@ -21,8 +21,10 @@
 #include <limits.h>
 #include <filesystem>
 
-#include "mml.hpp"
 #include "mml/file.hpp"
+#include "mml/standards.hpp"
+#include "mml/Unix.hpp"
+#include "mml/time.hpp"
 
 mml::string mml_actual_file = "";
 bool mml_progressing = false; // For stopping the progress print out in copying a file
@@ -69,7 +71,7 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 	std::size_t fileSize = mml::file::size(src);
 	char* buffer         = new char[blockSize];
 
-	mml::Timer	time;
+	mml::time::Timer	time;
 	mml_progressing		= true;
 	bool		gigabit				= false;
 	bool		megabit				= false;
@@ -115,7 +117,7 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 		fsync(fileno(ofile));
 
 	}
-
+	time.stop();
 	mml_progressing = false; // Stop the output of the progress
 	first.join();
 	

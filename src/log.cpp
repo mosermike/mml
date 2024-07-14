@@ -26,7 +26,7 @@ void mml::log::backup(bool verbose, bool Reset) noexcept {
 	this->output << "[check_root] backup is executed at " + mml::date(-1, "Date+Time") + "." << std::endl;
 
 	// Execute backup
-	for(int32_t i = 4; i >= 0; i--) {
+	for(int32_t i = this->num_backups; i >= 0; i--) {
 		// NOTE 0 is for logpath.bak and logpath.bak1
 		if(i == 0) {
 			if(mml::Unix::exist(logpath.str() + ".bak"))
@@ -103,13 +103,11 @@ void mml::log::header() noexcept {
 	output << "| Timestamp: " << date(-1,"Date+Time") << std::endl;
 }
 
-void mml::log::open(mml::string path) noexcept {
-	if(path == "")
-		path = this->logpath;
-	
+void mml::log::open() {
+	if(this->logpath == "")
+		throw std::runtime_error("[log::open] Path to the logfile is not set!");
 	this->output.close();
-	this->output.open(path.c_str(),std::ios::out | std::ios::app);
-	this->logpath = path;
+	this->output.open(this->logpath.c_str(),std::ios::out | std::ios::app);
 }
 	
 void mml::log::print(bool linenumber) noexcept {

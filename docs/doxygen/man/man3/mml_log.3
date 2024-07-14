@@ -1,4 +1,4 @@
-.TH "mml::log" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::log" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -55,7 +55,7 @@ mml::log
 .RI "void \fBheader\fP () noexcept"
 .br
 .ti -1c
-.RI "void \fBopen\fP (\fBmml::string\fP path='') noexcept"
+.RI "void \fBopen\fP ()"
 .br
 .RI "open a logfile "
 .ti -1c
@@ -66,14 +66,26 @@ mml::log
 .RI "void \fBreset\fP (bool verbose=true) noexcept"
 .br
 .RI "Reset logfile\&. "
+.ti -1c
+.RI "void \fBset_num\fP (int num) noexcept"
+.br
+.RI "Set number of backup files\&. "
+.ti -1c
+.RI "void \fBset_path\fP (\fBmml::string\fP path) noexcept"
+.br
+.RI "Set path of the logfile\&. "
 .in -1c
 .SS "Friends"
 
 .in +1c
 .ti -1c
-.RI "template<typename T > void \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const T &String) noexcept"
+.RI "template<typename T > \fBlog\fP & \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, const T &String) noexcept"
 .br
 .RI "Writes a value into the logfile\&. "
+.ti -1c
+.RI "\fBlog\fP & \fBoperator<<\fP (\fBmml::log\fP &\fBlog\fP, std::ostream &(*manip)(std::ostream &)) noexcept"
+.br
+.RI "Output special characters like std::endl\&. "
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
@@ -190,7 +202,7 @@ string
 .RE
 .PP
 
-.SS "void mml::log::open (\fBmml::string\fP path = \fC''\fP)\fC [noexcept]\fP"
+.SS "void mml::log::open ()"
 
 .PP
 open a logfile 
@@ -198,6 +210,11 @@ open a logfile
 \fBParameters\fP
 .RS 4
 \fIpath\fP Path to log file 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIruntime_error\fP : if logpath is not set 
 .RE
 .PP
 
@@ -234,9 +251,31 @@ Reset logfile\&.
 .RE
 .PP
 
+.SS "void mml::log::set_num (int num)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Set number of backup files\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInum\fP Number of backup files 
+.RE
+.PP
+
+.SS "void mml::log::set_path (\fBmml::string\fP path)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Set path of the logfile\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpath\fP New path of the logfile 
+.RE
+.PP
+
 .SH "Friends And Related Function Documentation"
 .PP 
-.SS "template<typename T > void operator<< (\fBmml::log\fP & log, const T & String)\fC [friend]\fP"
+.SS "template<typename T > \fBlog\fP& operator<< (\fBmml::log\fP & log, const T & String)\fC [friend]\fP"
 
 .PP
 Writes a value into the logfile\&. 
@@ -246,6 +285,22 @@ Writes a value into the logfile\&.
 \fIlog\fP Instance of the class to be used 
 .br
 \fIString\fP Value to be written into the log file 
+.RE
+.PP
+
+.SS "\fBlog\fP& operator<< (\fBmml::log\fP & log, std::ostream &(*)(std::ostream &) manip)\fC [friend]\fP"
+
+.PP
+Output special characters like std::endl\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImanip\fP to be printed 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+ostream 
 .RE
 .PP
 

@@ -16,8 +16,6 @@ Class \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}}.
 \begin{DoxyCompactList}\small\item\em Initialize with a number of threads. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \& \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a3e88e7f2b8a451e91ca561b92ce2feb1}{operator=}} (const \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} \&thread) noexcept
 \begin{DoxyCompactList}\small\item\em Operator =. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classmml_1_1thread_1_1Threads_a73748ee939990829c8a6fcd29ecca82c}{$\sim$\+Threads}} ()
-\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a162a1bd5841d4f2310d8ba474a14d029}{start}} (const std\+::function$<$ result(int)$>$ \&task, int id)
 \begin{DoxyCompactList}\small\item\em Starts a function with a specific thread. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a4449909d0fde1723ab3aea63516656ea}{start}} (const std\+::function$<$ result(int)$>$ \&task) noexcept
@@ -27,7 +25,9 @@ void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a051998a4103c4c83d0a7a79aa61
 std\+::vector$<$ result $>$ \mbox{\hyperlink{classmml_1_1thread_1_1Threads_af8cba3532c1ff2d7c19685a93e4e8524}{get\+Results}} () noexcept
 \begin{DoxyCompactList}\small\item\em Get the results from each thread. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1thread_1_1Threads_a6bd14235eb4f54301a8df885c3f90b46}{join}} () noexcept
-\begin{DoxyCompactList}\small\item\em Joins all threads and waits for unfinished threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Joins all threads and waits for unfinished threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1thread_1_1Threads_a73748ee939990829c8a6fcd29ecca82c}{$\sim$\+Threads}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor which executes the functino join. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,6 +73,10 @@ Initialize with a number of threads.
 \doxysubsubsection{\texorpdfstring{$\sim$Threads()}{~Threads()}}
 {\footnotesize\ttfamily template$<$typename result $>$ \\
 \mbox{\hyperlink{classmml_1_1thread_1_1Threads}{mml\+::thread\+::\+Threads}}$<$ result $>$\+::$\sim$\mbox{\hyperlink{classmml_1_1thread_1_1Threads}{Threads}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deconstructor which executes the functino join. 
 
 
 

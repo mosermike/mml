@@ -30,6 +30,9 @@
       <node id="17">
         <label>functional</label>
       </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
       <node id="1">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
@@ -64,56 +67,11 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="5">
-        <label>limits</label>
-      </node>
       <node id="11">
         <label>net/if.h</label>
       </node>
       <node id="21">
         <label>float.h</label>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="9">
-        <label>sys/ioctl.h</label>
-      </node>
-      <node id="22">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="7">
-        <label>fstream</label>
-      </node>
-      <node id="20">
-        <label>random</label>
-      </node>
-      <node id="6">
-        <label>string.h</label>
-      </node>
-      <node id="15">
-        <label>mml/Unix.hpp</label>
-        <link refid="Unix_8hpp"/>
-      </node>
-      <node id="12">
-        <label>unistd.h</label>
-      </node>
-      <node id="16">
-        <label>mml/file.hpp</label>
-        <link refid="file_8hpp"/>
-        <childnode refid="17" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>vector</label>
-      </node>
-      <node id="19">
-        <label>sstream</label>
       </node>
       <node id="18">
         <label>mml/standards.hpp</label>
@@ -135,11 +93,53 @@
         <childnode refid="22" relation="include">
         </childnode>
       </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>mml/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="20">
+        <label>random</label>
+      </node>
+      <node id="22">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="12">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="19">
+        <label>sstream</label>
+      </node>
       <node id="2">
         <label>iostream</label>
       </node>
       <node id="8">
         <label>sys/socket.h</label>
+      </node>
+      <node id="15">
+        <label>mml/Unix.hpp</label>
+        <link refid="Unix_8hpp"/>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -226,7 +226,7 @@
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>temp_str;</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::getline(input,temp_str);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(((<ref refid="classmml_1_1string" kindref="compound">mml::string</ref>)temp_str).<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">exist</ref>(</highlight><highlight class="stringliteral">&quot;domain&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a05d52dc50b8e0fe1a269464556eabbb6" kindref="member">replace</ref>(</highlight><highlight class="stringliteral">&quot;domain<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a9939471a850c71c8e18d7e0a5413edb3" kindref="member">replace</ref>(</highlight><highlight class="stringliteral">&quot;domain<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -235,7 +235,7 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>input.close();</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.<ref refid="classmml_1_1string_1acd6c7ed5faa16b0a270a427e1cd34893" kindref="member">str</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.<ref refid="classmml_1_1string_1a9c4555e270ca374821544047d91003ab" kindref="member">str</ref>();</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Unknown<sp/>Operating<sp/>System&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -329,7 +329,7 @@
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
 <codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">mml::Unix::User::cout</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>output)<sp/>{</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(output.<ref refid="classmml_1_1string_1adf6f10713dc50bb92eeb28cad20a7f67" kindref="member">hash</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(output.<ref refid="classmml_1_1string_1a8d274341148ce54f85f1a50ea5b0e5f9" kindref="member">hash</ref>())<sp/>{</highlight></codeline>
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" kindref="member">mml::const_string_hash</ref>(</highlight><highlight class="stringliteral">&quot;uid&quot;</highlight><highlight class="normal">)<sp/>:</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::<ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;UID:<sp/>\t\t\t&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>this-&gt;uid<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
@@ -405,16 +405,16 @@
 <codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="265"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::Unix::User::check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check(<ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>,<ref refid="namespacemml_1a76d259a94d9ed50a9d33081caed25131" kindref="member">std::to_string</ref>(value));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::Unix::User::check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>check(<ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>,<ref refid="namespacemml_1a76d259a94d9ed50a9d33081caed25131" kindref="member">std::to_string</ref>(value));</highlight></codeline>
 <codeline lineno="268"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::Unix::User::check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>,<sp/>std::string<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mml::Unix::User::check(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>,<sp/>std::string<sp/>value)<sp/>{</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>paths;</highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>path_str<sp/>=<sp/>this-&gt;path.str();</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>std::<sp/>string<sp/>temp<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>.hash())<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>.hash())<sp/>{</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1a3edf33524b8d67442b6b8fd75b66afc4" kindref="member">mml::const_string_hash</ref>(</highlight><highlight class="stringliteral">&quot;uid&quot;</highlight><highlight class="normal">)<sp/>:</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>std::<ref refid="namespacemml_1a76d259a94d9ed50a9d33081caed25131" kindref="member">to_string</ref>(this-&gt;uid)<sp/>==<sp/>value<sp/>?<sp/>true<sp/>:<sp/>false;</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>

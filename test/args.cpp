@@ -34,12 +34,12 @@ int main(int argc, char **argv) {
 		if(args[0] == "-a" && args[1] == "-b" && args[2] == "-c" && args[3] == "-fg" && args[4] == "--hi" && args[5] == "-j" && args[6] == "-k" && args[7] == "-l")
 			std::cout << " Yes!" << std::endl;
 		else
-			std::cout << " No! There might be something wrong..." << std::endl;
+			std::cout << " No! There might be something wrong ..." << std::endl;
 
 		std::cout << std::endl;
 		std::cout << "─────────────────────────────────────────────────────" << std::endl;
 		std::cout << std::endl;
-		
+
 		std::cout << std::endl;
 		std::cout << std::endl;
 		std::cout << std::endl;

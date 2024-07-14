@@ -10,10 +10,41 @@
     <includes local="no">ctime</includes>
     <includes local="no">algorithm</includes>
     <includes local="no">signal.h</includes>
-    <includes local="yes">mml/Thread.hpp</includes>
     <includes refid="definitions_8hpp" local="yes">mml/definitions.hpp</includes>
     <includes refid="Unix_8hpp" local="yes">mml/Unix.hpp</includes>
     <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="10">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="7">
+        <label>ctime</label>
+      </node>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="9">
+        <label>signal.h</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>mml/Unix.hpp</label>
+        <link refid="Unix_8hpp"/>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
       <node id="1">
         <label>src/standards.cpp</label>
         <link refid="src_2standards_8cpp"/>
@@ -37,43 +68,6 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="11">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="4">
-        <label>fstream</label>
-      </node>
-      <node id="7">
-        <label>ctime</label>
-      </node>
-      <node id="12">
-        <label>mml/Unix.hpp</label>
-        <link refid="Unix_8hpp"/>
-      </node>
-      <node id="6">
-        <label>unistd.h</label>
-      </node>
-      <node id="5">
-        <label>vector</label>
-      </node>
-      <node id="9">
-        <label>signal.h</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
-      </node>
-      <node id="8">
-        <label>algorithm</label>
-      </node>
-      <node id="10">
-        <label>mml/Thread.hpp</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -91,7 +85,7 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::replace</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mml/Thread.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;mml/thread.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">mml/definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Unix_8hpp" kindref="compound">mml/Unix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
@@ -242,10 +236,10 @@
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>temp<sp/>=<sp/><ref refid="namespacemml_1a76d259a94d9ed50a9d33081caed25131" kindref="member">mml::to_string</ref>(number);</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Correction<sp/>if<sp/>number<sp/>is<sp/>an<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[temp.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>()-1]==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1a48f088a212cfff0103d4be7b694b3057" kindref="member">sub</ref>(0,temp.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>()-2);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[temp.<ref refid="classmml_1_1string_1aec19cf1c64718ba66e141ce000b2631f" kindref="member">size</ref>()-1]==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.<ref refid="classmml_1_1string_1acd79728f48f9641b45f0f5f777685af9" kindref="member">sub</ref>(0,temp.<ref refid="classmml_1_1string_1aec19cf1c64718ba66e141ce000b2631f" kindref="member">size</ref>()-2);</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.<ref refid="classmml_1_1string_1a556352afcc1510c6224d845d38114ae3" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp.<ref refid="classmml_1_1string_1aec19cf1c64718ba66e141ce000b2631f" kindref="member">size</ref>();</highlight></codeline>
 <codeline lineno="174"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"></highlight></codeline>
 <codeline lineno="176"><highlight class="normal"></highlight></codeline>

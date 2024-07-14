@@ -7,41 +7,45 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string_a027b118294677870eccf9ff59d4b1e96}{string}} (templ \mbox{\hyperlink{classmml_1_1string_acd6c7ed5faa16b0a270a427e1cd34893}{str}}) noexcept
+{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string_a027b118294677870eccf9ff59d4b1e96}{string}} (templ \mbox{\hyperlink{classmml_1_1string_a9c4555e270ca374821544047d91003ab}{str}}) noexcept
 \begin{DoxyCompactList}\small\item\em Constructor with a value. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1string_aa83d5b5500921e4d782ef18e16ac83dc}{string}} (size\+\_\+t n, char c)
 \begin{DoxyCompactList}\small\item\em Constructor creating n times the char c. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1string_a3b3ab50be8db94f7a37bcb98bd32469a}{string}} ()
 \begin{DoxyCompactList}\small\item\em Constructor without a value. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \& \mbox{\hyperlink{classmml_1_1string_a44ceac8e8ff4252b607c882cb2fafb51}{operator=}} (templ \mbox{\hyperlink{classmml_1_1string_acd6c7ed5faa16b0a270a427e1cd34893}{str}}) noexcept
+{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \& \mbox{\hyperlink{classmml_1_1string_a44ceac8e8ff4252b607c882cb2fafb51}{operator=}} (templ \mbox{\hyperlink{classmml_1_1string_a9c4555e270ca374821544047d91003ab}{str}}) noexcept
 \begin{DoxyCompactList}\small\item\em Assign the value of the template type with the \textquotesingle{}=\textquotesingle{} sign. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename templ $>$ }\\bool \mbox{\hyperlink{classmml_1_1string_ac4a64b7794a0078b7beb3c3a8d395fe8}{operator==}} (templ Test) noexcept
+{\footnotesize template$<$typename templ $>$ }\\bool \mbox{\hyperlink{classmml_1_1string_a2dc8532f18b16a12e3d5230554c1fbb3}{operator==}} (templ Test) const noexcept
 \begin{DoxyCompactList}\small\item\em Operator equal. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename templ $>$ }\\bool \mbox{\hyperlink{classmml_1_1string_ab7ed3001a890ac8da6e8302981661a0a}{operator!=}} (templ Test) noexcept
+{\footnotesize template$<$typename templ $>$ }\\bool \mbox{\hyperlink{classmml_1_1string_a24b0963f2fd25358a59d31de781bdee1}{operator!=}} (templ Test) const noexcept
 \begin{DoxyCompactList}\small\item\em Operator unequal. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_af7ac5b518d5f3f1a56718577bfb0bd97}{operator+}} (templ Test) noexcept
+{\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_aacf903537609817f57c9351b99c298cc}{operator+}} (templ Test) const noexcept
 \begin{DoxyCompactList}\small\item\em Operator add somehting at the end of this instance. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename templ $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a02cafc3fa2871839d9e234651a989c4d}{operator+=}} (templ add) noexcept
 \begin{DoxyCompactList}\small\item\em Operator add a char vector to this string. \end{DoxyCompactList}\item 
 char \& \mbox{\hyperlink{classmml_1_1string_a754a104abb34fd9842cd5869566bfdb5}{operator\mbox{[}$\,$\mbox{]}}} (int index)
 \begin{DoxyCompactList}\small\item\em Return a specific char from the string. \end{DoxyCompactList}\item 
+const char \& \mbox{\hyperlink{classmml_1_1string_a21139f53285c374c383759f61010f185}{operator\mbox{[}$\,$\mbox{]}}} (int index) const
+\item 
 std\+::string \& \mbox{\hyperlink{classmml_1_1string_a65172ea4fe29abb123ac12f905d6c51b}{operator()}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns the value. \end{DoxyCompactList}\item 
-double \mbox{\hyperlink{classmml_1_1string_ac9de49b90b0bdfc2a06bef54870f450e}{atof}} () noexcept
+const std\+::string \& \mbox{\hyperlink{classmml_1_1string_a416b20bb48149ff912bea8d85db1979f}{operator()}} () const noexcept
+\item 
+double \mbox{\hyperlink{classmml_1_1string_a3e5acb34d8d3dba2b5971970bb345679}{atof}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Converts this string into a double. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classmml_1_1string_ac0006bb0f5c473159ba07ac516a1f0f7}{atoi}} () noexcept
+int \mbox{\hyperlink{classmml_1_1string_aa014e1a0fc78a28d7a99c6a83cd4b486}{atoi}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Convert this string into an integer. \end{DoxyCompactList}\item 
 std\+::string\+::iterator \mbox{\hyperlink{classmml_1_1string_a66057297d6504b42f1c397b15c377359}{begin}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the beginning of the string. \end{DoxyCompactList}\item 
 std\+::string\+::const\+\_\+iterator \mbox{\hyperlink{classmml_1_1string_ab05ba61105f8c99256c2828593a87528}{begin}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the beginning of the string. \end{DoxyCompactList}\item 
-const char $\ast$ \mbox{\hyperlink{classmml_1_1string_a3e6b150967878ef73ac82f196ed6f83f}{c\+\_\+str}} () noexcept
+const char $\ast$ \mbox{\hyperlink{classmml_1_1string_a17a10d669d0ccefc87e0d756cb23de7a}{c\+\_\+str}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Returns the string as a character pointer. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1string_a948f7256bc8c59fc12e7a1fcb2d761a1}{clear}} () noexcept
 \begin{DoxyCompactList}\small\item\em Clears the string. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classmml_1_1string_acf3840270f4531fb625fcf7593c8835f}{count}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} name) noexcept
+uint32\+\_\+t \mbox{\hyperlink{classmml_1_1string_ad445fefff4ea3faf11a24689dc43ba96}{count}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} name) const noexcept
 \begin{DoxyCompactList}\small\item\em Count how often a string appears. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1string_ad6fc608ad98d065da4f93d8f5fabc9cc}{cout}} (bool newline=true, std\+::string text=\char`\"{}\char`\"{}) noexcept
+void \mbox{\hyperlink{classmml_1_1string_a73cb6c24174f5832d939817432733c45}{cout}} (bool newline=true, std\+::string text=\char`\"{}\char`\"{}) const noexcept
 \begin{DoxyCompactList}\small\item\em Print out the value of this instance. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_ae4d49ea8a844bbd5cd9bdcafc10167a4}{del\+\_\+letter}} (bool save=false) noexcept
 \begin{DoxyCompactList}\small\item\em Delete letters. \end{DoxyCompactList}\item 
@@ -49,59 +53,57 @@ std\+::string \mbox{\hyperlink{classmml_1_1string_a1e44a0c0630173b390e469fe1ea7e
 \begin{DoxyCompactList}\small\item\em Delete numbers. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_a971215481fb9080179fc9c7f22b43e5c}{del\+\_\+space}} (bool save=false) noexcept
 \begin{DoxyCompactList}\small\item\em Remove everything after the first space. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classmml_1_1string_ae3340aec48652e49410441d77649846e}{empty}} () noexcept
+bool \mbox{\hyperlink{classmml_1_1string_aa9ce2d895b544f4e5b2d9f7845030d81}{empty}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Checks if the string is empty. \end{DoxyCompactList}\item 
 std\+::string\+::iterator \mbox{\hyperlink{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}{end}} () noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the end of the string. \end{DoxyCompactList}\item 
 std\+::string\+::const\+\_\+iterator \mbox{\hyperlink{classmml_1_1string_a81b4a8f4b92871877fd9fbe01e3e169f}{end}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Returns an iterator that points to the end of the string. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename... Args$>$ }\\bool \mbox{\hyperlink{classmml_1_1string_a6abba5a305b4ced911f2a61438455a4e}{exist}} (const Args \&... args) noexcept
+{\footnotesize template$<$typename... Args$>$ }\\bool \mbox{\hyperlink{classmml_1_1string_a7b69360e58b51d0a5bf5a0a80ae18016}{exist}} (const Args \&... args) const noexcept
 \begin{DoxyCompactList}\small\item\em Check if one {\itshape or} another string exists. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a77b559320f1f1ffbda08eb713a5dd8ab}{find}} (char letter, std\+::size\+\_\+t old=0) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a89a49641b8fd8b0d75ec3d3622b2398a}{find}} (char letter, std\+::size\+\_\+t old=0) const noexcept
 \begin{DoxyCompactList}\small\item\em Position of the first appearance of a character after a start position. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_aecf3c5f531a87495b56805100e0db095}{find}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} name, std\+::size\+\_\+t old=0) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_ae941485426daada6dfa640f297cb7062}{find}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} name, std\+::size\+\_\+t old=0) const noexcept
 \begin{DoxyCompactList}\small\item\em Position of the first appearance of a string after a start position. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_ab8fb7c879803123ace2fb3fdc89204b2}{find\+\_\+back}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} name, std\+::size\+\_\+t pos=0, std\+::size\+\_\+t low=0) noexcept
-\begin{DoxyCompactList}\small\item\em Check if a string exists but starting from the right side. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}{getline}} (std\+::ifstream \&input) noexcept
 \begin{DoxyCompactList}\small\item\em Reads a line from an input file stream and assigns it to the instance. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_a83806c5e9d92585f57f9ef2dbaf67e07}{getline}} (std\+::string input, std\+::size\+\_\+t line=0) noexcept
 \begin{DoxyCompactList}\small\item\em Reads a line from a file. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classmml_1_1string_ae7d9615789f946626b4aa04159854187}{get\+Value}} () noexcept
+std\+::string \mbox{\hyperlink{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}{get\+Value}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Get the value of this instance. \end{DoxyCompactList}\item 
-uint32\+\_\+t \mbox{\hyperlink{classmml_1_1string_adf6f10713dc50bb92eeb28cad20a7f67}{hash}} () noexcept
+uint32\+\_\+t \mbox{\hyperlink{classmml_1_1string_a8d274341148ce54f85f1a50ea5b0e5f9}{hash}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Creates a hash value of this instance. This hash value can then be used for example in an switch ... case with strings by using hash values. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1string_ab1cb57d6df67cdb8948ca8110cf4f8bc}{log}} (std\+::string logpath)
+void \mbox{\hyperlink{classmml_1_1string_ada3e20559af145a083b0efe8f3dbe60a}{log}} (std\+::string logpath) const
 \begin{DoxyCompactList}\small\item\em Writes the value of this instance into a log file. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_a4860b64f242e6602b3be8b8ee2e71b02}{lower}} () noexcept
 \begin{DoxyCompactList}\small\item\em Transforms all letters into low case letters. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmml_1_1string_a9363392d3205da96b9eb63ec3d4fb242}{ls}} (std\+::string name\+\_\+include, std\+::string name\+\_\+exclude, std\+::vector$<$ std\+::string $>$ \&directories, bool recursive=false, bool all=false)
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmml_1_1string_a91f2537027d7dc0bf3fa612885f07e83}{ls}} (std\+::string name\+\_\+include, std\+::string name\+\_\+exclude, std\+::vector$<$ std\+::string $>$ \&directories, bool recursive=false, bool all=false) const
 \begin{DoxyCompactList}\small\item\em List all files and directories in a path. Directories end with \textquotesingle{}/\textquotesingle{} in the entry. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmml_1_1string_a126fa2767c6b4d20e7d7afa66e4feff5}{ls}} (std\+::string name\+\_\+include=\char`\"{}\char`\"{}, std\+::string name\+\_\+exclude=\char`\"{}\char`\"{}, bool recursive=false, bool all=false)
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmml_1_1string_ade5bf437b0ffd5a3bd4ecc1480bb9088}{ls}} (std\+::string name\+\_\+include=\char`\"{}\char`\"{}, std\+::string name\+\_\+exclude=\char`\"{}\char`\"{}, bool recursive=false, bool all=false) const
 \begin{DoxyCompactList}\small\item\em List all files and directories in a path. Directories end with \textquotesingle{}/\textquotesingle{} in the entry. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classmml_1_1string_a2ad1a6e9455c045c56dcf148e4540e82}{mkdir\+\_\+p}} () noexcept
 \begin{DoxyCompactList}\small\item\em Create directory with creating parent directories. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classmml_1_1string_ae7bee7b5a1a67a3069abf52a234583cb}{remove}} () noexcept
+bool \mbox{\hyperlink{classmml_1_1string_a9fa1fba30f50aecf44c069ba9e89bdab}{remove}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Remove the file with the value of the instance. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a05d52dc50b8e0fe1a269464556eabbb6}{replace}} (T str\+\_\+old, T str\+\_\+new, std\+::size\+\_\+t pos=0)
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a9939471a850c71c8e18d7e0a5413edb3}{replace}} (T1 \&\&str\+\_\+old, T2 \&\&str\+\_\+new, std\+::size\+\_\+t pos=0)
 \begin{DoxyCompactList}\small\item\em Replace sth in the string with sth else. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a872ada9f67c793066ce58181119ec73b}{rfind}} (char letter) noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_af4ba9b1d51391a4a9ecd3425dd6d1389}{rfind}} (char letter, std\+::size\+\_\+t pos=std\+::string\+::npos, std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}{end}}=0) const noexcept
 \begin{DoxyCompactList}\small\item\em Get position of last occurance of a character. \end{DoxyCompactList}\item 
-std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a556352afcc1510c6224d845d38114ae3}{size}} () noexcept
+std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_aec19cf1c64718ba66e141ce000b2631f}{size}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Compute size of the string. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a093ab1d9253b402afa3cd3391c45d216}{substr}} (std\+::size\+\_\+t pos1, std\+::size\+\_\+t length1) noexcept
-\begin{DoxyCompactList}\small\item\em Create substring. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a365c211d42efb38ad424f6c3bc6fa6f3}{substr}} (std\+::size\+\_\+t pos1) noexcept
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_aa2f72690f91fcc23c35696b841113ce6}{substr}} (std\+::size\+\_\+t pos1) const noexcept
 \begin{DoxyCompactList}\small\item\em Create a substring starting from this position to the end. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a48f088a212cfff0103d4be7b694b3057}{sub}} (std\+::size\+\_\+t beg, std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}{end}}) noexcept
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_a80f53083f18111f3275fc969813b7627}{substr}} (std\+::size\+\_\+t pos1, std\+::size\+\_\+t length1) const noexcept
+\begin{DoxyCompactList}\small\item\em Create substring. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1string_acd79728f48f9641b45f0f5f777685af9}{sub}} (std\+::size\+\_\+t beg, std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_a80c23eafaa8bd703214a915eadb08892}{end}}) const noexcept
 \begin{DoxyCompactList}\small\item\em Create a substring starting and ending of specific positions. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classmml_1_1string_ae36494e952a47b87efce6d67a44de3cb}{stoi}} () noexcept
+int \mbox{\hyperlink{classmml_1_1string_a6ce6136021002bfc903372de89590bda}{stoi}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Transform this instance to an integer. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classmml_1_1string_acd6c7ed5faa16b0a270a427e1cd34893}{str}} () noexcept
+std\+::string \mbox{\hyperlink{classmml_1_1string_a9c4555e270ca374821544047d91003ab}{str}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Return the value of this instance as a std\+::string. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1string_ac4c745060ab997329f4be69b2d122a73}{writeline}} (std\+::ofstream \&output) noexcept
+void \mbox{\hyperlink{classmml_1_1string_a383642a9a45445f48097de31824ebf59}{writeline}} (std\+::ofstream \&output) const noexcept
 \begin{DoxyCompactList}\small\item\em Write this instance into the end of a file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1string_ae6bd14b8261e69dc0e61b698ae2dffaa}{writeline}} (std\+::string output) noexcept
+void \mbox{\hyperlink{classmml_1_1string_a0e7f8de4221289eab119e2a7367c9b34}{writeline}} (std\+::string output) const noexcept
 \begin{DoxyCompactList}\small\item\em Write this instance into the end of a file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1string_a11756fff9d0e1677b4404c98ac98d435}{$\sim$string}} ()
 \end{DoxyCompactItemize}
@@ -170,11 +172,11 @@ Constructor without a value.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classmml_1_1string_ac9de49b90b0bdfc2a06bef54870f450e}\label{classmml_1_1string_ac9de49b90b0bdfc2a06bef54870f450e}} 
+\mbox{\Hypertarget{classmml_1_1string_a3e5acb34d8d3dba2b5971970bb345679}\label{classmml_1_1string_a3e5acb34d8d3dba2b5971970bb345679}} 
 \index{mml::string@{mml::string}!atof@{atof}}
 \index{atof@{atof}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{atof()}{atof()}}
-{\footnotesize\ttfamily double mml\+::string\+::atof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily double mml\+::string\+::atof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -183,11 +185,11 @@ Converts this string into a double.
 \begin{DoxyReturn}{Returns}
 double 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ac0006bb0f5c473159ba07ac516a1f0f7}\label{classmml_1_1string_ac0006bb0f5c473159ba07ac516a1f0f7}} 
+\mbox{\Hypertarget{classmml_1_1string_aa014e1a0fc78a28d7a99c6a83cd4b486}\label{classmml_1_1string_aa014e1a0fc78a28d7a99c6a83cd4b486}} 
 \index{mml::string@{mml::string}!atoi@{atoi}}
 \index{atoi@{atoi}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{atoi()}{atoi()}}
-{\footnotesize\ttfamily int mml\+::string\+::atoi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily int mml\+::string\+::atoi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -222,11 +224,11 @@ Returns an iterator that points to the beginning of the string.
 \begin{DoxyReturn}{Returns}
 std\+::string\+::iterator 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a3e6b150967878ef73ac82f196ed6f83f}\label{classmml_1_1string_a3e6b150967878ef73ac82f196ed6f83f}} 
+\mbox{\Hypertarget{classmml_1_1string_a17a10d669d0ccefc87e0d756cb23de7a}\label{classmml_1_1string_a17a10d669d0ccefc87e0d756cb23de7a}} 
 \index{mml::string@{mml::string}!c\_str@{c\_str}}
 \index{c\_str@{c\_str}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{c\_str()}{c\_str()}}
-{\footnotesize\ttfamily const char $\ast$ mml\+::string\+::c\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily const char $\ast$ mml\+::string\+::c\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -248,11 +250,11 @@ Clears the string.
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_acf3840270f4531fb625fcf7593c8835f}\label{classmml_1_1string_acf3840270f4531fb625fcf7593c8835f}} 
+\mbox{\Hypertarget{classmml_1_1string_ad445fefff4ea3faf11a24689dc43ba96}\label{classmml_1_1string_ad445fefff4ea3faf11a24689dc43ba96}} 
 \index{mml::string@{mml::string}!count@{count}}
 \index{count@{count}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{count()}{count()}}
-{\footnotesize\ttfamily uint32\+\_\+t mml\+::string\+::count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily uint32\+\_\+t mml\+::string\+::count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -266,11 +268,11 @@ Count how often a string appears.
 \begin{DoxyReturn}{Returns}
 uint32\+\_\+t 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ad6fc608ad98d065da4f93d8f5fabc9cc}\label{classmml_1_1string_ad6fc608ad98d065da4f93d8f5fabc9cc}} 
+\mbox{\Hypertarget{classmml_1_1string_a73cb6c24174f5832d939817432733c45}\label{classmml_1_1string_a73cb6c24174f5832d939817432733c45}} 
 \index{mml::string@{mml::string}!cout@{cout}}
 \index{cout@{cout}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{cout()}{cout()}}
-{\footnotesize\ttfamily void mml\+::string\+::cout (\begin{DoxyParamCaption}\item[{bool}]{newline = {\ttfamily true},  }\item[{std\+::string}]{text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::string\+::cout (\begin{DoxyParamCaption}\item[{bool}]{newline = {\ttfamily true},  }\item[{std\+::string}]{text = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -340,11 +342,11 @@ Remove everything after the first space.
 \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ae3340aec48652e49410441d77649846e}\label{classmml_1_1string_ae3340aec48652e49410441d77649846e}} 
+\mbox{\Hypertarget{classmml_1_1string_aa9ce2d895b544f4e5b2d9f7845030d81}\label{classmml_1_1string_aa9ce2d895b544f4e5b2d9f7845030d81}} 
 \index{mml::string@{mml::string}!empty@{empty}}
 \index{empty@{empty}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{empty()}{empty()}}
-{\footnotesize\ttfamily bool mml\+::string\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily bool mml\+::string\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -379,12 +381,12 @@ Returns an iterator that points to the end of the string.
 \begin{DoxyReturn}{Returns}
 std\+::string\+::iterator 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a6abba5a305b4ced911f2a61438455a4e}\label{classmml_1_1string_a6abba5a305b4ced911f2a61438455a4e}} 
+\mbox{\Hypertarget{classmml_1_1string_a7b69360e58b51d0a5bf5a0a80ae18016}\label{classmml_1_1string_a7b69360e58b51d0a5bf5a0a80ae18016}} 
 \index{mml::string@{mml::string}!exist@{exist}}
 \index{exist@{exist}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{exist()}{exist()}}
 {\footnotesize\ttfamily template$<$typename... Args$>$ \\
-bool mml\+::string\+::exist (\begin{DoxyParamCaption}\item[{const Args \&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+bool mml\+::string\+::exist (\begin{DoxyParamCaption}\item[{const Args \&...}]{args }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -398,11 +400,11 @@ Check if one {\itshape or} another string exists.
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a77b559320f1f1ffbda08eb713a5dd8ab}\label{classmml_1_1string_a77b559320f1f1ffbda08eb713a5dd8ab}} 
+\mbox{\Hypertarget{classmml_1_1string_a89a49641b8fd8b0d75ec3d3622b2398a}\label{classmml_1_1string_a89a49641b8fd8b0d75ec3d3622b2398a}} 
 \index{mml::string@{mml::string}!find@{find}}
 \index{find@{find}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::find (\begin{DoxyParamCaption}\item[{char}]{letter,  }\item[{std\+::size\+\_\+t}]{old = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::find (\begin{DoxyParamCaption}\item[{char}]{letter,  }\item[{std\+::size\+\_\+t}]{old = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -418,11 +420,11 @@ Position of the first appearance of a character after a start position.
 \begin{DoxyReturn}{Returns}
 Position 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_aecf3c5f531a87495b56805100e0db095}\label{classmml_1_1string_aecf3c5f531a87495b56805100e0db095}} 
+\mbox{\Hypertarget{classmml_1_1string_ae941485426daada6dfa640f297cb7062}\label{classmml_1_1string_ae941485426daada6dfa640f297cb7062}} 
 \index{mml::string@{mml::string}!find@{find}}
 \index{find@{find}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{name,  }\item[{std\+::size\+\_\+t}]{old = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{name,  }\item[{std\+::size\+\_\+t}]{old = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -437,28 +439,6 @@ Position of the first appearance of a string after a start position.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Position 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ab8fb7c879803123ace2fb3fdc89204b2}\label{classmml_1_1string_ab8fb7c879803123ace2fb3fdc89204b2}} 
-\index{mml::string@{mml::string}!find\_back@{find\_back}}
-\index{find\_back@{find\_back}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{find\_back()}{find\_back()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::find\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{name,  }\item[{std\+::size\+\_\+t}]{pos = {\ttfamily 0},  }\item[{std\+::size\+\_\+t}]{low = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Check if a string exists but starting from the right side. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em name} & String to look for \\
-\hline
-{\em pos} & Value from where to search for the string. 0 means that it is not used. \\
-\hline
-{\em low} & Lower limit to which point is searched for. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::size\+\_\+t 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}\label{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}} 
 \index{mml::string@{mml::string}!getline@{getline}}
@@ -496,13 +476,13 @@ Reads a line from a file.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::tring 
+std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ae7d9615789f946626b4aa04159854187}\label{classmml_1_1string_ae7d9615789f946626b4aa04159854187}} 
+\mbox{\Hypertarget{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}\label{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}} 
 \index{mml::string@{mml::string}!getValue@{getValue}}
 \index{getValue@{getValue}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
-{\footnotesize\ttfamily std\+::string mml\+::string\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::string mml\+::string\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -511,11 +491,11 @@ Get the value of this instance.
 \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_adf6f10713dc50bb92eeb28cad20a7f67}\label{classmml_1_1string_adf6f10713dc50bb92eeb28cad20a7f67}} 
+\mbox{\Hypertarget{classmml_1_1string_a8d274341148ce54f85f1a50ea5b0e5f9}\label{classmml_1_1string_a8d274341148ce54f85f1a50ea5b0e5f9}} 
 \index{mml::string@{mml::string}!hash@{hash}}
 \index{hash@{hash}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{hash()}{hash()}}
-{\footnotesize\ttfamily uint32\+\_\+t mml\+::string\+::hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily uint32\+\_\+t mml\+::string\+::hash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -524,11 +504,11 @@ Creates a hash value of this instance. This hash value can then be used for exam
 \begin{DoxyReturn}{Returns}
 uint32\+\_\+t 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ab1cb57d6df67cdb8948ca8110cf4f8bc}\label{classmml_1_1string_ab1cb57d6df67cdb8948ca8110cf4f8bc}} 
+\mbox{\Hypertarget{classmml_1_1string_ada3e20559af145a083b0efe8f3dbe60a}\label{classmml_1_1string_ada3e20559af145a083b0efe8f3dbe60a}} 
 \index{mml::string@{mml::string}!log@{log}}
 \index{log@{log}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{log()}{log()}}
-{\footnotesize\ttfamily void mml\+::string\+::log (\begin{DoxyParamCaption}\item[{std\+::string}]{logpath }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void mml\+::string\+::log (\begin{DoxyParamCaption}\item[{std\+::string}]{logpath }\end{DoxyParamCaption}) const}
 
 
 
@@ -560,11 +540,11 @@ Transforms all letters into low case letters.
 \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a9363392d3205da96b9eb63ec3d4fb242}\label{classmml_1_1string_a9363392d3205da96b9eb63ec3d4fb242}} 
+\mbox{\Hypertarget{classmml_1_1string_a91f2537027d7dc0bf3fa612885f07e83}\label{classmml_1_1string_a91f2537027d7dc0bf3fa612885f07e83}} 
 \index{mml::string@{mml::string}!ls@{ls}}
 \index{ls@{ls}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{ls()}{ls()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ mml\+::string\+::ls (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+include,  }\item[{std\+::string}]{name\+\_\+exclude,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{directories,  }\item[{bool}]{recursive = {\ttfamily false},  }\item[{bool}]{all = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ mml\+::string\+::ls (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+include,  }\item[{std\+::string}]{name\+\_\+exclude,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{directories,  }\item[{bool}]{recursive = {\ttfamily false},  }\item[{bool}]{all = {\ttfamily false} }\end{DoxyParamCaption}) const}
 
 
 
@@ -594,11 +574,11 @@ If name\+\_\+include or name\+\_\+exclude is detected for a directory, all the e
 {\em runtime\+\_\+error} & \+: if the string does not exist \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{classmml_1_1string_a126fa2767c6b4d20e7d7afa66e4feff5}\label{classmml_1_1string_a126fa2767c6b4d20e7d7afa66e4feff5}} 
+\mbox{\Hypertarget{classmml_1_1string_ade5bf437b0ffd5a3bd4ecc1480bb9088}\label{classmml_1_1string_ade5bf437b0ffd5a3bd4ecc1480bb9088}} 
 \index{mml::string@{mml::string}!ls@{ls}}
 \index{ls@{ls}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{ls()}{ls()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ mml\+::string\+::ls (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+include = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{name\+\_\+exclude = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{recursive = {\ttfamily false},  }\item[{bool}]{all = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ mml\+::string\+::ls (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+\_\+include = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::string}]{name\+\_\+exclude = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{recursive = {\ttfamily false},  }\item[{bool}]{all = {\ttfamily false} }\end{DoxyParamCaption}) const}
 
 
 
@@ -639,12 +619,12 @@ Create directory with creating parent directories.
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ab7ed3001a890ac8da6e8302981661a0a}\label{classmml_1_1string_ab7ed3001a890ac8da6e8302981661a0a}} 
+\mbox{\Hypertarget{classmml_1_1string_a24b0963f2fd25358a59d31de781bdee1}\label{classmml_1_1string_a24b0963f2fd25358a59d31de781bdee1}} 
 \index{mml::string@{mml::string}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-bool mml\+::string\+::operator!= (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+bool mml\+::string\+::operator!= (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -658,10 +638,16 @@ Operator unequal.
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1string_a416b20bb48149ff912bea8d85db1979f}\label{classmml_1_1string_a416b20bb48149ff912bea8d85db1979f}} 
+\index{mml::string@{mml::string}!operator()@{operator()}}
+\index{operator()@{operator()}!mml::string@{mml::string}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const std\+::string \& mml\+::string\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
 \mbox{\Hypertarget{classmml_1_1string_a65172ea4fe29abb123ac12f905d6c51b}\label{classmml_1_1string_a65172ea4fe29abb123ac12f905d6c51b}} 
 \index{mml::string@{mml::string}!operator()@{operator()}}
 \index{operator()@{operator()}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily std\+::string \& mml\+::string\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
@@ -671,12 +657,12 @@ Returns the value.
 \begin{DoxyReturn}{Returns}
 Value of the instance as a std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_af7ac5b518d5f3f1a56718577bfb0bd97}\label{classmml_1_1string_af7ac5b518d5f3f1a56718577bfb0bd97}} 
+\mbox{\Hypertarget{classmml_1_1string_aacf903537609817f57c9351b99c298cc}\label{classmml_1_1string_aacf903537609817f57c9351b99c298cc}} 
 \index{mml::string@{mml::string}!operator+@{operator+}}
 \index{operator+@{operator+}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::operator+ (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::operator+ (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -728,12 +714,12 @@ Assign the value of the template type with the \textquotesingle{}=\textquotesing
 \begin{DoxyReturn}{Returns}
 Class instance 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ac4a64b7794a0078b7beb3c3a8d395fe8}\label{classmml_1_1string_ac4a64b7794a0078b7beb3c3a8d395fe8}} 
+\mbox{\Hypertarget{classmml_1_1string_a2dc8532f18b16a12e3d5230554c1fbb3}\label{classmml_1_1string_a2dc8532f18b16a12e3d5230554c1fbb3}} 
 \index{mml::string@{mml::string}!operator==@{operator==}}
 \index{operator==@{operator==}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily template$<$typename templ $>$ \\
-bool mml\+::string\+::operator== (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+bool mml\+::string\+::operator== (\begin{DoxyParamCaption}\item[{templ}]{Test }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -750,7 +736,7 @@ bool
 \mbox{\Hypertarget{classmml_1_1string_a754a104abb34fd9842cd5869566bfdb5}\label{classmml_1_1string_a754a104abb34fd9842cd5869566bfdb5}} 
 \index{mml::string@{mml::string}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily char \& mml\+::string\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
 
@@ -770,11 +756,17 @@ char
 {\em logic\+\_\+error} & \+: if out of range \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{classmml_1_1string_ae7bee7b5a1a67a3069abf52a234583cb}\label{classmml_1_1string_ae7bee7b5a1a67a3069abf52a234583cb}} 
+\mbox{\Hypertarget{classmml_1_1string_a21139f53285c374c383759f61010f185}\label{classmml_1_1string_a21139f53285c374c383759f61010f185}} 
+\index{mml::string@{mml::string}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mml::string@{mml::string}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char \& mml\+::string\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classmml_1_1string_a9fa1fba30f50aecf44c069ba9e89bdab}\label{classmml_1_1string_a9fa1fba30f50aecf44c069ba9e89bdab}} 
 \index{mml::string@{mml::string}!remove@{remove}}
 \index{remove@{remove}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{remove()}{remove()}}
-{\footnotesize\ttfamily bool mml\+::string\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily bool mml\+::string\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -783,12 +775,12 @@ Remove the file with the value of the instance.
 \begin{DoxyReturn}{Returns}
 bool 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a05d52dc50b8e0fe1a269464556eabbb6}\label{classmml_1_1string_a05d52dc50b8e0fe1a269464556eabbb6}} 
+\mbox{\Hypertarget{classmml_1_1string_a9939471a850c71c8e18d7e0a5413edb3}\label{classmml_1_1string_a9939471a850c71c8e18d7e0a5413edb3}} 
 \index{mml::string@{mml::string}!replace@{replace}}
 \index{replace@{replace}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{replace()}{replace()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::replace (\begin{DoxyParamCaption}\item[{T}]{str\+\_\+old,  }\item[{T}]{str\+\_\+new,  }\item[{std\+::size\+\_\+t}]{pos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::replace (\begin{DoxyParamCaption}\item[{T1 \&\&}]{str\+\_\+old,  }\item[{T2 \&\&}]{str\+\_\+new,  }\item[{std\+::size\+\_\+t}]{pos = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -811,11 +803,11 @@ Replace sth in the string with sth else.
 {\em invalid\+\_\+argument} & \+: if str\+\_\+old is empty \\
 \hline
 \end{DoxyExceptions}
-\mbox{\Hypertarget{classmml_1_1string_a872ada9f67c793066ce58181119ec73b}\label{classmml_1_1string_a872ada9f67c793066ce58181119ec73b}} 
+\mbox{\Hypertarget{classmml_1_1string_af4ba9b1d51391a4a9ecd3425dd6d1389}\label{classmml_1_1string_af4ba9b1d51391a4a9ecd3425dd6d1389}} 
 \index{mml::string@{mml::string}!rfind@{rfind}}
 \index{rfind@{rfind}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{rfind()}{rfind()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::rfind (\begin{DoxyParamCaption}\item[{char}]{letter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::rfind (\begin{DoxyParamCaption}\item[{char}]{letter,  }\item[{std\+::size\+\_\+t}]{pos = {\ttfamily std\+:\+:string\+:\+:npos},  }\item[{std\+::size\+\_\+t}]{end = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -825,15 +817,19 @@ Get position of last occurance of a character.
 \begin{DoxyParams}{Parameters}
 {\em letter} & Value to be found \\
 \hline
+{\em pos} & Position where to begin to search to the right \\
+\hline
+{\em end} & Position where to stop the search from the right \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 std\+::size\+\_\+t 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a556352afcc1510c6224d845d38114ae3}\label{classmml_1_1string_a556352afcc1510c6224d845d38114ae3}} 
+\mbox{\Hypertarget{classmml_1_1string_aec19cf1c64718ba66e141ce000b2631f}\label{classmml_1_1string_aec19cf1c64718ba66e141ce000b2631f}} 
 \index{mml::string@{mml::string}!size@{size}}
 \index{size@{size}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{size()}{size()}}
-{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::size\+\_\+t mml\+::string\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -842,11 +838,11 @@ Compute size of the string.
 \begin{DoxyReturn}{Returns}
 std\+::size\+\_\+t 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ae36494e952a47b87efce6d67a44de3cb}\label{classmml_1_1string_ae36494e952a47b87efce6d67a44de3cb}} 
+\mbox{\Hypertarget{classmml_1_1string_a6ce6136021002bfc903372de89590bda}\label{classmml_1_1string_a6ce6136021002bfc903372de89590bda}} 
 \index{mml::string@{mml::string}!stoi@{stoi}}
 \index{stoi@{stoi}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{stoi()}{stoi()}}
-{\footnotesize\ttfamily int mml\+::string\+::stoi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily int mml\+::string\+::stoi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -855,11 +851,11 @@ Transform this instance to an integer.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_acd6c7ed5faa16b0a270a427e1cd34893}\label{classmml_1_1string_acd6c7ed5faa16b0a270a427e1cd34893}} 
+\mbox{\Hypertarget{classmml_1_1string_a9c4555e270ca374821544047d91003ab}\label{classmml_1_1string_a9c4555e270ca374821544047d91003ab}} 
 \index{mml::string@{mml::string}!str@{str}}
 \index{str@{str}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{str()}{str()}}
-{\footnotesize\ttfamily std\+::string mml\+::string\+::str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily std\+::string mml\+::string\+::str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -868,11 +864,11 @@ Return the value of this instance as a std\+::string.
 \begin{DoxyReturn}{Returns}
 std\+::string 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a48f088a212cfff0103d4be7b694b3057}\label{classmml_1_1string_a48f088a212cfff0103d4be7b694b3057}} 
+\mbox{\Hypertarget{classmml_1_1string_acd79728f48f9641b45f0f5f777685af9}\label{classmml_1_1string_acd79728f48f9641b45f0f5f777685af9}} 
 \index{mml::string@{mml::string}!sub@{sub}}
 \index{sub@{sub}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{sub()}{sub()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::sub (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{beg,  }\item[{std\+::size\+\_\+t}]{end }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::sub (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{beg,  }\item[{std\+::size\+\_\+t}]{end }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -888,11 +884,11 @@ Create a substring starting and ending of specific positions.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a365c211d42efb38ad424f6c3bc6fa6f3}\label{classmml_1_1string_a365c211d42efb38ad424f6c3bc6fa6f3}} 
+\mbox{\Hypertarget{classmml_1_1string_aa2f72690f91fcc23c35696b841113ce6}\label{classmml_1_1string_aa2f72690f91fcc23c35696b841113ce6}} 
 \index{mml::string@{mml::string}!substr@{substr}}
 \index{substr@{substr}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{substr()}{substr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::substr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{pos1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::substr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{pos1 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -906,11 +902,11 @@ Create a substring starting from this position to the end.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a093ab1d9253b402afa3cd3391c45d216}\label{classmml_1_1string_a093ab1d9253b402afa3cd3391c45d216}} 
+\mbox{\Hypertarget{classmml_1_1string_a80f53083f18111f3275fc969813b7627}\label{classmml_1_1string_a80f53083f18111f3275fc969813b7627}} 
 \index{mml::string@{mml::string}!substr@{substr}}
 \index{substr@{substr}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{substr()}{substr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::substr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{pos1,  }\item[{std\+::size\+\_\+t}]{length1 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} mml\+::string\+::substr (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{pos1,  }\item[{std\+::size\+\_\+t}]{length1 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -926,11 +922,11 @@ Create substring.
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ac4c745060ab997329f4be69b2d122a73}\label{classmml_1_1string_ac4c745060ab997329f4be69b2d122a73}} 
+\mbox{\Hypertarget{classmml_1_1string_a383642a9a45445f48097de31824ebf59}\label{classmml_1_1string_a383642a9a45445f48097de31824ebf59}} 
 \index{mml::string@{mml::string}!writeline@{writeline}}
 \index{writeline@{writeline}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{writeline()}{writeline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void mml\+::string\+::writeline (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::string\+::writeline (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -944,11 +940,11 @@ Write this instance into the end of a file.
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ae6bd14b8261e69dc0e61b698ae2dffaa}\label{classmml_1_1string_ae6bd14b8261e69dc0e61b698ae2dffaa}} 
+\mbox{\Hypertarget{classmml_1_1string_a0e7f8de4221289eab119e2a7367c9b34}\label{classmml_1_1string_a0e7f8de4221289eab119e2a7367c9b34}} 
 \index{mml::string@{mml::string}!writeline@{writeline}}
 \index{writeline@{writeline}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{writeline()}{writeline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void mml\+::string\+::writeline (\begin{DoxyParamCaption}\item[{std\+::string}]{output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::string\+::writeline (\begin{DoxyParamCaption}\item[{std\+::string}]{output }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 

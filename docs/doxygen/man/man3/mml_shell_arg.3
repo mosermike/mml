@@ -1,4 +1,4 @@
-.TH "mml::shell::arg" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "mml::shell::arg" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,27 +16,27 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .ti -1c
 .RI "\fBarg\fP (int argc1, char **argv1)"
 .br
+.RI "Initialize with the arguments from the main class\&. "
 .ti -1c
 .RI "\fBarg\fP (char **argv1, int argc1)"
 .br
+.RI "Initialize with the arguments from the main class\&. "
 .ti -1c
-.RI "\fBarg\fP (\fBmml::string\fP a)"
+.RI "template<typename\&.\&.\&. T> \fBarg\fP (const T &\&.\&.\&. args)"
 .br
-.ti -1c
-.RI "\fBarg\fP (\fBmml::string\fP a, \fBmml::string\fP b)"
-.br
-.ti -1c
-.RI "\fBarg\fP (\fBmml::string\fP a, \fBmml::string\fP b, \fBmml::string\fP c)"
-.br
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBarg\fP (std::vector< std::string > vec_temp)"
 .br
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBarg\fP ()"
 .br
+.RI "Constructor\&. "
 .ti -1c
 .RI "\fBarg\fP (\fBarg\fP &vec_copy)"
 .br
+.RI "Copy constructor\&. "
 .ti -1c
 .RI "\fBarg\fP & \fBoperator=\fP (const \fBarg\fP &vec_temp)"
 .br
@@ -51,7 +51,7 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .RI "template<typename\&.\&.\&. values> std::vector< \fBmml::string\fP > & \fBoperator()\fP (char **argv1, int argc1, const values &\&.\&.\&.value) noexcept"
 .br
 .ti -1c
-.RI "std::size_t \fBbegin\fP (const std::string &str) noexcept"
+.RI "std::size_t \fBbegin\fP (const std::string &str) const noexcept"
 .br
 .RI "Determine position where an argument starts with a specific string\&. "
 .ti -1c
@@ -59,15 +59,15 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .br
 .RI "Determine options given with one minus and separate them ignoring specific strings\&. "
 .ti -1c
-.RI "template<typename\&.\&.\&. values> bool \fBnexist\fP (const values &\&.\&.\&. value) noexcept"
+.RI "template<typename\&.\&.\&. values> bool \fBnexist\fP (const values &\&.\&.\&. value) const noexcept"
 .br
 .RI "Determine if an element does not exist\&. "
 .ti -1c
-.RI "std::size_t \fBpos\fP (const std::string &str) noexcept"
+.RI "std::size_t \fBpos\fP (const std::string &str) const noexcept"
 .br
 .RI "Determine the position of a searched string\&. "
 .ti -1c
-.RI "std::size_t \fBpos\fP (const std::string &str1, const std::string &str2) noexcept"
+.RI "std::size_t \fBpos\fP (const std::string &str1, const std::string &str2) const noexcept"
 .br
 .RI "Determine the position of a searched string or another\&. "
 .ti -1c
@@ -78,39 +78,90 @@ Inherits \fBmml::vector< mml::string >\fP\&.
 .RI "\fB~arg\fP ()"
 .br
 .in -1c
-.SS "Protected Attributes"
-
-.in +1c
-.ti -1c
-.RI "int \fBargc\fP = 0"
-.br
-.ti -1c
-.RI "char ** \fBargv\fP = {}"
-.br
-.in -1c
+.SS "Additional Inherited Members"
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "mml::shell::arg::arg (int argc1, char ** argv1)\fC [inline]\fP"
 
+.PP
+Initialize with the arguments from the main class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargc1\fP Number of arguments 
+.br
+\fIargv1\fP Arguments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
+
 .SS "mml::shell::arg::arg (char ** argv1, int argc1)\fC [inline]\fP"
 
-.SS "mml::shell::arg::arg (\fBmml::string\fP a)\fC [inline]\fP"
+.PP
+Initialize with the arguments from the main class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargv1\fP Arguments 
+.br
+\fIargc1\fP Number of arguments 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
 
-.SS "mml::shell::arg::arg (\fBmml::string\fP a, \fBmml::string\fP b)\fC [inline]\fP"
+.SS "template<typename\&.\&.\&. T> mml::shell::arg::arg (const T &\&.\&.\&. args)\fC [inline]\fP"
 
-.SS "mml::shell::arg::arg (\fBmml::string\fP a, \fBmml::string\fP b, \fBmml::string\fP c)\fC [inline]\fP"
+.PP
+Constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIargs\fP Values to be put into the class 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the class 
+.RE
+.PP
 
 .SS "mml::shell::arg::arg (std::vector< std::string > vec_temp)\fC [inline]\fP"
 
+.PP
+Constructor\&. 
 .SS "mml::shell::arg::arg ()\fC [inline]\fP"
 
+.PP
+Constructor\&. 
 .SS "mml::shell::arg::arg (\fBarg\fP & vec_copy)\fC [inline]\fP"
+
+.PP
+Copy constructor\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvec_copy\fP Instance of this class 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Instance of the new created class 
+.RE
+.PP
 
 .SS "mml::shell::arg::~arg ()\fC [inline]\fP"
 
 .SH "Member Function Documentation"
 .PP 
-.SS "std::size_t mml::shell::arg::begin (const std::string & str)\fC [noexcept]\fP"
+.SS "std::size_t mml::shell::arg::begin (const std::string & str) const\fC [noexcept]\fP"
 
 .PP
 Determine position where an argument starts with a specific string\&. 
@@ -137,7 +188,7 @@ Determine options given with one minus and separate them ignoring specific strin
 .RE
 .PP
 
-.SS "template<typename\&.\&.\&. values> bool mml::shell::arg::nexist (const values &\&.\&.\&. value)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<typename\&.\&.\&. values> bool mml::shell::arg::nexist (const values &\&.\&.\&. value) const\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Determine if an element does not exist\&. 
@@ -179,7 +230,7 @@ Reference to this instance
 
 .SS "\fBarg\fP& mml::shell::arg::operator= (const std::vector< \fBmml::string\fP > & vec_temp)\fC [inline]\fP"
 
-.SS "std::size_t mml::shell::arg::pos (const std::string & str)\fC [noexcept]\fP"
+.SS "std::size_t mml::shell::arg::pos (const std::string & str) const\fC [noexcept]\fP"
 
 .PP
 Determine the position of a searched string\&. 
@@ -195,7 +246,7 @@ position
 .RE
 .PP
 
-.SS "std::size_t mml::shell::arg::pos (const std::string & str1, const std::string & str2)\fC [noexcept]\fP"
+.SS "std::size_t mml::shell::arg::pos (const std::string & str1, const std::string & str2) const\fC [noexcept]\fP"
 
 .PP
 Determine the position of a searched string or another\&. 
@@ -235,12 +286,6 @@ Replace a string in each element\&.
 Vector of this instance 
 .RE
 .PP
-
-.SH "Member Data Documentation"
-.PP 
-.SS "int mml::shell::arg::argc = 0\fC [protected]\fP"
-
-.SS "char** mml::shell::arg::argv = {}\fC [protected]\fP"
 
 
 .SH "Author"

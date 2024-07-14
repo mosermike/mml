@@ -36,7 +36,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'shell';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -459,91 +459,95 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell5errorENSt6stringE">
 <span id="_CPPv3N3mml5shell5errorENSt6stringE"></span><span id="_CPPv2N3mml5shell5errorENSt6stringE"></span><span id="mml::shell::error__ss"></span><span class="target" id="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell5errorENSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
+<dd><p>Print an error in red colour and exit the program. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ausgabe eines Errors</p>
+<p>This function exits the program </p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – to be printed </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell10backgroundE6string">
 <span id="_CPPv3N3mml5shell10backgroundE6string"></span><span id="_CPPv2N3mml5shell10backgroundE6string"></span><span id="mml::shell::background__string"></span><span class="target" id="namespacemml_1_1shell_1ab1339179fc2b533a1b07704d734a3006"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">background</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">colour</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell10backgroundE6string" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dd><p>Change background of the shell. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>colour</strong> – background colour </p>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Hintergrund ändern</p>
-</div>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell7chapterENSt6stringEb">
 <span id="_CPPv3N3mml5shell7chapterENSt6stringEb"></span><span id="_CPPv2N3mml5shell7chapterENSt6stringEb"></span><span id="mml::shell::chapter__ss.b"></span><span class="target" id="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">chapter</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell7chapterENSt6stringEb" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dd><p>Print a chapter of a help page. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – chapter title </p></li>
+<li><p><strong>newline</strong> – Print a new line </p></li>
+</ul>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Hilfeseiteausgabe eines Kapitels</p>
-</div>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell4coutEN3mml6stringEbNSt6stringE">
-<span id="_CPPv3N3mml5shell4coutEN3mml6stringEbNSt6stringE"></span><span id="_CPPv2N3mml5shell4coutEN3mml6stringEbNSt6stringE"></span><span id="mml::shell::cout__mml::string.b.ss"></span><span class="target" id="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cout</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="standards.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">colour</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;lightgreen&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell4coutEN3mml6stringEbNSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
+<span id="_CPPv3N3mml5shell4coutEN3mml6stringEbNSt6stringE"></span><span id="_CPPv2N3mml5shell4coutEN3mml6stringEbNSt6stringE"></span><span id="mml::shell::cout__mml::string.b.ss"></span><span class="target" id="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cout</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">colour</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;lightgreen&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell4coutEN3mml6stringEbNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print to the shell. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Ausgabe mit Werten in Klammern in einer Farbe</p>
+<p>Text within [] is highlighted </p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – The text to be printed </p></li>
+<li><p><strong>newline</strong> – New line at the end </p></li>
+<li><p><strong>colour</strong> – which colour is used for highligting </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell9formationE6string">
-<span id="_CPPv3N3mml5shell9formationE6string"></span><span id="_CPPv2N3mml5shell9formationE6string"></span><span id="mml::shell::formation__string"></span><span class="target" id="namespacemml_1_1shell_1a4edbe4309f804bb4d8552b8f5734c9f6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">formation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell9formationE6string" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
+<span id="_CPPv3N3mml5shell9formationE6string"></span><span id="_CPPv2N3mml5shell9formationE6string"></span><span id="mml::shell::formation__string"></span><span class="target" id="namespacemml_1_1shell_1adf0bff15c3a27eb1c69c00420e557124"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">formation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell9formationE6string" title="Link to this definition">#</a><br /></dt>
+<dd><p>Change the formation of printed texts in the shell. </p>
+<p>
+Possible options are “normal”, “fat”, “cursive”, “underline”, “blink”, “reverse”</p>
+<p><dl class="simple">
 <dt><strong>Author</strong></dt><dd><p>Mike </p>
 </dd>
 </dl>
 </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Formatierung ändern</p>
-</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>format</strong> – Format</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell6letterE6string">
 <span id="_CPPv3N3mml5shell6letterE6string"></span><span id="_CPPv2N3mml5shell6letterE6string"></span><span id="mml::shell::letter__string"></span><span class="target" id="namespacemml_1_1shell_1a6c84d770587829ca7dc7c8147329d139"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">letter</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">colour</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell6letterE6string" title="Link to this definition">#</a><br /></dt>
-<dd><p>
+<dd><p>Change printed text colour. </p>
+<p>
+Options are black, darkgray, (light)red, (light)green, brown, yellow, (light)blue, (light)purple, (light)cyan, white, lightgray, normal</p>
+<p>
 Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike</p>
-</dd>
 <dt><strong>Author</strong></dt><dd><p>Mike Moser</p>
 </dd>
 </dl>
 </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Schriftfarbe ändern</p>
-</div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>colour</strong> – paint of the letters</p>
 </dd>
 </dl>
 </dd></dl>
@@ -551,66 +555,50 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell6normalEv">
 <span id="_CPPv3N3mml5shell6normalEv"></span><span id="_CPPv2N3mml5shell6normalEv"></span><span id="mml::shell::normal"></span><span class="target" id="namespacemml_1_1shell_1a00c8e2a2ee520b8270b9f8898906231b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell6normalEv" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Alle Änderungen an der Ausgabe zurücksetzen</p>
-</div>
+<dd><p>Reverse changes in the print behaviour of the shell. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell4noteENSt6stringEb">
 <span id="_CPPv3N3mml5shell4noteENSt6stringEb"></span><span id="_CPPv2N3mml5shell4noteENSt6stringEb"></span><span id="mml::shell::note__ss.b"></span><span class="target" id="namespacemml_1_1shell_1adbd82f8c931de0e11499c651fcbbce70"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">note</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell4noteENSt6stringEb" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dd><p>Print a note in lightgray. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – to be printed </p></li>
+<li><p><strong>newline</strong> – print newline </p></li>
+</ul>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Eine Notiz ausgeben</p>
-</div>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell6optionENSt6stringENSt6stringE">
-<span id="_CPPv3N3mml5shell6optionENSt6stringENSt6stringE"></span><span id="_CPPv2N3mml5shell6optionENSt6stringENSt6stringE"></span><span id="mml::shell::option__ss.ss"></span><span class="target" id="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">option</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">chapter</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell6optionENSt6stringENSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<span id="_CPPv3N3mml5shell6optionENSt6stringENSt6stringE"></span><span id="_CPPv2N3mml5shell6optionENSt6stringENSt6stringE"></span><span id="mml::shell::option__ss.ss"></span><span class="target" id="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">option</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">option</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">descr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell6optionENSt6stringENSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print an option in a help page. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> – Name of the option used </p></li>
+<li><p><strong>descr</strong> – Description of the option </p></li>
+</ul>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Finden von übergebenen Argumente(n)</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ausgabe einer Option von einer Hilfeseite</p>
-</div>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell8passwordENSt6stringENSt6stringE">
-<span id="_CPPv3N3mml5shell8passwordENSt6stringENSt6stringE"></span><span id="_CPPv2N3mml5shell8passwordENSt6stringENSt6stringE"></span><span id="mml::shell::password__ss.ss"></span><span class="target" id="namespacemml_1_1shell_1a1a1a82593cac384a3d698003740cd408"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ausgabe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell8passwordENSt6stringENSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Eingabe eines verdeckten Strings</p>
-</div>
+<span id="_CPPv3N3mml5shell8passwordENSt6stringENSt6stringE"></span><span id="_CPPv2N3mml5shell8passwordENSt6stringENSt6stringE"></span><span id="mml::shell::password__ss.ss"></span><span class="target" id="namespacemml_1_1shell_1ab7578091ec640c1c1f9d4c27674e4025"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">password</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">print</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">add</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell8passwordENSt6stringENSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Input of a password. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>eingegebener String </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>print</strong> – text to be printed when the code asks for the password </p></li>
+<li><p><strong>add</strong> – additional text printed after <code class="docutils literal notranslate"><span class="pre">print</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>input </p>
 </dd>
 </dl>
 </dd></dl>
@@ -618,42 +606,116 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell4warnENSt6stringEb">
 <span id="_CPPv3N3mml5shell4warnENSt6stringEb"></span><span id="_CPPv2N3mml5shell4warnENSt6stringEb"></span><span id="mml::shell::warn__ss.b"></span><span class="target" id="namespacemml_1_1shell_1a1beda25649ea427bb646ea6be704904c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell4warnENSt6stringEb" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dd><p>Print a warning and exit the program. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to be printed </p></li>
+<li><p><strong>newline</strong> – Print new line </p></li>
+</ul>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)</p>
-</div>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell8warn_optENSt6stringEb">
 <span id="_CPPv3N3mml5shell8warn_optENSt6stringEb"></span><span id="_CPPv2N3mml5shell8warn_optENSt6stringEb"></span><span id="mml::shell::warn_opt__ss.b"></span><span class="target" id="namespacemml_1_1shell_1ad39babde10f8181169d97a1600e30cb8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">warn_opt</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell8warn_optENSt6stringEb" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dd><p>Print a warning without exiting the program. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – Text to be printed </p></li>
+<li><p><strong>newline</strong> – Print a new line </p></li>
+</ul>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)</p>
-</div>
 </dd></dl>
 
 </div>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3argE">
-<span id="_CPPv3N3mml5shell3argE"></span><span id="_CPPv2N3mml5shell3argE"></span><span id="mml::shell::arg"></span><span class="target" id="classmml_1_1shell_1_1arg"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="standards.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="vector.html#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="standards.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3mml5shell3argE" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3N3mml5shell3argE"></span><span id="_CPPv2N3mml5shell3argE"></span><span id="mml::shell::arg"></span><span class="target" id="classmml_1_1shell_1_1arg"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="vector.html#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3mml5shell3argE" title="Link to this definition">#</a><br /></dt>
 <dd><div class="docutils container">
 <em>#include &lt;shell.hpp&gt;</em></div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3argEiPPc">
+<span id="_CPPv3N3mml5shell3arg3argEiPPc"></span><span id="_CPPv2N3mml5shell3arg3argEiPPc"></span><span id="mml::shell::arg::arg__i.cPP"></span><span class="target" id="classmml_1_1shell_1_1arg_1a747b9774f1126f21cf5c306a1723d006"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc1</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3argEiPPc" title="Link to this definition">#</a><br /></dt>
+<dd><p>Initialize with the arguments from the main class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>argc1</strong> – Number of arguments </p></li>
+<li><p><strong>argv1</strong> – Arguments </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Instance of the class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3argEPPci">
+<span id="_CPPv3N3mml5shell3arg3argEPPci"></span><span id="_CPPv2N3mml5shell3arg3argEPPci"></span><span id="mml::shell::arg::arg__cPP.i"></span><span class="target" id="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3argEPPci" title="Link to this definition">#</a><br /></dt>
+<dd><p>Initialize with the arguments from the main class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>argv1</strong> – Arguments </p></li>
+<li><p><strong>argc1</strong> – Number of arguments </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Instance of the class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN3mml5shell3arg3argEDpRK1T">
+<span id="_CPPv3IDpEN3mml5shell3arg3argEDpRK1T"></span><span id="_CPPv2IDpEN3mml5shell3arg3argEDpRK1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1acc1ae3ac77dd64129ea1bfd92b9acd51"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpEN3mml5shell3arg3argEDpRK1T" title="mml::shell::arg::arg::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN3mml5shell3arg3argEDpRK1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>args</strong> – Values to be put into the class </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Instance of the class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3argENSt6vectorINSt6stringEEE">
+<span id="_CPPv3N3mml5shell3arg3argENSt6vectorINSt6stringEEE"></span><span id="_CPPv2N3mml5shell3arg3argENSt6vectorINSt6stringEEE"></span><span id="mml::shell::arg::arg__std::vector:ss:"></span><span class="target" id="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vec_temp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3argENSt6vectorINSt6stringEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3argEv">
+<span id="_CPPv3N3mml5shell3arg3argEv"></span><span id="_CPPv2N3mml5shell3arg3argEv"></span><span id="mml::shell::arg::arg"></span><span class="target" id="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3argEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3argER3arg">
+<span id="_CPPv3N3mml5shell3arg3argER3arg"></span><span id="_CPPv2N3mml5shell3arg3argER3arg"></span><span id="mml::shell::arg::arg__argR"></span><span class="target" id="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">arg</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3mml5shell3arg3argER3arg" title="mml::shell::arg::arg"><span class="n"><span class="pre">arg</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec_copy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3argER3arg" title="Link to this definition">#</a><br /></dt>
+<dd><p>Copy constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vec_copy</strong> – Instance of this class </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Instance of the new created class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values">
-<span id="_CPPv3IDpEN3mml5shell3argclEiPPcDpRK6values"></span><span id="_CPPv2IDpEN3mml5shell3argclEiPPcDpRK6values"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a6803b86ef3d63eb9c8f65d48586f148c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="standards.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc1</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values" title="mml::shell::arg::operator()::values"><span class="n"><span class="pre">values</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3IDpEN3mml5shell3argclEiPPcDpRK6values"></span><span id="_CPPv2IDpEN3mml5shell3argclEiPPcDpRK6values"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a6803b86ef3d63eb9c8f65d48586f148c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc1</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values" title="mml::shell::arg::operator()::values"><span class="n"><span class="pre">values</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values" title="Link to this definition">#</a><br /></dt>
 <dd><p>Initialise with the values from the terminal and separated flags given with one minus sign. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -670,8 +732,8 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg5beginERKNSt6stringE">
-<span id="_CPPv3N3mml5shell3arg5beginERKNSt6stringE"></span><span id="_CPPv2N3mml5shell3arg5beginERKNSt6stringE"></span><span id="mml::shell::arg::begin__ssCR"></span><span class="target" id="classmml_1_1shell_1_1arg_1a9acf696f93656013a6515b3c1ce2a4fa"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5shell3arg5beginERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml5shell3arg5beginERKNSt6stringE">
+<span id="_CPPv3NK3mml5shell3arg5beginERKNSt6stringE"></span><span id="_CPPv2NK3mml5shell3arg5beginERKNSt6stringE"></span><span id="mml::shell::arg::begin__ssCRC"></span><span class="target" id="classmml_1_1shell_1_1arg_1a1230d5ca78a279f31eb463750e38ef04"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml5shell3arg5beginERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Determine position where an argument starts with a specific string. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -695,8 +757,8 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4IDpEN3mml5shell3arg6nexistEbDpRK6values">
-<span id="_CPPv3IDpEN3mml5shell3arg6nexistEDpRK6values"></span><span id="_CPPv2IDpEN3mml5shell3arg6nexistEDpRK6values"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a641b5dd2acbb18b032d7666649448fe2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nexist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpEN3mml5shell3arg6nexistEbDpRK6values" title="mml::shell::arg::nexist::values"><span class="n"><span class="pre">values</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4IDpEN3mml5shell3arg6nexistEbDpRK6values" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4IDpENK3mml5shell3arg6nexistEbDpRK6values">
+<span id="_CPPv3IDpENK3mml5shell3arg6nexistEDpRK6values"></span><span id="_CPPv2IDpENK3mml5shell3arg6nexistEDpRK6values"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a318065c8db20353c8e806c18886880ae"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nexist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpENK3mml5shell3arg6nexistEbDpRK6values" title="mml::shell::arg::nexist::values"><span class="n"><span class="pre">values</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4IDpENK3mml5shell3arg6nexistEbDpRK6values" title="Link to this definition">#</a><br /></dt>
 <dd><p>Determine if an element does not exist. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -709,8 +771,8 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3posERKNSt6stringE">
-<span id="_CPPv3N3mml5shell3arg3posERKNSt6stringE"></span><span id="_CPPv2N3mml5shell3arg3posERKNSt6stringE"></span><span id="mml::shell::arg::pos__ssCR"></span><span class="target" id="classmml_1_1shell_1_1arg_1a2fd200cb84b0a25149e81b7c9a5e5ddd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3posERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml5shell3arg3posERKNSt6stringE">
+<span id="_CPPv3NK3mml5shell3arg3posERKNSt6stringE"></span><span id="_CPPv2NK3mml5shell3arg3posERKNSt6stringE"></span><span id="mml::shell::arg::pos__ssCRC"></span><span class="target" id="classmml_1_1shell_1_1arg_1adf0a7a692eac8250d4090da2c20d10ff"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml5shell3arg3posERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Determine the position of a searched string. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -723,8 +785,8 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5shell3arg3posERKNSt6stringERKNSt6stringE">
-<span id="_CPPv3N3mml5shell3arg3posERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N3mml5shell3arg3posERKNSt6stringERKNSt6stringE"></span><span id="mml::shell::arg::pos__ssCR.ssCR"></span><span class="target" id="classmml_1_1shell_1_1arg_1a2955766a51d32939dd723a905bfda337"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str2</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5shell3arg3posERKNSt6stringERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml5shell3arg3posERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3NK3mml5shell3arg3posERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2NK3mml5shell3arg3posERKNSt6stringERKNSt6stringE"></span><span id="mml::shell::arg::pos__ssCR.ssCRC"></span><span class="target" id="classmml_1_1shell_1_1arg_1a458009345398b09e87cd05f8f743fcec"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pos</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">str2</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml5shell3arg3posERKNSt6stringERKNSt6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Determine the position of a searched string or another. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -745,7 +807,7 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T">
-<span id="_CPPv3I0EN3mml5shell3arg7replaceE1T1T"></span><span id="_CPPv2I0EN3mml5shell3arg7replaceE1T1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a919f80e695b5fd3367835108e61fe2a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="standards.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">replace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="mml::shell::arg::replace::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Old</span></span>, <a class="reference internal" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="mml::shell::arg::replace::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">New</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="Link to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3mml5shell3arg7replaceE1T1T"></span><span id="_CPPv2I0EN3mml5shell3arg7replaceE1T1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1shell_1_1arg_1a919f80e695b5fd3367835108e61fe2a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">replace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="mml::shell::arg::replace::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Old</span></span>, <a class="reference internal" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="mml::shell::arg::replace::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">New</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T" title="Link to this definition">#</a><br /></dt>
 <dd><p>Replace a string in each element. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -827,12 +889,18 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell4warnENSt6stringEb"><code class="docutils literal notranslate"><span class="pre">shell::warn()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell8warn_optENSt6stringEb"><code class="docutils literal notranslate"><span class="pre">shell::warn_opt()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3argE"><code class="docutils literal notranslate"><span class="pre">shell::arg</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3argEiPPc"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3argEPPci"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpEN3mml5shell3arg3argEDpRK1T"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3argENSt6vectorINSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3argEv"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3argER3arg"><code class="docutils literal notranslate"><span class="pre">shell::arg::arg()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpEN3mml5shell3argclERNSt6vectorIN3mml6stringEEEiPPcDpRK6values"><code class="docutils literal notranslate"><span class="pre">shell::arg::operator()()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg5beginERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::begin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml5shell3arg5beginERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::begin()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpEN3mml5shell3arg4initEvDpRK6values"><code class="docutils literal notranslate"><span class="pre">shell::arg::init()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpEN3mml5shell3arg6nexistEbDpRK6values"><code class="docutils literal notranslate"><span class="pre">shell::arg::nexist()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3posERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::pos()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5shell3arg3posERKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::pos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpENK3mml5shell3arg6nexistEbDpRK6values"><code class="docutils literal notranslate"><span class="pre">shell::arg::nexist()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml5shell3arg3posERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::pos()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml5shell3arg3posERKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shell::arg::pos()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN3mml5shell3arg7replaceENSt6vectorIN3mml6stringEEE1T1T"><code class="docutils literal notranslate"><span class="pre">shell::arg::replace()</span></code></a></li>
 </ul>
 </li>
@@ -884,7 +952,7 @@ Programm shell.cpp Enthält verschiedene Funktionen <dl class="simple">
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

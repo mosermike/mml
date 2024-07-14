@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="namespacemml_1_1file_1ae8b01165891f2bd5e3c85a2e35a1c999" kindref="member">mml::file::copy</ref>  (<ref refid="classmml_1_1string" kindref="compound">mml::string</ref> src, <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> dst, std::string name_in=&quot;&quot;, std::string name_ex=&quot;&quot;, size_t blocksize=_100MB, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite=false)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>Copy symbolic and hard link file by creating them  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::file::filetype</ref>  (std::string filepath)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000002"/>use library to detect what it is and also then use hard link and symbolic link </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

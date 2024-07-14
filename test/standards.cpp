@@ -13,5 +13,13 @@ int main() {
 	std::cout << "Now you should see your date and time:" << std::endl;
 	std::cout << mml::date(-1, "Date+Time") << std::endl;
 	
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << std::endl;
+
 	return 0;
 }

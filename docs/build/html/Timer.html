@@ -36,7 +36,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Timer';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -457,130 +457,53 @@ document.write(`
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer11break_startEv">
-<span id="_CPPv3N3mml5Timer11break_startEv"></span><span id="_CPPv2N3mml5Timer11break_startEv"></span><span id="mml::Timer::break_start"></span><span class="target" id="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">break_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer11break_startEv" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5TimerEv">
+<span id="_CPPv3N3mml5Timer5TimerEv"></span><span id="_CPPv2N3mml5Timer5TimerEv"></span><span id="mml::Timer::Timer"></span><span class="target" id="classmml_1_1Timer_1a8388437a554236e800ef35d37ceba950"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Timer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5Timer5TimerEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor which sets the start time to now. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5TimerERK5Timer">
+<span id="_CPPv3N3mml5Timer5TimerERK5Timer"></span><span id="_CPPv2N3mml5Timer5TimerERK5Timer"></span><span id="mml::Timer::Timer__TimerCR"></span><span class="target" id="classmml_1_1Timer_1a51f33e4e9ced73cce02ecc259ea6e3df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Timer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3mml5Timer5TimerERK5Timer" title="mml::Timer::Timer"><span class="n"><span class="pre">Timer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5Timer5TimerERK5Timer" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor which sets the start and end time to a specific time. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> – <a class="reference internal" href="#classmml_1_1Timer"><span class="std std-ref">Timer</span></a> which has a start and end time </p>
 </dd>
 </dl>
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>stop the time measurement </p>
-</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer11break_startEv">
+<span id="_CPPv3N3mml5Timer11break_startEv"></span><span id="_CPPv2N3mml5Timer11break_startEv"></span><span id="mml::Timer::break_start"></span><span class="target" id="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">break_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer11break_startEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Stop the time measurement temporarily. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer10break_stopEv">
 <span id="_CPPv3N3mml5Timer10break_stopEv"></span><span id="_CPPv2N3mml5Timer10break_stopEv"></span><span id="mml::Timer::break_stop"></span><span class="target" id="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">break_stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer10break_stopEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>continue the time measurement </p>
-<p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
+<dd><p>Continue the time measurement after a temporary break. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4coutENSt6stringEbb">
-<span id="_CPPv3N3mml5Timer4coutENSt6stringEbb"></span><span id="_CPPv2N3mml5Timer4coutENSt6stringEbb"></span><span id="mml::Timer::cout__ss.b.b"></span><span class="target" id="classmml_1_1Timer_1a0f4eeb7ba17bc52667855e593fd1d0b8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cout</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format_print</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4coutENSt6stringEbb" title="Link to this definition">#</a><br /></dt>
-<dd><p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
-</dd>
-</dl>
-</p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5clockEv">
+<span id="_CPPv3N3mml5Timer5clockEv"></span><span id="_CPPv2N3mml5Timer5clockEv"></span><span id="mml::Timer::clock"></span><span class="target" id="classmml_1_1Timer_1aeadb046285a068a189a4359e9302ed3e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clock</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5clockEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Convert ticks to time format. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Pint time formatted or in ms </p>
+<p>Prints a warning if the timer was not stopped before </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>text</strong> – A text printed first without a newline </p></li>
-<li><p><strong>format_print</strong> – Print by using the function range (false : in ms) </p></li>
-<li><p><strong>newline</strong> – Print with a newline </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5startEv">
-<span id="_CPPv3N3mml5Timer5startEv"></span><span id="_CPPv2N3mml5Timer5startEv"></span><span id="mml::Timer::start"></span><span class="target" id="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5startEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Start time measurement. </p>
-<p>
-Beginnt die Zeitmessung.<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas</p>
-</dd>
-</dl>
-</p>
-<p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4stopEv">
-<span id="_CPPv3N3mml5Timer4stopEv"></span><span id="_CPPv2N3mml5Timer4stopEv"></span><span id="mml::Timer::stop"></span><span class="target" id="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4stopEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Stops the time measurement. </p>
-<p>
-Stoppt die Zeitmessung.<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas</p>
-</dd>
-</dl>
-</p>
-<p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas </p>
-</dd>
-</dl>
-</p>
-<dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>passed time in ms </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Vergangene Zeit in Millisekunden </p>
+<dd class="field-odd"><p>Time in the format ‘hh:mm:ss,ms’ </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5getUSEb">
-<span id="_CPPv3N3mml5Timer5getUSEb"></span><span id="_CPPv2N3mml5Timer5getUSEb"></span><span id="mml::Timer::getUS__b"></span><span class="target" id="classmml_1_1Timer_1acbc5feb01146cf9067c08c52991300d4"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUS</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stop</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5getUSEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>get the time in µs </p>
-<p>
-Direkten Wert in Mikrosekunden zurückgegeben.<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas</p>
-</dd>
-</dl>
-</p>
-<p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas </p>
-</dd>
-</dl>
-</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>time in µs </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Vergangene Zeit in Mikrosekunden (uint64_t) </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5getMSEb">
-<span id="_CPPv3N3mml5Timer5getMSEb"></span><span id="_CPPv2N3mml5Timer5getMSEb"></span><span id="mml::Timer::getMS__b"></span><span class="target" id="classmml_1_1Timer_1a7ab3c31ff55f77a5fb16740df5d056c1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMS</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stop</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5getMSEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>Return time in ms without stopping. </p>
-<p>
-Zwischenergebnis in ms zurückgegeben. (stop muss vorher aufgerufen werden)<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Lucas</p>
-</dd>
-</dl>
-</p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5getMSEv">
+<span id="_CPPv3N3mml5Timer5getMSEv"></span><span id="_CPPv2N3mml5Timer5getMSEv"></span><span id="mml::Timer::getMS"></span><span class="target" id="classmml_1_1Timer_1aeed094c326ab2fa060a8b4c6c12ec3b6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMS</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5getMSEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get actual passed time in ms. </p>
 <p><dl class="simple">
 <dt><strong>Author</strong></dt><dd><p>Lucas </p>
 </dd>
@@ -590,33 +513,47 @@ Zwischenergebnis in ms zurückgegeben. (stop muss vorher aufgerufen werden)<dl c
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>time in ms </p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Zwischenergebnis </p>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4getSEv">
+<span id="_CPPv3N3mml5Timer4getSEv"></span><span id="_CPPv2N3mml5Timer4getSEv"></span><span id="mml::Timer::getS"></span><span class="target" id="classmml_1_1Timer_1ad2dbc8a979f81750b116415cb1c87f7a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getS</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4getSEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get actual passed time in s. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>time in seconds </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4getSEb">
-<span id="_CPPv3N3mml5Timer4getSEb"></span><span id="_CPPv2N3mml5Timer4getSEb"></span><span id="mml::Timer::getS__b"></span><span class="target" id="classmml_1_1Timer_1a5138fe5353603b4fd5d12dfa5e0f6a22"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getS</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stop</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4getSEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>Return time in s without stopping. </p>
-<p>
-Zwischenergebnis zurückgegeben.<dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike</p>
-</dd>
-</dl>
-</p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5getUSEv">
+<span id="_CPPv3N3mml5Timer5getUSEv"></span><span id="_CPPv2N3mml5Timer5getUSEv"></span><span id="mml::Timer::getUS"></span><span class="target" id="classmml_1_1Timer_1acb3a5c53ad94c5343fc5fb13da1df05a"></span><span class="n"><span class="pre">uint64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUS</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5getUSEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get actual passed time in µs. </p>
 <p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Mike </p>
+<dt><strong>Author</strong></dt><dd><p>Lucas </p>
 </dd>
 </dl>
 </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>time in seconds </p>
+<dd class="field-odd"><p>time in µs </p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Zwischenergebnis </p>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5printENSt6stringEbb">
+<span id="_CPPv3N3mml5Timer5printENSt6stringEbb"></span><span id="_CPPv2N3mml5Timer5printENSt6stringEbb"></span><span id="mml::Timer::print__ss.b.b"></span><span class="target" id="classmml_1_1Timer_1a8fe0536f964b0a5ae8afe43fc45e9a57"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">text</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">format_print</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5printENSt6stringEbb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Pint time formatted or in ms. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – A text printed first without a newline </p></li>
+<li><p><strong>format_print</strong> – Print by using the function range (false : in ms) </p></li>
+<li><p><strong>newline</strong> – Print with a newline </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -637,12 +574,127 @@ Zwischenergebnis zurückgegeben.<dl class="simple">
 </dl>
 </dd></dl>
 
-</div>
-<dl class="cpp struct">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4timeE">
-<span id="_CPPv3N3mml5Timer4timeE"></span><span id="_CPPv2N3mml5Timer4timeE"></span><span id="mml::Timer::time"></span><span class="target" id="structmml_1_1Timer_1_1time"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4timeE" title="Link to this definition">#</a><br /></dt>
-<dd></dd></dl>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5startEv">
+<span id="_CPPv3N3mml5Timer5startEv"></span><span id="_CPPv2N3mml5Timer5startEv"></span><span id="mml::Timer::start"></span><span class="target" id="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5startEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Start time measurement. </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Lucas </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer4stopEv">
+<span id="_CPPv3N3mml5Timer4stopEv"></span><span id="_CPPv2N3mml5Timer4stopEv"></span><span id="mml::Timer::stop"></span><span class="target" id="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer4stopEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Stops the time measurement. </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Lucas </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>passed time in ms </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer3strEv">
+<span id="_CPPv3N3mml5Timer3strEv"></span><span id="_CPPv2N3mml5Timer3strEv"></span><span id="mml::Timer::str"></span><span class="target" id="classmml_1_1Timer_1a1479e752f149e382d72236b112f72fdf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">str</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer3strEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns the milliseconds between start and end as a string. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prints a warning if the timer was not stopped before </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Time with the unit “ms” </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5strctEv">
+<span id="_CPPv3N3mml5Timer5strctEv"></span><span id="_CPPv2N3mml5Timer5strctEv"></span><span id="mml::Timer::strct"></span><span class="target" id="classmml_1_1Timer_1a253588df16714730b8f5b086827e0761"></span><span class="n"><span class="pre">time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">strct</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5strctEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get a structure with the meantime. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The structure is not in the format of a time. If the meantime is 1 ms, the structure will have s=0, ms = 1 and µs = 1000 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Structure with the meantime in µs, ms, s, min and hours </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer11strct_clockEv">
+<span id="_CPPv3N3mml5Timer11strct_clockEv"></span><span id="_CPPv2N3mml5Timer11strct_clockEv"></span><span id="mml::Timer::strct_clock"></span><span class="target" id="classmml_1_1Timer_1a161d07a969eb97f94a6abfd64d634d3b"></span><span class="n"><span class="pre">time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">strct_clock</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer11strct_clockEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get a structure with the meantime in the format of a clock hh:mm::ss,ms. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Structure with the meantime in µs, ms, s, min and hours </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd">
+<span id="_CPPv3N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd"></span><span id="_CPPv2N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd"></span><span id="mml::Timer::ticks_to_double__std::chrono::high_resolution_clock::time_point.double"></span><span class="target" id="classmml_1_1Timer_1ab1a3e42f9ac3ff7bf54954856ffb0717"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ticks_to_double</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">chrono</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">high_resolution_clock</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">time_point</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ticks</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd" title="Link to this definition">#</a><br /></dt>
+<dd><p>Convert ticks to double. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ticks</strong> – Time point to which the passed time is computed </p></li>
+<li><p><strong>f</strong> – Factor which determines the unit (1.0 = µs, 1000.0 = ms, 1.0e6 = s) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Return time passed between start and end </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5Timer5toIntEv">
+<span id="_CPPv3N3mml5Timer5toIntEv"></span><span id="_CPPv2N3mml5Timer5toIntEv"></span><span id="mml::Timer::toInt"></span><span class="target" id="classmml_1_1Timer_1a1857a5be5649d7d640d89fa7e22763c5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toInt</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5Timer5toIntEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns the milliseconds between start and end. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prints a warning if the timer was not stopped before </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>milliseconds as an integer </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml5TimerlsERNSt7ostreamERN3mml5TimerE">
+<span id="_CPPv3N3mml5TimerlsERNSt7ostreamERN3mml5TimerE"></span><span id="_CPPv2N3mml5TimerlsERNSt7ostreamERN3mml5TimerE"></span><span id="mml::Timer::lshift-operator__osR.mml::TimerR"></span><span class="target" id="classmml_1_1Timer_1a028b6a9a83d59c9e88be1e834f684c1b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">out</span></span>, <a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3mml5TimerE" title="mml::Timer"><span class="n"><span class="pre">Timer</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml5TimerlsERNSt7ostreamERN3mml5TimerE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Output the time as a string via a stream in ms. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>out</strong> – output stream </p></li>
+<li><p><strong>time</strong> – <a class="reference internal" href="#classmml_1_1Timer"><span class="std std-ref">Timer</span></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ostream </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 </section>
@@ -694,16 +746,24 @@ Zwischenergebnis zurückgegeben.<dl class="simple">
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5TimerE"><code class="docutils literal notranslate"><span class="pre">Timer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5TimerEv"><code class="docutils literal notranslate"><span class="pre">Timer::Timer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5TimerERK5Timer"><code class="docutils literal notranslate"><span class="pre">Timer::Timer()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer11break_startEv"><code class="docutils literal notranslate"><span class="pre">Timer::break_start()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer10break_stopEv"><code class="docutils literal notranslate"><span class="pre">Timer::break_stop()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer4coutENSt6stringEbb"><code class="docutils literal notranslate"><span class="pre">Timer::cout()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5clockEv"><code class="docutils literal notranslate"><span class="pre">Timer::clock()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5getMSEv"><code class="docutils literal notranslate"><span class="pre">Timer::getMS()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer4getSEv"><code class="docutils literal notranslate"><span class="pre">Timer::getS()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5getUSEv"><code class="docutils literal notranslate"><span class="pre">Timer::getUS()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5printENSt6stringEbb"><code class="docutils literal notranslate"><span class="pre">Timer::print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5rangeEv"><code class="docutils literal notranslate"><span class="pre">Timer::range()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5startEv"><code class="docutils literal notranslate"><span class="pre">Timer::start()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer4stopEv"><code class="docutils literal notranslate"><span class="pre">Timer::stop()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5getUSEb"><code class="docutils literal notranslate"><span class="pre">Timer::getUS()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5getMSEb"><code class="docutils literal notranslate"><span class="pre">Timer::getMS()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer4getSEb"><code class="docutils literal notranslate"><span class="pre">Timer::getS()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5rangeEv"><code class="docutils literal notranslate"><span class="pre">Timer::range()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer4timeE"><code class="docutils literal notranslate"><span class="pre">Timer::time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer3strEv"><code class="docutils literal notranslate"><span class="pre">Timer::str()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5strctEv"><code class="docutils literal notranslate"><span class="pre">Timer::strct()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer11strct_clockEv"><code class="docutils literal notranslate"><span class="pre">Timer::strct_clock()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd"><code class="docutils literal notranslate"><span class="pre">Timer::ticks_to_double()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5Timer5toIntEv"><code class="docutils literal notranslate"><span class="pre">Timer::toInt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml5TimerlsERNSt7ostreamERN3mml5TimerE"><code class="docutils literal notranslate"><span class="pre">Timer::operator&lt;&lt;()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -752,7 +812,7 @@ Zwischenergebnis zurückgegeben.<dl class="simple">
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>

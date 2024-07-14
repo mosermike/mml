@@ -9,7 +9,6 @@
  * @details         useful to use a reference to the class as an argument.
  */
 
-#pragma once
 #ifndef MML_INCLUDE_MML_THREAD_HPP
 #define MML_INCLUDE_MML_THREAD_HPP
 
