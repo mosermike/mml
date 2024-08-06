@@ -35,9 +35,8 @@ namespace mml{
 		* @brief Constructors
 		*/
         vector() : vec() {}
-        vector(const vector &temp) : vec(temp.vec) {}
-        vector(std::vector<T>& temp) : vec(temp) {}
-        vector(mml::vector<T>& temp) : vec(temp.vec) {}
+        vector(const std::vector<T>& temp) : vec(temp) {}
+        vector(const mml::vector<T>& temp) : vec(temp.vec) {}
         vector(double temp) : vec(static_cast<size_t>(temp)) {}
         vector(int cols, T temp) : vec(cols, temp) {}
         vector(int cols, std::vector<T> temp) : vec(cols, temp) {}
@@ -52,10 +51,10 @@ namespace mml{
 		/**
 		 * @brief Assign value with equal sign
 		 * @param temp Vector with values
-		 * @return this instance
+		 * @return reference to this instance
 		*/
-		vector operator=(const std::vector<T>& temp) noexcept {vec = temp; return *this;}
-		vector operator=(mml::vector<T> temp) noexcept {vec = temp.vec; return *this;}
+		vector& operator=(const std::vector<T>& temp) noexcept {vec = temp; return *this;}
+		vector& operator=(const mml::vector<T>& temp) noexcept {vec = temp.vec; return *this;}
 		
 		/**
 		 * @brief Returns a value at a specific index
