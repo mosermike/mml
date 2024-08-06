@@ -1,0 +1,15 @@
+build-job:
+  stage: build
+  script:
+    - make
+  artifacts:
+    paths:
+      - "lib/"
+
+test-job1:
+  stage: test
+  dependencies:
+    - build-job
+  script:
+    - cd test
+    - make test
