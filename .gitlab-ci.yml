@@ -2,6 +2,7 @@ build-job:
   stage: build
   script:
     - mkdir build
+    - cd build
     - cmake ..
     - make -j5
   artifacts:
