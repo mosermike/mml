@@ -1,15 +1,17 @@
 build-job:
   stage: build
   script:
-    - make -j9
+    - mkdir build
+    - cmake ..
+    - make -j5
   artifacts:
     paths:
-      - "lib/"
+      - "build/"
 
 test-job:
   stage: test
   dependencies:
     - build-job
   script:
-    - cd test
-    - make test -j5
+    - cd build
+    - make test

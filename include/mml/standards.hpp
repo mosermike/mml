@@ -548,7 +548,7 @@ namespace mml {
 	 * @param c Character to be checked
 	 * @return bool
 	*/
-	bool is_num(char c) noexcept;
+	bool isnum(char c) noexcept;
 	/**
 	 * @brief Checks if a number has reached the maximum value (std::string::npos)
 	 * @param number Number to be checked

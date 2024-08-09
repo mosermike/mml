@@ -66,8 +66,8 @@ namespace mml{
 			 * @param vec_copy Instance of this class
 			 * @return Instance of the new created class
 			 */
-			arg(arg &vec_copy) {vec = vec_copy.tovec();}
-			
+			arg(arg &vec_copy): mml::vector<mml::string>(vec_copy) {vec = vec_copy.tovec();}
+
 			// Als Kopierkonstruktor:
 			arg &operator=(const arg &vec_temp){
 				vec = vec_temp.vec;

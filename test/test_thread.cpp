@@ -3,9 +3,20 @@
 #include <vector>
 #include <cmath>
 #include <thread>
+#include <cassert>
 
 #include "mml/thread.hpp"
 
+// Custom assert macro
+#define assert_msg(cond, msg) \
+    do { \
+        if (!(cond)) { \
+            std::cerr << "Assertion failed: (" #cond "), function " << __func__ \
+                      << ", file " << __FILE__ << ", line " << __LINE__ << "." << std::endl \
+                      << "Message: " << msg << std::endl; \
+            std::abort(); \
+        } \
+    } while (false)
 
 /**
  * @brief Testing threading if they run
@@ -28,7 +39,7 @@ int exampleTaskWithMultipleParams(int threadId, mml::thread::Threads<int> &threa
 
     threads << "Thread " + std::to_string(threadId) + " has finished.\n";
 	
-    return 0;
+    return 1;
 }
 
 /**
@@ -122,10 +133,10 @@ int main() {
 	for (int i : results)
 		res += i;
 	
-	if(res == 5761455)
-		std::cout << "Found " << res << " primes in range " << rangeStart << " to " << rangeEnd << " as expected." << std::endl;
-	else
-		std::cout << "Found " << res << " primes in range " << rangeStart << " to " << rangeEnd << " but 5761455 were expected." << std::endl;
+	assert_msg(res == 5761455, ("Found " + std::to_string(res) + " primes in range " + std::to_string(rangeStart) +
+	" to " + std::to_string(rangeEnd) + " but 5761455 were expected."));
+
+	std::cout << "Found " << res << " primes in range " << rangeStart << " to " << rangeEnd << " as expected." << std::endl;
 	
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;

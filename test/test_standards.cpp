@@ -1,6 +1,9 @@
+#include <iostream>
+#include <cassert>
+
 #include "mml/standards.hpp"
 #include "mml.hpp"
-#include <iostream>
+
 
 int main() {
 	std::cout << "╭───────────────────────────────────╮" << std::endl;

@@ -197,7 +197,7 @@ std::string mml::Unix::mount_Dir (std::string mountpath, mml::string mountpoint,
 	
 	mml::check_root("mount_dir");
 	
-	for(uint32_t i = mml_mount_name.size(); i >= 0;i--) {
+	for(std::size_t i = mml_mount_name.size(); i < mml_mount_name.size();i--) {
 		if(mml_mount_name[i] == '/') {
 			mml_mount_name = mml_mount_name.substr(i+1);
 			break;
