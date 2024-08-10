@@ -8,8 +8,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Gather the source files
 file(GLOB_RECURSE MML_SOURCES src/*.cpp)
 
+# Option to choose between shared or static library, default to shared
+option(BUILD_SHARED_LIBS "Build shared libraries by default" ON)
+
 # Create the library
-add_library(mml SHARED ${MML_SOURCES})
+add_library(mml ${MML_SOURCES})
 
 # Set the include directories for the library
 target_include_directories(mml PUBLIC
@@ -95,4 +98,4 @@ add_custom_target(uninstall
     COMMAND rm -rf /usr/lib/cmake/mml
     COMMENT "Uninstalling files..."
 )
-
+	 

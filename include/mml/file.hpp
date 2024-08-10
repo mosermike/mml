@@ -72,22 +72,6 @@ namespace mml{
 		bool equal(std::string src, std::string dst);
 		
 		/**
-		 * @brief Determine the type of an object (directory, file, etc.)
-		 * @param filepath Path to the object
-		 * @return Returns a number to identify the type of the object
-		 * @note The numbers have the following meaning:
-		 * -  1: DT_FIFO
-		 * -  2: Serial connected device, mouse, etc.
-		 * -  4: Directory
-		 * -  6: Device or partition
-		 * -  8: normal file
-		 * - 10: symbolic link
-		 * - 12: Socket
-		 * @todo use library to detect what it is and also then use hard link and symbolic link
-		*/
-		int32_t  filetype(std::string filepath);
-		
-		/**
 		 * @brief Convert number into human readable number
 		 * @param number A number to be converted
 		 * @return std::string

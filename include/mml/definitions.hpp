@@ -24,13 +24,6 @@
 #define _10G 10000000000 //dd blocksize _10G
 #endif
 
-// #define S_DEVICE	10	// Gerät oder Partition
-// #define S_CHARDEV	11	// Maus, seriell angeschlossene Geräte, etc.
-// #define S_DIR		12	// Ordner
-// #define S_FIFO		13
-// #define S_SYMLNK	14	// symbolischer Link
-// #define S_FILE		15	// normale Datei
-// #define S_SOCK		16	// Socket
 #define S_DEVICE	6	// Gerät oder Partition DT_BLK aus dirent.h
 #define S_CHARDEV	2	// Maus, seriell angeschlossene Geräte, etc. DT_CHR
 #define S_DIR		4	// Ordner DT_DIR
@@ -38,6 +31,7 @@
 #define S_SYMLNK	10	// symbolischer Link DT_LNK
 #define S_FILE		8	// normale Datei DT_REG
 #define S_SOCK		12	// Socket DT_SOCK
+#define S_OTHER     14  // Other type
 
 #define _sec		0	// Sekunde
 #define _min		1	// Minute

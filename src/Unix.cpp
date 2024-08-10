@@ -87,36 +87,40 @@ bool mml::Unix::exist(std::string path){
 	
 	if (stat(path.c_str(), &sb) == -1)
 		return false;
+
 	return true;
 }
 
-bool mml::Unix::exist(std::string path1, std::string path2) {
-	return exist(path1) && exist(path2);
-}
-
-bool mml::Unix::exist(std::string path1, std::string path2, std::string path3) {
-	return exist(path1) && exist(path2) && exist(path3);
-}
-
-int32_t mml::Unix::filetype(std::string filepath){
+int32_t mml::Unix::filetype(mml::string filepath){
 	struct stat sb;
+	const std::filesystem::path& p(filepath.c_str());
+	std::filesystem::file_status s = std::filesystem::symlink_status(p);
 	
 	if (stat(filepath.c_str(), &sb) == -1) {
 		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
-        throw std::filesystem::filesystem_error("[filetype] File" + filepath + " does not exist", ec);
+        throw std::filesystem::filesystem_error("[filetype] File" + filepath.str() + " does not exist", ec);
 	}
 
-    switch (sb.st_mode & S_IFMT) {
-		case S_IFBLK:	return S_DEVICE;		// Gerät oder Partition
-		case S_IFCHR:	return S_CHARDEV;		// Maus, seriell angeschlossene Geräte, etc.
-		case S_IFDIR:	return S_DIR;			// Ordner
-		case S_IFIFO:	return S_FIFO;
-		case S_IFLNK:	return S_SYMLNK;		// symbolischer Link
-		case S_IFREG:	return S_FILE;			// normale Datei
-		case S_IFSOCK:	return S_SOCK;  		// Socket
-		default:		return EXIT_FAILURE;	// nicht bekannt
-    }
-}
+	if (std::filesystem::is_regular_file(s))
+		return S_FILE;
+	else if (std::filesystem::is_directory(s))
+		return S_DIR;
+	else if (std::filesystem::is_symlink(s))
+		return S_SYMLNK;
+	else if (std::filesystem::is_block_file(s))
+		return S_DEVICE;
+	else if (std::filesystem::is_character_file(s))
+		return S_CHARDEV;
+	else if (std::filesystem::is_fifo(s))
+		return S_FIFO;
+	else if (std::filesystem::is_socket(s))
+		return S_SOCK;
+	else if (std::filesystem::is_other(s))
+		return S_OTHER;
+	else
+        throw std::runtime_error("[stat] Type of " + filepath.str() + " unknown."); // unknown type
+} 	
+
 
 char* mml::Unix::getHost () {
 	char hostname[HOST_NAME_MAX];
@@ -156,6 +160,14 @@ pid_t mml::Unix::get_pid_by_process_name(const std::string process, int start) {
 	return 0;
 }
 
+bool mml::Unix::isdir(mml::string path) {
+	return filetype(path.str()) == S_DIR;
+}
+
+bool mml::Unix::isfile(mml::string path) {
+	return filetype(path.str()) == S_FILE;
+}
+
 bool mml::Unix::ismounted(std::string mountpoint) {
     FILE *fp;
     struct mntent mnt;
@@ -183,6 +195,10 @@ bool mml::Unix::ismounted(std::string mountpoint) {
     endmntent(fp);
 
     return false;
+}
+
+bool mml::Unix::issymlink(mml::string path) {
+	return filetype(path.str()) == S_SYMLNK;
 }
 
 

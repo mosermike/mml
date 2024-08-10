@@ -119,7 +119,7 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 	}
 
 	// If file is not a directory, only add path and return it (it must exists as checked before)
-	if (mml::Unix::filetype(path) != S_DIR) {
+	if (!mml::Unix::isdir(path)) {
 		LS.push_back(path);
 		return LS;
 	}
@@ -148,7 +148,7 @@ std::vector<std::string> mml::string::ls(std::string name_include, std::string n
 		}
 
 		// Object is a directory
-		if (mml::Unix::filetype(temp1.str()) == S_DIR) {
+		if (mml::Unix::isdir(temp1)) {
 			temp1 += "/";
 			if (save_dirs) {
 				temp2 = temp1.replace(path,""); // Check if name_include exists in the part after the path
@@ -205,7 +205,7 @@ bool mml::string::mkdir_p() noexcept {
 	pos = temp.find("/",1);
 	
 	// Check if the directory exists already to save computing time
-	if (mml::Unix::exist(value) && mml::Unix::filetype(value) == S_DIR)
+	if (mml::Unix::exist(value) && mml::Unix::isdir(value))
 		return 0;
 	
 	do{
@@ -213,7 +213,7 @@ bool mml::string::mkdir_p() noexcept {
 		temp = temp.substr(pos,temp.size()-pos);
 
 		// Check if the dir exists as a non-directory, otherwise create it
-		if(mml::Unix::exist(make_dir.c_str()) && mml::Unix::filetype( make_dir ) != S_DIR)
+		if(mml::Unix::exist(make_dir.c_str()) && !mml::Unix::isdir( make_dir ))
 			mml::shell::error("[mkdir_p] Cannot create directory " + make_dir + " as it already exists as a non-directory!");
 		else
 			mkdir(make_dir.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH | S_IWOTH);
@@ -230,7 +230,7 @@ bool mml::string::mkdir_p() noexcept {
 }
 
 bool mml::string::remove() const noexcept {
-	return mml::file::filetype(this->value) == S_FILE ? std::remove(this->value.c_str()) : false;
+	return mml::Unix::isfile(this->value) ? std::remove(this->value.c_str()) : false;
 	
 }
 
