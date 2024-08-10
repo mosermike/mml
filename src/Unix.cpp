@@ -1,7 +1,7 @@
 /**
  * @author Mike Moser
  * 
- * @name functions.cpp
+ * @name Unix.cpp
  * @brief Different Unix based functions
  * 
 */
@@ -28,7 +28,6 @@
 #include <mntent.h>
 #include <cstring>
 
-#include "mml.hpp"
 #include "mml/file.hpp"
 #include "mml/Unix.hpp"
 
