@@ -176,6 +176,26 @@ namespace mml{
 		uint32_t cifs(std::string src, std::string dst , mml::string fstype, std::string user , std::string pass);
 
 		/**
+		 * @brief Checks if a path exists
+		 * 
+		 * @param string Path(s) to be checked
+		 * @return true, if all exists
+		 * @author Mike
+		 */
+		bool exist(std::string path);
+	
+		/**
+		 * @brief Checks if all paths exists
+		 * 
+		 * @param string Path(s) to be checked
+		 * @return true, if all exists
+		 * @author Mike
+		 */
+		template<typename... Args> bool exist(const Args&... args) noexcept {
+    		return (... && exist(mml::to_string(args).str()));
+		}
+
+		/**
 		 * @brief Determine UID of a file
 		 * @param char* Path to file
 		 * @return UID Number
@@ -191,17 +211,6 @@ namespace mml{
 		gid_t getGroupIdByName(const char *name);
 		
 		/**
-		 * @brief Checks if a path exists
-		 * 
-		 * @param string Path(s) to be checked
-		 * @return true, if all exists
-		 * @author Mike
-		 */
-		bool exist(std::string path);
-		bool exist(std::string path1, std::string path2);
-		bool exist(std::string path1, std::string path2, std::string path3);
-		
-		/**
 		 * @brief Determine the type of an object
 		 * @param string Filepath
 		 * @return number corresponding to the type of the object
@@ -213,8 +222,9 @@ namespace mml{
 		 * -  8: normal file
 		 * - 10: symbolic link
 		 * - 12: Socket
+		 * - 14: other
 		*/
-		int32_t  filetype(std::string filepath);
+		int32_t filetype(mml::string filepath);
 
 		/**
 		 * @brief Returns the name of a PID
@@ -232,12 +242,33 @@ namespace mml{
 		pid_t get_pid_by_process_name(const std::string process, int start = 0);
 		
 		/**
+		 * @brief Checks if a path is a directory
+		 * @param path Path to the object to be tested
+		 * @return true if a directory
+		 */
+		bool isdir(mml::string path);
+
+		/**
+		 * @brief Checks if a path is a file
+		 * @param path Path to the object to be tested
+		 * @return true if a file
+		 */
+		bool isfile(mml::string path);
+
+		/**
 		 * @brief Checks if a mount point is mounted
 		 * @param mountpoint Path to the mount point
 		 * @return true if mounted
 		 * @throw runtime_error if setmtent did not work properly
 		 */
 		bool ismounted(std::string mountpoint);
+
+		/**
+		 * @brief Checks if a path is a symlink
+		 * @param path Path to the object to be tested
+		 * @return true if a symlink
+		 */
+		bool issymlink(mml::string path);
 
 		/**
 		 * @brief Create a directory

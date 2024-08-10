@@ -185,26 +185,6 @@ bool mml::file::equal(std::string src, std::string dst){
 	
 }
 
-int32_t mml::file::filetype(std::string filepath){
-	struct stat sb;
-	
-	if (stat(filepath.c_str(), &sb) == -1) {
-		throw std::runtime_error("[stat] No such file or directory (" + filepath + ")");
-		exit(EXIT_FAILURE);
-	}
-
-    switch (sb.st_mode & S_IFMT) {
-		case S_IFBLK:	return S_DEVICE;		// device or partition
-		case S_IFCHR:	return S_CHARDEV;		// mouse, serial connected device
-		case S_IFDIR:	return S_DIR;			// directory
-		case S_IFIFO:	return S_FIFO;
-		case S_IFLNK:	return S_SYMLNK;		// symbolic link
-		case S_IFREG:	return S_FILE;			// normall file
-		case S_IFSOCK:	return S_SOCK;  		// Socket
-		default:		throw std::runtime_error("[stat] Type of " + filepath + " unknown."); // unknown type
-    }
-}
-
 std::size_t mml::file::num_lines(std::string path) {
 	
 	int num = 0;
@@ -260,8 +240,13 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 		actual_src_dir = src;
 		actual_dst_dir = dst;
 
-		// Checking the file sizes and compares it if the file already exists, it asks how to proceed
-        if(mml::file::filetype(actual_src_dir.getValue()) == S_FILE){
+		// Copying a symlink
+		if(mml::Unix::issymlink(actual_src_dir.str())) {
+			std::filesystem::copy_symlink(actual_src_dir.str(), actual_dst_dir.str());
+			return 0;
+		}
+
+        if(mml::Unix::isfile(actual_src_dir.str())) {
         	if(actual_dst_dir[-1] == '/'){
         		// Search last part from source to determine the name of the goal path
         		temp_size = actual_src_dir.rfind('/',std::string::npos,0);
@@ -272,7 +257,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
         		}
         		actual_dst_dir = dst;
         	}
-        	else if(mml::Unix::exist(dst.str()) && mml::file::filetype(dst.str()) == S_DIR) {
+        	else if(mml::Unix::exist(dst.str()) && mml::Unix::isdir(dst.str())) {
         		throw std::logic_error("[copy] Destination file is a directory");
         	}
 
@@ -324,7 +309,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			temp_size = dst.rfind('/',std::string::npos,0);
 			if(!mml::Unix::exist(dst.substr(0,temp_size).str()))
             	dst.substr(0,temp_size).mkdir_p();
-			else if(mml::file::filetype(dst.substr(0,temp_size).str()) != S_DIR)
+			else if(!mml::Unix::isdir(dst.substr(0,temp_size).str()))
 				throw std::runtime_error("[copy] Last to-be directory is not a directory!");
 
 			if(verbose)	// verbose Ausgabe
@@ -333,8 +318,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			fileSize = mml::file::size(src.str());
 
 			mml::file::byteCopy(actual_src_dir.str(),actual_dst_dir.str(),blocksize,progress);			
-
- 			// **********************************************************
+			// **********************************************************
  			// *	Determination of the width to print out [ ok ]		*
  			// **********************************************************
 			if(verbose){	// verbose Ausgabe
@@ -414,7 +398,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	
 		
 	// Make the destination
-	if(mml::Unix::exist(dst.str()) && mml::file::filetype(dst.str()) == S_FILE) {
+	if(mml::Unix::exist(dst.str()) && mml::Unix::isfile(dst)) {
 	    throw std::logic_error("[copy] Destination exists as a file");
 	}
 	else
@@ -594,6 +578,8 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 		}
 		
 		copied_files++; // One file will be copied
+
+
 		// Copy stuff
 		if(verbose)	// verbose Ausgabe
 			std::cout << "[" << copied_files_print << "/" << num_of_files << "] " << goal_src << " -> " << goal_dst;
@@ -603,11 +589,20 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 		
 		mml_actual_file = goal_dst;
 		
-		mml::file::byteCopy(goal_src.str(),goal_dst.str(),blocksize,progress);
+		// Copying the symlink or copying a file
+		if(mml::Unix::issymlink(goal_src)) {
+			// if file exists, it was decided before to overwrite it. Before it can be copied, it must be deleted
+			if(mml::Unix::exist(goal_dst.str())) {
+				std::filesystem::remove_all(goal_dst.str());
+			}
+			std::filesystem::copy_symlink(goal_src.str(),goal_dst.str());
+		}
+		else
+			mml::file::byteCopy(goal_src.str(),goal_dst.str(),blocksize,progress);
 		
 		mml_actual_file = "";
 		
-		// Korrekturfaktor für Ausgabe bei Dateigröße
+		// Correction factor for printing out the filesize
 		if(fileSize > _1G)
 			filesize_correct = std::to_string((int) fileSize/_1G).size();
 		else if(fileSize > _1M)
@@ -668,9 +663,6 @@ int mml::file::Program_exist( std::string program ){
 	std::vector<std::string>	files			= {};
 	std::size_t					pos				= path_string.find(":");
 	
-	// Wegen Speicherzugriffsfehler, Vektor sicher leer:
-	path.del();
-	
 	do{
 		path.push_back(path_string.substr(0, pos));
 		
@@ -682,7 +674,7 @@ int mml::file::Program_exist( std::string program ){
 	} while(pos < std::string::npos);
 	
 	for(uint32_t i = 0; i < path.size(); i++){
-		files = path[i].ls("","");
+		files = path[i].ls("","", false, true);
 	
 		for(uint32_t a = 0; a < files.size(); a++){
 			if(files[a] == program)
@@ -746,8 +738,8 @@ std::size_t mml::file::size(const std::string& filename) {
 	// if file is not a file  or does not exists => return 0
     if(!mml::Unix::exist(filename))
 		throw std::runtime_error("[size] File " + filename + " does not exist.");
-	if (mml::Unix::filetype(filename) != S_FILE) {
-		std::cout << "[size] " << filename << " is not a file => Return size=0" << std::endl;
+	
+	if (!mml::Unix::isfile(filename)) {
         return 0;
 	}
     
