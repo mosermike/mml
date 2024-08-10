@@ -65,7 +65,7 @@ namespace mml {
 			*/
 			template<typename templ> friend Threads& operator<< (Threads& threads, const templ &value) noexcept {
 				std::lock_guard<std::mutex> guard(threads.mtx);
-				std::cout << value;
+				std::cout << value << std::flush;
 				return threads;
 			}
 

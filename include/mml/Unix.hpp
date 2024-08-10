@@ -232,6 +232,14 @@ namespace mml{
 		pid_t get_pid_by_process_name(const std::string process, int start = 0);
 		
 		/**
+		 * @brief Checks if a mount point is mounted
+		 * @param mountpoint Path to the mount point
+		 * @return true if mounted
+		 * @throw runtime_error if setmtent did not work properly
+		 */
+		bool ismounted(std::string mountpoint);
+
+		/**
 		 * @brief Create a directory
 		 * @return true, if successfull
 		 * @throw runtime_error : if directory already exists as a non-directory
@@ -242,11 +250,12 @@ namespace mml{
 		 * @brief mount a directory with password input
 		 * @param mountpath Path to the partition which should be mounted
 		 * @param mountpoint where the partition should be mounted
-		 * @param controlpoint diretory in the mounted partition to check if it is successfully mounted
 		 * @param user Username 
-		 * @return Password
+		 * @param pass1 Password
+		 * @param fstype 
+		 * @return true if mounted
 		*/
-		std::string mount_Dir(std::string mountpath, string mountpoint, string controlpoint, std::string user, std::string pass1, const char* fstype, int count);
+		bool mount(std::string mountpath, string mountpoint, std::string user, std::string pass1, const char* fstype);
 	
 		/**
 		 * @brief Check permissions
@@ -284,12 +293,11 @@ namespace mml{
 
 		/**
 		 * @brief Unmount a partition
-		 * 
-		 * @param args Arguments passed to the function
-		 * @param mountpath String, where the directory is mounted
+		 * @param mountpoint String, where the directory is mounted
+		 * @param force Force the unmount
 		 * @return bool
 		*/
-		bool unmount_dir(std::string mount_dir, std::string controlpoint = "");
+		bool unmount(std::string mountpoint, bool force);
 	}
 }
 

@@ -2,7 +2,7 @@
  * @author Mike Moser
  * 
  * @name functions.cpp
- * Enthält verschiedene Funktionen
+ * @brief Different Unix based functions
  * 
 */
 
@@ -24,6 +24,9 @@
 #include <sys/mount.h>
 #include <thread>
 #include <chrono>
+#include <system_error>
+#include <mntent.h>
+#include <cstring>
 
 #include "mml.hpp"
 #include "mml/file.hpp"
@@ -32,11 +35,10 @@
 mml::string mml_pass;
 mml::string mml_mount_name;
 
-uid_t mml::Unix::getUserIdByName(const char *name)
-{
+uid_t mml::Unix::getUserIdByName(const char *name) {
     struct passwd *pwd = getpwnam(name); /* don't free, see getpwnam() for details */
     if(pwd == NULL) {
-		std::cout << "Failed to get userId from groupname : " <<  name;
+		throw std::runtime_error(("Failed to get userId from groupname : " + (std::string) name));
 	} 
     return pwd->pw_uid;
 }
@@ -45,7 +47,7 @@ gid_t mml::Unix::getGroupIdByName(const char *name)
 {
     struct group *grp = getgrnam(name); /* don't free, see getgrnam() for details */
     if(grp == NULL) {
-        std::cout << "Failed to get groupId from groupname : " <<  name;
+        throw std::runtime_error(("Failed to get groupId from groupname : " + (std::string)  name).c_str());
     } 
     return grp->gr_gid;
 	
@@ -55,8 +57,8 @@ uid_t mml::Unix::getFileUID (const char* file){
 	struct stat sb;
 	
 	if (stat(file, &sb) == -1) {
-		perror("stat");
-		exit(EXIT_FAILURE);
+        std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
+        throw std::filesystem::filesystem_error("File" + (std::string) file + " does not exist", ec);
 	}
 	return sb.st_uid;
 }
@@ -100,9 +102,8 @@ int32_t mml::Unix::filetype(std::string filepath){
 	struct stat sb;
 	
 	if (stat(filepath.c_str(), &sb) == -1) {
-		//perror("stat");
-		std::cout << "[fileType] No such file or directory (" << filepath << ")" << std::endl;
-		exit(EXIT_FAILURE);
+		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
+        throw std::filesystem::filesystem_error("[filetype] File" + filepath + " does not exist", ec);
 	}
 
     switch (sb.st_mode & S_IFMT) {
@@ -151,13 +152,43 @@ pid_t mml::Unix::get_pid_by_process_name(const std::string process, int start) {
 		}
 	}
 	
-	mml::shell::warn("[PID] No PID found to the process '" + process + "'");
+	throw std::runtime_error("[PID] No PID found to the process '" + process + "'");
 	return 0;
 }
 
+bool mml::Unix::ismounted(std::string mountpoint) {
+    FILE *fp;
+    struct mntent mnt;
+    char buf[1024];
+
+	// Check if directory exists
+	mml::Unix::exist(mountpoint);
+
+    // Open the file containing mount information
+    fp = setmntent("/proc/mounts", "r");
+    if (fp == NULL) {
+        throw std::runtime_error("[ismounted] setmtent did not work");
+    }
+
+    // Loop through each entry in the file
+    while (getmntent_r(fp, &mnt, buf, sizeof(buf)) != NULL) {
+        if (strcmp(mnt.mnt_dir, mountpoint.c_str()) == 0) {
+            // Found the mount point in the list
+            endmntent(fp);
+            return true;
+        }
+    }
+
+    // Close the file pointer
+    endmntent(fp);
+
+    return false;
+}
+
+
 bool mml::Unix::mkdir_p(std::string value) {
 	mml::string make_dir = "";	// string to create the directories
-	mml::string temp=value;					// Save the value to create directories step by step
+	mml::string temp=value;		// Save the value to create directories step by step
 	std::size_t pos;			// Position of '/'
 	pos = temp.find("/",1);
 
@@ -181,31 +212,26 @@ bool mml::Unix::mkdir_p(std::string value) {
 
 	// Now create the last directory
 	if(!mml::Unix::exist(value))
-				mkdir(value.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH | S_IWOTH);
+		mkdir(value.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH | S_IWOTH);
 
 	return mml::Unix::exist(value);
 	
 }
 
-
-std::string mml::Unix::mount_Dir (std::string mountpath, mml::string mountpoint, mml::string controlpoint, std::string user, std::string pass1, const char* fstype, int count )
+bool mml::Unix::mount(std::string mountpath, mml::string mountpoint, std::string user, std::string pass1, const char* fstype)
 {
 	
 	std::string		dir 				= mountpath;
-	std::string 	mml_mount_name		= mountpoint.str(); // nur zur Ausgabe von Mount the dev...
+	std::string 	mml_mount_name		= mountpoint.str(); // nfor printing the mount name
 	int				mount_return		= 0;
 	
+	// Make sure that this function is executed as the root
 	mml::check_root("mount_dir");
 	
-	for(std::size_t i = mml_mount_name.size(); i < mml_mount_name.size();i--) {
-		if(mml_mount_name[i] == '/') {
-			mml_mount_name = mml_mount_name.substr(i+1);
-			break;
-		}
-	}
+	// Get the name of the last directory
+	mml_mount_name = mountpoint.substr(mountpoint.rfind('/')+1).str();
    
-	std::cout << "Mount the device "<< mml_mount_name << std::endl;
-	
+	// Create the mount point if it does not exist
 	if(!mml::Unix::exist(mountpoint.str())) {
 		if(mountpoint[mountpoint.size()-1] != '/')
 			mountpoint += "/";
@@ -213,33 +239,51 @@ std::string mml::Unix::mount_Dir (std::string mountpath, mml::string mountpoint,
 	
 	}
 
-	if(mml::Unix::exist(controlpoint.str()) && !(controlpoint == "")) {
-		return pass1;
+	std::cout << "Mount the device "<< mml_mount_name << std::endl;
+	
+	
+
+	if(mml::Unix::ismounted(mountpoint.c_str())) {
+		std::cout << mountpoint << " is already mounted." << std::endl;
+		return false;
 	}
 
-	mount_return = cifs(mountpath, mountpoint.c_str(),fstype,user.c_str() ,pass1.c_str());
-	
-	if (mount_return != 0 && count < 2 && !mml::Unix::exist(controlpoint.str())){
-	
-		std::cout << "This did not work, try again!" << std::endl;
+	int count = 0;
+
+	do {
+		//mount_return = c#ifs(mountpath, mountpoint.c_str(),fstype,user.c_str() ,pass1.c_str());
+		std::string data = "";
+		if(user != "")
+			data = data + "username=" + user + ",";
+		if(mml_pass != "")
+			data = data + "password=" + pass1 + ",";
 		
+		data += "gid=1000,uid=1000";
+		
+		if(((mml::string) fstype).exist("cifs"))
+			data += ",vers=3.0";
+		
+		mount(mountpath.c_str(), mountpoint.c_str(),fstype,0,data.c_str());
+		
+		if (!mml::Unix::ismounted(mountpoint.str())){
+		
+			std::cout << "This did not work, try again!" << std::endl;
+			
+			std::this_thread::sleep_for(std::chrono::milliseconds(1));
+			
+			pass1 = shell::password("[cifs] Password for device ",mml_mount_name);
+		}	
 		count++;
-		std::this_thread::sleep_for(std::chrono::milliseconds(1));
-		
-		mount_Dir(mountpath, mountpoint, controlpoint, user, pass1 = shell::password("[cifs] Password for device ",mml_mount_name), fstype, count);
-	}
+	} while (count < 3 && !mml::Unix::ismounted(mountpoint.str()));
 	
-	if (mount_return != 0 && count == 2 && !mml::Unix::exist(controlpoint.str())){
-	
-		count ++;
-		
+	if (!mml::Unix::ismounted(mountpoint.str())){		
 		std::cout << "mount: 3 incorrect password attempts" << std::endl;
 		exit(EXIT_FAILURE);
 	}
-
+	
 	count = 0;
 	
-	return pass1;
+	return mml::Unix::ismounted(mountpoint.str());
 }
 
 mml::string mml::Unix::perms(std::string path) {
@@ -334,23 +378,19 @@ bool mml::Unix::set_date(std::string src_file, std::string dst_file, bool verbos
 }
 
 
-bool mml::Unix::unmount_dir(std::string mount_dir, std::string controlpoint){
-	std::string dir = mount_dir;
-	std::size_t 	pos	= 0;
-	bool				return_unmount = false;
+bool mml::Unix::unmount(std::string mountpoint, bool force){
+	std::size_t pos	= 0;
+	bool return_unmount = false;
 	
-	do{
-		pos = dir.find("/");
-		dir = dir.substr(pos+1);
-	} while(pos < std::string::npos);
-	
-	std::cout << "Unmount the device: "<< dir << std::endl;
+	std::cout << "Unmount the device: "<< mountpoint.substr(mountpoint.rfind('/')) << std::endl;
 
-	do {
-		return_unmount = umount2(mount_dir.c_str(),MNT_FORCE);
-		if(controlpoint == "")
-			break;
-	} while(mml::Unix::exist(controlpoint));
+	if(force) {
+		do {
+			return_unmount = umount2(mountpoint.c_str(),MNT_FORCE);
+		} while(mml::Unix::ismounted(mountpoint));
+	}
+	else
+		return_unmount = umount(mountpoint.c_str());
 	
 	return return_unmount;
 }

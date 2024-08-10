@@ -139,12 +139,6 @@ double mml::round(double number, uint16_t digit) noexcept {
         return ((int) temp)/std::pow(10,digit);
 }
 
-
-
-
-
-
-
 std::string mml::declare_month(int month_nr) noexcept {
 	switch(month_nr) {
 		case(1) :	return "January";

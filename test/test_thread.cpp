@@ -83,7 +83,7 @@ int main() {
 	// Parameters
 	const int n = std::thread::hardware_concurrency();  // Number of threads (maximum of the hardware)
     const int rangeStart = 1;
-    const int rangeEnd = 12500000*8; // Range for prime numbers per thread
+    const int rangeEnd = 12500000; // Range for prime numbers per thread
 	const int rangePerThread = rangeEnd/n;
 
 	std::cout << "Start Example Task" << std::endl;
@@ -133,8 +133,8 @@ int main() {
 	for (int i : results)
 		res += i;
 	
-	assert_msg(res == 5761455, ("Found " + std::to_string(res) + " primes in range " + std::to_string(rangeStart) +
-	" to " + std::to_string(rangeEnd) + " but 5761455 were expected."));
+	assert_msg(res == 818703, ("Found " + std::to_string(res) + " primes in range " + std::to_string(rangeStart) +
+	" to " + std::to_string(rangeEnd) + " but 818703 were expected."));
 
 	std::cout << "Found " << res << " primes in range " << rangeStart << " to " << rangeEnd << " as expected." << std::endl;
 	
