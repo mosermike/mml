@@ -84,16 +84,28 @@ namespace mml{
 		typename std::vector<T>::iterator begin() noexcept {return vec.begin();}
 
 		/**
+		* @brief Constant Iterator to the beginning of the vector
+		* @return const iterator
+		*/
+		typename std::vector<T>::const_iterator begin() const noexcept {return vec.begin();}
+
+		/**
 		* @brief Checks whether the vector is empty
-		* @return iteratur
+		* @return bool
 		*/
 		bool empty() const noexcept {return this->vec.empty();}
 
 		/**
-		* @brief iterator to the end of the vector
+		* @brief Iterator to the end of the vector
 		* @return iterator
 		*/
 		typename std::vector<T>::iterator end() noexcept {return vec.end();}
+
+		/**
+		* @brief Const. iterator to the end of the vector
+		* @return iterator
+		*/
+		typename std::vector<T>::const_iterator end() const noexcept {return vec.end();}
 		
 		/**
 		 * @brief Erase an element from the vector
