@@ -47,35 +47,6 @@ namespace mml{
 		 * @return this instance
 		*/
 		vector(std::initializer_list<T> initList) : vec(initList) {}	
-
-		/**
-		 * @brief Assign value with equal sign
-		 * @param temp Vector with values
-		 * @return reference to this instance
-		*/
-		vector& operator=(const std::vector<T>& temp) noexcept {vec = temp; return *this;}
-		vector& operator=(const mml::vector<T>& temp) noexcept {vec = temp.vec; return *this;}
-		
-		/**
-		 * @brief Returns a value at a specific index
-		 * @param index Index to be returned
-		 * @return value at this index
-		 * @throw out_of_range : if index not in range
-		*/
-		T &operator[](int index) {
-			if (index < 0)
-				index = vec.size() + index;
-			if(abs(index) > vec.size())	
-				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
-			return vec[index];
-		}
-		const T &operator[](int index) const {
-			if (index < 0)
-				index = vec.size() + index;
-			if(abs(index) > vec.size())	
-				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
-			return vec[index];
-		}
 		
 		/**
 		* @brief iterator to the beginning of the vector
@@ -88,108 +59,6 @@ namespace mml{
 		* @return const iterator
 		*/
 		typename std::vector<T>::const_iterator begin() const noexcept {return vec.begin();}
-
-		/**
-		* @brief Checks whether the vector is empty
-		* @return bool
-		*/
-		bool empty() const noexcept {return this->vec.empty();}
-
-		/**
-		* @brief Iterator to the end of the vector
-		* @return iterator
-		*/
-		typename std::vector<T>::iterator end() noexcept {return vec.end();}
-
-		/**
-		* @brief Const. iterator to the end of the vector
-		* @return iterator
-		*/
-		typename std::vector<T>::const_iterator end() const noexcept {return vec.end();}
-		
-		/**
-		 * @brief Erase an element from the vector
-		 * @param position Position to be erase
-		 * @return None
-		 * @throw out_of_range if position >= vector.size()
-		*/
-		void erase(size_t position) {
-			if (position >= vec.size())
-				throw std::out_of_range("[vector::erase] Position " + std::to_string(position) + " out of range");
-			vec.erase(vec.begin() + position);
-		}
-
-		/**
-		 * @brief Erase a range from the vector
-		 * @param start Start position
-		 * @param end End position
-		 * @return None
-		 * @throw out_of_range : if start > end || end > vector.size()
-		*/
-		void erase(size_t start, size_t end) {
-			if (start > end || end > vec.size()) {
-				throw std::out_of_range("[vector::erase] Invalid range [" + std::to_string(start) + "," + std::to_string(end) + "]");
-			}
-			vec.erase(vec.begin() + start, vec.begin() + end);
-		}
-
-		/**
-		 * @brief Insert a value at a specific position
-		 * @param position The position where the value is put
-		 * @param val Value
-		 * @return Iterator
-		*/
-		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) noexcept {return vec.insert(position,val);}
-
-		/**
-		 * @brief Removes the last entry
-		 * @return None
-		*/
-		void pop_back() noexcept {
-			vec.pop_back();
-		}
-
-		/**
-		 * @brief Adds an element at the end
-		 * @param value to e added
-		*/
-		void push_back(T value) noexcept {
-			vec.push_back(value);
-		}
-
-		/**
-		 * @brief Size of the vector
-		 * @return Size of the vector
-		*/
-		std::size_t size() const noexcept {return vec.size();}
-			
-		/**
-		 * @brief Print the vector
-		 * @param out Output where it is written
-		 * @param Vec Vector which is written
-		 * @return output stream
-		*/
-		friend std::ostream& operator<< (std::ostream &out, const vector<T> &Vec) noexcept {		// Ausgabe über std::cout
-			for(T i : Vec.vec)
-				out << i << " ";
-			
-			return out;
-		}
-
-		/**
-		 * @brief Writes a value into the vector
-		 * @param in where it should be written in
-		 * @param v what should be written in
-		 * @return output stream
-		 */
-		friend std::istream& operator>> (std::istream &in, const vector<T>& v) noexcept {
-			T temp;
-			if (in >> temp) {
-            	v.vec.push_back(temp);
-        	}
-			return in;
-		}
-		// Friend function to overload the operator>>
     
 		/**
 		 * Count how many entries are equal to a value
@@ -240,6 +109,50 @@ namespace mml{
 			return this->vec;
 		}
 
+		/**
+		* @brief Checks whether the vector is empty
+		* @return bool
+		*/
+		bool empty() const noexcept {return this->vec.empty();}
+
+		/**
+		* @brief Iterator to the end of the vector
+		* @return iterator
+		*/
+		typename std::vector<T>::iterator end() noexcept {return vec.end();}
+
+		/**
+		* @brief Const. iterator to the end of the vector
+		* @return iterator
+		*/
+		typename std::vector<T>::const_iterator end() const noexcept {return vec.end();}
+		
+		/**
+		 * @brief Erase an element from the vector
+		 * @param position Position to be erase
+		 * @return None
+		 * @throw out_of_range if position >= vector.size()
+		*/
+		void erase(size_t position) {
+			if (position >= vec.size())
+				throw std::out_of_range("[vector::erase] Position " + std::to_string(position) + " out of range");
+			vec.erase(vec.begin() + position);
+		}
+
+		/**
+		 * @brief Erase a range from the vector
+		 * @param start Start position
+		 * @param end End position
+		 * @return None
+		 * @throw out_of_range : if start > end || end > vector.size()
+		*/
+		void erase(size_t start, size_t end) {
+			if (start > end || end > vec.size()) {
+				throw std::out_of_range("[vector::erase] Invalid range [" + std::to_string(start) + "," + std::to_string(end) + "]");
+			}
+			vec.erase(vec.begin() + start, vec.begin() + end);
+		}
+
 	private:
 		/**
 		 * @brief Check if a string exists in the vector
@@ -274,6 +187,14 @@ namespace mml{
 		}
 
 		/**
+		 * @brief Insert a value at a specific position
+		 * @param position The position where the value is put
+		 * @param val Value
+		 * @return Iterator
+		*/
+		typename std::vector<T>::iterator insert (const typename std::vector<T>::iterator position, const T& val) noexcept {return vec.insert(position,val);}
+
+		/**
 		 * @brief Write values into a logfile
 		 * @param logpath Path of the logfile
 		 * @param newline Print a newline
@@ -299,25 +220,51 @@ namespace mml{
 
 			// Print sth at the end plus a new line
 			log.cout<mml::string>(last, true);
+		}	
+		
+		/**
+		 * @brief Assign value with equal sign
+		 * @param temp Vector with values
+		 * @return reference to this instance
+		*/
+		vector& operator=(const std::vector<T>& temp) noexcept {vec = temp; return *this;}
+		vector& operator=(const mml::vector<T>& temp) noexcept {vec = temp.vec; return *this;}
+		
+		/**
+		 * @brief Returns a value at a specific index
+		 * @param index Index to be returned
+		 * @return value at this index
+		 * @throw out_of_range : if index not in range
+		*/
+		T &operator[](int index) {
+			if (index < 0)
+				index = vec.size() + index;
+			if(abs(index) > vec.size())	
+				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
+			return vec[index];
+		}
+		const T &operator[](int index) const {
+			if (index < 0)
+				index = vec.size() + index;
+			if(abs(index) > vec.size())	
+				throw std::out_of_range("[vector[]] Out of range for index " + std::to_string(index));
+			return vec[index];
 		}
 
 		/**
-		* @brief Replace specific elements with another element
-		* @param Old Value to be replaced
-		* @param New New value
-		* @return Vector with the replaced values
+		 * @brief Check if vectors are the same
+		 * @param value Vector to be checked
+		 * @return true if the same
 		*/
-		std::vector<T> replace(T Old, T New) noexcept {
-			std::vector<T> temp = vec;
-		
-			for(size_t i = 0; i < temp.size(); i++) {
-				if(temp[i] == Old)
-					temp[i] = New;
-			}
-			return temp;
-		}
-			
-			
+		bool operator==(const mml::vector<T> &vec) const noexcept {return this->vec==vec.vec;}
+
+		/**
+		 * @brief Check if vectors are not the same
+		 * @param value Vector to be checked
+		 * @return true if not the same
+		*/
+		bool operator!=(const std::vector<T> &vec) const noexcept {return this->vec!=vec.vec;}
+
 		/**
 		 * @brief Scalarmultiplication
 		 * @param value Value to be multiplied
@@ -384,52 +331,6 @@ namespace mml{
 			for(uint32_t i = 0; i < vec.size(); i++)
 				vec[i] += value;
 			return *this;
-		}
-
-		/**
-		 * @brief Replace the vector with a new vector
-		 * @param Vec Vector
-		 */
-		void set(std::vector<T> Vec) noexcept {
-			vec = Vec;
-		}
-
-		/**
-		 * @brief Sort the vector
-		 * @return Return the sorted vector
-		 */
-		std::vector<T> sort() {std::vector<T> temp = vec; return std::sort(temp.begin(), temp.end());}
-		
-		/**
-		 * @brief Determine the sum of the vector
-		 * @return Sum of the vector
-		 * @throw logic_error : if vector is empty or if template is boolean
-		 */
-		T sum() const {
-			if(vec.empty())
-				throw std::logic_error("[sum] Vector empty");
-			
-			 if constexpr (std::is_same<T, bool>::value)
-        		throw std::logic_error("[sum] Summation for the type bool is not defined");
-
-			T temp; // Temp variable which is set to 0 
-
-			// Set temp as 0 if T is a number otherwise set it to a string ""
-			if constexpr (std::is_arithmetic_v<T>) {
-				std::string t = "0";
-				std::istringstream iss(t);
-				iss >> temp;
-			}
-			else {
-				temp = "";
-			}
-			
-			
-
-			for(std::size_t i = 0; i < vec.size(); i++) {
-				temp += vec[i];
-			}
-			return temp;
 		}
 
 		/**
@@ -501,8 +402,117 @@ namespace mml{
 
 			return *this;
 		}
+
+		/**
+		 * @brief Print the vector
+		 * @param out Output where it is written
+		 * @param Vec Vector which is written
+		 * @return output stream
+		*/
+		friend std::ostream& operator<< (std::ostream &out, const vector<T> &Vec) noexcept {		// Ausgabe über std::cout
+			for(T i : Vec.vec)
+				out << i << " ";
+			
+			return out;
+		}
+
+		/**
+		 * @brief Writes a value into the vector
+		 * @param in where it should be written in
+		 * @param v what should be written in
+		 * @return output stream
+		 */
+		friend std::istream& operator>> (std::istream &in, const vector<T>& v) noexcept {
+			T temp;
+			if (in >> temp) {
+            	v.vec.push_back(temp);
+        	}
+			return in;
+		}
+
+		/**
+		 * @brief Removes the last entry
+		 * @return None
+		*/
+		void pop_back() noexcept {
+			vec.pop_back();
+		}
+
+		/**
+		 * @brief Adds an element at the end
+		 * @param value to e added
+		*/
+		void push_back(T value) noexcept {
+			vec.push_back(value);
+		}
+
+		/**
+		* @brief Replace specific elements with another element
+		* @param Old Value to be replaced
+		* @param New New value
+		* @return Vector with the replaced values
+		*/
+		std::vector<T> replace(T Old, T New) noexcept {
+			std::vector<T> temp = vec;
+		
+			for(size_t i = 0; i < temp.size(); i++) {
+				if(temp[i] == Old)
+					temp[i] = New;
+			}
+			return temp;
+		}
+		
+		/**
+		 * @brief Replace the vector with a new vector
+		 * @param Vec Vector
+		 */
+		void set(std::vector<T> Vec) noexcept {
+			vec = Vec;
+		}
+
+		/**
+		 * @brief Size of the vector
+		 * @return Size of the vector
+		*/
+		std::size_t size() const noexcept {return vec.size();}
+
+		/**
+		 * @brief Sort the vector
+		 * @return Return the sorted vector
+		 */
+		std::vector<T> sort() {std::vector<T> temp = vec; return std::sort(temp.begin(), temp.end());}
+		
+		/**
+		 * @brief Determine the sum of the vector
+		 * @return Sum of the vector
+		 * @throw logic_error : if vector is empty or if template is boolean
+		 */
+		T sum() const {
+			if(vec.empty())
+				throw std::logic_error("[sum] Vector empty");
+			
+			 if constexpr (std::is_same<T, bool>::value)
+        		throw std::logic_error("[sum] Summation for the type bool is not defined");
+
+			T temp; // Temp variable which is set to 0 
+
+			// Set temp as 0 if T is a number otherwise set it to a string ""
+			if constexpr (std::is_arithmetic_v<T>) {
+				std::string t = "0";
+				std::istringstream iss(t);
+				iss >> temp;
+			}
+			else {
+				temp = "";
+			}
+			
 			
 
+			for(std::size_t i = 0; i < vec.size(); i++) {
+				temp += vec[i];
+			}
+			return temp;
+		}	
 			
 		/**
 		 * @brief Return the std::vector
