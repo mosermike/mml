@@ -28,14 +28,12 @@
         <link refid="mml_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
-      <node id="5">
+      <node id="4">
         <label>src/help.cpp</label>
         <link refid="help_8cpp"/>
       </node>
-      <node id="4">
+      <node id="3">
         <label>test/test_standards.cpp</label>
         <link refid="test__standards_8cpp"/>
       </node>
@@ -44,12 +42,8 @@
         <link refid="help_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="4" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>

@@ -3,6 +3,7 @@
   <compounddef id="definitions_8hpp" kind="file" language="C++">
     <compoundname>definitions.hpp</compoundname>
     <includedby refid="standards_8hpp" local="yes">include/mml/standards.hpp</includedby>
+    <includedby refid="string_8hpp" local="yes">include/mml/string.hpp</includedby>
     <includedby refid="mml_8hpp" local="yes">include/mml.hpp</includedby>
     <includedby refid="shell_8cpp" local="yes">src/shell.cpp</includedby>
     <includedby refid="standards_8cpp" local="yes">src/standards.cpp</includedby>
@@ -14,30 +15,52 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
       </node>
-      <node id="11">
+      <node id="10">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
+      </node>
+      <node id="21">
+        <label>include/mml/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>include/mml.hpp</label>
         <link refid="mml_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>src/string.cpp</label>
         <link refid="string_8cpp"/>
       </node>
-      <node id="19">
+      <node id="22">
         <label>src/standards.cpp</label>
         <link refid="standards_8cpp"/>
       </node>
-      <node id="8">
+      <node id="7">
         <label>src/log.cpp</label>
         <link refid="log_8cpp"/>
       </node>
@@ -45,23 +68,29 @@
         <label>src/help.cpp</label>
         <link refid="help_8cpp"/>
       </node>
+      <node id="20">
+        <label>test/test_log.cpp</label>
+        <link refid="test__log_8cpp"/>
+      </node>
       <node id="1">
         <label>include/mml/definitions.hpp</label>
         <link refid="definitions_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>src/time.cpp</label>
         <link refid="time_8cpp"/>
       </node>
-      <node id="10">
+      <node id="9">
         <label>src/Unix.cpp</label>
         <link refid="Unix_8cpp"/>
       </node>
@@ -69,6 +98,8 @@
         <label>include/mml/file.hpp</label>
         <link refid="file_8hpp"/>
         <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
@@ -89,7 +120,7 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>test/test_args.cpp</label>
         <link refid="test__args_8cpp"/>
       </node>
@@ -106,15 +137,19 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="20" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="14">
@@ -126,18 +161,18 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
         <childnode refid="18" relation="include">
         </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="5">
         <label>test/test_standards.cpp</label>
         <link refid="test__standards_8cpp"/>
       </node>
@@ -145,11 +180,15 @@
         <label>src/arg.cpp</label>
         <link refid="arg_8cpp"/>
       </node>
-      <node id="5">
+      <node id="11">
+        <label>test/test_file.cpp</label>
+        <link refid="test__file_8cpp"/>
+      </node>
+      <node id="17">
         <label>src/shell.cpp</label>
         <link refid="shell_8cpp"/>
       </node>
-      <node id="7">
+      <node id="6">
         <label>src/file.cpp</label>
         <link refid="file_8cpp"/>
       </node>
@@ -164,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="12" column="9" bodyfile="include/mml/definitions.hpp" bodystart="12" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="15" column="9" bodyfile="include/mml/definitions.hpp" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a947eed22999db48835fd721b82584a5e" prot="public" static="no">
         <name>_1K</name>
@@ -175,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="13" column="9" bodyfile="include/mml/definitions.hpp" bodystart="13" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="16" column="9" bodyfile="include/mml/definitions.hpp" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1aea655b0b4e95048acf308759e9a16abe" prot="public" static="no">
         <name>_1KB</name>
@@ -186,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="14" column="9" bodyfile="include/mml/definitions.hpp" bodystart="14" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="17" column="9" bodyfile="include/mml/definitions.hpp" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a71e60b07faa23a28b7796348896a363b" prot="public" static="no">
         <name>_1M</name>
@@ -197,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="15" column="9" bodyfile="include/mml/definitions.hpp" bodystart="15" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="18" column="9" bodyfile="include/mml/definitions.hpp" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a8c77a69a7d5fae220e8a1ef22377a79d" prot="public" static="no">
         <name>_1MB</name>
@@ -208,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="16" column="9" bodyfile="include/mml/definitions.hpp" bodystart="16" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="19" column="9" bodyfile="include/mml/definitions.hpp" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a420c1c6b31ab47cec7bb52314acc3b05" prot="public" static="no">
         <name>_10M</name>
@@ -219,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="17" column="9" bodyfile="include/mml/definitions.hpp" bodystart="17" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="20" column="9" bodyfile="include/mml/definitions.hpp" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a39d1ad7dea3f43b529e30d687d6654f6" prot="public" static="no">
         <name>_10MB</name>
@@ -230,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="18" column="9" bodyfile="include/mml/definitions.hpp" bodystart="18" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="21" column="9" bodyfile="include/mml/definitions.hpp" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a77b6da64c3a3c3d54d641d8c5cf13069" prot="public" static="no">
         <name>_100M</name>
@@ -241,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="19" column="9" bodyfile="include/mml/definitions.hpp" bodystart="19" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="22" column="9" bodyfile="include/mml/definitions.hpp" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1ab8fa1cabe38c95b1cb91247e6c3fc963" prot="public" static="no">
         <name>_100MB</name>
@@ -252,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="20" column="9" bodyfile="include/mml/definitions.hpp" bodystart="20" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="23" column="9" bodyfile="include/mml/definitions.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a1c25b5fbcb4a668c63966ad9abbed9c8" prot="public" static="no">
         <name>_1G</name>
@@ -263,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="21" column="9" bodyfile="include/mml/definitions.hpp" bodystart="21" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="24" column="9" bodyfile="include/mml/definitions.hpp" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a3507689413985b3923e277f71ef0c232" prot="public" static="no">
         <name>_1GB</name>
@@ -274,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="22" column="9" bodyfile="include/mml/definitions.hpp" bodystart="22" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="25" column="9" bodyfile="include/mml/definitions.hpp" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a971ae199f8fa9dbae2bd67dd5d36e371" prot="public" static="no">
         <name>S_DEVICE</name>
@@ -285,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="27" column="9" bodyfile="include/mml/definitions.hpp" bodystart="27" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="30" column="9" bodyfile="include/mml/definitions.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a32a9cb237dc197945cc136979ffd125d" prot="public" static="no">
         <name>S_CHARDEV</name>
@@ -296,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="28" column="9" bodyfile="include/mml/definitions.hpp" bodystart="28" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="31" column="9" bodyfile="include/mml/definitions.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" prot="public" static="no">
         <name>S_DIR</name>
@@ -307,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="29" column="9" bodyfile="include/mml/definitions.hpp" bodystart="29" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="32" column="9" bodyfile="include/mml/definitions.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a205d3ac121f6dfc6b2fd45d252b70482" prot="public" static="no">
         <name>S_FIFO</name>
@@ -318,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="30" column="9" bodyfile="include/mml/definitions.hpp" bodystart="30" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="33" column="9" bodyfile="include/mml/definitions.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1adf662e854df33f600d35c36e53448afa" prot="public" static="no">
         <name>S_SYMLNK</name>
@@ -329,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="31" column="9" bodyfile="include/mml/definitions.hpp" bodystart="31" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="34" column="9" bodyfile="include/mml/definitions.hpp" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" prot="public" static="no">
         <name>S_FILE</name>
@@ -340,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="32" column="9" bodyfile="include/mml/definitions.hpp" bodystart="32" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="35" column="9" bodyfile="include/mml/definitions.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1aec202deeac350c55ff66086bde404145" prot="public" static="no">
         <name>S_SOCK</name>
@@ -351,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="33" column="9" bodyfile="include/mml/definitions.hpp" bodystart="33" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="36" column="9" bodyfile="include/mml/definitions.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a4b829048ea0c039b55e17bd2c47f81d6" prot="public" static="no">
         <name>S_OTHER</name>
@@ -362,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="34" column="9" bodyfile="include/mml/definitions.hpp" bodystart="34" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="37" column="9" bodyfile="include/mml/definitions.hpp" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1acc2ade39a4b857c525798d9ecd6b088f" prot="public" static="no">
         <name>_sec</name>
@@ -373,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="36" column="9" bodyfile="include/mml/definitions.hpp" bodystart="36" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="39" column="9" bodyfile="include/mml/definitions.hpp" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a43ef0a945976ad00a8a52f3987ebbe02" prot="public" static="no">
         <name>_min</name>
@@ -384,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="37" column="9" bodyfile="include/mml/definitions.hpp" bodystart="37" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="40" column="9" bodyfile="include/mml/definitions.hpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a4f692ed3382144bb54dc8940f196a9f6" prot="public" static="no">
         <name>_hour</name>
@@ -395,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="38" column="9" bodyfile="include/mml/definitions.hpp" bodystart="38" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="41" column="9" bodyfile="include/mml/definitions.hpp" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a9ce16629624feffe5d419417789dfdac" prot="public" static="no">
         <name>_day</name>
@@ -406,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="39" column="9" bodyfile="include/mml/definitions.hpp" bodystart="39" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="42" column="9" bodyfile="include/mml/definitions.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1ad6ae274f27998bb853c47143ffb3b82c" prot="public" static="no">
         <name>_month</name>
@@ -417,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="40" column="9" bodyfile="include/mml/definitions.hpp" bodystart="40" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="43" column="9" bodyfile="include/mml/definitions.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1aaf19877a7a097f9ebb469d2345fe200a" prot="public" static="no">
         <name>_year</name>
@@ -428,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="41" column="9" bodyfile="include/mml/definitions.hpp" bodystart="41" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="44" column="9" bodyfile="include/mml/definitions.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a8c4f0f61aa8922feb3a8f65803fa610d" prot="public" static="no">
         <name>_st1</name>
@@ -439,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="42" column="9" bodyfile="include/mml/definitions.hpp" bodystart="42" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="45" column="9" bodyfile="include/mml/definitions.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a43b22f406eeec5bf3a479478f586ca61" prot="public" static="no">
         <name>_weekday</name>
@@ -450,7 +489,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="43" column="9" bodyfile="include/mml/definitions.hpp" bodystart="43" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="46" column="9" bodyfile="include/mml/definitions.hpp" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1ad3754ff55940be33e9ee2ccd54f85fdd" prot="public" static="no">
         <name>_yearday</name>
@@ -461,7 +500,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="44" column="9" bodyfile="include/mml/definitions.hpp" bodystart="44" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="47" column="9" bodyfile="include/mml/definitions.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a18312b8c692ba9383f7e968eb3d08d90" prot="public" static="no">
         <name>_kw</name>
@@ -472,42 +511,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="45" column="9" bodyfile="include/mml/definitions.hpp" bodystart="45" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="48" column="9" bodyfile="include/mml/definitions.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1ae4fb1acf1a50371ab7766421043eff93" prot="public" static="no">
         <name>_y_sec</name>
-        <initializer>60*60*24*365</initializer>
+        <initializer>60*60*24*365.15</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="47" column="9" bodyfile="include/mml/definitions.hpp" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1aff62b631d14949a1aae30404619021e5" prot="public" static="no">
-        <name>_m_sec</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="48" column="9" bodyfile="include/mml/definitions.hpp" bodystart="48" bodyend="-1"/>
+        <location file="include/mml/definitions.hpp" line="50" column="9" bodyfile="include/mml/definitions.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="definitions_8hpp_1a84bcce92b9e9f0d4a7405383f2e0ae1a" prot="public" static="no">
         <name>_d_sec</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="49" column="9" bodyfile="include/mml/definitions.hpp" bodystart="49" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1aa2ad4d4dd080d833e245916766c8f2e5" prot="public" static="no">
-        <name>_check_root_log</name>
-        <initializer>&quot;/var/log/check_root.log&quot;</initializer>
+        <initializer>60*60*24</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -516,158 +535,67 @@
         </inbodydescription>
         <location file="include/mml/definitions.hpp" line="51" column="9" bodyfile="include/mml/definitions.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1aaf1bf0de7c4a1afec6d12069e197707e" prot="public" static="no">
-        <name>_cifs_log</name>
-        <initializer>&quot;/var/log/cifs.log&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="52" column="9" bodyfile="include/mml/definitions.hpp" bodystart="52" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1ae1175c0f51132db635d406ec1513174d" prot="public" static="no">
-        <name>_cop_log</name>
-        <initializer>&quot;/var/log/cop.log&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="53" column="9" bodyfile="include/mml/definitions.hpp" bodystart="53" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1a2b27926dc8b8bbebbc5f8baf58ee0164" prot="public" static="no">
-        <name>_copy_log</name>
-        <initializer>&quot;/var/log/copy.log&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="54" column="9" bodyfile="include/mml/definitions.hpp" bodystart="54" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1a618573a38c7b5027631ca370f8507ac0" prot="public" static="no">
-        <name>_timer_log</name>
-        <initializer>&quot;/var/log/timer.log&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="57" column="9" bodyfile="include/mml/definitions.hpp" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1a32c4cbbb5844356bf537e38f6012d1dc" prot="public" static="no">
-        <name>_backup_log</name>
-        <initializer>&quot;/var/log/backup.log&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="60" column="9" bodyfile="include/mml/definitions.hpp" bodystart="60" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1a5dad0090f1fb5c7ad5153cdbb2522374" prot="public" static="no">
-        <name>_alma</name>
-        <initializer>&quot;192.168.20.99&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="63" column="9" bodyfile="include/mml/definitions.hpp" bodystart="63" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="define" id="definitions_8hpp_1a326b6e0b534b07584518c6713b4ee427" prot="public" static="no">
-        <name>_printer</name>
-        <initializer>&quot;192.168.20.20&quot;</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/mml/definitions.hpp" line="64" column="9" bodyfile="include/mml/definitions.hpp" bodystart="64" bodyend="-1"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Some definitions used in the library. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-08-13</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
-<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Autor:<sp/>Mike<sp/>Moser</highlight></codeline>
-<codeline lineno="3"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
-<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Library<sp/>definitions.h</highlight></codeline>
-<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Different<sp/>definitions</highlight></codeline>
-<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
-<codeline lineno="7"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_DEFINITIONS_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_DEFINITIONS_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions<sp/>for<sp/>the<sp/>Bytes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="definitions_8hpp_1ae1f94700e6133342b1e2e9daa7a3d4ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1B<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1B</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="definitions_8hpp_1a947eed22999db48835fd721b82584a5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1K<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1KB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="definitions_8hpp_1aea655b0b4e95048acf308759e9a16abe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1KB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1K</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="definitions_8hpp_1a71e60b07faa23a28b7796348896a363b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1M<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1MB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="definitions_8hpp_1a8c77a69a7d5fae220e8a1ef22377a79d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1MB<sp/><sp/><sp/><sp/><sp/><sp/>1048576<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1M</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17" refid="definitions_8hpp_1a420c1c6b31ab47cec7bb52314acc3b05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10M<sp/><sp/><sp/><sp/><sp/>10000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>10MB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="definitions_8hpp_1a39d1ad7dea3f43b529e30d687d6654f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10MB<sp/><sp/><sp/><sp/>10485760<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>10M</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19" refid="definitions_8hpp_1a77b6da64c3a3c3d54d641d8c5cf13069" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_100M<sp/><sp/><sp/>100000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>100MB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="definitions_8hpp_1ab8fa1cabe38c95b1cb91247e6c3fc963" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_100MB<sp/><sp/>104857600<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>100M</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="definitions_8hpp_1a1c25b5fbcb4a668c63966ad9abbed9c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1G<sp/><sp/><sp/><sp/>1000000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1GB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22" refid="definitions_8hpp_1a3507689413985b3923e277f71ef0c232" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1GB<sp/><sp/><sp/>1073741824<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1G</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>UINT64_MAX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10G<sp/>10000000000<sp/></highlight><highlight class="comment">//dd<sp/>blocksize<sp/>_10G</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="definitions_8hpp_1a971ae199f8fa9dbae2bd67dd5d36e371" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_DEVICE<sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerät<sp/>oder<sp/>Partition<sp/>DT_BLK<sp/>aus<sp/>dirent.h</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28" refid="definitions_8hpp_1a32a9cb237dc197945cc136979ffd125d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_CHARDEV<sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Maus,<sp/>seriell<sp/>angeschlossene<sp/>Geräte,<sp/>etc.<sp/>DT_CHR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_DIR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ordner<sp/>DT_DIR</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="definitions_8hpp_1a205d3ac121f6dfc6b2fd45d252b70482" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FIFO<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DT_FIFO</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="definitions_8hpp_1adf662e854df33f600d35c36e53448afa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_SYMLNK<sp/><sp/><sp/><sp/>10<sp/><sp/></highlight><highlight class="comment">//<sp/>symbolischer<sp/>Link<sp/>DT_LNK</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FILE<sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normale<sp/>Datei<sp/>DT_REG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="definitions_8hpp_1aec202deeac350c55ff66086bde404145" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_SOCK<sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/></highlight><highlight class="comment">//<sp/>Socket<sp/>DT_SOCK</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="definitions_8hpp_1a4b829048ea0c039b55e17bd2c47f81d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_OTHER<sp/><sp/><sp/><sp/><sp/>14<sp/><sp/></highlight><highlight class="comment">//<sp/>Other<sp/>type</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36" refid="definitions_8hpp_1acc2ade39a4b857c525798d9ecd6b088f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sec<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sekunde</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="definitions_8hpp_1a43ef0a945976ad00a8a52f3987ebbe02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_min<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minute</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="definitions_8hpp_1a4f692ed3382144bb54dc8940f196a9f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_hour<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stunde</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="definitions_8hpp_1a9ce16629624feffe5d419417789dfdac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_day<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tag</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="definitions_8hpp_1ad6ae274f27998bb853c47143ffb3b82c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_month<sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Monat</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="definitions_8hpp_1aaf19877a7a097f9ebb469d2345fe200a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_year<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jahr</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42" refid="definitions_8hpp_1a8c4f0f61aa8922feb3a8f65803fa610d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_st1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Summertime</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43" refid="definitions_8hpp_1a43b22f406eeec5bf3a479478f586ca61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_weekday<sp/><sp/><sp/><sp/>7<sp/><sp/></highlight><highlight class="comment">//<sp/>Wochentag</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="definitions_8hpp_1ad3754ff55940be33e9ee2ccd54f85fdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_yearday<sp/><sp/><sp/><sp/>8<sp/><sp/></highlight><highlight class="comment">//<sp/>Tage<sp/>seit<sp/>Neujahr</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="definitions_8hpp_1a18312b8c692ba9383f7e968eb3d08d90" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_kw<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kalenderwoche</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="definitions_8hpp_1ae4fb1acf1a50371ab7766421043eff93" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_y_sec<sp/>60*60*24*365<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48" refid="definitions_8hpp_1aff62b631d14949a1aae30404619021e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_m_sec</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="definitions_8hpp_1a84bcce92b9e9f0d4a7405383f2e0ae1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_d_sec</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Logdateien</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="definitions_8hpp_1aa2ad4d4dd080d833e245916766c8f2e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_check_root_log<sp/><sp/><sp/><sp/><sp/>&quot;/var/log/check_root.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="definitions_8hpp_1aaf1bf0de7c4a1afec6d12069e197707e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cifs_log<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/cifs.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="definitions_8hpp_1ae1175c0f51132db635d406ec1513174d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cop_log<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/cop.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="definitions_8hpp_1a2b27926dc8b8bbebbc5f8baf58ee0164" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_copy_log<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/copy.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>_rechner_log<sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/rechner.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>_statistik_log<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/statistik.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="definitions_8hpp_1a618573a38c7b5027631ca370f8507ac0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_timer_log<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/var/log/timer.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Logdateien<sp/>Raspberry</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60" refid="definitions_8hpp_1a32c4cbbb5844356bf537e38f6012d1dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_backup_log<sp/>&quot;/var/log/backup.log&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IP-Adressen</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63" refid="definitions_8hpp_1a5dad0090f1fb5c7ad5153cdbb2522374" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_alma<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;192.168.20.99&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="64" refid="definitions_8hpp_1a326b6e0b534b07584518c6713b4ee427" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_printer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;192.168.20.20&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_DEFINITIONS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_DEFINITIONS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions<sp/>for<sp/>the<sp/>Bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="definitions_8hpp_1ae1f94700e6133342b1e2e9daa7a3d4ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1B<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="definitions_8hpp_1a947eed22999db48835fd721b82584a5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1K<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1KB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="definitions_8hpp_1aea655b0b4e95048acf308759e9a16abe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1KB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="definitions_8hpp_1a71e60b07faa23a28b7796348896a363b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1M<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="definitions_8hpp_1a8c77a69a7d5fae220e8a1ef22377a79d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1MB<sp/><sp/><sp/><sp/><sp/><sp/>1048576<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="definitions_8hpp_1a420c1c6b31ab47cec7bb52314acc3b05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10M<sp/><sp/><sp/><sp/><sp/>10000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>10MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="definitions_8hpp_1a39d1ad7dea3f43b529e30d687d6654f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10MB<sp/><sp/><sp/><sp/>10485760<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>10M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="definitions_8hpp_1a77b6da64c3a3c3d54d641d8c5cf13069" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_100M<sp/><sp/><sp/>100000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>100MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="definitions_8hpp_1ab8fa1cabe38c95b1cb91247e6c3fc963" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_100MB<sp/><sp/>104857600<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>100M</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="definitions_8hpp_1a1c25b5fbcb4a668c63966ad9abbed9c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1G<sp/><sp/><sp/><sp/>1000000000<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1GB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="definitions_8hpp_1a3507689413985b3923e277f71ef0c232" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_1GB<sp/><sp/><sp/>1073741824<sp/><sp/><sp/></highlight><highlight class="comment">//dd<sp/>blockSize<sp/>1G</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__ENVIRONMENT64__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_10G<sp/>10000000000<sp/></highlight><highlight class="comment">//dd<sp/>blocksize<sp/>_10G</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="definitions_8hpp_1a971ae199f8fa9dbae2bd67dd5d36e371" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_DEVICE<sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerät<sp/>oder<sp/>Partition<sp/>DT_BLK<sp/>aus<sp/>dirent.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="definitions_8hpp_1a32a9cb237dc197945cc136979ffd125d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_CHARDEV<sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Maus,<sp/>seriell<sp/>angeschlossene<sp/>Geräte,<sp/>etc.<sp/>DT_CHR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_DIR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ordner<sp/>DT_DIR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="definitions_8hpp_1a205d3ac121f6dfc6b2fd45d252b70482" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FIFO<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DT_FIFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="definitions_8hpp_1adf662e854df33f600d35c36e53448afa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_SYMLNK<sp/><sp/><sp/><sp/>10<sp/><sp/></highlight><highlight class="comment">//<sp/>symbolischer<sp/>Link<sp/>DT_LNK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FILE<sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>normale<sp/>Datei<sp/>DT_REG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="definitions_8hpp_1aec202deeac350c55ff66086bde404145" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_SOCK<sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/></highlight><highlight class="comment">//<sp/>Socket<sp/>DT_SOCK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="definitions_8hpp_1a4b829048ea0c039b55e17bd2c47f81d6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_OTHER<sp/><sp/><sp/><sp/><sp/>14<sp/><sp/></highlight><highlight class="comment">//<sp/>Other<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="definitions_8hpp_1acc2ade39a4b857c525798d9ecd6b088f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sec<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="definitions_8hpp_1a43ef0a945976ad00a8a52f3987ebbe02" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_min<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Minutes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="definitions_8hpp_1a4f692ed3382144bb54dc8940f196a9f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_hour<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hours</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="definitions_8hpp_1a9ce16629624feffe5d419417789dfdac" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_day<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Days</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="definitions_8hpp_1ad6ae274f27998bb853c47143ffb3b82c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_month<sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Month</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="definitions_8hpp_1aaf19877a7a097f9ebb469d2345fe200a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_year<sp/><sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="definitions_8hpp_1a8c4f0f61aa8922feb3a8f65803fa610d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_st1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Summertime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="definitions_8hpp_1a43b22f406eeec5bf3a479478f586ca61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_weekday<sp/><sp/><sp/><sp/>7<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Week<sp/>day</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="definitions_8hpp_1ad3754ff55940be33e9ee2ccd54f85fdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_yearday<sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Days<sp/>since<sp/>New<sp/>Year</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="definitions_8hpp_1a18312b8c692ba9383f7e968eb3d08d90" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_kw<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calendar<sp/>Week</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="definitions_8hpp_1ae4fb1acf1a50371ab7766421043eff93" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_y_sec<sp/>60*60*24*365.15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="definitions_8hpp_1a84bcce92b9e9f0d4a7405383f2e0ae1a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_d_sec<sp/>60*60*24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="include/mml/definitions.hpp"/>
   </compounddef>

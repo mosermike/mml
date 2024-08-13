@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="35" column="48" bodyfile="src/time.cpp" bodystart="12" bodyend="14"/>
+        <location file="include/mml/time.hpp" line="35" column="48" bodyfile="src/time.cpp" bodystart="22" bodyend="24"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="62" column="6" bodyfile="src/time.cpp" bodystart="16" bodyend="25"/>
+        <location file="include/mml/time.hpp" line="62" column="6" bodyfile="src/time.cpp" bodystart="26" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a453e8f3a08923e3c3a0ec9ab37dea5d2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="67" column="6" bodyfile="src/time.cpp" bodystart="27" bodyend="36"/>
+        <location file="include/mml/time.hpp" line="67" column="6" bodyfile="src/time.cpp" bodystart="37" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a0bd314d4b2e0768f69cea674f7c703c0" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="74" column="13" bodyfile="src/time.cpp" bodystart="112" bodyend="135"/>
+        <location file="include/mml/time.hpp" line="74" column="13" bodyfile="src/time.cpp" bodystart="122" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7ab45be7d61d2102275b9e36f1ef6c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::chrono::high_resolution_clock::time_point</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="83" column="48" bodyfile="src/time.cpp" bodystart="63" bodyend="74"/>
+        <location file="include/mml/time.hpp" line="83" column="48" bodyfile="src/time.cpp" bodystart="73" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1acaa29039bd109356528ce1940d3aeb1c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="90" column="8" bodyfile="src/time.cpp" bodystart="83" bodyend="89"/>
+        <location file="include/mml/time.hpp" line="90" column="8" bodyfile="src/time.cpp" bodystart="93" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1aa2fe19945159ae806d5405cad5daf1e4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="96" column="8" bodyfile="src/time.cpp" bodystart="91" bodyend="96"/>
+        <location file="include/mml/time.hpp" line="96" column="8" bodyfile="src/time.cpp" bodystart="101" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a5facf919a260c64d3b19d0e3690e91a6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>uint64_t</type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="103" column="10" bodyfile="src/time.cpp" bodystart="76" bodyend="81"/>
+        <location file="include/mml/time.hpp" line="103" column="10" bodyfile="src/time.cpp" bodystart="86" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7131c5c0f27c89efe18f5b3075ebf1e5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -349,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="122" column="6" bodyfile="src/time.cpp" bodystart="38" bodyend="50"/>
+        <location file="include/mml/time.hpp" line="122" column="6" bodyfile="src/time.cpp" bodystart="48" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1ae7dfc03e3810a853a7fa4403458374d9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>std::string</type>
@@ -368,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="129" column="13" bodyfile="src/time.cpp" bodystart="137" bodyend="148"/>
+        <location file="include/mml/time.hpp" line="129" column="13" bodyfile="src/time.cpp" bodystart="147" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a33b12b23d4d744c22b4fa29bcbc44822" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>void</type>
@@ -385,7 +385,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="135" column="6" bodyfile="src/time.cpp" bodystart="52" bodyend="55"/>
+        <location file="include/mml/time.hpp" line="135" column="6" bodyfile="src/time.cpp" bodystart="62" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a832f10fd2cb4810911a023964af6114a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -404,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="142" column="8" bodyfile="src/time.cpp" bodystart="57" bodyend="61"/>
+        <location file="include/mml/time.hpp" line="142" column="8" bodyfile="src/time.cpp" bodystart="67" bodyend="71"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a49302dac2b57a7844a037524cb48f39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="149" column="13" bodyfile="src/time.cpp" bodystart="98" bodyend="103"/>
+        <location file="include/mml/time.hpp" line="149" column="13" bodyfile="src/time.cpp" bodystart="108" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a0b5c226af1f7f58b10c430972082844b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structmml_1_1time_1_1time" kindref="compound">mml::time::time</ref></type>
@@ -458,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="157" column="17" bodyfile="src/time.cpp" bodystart="150" bodyend="164"/>
+        <location file="include/mml/time.hpp" line="157" column="17" bodyfile="src/time.cpp" bodystart="160" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7fa13c41cbd240e1141c1c4bba158f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structmml_1_1time_1_1time" kindref="compound">mml::time::time</ref></type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="164" column="17" bodyfile="src/time.cpp" bodystart="166" bodyend="183"/>
+        <location file="include/mml/time.hpp" line="164" column="17" bodyfile="src/time.cpp" bodystart="176" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a71bd3226006b15a6a27af754841c8576" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -527,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="172" column="8" bodyfile="src/time.cpp" bodystart="185" bodyend="187"/>
+        <location file="include/mml/time.hpp" line="172" column="8" bodyfile="src/time.cpp" bodystart="195" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a1adbd02ee024b9f497e24a7efc202ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -553,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/time.hpp" line="179" column="5" bodyfile="src/time.cpp" bodystart="105" bodyend="109"/>
+        <location file="include/mml/time.hpp" line="179" column="5" bodyfile="src/time.cpp" bodystart="115" bodyend="119"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">

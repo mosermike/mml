@@ -12,7 +12,7 @@ mml::log
 
 .in +1c
 .ti -1c
-.RI "\fBlog\fP (\fBmml::string\fP path)"
+.RI "\fBlog\fP (const \fBmml::string\fP path)"
 .br
 .RI "Constructor\&. "
 .ti -1c
@@ -36,10 +36,6 @@ mml::log
 .br
 .RI "Close log file\&. "
 .ti -1c
-.RI "template<typename T > void \fBcout\fP (T value, bool newline) noexcept"
-.br
-.RI "Write sth\&. into the log file\&. "
-.ti -1c
 .RI "\fBmml::string\fP \fBgetline\fP (size_t line) noexcept"
 .br
 .RI "Return a specific line form the log file\&. "
@@ -54,24 +50,25 @@ mml::log
 .ti -1c
 .RI "void \fBheader\fP () noexcept"
 .br
+.RI "Create new header\&. "
 .ti -1c
 .RI "void \fBopen\fP ()"
 .br
-.RI "open a logfile "
+.RI "Open a logfile\&. "
 .ti -1c
-.RI "void \fBprint\fP (bool linenumber=false) noexcept"
+.RI "void \fBprint\fP (const bool linenumber=false) noexcept"
 .br
 .RI "Print log file\&. "
 .ti -1c
-.RI "void \fBreset\fP (bool verbose=true) noexcept"
+.RI "void \fBreset\fP (const bool verbose=true) noexcept"
 .br
 .RI "Reset logfile\&. "
 .ti -1c
-.RI "void \fBset_num\fP (int num) noexcept"
+.RI "void \fBset_num\fP (const int num) noexcept"
 .br
 .RI "Set number of backup files\&. "
 .ti -1c
-.RI "void \fBset_path\fP (\fBmml::string\fP path) noexcept"
+.RI "void \fBset_path\fP (const \fBmml::string\fP path) noexcept"
 .br
 .RI "Set path of the logfile\&. "
 .in -1c
@@ -89,7 +86,7 @@ mml::log
 .in -1c
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "mml::log::log (\fBmml::string\fP path)\fC [inline]\fP"
+.SS "mml::log::log (const \fBmml::string\fP path)\fC [inline]\fP"
 
 .PP
 Constructor\&. 
@@ -97,11 +94,6 @@ Constructor\&.
 \fBParameters\fP
 .RS 4
 \fIpath\fP Path to the logfile 
-.RE
-.PP
-\fBExceptions\fP
-.RS 4
-\fIruntime_error\fP : if log file is not created 
 .RE
 .PP
 
@@ -132,19 +124,6 @@ Backups the log file by copying it to [filename]\&.bak\&.
 
 .PP
 Close log file\&. 
-.SS "template<typename T > void mml::log::cout (T value, bool newline)\fC [inline]\fP, \fC [noexcept]\fP"
-
-.PP
-Write sth\&. into the log file\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIvalue\fP 
-.br
-\fInewline\fP Write a newline after the value 
-.RE
-.PP
-
 .SS "\fBmml::string\fP mml::log::getline (size_t line)\fC [noexcept]\fP"
 
 .PP
@@ -185,12 +164,7 @@ string
 .SS "void mml::log::header ()\fC [noexcept]\fP"
 
 .PP
-\fBNote\fP
-.RS 4
-Neuen Kopf erstellen 
-.RE
-.PP
-
+Create new header\&. 
 .SS "\fBmml::string\fP mml::log::lastline ()\fC [noexcept]\fP"
 
 .PP
@@ -201,11 +175,16 @@ Get the last line of a logfile\&.
 string 
 .RE
 .PP
+\fBNote\fP
+.RS 4
+that if the last line is a new line, the result will be a new line 
+.RE
+.PP
 
 .SS "void mml::log::open ()"
 
 .PP
-open a logfile 
+Open a logfile\&. 
 .PP
 \fBParameters\fP
 .RS 4
@@ -229,7 +208,7 @@ Open new log file;\&.
 .RE
 .PP
 
-.SS "void mml::log::print (bool linenumber = \fCfalse\fP)\fC [noexcept]\fP"
+.SS "void mml::log::print (const bool linenumber = \fCfalse\fP)\fC [noexcept]\fP"
 
 .PP
 Print log file\&. 
@@ -240,7 +219,7 @@ Print log file\&.
 .RE
 .PP
 
-.SS "void mml::log::reset (bool verbose = \fCtrue\fP)\fC [noexcept]\fP"
+.SS "void mml::log::reset (const bool verbose = \fCtrue\fP)\fC [noexcept]\fP"
 
 .PP
 Reset logfile\&. 
@@ -251,7 +230,7 @@ Reset logfile\&.
 .RE
 .PP
 
-.SS "void mml::log::set_num (int num)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "void mml::log::set_num (const int num)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Set number of backup files\&. 
@@ -262,7 +241,7 @@ Set number of backup files\&.
 .RE
 .PP
 
-.SS "void mml::log::set_path (\fBmml::string\fP path)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "void mml::log::set_path (const \fBmml::string\fP path)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Set path of the logfile\&. 

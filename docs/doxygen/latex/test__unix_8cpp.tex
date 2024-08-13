@@ -1,0 +1,54 @@
+\hypertarget{test__unix_8cpp}{}\doxysection{test/test\+\_\+unix.cpp File Reference}
+\label{test__unix_8cpp}\index{test/test\_unix.cpp@{test/test\_unix.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include \char`\"{}mml/\+Unix.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+Include dependency graph for test\+\_\+unix.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__unix_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{test__unix_8cpp_ae919533af23e735a1f476a3618de8314}{assert\+\_\+msg}}(cond,  msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{test__unix_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__unix_8cpp_ae919533af23e735a1f476a3618de8314}\label{test__unix_8cpp_ae919533af23e735a1f476a3618de8314}} 
+\index{test\_unix.cpp@{test\_unix.cpp}!assert\_msg@{assert\_msg}}
+\index{assert\_msg@{assert\_msg}!test\_unix.cpp@{test\_unix.cpp}}
+\doxysubsubsection{\texorpdfstring{assert\_msg}{assert\_msg}}
+{\footnotesize\ttfamily \#define assert\+\_\+msg(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{do} \{ \(\backslash\)}
+\DoxyCodeLine{        if (!(cond)) \{ \(\backslash\)}
+\DoxyCodeLine{            std::cerr << \textcolor{stringliteral}{"{}Assertion failed: ("{}} \#cond \textcolor{stringliteral}{"{}), function "{}} << \_\_func\_\_ \(\backslash\)}
+\DoxyCodeLine{                      << \textcolor{stringliteral}{"{}, file "{}} << \_\_FILE\_\_ << \textcolor{stringliteral}{"{}, line "{}} << \_\_LINE\_\_ << \textcolor{stringliteral}{"{}."{}} << std::endl \(\backslash\)}
+\DoxyCodeLine{                      << \textcolor{stringliteral}{"{}Message: "{}} << msg << std::endl; \(\backslash\)}
+\DoxyCodeLine{            std::abort(); \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})}
+
+\end{DoxyCode}
+Performing test for tthe class arguments 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{test__unix_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{test__unix_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{test\_unix.cpp@{test\_unix.cpp}!main@{main}}
+\index{main@{main}!test\_unix.cpp@{test\_unix.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+

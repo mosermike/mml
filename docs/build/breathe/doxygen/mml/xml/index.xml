@@ -1,65 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
-  <compound refid="classmml_1_1string" kind="class"><name>mml::string</name>
-    <member refid="classmml_1_1string_1a3da80d33f5aa244511801c6eba736c91" kind="typedef"><name>iterator</name></member>
-    <member refid="classmml_1_1string_1a35e3e6685c5364e0ddfd68f1a7d60bdf" kind="typedef"><name>const_iterator</name></member>
-    <member refid="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" kind="variable"><name>value</name></member>
-    <member refid="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" kind="variable"><name>temp</name></member>
-    <member refid="classmml_1_1string_1ad0d748a84b091ce5a634140f716dbeec" kind="function"><name>to_mml</name></member>
-    <member refid="classmml_1_1string_1acfcc45f75a69e87f0699738b8443412c" kind="function"><name>_exist</name></member>
-    <member refid="classmml_1_1string_1a027b118294677870eccf9ff59d4b1e96" kind="function"><name>string</name></member>
-    <member refid="classmml_1_1string_1aa83d5b5500921e4d782ef18e16ac83dc" kind="function"><name>string</name></member>
-    <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" kind="function"><name>string</name></member>
-    <member refid="classmml_1_1string_1a44ceac8e8ff4252b607c882cb2fafb51" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1string_1a2dc8532f18b16a12e3d5230554c1fbb3" kind="function"><name>operator==</name></member>
-    <member refid="classmml_1_1string_1a24b0963f2fd25358a59d31de781bdee1" kind="function"><name>operator!=</name></member>
-    <member refid="classmml_1_1string_1aacf903537609817f57c9351b99c298cc" kind="function"><name>operator+</name></member>
-    <member refid="classmml_1_1string_1a02cafc3fa2871839d9e234651a989c4d" kind="function"><name>operator+=</name></member>
-    <member refid="classmml_1_1string_1a465850faf0d88bc48ec7270fb976898e" kind="function"><name>operator[]</name></member>
-    <member refid="classmml_1_1string_1a49c95e5077f61ebb5462535f85788de5" kind="function"><name>operator[]</name></member>
-    <member refid="classmml_1_1string_1afe04ceb90ea7ed8033810bdce5d18e3a" kind="function"><name>operator()</name></member>
-    <member refid="classmml_1_1string_1acf54bddb662af75ae3f2d17e3bd9c108" kind="function"><name>operator()</name></member>
-    <member refid="classmml_1_1string_1a3e5acb34d8d3dba2b5971970bb345679" kind="function"><name>atof</name></member>
-    <member refid="classmml_1_1string_1aa014e1a0fc78a28d7a99c6a83cd4b486" kind="function"><name>atoi</name></member>
-    <member refid="classmml_1_1string_1a66057297d6504b42f1c397b15c377359" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1string_1ab05ba61105f8c99256c2828593a87528" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1string_1a4a427646c4477dd2daca6dd79d0bb0c1" kind="function"><name>c_str</name></member>
-    <member refid="classmml_1_1string_1a948f7256bc8c59fc12e7a1fcb2d761a1" kind="function"><name>clear</name></member>
-    <member refid="classmml_1_1string_1ad445fefff4ea3faf11a24689dc43ba96" kind="function"><name>count</name></member>
-    <member refid="classmml_1_1string_1a73cb6c24174f5832d939817432733c45" kind="function"><name>cout</name></member>
-    <member refid="classmml_1_1string_1ae4d49ea8a844bbd5cd9bdcafc10167a4" kind="function"><name>del_letter</name></member>
-    <member refid="classmml_1_1string_1a1e44a0c0630173b390e469fe1ea7e2cd" kind="function"><name>del_number</name></member>
-    <member refid="classmml_1_1string_1a971215481fb9080179fc9c7f22b43e5c" kind="function"><name>del_space</name></member>
-    <member refid="classmml_1_1string_1aa9ce2d895b544f4e5b2d9f7845030d81" kind="function"><name>empty</name></member>
-    <member refid="classmml_1_1string_1a80c23eafaa8bd703214a915eadb08892" kind="function"><name>end</name></member>
-    <member refid="classmml_1_1string_1a81b4a8f4b92871877fd9fbe01e3e169f" kind="function"><name>end</name></member>
-    <member refid="classmml_1_1string_1a7b69360e58b51d0a5bf5a0a80ae18016" kind="function"><name>exist</name></member>
-    <member refid="classmml_1_1string_1a89a49641b8fd8b0d75ec3d3622b2398a" kind="function"><name>find</name></member>
-    <member refid="classmml_1_1string_1ae941485426daada6dfa640f297cb7062" kind="function"><name>find</name></member>
-    <member refid="classmml_1_1string_1ae5ef197e443356af7e277376e4cb84a7" kind="function"><name>getline</name></member>
-    <member refid="classmml_1_1string_1a83806c5e9d92585f57f9ef2dbaf67e07" kind="function"><name>getline</name></member>
-    <member refid="classmml_1_1string_1a3be0681c2f790864554bc70e1fade183" kind="function"><name>getValue</name></member>
-    <member refid="classmml_1_1string_1a8d274341148ce54f85f1a50ea5b0e5f9" kind="function"><name>hash</name></member>
-    <member refid="classmml_1_1string_1ada3e20559af145a083b0efe8f3dbe60a" kind="function"><name>log</name></member>
-    <member refid="classmml_1_1string_1a4860b64f242e6602b3be8b8ee2e71b02" kind="function"><name>lower</name></member>
-    <member refid="classmml_1_1string_1abe305ba6df0632fe8d349fc4d82b6701" kind="function"><name>ls</name></member>
-    <member refid="classmml_1_1string_1a756688805706c14e762cc21667e815bf" kind="function"><name>ls</name></member>
-    <member refid="classmml_1_1string_1a2ad1a6e9455c045c56dcf148e4540e82" kind="function"><name>mkdir_p</name></member>
-    <member refid="classmml_1_1string_1a9fa1fba30f50aecf44c069ba9e89bdab" kind="function"><name>remove</name></member>
-    <member refid="classmml_1_1string_1a9939471a850c71c8e18d7e0a5413edb3" kind="function"><name>replace</name></member>
-    <member refid="classmml_1_1string_1af4ba9b1d51391a4a9ecd3425dd6d1389" kind="function"><name>rfind</name></member>
-    <member refid="classmml_1_1string_1aec19cf1c64718ba66e141ce000b2631f" kind="function"><name>size</name></member>
-    <member refid="classmml_1_1string_1aa2f72690f91fcc23c35696b841113ce6" kind="function"><name>substr</name></member>
-    <member refid="classmml_1_1string_1a80f53083f18111f3275fc969813b7627" kind="function"><name>substr</name></member>
-    <member refid="classmml_1_1string_1acd79728f48f9641b45f0f5f777685af9" kind="function"><name>sub</name></member>
-    <member refid="classmml_1_1string_1a6ce6136021002bfc903372de89590bda" kind="function"><name>stoi</name></member>
-    <member refid="classmml_1_1string_1a9c4555e270ca374821544047d91003ab" kind="function"><name>str</name></member>
-    <member refid="classmml_1_1string_1a383642a9a45445f48097de31824ebf59" kind="function"><name>writeline</name></member>
-    <member refid="classmml_1_1string_1a0e7f8de4221289eab119e2a7367c9b34" kind="function"><name>writeline</name></member>
-    <member refid="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" kind="function"><name>~string</name></member>
-    <member refid="classmml_1_1string_1a745716a55996ec76c24b86ae15b93b8e" kind="friend"><name>operator&lt;&lt;</name></member>
-    <member refid="classmml_1_1string_1ae2969aae0d5dae67e02f7e8f82d6c342" kind="friend"><name>operator&gt;&gt;</name></member>
-  </compound>
   <compound refid="classmml_1_1thread_1_1_threads" kind="class"><name>mml::thread::Threads</name>
     <member refid="classmml_1_1thread_1_1_threads_1ad4ced761a7a3483f630f27c9bb6b52dd" kind="variable"><name>threads</name></member>
     <member refid="classmml_1_1thread_1_1_threads_1af79252a112a75f28ca34d28a8e569760" kind="variable"><name>futures</name></member>
@@ -80,7 +20,7 @@
     <member refid="standards_8hpp_1ac91ad57c28ab9cecb7e82ef220f148c8" kind="function"><name>atob</name></member>
     <member refid="standards_8hpp_1a63d35e02eeb9557dfc874c351694a481" kind="function"><name>atof</name></member>
     <member refid="standards_8hpp_1ac6c1c70d32321714808ae64e33404d71" kind="function"><name>atoi</name></member>
-    <member refid="standards_8hpp_1af4da79098c1caf9501e3f4ad9313a573" kind="function"><name>check_root</name></member>
+    <member refid="standards_8hpp_1a688b0e7dc452084bd1bd056cac55df5c" kind="function"><name>check_root</name></member>
     <member refid="standards_8hpp_1ae91f369e368b0941ddcb8b5be38c36f9" kind="function"><name>cout</name></member>
     <member refid="standards_8hpp_1a4e23041702a789444e71665de8e19b91" kind="function"><name>date</name></member>
     <member refid="standards_8hpp_1ae53fc572ec720a1c9aebc3ba5458ff5d" kind="function"><name>date</name></member>

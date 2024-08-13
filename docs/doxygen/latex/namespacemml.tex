@@ -12,8 +12,6 @@
  \mbox{\hyperlink{namespacemml_1_1thread}{thread}}
 \item 
  \mbox{\hyperlink{namespacemml_1_1time}{time}}
-\item 
- \mbox{\hyperlink{namespacemml_1_1Unix}{Unix}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
@@ -33,24 +31,10 @@ class \mbox{\hyperlink{classmml_1_1vector}{vector}}
 \begin{DoxyCompactList}\small\item\em Converts value to bool. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{namespacemml_ac6c1c70d32321714808ae64e33404d71}{atoi}} (const T \&t) noexcept
 \begin{DoxyCompactList}\small\item\em Converts value to int. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacemml_a688b0e7dc452084bd1bd056cac55df5c}{check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{}, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} logpath=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_ae91f369e368b0941ddcb8b5be38c36f9}{cout}} (std\+::vector$<$ templ $>$ const \&vec) noexcept
 \item 
-{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a76d259a94d9ed50a9d33081caed25131}{to\+\_\+string}} (const T \&t) noexcept
-\begin{DoxyCompactList}\small\item\em Convert value to \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}. \end{DoxyCompactList}\item 
-constexpr uint32\+\_\+t \mbox{\hyperlink{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}{const\+\_\+string\+\_\+hash}} (const char $\ast$\mbox{\hyperlink{classmml_1_1string}{string}}) noexcept
-\begin{DoxyCompactList}\small\item\em Forms a hash value of a string. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_aed237a2c04babbcae30d180ab047666f}{erase}} (std\+::vector$<$ templ $>$ \&data) noexcept
-\begin{DoxyCompactList}\small\item\em Empty a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\begin{Indent}\textbf{ standards.\+cpp}\par
-{\em Contains different standard functions of this library
-
-\begin{DoxyAuthor}{Author}
-Mike Moser 
-\end{DoxyAuthor}
-}\begin{DoxyCompactItemize}
-\item 
-bool \mbox{\hyperlink{namespacemml_af4da79098c1caf9501e3f4ad9313a573}{check\+\_\+root}} (std\+::string programme=\char`\"{}\char`\"{})
-\begin{DoxyCompactList}\small\item\em Check if program executed as root. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{namespacemml_a4e23041702a789444e71665de8e19b91}{date}} (int info, time\+\_\+t time1=-\/1) noexcept
 \begin{DoxyCompactList}\small\item\em Returns the wished info from the time (like date etc.) Options are\+: \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacemml_ae53fc572ec720a1c9aebc3ba5458ff5d}{date}} (time\+\_\+t time1=-\/1, \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} value=\char`\"{}Date+Time\char`\"{}, std\+::string separator1=\char`\"{}\+:\char`\"{}, std\+::string separator2=\char`\"{}.\char`\"{}) noexcept
@@ -63,8 +47,14 @@ bool \mbox{\hyperlink{namespacemml_a8648c76abb82d5eb1745f91e4201b247}{range}} (s
 \begin{DoxyCompactList}\small\item\em Checks if one of two numbers has reached the maximum value. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{namespacemml_a5aa66f758c7e5b3bde73a72428c60db7}{round}} (double number, uint16\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{digits}}) noexcept
 \begin{DoxyCompactList}\small\item\em round a number \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{namespacemml_a76d259a94d9ed50a9d33081caed25131}{to\+\_\+string}} (const T \&t) noexcept
+\begin{DoxyCompactList}\small\item\em Convert value to \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}. \end{DoxyCompactList}\item 
+constexpr uint32\+\_\+t \mbox{\hyperlink{namespacemml_a3edf33524b8d67442b6b8fd75b66afc4}{const\+\_\+string\+\_\+hash}} (const char $\ast$\mbox{\hyperlink{classmml_1_1string}{string}}) noexcept
+\begin{DoxyCompactList}\small\item\em Forms a hash value of a string. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacemml_a09b5d2051c67d0ee351b09f87c30126d}{declare\+\_\+month}} (int month\+\_\+nr) noexcept
 \begin{DoxyCompactList}\small\item\em Convert month number to month string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename templ $>$ }\\void \mbox{\hyperlink{namespacemml_aed237a2c04babbcae30d180ab047666f}{erase}} (std\+::vector$<$ templ $>$ \&data) noexcept
+\begin{DoxyCompactList}\small\item\em Empty a vector. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_a16e784b078d6a774ffaf01ef4d4c7647}{get\+\_\+random}} (templ min=0, templ max=100) noexcept
 \begin{DoxyCompactList}\small\item\em Create a random number in a defined range. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename templ $>$ }\\templ \mbox{\hyperlink{namespacemml_ae9a2f37b5fb1e8e463509077bbe11212}{smallest\+\_\+num}} (std\+::vector$<$ templ $>$ values, std\+::size\+\_\+t pos=0)
@@ -73,7 +63,6 @@ std\+::string \mbox{\hyperlink{namespacemml_a171afac262e291910b6f222216263b35}{r
 \begin{DoxyCompactList}\small\item\em Create a random, lower-\/case string. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_aa309b7ac991a2e8bb06209b9bb7b44fb}{digits}} (double number) noexcept
 \begin{DoxyCompactList}\small\item\em Determine number of digits of a double number. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\end{Indent}
 
 
 \doxysubsection{Function Documentation}
@@ -134,11 +123,11 @@ Converts value to int.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemml_af4da79098c1caf9501e3f4ad9313a573}\label{namespacemml_af4da79098c1caf9501e3f4ad9313a573}} 
+\mbox{\Hypertarget{namespacemml_a688b0e7dc452084bd1bd056cac55df5c}\label{namespacemml_a688b0e7dc452084bd1bd056cac55df5c}} 
 \index{mml@{mml}!check\_root@{check\_root}}
 \index{check\_root@{check\_root}!mml@{mml}}
 \doxysubsubsection{\texorpdfstring{check\_root()}{check\_root()}}
-{\footnotesize\ttfamily bool mml\+::check\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::string}]{programme = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool mml\+::check\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::string}]{programme = {\ttfamily \char`\"{}\char`\"{}},  }\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{logpath = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 
 
@@ -148,9 +137,13 @@ Check if program executed as root.
 \begin{DoxyParams}{Parameters}
 {\em programme} & Programme name \\
 \hline
+{\em logpath} & Path to the logfile, by default \char`\"{}\char`\"{} which means it is not used \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool 
+true if root 
+
+false if not root 
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceptions}

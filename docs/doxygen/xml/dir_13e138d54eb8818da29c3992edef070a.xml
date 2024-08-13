@@ -3,9 +3,12 @@
   <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
     <compoundname>test</compoundname>
     <innerfile refid="test__args_8cpp">test_args.cpp</innerfile>
+    <innerfile refid="test__file_8cpp">test_file.cpp</innerfile>
+    <innerfile refid="test__log_8cpp">test_log.cpp</innerfile>
     <innerfile refid="test__standards_8cpp">test_standards.cpp</innerfile>
     <innerfile refid="test__thread_8cpp">test_thread.cpp</innerfile>
     <innerfile refid="test__time_8cpp">test_time.cpp</innerfile>
+    <innerfile refid="test__unix_8cpp">test_unix.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

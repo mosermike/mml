@@ -7,7 +7,7 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classmml_1_1log_a3f65b8bb3b61c6ce2cdd595e012fac44}{log}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} path)
+\mbox{\hyperlink{classmml_1_1log_af5d50ca2038a055e8ca6233695302661}{log}} (const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} path)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1log_a53b0ce1eb331eef0eed64e6f41b2d01a}{log}} ()
 \begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
@@ -19,8 +19,6 @@ void \mbox{\hyperlink{classmml_1_1log_af5ae373d3beb516f18aeb682fc003d75}{backup}
 \begin{DoxyCompactList}\small\item\em Backups the log file by copying it to \mbox{[}filename\mbox{]}.bak. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1log_a6b14f403e075a081f9d9a27e5cd85bc5}{close}} () noexcept
 \begin{DoxyCompactList}\small\item\em Close log file. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmml_1_1log_a181f2207f8d222645f1802ac46269ac2}{cout}} (T value, bool newline) noexcept
-\begin{DoxyCompactList}\small\item\em Write sth. into the log file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1log_af53a9d163c02452f0288be2bf0ca9c63}{getline}} (size\+\_\+t line) noexcept
 \begin{DoxyCompactList}\small\item\em Return a specific line form the log file. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1log_aa1c5624176da9858966d55572f07e3b7}{getline\+\_\+back}} (size\+\_\+t line)
@@ -28,16 +26,16 @@ void \mbox{\hyperlink{classmml_1_1log_a6b14f403e075a081f9d9a27e5cd85bc5}{close}}
 \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} \mbox{\hyperlink{classmml_1_1log_a37a5c288ca3ea55368443a187edaa632}{lastline}} () noexcept
 \begin{DoxyCompactList}\small\item\em Get the last line of a logfile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1log_a3ccd92d9205471330411e539e29da7f1}{header}} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Create new header. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1log_a0abf178855b3479d0432d709973a6336}{open}} ()
-\begin{DoxyCompactList}\small\item\em open a logfile \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1log_a7cdf620bab72e285569ae9a6fbb3aae1}{print}} (bool linenumber=false) noexcept
+\begin{DoxyCompactList}\small\item\em Open a logfile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1log_a73339de1640b28c8cc43743fba42c9cc}{print}} (const bool linenumber=false) noexcept
 \begin{DoxyCompactList}\small\item\em Print log file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1log_a9921b093028374a7a0c0db1887edee37}{reset}} (bool verbose=true) noexcept
+void \mbox{\hyperlink{classmml_1_1log_a2686dedadbd4dcd8e765ce0c1c78e540}{reset}} (const bool verbose=true) noexcept
 \begin{DoxyCompactList}\small\item\em Reset logfile. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1log_a168c367d000f308793691061100062b4}{set\+\_\+num}} (int num) noexcept
+void \mbox{\hyperlink{classmml_1_1log_a21f4ccacf3ebe53a248d2b79e4dce10c}{set\+\_\+num}} (const int num) noexcept
 \begin{DoxyCompactList}\small\item\em Set number of backup files. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmml_1_1log_a36f30eb1d41682cdb45090e3d832601e}{set\+\_\+path}} (\mbox{\hyperlink{classmml_1_1string}{mml\+::string}} path) noexcept
+void \mbox{\hyperlink{classmml_1_1log_aef4ad62378a07e19a2fd957b8bdc866c}{set\+\_\+path}} (const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} path) noexcept
 \begin{DoxyCompactList}\small\item\em Set path of the logfile. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -49,11 +47,11 @@ void \mbox{\hyperlink{classmml_1_1log_a36f30eb1d41682cdb45090e3d832601e}{set\+\_
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classmml_1_1log_a3f65b8bb3b61c6ce2cdd595e012fac44}\label{classmml_1_1log_a3f65b8bb3b61c6ce2cdd595e012fac44}} 
+\mbox{\Hypertarget{classmml_1_1log_af5d50ca2038a055e8ca6233695302661}\label{classmml_1_1log_af5d50ca2038a055e8ca6233695302661}} 
 \index{mml::log@{mml::log}!log@{log}}
 \index{log@{log}!mml::log@{mml::log}}
 \doxysubsubsection{\texorpdfstring{log()}{log()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily mml\+::log\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily mml\+::log\+::log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -64,11 +62,6 @@ Constructor.
 {\em path} & Path to the logfile \\
 \hline
 \end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em runtime\+\_\+error} & \+: if log file is not created \\
-\hline
-\end{DoxyExceptions}
 \mbox{\Hypertarget{classmml_1_1log_a53b0ce1eb331eef0eed64e6f41b2d01a}\label{classmml_1_1log_a53b0ce1eb331eef0eed64e6f41b2d01a}} 
 \index{mml::log@{mml::log}!log@{log}}
 \index{log@{log}!mml::log@{mml::log}}
@@ -119,24 +112,6 @@ Backups the log file by copying it to \mbox{[}filename\mbox{]}.bak.
 
 Close log file. 
 
-\mbox{\Hypertarget{classmml_1_1log_a181f2207f8d222645f1802ac46269ac2}\label{classmml_1_1log_a181f2207f8d222645f1802ac46269ac2}} 
-\index{mml::log@{mml::log}!cout@{cout}}
-\index{cout@{cout}!mml::log@{mml::log}}
-\doxysubsubsection{\texorpdfstring{cout()}{cout()}}
-{\footnotesize\ttfamily template$<$typename T $>$ \\
-void mml\+::log\+::cout (\begin{DoxyParamCaption}\item[{T}]{value,  }\item[{bool}]{newline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
-
-
-
-Write sth. into the log file. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & \\
-\hline
-{\em newline} & Write a newline after the value \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{classmml_1_1log_af53a9d163c02452f0288be2bf0ca9c63}\label{classmml_1_1log_af53a9d163c02452f0288be2bf0ca9c63}} 
 \index{mml::log@{mml::log}!getline@{getline}}
 \index{getline@{getline}!mml::log@{mml::log}}
@@ -184,9 +159,10 @@ string
 \doxysubsubsection{\texorpdfstring{header()}{header()}}
 {\footnotesize\ttfamily void mml\+::log\+::header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-\begin{DoxyNote}{Note}
-Neuen Kopf erstellen 
-\end{DoxyNote}
+
+
+Create new header. 
+
 \mbox{\Hypertarget{classmml_1_1log_a37a5c288ca3ea55368443a187edaa632}\label{classmml_1_1log_a37a5c288ca3ea55368443a187edaa632}} 
 \index{mml::log@{mml::log}!lastline@{lastline}}
 \index{lastline@{lastline}!mml::log@{mml::log}}
@@ -200,6 +176,9 @@ Get the last line of a logfile.
 \begin{DoxyReturn}{Returns}
 string 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+that if the last line is a new line, the result will be a new line 
+\end{DoxyNote}
 \mbox{\Hypertarget{classmml_1_1log_a0abf178855b3479d0432d709973a6336}\label{classmml_1_1log_a0abf178855b3479d0432d709973a6336}} 
 \index{mml::log@{mml::log}!open@{open}}
 \index{open@{open}!mml::log@{mml::log}}
@@ -208,7 +187,7 @@ string
 
 
 
-open a logfile 
+Open a logfile. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -235,11 +214,11 @@ Open new log file;.
 {\em value} & Path to the logfile \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1log_a7cdf620bab72e285569ae9a6fbb3aae1}\label{classmml_1_1log_a7cdf620bab72e285569ae9a6fbb3aae1}} 
+\mbox{\Hypertarget{classmml_1_1log_a73339de1640b28c8cc43743fba42c9cc}\label{classmml_1_1log_a73339de1640b28c8cc43743fba42c9cc}} 
 \index{mml::log@{mml::log}!print@{print}}
 \index{print@{print}!mml::log@{mml::log}}
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void mml\+::log\+::print (\begin{DoxyParamCaption}\item[{bool}]{linenumber = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::log\+::print (\begin{DoxyParamCaption}\item[{const bool}]{linenumber = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -250,11 +229,11 @@ Print log file.
 {\em linenumber} & Print the linenumber \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1log_a9921b093028374a7a0c0db1887edee37}\label{classmml_1_1log_a9921b093028374a7a0c0db1887edee37}} 
+\mbox{\Hypertarget{classmml_1_1log_a2686dedadbd4dcd8e765ce0c1c78e540}\label{classmml_1_1log_a2686dedadbd4dcd8e765ce0c1c78e540}} 
 \index{mml::log@{mml::log}!reset@{reset}}
 \index{reset@{reset}!mml::log@{mml::log}}
 \doxysubsubsection{\texorpdfstring{reset()}{reset()}}
-{\footnotesize\ttfamily void mml\+::log\+::reset (\begin{DoxyParamCaption}\item[{bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::log\+::reset (\begin{DoxyParamCaption}\item[{const bool}]{verbose = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -265,11 +244,11 @@ Reset logfile.
 {\em verbose} & Verbose output what is performed \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1log_a168c367d000f308793691061100062b4}\label{classmml_1_1log_a168c367d000f308793691061100062b4}} 
+\mbox{\Hypertarget{classmml_1_1log_a21f4ccacf3ebe53a248d2b79e4dce10c}\label{classmml_1_1log_a21f4ccacf3ebe53a248d2b79e4dce10c}} 
 \index{mml::log@{mml::log}!set\_num@{set\_num}}
 \index{set\_num@{set\_num}!mml::log@{mml::log}}
 \doxysubsubsection{\texorpdfstring{set\_num()}{set\_num()}}
-{\footnotesize\ttfamily void mml\+::log\+::set\+\_\+num (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::log\+::set\+\_\+num (\begin{DoxyParamCaption}\item[{const int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 
@@ -280,11 +259,11 @@ Set number of backup files.
 {\em num} & Number of backup files \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmml_1_1log_a36f30eb1d41682cdb45090e3d832601e}\label{classmml_1_1log_a36f30eb1d41682cdb45090e3d832601e}} 
+\mbox{\Hypertarget{classmml_1_1log_aef4ad62378a07e19a2fd957b8bdc866c}\label{classmml_1_1log_aef4ad62378a07e19a2fd957b8bdc866c}} 
 \index{mml::log@{mml::log}!set\_path@{set\_path}}
 \index{set\_path@{set\_path}!mml::log@{mml::log}}
 \doxysubsubsection{\texorpdfstring{set\_path()}{set\_path()}}
-{\footnotesize\ttfamily void mml\+::log\+::set\+\_\+path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void mml\+::log\+::set\+\_\+path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
 
 
 

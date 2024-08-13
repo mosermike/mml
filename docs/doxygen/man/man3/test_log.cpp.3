@@ -1,0 +1,58 @@
+.TH "test/test_log.cpp" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/test_log.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include 'mml/log\&.hpp'\fP
+.br
+\fC#include 'mml/Unix\&.hpp'\fP
+.br
+\fC#include 'mml/standards\&.hpp'\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBassert_msg\fP(cond,  msg)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define assert_msg(cond, msg)"
+\fBValue:\fP
+.PP
+.nf
+    do { \
+        if (!(cond)) { \
+            std::cerr << "Assertion failed: (" #cond "), function " << __func__ \
+                      << ", file " << __FILE__ << ", line " << __LINE__ << "\&." << std::endl \
+                      << "Message: " << msg << std::endl; \
+            std::abort(); \
+        } \
+    } while (false)
+.fi
+Performing test for the class log 
+.SH "Function Documentation"
+.PP 
+.SS "int main (int argc, char ** argv)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.

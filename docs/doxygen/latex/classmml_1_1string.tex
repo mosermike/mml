@@ -2,7 +2,7 @@
 \label{classmml_1_1string}\index{mml::string@{mml::string}}
 
 
-{\ttfamily \#include $<$standards.\+hpp$>$}
+{\ttfamily \#include $<$string.\+hpp$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -67,8 +67,10 @@ std\+::size\+\_\+t \mbox{\hyperlink{classmml_1_1string_ae941485426daada6dfa640f2
 \begin{DoxyCompactList}\small\item\em Position of the first appearance of a string after a start position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}{getline}} (std\+::ifstream \&input) noexcept
 \begin{DoxyCompactList}\small\item\em Reads a line from an input file stream and assigns it to the instance. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{classmml_1_1string_a83806c5e9d92585f57f9ef2dbaf67e07}{getline}} (std\+::string input, std\+::size\+\_\+t line=0) noexcept
+std\+::string \mbox{\hyperlink{classmml_1_1string_a19caec12e0db12ed4435430981083b2a}{getline}} (const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} input, const std\+::size\+\_\+t line=0, bool back=false)
 \begin{DoxyCompactList}\small\item\em Reads a line from a file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmml_1_1string_a4b4770831d3be04dccf06ba4daf40247}{getlastline}} (const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}} input)
+\begin{DoxyCompactList}\small\item\em Reads the last line from a file. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}{get\+Value}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Get the value of this instance. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{classmml_1_1string_a8d274341148ce54f85f1a50ea5b0e5f9}{hash}} () const noexcept
@@ -440,10 +442,50 @@ Position of the first appearance of a string after a start position.
 \begin{DoxyReturn}{Returns}
 Position 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}\label{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}} 
+\mbox{\Hypertarget{classmml_1_1string_a4b4770831d3be04dccf06ba4daf40247}\label{classmml_1_1string_a4b4770831d3be04dccf06ba4daf40247}} 
+\index{mml::string@{mml::string}!getlastline@{getlastline}}
+\index{getlastline@{getlastline}!mml::string@{mml::string}}
+\doxysubsubsection{\texorpdfstring{getlastline()}{getlastline()}}
+{\footnotesize\ttfamily std\+::string mml\+::string\+::getlastline (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{input }\end{DoxyParamCaption})}
+
+
+
+Reads the last line from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1string_a19caec12e0db12ed4435430981083b2a}\label{classmml_1_1string_a19caec12e0db12ed4435430981083b2a}} 
 \index{mml::string@{mml::string}!getline@{getline}}
 \index{getline@{getline}!mml::string@{mml::string}}
 \doxysubsubsection{\texorpdfstring{getline()}{getline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string mml\+::string\+::getline (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1string}{mml\+::string}}}]{input,  }\item[{const std\+::size\+\_\+t}]{line = {\ttfamily 0},  }\item[{bool}]{back = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Reads a line from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & File name \\
+\hline
+{\em line} & Line number. \\
+\hline
+{\em back} & Line Number from the back \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}\label{classmml_1_1string_ae5ef197e443356af7e277376e4cb84a7}} 
+\index{mml::string@{mml::string}!getline@{getline}}
+\index{getline@{getline}!mml::string@{mml::string}}
+\doxysubsubsection{\texorpdfstring{getline()}{getline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void mml\+::string\+::getline (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
@@ -457,26 +499,6 @@ Reads a line from an input file stream and assigns it to the instance.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 None 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classmml_1_1string_a83806c5e9d92585f57f9ef2dbaf67e07}\label{classmml_1_1string_a83806c5e9d92585f57f9ef2dbaf67e07}} 
-\index{mml::string@{mml::string}!getline@{getline}}
-\index{getline@{getline}!mml::string@{mml::string}}
-\doxysubsubsection{\texorpdfstring{getline()}{getline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily std\+::string mml\+::string\+::getline (\begin{DoxyParamCaption}\item[{std\+::string}]{input,  }\item[{std\+::size\+\_\+t}]{line = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
-
-
-
-Reads a line from a file. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em input} & File name \\
-\hline
-{\em line} & Line number. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::string 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}\label{classmml_1_1string_a3be0681c2f790864554bc70e1fade183}} 
 \index{mml::string@{mml::string}!getValue@{getValue}}
@@ -1005,5 +1027,5 @@ istream
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/mml/\mbox{\hyperlink{standards_8hpp}{standards.\+hpp}}\item 
+include/mml/\mbox{\hyperlink{string_8hpp}{string.\+hpp}}\item 
 src/\mbox{\hyperlink{string_8cpp}{string.\+cpp}}\end{DoxyCompactItemize}

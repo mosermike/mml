@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_c702d64340f4e4557d70f81f5f5d1165" kind="dir">
+    <compoundname>build/CMakeFiles/test_unix.dir/test</compoundname>
+    <innerfile refid="test__unix_8cpp_8o_8d">test_unix.cpp.o.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/test_unix.dir/test/"/>
+  </compounddef>
+</doxygen>

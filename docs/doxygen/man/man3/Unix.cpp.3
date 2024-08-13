@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-src/Unix.cpp
+src/Unix.cpp \- Different Unix based functions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -28,13 +29,13 @@ src/Unix.cpp
 .br
 \fC#include <fstream>\fP
 .br
+\fC#include <filesystem>\fP
+.br
 \fC#include <sys/types\&.h>\fP
 .br
 \fC#include <time\&.h>\fP
 .br
 \fC#include <utime\&.h>\fP
-.br
-\fC#include <filesystem>\fP
 .br
 \fC#include <sys/mount\&.h>\fP
 .br
@@ -52,22 +53,11 @@ src/Unix.cpp
 .br
 \fC#include 'mml/Unix\&.hpp'\fP
 .br
+\fC#include 'mml/standards\&.hpp'\fP
+.br
 
 .SS "Variables"
 
-.PP
-.RI "\fBUnix\&.cpp\fP"
-.br
-Different Unix based functions
-.PP
-\fBAuthor\fP
-.RS 4
-Mike Moser 
-.RE
-.PP
-
-.PP
-.in +1c
 .in +1c
 .ti -1c
 .RI "\fBmml::string\fP \fBmml_pass\fP"
@@ -76,7 +66,33 @@ Mike Moser
 .RI "\fBmml::string\fP \fBmml_mount_name\fP"
 .br
 .in -1c
-.in -1c
+.SH "Detailed Description"
+.PP 
+Different Unix based functions\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Mike Moser 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+2024-08-13
+.RE
+.PP
+\fBCopyright\fP
+.RS 4
+Copyright (c) 2024 
+.RE
+.PP
+
 .SH "Variable Documentation"
 .PP 
 .SS "\fBmml::string\fP mml_mount_name"

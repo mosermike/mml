@@ -7,7 +7,7 @@ mml::string
 .br
 .PP
 .PP
-\fC#include <standards\&.hpp>\fP
+\fC#include <string\&.hpp>\fP
 .SS "Public Member Functions"
 
 .in +1c
@@ -130,9 +130,13 @@ mml::string
 .br
 .RI "Reads a line from an input file stream and assigns it to the instance\&. "
 .ti -1c
-.RI "std::string \fBgetline\fP (std::string input, std::size_t line=0) noexcept"
+.RI "std::string \fBgetline\fP (const \fBmml::string\fP input, const std::size_t line=0, bool back=false)"
 .br
 .RI "Reads a line from a file\&. "
+.ti -1c
+.RI "std::string \fBgetlastline\fP (const \fBmml::string\fP input)"
+.br
+.RI "Reads the last line from a file\&. "
 .ti -1c
 .RI "std::string \fBgetValue\fP () const noexcept"
 .br
@@ -491,6 +495,42 @@ Position
 .RE
 .PP
 
+.SS "std::string mml::string::getlastline (const \fBmml::string\fP input)"
+
+.PP
+Reads the last line from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP File name 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
+.SS "std::string mml::string::getline (const \fBmml::string\fP input, const std::size_t line = \fC0\fP, bool back = \fCfalse\fP)"
+
+.PP
+Reads a line from a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinput\fP File name 
+.br
+\fIline\fP Line number\&. 
+.br
+\fIback\fP Line Number from the back 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+std::string 
+.RE
+.PP
+
 .SS "void mml::string::getline (std::ifstream & input)\fC [noexcept]\fP"
 
 .PP
@@ -504,24 +544,6 @@ Reads a line from an input file stream and assigns it to the instance\&.
 \fBReturns\fP
 .RS 4
 None 
-.RE
-.PP
-
-.SS "std::string mml::string::getline (std::string input, std::size_t line = \fC0\fP)\fC [noexcept]\fP"
-
-.PP
-Reads a line from a file\&. 
-.PP
-\fBParameters\fP
-.RS 4
-\fIinput\fP File name 
-.br
-\fIline\fP Line number\&. 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-std::string 
 .RE
 .PP
 

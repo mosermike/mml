@@ -1,23 +1,23 @@
-.TH "test/test.cpp" 3 "Mon Jun 10 2024" "mml" \" -*- nroff -*-
+.TH "build/test.cpp" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-test/test.cpp
+build/test.cpp
 .SH SYNOPSIS
 .br
 .PP
-\fC#include 'mml/thread\&.hpp'\fP
+\fC#include <filesystem>\fP
 .br
-\fC#include <cmath>\fP
+\fC#include <fstream>\fP
 .br
-\fC#include <thread>\fP
+\fC#include <iostream>\fP
 .br
 
 .SS "Functions"
 
 .in +1c
 .ti -1c
-.RI "bool \fBisPrime\fP (int number)"
+.RI "void \fBdemo_perms\fP (std::filesystem::perms p)"
 .br
 .ti -1c
 .RI "int \fBmain\fP ()"
@@ -25,7 +25,7 @@ test/test.cpp
 .in -1c
 .SH "Function Documentation"
 .PP 
-.SS "bool isPrime (int number)"
+.SS "void demo_perms (std::filesystem::perms p)"
 
 .SS "int main ()"
 

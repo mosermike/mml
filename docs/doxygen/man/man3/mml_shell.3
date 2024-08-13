@@ -17,10 +17,6 @@ mml::shell
 
 .in +1c
 .ti -1c
-.RI "void \fBerror\fP (std::string text)"
-.br
-.RI "Print an error in red colour and exit the program\&. "
-.ti -1c
 .RI "void \fBbackground\fP (\fBstring\fP colour)"
 .br
 .RI "Change background of the shell\&. "
@@ -32,6 +28,10 @@ mml::shell
 .RI "void \fBcout\fP (\fBmml::string\fP text, bool newline=true, std::string colour='lightgreen')"
 .br
 .RI "Print to the shell\&. "
+.ti -1c
+.RI "void \fBerror\fP (std::string text)"
+.br
+.RI "Print an error in red colour and exit the program\&. "
 .ti -1c
 .RI "void \fBformation\fP (\fBstring\fP format)"
 .br
@@ -155,14 +155,7 @@ Change printed text colour\&.
 \fIcolour\fP paint of the letters
 .RE
 .PP
-Options are black, darkgray, (light)red, (light)green, brown, yellow, (light)blue, (light)purple, (light)cyan, white, lightgray, normal
-.PP
-\fBAuthor\fP
-.RS 4
-Mike Moser
-.RE
-.PP
-Programm \fBshell\&.cpp\fP Enthält verschiedene Funktionen 
+Options are black, darkgray, (light)red, (light)green, brown, yellow, (light)blue, (light)purple, (light)cyan, white, lightgray, normal 
 .SS "void mml::shell::normal ()"
 
 .PP

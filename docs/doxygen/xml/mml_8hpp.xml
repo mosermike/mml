@@ -8,19 +8,19 @@
     <includes refid="log_8hpp" local="yes">mml/log.hpp</includes>
     <includes refid="shell_8hpp" local="yes">mml/shell.hpp</includes>
     <includes refid="standards_8hpp" local="yes">mml/standards.hpp</includes>
+    <includes refid="string_8hpp" local="yes">mml/string.hpp</includes>
     <includes refid="thread_8hpp" local="yes">mml/thread.hpp</includes>
     <includes refid="time_8hpp" local="yes">mml/time.hpp</includes>
     <includes refid="Unix_8hpp" local="yes">mml/Unix.hpp</includes>
     <includes refid="vector_8hpp" local="yes">mml/vector.hpp</includes>
-    <includedby refid="shell_8cpp" local="yes">src/shell.cpp</includedby>
     <includedby refid="test__standards_8cpp" local="yes">test/test_standards.cpp</includedby>
     <incdepgraph>
-      <node id="14">
+      <node id="15">
         <label>mml/log.hpp</label>
         <link refid="log_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
@@ -30,6 +30,26 @@
       <node id="4">
         <label>functional</label>
       </node>
+      <node id="13">
+        <label>mml/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>include/mml.hpp</label>
         <link refid="mml_8hpp"/>
@@ -37,53 +57,55 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="21" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
-        </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>mml/thread.hpp</label>
         <link refid="thread_8hpp"/>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
         <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
         <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="12">
         <label>float.h</label>
       </node>
-      <node id="27">
+      <node id="28">
         <label>cstdint</label>
       </node>
-      <node id="26">
+      <node id="27">
         <label>mml/time.hpp</label>
         <link refid="time_8hpp"/>
-        <childnode refid="23" relation="include">
+        <childnode refid="24" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
@@ -95,7 +117,7 @@
         <label>mml/definitions.hpp</label>
         <link refid="definitions_8hpp"/>
       </node>
-      <node id="15">
+      <node id="16">
         <label>fstream</label>
       </node>
       <node id="11">
@@ -104,10 +126,10 @@
       <node id="10">
         <label>string.h</label>
       </node>
-      <node id="24">
+      <node id="25">
         <label>future</label>
       </node>
-      <node id="28">
+      <node id="29">
         <label>mml/Unix.hpp</label>
         <link refid="Unix_8hpp"/>
       </node>
@@ -120,11 +142,13 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>vector</label>
       </node>
-      <node id="17">
+      <node id="18">
         <label>mml/vector.hpp</label>
         <link refid="vector_8hpp"/>
         <childnode refid="5" relation="include">
@@ -133,15 +157,17 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
-        </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -166,8 +192,10 @@
         </childnode>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>mml/shell.hpp</label>
         <link refid="shell_8hpp"/>
         <childnode refid="5" relation="include">
@@ -176,22 +204,22 @@
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="18">
+      <node id="19">
         <label>cctype</label>
       </node>
       <node id="5">
         <label>iostream</label>
       </node>
-      <node id="25">
+      <node id="26">
         <label>mutex</label>
       </node>
-      <node id="23">
+      <node id="24">
         <label>chrono</label>
       </node>
-      <node id="13">
+      <node id="14">
         <label>mml/help.hpp</label>
         <link refid="help_8hpp"/>
         <childnode refid="5" relation="include">
@@ -199,13 +227,13 @@
         <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="22">
+      <node id="23">
         <label>thread</label>
       </node>
-      <node id="20">
+      <node id="21">
         <label>type_traits</label>
       </node>
-      <node id="19">
+      <node id="20">
         <label>algorithm</label>
       </node>
     </incdepgraph>
@@ -215,24 +243,13 @@
         <link refid="mml_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
       </node>
-      <node id="3">
+      <node id="2">
         <label>test/test_standards.cpp</label>
         <link refid="test__standards_8cpp"/>
       </node>
-      <node id="2">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
-      </node>
     </invincdepgraph>
-      <sectiondef kind="user-defined">
-      <header>mml.hpp</header>
-      <description><para><simplesect kind="author"><para>Mike Moser</para>
-</simplesect>
-Enthält verschiedene Headerdateien </para>
-</description>
+      <sectiondef kind="define">
       <memberdef kind="define" id="mml_8hpp_1a7478cdbcec8561f79ed658ccd81ce3c2" prot="public" static="no">
         <name>MML_INCLUDE_MML_HPP</name>
         <briefdescription>
@@ -241,41 +258,52 @@ Enthält verschiedene Headerdateien </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml.hpp" line="20" column="9" bodyfile="include/mml.hpp" bodystart="20" bodyend="-1"/>
+        <location file="include/mml.hpp" line="23" column="9" bodyfile="include/mml.hpp" bodystart="23" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Imports all functions from the this library. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-08-13</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__x86_64__<sp/>||<sp/>__ppc64__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ENVIRONMENT64__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ENVIRONMENT32__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="mml_8hpp_1a7478cdbcec8561f79ed658ccd81ce3c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__x86_64__<sp/>||<sp/>__ppc64__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ENVIRONMENT64__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ENVIRONMENT32__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">mml/definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="file_8hpp" kindref="compound">mml/file.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help_8hpp" kindref="compound">mml/help.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8hpp" kindref="compound">mml/log.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">mml/shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="standards_8hpp" kindref="compound">mml/standards.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="thread_8hpp" kindref="compound">mml/thread.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="time_8hpp" kindref="compound">mml/time.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Unix_8hpp" kindref="compound">mml/Unix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">mml/vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="mml_8hpp_1a7478cdbcec8561f79ed658ccd81ce3c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">mml/definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="file_8hpp" kindref="compound">mml/file.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help_8hpp" kindref="compound">mml/help.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log_8hpp" kindref="compound">mml/log.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shell_8hpp" kindref="compound">mml/shell.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="standards_8hpp" kindref="compound">mml/standards.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="string_8hpp" kindref="compound">mml/string.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="thread_8hpp" kindref="compound">mml/thread.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="time_8hpp" kindref="compound">mml/time.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Unix_8hpp" kindref="compound">mml/Unix.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">mml/vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/mml.hpp"/>
   </compounddef>

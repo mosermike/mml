@@ -24,9 +24,6 @@ mml
 .ti -1c
 .RI " \fBtime\fP"
 .br
-.ti -1c
-.RI " \fBUnix\fP"
-.br
 .in -1c
 .SS "Classes"
 
@@ -57,39 +54,12 @@ mml
 .br
 .RI "Converts value to int\&. "
 .ti -1c
-.RI "template<typename templ > void \fBcout\fP (std::vector< templ > const &vec) noexcept"
-.br
-.ti -1c
-.RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t) noexcept"
-.br
-.RI "Convert value to \fBmml::string\fP\&. "
-.ti -1c
-.RI "constexpr uint32_t \fBconst_string_hash\fP (const char *\fBstring\fP) noexcept"
-.br
-.RI "Forms a hash value of a string\&. "
-.ti -1c
-.RI "template<typename templ > void \fBerase\fP (std::vector< templ > &data) noexcept"
-.br
-.RI "Empty a vector\&. "
-.in -1c
-.PP
-.RI "\fBstandards\&.cpp\fP"
-.br
-Contains different standard functions of this library
-.PP
-\fBAuthor\fP
-.RS 4
-Mike Moser 
-.RE
-.PP
-
-.PP
-.in +1c
-.in +1c
-.ti -1c
-.RI "bool \fBcheck_root\fP (std::string programme='')"
+.RI "bool \fBcheck_root\fP (std::string programme='', \fBmml::string\fP logpath='')"
 .br
 .RI "Check if program executed as root\&. "
+.ti -1c
+.RI "template<typename templ > void \fBcout\fP (std::vector< templ > const &vec) noexcept"
+.br
 .ti -1c
 .RI "uint32_t \fBdate\fP (int info, time_t time1=\-1) noexcept"
 .br
@@ -115,9 +85,21 @@ Mike Moser
 .br
 .RI "round a number "
 .ti -1c
+.RI "template<typename T > \fBmml::string\fP \fBto_string\fP (const T &t) noexcept"
+.br
+.RI "Convert value to \fBmml::string\fP\&. "
+.ti -1c
+.RI "constexpr uint32_t \fBconst_string_hash\fP (const char *\fBstring\fP) noexcept"
+.br
+.RI "Forms a hash value of a string\&. "
+.ti -1c
 .RI "std::string \fBdeclare_month\fP (int month_nr) noexcept"
 .br
 .RI "Convert month number to month string\&. "
+.ti -1c
+.RI "template<typename templ > void \fBerase\fP (std::vector< templ > &data) noexcept"
+.br
+.RI "Empty a vector\&. "
 .ti -1c
 .RI "template<typename templ > templ \fBget_random\fP (templ min=0, templ max=100) noexcept"
 .br
@@ -134,7 +116,6 @@ Mike Moser
 .RI "std::size_t \fBdigits\fP (double number) noexcept"
 .br
 .RI "Determine number of digits of a double number\&. "
-.in -1c
 .in -1c
 .SH "Function Documentation"
 .PP 
@@ -186,7 +167,7 @@ int
 .RE
 .PP
 
-.SS "bool mml::check_root (std::string programme = \fC''\fP)"
+.SS "bool mml::check_root (std::string programme = \fC''\fP, \fBmml::string\fP logpath = \fC''\fP)"
 
 .PP
 Check if program executed as root\&. 
@@ -194,11 +175,15 @@ Check if program executed as root\&.
 \fBParameters\fP
 .RS 4
 \fIprogramme\fP Programme name 
+.br
+\fIlogpath\fP Path to the logfile, by default '' which means it is not used 
 .RE
 .PP
 \fBReturns\fP
 .RS 4
-bool 
+true if root 
+.PP
+false if not root 
 .RE
 .PP
 \fBExceptions\fP

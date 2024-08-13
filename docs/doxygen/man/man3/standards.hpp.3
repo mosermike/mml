@@ -22,14 +22,9 @@ include/mml/standards.hpp
 .br
 \fC#include 'mml/definitions\&.hpp'\fP
 .br
-
-.SS "Classes"
-
-.in +1c
-.ti -1c
-.RI "class \fBmml::string\fP"
+\fC#include 'mml/string\&.hpp'\fP
 .br
-.in -1c
+
 .SS "Namespaces"
 
 .in +1c
@@ -53,39 +48,12 @@ include/mml/standards.hpp
 .br
 .RI "Converts value to int\&. "
 .ti -1c
-.RI "template<typename templ > void \fBmml::cout\fP (std::vector< templ > const &vec) noexcept"
-.br
-.ti -1c
-.RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t) noexcept"
-.br
-.RI "Convert value to \fBmml::string\fP\&. "
-.ti -1c
-.RI "constexpr uint32_t \fBmml::const_string_hash\fP (const char *string) noexcept"
-.br
-.RI "Forms a hash value of a string\&. "
-.ti -1c
-.RI "template<typename templ > void \fBmml::erase\fP (std::vector< templ > &data) noexcept"
-.br
-.RI "Empty a vector\&. "
-.in -1c
-.PP
-.RI "\fBstandards\&.cpp\fP"
-.br
-Contains different standard functions of this library
-.PP
-\fBAuthor\fP
-.RS 4
-Mike Moser 
-.RE
-.PP
-
-.PP
-.in +1c
-.in +1c
-.ti -1c
-.RI "bool \fBmml::check_root\fP (std::string programme='')"
+.RI "bool \fBmml::check_root\fP (std::string programme='', \fBmml::string\fP logpath='')"
 .br
 .RI "Check if program executed as root\&. "
+.ti -1c
+.RI "template<typename templ > void \fBmml::cout\fP (std::vector< templ > const &vec) noexcept"
+.br
 .ti -1c
 .RI "uint32_t \fBmml::date\fP (int info, time_t time1=\-1) noexcept"
 .br
@@ -111,9 +79,21 @@ Mike Moser
 .br
 .RI "round a number "
 .ti -1c
+.RI "template<typename T > \fBmml::string\fP \fBmml::to_string\fP (const T &t) noexcept"
+.br
+.RI "Convert value to \fBmml::string\fP\&. "
+.ti -1c
+.RI "constexpr uint32_t \fBmml::const_string_hash\fP (const char *string) noexcept"
+.br
+.RI "Forms a hash value of a string\&. "
+.ti -1c
 .RI "std::string \fBmml::declare_month\fP (int month_nr) noexcept"
 .br
 .RI "Convert month number to month string\&. "
+.ti -1c
+.RI "template<typename templ > void \fBmml::erase\fP (std::vector< templ > &data) noexcept"
+.br
+.RI "Empty a vector\&. "
 .ti -1c
 .RI "template<typename templ > templ \fBmml::get_random\fP (templ min=0, templ max=100) noexcept"
 .br
@@ -130,7 +110,6 @@ Mike Moser
 .RI "std::size_t \fBmml::digits\fP (double number) noexcept"
 .br
 .RI "Determine number of digits of a double number\&. "
-.in -1c
 .in -1c
 .SH "Detailed Description"
 .PP 

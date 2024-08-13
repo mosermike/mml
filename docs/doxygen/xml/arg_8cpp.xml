@@ -9,12 +9,12 @@
     <includes local="no">limits</includes>
     <includes refid="shell_8hpp" local="yes">mml/shell.hpp</includes>
     <incdepgraph>
-      <node id="17">
+      <node id="18">
         <label>mml/log.hpp</label>
         <link refid="log_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -23,6 +23,26 @@
       </node>
       <node id="6">
         <label>limits</label>
+      </node>
+      <node id="14">
+        <label>mml/string.hpp</label>
+        <link refid="string_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
       </node>
       <node id="12">
         <label>float.h</label>
@@ -34,7 +54,7 @@
         <label>mml/definitions.hpp</label>
         <link refid="definitions_8hpp"/>
       </node>
-      <node id="18">
+      <node id="19">
         <label>fstream</label>
       </node>
       <node id="11">
@@ -46,7 +66,7 @@
       <node id="5">
         <label>vector</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>mml/vector.hpp</label>
         <link refid="vector_8hpp"/>
         <childnode refid="2" relation="include">
@@ -55,15 +75,17 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -88,6 +110,8 @@
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>mml/shell.hpp</label>
@@ -98,10 +122,10 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>cctype</label>
       </node>
       <node id="2">
@@ -123,7 +147,7 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>type_traits</label>
       </node>
       <node id="4">
@@ -156,7 +180,7 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/>temp<sp/>=<sp/>{};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this-&gt;vec.size();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;vec[i].<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">exist</ref>(</highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;vec[i].exist(</highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(vec[i]);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
