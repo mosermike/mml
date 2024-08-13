@@ -305,9 +305,11 @@ mml::Unix::permissions mml::Unix::perms(std::string path) {
 
 
 bool mml::Unix::perm_to_write(std::string path) {
-	mml::Unix::User user;
 	
-	if(user.get_user() == "root")
+	#include <unistd.h>
+	
+	const passwd *pw = getpwuid (geteuid ());
+	if(pw->pw_name == "root")
 		return true;
 	
 	auto perm = perms(path);
@@ -316,13 +318,13 @@ bool mml::Unix::perm_to_write(std::string path) {
 	stat(path.c_str(), &sb);	// Zuordnung der Infos
 	
 	// Permissions for the creator of the file/directory
-	if(sb.st_uid == user.get_uid()) {
+	if(sb.st_uid == geteuid ()) {
 		if(perm.owner_write)
 			return true;
 	}
 
 	// Permissions for the group
-	if(sb.st_gid == user.get_gid()) {
+	if(sb.st_gid == getegid()) {
 		if(perm.group_write)
 			return true;
 	}
