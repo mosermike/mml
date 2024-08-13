@@ -305,33 +305,32 @@ mml::Unix::permissions mml::Unix::perms(std::string path) {
 
 
 bool mml::Unix::perm_to_write(std::string path) {
-	std::cout << "TEST123" << std::endl;
 	mml::Unix::User user;
-	std::cout << "TESTX" << std::endl;
+	
 	if(user.get_user() == "root")
 		return true;
-	std::cout << "TESTX" << std::endl;
-	permissions perm = perms(path);
-	std::cout << "TESTX" << std::endl;
+	
+	auto perm = perms(path);
+
 	struct stat sb;
 	stat(path.c_str(), &sb);	// Zuordnung der Infos
-	std::cout << "TESTX" << std::endl;
+	
 	// Permissions for the creator of the file/directory
 	if(sb.st_uid == user.get_uid()) {
 		if(perm.owner_write)
 			return true;
 	}
-	std::cout << "TESTX" << std::endl;
+
 	// Permissions for the group
 	if(sb.st_gid == user.get_gid()) {
 		if(perm.group_write)
 			return true;
 	}
-	std::cout << "TESTX" << std::endl;
+	
 	// Permissions for other
 	if(perm.others_write)
 		return true;
-	std::cout << "TESTX" << std::endl;
+
 	return false;
 	
 }

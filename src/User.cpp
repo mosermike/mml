@@ -59,20 +59,6 @@ std::string mml::Unix::User::gethomedir() {
 	return std::string(pw->pw_dir);
 }
 
-std::string mml::Unix::User::getip(std::string iface ) {
-	
-	int		n		= 0;
-	struct	ifreq	ifr;
-    
-	n = socket(AF_INET, SOCK_DGRAM, 0);
-	ifr.ifr_addr.sa_family = AF_INET;
-	strncpy(ifr.ifr_name , iface.c_str() , IFNAMSIZ - 1);
-		ioctl(n, SIOCGIFADDR, &ifr);
-	close(n);
-    
-	return  inet_ntoa(( (struct sockaddr_in *) & ifr.ifr_addr )->sin_addr);
-}
-
 std::string mml::Unix::User::getdefaultshell() {
 	return std::string(pw->pw_shell);
 }
