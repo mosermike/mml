@@ -10,6 +10,7 @@
  */
 
 #include <iostream>
+#include <filesystem>
 
 #include "mml/Unix.hpp"
 #include "mml/log.hpp"
@@ -35,11 +36,11 @@ void mml::log::backup(bool verbose, bool Reset) noexcept {
 		// NOTE 0 is for logpath.bak and logpath.bak1
 		if(i == 0) {
 			if(mml::Unix::exist(logpath.str() + ".bak"))
-				file::copy((mml::string) logpath + ".bak",(mml::string) logpath + ".bak1","","", _1MB,false,false, false, false, true);
-			file::copy(logpath,logpath + ".bak","","", _1MB,false,false, false, false, true);
+				std::filesystem::copy(logpath.str() + ".bak",logpath.str() + ".bak1");
+			std::filesystem::copy(logpath.str(),logpath.str() + ".bak");
 		}
 		else if(mml::Unix::exist(logpath.str() + ".bak" + std::to_string(i)))
-			file::copy(logpath + ".bak"+ mml::to_string(i),logpath + ".bak" + mml::to_string((i+1)),"","", _1MB,false,false, false, false, true);
+			std::filesystem::copy(logpath.str() + ".bak"+ std::to_string(i), logpath.str() + ".bak" + std::to_string((i+1)));
 	}
 	if(verbose)
 		std::cout << std::endl;
