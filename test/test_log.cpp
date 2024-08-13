@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	//std::cout << "Testing backup function ...";
+	std::cout << "Testing backup function ...";
 
 	//log.set_num(4);
 	//log.backup(false,true);
@@ -57,7 +57,10 @@ int main(int argc, char **argv) {
 	//assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
 	//			"\nBackups are not created and moved as expected. Expected are in total 7 files."
 	//);
-	std::filesystem::remove(tmpfile.str());
+	//std::filesystem::remove(tmpfile.str());
+	//std::filesystem::remove(tmpfile.str() + ".bak");
+	//std::filesystem::remove(tmpfile.str() + ".bak1");
+	//std::filesystem::remove(tmpfile.str() + ".bak2");
 	std::cout << " Passed" << std::endl;
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
