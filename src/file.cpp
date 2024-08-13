@@ -243,14 +243,15 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	if(name_in == "" && name_ex == ""){
 		actual_src_dir = src;
 		actual_dst_dir = dst;
-
+		std::cout << "TEST" << std::endl;
 		// Copying a symlink
 		if(mml::Unix::issymlink(actual_src_dir.str())) {
 			std::filesystem::copy_symlink(actual_src_dir.str(), actual_dst_dir.str());
 			return 0;
 		}
-
+		std::cout << "TEST" << std::endl;
         if(mml::Unix::isfile(actual_src_dir.str())) {
+			std::cout << "TEST" << std::endl;
         	if(actual_dst_dir[-1] == '/'){
         		// Search last part from source to determine the name of the goal path
         		temp_size = actual_src_dir.rfind('/',std::string::npos,0);
@@ -264,7 +265,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
         	else if(mml::Unix::exist(dst.str()) && mml::Unix::isdir(dst.str())) {
         		throw std::logic_error("[copy] Destination file is a directory");
         	}
-
+			std::cout << "TEST" << std::endl;
 			fileSize = mml::file::size(actual_src_dir.str());
 			if(mml::Unix::exist(actual_dst_dir.str()) && !force){	// If the destination exists and the force mode isn't active, stops and first ask the user
 				if(fileSize > _1GB)
@@ -283,7 +284,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 					return 1;
 				}
 			}
-			
+			std::cout << "TEST" << std::endl;
 			/*
 			 * **************************************
 			 * *	Determine permission to write	*
@@ -301,11 +302,11 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 				} while(temp_size < std::string::npos && (!mml::Unix::exist(actual_dst_check.str())));
 
 			}
-
+			std::cout << "TEST3" << std::endl;
 			// Checks whether the user has write permissions on the destination
 			if(!mml::Unix::perm_to_write(actual_dst_check.str()))
 				throw std::runtime_error("[copy] Copying to '" + actual_dst_check.str() + "' is not possible: Permission denied");
-
+			std::cout << "TEST3" << std::endl;
 
             // **************************************************
             // *	Create the directory to the point needed	*
