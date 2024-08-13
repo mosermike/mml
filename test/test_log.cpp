@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "Testing backup function ...";
+	std::cout << "Testing backup function ..." << std::endl;
 
 	log.set_num(4);
 	log.backup(true,true);
