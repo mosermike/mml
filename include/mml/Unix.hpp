@@ -144,8 +144,6 @@ namespace mml{
 			mml::string					get_host()		{ return this->hostname;}		// Hostname
 			mml::string					get_home()		{ return this->home;}			// Home path of the user
 			mml::string					get_shell()		{ return this->defaultshell;}	// Default shell
-			mml::string					get_iw()		{ return this->ip_w;}			// IP-Address Wlan
-			mml::string					get_ie()		{ return this->ip_e;}			// IP-Address Ethernet
 			mml::string					get_domain()	{ return this->domain;}			// Domain name
 			mml::string					get_path()		{ return this->path;}			// Path
 			mml::string					get_pwd()		{ return this->pwd;}			// Actual path
