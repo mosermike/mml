@@ -216,13 +216,6 @@ void mml::Unix::User::cout(mml::string output) {
 			std::cout << "HOSTNAME: \t\t" 	<< this->hostname << std::endl;
 			break;
 			
-		case mml::const_string_hash("iw") :
-			std::cout << "WLAN IP-ADRESSE: \t" 	<< this->ip_w << std::endl;
-			break;
-		
-		case mml::const_string_hash("ie") :
-			std::cout << "LAN IP-ADRESSE: \t" 	<< this->ip_e << std::endl;
-			break;
 			
 		case mml::const_string_hash("domain") :
 			std::cout << "DOMAIN: \t\t" 	<< this->domain << std::endl;
@@ -301,13 +294,6 @@ bool mml::Unix::User::check(mml::string option, std::string value) {
 			return this->hostname == value ? true : false;
 			break;
 			
-		case mml::const_string_hash("iw") :
-			return this->ip_w == value ? true : false;
-			break;
-			
-		case mml::const_string_hash("ie") :
-			return this->ip_e == value ? true : false;
-			break;
 			
 		case mml::const_string_hash("domain") :
 			return this->domain == value ? true : false;

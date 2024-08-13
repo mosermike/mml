@@ -56,15 +56,6 @@ namespace mml{
 				  mml::string			domain			= getdomain();
 				  mml::string			path			= std::getenv("PATH");
 				  mml::string			pwd				= get_current_dir_name();
-#if __amd64__
-				  mml::string			ip_w			= getip("wlp0s20f3");
-				  mml::string			ip_e			= getip("enp1s0");
-#elif __aarch64__
-				  mml::string			ip_w			= getip("wlan0");
-				  mml::string			ip_e			= getip("eth0");
-#else
-#error "Architectur not defined"
-#endif
 				  std::vector<mml::string> groups			= getgrlist();
 				  
 			
@@ -76,7 +67,6 @@ namespace mml{
 			std::string getlocale();					// Returns the language of the user
 			std::string getloginname();					// Returns the login name
 			std::string gethomedir();					// Returns the home path
-			std::string getip(std::string iface);		// Returns the actual IP address of the wifi module
 			std::string getdefaultshell();				// Returns the default shell
 			std::string getdomain();					// Returns the current domain name
 			std::string gethost();						// Returns the host name
