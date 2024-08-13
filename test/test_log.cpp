@@ -8,6 +8,7 @@
 #include "mml/Unix.hpp"
 #include "mml/standards.hpp"
 #include <cstdlib>  // For std::abort
+#include <filesystem>
 
 // Custom assert macro
 #define assert_msg(cond, msg) \
@@ -33,7 +34,7 @@ int main(int argc, char **argv) {
 	std::cout << "Testing writing and reading a log entry ...";
 
 	// Create Random File
-	mml::string tmpfile = "/tmp/test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
+	mml::string tmpfile = "./test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
 
 	// Open the log file
 	mml::log log(tmpfile);
@@ -63,6 +64,7 @@ int main(int argc, char **argv) {
 								tmpfile + ".bak4", tmpfile + ".bak5") && !mml::Unix::exist(tmpfile + ".bak6"), 
 				"\nBackups are not created and moved as expected. Expected are in total 7 files."
 	);
+	std::filesystem::remove(tmpfile.str());
 	std::cout << " Passed" << std::endl;
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
