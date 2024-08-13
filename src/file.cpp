@@ -204,12 +204,10 @@ std::size_t mml::file::num_lines(std::string path) {
 
 
 int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::string name_ex, size_t blocksize, bool verbose, bool verbose_debug, bool all, bool recursive, bool force, bool progress, bool falsewrite){
-	std::cout << "[copy] Start of function 'copy'!" << std::endl;
-	std::cout.flush();
+	
 	mml::string				actual_src_dir		= "";	// aktueller Pfad
 	mml::string				actual_dst_dir		= "";   // aktueller Zielpfad
 	mml::string				actual_dst_check	= "";
-	mml::Unix::User			user;
 	uint32_t				filesize_correct	= 0;	// Korrektur für Ausgabe Ok
 	std::size_t				fileSize			= 0;	// Dateigröße
 	int						status				= 0;	// Drei Punkte anzeigen bei Überspringen
