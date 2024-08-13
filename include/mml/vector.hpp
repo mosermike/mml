@@ -20,6 +20,7 @@
 #include <type_traits> // std::is_same
 
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/log.hpp"
 
 // todo count how many entries the same
@@ -208,18 +209,20 @@ namespace mml{
 			mml::log log(logpath);
 			
 			// Write this first in the logfile
-			log.cout<mml::string>(first, false);
+			log << first;
 
 			// Write all the values into the logfile
 			for(uint32_t i = 0; i < vec.size(); i++) {
-				log.cout<mml::string>(vec[i],newline);
+				log << vec[i];
+				if(newline)
+					log << std::endl;
 				// Write separator if not newline
 				if(!newline && i < vec.size()-1)
-					log.cout<mml::string>(separator,false);
+					log << separator;
 			}
 
 			// Print sth at the end plus a new line
-			log.cout<mml::string>(last, true);
+			log << last << std::endl;
 		}	
 		
 		/**

@@ -36,7 +36,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'file';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -561,40 +561,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml4file8filetypeENSt6stringE">
-<span id="_CPPv3N3mml4file8filetypeENSt6stringE"></span><span id="_CPPv2N3mml4file8filetypeENSt6stringE"></span><span id="mml::file::filetype__ss"></span><span class="target" id="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filetype</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filepath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml4file8filetypeENSt6stringE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Determine the type of an object (directory, file, etc.) </p>
-<p><dl>
-<dt class="sig sig-object cpp">
-<em><span class="pre">Todo:</span></em></dt>
-<dd><p>use library to detect what it is and also then use hard link and symbolic link </p>
-</dd></dl>
-
-</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The numbers have the following meaning:<ul class="simple">
-<li><p>1: DT_FIFO</p></li>
-<li><p>2: Serial connected device, mouse, etc.</p></li>
-<li><p>4: Directory</p></li>
-<li><p>6: Device or partition</p></li>
-<li><p>8: normal file</p></li>
-<li><p>10: symbolic link</p></li>
-<li><p>12: Socket </p></li>
-</ul>
-</p>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>filepath</strong> – Path to the object </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns a number to identify the type of the object </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml4file9humanreadENSt6size_tE">
 <span id="_CPPv3N3mml4file9humanreadENSt6size_tE"></span><span id="_CPPv2N3mml4file9humanreadENSt6size_tE"></span><span id="mml::file::humanread__std::s"></span><span class="target" id="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">humanread</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml4file9humanreadENSt6size_tE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Convert number into human readable number. </p>
@@ -811,7 +777,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file8byteCopyERKNSt6stringERKNSt6stringENSt6size_tEb"><code class="docutils literal notranslate"><span class="pre">file::byteCopy()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file4copyEN3mml6stringEN3mml6stringENSt6stringENSt6stringE6size_tbbbbbbb"><code class="docutils literal notranslate"><span class="pre">file::copy()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file5equalENSt6stringENSt6stringE"><code class="docutils literal notranslate"><span class="pre">file::equal()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file8filetypeENSt6stringE"><code class="docutils literal notranslate"><span class="pre">file::filetype()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file9humanreadENSt6size_tE"><code class="docutils literal notranslate"><span class="pre">file::humanread()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file9num_linesENSt6stringE"><code class="docutils literal notranslate"><span class="pre">file::num_lines()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml4file13Program_existENSt6stringE"><code class="docutils literal notranslate"><span class="pre">file::Program_exist()</span></code></a></li>
@@ -869,7 +834,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

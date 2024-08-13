@@ -36,7 +36,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'vector';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -477,37 +477,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE">
-<span id="_CPPv3N3mml6vectoraSERKNSt6vectorI1TEE"></span><span id="_CPPv2N3mml6vectoraSERKNSt6vectorI1TEE"></span><span id="mml::vector::assign-operator__std::vector:T:CR"></span><span class="target" id="classmml_1_1vector_1a27bd93034429d512f0414f71e2da0448"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Assign value with equal sign. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>temp</strong> – Vector with values </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>this instance </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vectorixEi">
-<span id="_CPPv3N3mml6vectorixEi"></span><span id="_CPPv2N3mml6vectorixEi"></span><span id="mml::vector::subscript-operator__i"></span><span class="target" id="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6vectorixEi" title="Link to this definition">#</a><br /></dt>
-<dd><p>Returns a value at a specific index. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>index</strong> – Index to be returned </p>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">out_of_range</span></span></span> – : if index not in range </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>value at this index </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml6vector5beginEv">
 <span id="_CPPv3N3mml6vector5beginEv"></span><span id="_CPPv2N3mml6vector5beginEv"></span><span id="mml::vector::begin"></span><span class="target" id="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector5beginEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>iterator to the beginning of the vector </p>
@@ -519,12 +488,59 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector5beginEv">
+<span id="_CPPv3NK3mml6vector5beginEv"></span><span id="_CPPv2NK3mml6vector5beginEv"></span><span id="mml::vector::beginC"></span><span class="target" id="classmml_1_1vector_1a5030ae731771646b8aee2e57159d5f30"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">const_iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector5beginEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constant Iterator to the beginning of the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>const iterator </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector5countE1T">
+<span id="_CPPv3NK3mml6vector5countE1T"></span><span id="_CPPv2NK3mml6vector5countE1T"></span><span id="mml::vector::count__TC"></span><span class="target" id="classmml_1_1vector_1a89101b66495138c79158b841e403d1b8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector5countE1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Count how many entries are equal to a value </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Value to be checked </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::size_t </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector4coutEb">
+<span id="_CPPv3NK3mml6vector4coutEb"></span><span id="_CPPv2NK3mml6vector4coutEb"></span><span id="mml::vector::cout__bC"></span><span class="target" id="classmml_1_1vector_1a124fb60011746652ebfcafe3815ba6c9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cout</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector4coutEb" title="Link to this definition">#</a><br /></dt>
+<dd><p>print elements in the vector </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newline</strong> – Print with line breaks </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector3delEv">
+<span id="_CPPv3N3mml6vector3delEv"></span><span id="_CPPv2N3mml6vector3delEv"></span><span id="mml::vector::del"></span><span class="target" id="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">del</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector3delEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Empties the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>std::vector&lt;T&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector5emptyEv">
 <span id="_CPPv3NK3mml6vector5emptyEv"></span><span id="_CPPv2NK3mml6vector5emptyEv"></span><span id="mml::vector::emptyC"></span><span class="target" id="classmml_1_1vector_1a8e411ecf7cb856e1eea7245f6b5d5c75"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">empty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector5emptyEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Checks whether the vector is empty. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>iteratur </p>
+<dd class="field-odd"><p>bool </p>
 </dd>
 </dl>
 </dd></dl>
@@ -532,7 +548,18 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3mml6vector3endEv">
 <span id="_CPPv3N3mml6vector3endEv"></span><span id="_CPPv2N3mml6vector3endEv"></span><span id="mml::vector::end"></span><span class="target" id="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector3endEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>iterator to the end of the vector </p>
+<dd><p>Iterator to the end of the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>iterator </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector3endEv">
+<span id="_CPPv3NK3mml6vector3endEv"></span><span id="_CPPv2NK3mml6vector3endEv"></span><span id="mml::vector::endC"></span><span class="target" id="classmml_1_1vector_1ade47add457b0bffaf36e70a23b7f91e8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">const_iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector3endEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Const. iterator to the end of the vector. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>iterator </p>
@@ -578,92 +605,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T">
-<span id="_CPPv3N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"></span><span id="_CPPv2N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"></span><span id="mml::vector::insert__std::vector:T:::iteratorC.TCR"></span><span class="target" id="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T" title="Link to this definition">#</a><br /></dt>
-<dd><p>Insert a value at a specific position. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>position</strong> – The position where the value is put </p></li>
-<li><p><strong>val</strong> – Value </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Iterator </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector8pop_backEv">
-<span id="_CPPv3N3mml6vector8pop_backEv"></span><span id="_CPPv2N3mml6vector8pop_backEv"></span><span id="mml::vector::pop_back"></span><span class="target" id="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop_back</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector8pop_backEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Removes the last entry. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>None </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector9push_backE1T">
-<span id="_CPPv3N3mml6vector9push_backE1T"></span><span id="_CPPv2N3mml6vector9push_backE1T"></span><span id="mml::vector::push_back__T"></span><span class="target" id="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_back</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector9push_backE1T" title="Link to this definition">#</a><br /></dt>
-<dd><p>Adds an element at the end. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> – to e added </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector4sizeEv">
-<span id="_CPPv3NK3mml6vector4sizeEv"></span><span id="_CPPv2NK3mml6vector4sizeEv"></span><span id="mml::vector::sizeC"></span><span class="target" id="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector4sizeEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Size of the vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Size of the vector </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector5countE1T">
-<span id="_CPPv3NK3mml6vector5countE1T"></span><span id="_CPPv2NK3mml6vector5countE1T"></span><span id="mml::vector::count__TC"></span><span class="target" id="classmml_1_1vector_1a89101b66495138c79158b841e403d1b8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector5countE1T" title="Link to this definition">#</a><br /></dt>
-<dd><p>Count how many entries are equal to a value </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> – Value to be checked </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>std::size_t </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector4coutEb">
-<span id="_CPPv3NK3mml6vector4coutEb"></span><span id="_CPPv2NK3mml6vector4coutEb"></span><span id="mml::vector::cout__bC"></span><span class="target" id="classmml_1_1vector_1a124fb60011746652ebfcafe3815ba6c9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cout</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector4coutEb" title="Link to this definition">#</a><br /></dt>
-<dd><p>print elements in the vector </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>newline</strong> – Print with line breaks </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector3delEv">
-<span id="_CPPv3N3mml6vector3delEv"></span><span id="_CPPv2N3mml6vector3delEv"></span><span id="mml::vector::del"></span><span class="target" id="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">del</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector3delEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Empties the vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>std::vector&lt;T&gt; </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4IDpENK3mml6vector5existEbDpRK6values">
 <span id="_CPPv3IDpENK3mml6vector5existEDpRK6values"></span><span id="_CPPv2IDpENK3mml6vector5existEDpRK6values"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">values</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classmml_1_1vector_1a1200bc7fab32e46a22c0f787b58e514b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpENK3mml6vector5existEbDpRK6values" title="mml::vector::exist::values"><span class="n"><span class="pre">values</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4IDpENK3mml6vector5existEbDpRK6values" title="Link to this definition">#</a><br /></dt>
 <dd><p>Check if one <em>or</em> another string exists. </p>
@@ -695,6 +636,23 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T">
+<span id="_CPPv3N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"></span><span id="_CPPv2N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"></span><span id="mml::vector::insert__std::vector:T:::iteratorC.TCR"></span><span class="target" id="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Insert a value at a specific position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> – The position where the value is put </p></li>
+<li><p><strong>val</strong> – Value </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Iterator </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE">
 <span id="_CPPv3NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE"></span><span id="_CPPv2NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE"></span><span id="mml::vector::log__mml::string.b.mml::string.mml::string.mml::stringC"></span><span class="target" id="classmml_1_1vector_1aa22e06b6eacca2a750e594c54df08de4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">logpath</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">newline</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">first</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span>, <a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">last</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span>, <a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="standards.html#_CPPv4N3mml6stringE" title="mml::string"><span class="n"><span class="pre">string</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">separator</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;,&quot;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Write values into a logfile. </p>
@@ -712,18 +670,60 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector7replaceE1T1T">
-<span id="_CPPv3N3mml6vector7replaceE1T1T"></span><span id="_CPPv2N3mml6vector7replaceE1T1T"></span><span id="mml::vector::replace__T.T"></span><span class="target" id="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">replace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Old</span></span>, <a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">New</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector7replaceE1T1T" title="Link to this definition">#</a><br /></dt>
-<dd><p>Replace specific elements with another element. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE">
+<span id="_CPPv3N3mml6vectoraSERKNSt6vectorI1TEE"></span><span id="_CPPv2N3mml6vectoraSERKNSt6vectorI1TEE"></span><span id="mml::vector::assign-operator__std::vector:T:CR"></span><span class="target" id="classmml_1_1vector_1a843e3921478ba5901bdf4826f25ca766"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Assign value with equal sign. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>Old</strong> – Value to be replaced </p></li>
-<li><p><strong>New</strong> – New value </p></li>
-</ul>
+<dd class="field-odd"><p><strong>temp</strong> – Vector with values </p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Vector with the replaced values </p>
+<dd class="field-even"><p>reference to this instance </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vectorixEi">
+<span id="_CPPv3N3mml6vectorixEi"></span><span id="_CPPv2N3mml6vectorixEi"></span><span id="mml::vector::subscript-operator__i"></span><span class="target" id="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6vectorixEi" title="Link to this definition">#</a><br /></dt>
+<dd><p>Returns a value at a specific index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – Index to be returned </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">out_of_range</span></span></span> – : if index not in range </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>value at this index </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vectoreqERKN3mml6vectorI1TEE">
+<span id="_CPPv3NK3mml6vectoreqERKN3mml6vectorI1TEE"></span><span id="_CPPv2NK3mml6vectoreqERKN3mml6vectorI1TEE"></span><span id="mml::vector::eq-operator__mml::vector:T:CRC"></span><span class="target" id="classmml_1_1vector_1a9ccb7128d5b50664aed646273abf2f54"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vectoreqERKN3mml6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Check if vectors are the same. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Vector to be checked </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the same </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vectorneERKNSt6vectorI1TEE">
+<span id="_CPPv3NK3mml6vectorneERKNSt6vectorI1TEE"></span><span id="_CPPv2NK3mml6vectorneERKNSt6vectorI1TEE"></span><span id="mml::vector::neq-operator__std::vector:T:CRC"></span><span class="target" id="classmml_1_1vector_1a0ff9434d2a1e701bbb0d62e035718bf4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vec</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vectorneERKNSt6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Check if vectors are not the same. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Vector to be checked </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if not the same </p>
 </dd>
 </dl>
 </dd></dl>
@@ -797,42 +797,6 @@ document.write(`
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector3setENSt6vectorI1TEE">
-<span id="_CPPv3N3mml6vector3setENSt6vectorI1TEE"></span><span id="_CPPv2N3mml6vector3setENSt6vectorI1TEE"></span><span id="mml::vector::set__std::vector:T:"></span><span class="target" id="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Vec</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector3setENSt6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
-<dd><p>Replace the vector with a new vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>Vec</strong> – Vector </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector4sortEv">
-<span id="_CPPv3N3mml6vector4sortEv"></span><span id="_CPPv2N3mml6vector4sortEv"></span><span id="mml::vector::sort"></span><span class="target" id="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6vector4sortEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Sort the vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Return the sorted vector </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector3sumEv">
-<span id="_CPPv3NK3mml6vector3sumEv"></span><span id="_CPPv2NK3mml6vector3sumEv"></span><span id="mml::vector::sumC"></span><span class="target" id="classmml_1_1vector_1aa78b9774322f062ef212f9f5f84873dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector3sumEv" title="Link to this definition">#</a><br /></dt>
-<dd><p>Determine the sum of the vector. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Throws<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">logic_error</span></span></span> – : if vector is empty or if template is boolean </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sum of the vector </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3mml6vectorplE6vectorI1TE">
 <span id="_CPPv3NK3mml6vectorplE6vectorI1TE"></span><span id="_CPPv2NK3mml6vectorplE6vectorI1TE"></span><span id="mml::vector::add-operator__vector:T:C"></span><span class="target" id="classmml_1_1vector_1a52a03839ada0f63201ccb6d52394ed9a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="Thread.html#_CPPv43mml" title="mml"><span class="n"><span class="pre">mml</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector"><span class="n"><span class="pre">vector</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3mml6vectorplE6vectorI1TE" title="Link to this definition">#</a><br /></dt>
 <dd><p>Add a vector to this vector. </p>
@@ -896,6 +860,92 @@ document.write(`
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Instance of the class </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector8pop_backEv">
+<span id="_CPPv3N3mml6vector8pop_backEv"></span><span id="_CPPv2N3mml6vector8pop_backEv"></span><span id="mml::vector::pop_back"></span><span class="target" id="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop_back</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector8pop_backEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Removes the last entry. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector9push_backE1T">
+<span id="_CPPv3N3mml6vector9push_backE1T"></span><span id="_CPPv2N3mml6vector9push_backE1T"></span><span id="mml::vector::push_back__T"></span><span class="target" id="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_back</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector9push_backE1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Adds an element at the end. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – to e added </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector7replaceE1T1T">
+<span id="_CPPv3N3mml6vector7replaceE1T1T"></span><span id="_CPPv2N3mml6vector7replaceE1T1T"></span><span id="mml::vector::replace__T.T"></span><span class="target" id="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">replace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">Old</span></span>, <a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">New</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector7replaceE1T1T" title="Link to this definition">#</a><br /></dt>
+<dd><p>Replace specific elements with another element. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Old</strong> – Value to be replaced </p></li>
+<li><p><strong>New</strong> – New value </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Vector with the replaced values </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector3setENSt6vectorI1TEE">
+<span id="_CPPv3N3mml6vector3setENSt6vectorI1TEE"></span><span id="_CPPv2N3mml6vector3setENSt6vectorI1TEE"></span><span id="mml::vector::set__std::vector:T:"></span><span class="target" id="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">Vec</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N3mml6vector3setENSt6vectorI1TEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Replace the vector with a new vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Vec</strong> – Vector </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector4sizeEv">
+<span id="_CPPv3NK3mml6vector4sizeEv"></span><span id="_CPPv2NK3mml6vector4sizeEv"></span><span id="mml::vector::sizeC"></span><span class="target" id="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector4sizeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Size of the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Size of the vector </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3mml6vector4sortEv">
+<span id="_CPPv3N3mml6vector4sortEv"></span><span id="_CPPv2N3mml6vector4sortEv"></span><span id="mml::vector::sort"></span><span class="target" id="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3mml6vector4sortEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Sort the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Return the sorted vector </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3mml6vector3sumEv">
+<span id="_CPPv3NK3mml6vector3sumEv"></span><span id="_CPPv2NK3mml6vector3sumEv"></span><span id="mml::vector::sumC"></span><span class="target" id="classmml_1_1vector_1aa78b9774322f062ef212f9f5f84873dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3mml6vectorE" title="mml::vector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3mml6vector3sumEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Determine the sum of the vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">logic_error</span></span></span> – : if vector is empty or if template is boolean </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sum of the vector </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1002,35 +1052,39 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN3mml6vectorE"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector6vectorEv"><code class="docutils literal notranslate"><span class="pre">vector::vector()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector6vectorENSt16initializer_listI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::vector()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::operator=()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorixEi"><code class="docutils literal notranslate"><span class="pre">vector::operator[]()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector5beginEv"><code class="docutils literal notranslate"><span class="pre">vector::begin()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector5emptyEv"><code class="docutils literal notranslate"><span class="pre">vector::empty()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector3endEv"><code class="docutils literal notranslate"><span class="pre">vector::end()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector5eraseE6size_t"><code class="docutils literal notranslate"><span class="pre">vector::erase()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector5eraseE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">vector::erase()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"><code class="docutils literal notranslate"><span class="pre">vector::insert()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector8pop_backEv"><code class="docutils literal notranslate"><span class="pre">vector::pop_back()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector9push_backE1T"><code class="docutils literal notranslate"><span class="pre">vector::push_back()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector4sizeEv"><code class="docutils literal notranslate"><span class="pre">vector::size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector5beginEv"><code class="docutils literal notranslate"><span class="pre">vector::begin()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector5countE1T"><code class="docutils literal notranslate"><span class="pre">vector::count()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector4coutEb"><code class="docutils literal notranslate"><span class="pre">vector::cout()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector3delEv"><code class="docutils literal notranslate"><span class="pre">vector::del()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector5emptyEv"><code class="docutils literal notranslate"><span class="pre">vector::empty()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector3endEv"><code class="docutils literal notranslate"><span class="pre">vector::end()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector3endEv"><code class="docutils literal notranslate"><span class="pre">vector::end()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector5eraseE6size_t"><code class="docutils literal notranslate"><span class="pre">vector::erase()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector5eraseE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">vector::erase()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpENK3mml6vector5existEbDpRK6values"><code class="docutils literal notranslate"><span class="pre">vector::exist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector4findEK1T6size_t"><code class="docutils literal notranslate"><span class="pre">vector::find()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T"><code class="docutils literal notranslate"><span class="pre">vector::insert()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE"><code class="docutils literal notranslate"><span class="pre">vector::log()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector7replaceE1T1T"><code class="docutils literal notranslate"><span class="pre">vector::replace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::operator=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorixEi"><code class="docutils literal notranslate"><span class="pre">vector::operator[]()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectoreqERKN3mml6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::operator==()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectorneERKNSt6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::operator!=()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectormlERK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator*()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectormLERK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator*=()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectorplERK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator+()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorpLERK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator+=()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector3setENSt6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::set()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector4sortEv"><code class="docutils literal notranslate"><span class="pre">vector::sort()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector3sumEv"><code class="docutils literal notranslate"><span class="pre">vector::sum()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectorplE6vectorI1TE"><code class="docutils literal notranslate"><span class="pre">vector::operator+()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorpLEN3mml6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::operator+=()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vectoreoEK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator^()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectoreOEK1T"><code class="docutils literal notranslate"><span class="pre">vector::operator^=()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector8pop_backEv"><code class="docutils literal notranslate"><span class="pre">vector::pop_back()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector9push_backE1T"><code class="docutils literal notranslate"><span class="pre">vector::push_back()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector7replaceE1T1T"><code class="docutils literal notranslate"><span class="pre">vector::replace()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector3setENSt6vectorI1TEE"><code class="docutils literal notranslate"><span class="pre">vector::set()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector4sizeEv"><code class="docutils literal notranslate"><span class="pre">vector::size()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vector4sortEv"><code class="docutils literal notranslate"><span class="pre">vector::sort()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector3sumEv"><code class="docutils literal notranslate"><span class="pre">vector::sum()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4NK3mml6vector5tovecEv"><code class="docutils literal notranslate"><span class="pre">vector::tovec()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorlsERNSt7ostreamERK6vectorI1TE"><code class="docutils literal notranslate"><span class="pre">vector::operator&lt;&lt;()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3mml6vectorrsERNSt7istreamERK6vectorI1TE"><code class="docutils literal notranslate"><span class="pre">vector::operator&gt;&gt;()</span></code></a></li>
@@ -1082,7 +1136,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

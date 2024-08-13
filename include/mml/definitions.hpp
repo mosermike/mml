@@ -1,10 +1,13 @@
-/*
- * Autor: Mike Moser
+/**
+ * @file definitions.hpp
+ * @author Mike Moser
+ * @brief Some definitions used in the library
+ * @version 1.0
+ * @date 2024-08-13
  * 
- * Library definitions.h
- * Different definitions
+ * @copyright Copyright (c) 2024
  * 
-*/
+ */
 #ifndef MML_INCLUDE_MML_DEFINITIONS_HPP
 #define MML_INCLUDE_MML_DEFINITIONS_HPP
 
@@ -20,7 +23,7 @@
 #define _100MB  104857600	//dd blockSize 100M
 #define _1G    1000000000	//dd blockSize 1GB
 #define _1GB   1073741824	//dd blockSize 1G
-#ifdef UINT64_MAX
+#ifdef __ENVIRONMENT64__
 #define _10G 10000000000 //dd blocksize _10G
 #endif
 
@@ -33,37 +36,19 @@
 #define S_SOCK		12	// Socket DT_SOCK
 #define S_OTHER     14  // Other type
 
-#define _sec		0	// Sekunde
-#define _min		1	// Minute
-#define _hour		2	// Stunde
-#define _day		3	// Tag
-#define _month		4	// Monat
-#define _year		5	// Jahr
+#define _sec		0	// Seconds
+#define _min		1	// Minutes
+#define _hour		2	// Hours
+#define _day		3	// Days
+#define _month		4	// Month
+#define _year		5	// Year
 #define _st1		6	// Summertime
-#define _weekday	7  // Wochentag
-#define _yearday	8  // Tage seit Neujahr
-#define _kw			9   // Kalenderwoche
+#define _weekday	7   // Week day
+#define _yearday	8   // Days since New Year
+#define _kw			9   // Calendar Week
 
-#define _y_sec 60*60*24*365 
-#define _m_sec
-#define _d_sec
-// Logdateien
-#define _check_root_log 	"/var/log/check_root.log"
-#define _cifs_log 			"/var/log/cifs.log"
-#define _cop_log 			"/var/log/cop.log"
-#define _copy_log 			"/var/log/copy.log"
-//#define _rechner_log 		"/var/log/rechner.log"
-//#define _statistik_log 		"/var/log/statistik.log"
-#define _timer_log			"/var/log/timer.log"
-
-// Logdateien Raspberry
-#define _backup_log "/var/log/backup.log"
-
-// IP-Adressen
-#define _alma		    "192.168.20.99"
-#define _printer		"192.168.20.20"
-
-
+#define _y_sec 60*60*24*365.15
+#define _d_sec 60*60*24
 
 #endif
 

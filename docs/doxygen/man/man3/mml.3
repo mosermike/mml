@@ -1,4 +1,4 @@
-.TH "mml" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
+.TH "mml" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,9 @@ mml
 .RI " \fBthread\fP"
 .br
 .ti -1c
+.RI " \fBtime\fP"
+.br
+.ti -1c
 .RI " \fBUnix\fP"
 .br
 .in -1c
@@ -33,9 +36,6 @@ mml
 .br
 .ti -1c
 .RI "class \fBstring\fP"
-.br
-.ti -1c
-.RI "class \fBTimer\fP"
 .br
 .ti -1c
 .RI "class \fBvector\fP"
@@ -99,7 +99,7 @@ Mike Moser
 .br
 .RI "Returns the date and/or time as a std::string\&. "
 .ti -1c
-.RI "bool \fBis_num\fP (char c) noexcept"
+.RI "bool \fBisnum\fP (char c) noexcept"
 .br
 .RI "Checks if a character is a number\&. "
 .ti -1c
@@ -373,7 +373,7 @@ generated random number
 .RE
 .PP
 
-.SS "bool mml::is_num (char c)\fC [noexcept]\fP"
+.SS "bool mml::isnum (char c)\fC [noexcept]\fP"
 
 .PP
 Checks if a character is a number\&. 

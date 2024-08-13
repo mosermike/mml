@@ -1,10 +1,13 @@
 /**
- * : @author Mike Moser
- * : 
- * : @file help.cpp
- * : @note This file contains functions to print out a help page for the different 'programes' here
- * : 
-*/
+ * @file help.cpp
+ * @author Mike Moser
+ * @brief This file contains functions to print out a help page for the different 'programes' here
+ * @version 1.0
+ * @date 2024-08-13
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <iostream>
 #include <fstream>
 

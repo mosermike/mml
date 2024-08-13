@@ -1,10 +1,13 @@
 /**
+ * @file shell.cpp
  * @author Mike Moser
+ * @brief Shell-related functions
+ * @version 1.0
+ * @date 2024-08-13
  * 
- * Programm shell.cpp
- * Enthält verschiedene Funktionen
+ * @copyright Copyright (c) 2024
  * 
-*/ 
+ */
 
 #include <iostream>
 #include <string>
@@ -16,7 +19,7 @@
 
 #include "mml/definitions.hpp"
 #include "mml/shell.hpp"
-#include "mml.hpp"
+#include "mml/string.hpp"
 
 //FORMATIERUNGEN DER SHELL ÄNDERN:
 /*

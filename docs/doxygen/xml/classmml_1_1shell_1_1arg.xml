@@ -642,11 +642,13 @@
       <member refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" prot="private" virt="non-virtual"><scope>mml::shell::arg</scope><name>argv</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a1230d5ca78a279f31eb463750e38ef04" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>begin</name></member>
       <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>begin</name></member>
+      <member refid="classmml_1_1vector_1a5030ae731771646b8aee2e57159d5f30" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>begin</name></member>
       <member refid="classmml_1_1vector_1a89101b66495138c79158b841e403d1b8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>count</name></member>
       <member refid="classmml_1_1vector_1a124fb60011746652ebfcafe3815ba6c9" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>cout</name></member>
       <member refid="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>del</name></member>
       <member refid="classmml_1_1vector_1a8e411ecf7cb856e1eea7245f6b5d5c75" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>empty</name></member>
       <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>end</name></member>
+      <member refid="classmml_1_1vector_1ade47add457b0bffaf36e70a23b7f91e8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>end</name></member>
       <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>erase</name></member>
       <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>erase</name></member>
       <member refid="classmml_1_1vector_1a1200bc7fab32e46a22c0f787b58e514b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
@@ -655,6 +657,7 @@
       <member refid="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>insert</name></member>
       <member refid="classmml_1_1vector_1aa22e06b6eacca2a750e594c54df08de4" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>log</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a318065c8db20353c8e806c18886880ae" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>nexist</name></member>
+      <member refid="classmml_1_1vector_1a0ff9434d2a1e701bbb0d62e035718bf4" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator!=</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a6803b86ef3d63eb9c8f65d48586f148c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator()</name></member>
       <member refid="classmml_1_1shell_1_1arg_1a0d3883a51dd4012f770892aa41d857d5" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator()</name></member>
       <member refid="classmml_1_1vector_1a15ad0dfc3eef8609bf9f621821cefa60" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator*</name></member>
@@ -665,7 +668,8 @@
       <member refid="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator+=</name></member>
       <member refid="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator=</name></member>
       <member refid="classmml_1_1shell_1_1arg_1af940491905058f07818cb7a613b1c917" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator=</name></member>
-      <member refid="classmml_1_1vector_1ae5d5c7e921bc2c07453a8ef6ff4d9e47" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1a237af268e6e5e26994d18f0a57e6e615" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1a9ccb7128d5b50664aed646273abf2f54" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator==</name></member>
       <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator[]</name></member>
       <member refid="classmml_1_1vector_1a7b93a68aed9fb7e898e9752ee0629a03" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator[]</name></member>
       <member refid="classmml_1_1vector_1a54cc079045c143fb7a543089dfd007be" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator^</name></member>
@@ -683,9 +687,8 @@
       <member refid="classmml_1_1vector_1af978a35f6c899469c985ec65e9f9f9cb" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>tovec</name></member>
       <member refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" prot="protected" virt="non-virtual"><scope>mml::shell::arg</scope><name>vec</name></member>
       <member refid="classmml_1_1vector_1ae33ede1abf01d6d2579d554e0e4ece65" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
-      <member refid="classmml_1_1vector_1ad44c393d85ce94e01ae6d851abfe3a60" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
-      <member refid="classmml_1_1vector_1ac6bb999219a514400d27c3ae0a1c38d8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
-      <member refid="classmml_1_1vector_1a110a81cb89a1d8d3747a59ec4bb12ec3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1afe08d7126fba37526915840d75476787" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1a699277331e90ad4745e747ca986ca014" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
       <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>

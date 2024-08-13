@@ -1,4 +1,4 @@
-.TH "mml::file" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
+.TH "mml::file" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -25,10 +25,6 @@ mml::file
 .RI "bool \fBequal\fP (std::string src, std::string dst)"
 .br
 .RI "Compare two files by using the SHA256 algorithm\&. Only works for linux\&. "
-.ti -1c
-.RI "int32_t \fBfiletype\fP (std::string filepath)"
-.br
-.RI "Determine the type of an object (directory, file, etc\&.) "
 .ti -1c
 .RI "std::string \fBhumanread\fP (std::size_t number)"
 .br
@@ -187,47 +183,6 @@ Compare two files by using the SHA256 algorithm\&. Only works for linux\&.
 \fBReturns\fP
 .RS 4
 bool if sha256 is the same 
-.RE
-.PP
-
-.SS "int32_t mml::file::filetype (std::string filepath)"
-
-.PP
-Determine the type of an object (directory, file, etc\&.) 
-.PP
-\fBParameters\fP
-.RS 4
-\fIfilepath\fP Path to the object 
-.RE
-.PP
-\fBReturns\fP
-.RS 4
-Returns a number to identify the type of the object 
-.RE
-.PP
-\fBNote\fP
-.RS 4
-The numbers have the following meaning:
-.IP "\(bu" 2
-1: DT_FIFO
-.IP "\(bu" 2
-2: Serial connected device, mouse, etc\&.
-.IP "\(bu" 2
-4: Directory
-.IP "\(bu" 2
-6: Device or partition
-.IP "\(bu" 2
-8: normal file
-.IP "\(bu" 2
-10: symbolic link
-.IP "\(bu" 2
-12: Socket 
-.PP
-.RE
-.PP
-\fBTodo\fP
-.RS 4
-use library to detect what it is and also then use hard link and symbolic link 
 .RE
 .PP
 

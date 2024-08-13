@@ -121,86 +121,89 @@
     <member refid="classmml_1_1thread_1_1Threads_1a75965dea579aafe9bca1c2e908efbe78" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classmml_1_1thread_1_1Threads_1abd0b51b14bbeb03b4d80648c8a19dc0a" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
-  <compound refid="structmml_1_1Timer_1_1time" kind="struct"><name>mml::Timer::time</name>
-    <member refid="structmml_1_1Timer_1_1time_1a7c172c1fcfbe0cec0b61779a7b043939" kind="variable"><name>hour</name></member>
-    <member refid="structmml_1_1Timer_1_1time_1a60cd200f356c67c734151223b207b020" kind="variable"><name>minute</name></member>
-    <member refid="structmml_1_1Timer_1_1time_1a6190991cf408697e03b5d62c9fb39a26" kind="variable"><name>second</name></member>
-    <member refid="structmml_1_1Timer_1_1time_1af9d88bce2295badd6d1fc802325b7821" kind="variable"><name>milliseconds</name></member>
-    <member refid="structmml_1_1Timer_1_1time_1aaee92b490e609704efa02d978205fef5" kind="variable"><name>microseconds</name></member>
+  <compound refid="structmml_1_1time_1_1time" kind="struct"><name>mml::time::time</name>
+    <member refid="structmml_1_1time_1_1time_1a34ecd76022d8628b5e7d7bdd2a7eb032" kind="variable"><name>hour</name></member>
+    <member refid="structmml_1_1time_1_1time_1a5491a4e346f24f7263a65f6d19865ddc" kind="variable"><name>minute</name></member>
+    <member refid="structmml_1_1time_1_1time_1a4a9aeaf04c03ce48c5b3401650eaaa75" kind="variable"><name>second</name></member>
+    <member refid="structmml_1_1time_1_1time_1a2086345871a84aa9a8ea8029cae79598" kind="variable"><name>milliseconds</name></member>
+    <member refid="structmml_1_1time_1_1time_1a32ae8cc4f279c4f60f14c66225bb1d64" kind="variable"><name>microseconds</name></member>
   </compound>
-  <compound refid="classmml_1_1Timer" kind="class"><name>mml::Timer</name>
-    <member refid="classmml_1_1Timer_1af30c9795c8fa39dddf2e38f3454a1d3c" kind="variable"><name>ticksStart</name></member>
-    <member refid="classmml_1_1Timer_1a786ec195a06db724301349d6de9d52b3" kind="variable"><name>ticksEnd</name></member>
-    <member refid="classmml_1_1Timer_1aab6d0bb820b23c8629e43882d41a484e" kind="variable"><name>ticksZwischenstart</name></member>
-    <member refid="classmml_1_1Timer_1aaf59bb2b41686ee455dccc49bd6ab070" kind="variable"><name>break_time_mus</name></member>
-    <member refid="classmml_1_1Timer_1a4bd2451902b4f43e67652ced68cd76a8" kind="variable"><name>stopped</name></member>
-    <member refid="classmml_1_1Timer_1a5c7f0b7e018b709bb57d03c5096c8f4a" kind="variable"><name>timebreak</name></member>
-    <member refid="classmml_1_1Timer_1aad5afab8a116b1d8f0f8dc53f1157bbb" kind="function"><name>_now</name></member>
-    <member refid="classmml_1_1Timer_1a8388437a554236e800ef35d37ceba950" kind="function"><name>Timer</name></member>
-    <member refid="classmml_1_1Timer_1a51f33e4e9ced73cce02ecc259ea6e3df" kind="function"><name>Timer</name></member>
-    <member refid="classmml_1_1Timer_1ad28f8000cda033d3eb7dadab5554a9b5" kind="function"><name>~Timer</name></member>
-    <member refid="classmml_1_1Timer_1a2b6315ee6503c5d274a013305c263061" kind="function"><name>break_start</name></member>
-    <member refid="classmml_1_1Timer_1aa20422324f85b797e1b7fe7d6d649a5b" kind="function"><name>break_stop</name></member>
-    <member refid="classmml_1_1Timer_1aeadb046285a068a189a4359e9302ed3e" kind="function"><name>clock</name></member>
-    <member refid="classmml_1_1Timer_1aeed094c326ab2fa060a8b4c6c12ec3b6" kind="function"><name>getMS</name></member>
-    <member refid="classmml_1_1Timer_1ad2dbc8a979f81750b116415cb1c87f7a" kind="function"><name>getS</name></member>
-    <member refid="classmml_1_1Timer_1acb3a5c53ad94c5343fc5fb13da1df05a" kind="function"><name>getUS</name></member>
-    <member refid="classmml_1_1Timer_1a8fe0536f964b0a5ae8afe43fc45e9a57" kind="function"><name>print</name></member>
-    <member refid="classmml_1_1Timer_1a901cde7e7108eb41a97da7e3835844d8" kind="function"><name>range</name></member>
-    <member refid="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b" kind="function"><name>start</name></member>
-    <member refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kind="function"><name>stop</name></member>
-    <member refid="classmml_1_1Timer_1a1479e752f149e382d72236b112f72fdf" kind="function"><name>str</name></member>
-    <member refid="classmml_1_1Timer_1a253588df16714730b8f5b086827e0761" kind="function"><name>strct</name></member>
-    <member refid="classmml_1_1Timer_1a161d07a969eb97f94a6abfd64d634d3b" kind="function"><name>strct_clock</name></member>
-    <member refid="classmml_1_1Timer_1ab1a3e42f9ac3ff7bf54954856ffb0717" kind="function"><name>ticks_to_double</name></member>
-    <member refid="classmml_1_1Timer_1a1857a5be5649d7d640d89fa7e22763c5" kind="function"><name>toInt</name></member>
-    <member refid="classmml_1_1Timer_1a028b6a9a83d59c9e88be1e834f684c1b" kind="friend"><name>operator&lt;&lt;</name></member>
+  <compound refid="classmml_1_1time_1_1Timer" kind="class"><name>mml::time::Timer</name>
+    <member refid="classmml_1_1time_1_1Timer_1a9e484c199b2a1ef5b665d417bd208450" kind="variable"><name>ticksStart</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1ab30066e5a4d1da2fa339d1cb598f94c2" kind="variable"><name>ticksEnd</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a8d325c979d99fc739bc575d7702b09fa" kind="variable"><name>break_time_mus</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1aa460c1db0228f0eaaec498383a5ebc33" kind="variable"><name>timebreak</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1af75b3fecc6fe94488c45d15203f0eeb5" kind="variable"><name>stopped</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a403ab60dddade1edde67a40890eb77d5" kind="function"><name>_now</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a20a63e7c75fdb5d2bc89734c7259a9a8" kind="function"><name>Timer</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1adfad0133c3aadfcf8405f201ac6b73e5" kind="function"><name>Timer</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1ab40d8897ab5367dd42731d81b856690a" kind="function"><name>~Timer</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1acbfc5ba44bf113186ed62123473e9bad" kind="function"><name>break_start</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a453e8f3a08923e3c3a0ec9ab37dea5d2" kind="function"><name>break_stop</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a0bd314d4b2e0768f69cea674f7c703c0" kind="function"><name>clock</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a7ab45be7d61d2102275b9e36f1ef6c82" kind="function"><name>get_ticks</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1acaa29039bd109356528ce1940d3aeb1c" kind="function"><name>getMS</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1aa2fe19945159ae806d5405cad5daf1e4" kind="function"><name>getS</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a5facf919a260c64d3b19d0e3690e91a6" kind="function"><name>getUS</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a7131c5c0f27c89efe18f5b3075ebf1e5" kind="function"><name>print</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1ae7dfc03e3810a853a7fa4403458374d9" kind="function"><name>range</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a33b12b23d4d744c22b4fa29bcbc44822" kind="function"><name>start</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a832f10fd2cb4810911a023964af6114a" kind="function"><name>stop</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a49302dac2b57a7844a037524cb48f39c" kind="function"><name>str</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a0b5c226af1f7f58b10c430972082844b" kind="function"><name>strct</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a7fa13c41cbd240e1141c1c4bba158f88" kind="function"><name>strct_clock</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a71bd3226006b15a6a27af754841c8576" kind="function"><name>ticks_to_double</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a1adbd02ee024b9f497e24a7efc202ec7" kind="function"><name>toInt</name></member>
+    <member refid="classmml_1_1time_1_1Timer_1a48a5bcf299d649e913c7676a43e107d5" kind="friend"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="classmml_1_1vector" kind="class"><name>mml::vector</name>
     <member refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kind="variable"><name>vec</name></member>
     <member refid="classmml_1_1vector_1ae33ede1abf01d6d2579d554e0e4ece65" kind="function"><name>vector</name></member>
-    <member refid="classmml_1_1vector_1ad44c393d85ce94e01ae6d851abfe3a60" kind="function"><name>vector</name></member>
-    <member refid="classmml_1_1vector_1ac6bb999219a514400d27c3ae0a1c38d8" kind="function"><name>vector</name></member>
-    <member refid="classmml_1_1vector_1a110a81cb89a1d8d3747a59ec4bb12ec3" kind="function"><name>vector</name></member>
+    <member refid="classmml_1_1vector_1afe08d7126fba37526915840d75476787" kind="function"><name>vector</name></member>
+    <member refid="classmml_1_1vector_1a699277331e90ad4745e747ca986ca014" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" kind="function"><name>vector</name></member>
     <member refid="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" kind="function"><name>vector</name></member>
-    <member refid="classmml_1_1vector_1a27bd93034429d512f0414f71e2da0448" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1vector_1ae5d5c7e921bc2c07453a8ef6ff4d9e47" kind="function"><name>operator=</name></member>
-    <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" kind="function"><name>operator[]</name></member>
-    <member refid="classmml_1_1vector_1a7b93a68aed9fb7e898e9752ee0629a03" kind="function"><name>operator[]</name></member>
     <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" kind="function"><name>begin</name></member>
-    <member refid="classmml_1_1vector_1a8e411ecf7cb856e1eea7245f6b5d5c75" kind="function"><name>empty</name></member>
-    <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" kind="function"><name>end</name></member>
-    <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" kind="function"><name>erase</name></member>
-    <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" kind="function"><name>erase</name></member>
-    <member refid="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" kind="function"><name>insert</name></member>
-    <member refid="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877" kind="function"><name>pop_back</name></member>
-    <member refid="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0" kind="function"><name>push_back</name></member>
-    <member refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" kind="function"><name>size</name></member>
+    <member refid="classmml_1_1vector_1a5030ae731771646b8aee2e57159d5f30" kind="function"><name>begin</name></member>
     <member refid="classmml_1_1vector_1a89101b66495138c79158b841e403d1b8" kind="function"><name>count</name></member>
     <member refid="classmml_1_1vector_1a124fb60011746652ebfcafe3815ba6c9" kind="function"><name>cout</name></member>
     <member refid="classmml_1_1vector_1a1e7183f3df81ba57b2b161091119d591" kind="function"><name>del</name></member>
+    <member refid="classmml_1_1vector_1a8e411ecf7cb856e1eea7245f6b5d5c75" kind="function"><name>empty</name></member>
+    <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" kind="function"><name>end</name></member>
+    <member refid="classmml_1_1vector_1ade47add457b0bffaf36e70a23b7f91e8" kind="function"><name>end</name></member>
+    <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" kind="function"><name>erase</name></member>
+    <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" kind="function"><name>erase</name></member>
     <member refid="classmml_1_1vector_1a1200bc7fab32e46a22c0f787b58e514b" kind="function"><name>exist</name></member>
     <member refid="classmml_1_1vector_1a232246d8905a5b7beab2d96ac9b928f8" kind="function"><name>find</name></member>
+    <member refid="classmml_1_1vector_1a15c357eea5a88f6903fbbf2f902449d3" kind="function"><name>insert</name></member>
     <member refid="classmml_1_1vector_1aa22e06b6eacca2a750e594c54df08de4" kind="function"><name>log</name></member>
-    <member refid="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" kind="function"><name>replace</name></member>
+    <member refid="classmml_1_1vector_1a843e3921478ba5901bdf4826f25ca766" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1vector_1a237af268e6e5e26994d18f0a57e6e615" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" kind="function"><name>operator[]</name></member>
+    <member refid="classmml_1_1vector_1a7b93a68aed9fb7e898e9752ee0629a03" kind="function"><name>operator[]</name></member>
+    <member refid="classmml_1_1vector_1a9ccb7128d5b50664aed646273abf2f54" kind="function"><name>operator==</name></member>
+    <member refid="classmml_1_1vector_1a0ff9434d2a1e701bbb0d62e035718bf4" kind="function"><name>operator!=</name></member>
     <member refid="classmml_1_1vector_1a15ad0dfc3eef8609bf9f621821cefa60" kind="function"><name>operator*</name></member>
     <member refid="classmml_1_1vector_1aa1e76ce928f0025c21b4ca42e227b4cf" kind="function"><name>operator*=</name></member>
     <member refid="classmml_1_1vector_1a02678cc8198a3290d3d647c3459f8a00" kind="function"><name>operator+</name></member>
     <member refid="classmml_1_1vector_1a16d7de3e21e86095a82e23e99e6415b7" kind="function"><name>operator+=</name></member>
-    <member refid="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" kind="function"><name>set</name></member>
-    <member refid="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" kind="function"><name>sort</name></member>
-    <member refid="classmml_1_1vector_1aa78b9774322f062ef212f9f5f84873dd" kind="function"><name>sum</name></member>
     <member refid="classmml_1_1vector_1a52a03839ada0f63201ccb6d52394ed9a" kind="function"><name>operator+</name></member>
     <member refid="classmml_1_1vector_1ae42b8172bc702bff9d2f3dcc41d21db6" kind="function"><name>operator+=</name></member>
     <member refid="classmml_1_1vector_1a54cc079045c143fb7a543089dfd007be" kind="function"><name>operator^</name></member>
     <member refid="classmml_1_1vector_1ac971bc51f4e13b7829110ff3abb9b94a" kind="function"><name>operator^=</name></member>
+    <member refid="classmml_1_1vector_1a1393d9931fe936f267791067f2bea877" kind="function"><name>pop_back</name></member>
+    <member refid="classmml_1_1vector_1a27424a774d46cbbf509f47ab8c801de0" kind="function"><name>push_back</name></member>
+    <member refid="classmml_1_1vector_1a70cdc7cc551a2c5e9acd0c1f18fc6d1b" kind="function"><name>replace</name></member>
+    <member refid="classmml_1_1vector_1a6e15f0519463ea24dbfeb014f9381656" kind="function"><name>set</name></member>
+    <member refid="classmml_1_1vector_1a009b3e42dba375229367bf85a5018e36" kind="function"><name>size</name></member>
+    <member refid="classmml_1_1vector_1acfacaf78023f4f300cfad46a666740d2" kind="function"><name>sort</name></member>
+    <member refid="classmml_1_1vector_1aa78b9774322f062ef212f9f5f84873dd" kind="function"><name>sum</name></member>
     <member refid="classmml_1_1vector_1af978a35f6c899469c985ec65e9f9f9cb" kind="function"><name>tovec</name></member>
+    <member refid="classmml_1_1vector_1ab5d3202dc65b9d1ae65daf62b8114afd" kind="function"><name>_exist</name></member>
     <member refid="classmml_1_1vector_1a7224e4650e76335a445d3577bb24e377" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="classmml_1_1vector_1a612263cfe9350459c56fd68000d2fb06" kind="friend"><name>operator&gt;&gt;</name></member>
-    <member refid="classmml_1_1vector_1ab5d3202dc65b9d1ae65daf62b8114afd" kind="function"><name>_exist</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
@@ -220,7 +223,7 @@
     <member refid="namespacemml_1af4da79098c1caf9501e3f4ad9313a573" kind="function"><name>check_root</name></member>
     <member refid="namespacemml_1a4e23041702a789444e71665de8e19b91" kind="function"><name>date</name></member>
     <member refid="namespacemml_1ae53fc572ec720a1c9aebc3ba5458ff5d" kind="function"><name>date</name></member>
-    <member refid="namespacemml_1ac687254476eb5589ff145f7ccb8f203b" kind="function"><name>is_num</name></member>
+    <member refid="namespacemml_1a62caac25aebf89f67e3c8438fbbb67fa" kind="function"><name>isnum</name></member>
     <member refid="namespacemml_1ad1fcba2487a959000bac06da539b792c" kind="function"><name>range</name></member>
     <member refid="namespacemml_1a8648c76abb82d5eb1745f91e4201b247" kind="function"><name>range</name></member>
     <member refid="namespacemml_1a5aa66f758c7e5b3bde73a72428c60db7" kind="function"><name>round</name></member>
@@ -242,7 +245,6 @@
     <member refid="namespacemml_1_1file_1a3d0906e356f3e22593e89fcbec5760d7" kind="function"><name>byteCopy</name></member>
     <member refid="namespacemml_1_1file_1ae8b01165891f2bd5e3c85a2e35a1c999" kind="function"><name>copy</name></member>
     <member refid="namespacemml_1_1file_1a5c59971f2c51414f4ecbc2b3ab40909a" kind="function"><name>equal</name></member>
-    <member refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kind="function"><name>filetype</name></member>
     <member refid="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c" kind="function"><name>humanread</name></member>
     <member refid="namespacemml_1_1file_1a4037d2ecadff2ef72d423f1c6f867834" kind="function"><name>num_lines</name></member>
     <member refid="namespacemml_1_1file_1a25b3681154f917c6ff8701e0c158bda2" kind="function"><name>Program_exist</name></member>
@@ -273,8 +275,57 @@
   </compound>
   <compound refid="namespacemml_1_1thread" kind="namespace"><name>mml::thread</name>
   </compound>
+  <compound refid="namespacemml_1_1time" kind="namespace"><name>mml::time</name>
+  </compound>
   <compound refid="namespacemml_1_1Unix" kind="namespace"><name>mml::Unix</name>
     <member refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kind="function"><name>exist</name></member>
+  </compound>
+  <compound refid="CMakeCXXCompilerId_8cpp" kind="file"><name>CMakeCXXCompilerId.cpp</name>
+    <member refid="CMakeCXXCompilerId_8cpp_1ae5510d82e4946f1656f4969911c54736" kind="define"><name>__has_include</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a34cc889e576a1ae6c84ae9e0a851ba21" kind="define"><name>CXX_STD</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a4607cccf070750927b458473ca82c090" kind="variable"><name>info_language_standard_default</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a0f46a8a39e09d9b803c4766904fd7e99" kind="variable"><name>info_language_extensions_default</name></member>
+    <member refid="CMakeCXXCompilerId_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="arg_8cpp_8o_8d" kind="file"><name>arg.cpp.o.d</name>
+  </compound>
+  <compound refid="file_8cpp_8o_8d" kind="file"><name>file.cpp.o.d</name>
+  </compound>
+  <compound refid="help_8cpp_8o_8d" kind="file"><name>help.cpp.o.d</name>
+  </compound>
+  <compound refid="log_8cpp_8o_8d" kind="file"><name>log.cpp.o.d</name>
+  </compound>
+  <compound refid="shell_8cpp_8o_8d" kind="file"><name>shell.cpp.o.d</name>
+  </compound>
+  <compound refid="standards_8cpp_8o_8d" kind="file"><name>standards.cpp.o.d</name>
+  </compound>
+  <compound refid="string_8cpp_8o_8d" kind="file"><name>string.cpp.o.d</name>
+  </compound>
+  <compound refid="time_8cpp_8o_8d" kind="file"><name>time.cpp.o.d</name>
+  </compound>
+  <compound refid="Unix_8cpp_8o_8d" kind="file"><name>Unix.cpp.o.d</name>
+  </compound>
+  <compound refid="User_8cpp_8o_8d" kind="file"><name>User.cpp.o.d</name>
+  </compound>
+  <compound refid="vector_8cpp_8o_8d" kind="file"><name>vector.cpp.o.d</name>
+  </compound>
+  <compound refid="test__args_8cpp_8o_8d" kind="file"><name>test_args.cpp.o.d</name>
+  </compound>
+  <compound refid="test__standards_8cpp_8o_8d" kind="file"><name>test_standards.cpp.o.d</name>
+  </compound>
+  <compound refid="test__thread_8cpp_8o_8d" kind="file"><name>test_thread.cpp.o.d</name>
+  </compound>
+  <compound refid="test__time_8cpp_8o_8d" kind="file"><name>test_time.cpp.o.d</name>
   </compound>
   <compound refid="conf_8py" kind="file"><name>conf.py</name>
   </compound>
@@ -300,6 +351,7 @@
     <member refid="definitions_8hpp_1adf662e854df33f600d35c36e53448afa" kind="define"><name>S_SYMLNK</name></member>
     <member refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" kind="define"><name>S_FILE</name></member>
     <member refid="definitions_8hpp_1aec202deeac350c55ff66086bde404145" kind="define"><name>S_SOCK</name></member>
+    <member refid="definitions_8hpp_1a4b829048ea0c039b55e17bd2c47f81d6" kind="define"><name>S_OTHER</name></member>
     <member refid="definitions_8hpp_1acc2ade39a4b857c525798d9ecd6b088f" kind="define"><name>_sec</name></member>
     <member refid="definitions_8hpp_1a43ef0a945976ad00a8a52f3987ebbe02" kind="define"><name>_min</name></member>
     <member refid="definitions_8hpp_1a4f692ed3382144bb54dc8940f196a9f6" kind="define"><name>_hour</name></member>
@@ -334,7 +386,7 @@
   </compound>
   <compound refid="thread_8hpp" kind="file"><name>thread.hpp</name>
   </compound>
-  <compound refid="timer_8hpp" kind="file"><name>timer.hpp</name>
+  <compound refid="time_8hpp" kind="file"><name>time.hpp</name>
   </compound>
   <compound refid="Unix_8hpp" kind="file"><name>Unix.hpp</name>
   </compound>
@@ -353,17 +405,11 @@
   <compound refid="shell_8cpp" kind="file"><name>shell.cpp</name>
     <member refid="shell_8cpp_1ab09a88ec6ae84ccf267effce77697179" kind="variable"><name>mml_pass</name></member>
   </compound>
-  <compound refid="src_2standards_8cpp" kind="file"><name>standards.cpp</name>
-  </compound>
-  <compound refid="test_2standards_8cpp" kind="file"><name>standards.cpp</name>
-    <member refid="test_2standards_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  <compound refid="standards_8cpp" kind="file"><name>standards.cpp</name>
   </compound>
   <compound refid="string_8cpp" kind="file"><name>string.cpp</name>
   </compound>
-  <compound refid="src_2timer_8cpp" kind="file"><name>timer.cpp</name>
-  </compound>
-  <compound refid="test_2timer_8cpp" kind="file"><name>timer.cpp</name>
-    <member refid="test_2timer_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  <compound refid="time_8cpp" kind="file"><name>time.cpp</name>
   </compound>
   <compound refid="Unix_8cpp" kind="file"><name>Unix.cpp</name>
     <member refid="Unix_8cpp_1ab09a88ec6ae84ccf267effce77697179" kind="variable"><name>mml_pass</name></member>
@@ -371,16 +417,33 @@
   </compound>
   <compound refid="User_8cpp" kind="file"><name>User.cpp</name>
   </compound>
-  <compound refid="args_8cpp" kind="file"><name>args.cpp</name>
-    <member refid="args_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  <compound refid="test__args_8cpp" kind="file"><name>test_args.cpp</name>
+    <member refid="test__args_8cpp_1ac5f3645b4ca802628ec8e28c32793e7d" kind="define"><name>assert_msq</name></member>
+    <member refid="test__args_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="thread_8cpp" kind="file"><name>thread.cpp</name>
-    <member refid="thread_8cpp_1a3a792810f66760fd026480867ea44776" kind="function"><name>exampleTaskWithMultipleParams</name></member>
-    <member refid="thread_8cpp_1a0f0d38e38549c02b27672fd35dd7465f" kind="function"><name>isPrime</name></member>
-    <member refid="thread_8cpp_1a293827f133ce2ff42fccc32336769103" kind="function"><name>search_prime</name></member>
-    <member refid="thread_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  <compound refid="test__standards_8cpp" kind="file"><name>test_standards.cpp</name>
+    <member refid="test__standards_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__thread_8cpp" kind="file"><name>test_thread.cpp</name>
+    <member refid="test__thread_8cpp_1ae919533af23e735a1f476a3618de8314" kind="define"><name>assert_msg</name></member>
+    <member refid="test__thread_8cpp_1a3a792810f66760fd026480867ea44776" kind="function"><name>exampleTaskWithMultipleParams</name></member>
+    <member refid="test__thread_8cpp_1a0f0d38e38549c02b27672fd35dd7465f" kind="function"><name>isPrime</name></member>
+    <member refid="test__thread_8cpp_1a293827f133ce2ff42fccc32336769103" kind="function"><name>search_prime</name></member>
+    <member refid="test__thread_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__time_8cpp" kind="file"><name>test_time.cpp</name>
+    <member refid="test__time_8cpp_1ae919533af23e735a1f476a3618de8314" kind="define"><name>assert_msg</name></member>
+    <member refid="test__time_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_ee532ceb613f48f23d20ef02624c3a91" kind="dir"><name>build/CMakeFiles/3.22.1</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>build</name>
+  </compound>
+  <compound refid="dir_63772b626f2709090f0bdca0f40827b4" kind="dir"><name>build/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_e1a715d407a4074a9fa63b2e02ec2b8f" kind="dir"><name>build/CMakeFiles/3.22.1/CompilerIdCXX</name>
   </compound>
   <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
   </compound>
@@ -388,10 +451,30 @@
   </compound>
   <compound refid="dir_b3565b2f926c3c7337ec426a161a271f" kind="dir"><name>include/mml</name>
   </compound>
+  <compound refid="dir_7a2c68477c3866c546d16c4eb5e5dae6" kind="dir"><name>build/CMakeFiles/mml.dir</name>
+  </compound>
   <compound refid="dir_1ab31cb45db5038bdda41b72d8600e0e" kind="dir"><name>docs/source</name>
+  </compound>
+  <compound refid="dir_b260ba0a6a3391f40d60ccfa62827529" kind="dir"><name>build/CMakeFiles/mml.dir/src</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
   </compound>
   <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+  <compound refid="dir_164f33b21faa9eaad8a73fac35c8a6b6" kind="dir"><name>build/CMakeFiles/test_time.dir/test</name>
+  </compound>
+  <compound refid="dir_81a580be627a527cba531d7940108a9c" kind="dir"><name>build/CMakeFiles/test_thread.dir/test</name>
+  </compound>
+  <compound refid="dir_e497e0b212c0d3b5626bbbe81f6d8d74" kind="dir"><name>build/CMakeFiles/test_standards.dir/test</name>
+  </compound>
+  <compound refid="dir_87ddeb09bdf0a3ab205651c88dcdc983" kind="dir"><name>build/CMakeFiles/test_args.dir/test</name>
+  </compound>
+  <compound refid="dir_6bf9d556ac320e970b2b770558fcb104" kind="dir"><name>build/CMakeFiles/test_args.dir</name>
+  </compound>
+  <compound refid="dir_354120e4c269d106c5ccca2f5457f0a9" kind="dir"><name>build/CMakeFiles/test_standards.dir</name>
+  </compound>
+  <compound refid="dir_6a76d68c1e7da2f4d32aa97f90011ab6" kind="dir"><name>build/CMakeFiles/test_thread.dir</name>
+  </compound>
+  <compound refid="dir_8aa05b66b18834c6bb18222ace7a99c4" kind="dir"><name>build/CMakeFiles/test_time.dir</name>
   </compound>
 </doxygenindex>

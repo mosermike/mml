@@ -84,7 +84,7 @@
     <member refid="standards_8hpp_1ae91f369e368b0941ddcb8b5be38c36f9" kind="function"><name>cout</name></member>
     <member refid="standards_8hpp_1a4e23041702a789444e71665de8e19b91" kind="function"><name>date</name></member>
     <member refid="standards_8hpp_1ae53fc572ec720a1c9aebc3ba5458ff5d" kind="function"><name>date</name></member>
-    <member refid="standards_8hpp_1ac687254476eb5589ff145f7ccb8f203b" kind="function"><name>is_num</name></member>
+    <member refid="standards_8hpp_1a62caac25aebf89f67e3c8438fbbb67fa" kind="function"><name>isnum</name></member>
     <member refid="standards_8hpp_1ad1fcba2487a959000bac06da539b792c" kind="function"><name>range</name></member>
     <member refid="standards_8hpp_1a8648c76abb82d5eb1745f91e4201b247" kind="function"><name>range</name></member>
     <member refid="standards_8hpp_1a5aa66f758c7e5b3bde73a72428c60db7" kind="function"><name>round</name></member>
@@ -103,8 +103,8 @@
   </compound>
   <compound refid="thread_8hpp" kind="file"><name>thread.hpp</name>
   </compound>
-  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/mike/codes/mml/include</name>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/moser/codes/mml/include</name>
   </compound>
-  <compound refid="dir_b3565b2f926c3c7337ec426a161a271f" kind="dir"><name>/home/mike/codes/mml/include/mml</name>
+  <compound refid="dir_b3565b2f926c3c7337ec426a161a271f" kind="dir"><name>/home/moser/codes/mml/include/mml</name>
   </compound>
 </doxygenindex>

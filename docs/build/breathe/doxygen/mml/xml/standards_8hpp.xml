@@ -17,8 +17,23 @@
       <node id="9">
         <label>mml/definitions.hpp</label>
       </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>random</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
       <node id="1">
-        <label>/home/mike/codes/mml/include/mml/standards.hpp</label>
+        <label>/home/moser/codes/mml/include/mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -36,21 +51,6 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-      </node>
-      <node id="3">
-        <label>string</label>
-      </node>
-      <node id="6">
-        <label>random</label>
-      </node>
-      <node id="5">
-        <label>string.h</label>
-      </node>
-      <node id="2">
-        <label>vector</label>
-      </node>
-      <node id="4">
-        <label>sstream</label>
       </node>
       <node id="8">
         <label>iostream</label>
@@ -282,7 +282,7 @@ Contains several standard functions and the class string </para>
 <codeline lineno="529"><highlight class="normal"></highlight></codeline>
 <codeline lineno="544" refid="standards_8hpp_1ae53fc572ec720a1c9aebc3ba5458ff5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>date(time_t<sp/>time1<sp/>=<sp/>-1,<sp/>mml::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>&quot;Date+Time&quot;,<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>separator1<sp/>=<sp/>&quot;:&quot;,<sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>separator2<sp/>=<sp/>&quot;.&quot;)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="545"><highlight class="normal"></highlight></codeline>
-<codeline lineno="551" refid="standards_8hpp_1ac687254476eb5589ff145f7ccb8f203b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_num(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="551" refid="standards_8hpp_1a62caac25aebf89f67e3c8438fbbb67fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isnum(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="557" refid="standards_8hpp_1ad1fcba2487a959000bac06da539b792c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>range(std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>number)<sp/>noexcept;</highlight></codeline>
 <codeline lineno="558"><highlight class="normal"></highlight></codeline>
 <codeline lineno="565" refid="standards_8hpp_1a8648c76abb82d5eb1745f91e4201b247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>range(std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>number1,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>number2)<sp/>noexcept;</highlight></codeline>
@@ -343,6 +343,6 @@ Contains several standard functions and the class string </para>
 <codeline lineno="669"><highlight class="normal"></highlight></codeline>
 <codeline lineno="670"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/mike/codes/mml/include/mml/standards.hpp"/>
+    <location file="/home/moser/codes/mml/include/mml/standards.hpp"/>
   </compounddef>
 </doxygen>

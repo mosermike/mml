@@ -35,7 +35,7 @@
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="index" title="Index" href="#" />
@@ -450,8 +450,6 @@ document.write(`
 </li>
       <li><a href="file.html#_CPPv4N3mml4file5equalENSt6stringENSt6stringE">mml::file::equal (C++ function)</a>
 </li>
-      <li><a href="file.html#_CPPv4N3mml4file8filetypeENSt6stringE">mml::file::filetype (C++ function)</a>
-</li>
       <li><a href="file.html#_CPPv4N3mml4file9humanreadENSt6size_tE">mml::file::humanread (C++ function)</a>
 </li>
       <li><a href="file.html#_CPPv4N3mml4file9num_linesENSt6stringE">mml::file::num_lines (C++ function)</a>
@@ -478,7 +476,7 @@ document.write(`
 </li>
       <li><a href="help.html#_CPPv4N3mml4help6headerENSt6stringENSt6stringE">mml::help::header (C++ function)</a>
 </li>
-      <li><a href="standards.html#_CPPv4N3mml6is_numEc">mml::is_num (C++ function)</a>
+      <li><a href="standards.html#_CPPv4N3mml5isnumEc">mml::isnum (C++ function)</a>
 </li>
       <li><a href="log.html#_CPPv4N3mml3logE">mml::log (C++ class)</a>
 </li>
@@ -604,12 +602,12 @@ document.write(`
 </li>
       <li><a href="standards.html#_CPPv4NK3mml6string4hashEv">mml::string::hash (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="standards.html#_CPPv4N3mml6string8iteratorE">mml::string::iterator (C++ type)</a>
 </li>
       <li><a href="standards.html#_CPPv4NK3mml6string3logENSt6stringE">mml::string::log (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="standards.html#_CPPv4N3mml6string5lowerEv">mml::string::lower (C++ function)</a>
 </li>
       <li><a href="standards.html#_CPPv4NK3mml6string2lsENSt6stringENSt6stringERNSt6vectorINSt6stringEEEbb">mml::string::ls (C++ function)</a>, <a href="standards.html#_CPPv4NK3mml6string2lsENSt6stringENSt6stringEbb">[1]</a>
@@ -690,41 +688,43 @@ document.write(`
 </li>
       <li><a href="Thread.html#_CPPv4N3mml6thread7ThreadsD0Ev">mml::thread::Threads::~Threads (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5TimerE">mml::Timer (C++ class)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5TimerE">mml::time::Timer (C++ class)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer11break_startEv">mml::Timer::break_start (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer11break_startEv">mml::time::Timer::break_start (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer10break_stopEv">mml::Timer::break_stop (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer10break_stopEv">mml::time::Timer::break_stop (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5clockEv">mml::Timer::clock (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5clockEv">mml::time::Timer::clock (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5getMSEv">mml::Timer::getMS (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer9get_ticksENSt6stringE">mml::time::Timer::get_ticks (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer4getSEv">mml::Timer::getS (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5getMSEv">mml::time::Timer::getMS (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5getUSEv">mml::Timer::getUS (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer4getSEv">mml::time::Timer::getS (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5TimerlsERNSt7ostreamERN3mml5TimerE">mml::Timer::operator&lt;&lt; (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5getUSEv">mml::time::Timer::getUS (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5printENSt6stringEbb">mml::Timer::print (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5TimerlsERNSt7ostreamERN3mml4time5TimerE">mml::time::Timer::operator&lt;&lt; (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5rangeEv">mml::Timer::range (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5printENSt6stringEbb">mml::time::Timer::print (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5startEv">mml::Timer::start (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5rangeEv">mml::time::Timer::range (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer4stopEv">mml::Timer::stop (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5startEv">mml::time::Timer::start (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer3strEv">mml::Timer::str (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer4stopEv">mml::time::Timer::stop (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5strctEv">mml::Timer::strct (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer3strEv">mml::time::Timer::str (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer11strct_clockEv">mml::Timer::strct_clock (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5strctEv">mml::time::Timer::strct (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd">mml::Timer::ticks_to_double (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer11strct_clockEv">mml::time::Timer::strct_clock (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5TimerERK5Timer">mml::Timer::Timer (C++ function)</a>, <a href="Timer.html#_CPPv4N3mml5Timer5TimerEv">[1]</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer15ticks_to_doubleENSt6chrono21high_resolution_clock10time_pointEd">mml::time::Timer::ticks_to_double (C++ function)</a>
 </li>
-      <li><a href="Timer.html#_CPPv4N3mml5Timer5toIntEv">mml::Timer::toInt (C++ function)</a>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5TimerERK5Timer">mml::time::Timer::Timer (C++ function)</a>, <a href="Timer.html#_CPPv4N3mml4time5Timer5TimerEv">[1]</a>
+</li>
+      <li><a href="Timer.html#_CPPv4N3mml4time5Timer5toIntEv">mml::time::Timer::toInt (C++ function)</a>
 </li>
       <li><a href="standards.html#_CPPv4I0EN3mml9to_stringEN3mml6stringERK1T">mml::to_string (C++ function)</a>
 </li>
@@ -734,7 +734,7 @@ document.write(`
 </li>
       <li><a href="vector.html#_CPPv4I0EN3mml6vectorE">mml::vector (C++ class)</a>
 </li>
-      <li><a href="vector.html#_CPPv4N3mml6vector5beginEv">mml::vector::begin (C++ function)</a>
+      <li><a href="vector.html#_CPPv4N3mml6vector5beginEv">mml::vector::begin (C++ function)</a>, <a href="vector.html#_CPPv4NK3mml6vector5beginEv">[1]</a>
 </li>
       <li><a href="vector.html#_CPPv4NK3mml6vector5countE1T">mml::vector::count (C++ function)</a>
 </li>
@@ -744,7 +744,7 @@ document.write(`
 </li>
       <li><a href="vector.html#_CPPv4NK3mml6vector5emptyEv">mml::vector::empty (C++ function)</a>
 </li>
-      <li><a href="vector.html#_CPPv4N3mml6vector3endEv">mml::vector::end (C++ function)</a>
+      <li><a href="vector.html#_CPPv4N3mml6vector3endEv">mml::vector::end (C++ function)</a>, <a href="vector.html#_CPPv4NK3mml6vector3endEv">[1]</a>
 </li>
       <li><a href="vector.html#_CPPv4N3mml6vector5eraseE6size_t">mml::vector::erase (C++ function)</a>, <a href="vector.html#_CPPv4N3mml6vector5eraseE6size_t6size_t">[1]</a>
 </li>
@@ -755,6 +755,8 @@ document.write(`
       <li><a href="vector.html#_CPPv4N3mml6vector6insertEKNSt6vectorI1TE8iteratorERK1T">mml::vector::insert (C++ function)</a>
 </li>
       <li><a href="vector.html#_CPPv4NK3mml6vector3logEN3mml6stringEbN3mml6stringEN3mml6stringEN3mml6stringE">mml::vector::log (C++ function)</a>
+</li>
+      <li><a href="vector.html#_CPPv4NK3mml6vectorneERKNSt6vectorI1TEE">mml::vector::operator!= (C++ function)</a>
 </li>
       <li><a href="vector.html#_CPPv4NK3mml6vectormlERK1T">mml::vector::operator* (C++ function)</a>
 </li>
@@ -767,6 +769,8 @@ document.write(`
       <li><a href="vector.html#_CPPv4N3mml6vectorlsERNSt7ostreamERK6vectorI1TE">mml::vector::operator&lt;&lt; (C++ function)</a>
 </li>
       <li><a href="vector.html#_CPPv4N3mml6vectoraSERKNSt6vectorI1TEE">mml::vector::operator= (C++ function)</a>
+</li>
+      <li><a href="vector.html#_CPPv4NK3mml6vectoreqERKN3mml6vectorI1TEE">mml::vector::operator== (C++ function)</a>
 </li>
       <li><a href="vector.html#_CPPv4N3mml6vectorrsERNSt7istreamERK6vectorI1TE">mml::vector::operator&gt;&gt; (C++ function)</a>
 </li>
@@ -849,7 +853,7 @@ document.write(`
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

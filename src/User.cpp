@@ -1,11 +1,13 @@
 /**
+ * @file User.cpp
  * @author Mike Moser
+ * @brief Function definitions for the class User
+ * @version 1.0
+ * @date 2024-08-13
  * 
- * Quelldatei User.cpp
+ * @copyright Copyright (c) 2024
  * 
- * Enthält verschiedene Funktionen für die Klasse User
- * 
-*/
+ */
 #include <iostream>
 #include <string>
 #include <vector>

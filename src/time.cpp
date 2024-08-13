@@ -1,4 +1,13 @@
-#include <chrono>
+/**
+ * @file time.cpp
+ * @author Mike Moser
+ * @brief Source File to time.hpp
+ * @version 1.0
+ * @date 2024-08-13
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include <cstdint>
 #include <ostream>
 #include <sstream>
@@ -7,6 +16,7 @@
 
 #include "mml/time.hpp"
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/shell.hpp"
 
 std::chrono::high_resolution_clock::time_point mml::time::Timer::_now() const noexcept {

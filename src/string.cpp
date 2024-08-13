@@ -1,11 +1,13 @@
 /**
- * @author Mike Moser
- * 
  * @file string.cpp
- * Enthält verschiedene Funktionen
+ * @author Mike Moser
+ * @brief Function definitions of the class string
+ * @version 1.0
+ * @date 2024-08-13
  * 
-*/ 
-
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #include <iostream>
 #include <vector>
@@ -19,6 +21,7 @@
 #include <filesystem> // for ls function
 
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/shell.hpp"
 #include "mml/file.hpp"
 #include "mml/Unix.hpp"
@@ -276,13 +279,48 @@ void mml::string::getline(std::ifstream& input) noexcept {
 }
 
 
-std::string mml::string::getline(std::string input, std::size_t line) noexcept{
-	std::ifstream input1(input);
+std::string mml::string::getline(const mml::string input, const std::size_t line, bool back) {
+	if (!mml::Unix::exist(input)) {
+		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
+        throw std::filesystem::filesystem_error("[getline] File" + input.str() + " does not exist", ec);
+	}
+
+
+	std::ifstream input_stream(input.str());
 	std::string del;
-	for(uint32_t i = 0; i < line; i++)
-		std::getline(input1,del);
-	std::getline(input1,value);
-	input1.close();
+	std::vector<std::string> lines = {};
+
+	// Look from backwards => Need to read all the lines
+	if(back) {
+		while(input_stream.eof()) {
+			std::getline(input_stream,del);
+			lines.push_back(del);
+		}
+		this->value = lines[lines.size() - 1 - line];
+	}
+	// Line start from 0 => Not necessary to read all lines to save computation time
+	else {
+		for(uint32_t i = 0; i < line; i++) {
+			std::getline(input_stream,del);
+		}
+		std::getline(input_stream,value);
+	}
+	// Close the stream
+	input_stream.close();
+	
+	return value;
+}
+
+std::string mml::string::getlastline(const mml::string input) {
+	if (!mml::Unix::exist(input)) {
+		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
+        throw std::filesystem::filesystem_error("[getline] File" + input.str() + " does not exist", ec);
+	}
+	std::ifstream input_stream(input.str());
+	while(!input_stream.eof())
+		std::getline(input_stream,this->value);
+	
+	input_stream.close();
 	
 	return value;
 }

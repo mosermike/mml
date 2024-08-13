@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b260ba0a6a3391f40d60ccfa62827529" kind="dir">
+    <compoundname>build/CMakeFiles/mml.dir/src</compoundname>
+    <innerfile refid="arg_8cpp_8o_8d">arg.cpp.o.d</innerfile>
+    <innerfile refid="file_8cpp_8o_8d">file.cpp.o.d</innerfile>
+    <innerfile refid="help_8cpp_8o_8d">help.cpp.o.d</innerfile>
+    <innerfile refid="log_8cpp_8o_8d">log.cpp.o.d</innerfile>
+    <innerfile refid="shell_8cpp_8o_8d">shell.cpp.o.d</innerfile>
+    <innerfile refid="standards_8cpp_8o_8d">standards.cpp.o.d</innerfile>
+    <innerfile refid="string_8cpp_8o_8d">string.cpp.o.d</innerfile>
+    <innerfile refid="time_8cpp_8o_8d">time.cpp.o.d</innerfile>
+    <innerfile refid="Unix_8cpp_8o_8d">Unix.cpp.o.d</innerfile>
+    <innerfile refid="User_8cpp_8o_8d">User.cpp.o.d</innerfile>
+    <innerfile refid="vector_8cpp_8o_8d">vector.cpp.o.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/mml.dir/src/"/>
+  </compounddef>
+</doxygen>

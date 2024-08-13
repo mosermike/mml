@@ -14,7 +14,7 @@
         <label>functional</label>
       </node>
       <node id="1">
-        <label>/home/mike/codes/mml/include/mml/thread.hpp</label>
+        <label>/home/moser/codes/mml/include/mml/thread.hpp</label>
         <link refid="thread_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -93,7 +93,7 @@
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="66" refid="classmml_1_1thread_1_1_threads_1a75965dea579aafe9bca1c2e908efbe78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>templ&gt;<sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1thread_1_1_threads" kindref="compound">Threads</ref>&amp;<sp/><ref refid="classmml_1_1thread_1_1_threads_1a75965dea579aafe9bca1c2e908efbe78" kindref="member">operator&lt;&lt; </ref>(<ref refid="classmml_1_1thread_1_1_threads" kindref="compound">Threads</ref>&amp;<sp/>threads,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>templ<sp/>&amp;value)<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>guard(threads.mtx);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>value;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>value<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>threads;</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
@@ -153,6 +153,6 @@
 <codeline lineno="167"><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/mike/codes/mml/include/mml/thread.hpp"/>
+    <location file="/home/moser/codes/mml/include/mml/thread.hpp"/>
   </compounddef>
 </doxygen>

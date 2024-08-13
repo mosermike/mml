@@ -20,19 +20,6 @@
 // TODO backup => verschieben der Logdatei und nicht einfach löschen
 // TODO Ordner erstellen, Berechtigung prüfen Ausgabe prüfen => als root bei pi geht nicht, Ordner auch nicht vorhanden
 namespace mml{
-	
-	namespace Unix{
-		extern bool exist(std::string path);
-	}
-	
-	namespace file {
-		extern void remove(std::string file);
-	}
-	
-	namespace shell {
-		void error(std::string text);
-	}
-	
 	class log{
 		private:
 			mml::string logpath = "";
@@ -44,18 +31,10 @@ namespace mml{
 			/**
 			 * @brief Constructor
 			 * @param path Path to the logfile
-			 * @throw runtime_error : if log file is not created
 			*/
-			log(mml::string path) : logpath(path), output() {
+			log(const mml::string path) : logpath(path), output() {
 				logpath = path;
-				if(!mml::Unix::exist(logpath.str())) {
-					output.open(logpath.c_str(), std::ios::out | std::ios::app); // std::ios::app => Jump to the end of the file
-					header(); // Write header to the new file
-					if(!mml::Unix::exist(logpath.str()))
-						throw std::runtime_error("[log] Creation of logfile '" + logpath.str() + "' not possible. Check permissions!");
-				}
-				else
-					output.open(logpath.c_str(),std::ios::out | std::ios::app);
+				open();
 			}
 
 			/**
@@ -107,18 +86,6 @@ namespace mml{
 			void close() noexcept;
 			
 			/**
-			 * @brief Write sth. into the log file
-			 * @param value
-			 * @param newline Write a newline after the value
-			 */
-			//template <typename T> void cout(T value,bool newline=false) noexcept;
-			template <typename T> void cout(T value,bool newline) noexcept {
-				this->output << value;
-				if(newline)
-					this->output << std::endl;
-			}
-			
-			/**
 			 * @brief Return a specific line form the log file
 			 * @param line Line Number
 			 * @return string
@@ -136,17 +103,18 @@ namespace mml{
 			/**
 			 * @brief Get the last line of a logfile
 			 * @return string
+			 * @note that if the last line is a new line, the result will be a new line
 			 */
 			mml::string lastline() noexcept;
 
 			/**
-			 * @note Neuen Kopf erstellen
+			 * @brief Create new header
 			 * 
 			 */
 			void header() noexcept;
 
 			/**
-			 * @brief open a logfile
+			 * @brief Open a logfile
 			 * @param path Path to log file
 			 * @throw runtime_error : if logpath is not set
 			 */
@@ -156,19 +124,19 @@ namespace mml{
 			 * @brief Print log file
 			 * @param linenumber Print the linenumber
 			 */
-			void print(bool linenumber = false) noexcept;
+			void print(const bool linenumber = false) noexcept;
 			
 			/**
 			 * @brief Reset logfile
 			 * @param verbose Verbose output what is performed
 			 */
-			void reset(bool verbose = true) noexcept;
+			void reset(const bool verbose = true) noexcept;
 			
 			/**
 			 * @brief Set number of backup files
 			 * @param num Number of backup files
 			 */
-			void set_num(int num) noexcept {
+			void set_num(const int num) noexcept {
 				this->num_backups = num;
 				return;
 			}
@@ -177,7 +145,7 @@ namespace mml{
 			 * @brief Set path of the logfile
 			 * @param path New path of the logfile
 			 */
-			void set_path(mml::string path) noexcept {
+			void set_path(const mml::string path) noexcept {
 				this->logpath = path;
 				return;
 			}

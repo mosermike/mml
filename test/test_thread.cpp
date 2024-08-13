@@ -76,6 +76,7 @@ int search_prime(int threadId, int start, int end) {
     }
 
 int main() {
+	std::cout << std::endl;
 	std::cout << "╭────────────────────────────────╮" << std::endl;
 	std::cout << "│ Performing test for thread.hpp │" << std::endl;
 	std::cout << "╰────────────────────────────────╯" << std::endl;
@@ -142,9 +143,6 @@ int main() {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
 	
     return 0;
 }

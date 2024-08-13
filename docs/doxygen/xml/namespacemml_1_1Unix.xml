@@ -3,10 +3,11 @@
   <compounddef id="namespacemml_1_1Unix" kind="namespace" language="C++">
     <compoundname>mml::Unix</compoundname>
       <sectiondef kind="user-defined">
-      <header>functions.cpp</header>
-      <description><para><simplesect kind="author"><para>Mike Moser</para>
+      <header>Unix.cpp</header>
+      <description><para>Different <ref refid="namespacemml_1_1Unix" kindref="compound">Unix</ref> based functions</para>
+<para><simplesect kind="author"><para>Mike Moser </para>
 </simplesect>
-Enthält verschiedene Funktionen </para>
+</para>
 </description>
       <memberdef kind="function" id="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -23,7 +24,7 @@ Enthält verschiedene Funktionen </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/mml/log.hpp" line="25" column="13" bodyfile="src/Unix.cpp" bodystart="83" bodyend="89" declfile="include/mml/log.hpp" declline="25" declcolumn="13"/>
+        <location file="include/mml/log.hpp" line="25" column="13" bodyfile="src/Unix.cpp" bodystart="84" bodyend="91" declfile="include/mml/log.hpp" declline="25" declcolumn="13"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

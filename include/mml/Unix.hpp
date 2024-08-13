@@ -20,8 +20,12 @@
 #include <pwd.h>
 #include <grp.h>
 #include <string>
+#include <sys/stat.h>
+
 #include "mml/shell.hpp"
+#include "mml/string.hpp"
 #include "mml/vector.hpp"
+#include "mml/standards.hpp"
 
 namespace mml{
 	//namespace shell{
@@ -167,33 +171,20 @@ namespace mml{
 			
 			~User() {}
 		};
-		
-		/**
-		 * @brief Mount a network partition of type CIFS
-		 * 
-		 * @author Mike
-		 */
-		uint32_t cifs(std::string src, std::string dst , mml::string fstype, std::string user , std::string pass);
 
 		/**
 		 * @brief Checks if a path exists
 		 * 
-		 * @param string Path(s) to be checked
+		 * @param path Path to be checked
 		 * @return true, if all exists
-		 * @author Mike
 		 */
-		bool exist(std::string path);
-	
-		/**
-		 * @brief Checks if all paths exists
-		 * 
-		 * @param string Path(s) to be checked
-		 * @return true, if all exists
-		 * @author Mike
-		 */
-		template<typename... Args> bool exist(const Args&... args) noexcept {
-    		return (... && exist(mml::to_string(args).str()));
+		bool exist_onepath(mml::string path);
+
+		// Template function to check the existence of multiple paths
+		template<typename... Args> bool exist(const Args&... args) {
+    		return (... || exist_onepath(mml::to_string(args)));
 		}
+		
 
 		/**
 		 * @brief Determine UID of a file
@@ -278,28 +269,43 @@ namespace mml{
 		bool mkdir_p(std::string value);
 		
 		/**
-		 * @brief mount a directory with password input
+		 * @brief Mount a partition
 		 * @param mountpath Path to the partition which should be mounted
 		 * @param mountpoint where the partition should be mounted
 		 * @param user Username 
 		 * @param pass1 Password
-		 * @param fstype 
+		 * @param fstype Filesystem Type, e.g. cifs
 		 * @return true if mounted
 		*/
-		bool mount(std::string mountpath, string mountpoint, std::string user, std::string pass1, const char* fstype);
+		bool mountFS(std::string mountpath, string mountpoint, std::string user, std::string pass1, const char* fstype);
 	
 		/**
-		 * @brief Check permissions
-		 * @param path Path to the object to be checked
-		 * @return permissions in octal format
+		 * @brief Struct with the permissions of an object
+		 * @details Execute the function perms to get the permission with the filled entries
 		 */
-		mml::string perms(std::string path);
+		struct permissions {
+			bool owner_read = false;
+			bool owner_write = false;
+			bool owner_exec = false;
+			bool group_read = false;
+			bool group_write = false;
+			bool group_exec = false;
+			bool others_read = false;
+			bool others_write = false;
+			bool others_exec = false;
+		};
 
+		/**
+		 * @brief Check permissions of an object
+		 * @param path Path to the object to be checked
+		 * @return permissions in a struct
+		 * @details The structure has 9 bools each self-explainatory what permission exists
+		 */
+		permissions perms(std::string path);
 		/**
 		 * @brief chekc if user has permission to write
 		 * @param path Path to check for the permission
 		 * @return bool
-		 * @author Mike
 		 */
 		bool perm_to_write(std::string path);
 

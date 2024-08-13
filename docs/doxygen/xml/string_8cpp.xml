@@ -20,6 +20,18 @@
       <node id="6">
         <label>sys/stat.h</label>
       </node>
+      <node id="21">
+        <label>mml/log.hpp</label>
+        <link refid="log_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
       <node id="23">
         <label>functional</label>
       </node>
@@ -28,9 +40,6 @@
       </node>
       <node id="14">
         <label>float.h</label>
-      </node>
-      <node id="7">
-        <label>stdlib.h</label>
       </node>
       <node id="1">
         <label>src/string.cpp</label>
@@ -64,28 +73,28 @@
         <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>mml/standards.hpp</label>
-        <link refid="standards_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
-        </childnode>
+      <node id="7">
+        <label>stdlib.h</label>
       </node>
       <node id="4">
         <label>string</label>
+      </node>
+      <node id="15">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>random</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="24">
+        <label>mml/Unix.hpp</label>
+        <link refid="Unix_8hpp"/>
       </node>
       <node id="22">
         <label>mml/file.hpp</label>
@@ -97,46 +106,8 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>fstream</label>
-      </node>
-      <node id="16">
-        <label>mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="17" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>random</label>
-      </node>
-      <node id="15">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="8">
-        <label>string.h</label>
-      </node>
       <node id="3">
         <label>vector</label>
-      </node>
-      <node id="10">
-        <label>sstream</label>
-      </node>
-      <node id="18">
-        <label>cctype</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
-      </node>
-      <node id="24">
-        <label>mml/Unix.hpp</label>
-        <link refid="Unix_8hpp"/>
       </node>
       <node id="17">
         <label>mml/vector.hpp</label>
@@ -158,17 +129,46 @@
         <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="21">
-        <label>mml/log.hpp</label>
-        <link refid="log_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="12">
+        <label>mml/standards.hpp</label>
+        <link refid="standards_8hpp"/>
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>cctype</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
       </node>
       <node id="20">
         <label>type_traits</label>
@@ -301,7 +301,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>file<sp/>is<sp/>not<sp/>a<sp/>directory,<sp/>only<sp/>add<sp/>path<sp/>and<sp/>return<sp/>it<sp/>(it<sp/>must<sp/>exists<sp/>as<sp/>checked<sp/>before)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(path)<sp/>!=<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mml::Unix::isdir(path))<sp/>{</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LS.push_back(path);</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>LS;</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -330,7 +330,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Object<sp/>is<sp/>a<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(temp1.<ref refid="classmml_1_1string_1a9c4555e270ca374821544047d91003ab" kindref="member">str</ref>())<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mml::Unix::isdir(temp1))<sp/>{</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp1<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(save_dirs)<sp/>{</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp2<sp/>=<sp/>temp1.<ref refid="classmml_1_1string_1a9939471a850c71c8e18d7e0a5413edb3" kindref="member">replace</ref>(path,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>name_include<sp/>exists<sp/>in<sp/>the<sp/>part<sp/>after<sp/>the<sp/>path</highlight><highlight class="normal"></highlight></codeline>
@@ -387,7 +387,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>temp.find(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,1);</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>directory<sp/>exists<sp/>already<sp/>to<sp/>save<sp/>computing<sp/>time</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value)<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(value)<sp/>==<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(value)<sp/>&amp;&amp;<sp/>mml::Unix::isdir(value))</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{</highlight></codeline>
@@ -395,7 +395,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.substr(pos,temp.size()-pos);</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"></highlight></codeline>
 <codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>dir<sp/>exists<sp/>as<sp/>a<sp/>non-directory,<sp/>otherwise<sp/>create<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(make_dir.c_str())<sp/>&amp;&amp;<sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::Unix::filetype</ref>(<sp/>make_dir<sp/>)<sp/>!=<sp/><ref refid="definitions_8hpp_1a42ed4417ea0d3ba67ff834e83b404b7d" kindref="member">S_DIR</ref>)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="namespacemml_1_1Unix_1ad9cc08a6b5cac18e38361f8e38fad1ca" kindref="member">mml::Unix::exist</ref>(make_dir.c_str())<sp/>&amp;&amp;<sp/>!mml::Unix::isdir(<sp/>make_dir<sp/>))</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kindref="member">mml::shell::error</ref>(</highlight><highlight class="stringliteral">&quot;[mkdir_p]<sp/>Cannot<sp/>create<sp/>directory<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>make_dir<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>as<sp/>it<sp/>already<sp/>exists<sp/>as<sp/>a<sp/>non-directory!&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mkdir(make_dir.c_str(),<sp/>S_IRWXU<sp/>|<sp/>S_IRWXG<sp/>|<sp/>S_IROTH<sp/>|<sp/>S_IXOTH<sp/>|<sp/>S_IWOTH);</highlight></codeline>
@@ -412,7 +412,7 @@ Enthält verschiedene Funktionen </para>
 <codeline lineno="230"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"></highlight></codeline>
 <codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1string_1a9fa1fba30f50aecf44c069ba9e89bdab" kindref="member">mml::string::remove</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">mml::file::filetype</ref>(this-&gt;value)<sp/>==<sp/><ref refid="definitions_8hpp_1a97dfcabb474b02175fc155736caa6efe" kindref="member">S_FILE</ref><sp/>?<sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">std::remove</ref>(this-&gt;value.c_str())<sp/>:<sp/>false;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mml::Unix::isfile(this-&gt;value)<sp/>?<sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">std::remove</ref>(this-&gt;value.c_str())<sp/>:<sp/>false;</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="235"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"></highlight></codeline>

@@ -7,9 +7,9 @@
     <innerfile refid="help_8cpp">help.cpp</innerfile>
     <innerfile refid="log_8cpp">log.cpp</innerfile>
     <innerfile refid="shell_8cpp">shell.cpp</innerfile>
-    <innerfile refid="src_2standards_8cpp">standards.cpp</innerfile>
+    <innerfile refid="standards_8cpp">standards.cpp</innerfile>
     <innerfile refid="string_8cpp">string.cpp</innerfile>
-    <innerfile refid="src_2timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="time_8cpp">time.cpp</innerfile>
     <innerfile refid="Unix_8cpp">Unix.cpp</innerfile>
     <innerfile refid="User_8cpp">User.cpp</innerfile>
     <briefdescription>

@@ -1,10 +1,13 @@
 /**
+ * @file Unix.cpp
  * @author Mike Moser
- * 
- * @name Unix.cpp
  * @brief Different Unix based functions
+ * @version 0.1
+ * @date 2024-08-13
  * 
-*/
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #include <iostream>
 #include <string>
@@ -17,6 +20,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <fstream>
+#include <filesystem>
 #include <sys/types.h>
 #include <time.h>
 #include <utime.h>
@@ -30,6 +34,7 @@
 
 #include "mml/file.hpp"
 #include "mml/Unix.hpp"
+#include "mml/standards.hpp"
 
 mml::string mml_pass;
 mml::string mml_mount_name;
@@ -55,47 +60,24 @@ gid_t mml::Unix::getGroupIdByName(const char *name)
 uid_t mml::Unix::getFileUID (const char* file){
 	struct stat sb;
 	
-	if (stat(file, &sb) == -1) {
+	if (!std::filesystem::exists(file)) {
         std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
         throw std::filesystem::filesystem_error("File" + (std::string) file + " does not exist", ec);
 	}
 	return sb.st_uid;
 }
 
-uint32_t mml::Unix::cifs(std::string src, std::string dst , mml::string fstype, std::string user , std::string mml_pass){
-	std::string data = "";
-	
-	if(user != "")
-		data = data + "username=" + user + ",";
-	
-	if(mml_pass != "")
-		data = data + "password=" + mml_pass + ",";
-	
-	data += "gid=1000,uid=1000";
-	
-	if(fstype.exist("cifs"))
-		data += ",vers=3.0";
-	
-	int16_t mount_return = mount(src.c_str(), dst.c_str(),fstype.c_str(),0,data.c_str());
-	return mount_return;
-	
-}
-
-bool mml::Unix::exist(std::string path){
-	struct stat sb;
-	
-	if (stat(path.c_str(), &sb) == -1)
-		return false;
-
-	return true;
+bool mml::Unix::exist_onepath(mml::string path){
+	if (std::filesystem::exists(path.str()))
+		return true;
+	return false;
 }
 
 int32_t mml::Unix::filetype(mml::string filepath){
-	struct stat sb;
 	const std::filesystem::path& p(filepath.c_str());
 	std::filesystem::file_status s = std::filesystem::symlink_status(p);
 	
-	if (stat(filepath.c_str(), &sb) == -1) {
+	if (std::filesystem::exists(p)) {
 		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
         throw std::filesystem::filesystem_error("[filetype] File" + filepath.str() + " does not exist", ec);
 	}
@@ -117,7 +99,7 @@ int32_t mml::Unix::filetype(mml::string filepath){
 	else if (std::filesystem::is_other(s))
 		return S_OTHER;
 	else
-        throw std::runtime_error("[stat] Type of " + filepath.str() + " unknown."); // unknown type
+        throw std::runtime_error("[filetype] Type of " + filepath.str() + " unknown."); // unknown type
 } 	
 
 
@@ -233,7 +215,7 @@ bool mml::Unix::mkdir_p(std::string value) {
 	
 }
 
-bool mml::Unix::mount(std::string mountpath, mml::string mountpoint, std::string user, std::string pass1, const char* fstype)
+bool mml::Unix::mountFS(std::string mountpath, mml::string mountpoint, std::string user, std::string pass1, const char* fstype)
 {
 	
 	std::string		dir 				= mountpath;
@@ -301,26 +283,26 @@ bool mml::Unix::mount(std::string mountpath, mml::string mountpoint, std::string
 	return mml::Unix::ismounted(mountpoint.str());
 }
 
-mml::string mml::Unix::perms(std::string path) {
-	struct stat sb;
-	stat(path.c_str(), &sb);	// Zuordnung der Infos
-	int number = sb.st_mode & (S_IRWXU | S_IRWXG | S_IRWXO);
+mml::Unix::permissions mml::Unix::perms(std::string path) {
+	std::filesystem::perms perm_file = std::filesystem::status(path).permissions();
+
+	mml::Unix::permissions file;
+	auto read_permission = [](std::filesystem::perms perm_file, bool &read, bool &write, bool &exec,
+						std::filesystem::perms perm_a, std::filesystem::perms perm_r, std::filesystem::perms perm_w, std::filesystem::perms perm_e
+							) {
+			read  = std::filesystem::perms::none != (perm_r & perm_file);
+			write = std::filesystem::perms::none != (perm_w & perm_file);
+			exec  = std::filesystem::perms::none != (perm_e & perm_file);
+	};
 	
-	// convert decimal to octal
-	int temp; 
-	int base = 8;
-    int octal = 0;
-	int i = 1;
-	
-    while(number != 0) {
-        temp = number % base;
-        number = number / base;
-        octal = octal + (temp*i);
-        i = i*10;
-    }
-	
-	return mml::to_string(octal);
+	read_permission(perm_file, file.owner_read, file.owner_write, file.owner_exec, std::filesystem::perms::owner_all,std::filesystem::perms::owner_read,std::filesystem::perms::owner_write,std::filesystem::perms::owner_exec);
+	read_permission(perm_file, file.group_read, file.group_write, file.group_exec, std::filesystem::perms::group_all,std::filesystem::perms::group_read,std::filesystem::perms::group_write,std::filesystem::perms::group_exec);
+	read_permission(perm_file, file.others_read, file.others_write, file.others_exec, std::filesystem::perms::others_all,std::filesystem::perms::others_read,std::filesystem::perms::others_write,std::filesystem::perms::others_exec);
+
+	return file;
 }
+
+
 
 bool mml::Unix::perm_to_write(std::string path) {
 	mml::Unix::User user;
@@ -328,28 +310,27 @@ bool mml::Unix::perm_to_write(std::string path) {
 	if(user.get_user() == "root")
 		return true;
 	
-	mml::string perm = perms(path);
+	auto perm = perms(path);
 
 	struct stat sb;
 	stat(path.c_str(), &sb);	// Zuordnung der Infos
 	
 	// Permissions for the creator of the file/directory
 	if(sb.st_uid == user.get_uid()) {
-		if(perm[0] == '2' || perm[0] == '3' || perm[0] == '6' || perm[0] == '7')
+		if(perm.owner_write)
 			return true;
 	}
 
 	// Permissions for the group
 	if(sb.st_gid == user.get_gid()) {
-		if(perm[1] == '2' || perm[1] == '3' || perm[1] == '6' || perm[1] == '7')
+		if(perm.group_write)
 			return true;
 	}
 	
 	// Permissions for other
-	if(perm[2] == '2' || perm[2] == '3' || perm[2] == '6' || perm[2] == '7')
+	if(perm.others_write)
 		return true;
-	
-	
+
 	return false;
 	
 }

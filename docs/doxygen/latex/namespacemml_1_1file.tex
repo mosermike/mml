@@ -11,8 +11,6 @@ int \mbox{\hyperlink{namespacemml_1_1file_ae8b01165891f2bd5e3c85a2e35a1c999}{cop
 \begin{DoxyCompactList}\small\item\em Copy the content of the path to a new one. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacemml_1_1file_a5c59971f2c51414f4ecbc2b3ab40909a}{equal}} (std\+::string src, std\+::string dst)
 \begin{DoxyCompactList}\small\item\em Compare two files by using the SHA256 algorithm. Only works for linux. \end{DoxyCompactList}\item 
-int32\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}{filetype}} (std\+::string filepath)
-\begin{DoxyCompactList}\small\item\em Determine the type of an object (directory, file, etc.) \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}{humanread}} (std\+::size\+\_\+t number)
 \begin{DoxyCompactList}\small\item\em Convert number into human readable number. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \mbox{\hyperlink{namespacemml_1_1file_a4037d2ecadff2ef72d423f1c6f867834}{num\+\_\+lines}} (std\+::string path)
@@ -163,38 +161,6 @@ Compare two files by using the SHA256 algorithm. Only works for linux.
 \begin{DoxyReturn}{Returns}
 bool if sha256 is the same 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}\label{namespacemml_1_1file_a4153c2b073b0c9a00236e982a54d772a}} 
-\index{mml::file@{mml::file}!filetype@{filetype}}
-\index{filetype@{filetype}!mml::file@{mml::file}}
-\doxysubsubsection{\texorpdfstring{filetype()}{filetype()}}
-{\footnotesize\ttfamily int32\+\_\+t mml\+::file\+::filetype (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
-
-
-
-Determine the type of an object (directory, file, etc.) 
-
-
-\begin{DoxyParams}{Parameters}
-{\em filepath} & Path to the object \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Returns a number to identify the type of the object 
-\end{DoxyReturn}
-\begin{DoxyNote}{Note}
-The numbers have the following meaning\+:
-\begin{DoxyItemize}
-\item 1\+: DT\+\_\+\+FIFO
-\item 2\+: Serial connected device, mouse, etc.
-\item 4\+: Directory
-\item 6\+: Device or partition
-\item 8\+: normal file
-\item 10\+: symbolic link
-\item 12\+: Socket 
-\end{DoxyItemize}
-\end{DoxyNote}
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]use library to detect what it is and also then use hard link and symbolic link \end{DoxyRefDesc}
 \mbox{\Hypertarget{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}\label{namespacemml_1_1file_a43690ef92c0b2285f06009b1e730279c}} 
 \index{mml::file@{mml::file}!humanread@{humanread}}
 \index{humanread@{humanread}!mml::file@{mml::file}}

@@ -1,15 +1,20 @@
 /**
+ * @file log.cpp
  * @author Mike Moser
- * 
- * @file args.cpp
  * @brief Different functions for the class log
+ * @version 1.0
+ * @date 2024-08-13
  * 
-*/
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #include <iostream>
 
+#include "mml/Unix.hpp"
 #include "mml/log.hpp"
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/file.hpp"
 #include "mml/shell.hpp"
 
@@ -23,7 +28,7 @@ void mml::log::backup(bool verbose, bool Reset) noexcept {
 		std::cout << "| Backup logfile...";
 	
 	// Write into log that a backup is executed
-	this->output << "[check_root] backup is executed at " + mml::date(-1, "Date+Time") + "." << std::endl;
+	this->output << "[backup] backup is executed at " + mml::date(-1, "Date+Time") + "." << std::endl;
 
 	// Execute backup
 	for(int32_t i = this->num_backups; i >= 0; i--) {
@@ -48,11 +53,6 @@ void mml::log::close() noexcept {
 	this->output.close();
 }
 
-/*
-template <typename T> void mml::log::cout(T value,bool newline) noexcept {
-	this->output << value;
-	if(newline)
-}*/
 	
 mml::string mml::log::getline(size_t line) noexcept {
 	mml::string value;
@@ -106,10 +106,25 @@ void mml::log::header() noexcept {
 void mml::log::open() {
 	if(this->logpath == "")
 		throw std::runtime_error("[log::open] Path to the logfile is not set!");
-	this->output.close();
-	this->output.open(this->logpath.c_str(),std::ios::out | std::ios::app);
-}
 	
+	// Closs the file if it was opened before, otherwise there will be an error message
+	if(output.is_open())
+		this->output.close();
+	bool write_header = false;
+
+	// Check if log file exists => if not write header
+	if(!mml::Unix::exist(logpath.str()))
+		write_header = true;
+
+	this->output.open(this->logpath.c_str(),std::ios::out | std::ios::app); // std::ios::app => Jump to the end of the file
+
+	if(write_header)
+		header(); // Write header to the new file
+	
+	if(!mml::Unix::exist(logpath.str()))
+		throw std::runtime_error("[log] Creation of logfile '" + logpath.str() + "' not possible. Check permissions!");
+}
+
 void mml::log::print(bool linenumber) noexcept {
 	output.close();
 	std::ifstream input(logpath.c_str());

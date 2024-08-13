@@ -1,0 +1,637 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1time_1_1Timer" kind="class" language="C++" prot="public">
+    <compoundname>mml::time::Timer</compoundname>
+    <includes refid="time_8hpp" local="no">time.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1time_1_1Timer_1a9e484c199b2a1ef5b665d417bd208450" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mml::time::Timer::ticksStart</definition>
+        <argsstring></argsstring>
+        <name>ticksStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variables for begin and end of the time measurement microseconds for better precision for millisecond </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="33" column="48" bodyfile="include/mml/time.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1time_1_1Timer_1ab30066e5a4d1da2fa339d1cb598f94c2" prot="private" static="no" mutable="no">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mml::time::Timer::ticksEnd</definition>
+        <argsstring></argsstring>
+        <name>ticksEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="34" column="48" bodyfile="include/mml/time.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1time_1_1Timer_1a8d325c979d99fc739bc575d7702b09fa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mml::time::Timer::break_time_mus</definition>
+        <argsstring></argsstring>
+        <name>break_time_mus</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="36" column="8" bodyfile="include/mml/time.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1time_1_1Timer_1aa460c1db0228f0eaaec498383a5ebc33" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mml::time::Timer::timebreak</definition>
+        <argsstring></argsstring>
+        <name>timebreak</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="38" column="6" bodyfile="include/mml/time.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmml_1_1time_1_1Timer_1af75b3fecc6fe94488c45d15203f0eeb5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mml::time::Timer::stopped</definition>
+        <argsstring></argsstring>
+        <name>stopped</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="41" column="6" bodyfile="include/mml/time.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a403ab60dddade1edde67a40890eb77d5" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mml::time::Timer::_now</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>_now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="35" column="48" bodyfile="src/time.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a20a63e7c75fdb5d2bc89734c7259a9a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::time::Timer::Timer</definition>
+        <argsstring>()</argsstring>
+        <name>Timer</name>
+        <briefdescription>
+<para>Constructor which sets the start time to now. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="45" column="1" bodyfile="include/mml/time.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1adfad0133c3aadfcf8405f201ac6b73e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::time::Timer::Timer</definition>
+        <argsstring>(const Timer &amp;time)</argsstring>
+        <name>Timer</name>
+        <param>
+          <type>const <ref refid="classmml_1_1time_1_1Timer" kindref="compound">Timer</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Constructor which sets the start and end time to a specific time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmml_1_1time_1_1Timer" kindref="compound">Timer</ref> which has a start and end time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="53" column="1" bodyfile="include/mml/time.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1ab40d8897ab5367dd42731d81b856690a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::time::Timer::~Timer</definition>
+        <argsstring>()</argsstring>
+        <name>~Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="57" column="1" bodyfile="include/mml/time.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1acbfc5ba44bf113186ed62123473e9bad" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::time::Timer::break_start</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>break_start</name>
+        <briefdescription>
+<para>Stop the time measurement temporarily. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="62" column="6" bodyfile="src/time.cpp" bodystart="16" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a453e8f3a08923e3c3a0ec9ab37dea5d2" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::time::Timer::break_stop</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>break_stop</name>
+        <briefdescription>
+<para>Continue the time measurement after a temporary break. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="67" column="6" bodyfile="src/time.cpp" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a0bd314d4b2e0768f69cea674f7c703c0" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::time::Timer::clock</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>clock</name>
+        <briefdescription>
+<para>Convert ticks to time format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Time in the format &apos;hh:mm:ss,ms&apos; </para>
+</simplesect>
+<simplesect kind="note"><para>Prints a warning if the timer was not stopped before </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="74" column="13" bodyfile="src/time.cpp" bodystart="112" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7ab45be7d61d2102275b9e36f1ef6c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::chrono::high_resolution_clock::time_point</type>
+        <definition>std::chrono::high_resolution_clock::time_point mml::time::Timer::get_ticks</definition>
+        <argsstring>(std::string option)</argsstring>
+        <name>get_ticks</name>
+        <param>
+          <type>std::string</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+<para>Get a time point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>option</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which time point is returned (options are: &quot;start&quot; or &quot;end&quot;) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>time point </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if timer was not stopped before </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if option is not defined </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="83" column="48" bodyfile="src/time.cpp" bodystart="63" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1acaa29039bd109356528ce1940d3aeb1c" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::time::Timer::getMS</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getMS</name>
+        <briefdescription>
+<para>Get actual passed time in ms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>time in ms </para>
+</simplesect>
+<simplesect kind="author"><para>Lucas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="90" column="8" bodyfile="src/time.cpp" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1aa2fe19945159ae806d5405cad5daf1e4" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::time::Timer::getS</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getS</name>
+        <briefdescription>
+<para>Get actual passed time in s. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>time in seconds </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="96" column="8" bodyfile="src/time.cpp" bodystart="91" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a5facf919a260c64d3b19d0e3690e91a6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t mml::time::Timer::getUS</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>getUS</name>
+        <briefdescription>
+<para>Get actual passed time in µs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>time in µs </para>
+</simplesect>
+<simplesect kind="author"><para>Lucas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="103" column="10" bodyfile="src/time.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7131c5c0f27c89efe18f5b3075ebf1e5" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::time::Timer::print</definition>
+        <argsstring>(std::string text=&quot;&quot;, bool format_print=false, bool newline=true) noexcept</argsstring>
+        <name>print</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>format_print</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Pint time formatted or in ms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A text printed first without a newline </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>format_print</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print by using the function range (false : in ms) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newline</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print with a newline </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="122" column="6" bodyfile="src/time.cpp" bodystart="38" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1ae7dfc03e3810a853a7fa4403458374d9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::time::Timer::range</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>range</name>
+        <briefdescription>
+<para>return the time depending on the time value itself </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the time in µs, ms, s or as a clock </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="129" column="13" bodyfile="src/time.cpp" bodystart="137" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a33b12b23d4d744c22b4fa29bcbc44822" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::time::Timer::start</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>Start time measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Lucas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="135" column="6" bodyfile="src/time.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a832f10fd2cb4810911a023964af6114a" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::time::Timer::stop</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Stops the time measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>passed time in ms </para>
+</simplesect>
+<simplesect kind="author"><para>Lucas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="142" column="8" bodyfile="src/time.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a49302dac2b57a7844a037524cb48f39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::time::Timer::str</definition>
+        <argsstring>()</argsstring>
+        <name>str</name>
+        <briefdescription>
+<para>Returns the milliseconds between start and end as a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Time with the unit &quot;ms&quot; </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if timer is still running </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="149" column="13" bodyfile="src/time.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a0b5c226af1f7f58b10c430972082844b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmml_1_1time_1_1time" kindref="compound">mml::time::time</ref></type>
+        <definition>mml::time::time mml::time::Timer::strct</definition>
+        <argsstring>()</argsstring>
+        <name>strct</name>
+        <briefdescription>
+<para>Get a structure with the meantime. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Structure with the meantime in µs, ms, s, min and hours </para>
+</simplesect>
+<simplesect kind="note"><para>The structure is not in the format of a time. If the meantime is 1 ms, the structure will have s=0, ms = 1 and µs = 1000 </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if timer is still running </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="157" column="17" bodyfile="src/time.cpp" bodystart="150" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a7fa13c41cbd240e1141c1c4bba158f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmml_1_1time_1_1time" kindref="compound">mml::time::time</ref></type>
+        <definition>mml::time::time mml::time::Timer::strct_clock</definition>
+        <argsstring>()</argsstring>
+        <name>strct_clock</name>
+        <briefdescription>
+<para>Get a structure with the meantime in the format of a clock hh:mm::ss,ms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Structure with the meantime in µs, ms, s, min and hours </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if timer is still running </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="164" column="17" bodyfile="src/time.cpp" bodystart="166" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a71bd3226006b15a6a27af754841c8576" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::time::Timer::ticks_to_double</definition>
+        <argsstring>(std::chrono::high_resolution_clock::time_point ticks, double f=1.0) noexcept</argsstring>
+        <name>ticks_to_double</name>
+        <param>
+          <type>std::chrono::high_resolution_clock::time_point</type>
+          <declname>ticks</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Convert ticks to double. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ticks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time point to which the passed time is computed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Factor which determines the unit (1.0 = µs, 1000.0 = ms, 1.0e6 = s) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return time passed between start and end </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="172" column="8" bodyfile="src/time.cpp" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1time_1_1Timer_1a1adbd02ee024b9f497e24a7efc202ec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::time::Timer::toInt</definition>
+        <argsstring>()</argsstring>
+        <name>toInt</name>
+        <briefdescription>
+<para>Returns the milliseconds between start and end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>milliseconds as an integer </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if timer is still running </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="179" column="5" bodyfile="src/time.cpp" bodystart="105" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmml_1_1time_1_1Timer_1a48a5bcf299d649e913c7676a43e107d5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, mml::time::Timer &amp;time) noexcept</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1time_1_1Timer" kindref="compound">mml::time::Timer</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Output the time as a string via a stream in ms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>output stream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmml_1_1time_1_1Timer" kindref="compound">Timer</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/time.hpp" line="111" column="8" bodyfile="include/mml/time.hpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/time.hpp" line="26" column="1" bodyfile="include/mml/time.hpp" bodystart="26" bodyend="181"/>
+    <listofallmembers>
+      <member refid="classmml_1_1time_1_1Timer_1a403ab60dddade1edde67a40890eb77d5" prot="private" virt="non-virtual"><scope>mml::time::Timer</scope><name>_now</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1acbfc5ba44bf113186ed62123473e9bad" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>break_start</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a453e8f3a08923e3c3a0ec9ab37dea5d2" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>break_stop</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a8d325c979d99fc739bc575d7702b09fa" prot="private" virt="non-virtual"><scope>mml::time::Timer</scope><name>break_time_mus</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a0bd314d4b2e0768f69cea674f7c703c0" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>clock</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a7ab45be7d61d2102275b9e36f1ef6c82" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>get_ticks</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1acaa29039bd109356528ce1940d3aeb1c" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>getMS</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1aa2fe19945159ae806d5405cad5daf1e4" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>getS</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a5facf919a260c64d3b19d0e3690e91a6" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>getUS</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a48a5bcf299d649e913c7676a43e107d5" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a7131c5c0f27c89efe18f5b3075ebf1e5" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>print</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1ae7dfc03e3810a853a7fa4403458374d9" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>range</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a33b12b23d4d744c22b4fa29bcbc44822" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>start</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a832f10fd2cb4810911a023964af6114a" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>stop</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1af75b3fecc6fe94488c45d15203f0eeb5" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>stopped</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a49302dac2b57a7844a037524cb48f39c" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>str</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a0b5c226af1f7f58b10c430972082844b" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>strct</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a7fa13c41cbd240e1141c1c4bba158f88" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>strct_clock</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a71bd3226006b15a6a27af754841c8576" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>ticks_to_double</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1ab30066e5a4d1da2fa339d1cb598f94c2" prot="private" virt="non-virtual"><scope>mml::time::Timer</scope><name>ticksEnd</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a9e484c199b2a1ef5b665d417bd208450" prot="private" virt="non-virtual"><scope>mml::time::Timer</scope><name>ticksStart</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1aa460c1db0228f0eaaec498383a5ebc33" prot="private" virt="non-virtual"><scope>mml::time::Timer</scope><name>timebreak</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a20a63e7c75fdb5d2bc89734c7259a9a8" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>Timer</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1adfad0133c3aadfcf8405f201ac6b73e5" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>Timer</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1a1adbd02ee024b9f497e24a7efc202ec7" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>toInt</name></member>
+      <member refid="classmml_1_1time_1_1Timer_1ab40d8897ab5367dd42731d81b856690a" prot="public" virt="non-virtual"><scope>mml::time::Timer</scope><name>~Timer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

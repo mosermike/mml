@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_b3565b2f926c3c7337ec426a161a271f" kind="dir">
-    <compoundname>/home/mike/codes/mml/include/mml</compoundname>
+    <compoundname>/home/moser/codes/mml/include/mml</compoundname>
     <innerfile refid="standards_8hpp">standards.hpp</innerfile>
     <innerfile refid="thread_8hpp">thread.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mike/codes/mml/include/mml/"/>
+    <location file="/home/moser/codes/mml/include/mml/"/>
   </compounddef>
 </doxygen>

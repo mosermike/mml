@@ -1,0 +1,397 @@
+\hypertarget{classmml_1_1time_1_1Timer}{}\doxysection{mml\+::time\+::Timer Class Reference}
+\label{classmml_1_1time_1_1Timer}\index{mml::time::Timer@{mml::time::Timer}}
+
+
+{\ttfamily \#include $<$time.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmml_1_1time_1_1Timer_a20a63e7c75fdb5d2bc89734c7259a9a8}{Timer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor which sets the start time to now. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1time_1_1Timer_adfad0133c3aadfcf8405f201ac6b73e5}{Timer}} (const \mbox{\hyperlink{classmml_1_1time_1_1Timer}{Timer}} \&\mbox{\hyperlink{structmml_1_1time_1_1time}{time}})
+\begin{DoxyCompactList}\small\item\em Constructor which sets the start and end time to a specific time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmml_1_1time_1_1Timer_ab40d8897ab5367dd42731d81b856690a}{$\sim$\+Timer}} ()
+\item 
+void \mbox{\hyperlink{classmml_1_1time_1_1Timer_acbfc5ba44bf113186ed62123473e9bad}{break\+\_\+start}} () noexcept
+\begin{DoxyCompactList}\small\item\em Stop the time measurement temporarily. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1time_1_1Timer_a453e8f3a08923e3c3a0ec9ab37dea5d2}{break\+\_\+stop}} () noexcept
+\begin{DoxyCompactList}\small\item\em Continue the time measurement after a temporary break. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmml_1_1time_1_1Timer_a0bd314d4b2e0768f69cea674f7c703c0}{clock}} () noexcept
+\begin{DoxyCompactList}\small\item\em Convert ticks to time format. \end{DoxyCompactList}\item 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classmml_1_1time_1_1Timer_a7ab45be7d61d2102275b9e36f1ef6c82}{get\+\_\+ticks}} (std\+::string option)
+\begin{DoxyCompactList}\small\item\em Get a time point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmml_1_1time_1_1Timer_acaa29039bd109356528ce1940d3aeb1c}{get\+MS}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get actual passed time in ms. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmml_1_1time_1_1Timer_aa2fe19945159ae806d5405cad5daf1e4}{getS}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get actual passed time in s. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classmml_1_1time_1_1Timer_a5facf919a260c64d3b19d0e3690e91a6}{get\+US}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get actual passed time in µs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1time_1_1Timer_a7131c5c0f27c89efe18f5b3075ebf1e5}{print}} (std\+::string text=\char`\"{}\char`\"{}, bool format\+\_\+print=false, bool newline=true) noexcept
+\begin{DoxyCompactList}\small\item\em Pint time formatted or in ms. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmml_1_1time_1_1Timer_ae7dfc03e3810a853a7fa4403458374d9}{range}} () noexcept
+\begin{DoxyCompactList}\small\item\em return the time depending on the time value itself \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmml_1_1time_1_1Timer_a33b12b23d4d744c22b4fa29bcbc44822}{start}} () noexcept
+\begin{DoxyCompactList}\small\item\em Start time measurement. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmml_1_1time_1_1Timer_a832f10fd2cb4810911a023964af6114a}{stop}} () noexcept
+\begin{DoxyCompactList}\small\item\em Stops the time measurement. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmml_1_1time_1_1Timer_a49302dac2b57a7844a037524cb48f39c}{str}} ()
+\begin{DoxyCompactList}\small\item\em Returns the milliseconds between start and end as a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmml_1_1time_1_1time}{mml\+::time\+::time}} \mbox{\hyperlink{classmml_1_1time_1_1Timer_a0b5c226af1f7f58b10c430972082844b}{strct}} ()
+\begin{DoxyCompactList}\small\item\em Get a structure with the meantime. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmml_1_1time_1_1time}{mml\+::time\+::time}} \mbox{\hyperlink{classmml_1_1time_1_1Timer_a7fa13c41cbd240e1141c1c4bba158f88}{strct\+\_\+clock}} ()
+\begin{DoxyCompactList}\small\item\em Get a structure with the meantime in the format of a clock hh\+:mm\+:\+:ss,ms. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmml_1_1time_1_1Timer_a71bd3226006b15a6a27af754841c8576}{ticks\+\_\+to\+\_\+double}} (std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point ticks, double f=1.\+0) noexcept
+\begin{DoxyCompactList}\small\item\em Convert ticks to double. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmml_1_1time_1_1Timer_a1adbd02ee024b9f497e24a7efc202ec7}{to\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Returns the milliseconds between start and end. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classmml_1_1time_1_1Timer_af75b3fecc6fe94488c45d15203f0eeb5}{stopped}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classmml_1_1time_1_1Timer_a48a5bcf299d649e913c7676a43e107d5}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classmml_1_1time_1_1Timer}{mml\+::time\+::\+Timer}} \&\mbox{\hyperlink{structmml_1_1time_1_1time}{time}}) noexcept
+\begin{DoxyCompactList}\small\item\em Output the time as a string via a stream in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a20a63e7c75fdb5d2bc89734c7259a9a8}\label{classmml_1_1time_1_1Timer_a20a63e7c75fdb5d2bc89734c7259a9a8}} 
+\index{mml::time::Timer@{mml::time::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mml\+::time\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor which sets the start time to now. 
+
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_adfad0133c3aadfcf8405f201ac6b73e5}\label{classmml_1_1time_1_1Timer_adfad0133c3aadfcf8405f201ac6b73e5}} 
+\index{mml::time::Timer@{mml::time::Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mml\+::time\+::\+Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmml_1_1time_1_1Timer}{Timer}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor which sets the start and end time to a specific time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \mbox{\hyperlink{classmml_1_1time_1_1Timer}{Timer}} which has a start and end time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_ab40d8897ab5367dd42731d81b856690a}\label{classmml_1_1time_1_1Timer_ab40d8897ab5367dd42731d81b856690a}} 
+\index{mml::time::Timer@{mml::time::Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily mml\+::time\+::\+Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_acbfc5ba44bf113186ed62123473e9bad}\label{classmml_1_1time_1_1Timer_acbfc5ba44bf113186ed62123473e9bad}} 
+\index{mml::time::Timer@{mml::time::Timer}!break\_start@{break\_start}}
+\index{break\_start@{break\_start}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{break\_start()}{break\_start()}}
+{\footnotesize\ttfamily void mml\+::time\+::\+Timer\+::break\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Stop the time measurement temporarily. 
+
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a453e8f3a08923e3c3a0ec9ab37dea5d2}\label{classmml_1_1time_1_1Timer_a453e8f3a08923e3c3a0ec9ab37dea5d2}} 
+\index{mml::time::Timer@{mml::time::Timer}!break\_stop@{break\_stop}}
+\index{break\_stop@{break\_stop}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{break\_stop()}{break\_stop()}}
+{\footnotesize\ttfamily void mml\+::time\+::\+Timer\+::break\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Continue the time measurement after a temporary break. 
+
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a0bd314d4b2e0768f69cea674f7c703c0}\label{classmml_1_1time_1_1Timer_a0bd314d4b2e0768f69cea674f7c703c0}} 
+\index{mml::time::Timer@{mml::time::Timer}!clock@{clock}}
+\index{clock@{clock}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{clock()}{clock()}}
+{\footnotesize\ttfamily std\+::string mml\+::time\+::\+Timer\+::clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Convert ticks to time format. 
+
+\begin{DoxyReturn}{Returns}
+Time in the format \textquotesingle{}hh\+:mm\+:ss,ms\textquotesingle{} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Prints a warning if the timer was not stopped before 
+\end{DoxyNote}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a7ab45be7d61d2102275b9e36f1ef6c82}\label{classmml_1_1time_1_1Timer_a7ab45be7d61d2102275b9e36f1ef6c82}} 
+\index{mml::time::Timer@{mml::time::Timer}!get\_ticks@{get\_ticks}}
+\index{get\_ticks@{get\_ticks}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{get\_ticks()}{get\_ticks()}}
+{\footnotesize\ttfamily std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point mml\+::time\+::\+Timer\+::get\+\_\+ticks (\begin{DoxyParamCaption}\item[{std\+::string}]{option }\end{DoxyParamCaption})}
+
+
+
+Get a time point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & which time point is returned (options are\+: \char`\"{}start\char`\"{} or \char`\"{}end\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time point 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if timer was not stopped before \\
+\hline
+{\em invalid\+\_\+argument} & \+: if option is not defined \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_acaa29039bd109356528ce1940d3aeb1c}\label{classmml_1_1time_1_1Timer_acaa29039bd109356528ce1940d3aeb1c}} 
+\index{mml::time::Timer@{mml::time::Timer}!getMS@{getMS}}
+\index{getMS@{getMS}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{getMS()}{getMS()}}
+{\footnotesize\ttfamily double mml\+::time\+::\+Timer\+::get\+MS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get actual passed time in ms. 
+
+\begin{DoxyReturn}{Returns}
+time in ms 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_aa2fe19945159ae806d5405cad5daf1e4}\label{classmml_1_1time_1_1Timer_aa2fe19945159ae806d5405cad5daf1e4}} 
+\index{mml::time::Timer@{mml::time::Timer}!getS@{getS}}
+\index{getS@{getS}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{getS()}{getS()}}
+{\footnotesize\ttfamily double mml\+::time\+::\+Timer\+::getS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get actual passed time in s. 
+
+\begin{DoxyReturn}{Returns}
+time in seconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a5facf919a260c64d3b19d0e3690e91a6}\label{classmml_1_1time_1_1Timer_a5facf919a260c64d3b19d0e3690e91a6}} 
+\index{mml::time::Timer@{mml::time::Timer}!getUS@{getUS}}
+\index{getUS@{getUS}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{getUS()}{getUS()}}
+{\footnotesize\ttfamily uint64\+\_\+t mml\+::time\+::\+Timer\+::get\+US (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get actual passed time in µs. 
+
+\begin{DoxyReturn}{Returns}
+time in µs 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a7131c5c0f27c89efe18f5b3075ebf1e5}\label{classmml_1_1time_1_1Timer_a7131c5c0f27c89efe18f5b3075ebf1e5}} 
+\index{mml::time::Timer@{mml::time::Timer}!print@{print}}
+\index{print@{print}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void mml\+::time\+::\+Timer\+::print (\begin{DoxyParamCaption}\item[{std\+::string}]{text = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{format\+\_\+print = {\ttfamily false},  }\item[{bool}]{newline = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Pint time formatted or in ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & A text printed first without a newline \\
+\hline
+{\em format\+\_\+print} & Print by using the function range (false \+: in ms) \\
+\hline
+{\em newline} & Print with a newline \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_ae7dfc03e3810a853a7fa4403458374d9}\label{classmml_1_1time_1_1Timer_ae7dfc03e3810a853a7fa4403458374d9}} 
+\index{mml::time::Timer@{mml::time::Timer}!range@{range}}
+\index{range@{range}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{range()}{range()}}
+{\footnotesize\ttfamily std\+::string mml\+::time\+::\+Timer\+::range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+return the time depending on the time value itself 
+
+\begin{DoxyReturn}{Returns}
+returns the time in µs, ms, s or as a clock 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Mike 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a33b12b23d4d744c22b4fa29bcbc44822}\label{classmml_1_1time_1_1Timer_a33b12b23d4d744c22b4fa29bcbc44822}} 
+\index{mml::time::Timer@{mml::time::Timer}!start@{start}}
+\index{start@{start}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void mml\+::time\+::\+Timer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Start time measurement. 
+
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a832f10fd2cb4810911a023964af6114a}\label{classmml_1_1time_1_1Timer_a832f10fd2cb4810911a023964af6114a}} 
+\index{mml::time::Timer@{mml::time::Timer}!stop@{stop}}
+\index{stop@{stop}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily double mml\+::time\+::\+Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Stops the time measurement. 
+
+\begin{DoxyReturn}{Returns}
+passed time in ms 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Lucas 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a49302dac2b57a7844a037524cb48f39c}\label{classmml_1_1time_1_1Timer_a49302dac2b57a7844a037524cb48f39c}} 
+\index{mml::time::Timer@{mml::time::Timer}!str@{str}}
+\index{str@{str}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{str()}{str()}}
+{\footnotesize\ttfamily std\+::string mml\+::time\+::\+Timer\+::str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the milliseconds between start and end as a string. 
+
+\begin{DoxyReturn}{Returns}
+Time with the unit \char`\"{}ms\char`\"{} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if timer is still running \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a0b5c226af1f7f58b10c430972082844b}\label{classmml_1_1time_1_1Timer_a0b5c226af1f7f58b10c430972082844b}} 
+\index{mml::time::Timer@{mml::time::Timer}!strct@{strct}}
+\index{strct@{strct}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{strct()}{strct()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmml_1_1time_1_1time}{mml\+::time\+::time}} mml\+::time\+::\+Timer\+::strct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a structure with the meantime. 
+
+\begin{DoxyReturn}{Returns}
+Structure with the meantime in µs, ms, s, min and hours 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The structure is not in the format of a time. If the meantime is 1 ms, the structure will have s=0, ms = 1 and µs = 1000 
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if timer is still running \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a7fa13c41cbd240e1141c1c4bba158f88}\label{classmml_1_1time_1_1Timer_a7fa13c41cbd240e1141c1c4bba158f88}} 
+\index{mml::time::Timer@{mml::time::Timer}!strct\_clock@{strct\_clock}}
+\index{strct\_clock@{strct\_clock}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{strct\_clock()}{strct\_clock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmml_1_1time_1_1time}{mml\+::time\+::time}} mml\+::time\+::\+Timer\+::strct\+\_\+clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get a structure with the meantime in the format of a clock hh\+:mm\+:\+:ss,ms. 
+
+\begin{DoxyReturn}{Returns}
+Structure with the meantime in µs, ms, s, min and hours 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if timer is still running \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a71bd3226006b15a6a27af754841c8576}\label{classmml_1_1time_1_1Timer_a71bd3226006b15a6a27af754841c8576}} 
+\index{mml::time::Timer@{mml::time::Timer}!ticks\_to\_double@{ticks\_to\_double}}
+\index{ticks\_to\_double@{ticks\_to\_double}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{ticks\_to\_double()}{ticks\_to\_double()}}
+{\footnotesize\ttfamily double mml\+::time\+::\+Timer\+::ticks\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point}]{ticks,  }\item[{double}]{f = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Convert ticks to double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ticks} & Time point to which the passed time is computed \\
+\hline
+{\em f} & Factor which determines the unit (1.\+0 = µs, 1000.\+0 = ms, 1.\+0e6 = s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return time passed between start and end 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a1adbd02ee024b9f497e24a7efc202ec7}\label{classmml_1_1time_1_1Timer_a1adbd02ee024b9f497e24a7efc202ec7}} 
+\index{mml::time::Timer@{mml::time::Timer}!toInt@{toInt}}
+\index{toInt@{toInt}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{toInt()}{toInt()}}
+{\footnotesize\ttfamily int mml\+::time\+::\+Timer\+::to\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the milliseconds between start and end. 
+
+\begin{DoxyReturn}{Returns}
+milliseconds as an integer 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & \+: if timer is still running \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_a48a5bcf299d649e913c7676a43e107d5}\label{classmml_1_1time_1_1Timer_a48a5bcf299d649e913c7676a43e107d5}} 
+\index{mml::time::Timer@{mml::time::Timer}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classmml_1_1time_1_1Timer}{mml\+::time\+::\+Timer}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output the time as a string via a stream in ms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+{\em time} & \mbox{\hyperlink{classmml_1_1time_1_1Timer}{Timer}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmml_1_1time_1_1Timer_af75b3fecc6fe94488c45d15203f0eeb5}\label{classmml_1_1time_1_1Timer_af75b3fecc6fe94488c45d15203f0eeb5}} 
+\index{mml::time::Timer@{mml::time::Timer}!stopped@{stopped}}
+\index{stopped@{stopped}!mml::time::Timer@{mml::time::Timer}}
+\doxysubsubsection{\texorpdfstring{stopped}{stopped}}
+{\footnotesize\ttfamily bool mml\+::time\+::\+Timer\+::stopped = false}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/mml/\mbox{\hyperlink{time_8hpp}{time.\+hpp}}\item 
+src/\mbox{\hyperlink{time_8cpp}{time.\+cpp}}\end{DoxyCompactItemize}

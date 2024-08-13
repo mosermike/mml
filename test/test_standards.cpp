@@ -6,6 +6,7 @@
 
 
 int main() {
+	std::cout << std::endl;
 	std::cout << "╭───────────────────────────────────╮" << std::endl;
 	std::cout << "│ Performing test for standards.hpp │" << std::endl;
 	std::cout << "╰───────────────────────────────────╯" << std::endl;
@@ -18,10 +19,6 @@ int main() {
 	
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
-	std::cout << std::endl;
-
-	std::cout << std::endl;
-	std::cout << std::endl;
 	std::cout << std::endl;
 
 	return 0;

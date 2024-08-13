@@ -18,6 +18,35 @@
       <node id="10">
         <label>float.h</label>
       </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="9">
+        <label>random</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>include/mml/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
       <node id="4">
         <label>mml/standards.hpp</label>
         <link refid="standards_8hpp"/>
@@ -38,75 +67,14 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>string</label>
-      </node>
-      <node id="1">
-        <label>include/mml/file.hpp</label>
-        <link refid="file_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-      </node>
-      <node id="9">
-        <label>random</label>
-      </node>
-      <node id="11">
-        <label>mml/definitions.hpp</label>
-        <link refid="definitions_8hpp"/>
-      </node>
-      <node id="8">
-        <label>string.h</label>
-      </node>
-      <node id="5">
-        <label>vector</label>
-      </node>
-      <node id="7">
-        <label>sstream</label>
-      </node>
       <node id="3">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="5">
-        <label>src/Unix.cpp</label>
-        <link refid="Unix_8cpp"/>
-      </node>
       <node id="9">
         <label>src/User.cpp</label>
         <link refid="User_8cpp"/>
-      </node>
-      <node id="3">
-        <label>src/file.cpp</label>
-        <link refid="file_8cpp"/>
-      </node>
-      <node id="8">
-        <label>src/string.cpp</label>
-        <link refid="string_8cpp"/>
-      </node>
-      <node id="1">
-        <label>include/mml/file.hpp</label>
-        <link refid="file_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-      </node>
-      <node id="4">
-        <label>src/shell.cpp</label>
-        <link refid="shell_8cpp"/>
       </node>
       <node id="2">
         <label>include/mml.hpp</label>
@@ -115,18 +83,46 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+      </node>
+      <node id="7">
+        <label>src/string.cpp</label>
+        <link refid="string_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/log.cpp</label>
+        <link refid="log_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml/file.hpp</label>
+        <link refid="file_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
       </node>
-      <node id="7">
-        <label>src/log.cpp</label>
-        <link refid="log_8cpp"/>
+      <node id="4">
+        <label>test/test_standards.cpp</label>
+        <link refid="test__standards_8cpp"/>
       </node>
-      <node id="6">
-        <label>test/standards.cpp</label>
-        <link refid="test_2standards_8cpp"/>
+      <node id="3">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
       </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>
@@ -160,30 +156,28 @@
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a5c59971f2c51414f4ecbc2b3ab40909a" kindref="member">equal</ref>(std::string<sp/>src,<sp/>std::string<sp/>dst);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><ref refid="namespacemml_1_1file_1a4153c2b073b0c9a00236e982a54d772a" kindref="member">filetype</ref>(std::string<sp/>filepath);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c" kindref="member">humanread</ref>(std::size_t<sp/>number);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1file_1a4037d2ecadff2ef72d423f1c6f867834" kindref="member">num_lines</ref>(std::string<sp/>path);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>ERROR<sp/>DOES<sp/>NOT<sp/>WORK</highlight></codeline>
-<codeline lineno="109"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a25b3681154f917c6ff8701e0c158bda2" kindref="member">Program_exist</ref>(<sp/>std::string<sp/>program<sp/>);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">remove</ref>(std::string<sp/>file);</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1ab5ecf6e0c681e2247b280aa094213a00" kindref="member">set_date_dir</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>src,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>dst,<sp/>std::vector&lt;std::string&gt;<sp/>ends={</highlight><highlight class="stringliteral">&quot;NEF&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;tif&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;JPG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;jpg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MP4&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MOV&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;PNG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;HEIC&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;JPEG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;jpeg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;pdf&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PDF&quot;</highlight><highlight class="normal">},<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1file_1a97e554f98e4d84fd1ac488fc1e44640d" kindref="member">size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a1e60700072106e647f20640b94ecba55" kindref="member">size_human</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a40d0377087a89cba13e0171ab5172a31" kindref="member">size_dir</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref>&amp;<sp/>dir,<sp/>std::string<sp/>include<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>exclude<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>human_readable=</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>noexcept;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="namespacemml_1_1file_1aa040614064fb83b0548804e7a2b4aeb5" kindref="member">time_mod</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a43690ef92c0b2285f06009b1e730279c" kindref="member">humanread</ref>(std::size_t<sp/>number);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1file_1a4037d2ecadff2ef72d423f1c6f867834" kindref="member">num_lines</ref>(std::string<sp/>path);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>ERROR<sp/>DOES<sp/>NOT<sp/>WORK</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a25b3681154f917c6ff8701e0c158bda2" kindref="member">Program_exist</ref>(<sp/>std::string<sp/>program<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1a1e440fc12176ba6c207cef7160c5276b" kindref="member">remove</ref>(std::string<sp/>file);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1file_1ab5ecf6e0c681e2247b280aa094213a00" kindref="member">set_date_dir</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>src,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>dst,<sp/>std::vector&lt;std::string&gt;<sp/>ends={</highlight><highlight class="stringliteral">&quot;NEF&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;tif&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;JPG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;jpg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MP4&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;MOV&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;PNG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;HEIC&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;JPEG&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;jpeg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;pdf&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PDF&quot;</highlight><highlight class="normal">},<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1file_1a97e554f98e4d84fd1ac488fc1e44640d" kindref="member">size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a1e60700072106e647f20640b94ecba55" kindref="member">size_human</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1file_1a40d0377087a89cba13e0171ab5172a31" kindref="member">size_dir</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref>&amp;<sp/>dir,<sp/>std::string<sp/>include<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>exclude<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>recursive=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>human_readable=</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/><ref refid="namespacemml_1_1file_1aa040614064fb83b0548804e7a2b4aeb5" kindref="member">time_mod</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/mml/file.hpp"/>
   </compounddef>

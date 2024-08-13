@@ -1,10 +1,13 @@
 /**
- * @author Mike Moser
+ * @file file.cpp
+ * @author Mike Moser ()
+ * @brief Implementations of functions in file.hpp concerning file operators
+ * @version 1.0
+ * @date 2024-08-13
  * 
- * @file: file.cpp
- * Enthält verschiedene Funktionen für Dateien
+ * @copyright Copyright (c) 2024
  * 
-*/
+ */
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -23,6 +26,7 @@
 
 #include "mml/file.hpp"
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/Unix.hpp"
 #include "mml/time.hpp"
 

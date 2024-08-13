@@ -1,4 +1,4 @@
-.TH "mml::vector< T >" 3 "Sun Jul 14 2024" "mml" \" -*- nroff -*-
+.TH "mml::vector< T >" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -16,13 +16,10 @@ mml::vector< T >
 .br
 .RI "Constructors\&. "
 .ti -1c
-.RI "\fBvector\fP (const \fBvector\fP &temp)"
+.RI "\fBvector\fP (const std::vector< T > &temp)"
 .br
 .ti -1c
-.RI "\fBvector\fP (std::vector< T > &temp)"
-.br
-.ti -1c
-.RI "\fBvector\fP (\fBmml::vector\fP< T > &temp)"
+.RI "\fBvector\fP (const \fBmml::vector\fP< T > &temp)"
 .br
 .ti -1c
 .RI "\fBvector\fP (double temp)"
@@ -38,55 +35,13 @@ mml::vector< T >
 .br
 .RI "Construct with a list\&. "
 .ti -1c
-.RI "\fBvector\fP \fBoperator=\fP (const std::vector< T > &temp) noexcept"
-.br
-.RI "Assign value with equal sign\&. "
-.ti -1c
-.RI "\fBvector\fP \fBoperator=\fP (\fBmml::vector\fP< T > temp) noexcept"
-.br
-.ti -1c
-.RI "T & \fBoperator[]\fP (int index)"
-.br
-.RI "Returns a value at a specific index\&. "
-.ti -1c
-.RI "const T & \fBoperator[]\fP (int index) const"
-.br
-.ti -1c
 .RI "std::vector< T >::iterator \fBbegin\fP () noexcept"
 .br
 .RI "iterator to the beginning of the vector "
 .ti -1c
-.RI "bool \fBempty\fP () const noexcept"
+.RI "std::vector< T >::const_iterator \fBbegin\fP () const noexcept"
 .br
-.RI "Checks whether the vector is empty\&. "
-.ti -1c
-.RI "std::vector< T >::iterator \fBend\fP () noexcept"
-.br
-.RI "iterator to the end of the vector "
-.ti -1c
-.RI "void \fBerase\fP (size_t position)"
-.br
-.RI "Erase an element from the vector\&. "
-.ti -1c
-.RI "void \fBerase\fP (size_t start, size_t \fBend\fP)"
-.br
-.RI "Erase a range from the vector\&. "
-.ti -1c
-.RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val) noexcept"
-.br
-.RI "Insert a value at a specific position\&. "
-.ti -1c
-.RI "void \fBpop_back\fP () noexcept"
-.br
-.RI "Removes the last entry\&. "
-.ti -1c
-.RI "void \fBpush_back\fP (T value) noexcept"
-.br
-.RI "Adds an element at the end\&. "
-.ti -1c
-.RI "std::size_t \fBsize\fP () const noexcept"
-.br
-.RI "Size of the vector\&. "
+.RI "Constant Iterator to the beginning of the vector\&. "
 .ti -1c
 .RI "std::size_t \fBcount\fP (T value) const noexcept"
 .br
@@ -99,6 +54,26 @@ mml::vector< T >
 .br
 .RI "Empties the vector\&. "
 .ti -1c
+.RI "bool \fBempty\fP () const noexcept"
+.br
+.RI "Checks whether the vector is empty\&. "
+.ti -1c
+.RI "std::vector< T >::iterator \fBend\fP () noexcept"
+.br
+.RI "Iterator to the end of the vector\&. "
+.ti -1c
+.RI "std::vector< T >::const_iterator \fBend\fP () const noexcept"
+.br
+.RI "Const\&. iterator to the end of the vector\&. "
+.ti -1c
+.RI "void \fBerase\fP (size_t position)"
+.br
+.RI "Erase an element from the vector\&. "
+.ti -1c
+.RI "void \fBerase\fP (size_t start, size_t \fBend\fP)"
+.br
+.RI "Erase a range from the vector\&. "
+.ti -1c
 .RI "template<typename\&.\&.\&. values> bool \fBexist\fP (const values &\&.\&.\&. value) const noexcept"
 .br
 .RI "Check if one \fIor\fP another string exists\&. "
@@ -107,13 +82,35 @@ mml::vector< T >
 .br
 .RI "Return a position of an element\&. "
 .ti -1c
+.RI "std::vector< T >::iterator \fBinsert\fP (const typename std::vector< T >::iterator position, const T &val) noexcept"
+.br
+.RI "Insert a value at a specific position\&. "
+.ti -1c
 .RI "void \fBlog\fP (\fBmml::string\fP logpath, bool newline=false, \fBmml::string\fP first='', \fBmml::string\fP last='', \fBmml::string\fP separator=',') const noexcept"
 .br
 .RI "Write values into a logfile\&. "
 .ti -1c
-.RI "std::vector< T > \fBreplace\fP (T Old, T New) noexcept"
+.RI "\fBvector\fP & \fBoperator=\fP (const std::vector< T > &temp) noexcept"
 .br
-.RI "Replace specific elements with another element\&. "
+.RI "Assign value with equal sign\&. "
+.ti -1c
+.RI "\fBvector\fP & \fBoperator=\fP (const \fBmml::vector\fP< T > &temp) noexcept"
+.br
+.ti -1c
+.RI "T & \fBoperator[]\fP (int index)"
+.br
+.RI "Returns a value at a specific index\&. "
+.ti -1c
+.RI "const T & \fBoperator[]\fP (int index) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBmml::vector\fP< T > &\fBvec\fP) const noexcept"
+.br
+.RI "Check if vectors are the same\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const std::vector< T > &\fBvec\fP) const noexcept"
+.br
+.RI "Check if vectors are not the same\&. "
 .ti -1c
 .RI "\fBvector\fP< T > \fBoperator*\fP (const T &value) const"
 .br
@@ -131,18 +128,6 @@ mml::vector< T >
 .br
 .RI "Add a value to each element\&. "
 .ti -1c
-.RI "void \fBset\fP (std::vector< T > Vec) noexcept"
-.br
-.RI "Replace the vector with a new vector\&. "
-.ti -1c
-.RI "std::vector< T > \fBsort\fP ()"
-.br
-.RI "Sort the vector\&. "
-.ti -1c
-.RI "T \fBsum\fP () const"
-.br
-.RI "Determine the sum of the vector\&. "
-.ti -1c
 .RI "\fBmml::vector\fP< T > \fBoperator+\fP (\fBvector\fP< T > temp) const"
 .br
 .RI "Add a vector to this vector\&. "
@@ -158,6 +143,34 @@ mml::vector< T >
 .RI "\fBmml::vector\fP< T > \fBoperator^=\fP (const T exponent)"
 .br
 .RI "Vector^() "
+.ti -1c
+.RI "void \fBpop_back\fP () noexcept"
+.br
+.RI "Removes the last entry\&. "
+.ti -1c
+.RI "void \fBpush_back\fP (T value) noexcept"
+.br
+.RI "Adds an element at the end\&. "
+.ti -1c
+.RI "std::vector< T > \fBreplace\fP (T Old, T New) noexcept"
+.br
+.RI "Replace specific elements with another element\&. "
+.ti -1c
+.RI "void \fBset\fP (std::vector< T > Vec) noexcept"
+.br
+.RI "Replace the vector with a new vector\&. "
+.ti -1c
+.RI "std::size_t \fBsize\fP () const noexcept"
+.br
+.RI "Size of the vector\&. "
+.ti -1c
+.RI "std::vector< T > \fBsort\fP ()"
+.br
+.RI "Sort the vector\&. "
+.ti -1c
+.RI "T \fBsum\fP () const"
+.br
+.RI "Determine the sum of the vector\&. "
 .ti -1c
 .RI "std::vector< T > \fBtovec\fP () const noexcept"
 .br
@@ -188,11 +201,9 @@ mml::vector< T >
 
 .PP
 Constructors\&. 
-.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (const \fBvector\fP< T > & temp)\fC [inline]\fP"
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (const std::vector< T > & temp)\fC [inline]\fP"
 
-.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (std::vector< T > & temp)\fC [inline]\fP"
-
-.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (\fBmml::vector\fP< T > & temp)\fC [inline]\fP"
+.SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (const \fBmml::vector\fP< T > & temp)\fC [inline]\fP"
 
 .SS "template<class T > \fBmml::vector\fP< T >::\fBvector\fP (double temp)\fC [inline]\fP"
 
@@ -218,6 +229,17 @@ this instance
 
 .SH "Member Function Documentation"
 .PP 
+.SS "template<class T > std::vector<T>::const_iterator \fBmml::vector\fP< T >::begin () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Constant Iterator to the beginning of the vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+const iterator 
+.RE
+.PP
+
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::begin ()\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
@@ -272,14 +294,25 @@ Checks whether the vector is empty\&.
 .PP
 \fBReturns\fP
 .RS 4
-iteratur 
+bool 
+.RE
+.PP
+
+.SS "template<class T > std::vector<T>::const_iterator \fBmml::vector\fP< T >::end () const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Const\&. iterator to the end of the vector\&. 
+.PP
+\fBReturns\fP
+.RS 4
+iterator 
 .RE
 .PP
 
 .SS "template<class T > std::vector<T>::iterator \fBmml::vector\fP< T >::end ()\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
-iterator to the end of the vector 
+Iterator to the end of the vector\&. 
 .PP
 \fBReturns\fP
 .RS 4
@@ -399,6 +432,22 @@ Write values into a logfile\&.
 \fIlast\fP Print this at the end of the logfile after all vlaues are written 
 .br
 \fIseparator\fP Separation sign after each value if newline = false 
+.RE
+.PP
+
+.SS "template<class T > bool \fBmml::vector\fP< T >::operator!= (const std::vector< T > & vec) const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Check if vectors are not the same\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Vector to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if not the same 
 .RE
 .PP
 
@@ -528,7 +577,9 @@ Instance of this class
 .RE
 .PP
 
-.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (const std::vector< T > & temp)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > \fBvector\fP& \fBmml::vector\fP< T >::operator= (const \fBmml::vector\fP< T > & temp)\fC [inline]\fP, \fC [noexcept]\fP"
+
+.SS "template<class T > \fBvector\fP& \fBmml::vector\fP< T >::operator= (const std::vector< T > & temp)\fC [inline]\fP, \fC [noexcept]\fP"
 
 .PP
 Assign value with equal sign\&. 
@@ -540,11 +591,25 @@ Assign value with equal sign\&.
 .PP
 \fBReturns\fP
 .RS 4
-this instance 
+reference to this instance 
 .RE
 .PP
 
-.SS "template<class T > \fBvector\fP \fBmml::vector\fP< T >::operator= (\fBmml::vector\fP< T > temp)\fC [inline]\fP, \fC [noexcept]\fP"
+.SS "template<class T > bool \fBmml::vector\fP< T >::operator== (const \fBmml::vector\fP< T > & vec) const\fC [inline]\fP, \fC [noexcept]\fP"
+
+.PP
+Check if vectors are the same\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP Vector to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if the same 
+.RE
+.PP
 
 .SS "template<class T > T& \fBmml::vector\fP< T >::operator[] (int index)\fC [inline]\fP"
 

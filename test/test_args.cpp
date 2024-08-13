@@ -9,7 +9,7 @@
 #include <cstdlib>  // For std::abort
 
 // Custom assert macro
-#define assert_msq(cond, msg) \
+#define assert_msg(cond, msg) \
     do { \
         if (!(cond)) { \
             std::cerr << "Assertion failed: (" #cond "), function " << __func__ \
@@ -20,6 +20,7 @@
     } while (false)
 
 int main(int argc, char **argv) {
+	std::cout << std::endl;
 	std::cout << "╭────────────────────────────────╮" << std::endl;
 	std::cout << "│ Performing test for class args │" << std::endl;
 	std::cout << "╰────────────────────────────────╯" << std::endl;
@@ -37,7 +38,7 @@ int main(int argc, char **argv) {
 		std::cout << i << ", ";
 	std::cout << std::endl;
 	std::cout << "Was the last printed out this string: '-a, -b, -c, -fg, --hi, -j, -k, -l,'?" << std::endl;
-	assert_msq(args[0] == "-a" && args[1] == "-b" && args[2] == "-c" && args[3] == "-fg" && args[4] == "--hi"
+	assert_msg(args[0] == "-a" && args[1] == "-b" && args[2] == "-c" && args[3] == "-fg" && args[4] == "--hi"
 			&& args[5] == "-j" && args[6] == "-k" && args[7] == "-l", "No! There might be something wrong ...");
 	std::cout << "Yes!" << std::endl;
 	
@@ -46,9 +47,6 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
 	
 	return 0;
 }

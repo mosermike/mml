@@ -7,42 +7,20 @@
     <includes refid="help_8hpp" local="yes">mml/help.hpp</includes>
     <includes refid="shell_8hpp" local="yes">mml/shell.hpp</includes>
     <incdepgraph>
-      <node id="4">
-        <label>mml/help.hpp</label>
-        <link refid="help_8hpp"/>
+      <node id="18">
+        <label>mml/log.hpp</label>
+        <link refid="log_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="12">
         <label>float.h</label>
-      </node>
-      <node id="8">
-        <label>mml/standards.hpp</label>
-        <link refid="standards_8hpp"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>string</label>
-      </node>
-      <node id="3">
-        <label>fstream</label>
       </node>
       <node id="1">
         <label>src/help.cpp</label>
@@ -56,39 +34,24 @@
         <childnode refid="6" relation="include">
         </childnode>
       </node>
-      <node id="6">
-        <label>mml/shell.hpp</label>
-        <link refid="shell_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>random</label>
+      <node id="5">
+        <label>string</label>
       </node>
       <node id="13">
         <label>mml/definitions.hpp</label>
         <link refid="definitions_8hpp"/>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="11">
+        <label>random</label>
       </node>
       <node id="10">
         <label>string.h</label>
       </node>
       <node id="7">
         <label>vector</label>
-      </node>
-      <node id="9">
-        <label>sstream</label>
-      </node>
-      <node id="15">
-        <label>cctype</label>
-      </node>
-      <node id="2">
-        <label>iostream</label>
       </node>
       <node id="14">
         <label>mml/vector.hpp</label>
@@ -110,16 +73,53 @@
         <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="18">
-        <label>mml/log.hpp</label>
-        <link refid="log_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>mml/standards.hpp</label>
+        <link refid="standards_8hpp"/>
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>cctype</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>mml/help.hpp</label>
+        <link refid="help_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -150,11 +150,11 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1help_1a19dcff2ecf9c097e8cd497260b63d3c9" kindref="member">mml::help::header</ref>(std::string<sp/>command,<sp/>std::string<sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref>)<sp/>noexcept<sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">mml::shell::chapter</ref>(</highlight><highlight class="stringliteral">&quot;NAME&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>command<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>command<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>command<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6c84d770587829ca7dc7c8147329d139" kindref="member">mml::shell::letter</ref>(</highlight><highlight class="stringliteral">&quot;white&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">mml::shell::chapter</ref>(</highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">mml::shell::chapter</ref>(</highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>+<sp/>command,</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/><ref refid="namespacemml_1_1shell_1acebfa40db0dbf8ce99ba8baf8c6d919d" kindref="member">option</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>[OPTION]&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">std::cout</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>[OPTION]&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">mml::shell::chapter</ref>(</highlight><highlight class="stringliteral">&quot;DESCRIPTION&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>

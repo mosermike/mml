@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
-    <compoundname>/home/mike/codes/mml/include</compoundname>
-    <innerdir refid="dir_b3565b2f926c3c7337ec426a161a271f">/home/mike/codes/mml/include/mml</innerdir>
+    <compoundname>/home/moser/codes/mml/include</compoundname>
+    <innerdir refid="dir_b3565b2f926c3c7337ec426a161a271f">/home/moser/codes/mml/include/mml</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/mike/codes/mml/include/"/>
+    <location file="/home/moser/codes/mml/include/"/>
   </compounddef>
 </doxygen>

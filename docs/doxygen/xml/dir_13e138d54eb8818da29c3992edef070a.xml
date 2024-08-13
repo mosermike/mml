@@ -2,10 +2,10 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
     <compoundname>test</compoundname>
-    <innerfile refid="args_8cpp">args.cpp</innerfile>
-    <innerfile refid="test_2standards_8cpp">standards.cpp</innerfile>
-    <innerfile refid="thread_8cpp">thread.cpp</innerfile>
-    <innerfile refid="test_2timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="test__args_8cpp">test_args.cpp</innerfile>
+    <innerfile refid="test__standards_8cpp">test_standards.cpp</innerfile>
+    <innerfile refid="test__thread_8cpp">test_thread.cpp</innerfile>
+    <innerfile refid="test__time_8cpp">test_time.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

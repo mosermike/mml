@@ -1,12 +1,14 @@
 /**
- * @author Mike Moser
- * 
  * @file file.hpp
- * @brief This file includes functions regarding the files. It might only work on linux as some
- *              commands might be os-dependent. The main function of here is to copy files. It also has
- *              other functions such as checking if a file exists
+ * @author Mike Moser
+ * @brief This file includes functions regarding the filesystem. 
+ * @note It might only work on linux as some commands might be os-dependent. The main function of here is to copy files. It also has other functions such as checking if a file exists
+ * @version 1.0
+ * @date 2024-08-13
  * 
-*/
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #ifndef MML_INCLUDE_MML_FILE_HPP
 #define MML_INCLUDE_MML_FILE_HPP
@@ -15,6 +17,7 @@
 #include <iostream>
 
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 
 namespace mml{
 	namespace file{

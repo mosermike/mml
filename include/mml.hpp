@@ -1,10 +1,13 @@
 /**
+ * @file mml.hpp
  * @author Mike Moser
+ * @brief Imports all functions from the this library
+ * @version 1.0
+ * @date 2024-08-13
  * 
- * @name mml.hpp
- * Enthält verschiedene Headerdateien
+ * @copyright Copyright (c) 2024
  * 
-*/
+ */
 
 #pragma once
 
@@ -26,6 +29,7 @@
 #include "mml/log.hpp"
 #include "mml/shell.hpp"
 #include "mml/standards.hpp"
+#include "mml/string.hpp"
 #include "mml/thread.hpp"
 #include "mml/time.hpp"
 #include "mml/Unix.hpp"

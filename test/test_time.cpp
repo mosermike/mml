@@ -22,6 +22,7 @@
     } while (false)
 
 int main(int argc, char **argv) {
+	std::cout << std::endl;
 	std::cout << "╭──────────────────────────────╮" << std::endl;
 	std::cout << "│ Performing test for time.hpp │" << std::endl;
 	std::cout << "╰──────────────────────────────╯" << std::endl;
@@ -60,9 +61,6 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
 	
 	return 0;
 }

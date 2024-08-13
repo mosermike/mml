@@ -1,11 +1,13 @@
 /**
+ * @file standards.cpp
  * @author Mike Moser
- * 
- * @name standards.cpp
- * 
  * @brief Contains different standard functions of this library
+ * @version 1.0
+ * @date 2024-08-13
  * 
-*/
+ * @copyright Copyright (c) 2024
+ * 
+ */
 
 #include <iostream>
 #include <string>
@@ -21,7 +23,7 @@
 #include "mml/Unix.hpp"
 
 
-bool mml::check_root(std::string programme){
+bool mml::check_root(std::string programme, mml::string logpath){
 	static bool check = false;
 	// für log und keine doppelte Überprüfung
 	if(!check)
@@ -30,25 +32,26 @@ bool mml::check_root(std::string programme){
 		return 1;
 
 	mml::Unix::User user;
-	mml::log log(_check_root_log);
+	
+	mml::log log;
+	if(logpath != "") {
+		log.set_path(logpath);
+		log.open();
+	}
 	
 	
 	if ( user.get_user().str() != "root" ){
-		pid_t parent_pid = getppid();
+		if(logpath != "")
+			log << ("[check_root] " + programme + " failed at " + mml::date(-1, "Date+Time") + ".") << std::endl;
+		throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
 		
-		// call from another c++ programme
-		if(mml::Unix::get_process_name_by_pid(parent_pid) == "bash"){
-			log.cout("[check_root] " + programme + " failed at " + mml::date(-1, "Date+Time") + ".", true);
-			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
-		}
-		
-		// Call from the terminal
-		else {
-			log.cout("[check_root] " + programme  + " failed at " + mml::date(-1, "Date+Time") + ".", true);
-			throw std::runtime_error("[check_root] This script must be run as root! Your actual user is " + user.get_user().str() + ".");
-		}
 	}
-	log.cout("[check_root] " + programme  + " accepted at " + mml::date(-1, "Date+Time") + ".", true);
+	
+	if(logpath != "")
+		log << ("[check_root] " + programme  + " accepted at " + mml::date(-1, "Date+Time") + ".") << std::endl;
+
+	log.close();
+	
 	return false;
 }
 

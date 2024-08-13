@@ -1,0 +1,125 @@
+.TH "test/test_thread.cpp" 3 "Tue Aug 13 2024" "mml" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test/test_thread.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include <thread>\fP
+.br
+\fC#include <cassert>\fP
+.br
+\fC#include 'mml/thread\&.hpp'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBassert_msg\fP(cond,  msg)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBexampleTaskWithMultipleParams\fP (int threadId, \fBmml::thread::Threads\fP< int > &threads)"
+.br
+.RI "Testing threading if they run\&. "
+.ti -1c
+.RI "bool \fBisPrime\fP (int number)"
+.br
+.RI "Checks if a number is a prime number\&. "
+.ti -1c
+.RI "int \fBsearch_prime\fP (int threadId, int start, int end)"
+.br
+.RI "Search prime numbers in a range\&. "
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define assert_msg(cond, msg)"
+\fBValue:\fP
+.PP
+.nf
+    do { \
+        if (!(cond)) { \
+            std::cerr << "Assertion failed: (" #cond "), function " << __func__ \
+                      << ", file " << __FILE__ << ", line " << __LINE__ << "\&." << std::endl \
+                      << "Message: " << msg << std::endl; \
+            std::abort(); \
+        } \
+    } while (false)
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "int exampleTaskWithMultipleParams (int threadId, \fBmml::thread::Threads\fP< int > & threads)"
+
+.PP
+Testing threading if they run\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreadId\fP Id of the thread 
+.br
+\fIthreads\fP the class with the threads for printout 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int with no real information 
+.RE
+.PP
+
+.SS "bool isPrime (int number)"
+
+.PP
+Checks if a number is a prime number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInumber\fP Number to be checked 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "int main ()"
+
+.SS "int search_prime (int threadId, int start, int end)"
+
+.PP
+Search prime numbers in a range\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreadId\fP Id of the thread 
+.br
+\fIstart\fP Start Value 
+.br
+\fIend\fP End Value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Number of Prime Numbers 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for mml from the source code\&.
