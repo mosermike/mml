@@ -305,6 +305,7 @@ mml::Unix::permissions mml::Unix::perms(std::string path) {
 
 
 bool mml::Unix::perm_to_write(std::string path) {
+	std::cout << "TEST123" << std::endl;
 	mml::Unix::User user;
 	std::cout << "TESTX" << std::endl;
 	if(user.get_user() == "root")
