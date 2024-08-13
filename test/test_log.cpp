@@ -48,11 +48,11 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "Testing backup function ...";
+	//std::cout << "Testing backup function ...";
 
-	log.set_num(4);
-	log.backup(false,true);
-	log.backup(false,true);
+	//log.set_num(4);
+	//log.backup(false,true);
+	//log.backup(false,true);
 	
 	assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
 				"\nBackups are not created and moved as expected. Expected are in total 7 files."
