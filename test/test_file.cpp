@@ -34,9 +34,9 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	system("mkdir -p ./test_file123/test123; touch ./test_file/test1");
+	system("touch ./TTTT");
 	std::cout << "Start Copying" << std::endl;
-	mml::file::copy("./test_file123","./test_file1","","",100, false, false, true , true, true, true, true);
+	mml::file::copy("./TTTT","./TTTT1","","",100, true, true, true , true, true, true, true);
 
 	
 
