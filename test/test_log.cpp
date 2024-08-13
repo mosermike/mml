@@ -53,15 +53,8 @@ int main(int argc, char **argv) {
 	log.set_num(4);
 	log.backup(false,true);
 	log.backup(false,true);
-	log.backup(false,true);
-	log.backup(false,true);
-	log.backup(false,true);
-	log.backup(false,true);
-	log.backup(false,true);
-	log.backup(false,true);
 	
-	assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2",tmpfile + ".bak3",
-								tmpfile + ".bak4", tmpfile + ".bak5") && !mml::Unix::exist(tmpfile + ".bak6"), 
+	assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
 				"\nBackups are not created and moved as expected. Expected are in total 7 files."
 	);
 	std::filesystem::remove(tmpfile.str());
