@@ -217,8 +217,9 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	uint32_t				num_of_files		= 0; 	// how many files are to be copied
 	uint32_t				copied_files		= 0; 	// how many files are already copied
 	uint32_t				copied_files_print	= 0; 	// file number for the print
-	if(verbose_debug)
-		std::cout << "[copy] Start of function 'copy'!" << std::endl;
+	//if(verbose_debug)
+	std::cout << "[copy] Start of function 'copy'!" << std::endl;
+	std::cout.flush();
 	/*
 	 * ***********************************
 	 * * 		COPYING SINGLE FILE      *
