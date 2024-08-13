@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
 	std::cout << std::endl;
 
 	system("mkdir -p ./test_file/test123; touch ./test_file/test1");
-	mml::file::copy("./test_file",".test_file1","","",100, false, false, true , true, true, true, true);
+	mml::file::copy("./test_file","./test_file1","","",100, false, false, true , true, true, true, true);
 
 	
 
