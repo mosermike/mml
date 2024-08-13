@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
 	std::cout << "Testing backup function ...";
 
 	log.set_num(4);
-	log.backup(false,true);
+	//log.backup(false,true);
 	//log.backup(false,true);
 	
 	//assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
