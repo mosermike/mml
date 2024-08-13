@@ -74,12 +74,12 @@ bool mml::Unix::exist_onepath(mml::string path){
 }
 
 int32_t mml::Unix::filetype(mml::string filepath){
-	const std::filesystem::path& p(filepath.c_str());
+	const std::filesystem::path& p(filepath.str());
 	std::filesystem::file_status s = std::filesystem::symlink_status(p);
-	
-	if (std::filesystem::exists(p)) {
+
+	if (!std::filesystem::exists(p)) {
 		std::error_code ec = std::make_error_code(std::errc::no_such_file_or_directory);
-        throw std::filesystem::filesystem_error("[filetype] File" + filepath.str() + " does not exist", ec);
+        throw std::filesystem::filesystem_error("[filetype] File '" + filepath.str() + "' does not exist", ec);
 	}
 
 	if (std::filesystem::is_regular_file(s))
