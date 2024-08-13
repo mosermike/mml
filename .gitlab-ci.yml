@@ -15,4 +15,4 @@ test-job:
     - build-job
   script:
     - cd build
-    - make test --rerun-failed --output-on-failure
+    - make test
