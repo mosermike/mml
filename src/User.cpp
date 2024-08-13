@@ -59,20 +59,6 @@ std::string mml::Unix::User::gethomedir() {
 	return std::string(pw->pw_dir);
 }
 
-std::string mml::Unix::User::getip(std::string iface ) {
-	
-	int		n		= 0;
-	struct	ifreq	ifr;
-    
-	n = socket(AF_INET, SOCK_DGRAM, 0);
-	ifr.ifr_addr.sa_family = AF_INET;
-	strncpy(ifr.ifr_name , iface.c_str() , IFNAMSIZ - 1);
-		ioctl(n, SIOCGIFADDR, &ifr);
-	close(n);
-    
-	return  inet_ntoa(( (struct sockaddr_in *) & ifr.ifr_addr )->sin_addr);
-}
-
 std::string mml::Unix::User::getdefaultshell() {
 	return std::string(pw->pw_shell);
 }
@@ -230,13 +216,6 @@ void mml::Unix::User::cout(mml::string output) {
 			std::cout << "HOSTNAME: \t\t" 	<< this->hostname << std::endl;
 			break;
 			
-		case mml::const_string_hash("iw") :
-			std::cout << "WLAN IP-ADRESSE: \t" 	<< this->ip_w << std::endl;
-			break;
-		
-		case mml::const_string_hash("ie") :
-			std::cout << "LAN IP-ADRESSE: \t" 	<< this->ip_e << std::endl;
-			break;
 			
 		case mml::const_string_hash("domain") :
 			std::cout << "DOMAIN: \t\t" 	<< this->domain << std::endl;
@@ -315,13 +294,6 @@ bool mml::Unix::User::check(mml::string option, std::string value) {
 			return this->hostname == value ? true : false;
 			break;
 			
-		case mml::const_string_hash("iw") :
-			return this->ip_w == value ? true : false;
-			break;
-			
-		case mml::const_string_hash("ie") :
-			return this->ip_e == value ? true : false;
-			break;
 			
 		case mml::const_string_hash("domain") :
 			return this->domain == value ? true : false;

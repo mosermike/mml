@@ -36,7 +36,10 @@ namespace mml{
 	//}
 	namespace Unix{
 		
-		
+		/**
+		 * @brief User information
+		 * @todo Revise as sth is not working with the gitlab CI
+		 */
 		class User{
 		private:
 			
@@ -56,15 +59,6 @@ namespace mml{
 				  mml::string			domain			= getdomain();
 				  mml::string			path			= std::getenv("PATH");
 				  mml::string			pwd				= get_current_dir_name();
-#if __amd64__
-				  mml::string			ip_w			= getip("wlp0s20f3");
-				  mml::string			ip_e			= getip("enp1s0");
-#elif __aarch64__
-				  mml::string			ip_w			= getip("wlan0");
-				  mml::string			ip_e			= getip("eth0");
-#else
-#error "Architectur not defined"
-#endif
 				  std::vector<mml::string> groups			= getgrlist();
 				  
 			
@@ -76,7 +70,6 @@ namespace mml{
 			std::string getlocale();					// Returns the language of the user
 			std::string getloginname();					// Returns the login name
 			std::string gethomedir();					// Returns the home path
-			std::string getip(std::string iface);		// Returns the actual IP address of the wifi module
 			std::string getdefaultshell();				// Returns the default shell
 			std::string getdomain();					// Returns the current domain name
 			std::string gethost();						// Returns the host name
@@ -144,8 +137,6 @@ namespace mml{
 			mml::string					get_host()		{ return this->hostname;}		// Hostname
 			mml::string					get_home()		{ return this->home;}			// Home path of the user
 			mml::string					get_shell()		{ return this->defaultshell;}	// Default shell
-			mml::string					get_iw()		{ return this->ip_w;}			// IP-Address Wlan
-			mml::string					get_ie()		{ return this->ip_e;}			// IP-Address Ethernet
 			mml::string					get_domain()	{ return this->domain;}			// Domain name
 			mml::string					get_path()		{ return this->path;}			// Path
 			mml::string					get_pwd()		{ return this->pwd;}			// Actual path
