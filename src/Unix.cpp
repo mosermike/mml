@@ -307,7 +307,6 @@ mml::Unix::permissions mml::Unix::perms(std::string path) {
 bool mml::Unix::perm_to_write(std::string path) {
 	
 	#include <unistd.h>
-	
 	const passwd *pw = getpwuid (geteuid ());
 	if(pw->pw_name == "root")
 		return true;

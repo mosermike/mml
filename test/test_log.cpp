@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
 	std::cout << "Testing writing and reading a log entry ...";
 
 	// Create Random File
-	mml::string tmpfile = "./test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
+	mml::string tmpfile = "/tmp/test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
 
 	// Open the log file
 	mml::log log(tmpfile);
@@ -48,19 +48,20 @@ int main(int argc, char **argv) {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
-	std::cout << "Testing backup function ..." << std::endl;
+	std::cout << "Testing backup function ...";
 
 	log.set_num(4);
-	log.backup(true,true);
-	//log.backup(false,true);
+	log.backup(false,true);
+	log.backup(false,true);
+	log.backup(false,true);
 	
-	//assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
-	//			"\nBackups are not created and moved as expected. Expected are in total 7 files."
-	//);
-	//std::filesystem::remove(tmpfile.str());
-	//std::filesystem::remove(tmpfile.str() + ".bak");
-	//std::filesystem::remove(tmpfile.str() + ".bak1");
-	//std::filesystem::remove(tmpfile.str() + ".bak2");
+	assert_msg(mml::Unix::exist(tmpfile.str(), tmpfile + ".bak", tmpfile + ".bak1", tmpfile + ".bak2"), 
+				"\nBackups are not created and moved as expected. Expected are in total 7 files."
+	);
+	std::filesystem::remove(tmpfile.str());
+	std::filesystem::remove(tmpfile.str() + ".bak");
+	std::filesystem::remove(tmpfile.str() + ".bak1");
+	std::filesystem::remove(tmpfile.str() + ".bak2");
 	std::cout << " Passed" << std::endl;
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;

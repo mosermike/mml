@@ -36,7 +36,10 @@ namespace mml{
 	//}
 	namespace Unix{
 		
-		
+		/**
+		 * @brief User information
+		 * @todo Revise as sth is not working with the gitlab CI
+		 */
 		class User{
 		private:
 			

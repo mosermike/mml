@@ -49,14 +49,14 @@ namespace mml{
 		 * @param dst Destination path
 		 * @param name_in Copy only files including this string in depth = 1
 		 * @param name_ex Exclude all files and directories with this name
-		 * @param blocksize Blocksize to be copied at once
 		 * @param verbose Verbose output
-		 * @param verbose_debug Debugging output
 		 * @param all Copy also hidden files
 		 * @param recursive Copy recursive
 		 * @param force Overwrite everything without asking
 		 * @param progress Print out the progress while copying
 		 * @param falsewrite Do not overwrite files in the destination
+		 * @param verbose_debug Debugging output
+		 * @param blocksize Blocksize to be copied at once
 		 * @return 0 if successfull
 		 * @throw logic_error : If a file is to be copied but dst is a directory
 		 * @throw logic_error : If destination exists as a file if a directory is copied
@@ -64,7 +64,7 @@ namespace mml{
 		 * @throw runtime_error : If last directory in destionation is not a directory
 		 * @todo Copy symbolic and hard link file by creating them
 		 */
-		int copy (mml::string src, mml::string dst, std::string name_in = "", std::string name_ex = "", size_t blocksize = _100MB, bool verbose=false, bool verbose_debug=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite = false);
+		int copy (mml::string src, mml::string dst, std::string name_in = "", std::string name_ex = "", bool verbose=false, bool all=false, bool recursive=false, bool force=false, bool progress=false, bool falsewrite = false, bool verbose_debug=false, size_t blocksize = _100MB);
 		
 		/**
 		 * @brief Compare two files by using the SHA256 algorithm. Only works for linux.
