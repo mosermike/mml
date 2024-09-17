@@ -177,12 +177,19 @@ namespace mml{
 		 * @brief Return a position of an element
 		 * @param value Value to be looked for
 		 * @param start Defines at what position to start to be looked for
+		 * @param exact return the position where the element is exact this value, default false
 		* @return std::size_t
 		*/
-		std::size_t find(const T value, size_t start = 0) const noexcept {
+		std::size_t find(const T value, size_t start = 0, bool exact = false) const noexcept {
 			for(size_t i = start; i < vec.size(); i++) {
-				if (mml::to_string(vec[i]).find(mml::to_string(value).str()) < std::string::npos)
-					return i;
+				if(exact) {
+					if (mml::to_string(vec[i]) == mml::to_string(value))
+						return i;
+				}
+				else {
+					if (mml::to_string(vec[i]).find(mml::to_string(value)) < std::string::npos)
+						return i;
+				}
 			}
 			return std::string::npos;
 		}
