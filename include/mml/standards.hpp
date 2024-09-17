@@ -125,6 +125,7 @@ namespace mml {
 	 * @return bool
 	*/
 	bool isnum(char c) noexcept;
+
 	/**
 	 * @brief Checks if a number has reached the maximum value (std::string::npos)
 	 * @param number Number to be checked
@@ -243,4 +244,12 @@ namespace mml {
 
 }
 
+/**
+ * @brief Overload the operator + where the rhs is a mml::string
+ * 
+ * @param lhs Left hand side of the new string
+ * @param rhs Right hand side of the new string
+ * @return mml::string 
+ */
+mml::string operator+(const char* lhs, const mml::string& rhs) noexcept;
 #endif

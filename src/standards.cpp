@@ -225,6 +225,12 @@ std::string mml::lower(std::string input) noexcept {
 
 */
 
+mml::string operator+(const char* lhs, const mml::string& rhs) noexcept {
+        std::string temp(lhs); // Convert lhs (const char*) to std::string
+        temp += rhs.str();     // Concatenate with the internal string of rhs
+        return mml::string(temp); // Return a new mml::string
+}
+
 std::string mml::random_str(size_t letters, std::string start) noexcept {
 	
 	for(uint32_t i = 0; i < letters; i++)
