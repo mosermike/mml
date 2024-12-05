@@ -273,7 +273,7 @@ namespace mml{
 		 * @param value Vector to be checked
 		 * @return true if not the same
 		*/
-		bool operator!=(const std::vector<T> &vec) const noexcept {return this->vec!=vec.vec;}
+		bool operator!=(const mml::vector<T> &vec) const noexcept {return this->vec!=vec.vec;}
 
 		/**
 		 * @brief Scalarmultiplication

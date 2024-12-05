@@ -244,6 +244,14 @@ namespace mml {
 		*/
     	std::string::const_iterator end() const  noexcept { return value.end(); }
 
+		/**
+		 * @brief Erase parts of the string
+		 * 
+		 * @param start Start position
+		 * @param length Length of it
+		 */
+		void erase(std::size_t start, std::size_t length = std::string::npos) {value.erase(start, length);}
+
 	private:
 		/**
 		 * @brief Check if a string exists
@@ -427,7 +435,7 @@ namespace mml {
 		/**
 		 * @brief Create a substring starting and ending of specific positions
 		 * @param beg Start of the new string
-		 * @param end End of the new string
+		 * @param end End of the new string (including)
 		 * @return mml::string
 		 */
 		mml::string sub(std::size_t beg, std::size_t end) const noexcept;
