@@ -21,7 +21,7 @@ namespace mml{
 	};
 
 	// Logger class
-	class Logger {
+	class logger {
 	private:
 		LogLevel currentLevel;
 		std::ofstream logFile;
@@ -55,7 +55,7 @@ namespace mml{
 	 * @param consoleOutput print to console 
 	 * @param filename filename of the log file
 	 */
-		Logger(LogLevel level, bool consoleOutput = true, const std::string& filename = "")
+		logger(LogLevel level, bool consoleOutput = true, const std::string& filename = "")
 			: currentLevel(level), logToConsole(consoleOutput) {
 			open(filename);
 		}
@@ -64,12 +64,12 @@ namespace mml{
 		 * @brief Construct a new Logger object
 		 * 
 		 */
-		Logger() {}
+		logger() {}
 
 		/**
 		 * @brief Destroy the Logger object
 		 */
-		~Logger() {
+		~logger() {
 			close();
 		}
 
@@ -80,6 +80,38 @@ namespace mml{
 			if (logFile.is_open()) {
 				logFile.close();
 			}
+		}
+
+		/**
+		 * @brief Log a debug
+		 * @param message Message to be logged
+		 * @param file name of the file executing this function (e.g. __FILE__)
+		 * @param line Line number (e.g. __LINE__)
+		 */
+		void debug(const std::string& message, const std::string& file, int line) {
+			log(DEBUG, message, file, line);
+		}
+
+		/**
+		 * @brief Log an error
+		 * 
+		 * @param message Message to be logged
+		 * @param file name of the file executing this function (e.g. __FILE__)
+		 * @param line Line number (e.g. __LINE__)
+		 */
+		void error(const std::string& message, const std::string& file, int line) {
+			log(ERROR, message, file, line);
+		}
+
+		/**
+		 * @brief Log a info
+		 * 
+		 * @param message Message to be logged
+		 * @param file name of the file executing this function (e.g. __FILE__)
+		 * @param line Line number (e.g. __LINE__)
+		 */
+		void info(const std::string& message, const std::string& file, int line) {
+			log(INFO, message, file, line);
 		}
 
 		/**
@@ -110,10 +142,10 @@ namespace mml{
 
 			std::string line_str = std::to_string(line);
 
-			for(int16_t i = line_str.size(); i <= 4; i++)
+			for(int16_t i = line_str.size(); i <= 3; i++)
 				line_str += " ";
 			
-			std::string logMessage =  file_str + ":" + line_str + " | " + levelToString(level) + " | "
+			std::string logMessage =  file_str + ":" + line_str + "| " + levelToString(level) + " | "
 									+ message;
 			if (logToConsole) {
 				std::cout << logMessage << std::endl;
@@ -181,17 +213,36 @@ namespace mml{
 			set_output_console(logToConsole);
 			open(filename);
 		}
+
+		/**
+		 * @brief Log a warning
+		 *
+		 * @param message Message to be logged
+		 * @param file name of the file executing this function (e.g. __FILE__)
+		 * @param line Line number (e.g. __LINE__)
+		 */
+		void warning(const std::string& message, const std::string& file, int line) {
+			log(WARNING, message, file, line);
+		}
 	};
 
 
 	// Global logger instance
-	Logger globalLogger;
+	logger Logger;
 }
 
 // Macro to simplify logging
 #define LOG(level, message) \
-    mml::globalLogger.log(level, message, __FILE__, __LINE__)
+    mml::Logger.log(level, message, __FILE__, __LINE__)
+#define LOGWARNING(message) \
+    mml::Logger.warning(message, __FILE__, __LINE__)
+#define LOGINFO(message) \
+    mml::Logger.info(message, __FILE__, __LINE__)
+#define LOGERROR(message) \
+    mml::Logger.error(message, __FILE__, __LINE__)
+#define LOGDEBUG(message) \
+    mml::Logger.debug(message, __FILE__, __LINE__)
 #define LOGLEVEL(level) \
-    mml::globalLogger.set_level(level)
+    mml::Logger.set_level(level)
 
 #endif
