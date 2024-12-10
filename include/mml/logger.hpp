@@ -160,6 +160,10 @@ namespace mml{
 		 * @param filename log file name
 		 */
 		void open(std::string filename) {
+			if(logFile.is_open()) {
+				std::cout << "Logfile already opened" << std::endl;
+				return;
+			}
 			if (!filename.empty()) {
 				logFile.open(filename, std::ios::app);
 				if (!logFile.is_open()) {
@@ -228,13 +232,23 @@ namespace mml{
 
 
 	// Global logger instance
-	logger Logger;
+	//logger Logger;
+	logger& Logger() {
+        static logger instance;
+        return instance;
+    }
 }
 
 // Macro to simplify logging
-#define LOG(level, message) \
-    mml::Logger.log(level, message, __FILE__, __LINE__)
-#define LOGWARNING(message) \
+#define LOG(level, message) mml::Logger().log(level, message, __FILE__, __LINE__)
+#define LOGWARNING(message) mml::Logger().warning(message, __FILE__, __LINE__)
+#define LOGINFO(message) mml::Logger().info(message, __FILE__, __LINE__)
+#define LOGERROR(message) mml::Logger().error(message, __FILE__, __LINE__)
+#define LOGDEBUG(message) mml::Logger().debug(message, __FILE__, __LINE__)
+#define LOGLEVEL(level) mml::Logger().set_level(level)
+//#define LOG(level, message) \
+//    mml::Logger.log(level, message, __FILE__, __LINE__)
+/*#define LOGWARNING(message) \
     mml::Logger.warning(message, __FILE__, __LINE__)
 #define LOGINFO(message) \
     mml::Logger.info(message, __FILE__, __LINE__)
@@ -244,5 +258,5 @@ namespace mml{
     mml::Logger.debug(message, __FILE__, __LINE__)
 #define LOGLEVEL(level) \
     mml::Logger.set_level(level)
-
+*/
 #endif
