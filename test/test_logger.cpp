@@ -28,5 +28,8 @@ int main() {
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 	
+	LOGINFO("Close the log file");
+	mml::Logger.close(); // Close the log file
+
 	return 0;
 }
