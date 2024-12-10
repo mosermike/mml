@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(mml VERSION 1.0 LANGUAGES CXX)
 
 # Set the C++ standard
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Gather the source files
@@ -76,7 +76,8 @@ foreach(TEST_FILE ${MML_TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_FILE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_FILE})
     target_link_libraries(${TEST_NAME} mml)
-	# Output test executables to the 'tests' directory
+
+    # Output test executables to the 'tests' directory
     set_target_properties(${TEST_NAME} PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
     )
