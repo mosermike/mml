@@ -21,6 +21,7 @@
 //#include "mml/thread.hpp"
 #include "mml/definitions.hpp"
 #include "mml/Unix.hpp"
+#include "mml/logger.hpp"
 
 
 bool mml::check_root(std::string programme, mml::string logpath){
@@ -59,6 +60,20 @@ bool mml::check_root(std::string programme, mml::string logpath){
 
 // Uhrzeit:
 uint32_t mml::date(int info, time_t time1) noexcept {
+	switch(info) {
+		case _sec:  logdebug("Get seconds of the time " + std::to_string(time1)); break;
+		case _min:  logdebug("Get minutes of the time " + std::to_string(time1)); break;
+		case _hour:  logdebug("Get hours of the time " + std::to_string(time1)); break;
+		case _day:  logdebug("Get day of the time " + std::to_string(time1)); break;
+		case _month:  logdebug("Get month of the time " + std::to_string(time1)); break;
+		case _year:  logdebug("Get year of the time " + std::to_string(time1)); break;
+		case _st1:  logdebug("Get summertime of the time " + std::to_string(time1)); break;
+		case _weekday:  logdebug("Get days since sunday of the time " + std::to_string(time1)); break;
+		case _yearday:  logdebug("Get days since New Year of the time " + std::to_string(time1)); break;
+		case _kw:  logdebug("Get week number of the time " + std::to_string(time1)); break;
+		default: logerror("Desired information option " + std::to_string(info) + " not defined"); break;
+	}
+
 	std::tm*		nun;
 	if(time1 == -1) {
 		std::time_t t = std::time(0);   // get time now
@@ -72,23 +87,26 @@ uint32_t mml::date(int info, time_t time1) noexcept {
     const int wday = nun->tm_wday ;
     const int delta = wday ? wday-1 : DAYS_PER_WEEK-1 ;
     
-	
+	uint32_t time_info = 0;
 	switch(info){
-		case _sec:  return (uint32_t) nun->tm_sec;
-		case _min:  return (uint32_t) nun->tm_min;	// Minute
-		case _hour:  return (uint32_t) nun->tm_hour;	// Stunde
-		case _day:  return (uint32_t) nun->tm_mday;	// Tag
-		case _month:  return (uint32_t) nun->tm_mon+1;	// Monat
-		case _year:  return (uint32_t) nun->tm_year+1900;	// Jahr
-		case _st1:  return (uint32_t) nun->tm_isdst;	// Summertime
-		case _weekday:  return (uint32_t) nun->tm_wday;	// Tage seit Sonntag
-		case _yearday:  return (uint32_t) nun->tm_yday;	// Tage seit Neujahr
-		case _kw:  return (uint32_t) (nun->tm_yday + DAYS_PER_WEEK - delta ) / DAYS_PER_WEEK;	// week number
-		default: return 0;
+		case _sec:  time_info = (uint32_t) nun->tm_sec; break;
+		case _min:  time_info = (uint32_t) nun->tm_min; break;	// Minute
+		case _hour: time_info = (uint32_t) nun->tm_hour; break;	// Stunde
+		case _day:  time_info = (uint32_t) nun->tm_mday; break;	// Tag
+		case _month:time_info = (uint32_t) nun->tm_mon+1; break;	// Monat
+		case _year: time_info = (uint32_t) nun->tm_year+1900; break;	// Jahr
+		case _st1:  time_info = (uint32_t) nun->tm_isdst; break;	// Summertime
+		case _weekday: time_info = (uint32_t) nun->tm_wday; break;	// Tage seit Sonntag
+		case _yearday: time_info = (uint32_t) nun->tm_yday; break;	// Tage seit Neujahr
+		case _kw:   time_info = (uint32_t) (nun->tm_yday + DAYS_PER_WEEK - delta ) / DAYS_PER_WEEK; break;	// week number
+		default: time_info =  0; break;
 	}
+	logdebug("Determined value: " + std::to_string(time_info));
+
+	return time_info;
 }
 
- std::string mml::date(time_t time1, mml::string value, std::string separator1, std::string separator2) noexcept {
+std::string mml::date(time_t time1, mml::string value, std::string separator1, std::string separator2) noexcept {
 		std::string year = std::to_string(mml::date(_year,time1)); // Get actual year
 
 		uint32_t info = _month;
@@ -245,4 +263,41 @@ template <typename templ> templ mml::smallest_num(std::vector<templ> values, std
 		
 	std::sort(values.begin(), values.end());
 	return values[pos];
+}
+
+mml::string mml::timeformat(time_t time1, mml::string format) noexcept {
+	logdebug("Convert time " + std::to_string(time1) + " into the format " + format.str());
+	
+	std::string year = "";
+	std::string month = "";
+	std::string day = "";
+	std::string hour = "";
+	std::string minute = "";
+	std::string second = "";
+
+	if (format.exist("$YY"))
+		year = std::to_string(mml::date(_year,time1)); // Get actual year
+
+	if (format.exist("$MM"))
+		month = mml::date(_month,time1) > 9		?	std::to_string(mml::date(_month,time1)) : "0" + std::to_string(mml::date(_month,time1));
+	if (format.exist("$DD"))
+		day = mml::date(_day,time1) > 9 		?	std::to_string(mml::date(_day,time1)) : "0" + std::to_string(mml::date(_day,time1));
+	if (format.exist("$hh"))
+		hour = mml::date(_hour,time1) > 9		?	std::to_string(mml::date(_hour,time1)) : "0" + std::to_string(mml::date(_hour,time1));
+	if (format.exist("$mm"))
+		minute = mml::date(_min,time1) > 9	?	std::to_string(mml::date(_min,time1)) : "0" + std::to_string(mml::date(_min,time1));
+	if (format.exist("$ss"))
+		second = mml::date(_sec,time1) > 9	?	std::to_string(mml::date(_sec,time1)) : "0" + std::to_string(mml::date(_sec,time1));	
+
+
+	format = format.replace("$YYYY",year);
+	format = format.replace("$YY",year.substr(2));
+	format = format.replace("$MM",month);
+	format = format.replace("$DD",day);
+	format = format.replace("$hh",hour);
+	format = format.replace("$mm",minute);
+	format = format.replace("$ss",second);
+
+	loginfo("Time " + std::to_string(time1) + " converted to the time " + format.str() + " UTC");
+	return format;
 }
