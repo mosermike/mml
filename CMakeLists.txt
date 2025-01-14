@@ -11,6 +11,8 @@ file(GLOB_RECURSE MML_SOURCES src/*.cpp)
 # Option to choose between shared or static library, default to shared
 option(BUILD_SHARED_LIBS "Build shared libraries by default" ON)
 
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
+
 # Create the library
 add_library(mml ${MML_SOURCES})
 
