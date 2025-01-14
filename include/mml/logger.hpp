@@ -1,14 +1,16 @@
 
-#ifndef MML_INCLUDE_MML_LOG_HPP
-#define MML_INCLUDE_MML_LOG_HPP
+#ifndef MML_INCLUDE_MML_LOGGER_HPP
+#define MML_INCLUDE_MML_LOGGER_HPP
 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <mutex>
 #include <ctime>
+#include <filesystem>
 
-#include "mml/standards.hpp"
+//#include "mml/standards.hpp"
+//#include "mml/Unix.hpp"
 
 namespace mml{
 
@@ -19,6 +21,14 @@ namespace mml{
 		WARNING,
 		ERROR
 	};
+
+	/**
+	 * @brief Get the Log Level Name object
+	 * 
+	 * @param level Loglevel
+	 * @return std::string 
+	 */
+	std::string getLogLevelName(LogLevel level);
 
 	// Logger class
 	class logger {
@@ -83,6 +93,17 @@ namespace mml{
 		}
 
 		/**
+		 * @brief Deactivate logging
+		 * 
+		 * @param verbose Log the deactivation
+		 */
+		void deactivate(bool verbose=true) {
+			if(verbose)
+				this->info("Logging is deactived", __FILE__, __LINE__);
+			log_active = false;
+		}
+
+		/**
 		 * @brief Log a debug
 		 * @param message Message to be logged
 		 * @param file name of the file executing this function (e.g. __FILE__)
@@ -101,6 +122,25 @@ namespace mml{
 		 */
 		void error(const std::string& message, const std::string& file, int line) {
 			log(ERROR, message, file, line);
+		}
+
+		/**
+		 * @brief Get the loglevel object
+		 * 
+		 * @return Current loglevel
+		 */
+		LogLevel get_loglevel() {
+			return this->currentLevel;
+		}
+
+		/**
+		 * @brief Get the logstatus to see if logging is active or not
+		 * 
+		 * @return true if logging is active
+		 * @return false if logging is deactivated
+		 */
+		bool get_logstatus() {
+			return this->log_active;
 		}
 
 		/**
@@ -135,7 +175,7 @@ namespace mml{
 
 			std::lock_guard<std::mutex> lock(logMutex);
 			
-			std::string file_str = file.substr(mml::to_string(file).rfind('/')+1);
+			std::string file_str = file.substr(file.rfind('/')+1);
 			
 			for(int16_t i = file_str.size(); i <= 20; i++)
 				file_str = " " + file_str;
@@ -164,14 +204,26 @@ namespace mml{
 				std::cout << "Logfile already opened" << std::endl;
 				return;
 			}
+
 			if (!filename.empty()) {
+				bool logfile_exist = false; // shows if the logfile exists already
+				if(std::filesystem::exists(filename))
+					logfile_exist = true;
+
 				logFile.open(filename, std::ios::app);
 				if (!logFile.is_open()) {
+					error("Unable to open log file: " + filename, __FILE__, __LINE__);
 					throw std::runtime_error("Unable to open log file: " + filename);
+				}
+
+				// Save logfile name at the start
+				if(!logfile_exist){
+					log(INFO, "Create logfile " + filename + " at " + getTimestamp(), __FILE__, __LINE__);
+					log(INFO, "Current loglevel is " + getLogLevelName(currentLevel), __FILE__, __LINE__);
 				}
 			}
 			else
-				log(ERROR, "Logfile is already open", __FILE__, __LINE__);
+				log(ERROR, "Filename '" + filename + "' is empty", __FILE__, __LINE__);
 		}
 
 		/**
@@ -180,6 +232,10 @@ namespace mml{
 		 */
 		void set_output_console(bool value) {
 			this->logToConsole = value;
+			if(value)
+				info("Print log to console is active", __FILE__, __LINE__);
+			else
+				info("Print log to console is deactived", __FILE__, __LINE__);
 		}
 
 		/**
@@ -188,13 +244,18 @@ namespace mml{
 		 */
 		void set_level(LogLevel level) {
 			currentLevel = level;
+			log(INFO, "Set loglevel to " + getLogLevelName(level), __FILE__, __LINE__);
 		}
 
 		/**
 		 * @brief Set the logging object true
+		 * 
+		 * @param verbose Log the deactivation
 		 */
-		void set_logging() {
+		void set_logging(bool verbose=true) {
 			log_active = true;
+			if(verbose)
+				this->info("Logging is active", __FILE__, __LINE__);
 		}
 
 		/**
@@ -203,7 +264,9 @@ namespace mml{
 		 */
 		void set_timeformat(std::string format) {
 			this->timestamp_format = format;
+			info("Log timeformat set to " + format, __FILE__, __LINE__);
 		}
+
 		/**
 		 * @brief Setup the logging
 		 * 
@@ -212,10 +275,11 @@ namespace mml{
 		 * @param logToConsole log to console
 		 */
 		void setup(LogLevel level, std::string filename, bool logToConsole) {
+			set_output_console(logToConsole);
 			set_logging();
 			set_level(level);
-			set_output_console(logToConsole);
 			open(filename);
+			
 		}
 
 		/**
@@ -232,31 +296,26 @@ namespace mml{
 
 
 	// Global logger instance
-	//logger Logger;
-	logger& Logger() {
-        static logger instance;
-        return instance;
-    }
+	logger& Logger();
 }
 
 // Macro to simplify logging
-#define LOG(level, message) mml::Logger().log(level, message, __FILE__, __LINE__)
+#define LOGMSG(level, message) mml::Logger().log(level, message, __FILE__, __LINE__)
 #define LOGWARNING(message) mml::Logger().warning(message, __FILE__, __LINE__)
 #define LOGINFO(message) mml::Logger().info(message, __FILE__, __LINE__)
 #define LOGERROR(message) mml::Logger().error(message, __FILE__, __LINE__)
 #define LOGDEBUG(message) mml::Logger().debug(message, __FILE__, __LINE__)
 #define LOGLEVEL(level) mml::Logger().set_level(level)
-//#define LOG(level, message) \
-//    mml::Logger.log(level, message, __FILE__, __LINE__)
-/*#define LOGWARNING(message) \
-    mml::Logger.warning(message, __FILE__, __LINE__)
-#define LOGINFO(message) \
-    mml::Logger.info(message, __FILE__, __LINE__)
-#define LOGERROR(message) \
-    mml::Logger.error(message, __FILE__, __LINE__)
-#define LOGDEBUG(message) \
-    mml::Logger.debug(message, __FILE__, __LINE__)
-#define LOGLEVEL(level) \
-    mml::Logger.set_level(level)
-*/
+#define LOGSETUP(level, logfile, logToConsole) mml::Logger().setup(level, logfile, logToConsole)
+#define LOGSTATUS mml::Logger().get_logstatus()
+#define LOG_ACTIVE mml::Logger().get_logstatus()
+#define LOG_DEACTIVE !mml::Logger().get_logstatus()
+#define logmsg(level, message) mml::Logger().log(level, message, __FILE__, __LINE__)
+#define logwarning(message) mml::Logger().warning(message, __FILE__, __LINE__)
+#define loginfo(message) mml::Logger().info(message, __FILE__, __LINE__)
+#define logerror(message) mml::Logger().error(message, __FILE__, __LINE__)
+#define logdebug(message) mml::Logger().debug(message, __FILE__, __LINE__)
+#define logsetup(level, logfile, logToConsole) mml::Logger().setup(level, logfile, logToConsole)
+#define loglevel(level) mml::Logger().set_level(level)
+#define logstatus mml::Logger().get_logstatus()
 #endif

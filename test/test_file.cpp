@@ -13,6 +13,8 @@
 #include <cstdlib>  // For std::abort
 
 #include "mml/file.hpp"
+#include "mml/logger.hpp"
+
 // Custom assert macro
 #define assert_msg(cond, msg) \
     do { \
@@ -25,6 +27,7 @@
     } while (false)
 
 int main(int argc, char **argv) {
+	logsetup(mml::LogLevel::DEBUG, "test_file.log", true);
 	std::cout << std::endl;
 	std::cout << "╭──────────────────────────────╮" << std::endl;
 	std::cout << "│ Performing test for file.hpp │" << std::endl;
@@ -35,7 +38,7 @@ int main(int argc, char **argv) {
 	std::cout << std::endl;
 
 	system("mkdir -p /tmp/test_file/test123; touch /tmp/test_file/test1");
-	mml::file::copy("/tmp/test_file","/tmp/test_file1","","",_10M, true, true, true , true, true, true, true);
+	mml::file::copy("/tmp/test_file","/tmp/test_file1","","", true, true, true , true, true, true, true, _100MB);
 
 	
 

@@ -29,6 +29,7 @@
 #include "mml/string.hpp"
 #include "mml/Unix.hpp"
 #include "mml/time.hpp"
+#include "mml/logger.hpp"
 
 mml::string mml_actual_file = "";
 bool mml_progressing = false; // For stopping the progress print out in copying a file
@@ -44,8 +45,13 @@ void mml::file::add_twofiles( std::string filepath_input1 , std::string filepath
 	std::ofstream output(filepath_output);
 	
 	// Checks whether both files are opened
-    if ( !input1 || !input2 ){
-        throw std::runtime_error("[add_twofiles] file not found");
+    if ( !input1){
+		logerror("[add_twofiles] File " + filepath_input1 + "not found");
+        throw std::runtime_error("[add_twofiles] File " + filepath_input1 + "not found");
+    }
+	if (!input2 ){
+		logerror("[add_twofiles] File " + filepath_input2 + "not found");
+        throw std::runtime_error("[add_twofiles] File " + filepath_input2 + "not found");
     }
 	
 	// Read the first data
@@ -66,8 +72,13 @@ void mml::file::add_twofiles( std::string filepath_input1 , std::string filepath
 }
 
 bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::size_t blockSize, bool progress) {
-	if(!mml::Unix::exist(src))
+	
+	logdebug("Copy " + src + " to " + dest + " with blocksize " + std::to_string(blockSize) + " and progress" + std::to_string(progress));
+
+	if(!mml::Unix::exist(src)) {
+		logerror("[byteCopy] Source file" + src +  "does not exist!");
 		throw std::runtime_error("[byteCopy] Source file" + src +  "does not exist!");
+	}
 	
 	std::ifstream ifile(src, std::ifstream::binary);
 	FILE* ofile = fopen(dest.c_str(), "wb");
@@ -110,6 +121,8 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 	// ************************************************
 	// *		COPYING FILE TO DESTINATION			  *
 	// ************************************************
+	logdebug("Start copying");
+
 	while(!ifile.eof()) {
 		
 		ifile.read(buffer, blockSize);
@@ -157,7 +170,9 @@ bool mml::file::byteCopy(const std::string& src, const std::string& dest, std::s
 // Überprüfe, ob zwei Dateien identisch sind
 
 bool mml::file::equal(std::string src, std::string dst){
-		
+
+	loginfo("Check if two files are identical (" + src + "and" + dst + ")");
+
 	std::string sha_src = mml::random_str();
 	std::string sha_dst = mml::random_str();
 	
@@ -168,13 +183,18 @@ bool mml::file::equal(std::string src, std::string dst){
 	std::string dst_sha256;
 		
 	int16_t sys = 0;
-		
+
+	logdebug("Use system command " + s_command);
 	sys = system(s_command.c_str());
+
+	logdebug("Use system command " + d_command);
 	sys = system(d_command.c_str());
 	
+	loginfo("Read in the result of the sha256 sum");
+
 	std::ifstream input_src (sha_src);
 	std::ifstream input_dst (sha_dst);
-		
+	
 	std::getline(input_src,src_sha256);
 	std::getline(input_dst,dst_sha256);
 		
@@ -185,12 +205,20 @@ bool mml::file::equal(std::string src, std::string dst){
 	dst_sha256 = dst_sha256.substr(0,position_dst);
 	sys = 0;
 		
-	return src_sha256 == dst_sha256 && sys == 0 ? true : false;
+	bool result = src_sha256 == dst_sha256 && sys == 0 ? true : false;
+
+	if(result)
+		loginfo("Files are identical");
+	else
+		loginfo("Files differ");
+
+	return result;
 	
 }
 
 std::size_t mml::file::num_lines(std::string path) {
-	
+	loginfo("Compute number of lines in the file " + path);
+
 	int num = 0;
 	std::ifstream input(path.c_str());
 	
@@ -198,7 +226,7 @@ std::size_t mml::file::num_lines(std::string path) {
 		input.ignore( INT_MAX, '\n' );
 		num++;
 	}
-	
+	loginfo("Number of lines: " + std::to_string(num));
 	return num;
 }
 
@@ -217,7 +245,22 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	uint32_t				copied_files		= 0; 	// how many files are already copied
 	uint32_t				copied_files_print	= 0; 	// file number for the print
 	if(verbose_debug)
-		std::cout << "[copy] Start of function 'copy'!" << std::endl;
+		if(LOG_ACTIVE)
+			loginfo("[copy] Copy directory and/or file");
+		else
+			std::cout << "[copy] Copy directory and/or file" << std::endl;
+	logdebug("Source path: " + src.str());
+	logdebug("Destination path" + dst.str());
+	logdebug("Option 'name_in' is set to " + name_in);
+	logdebug("Option 'name_ex' is set to " + name_ex);
+	logdebug("Option 'verbose' is set to " + std::to_string(verbose));
+	logdebug("Option 'all' is set to " + std::to_string(all));
+	logdebug("Option 'recursive' is set to " + std::to_string(recursive));
+	logdebug("Option 'force' is set to " + std::to_string(force));
+	logdebug("Option 'progress' is set to " + std::to_string(progress));
+	logdebug("Option 'verbose debug' is set to " + std::to_string(verbose_debug));
+	logdebug("Option 'blocksize' is set to " + std::to_string(blocksize));
+
 	/*
 	 * ***********************************
 	 * * 		COPYING SINGLE FILE      *
@@ -240,17 +283,22 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	 *	Print out information and compute console width
 	*/
 	if(name_in == "" && name_ex == ""){
+
 		actual_src_dir = src;
 		actual_dst_dir = dst;
 
 		// Copying a symlink
 		if(mml::Unix::issymlink(actual_src_dir.str())) {
+			loginfo("Copying a symbolic link");
 			std::filesystem::copy_symlink(actual_src_dir.str(), actual_dst_dir.str());
 			return 0;
 		}
 
         if(mml::Unix::isfile(actual_src_dir.str())) {
-        	if(actual_dst_dir[-1] == '/'){
+			loginfo("Copying a single file");
+        	
+			logdebug("Determine name of the goal path");
+			if(actual_dst_dir[-1] == '/'){
         		// Search last part from source to determine the name of the goal path
         		temp_size = actual_src_dir.rfind('/',std::string::npos,0);
         		if(temp_size == std::string::npos)
@@ -261,10 +309,13 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
         		actual_dst_dir = dst;
         	}
         	else if(mml::Unix::exist(dst.str()) && mml::Unix::isdir(dst.str())) {
-        		throw std::logic_error("[copy] Destination file is a directory");
+				logerror("[copy] Destination file '" + dst.str() + "' is a directory");
+        		throw std::logic_error("[copy] Destination file '" + dst.str() + "' is a directory");
         	}
 
 			fileSize = mml::file::size(actual_src_dir.str());
+
+			logdebug("Check if destination file exist");
 			if(mml::Unix::exist(actual_dst_dir.str()) && !force){	// If the destination exists and the force mode isn't active, stops and first ask the user
 				if(fileSize > _1GB)
 					std::cout << "| Size of source file: " << mml::file::size(actual_src_dir.str())/_1GB << " GB and size of destionation file: " << mml::file::size(actual_dst_dir.str())/_1GB << " GB!" << std::endl;
@@ -289,6 +340,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			 * **************************************
 			 */
 			// Determine deepest directory which exists
+			logdebug("Check if the user has permission to write");
 			actual_dst_check = actual_dst_dir;
 			if(!actual_dst_check.exist("/"))
 				actual_dst_check = "./";
@@ -300,23 +352,33 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 				} while(temp_size < std::string::npos && (!mml::Unix::exist(actual_dst_check.str())));
 
 			}
-
+			
+			logdebug("Permision to write: " + std::to_string(mml::Unix::perm_to_write(actual_dst_check.str())));
 			// Checks whether the user has write permissions on the destination
-			if(!mml::Unix::perm_to_write(actual_dst_check.str()))
+			if(!mml::Unix::perm_to_write(actual_dst_check.str())) {
+				logerror("[copy] Copying to '" + actual_dst_check.str() + "' is not possible: Permission denied");
 				throw std::runtime_error("[copy] Copying to '" + actual_dst_check.str() + "' is not possible: Permission denied");
+			}
 
 
             // **************************************************
             // *	Create the directory to the point needed	*
             // **************************************************
+			logdebug("Create the destination directory if needed");
 			temp_size = dst.rfind('/',std::string::npos,0);
 			if(!mml::Unix::exist(dst.substr(0,temp_size).str()))
             	dst.substr(0,temp_size).mkdir_p();
-			else if(!mml::Unix::isdir(dst.substr(0,temp_size).str()))
-				throw std::runtime_error("[copy] Last to-be directory is not a directory!");
+			else if(!mml::Unix::isdir(dst.substr(0,temp_size).str())) {
+				logerror("[copy] Last to-be directory '" + dst.substr(0,temp_size).str() + "' is not a directory!");
+				throw std::runtime_error("[copy] Last to-be directory '" + dst.substr(0,temp_size).str() + "'is not a directory!");
+			}
 
-			if(verbose)	// verbose Ausgabe
-				std::cout << src << " -> " << dst;
+			if(verbose)	{// verbose Ausgabe
+				if(LOG_ACTIVE)
+					loginfo(src.str() + " -> " + dst.str());
+				else
+					std::cout << src << " -> " << dst;
+			}
 
 			fileSize = mml::file::size(src.str());
 
@@ -324,7 +386,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 			// **********************************************************
  			// *	Determination of the width to print out [ ok ]		*
  			// **********************************************************
-			if(verbose){	// verbose Ausgabe
+			if(verbose && LOG_DEACTIVE){	// verbose Ausgabe
 				
 				// Get information from the console
 				struct winsize console;
@@ -658,7 +720,7 @@ int mml::file::copy(mml::string src, mml::string dst, std::string name_in, std::
 	return 0;
 }
 
-// TODO Verknüpfungen werden ignoriert
+// @todo Verknüpfungen werden ignoriert
 int mml::file::Program_exist( std::string program ){
 	
 	mml::string					path_string		= std::getenv("PATH");
@@ -696,12 +758,21 @@ int mml::file::Program_exist( std::string program ){
 }
 
 void mml::file::remove(std::string file) {
+	logdebug("Remove file " + file);
 	std::filesystem::remove(file);
 }
 
 void mml::file::set_date_dir(mml::string src, mml::string dst, std::vector<std::string> ends, bool recursive, bool all, bool verbose) {
 	// Only for linux defined systems
 	#ifdef __linux__
+
+	logdebug("Set the date of files in the directory " + dst.str() + " with the time of the files in " + src.str());
+	std::string msg = "Selected options: ends=";
+	for(std::string end : ends)
+		msg += end + ", ";
+	msg += "recursive=" + std::to_string(recursive) + ", all=" + std::to_string(all) + ", verbose=" + std::to_string(verbose);
+	logdebug(msg);
+
 	std::vector<std::string> files = src.ls("","",recursive, all); // Files in source
 
 	for(uint32_t i = 1; i < files.size(); i++) {
@@ -732,26 +803,37 @@ void mml::file::set_date_dir(mml::string src, mml::string dst, std::vector<std::
 		}
 	}
 	#else
-	std::cout << "[set_date] Not defined for non-linux systems" << std:::endl;
+	if(LOG_ACTIVE)
+		logerror("Function set_date_dir Not defined for non-linux systems")
+	else
+		std::cout << "[set_date_dir] Not defined for non-linux systems" << std:::endl;
 	#endif
 	return;
 }
 
 std::size_t mml::file::size(const std::string& filename) {
+	logdebug("Check file size of file " + filename);
 	// if file is not a file  or does not exists => return 0
-    if(!mml::Unix::exist(filename))
+    if(!mml::Unix::exist(filename)) {
+		logerror("[size] File " + filename + " does not exist.");
 		throw std::runtime_error("[size] File " + filename + " does not exist.");
+	}
 	
 	if (!mml::Unix::isfile(filename)) {
+		logwarning("Given path is not a file");
         return 0;
 	}
     
     std::ifstream ifile(filename, std::ifstream::ate | std::ifstream::binary);
 
+	logdebug("File size: " + std::to_string(ifile.tellg()));
+
     return ifile.tellg();    
 }
 
 std::string mml::file::humanread(std::size_t number) {
+	logdebug("Convert the filesize " + std::to_string(number) + " to a human readable format");
+
 	if(number > _1GB)
 		return std::to_string(number/_1GB) + " GB";
 	else if(number > _1MB)
@@ -766,8 +848,10 @@ std::string mml::file::humanread(std::size_t number) {
 }
 std::string mml::file::size_human(const std::string& filename, bool verbose) {
 
-	if(!mml::Unix::exist(filename))
+	if(!mml::Unix::exist(filename)) {
+		logerror("File " + filename + " does not exist!");
 		throw std::runtime_error("[size_human] File " + filename + " does not exist!");
+	}
 	
 	
 	std::size_t		fileSize	= size(filename);
@@ -775,13 +859,29 @@ std::string mml::file::size_human(const std::string& filename, bool verbose) {
 	
 	file = humanread(fileSize);
 	
-	if(verbose)
-		std::cout << "| Size of the file: " << file << std::endl;
+	if(verbose) {
+		if(LOG_ACTIVE)
+			loginfo("Size of the file: " + file);	
+		else
+			std::cout << "| Size of the file: " << file << std::endl;
+
+	}
 	
 	return file;
 }
 
 std::string mml::file::size_dir(mml::string& dir, std::string include, std::string exclude, bool verbose, bool recursive, bool all, bool human_readable) noexcept {
+
+	logdebug("[size_dir] Determine size of the directory " + dir.str());
+	std::string msg = "Selected options:";
+	if(include != "")
+		msg += "include=" + include + ",";
+	if(exclude != "")
+		msg += "exclude=" + exclude + ",";
+	msg += "verbose=" + std::to_string(verbose) + ", recursive=" + std::to_string(recursive) + ",";
+	msg += "all=" + std::to_string(all) + ", human_readable=" + std::to_string(human_readable);
+	logdebug(msg);
+
 	std::size_t						size		= 0;
 	std::string						size_str	= "";
 	const std::vector<std::string>	ls			= dir.ls(include, exclude, recursive, all);
@@ -795,14 +895,23 @@ std::string mml::file::size_dir(mml::string& dir, std::string include, std::stri
 	else
 		size_str = std::to_string(size);
 	
-	if(verbose)
-		std::cout << "| Size of the directory: " << size_str << std::endl;
+	if(verbose) {
+		if(LOG_ACTIVE)
+			loginfo("Size of the directory: " + size_str);
+		else
+			std::cout << "Size of the directory: " << size_str << std::endl;
+	}
 	
 	return size_str;
 }
 
 time_t mml::file::time_mod(const std::string& filename) {
+	logdebug("Get modification time of file " + filename);
+	
 	struct stat sb;
 	stat(filename.c_str(), &sb);
+	
+	logdebug("Modification time: " + mml::timeformat(sb.st_mtime, "$DD.$MM.$YYYY $hh:$mm:$ss").str());
+	
 	return sb.st_mtime;
 }

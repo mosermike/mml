@@ -30,7 +30,10 @@ void mml::help::foot(std::string version, std::string month, int year, std::stri
 	
 	mml::shell::chapter("AUTHOR",true);
 	std::cout << "Written from " << author << std::endl << std::endl;
-	std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << " " << year << std::endl;
+	if(year == -1)
+		std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << std::endl;
+	else
+		std::cout << "Version: " << version << "\t\t\t\t\t\t" << month << " " << year << std::endl;
 }
 
 

@@ -148,19 +148,6 @@ namespace mml {
 	 * @return round number
 	 */
 	double round(double number, uint16_t digits) noexcept;
-				 
-	/**
-	 * @brief Convert value to mml::string
-	 * @param t Value to be changed
-	 * @return mml::string
-	 */
-	template<typename T> mml::string to_string(const T& t) noexcept {
-		std::ostringstream stream;
-		stream << t;
-		return stream.str();
-	}
-
-
 
 	/**
 	 * @brief Forms a hash value of a string
@@ -219,6 +206,14 @@ namespace mml {
 	template <typename templ> templ get_random(templ min = 0, templ max=100) noexcept;
 
 	/**
+	 * @brief Create a random, lower-case string
+	 * @param letters Number of letters
+	 * @param start Add the generated characters to this string 
+	 * @return generated string
+	 */
+	std::string random_str(size_t letters = 10, std::string start = "") noexcept;
+
+	/**
 	 * @brief Return the smallest number
 	 * @param values Values as a vector
 	 * @param pos Start position
@@ -228,19 +223,39 @@ namespace mml {
 	template <typename templ> templ smallest_num(std::vector<templ> values, std::size_t pos = 0);
 		
 	/**
-	 * @brief Create a random, lower-case string
-	 * @param letters Number of letters
-	 * @param start Add the generated characters to this string 
-	 * @return generated string
-	 */
-	std::string random_str(size_t letters = 10, std::string start = "") noexcept;
-		
-	/**
 	 * @brief Determine number of digits of a double number
 	 * @param number the number
 	 * @return Number of digits
 	 */
 	std::size_t digits(double number) noexcept;	
+
+	/**
+	 * @brief Returns the time in a formated string
+	 * 
+	 * @param time1 
+	 * @param format Determines what information is how printed.
+	 *              - "$YYYY" : replaced by the year (e.g. 1997)
+	 *              - "$YY"   : replaced by the year (e.g. 97)
+	 *              - "$MM"   : replaced by the month
+	 *              - "$DD"   : replaced by the day
+	 *              - "$hh"   : replaced by the hour
+	 * 				- "$mm"   : replaced by the minute
+	 * 				- "$ss"   : replaced by the second
+	 * @return mml::string 
+	 * @todo Timezone not considered
+	 */
+	mml::string timeformat(time_t time1, mml::string format) noexcept;
+
+	/**
+	 * @brief Convert value to mml::string
+	 * @param t Value to be changed
+	 * @return mml::string
+	 */
+	template<typename T> mml::string to_string(const T& t) noexcept {
+		std::ostringstream stream;
+		stream << t;
+		return stream.str();
+	}
 
 }
 

@@ -44,7 +44,7 @@ namespace mml{
 			 * @return Instance of the class
 			 */
 			template <typename... T>
-			arg(const T&... args){
+			arg(T&... args){
 				(this->push_back(std::forward<T>(args)), ...);
 			}
 

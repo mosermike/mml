@@ -10,6 +10,9 @@
 #include <cstdlib>  // For std::abort
 #include <filesystem>
 
+#include "mml/logger.hpp"
+
+
 // Custom assert macro
 #define assert_msg(cond, msg) \
     do { \
@@ -34,7 +37,7 @@ int main(int argc, char **argv) {
 	std::cout << "Testing writing and reading a log entry ...";
 
 	// Create Random File
-	mml::string tmpfile = "/tmp/test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
+	mml::string tmpfile = "./test_log_" + mml::random_str(10) + ".log"; // Create a temporary, random logfile
 
 	// Open the log file
 	mml::log log(tmpfile);

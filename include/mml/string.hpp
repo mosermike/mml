@@ -404,7 +404,7 @@ namespace mml {
 		/** 
 		 * @brief Get position of last occurance of a character
 		 * @param letter Value to be found
-		 * @param pos Position where to begin to search to the right
+		 * @param pos Position where to begin to search
 		 * @param end Position where to stop the search from the right
 		 * @return std::size_t
 		 */
@@ -440,6 +440,13 @@ namespace mml {
 		 */
 		mml::string sub(std::size_t beg, std::size_t end) const noexcept;
 		
+		/**
+		 * @brief Cast to std::string
+		 * 
+		 * @return std::string 
+		 */
+		operator std::string() const noexcept{return std::string(value);}
+        
 		/**
 		* @brief Transform this instance to an integer
 		* @return int
