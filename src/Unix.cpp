@@ -35,6 +35,7 @@
 #include "mml/file.hpp"
 #include "mml/Unix.hpp"
 #include "mml/standards.hpp"
+#include "mml/exception.hpp"
 
 mml::string mml_pass;
 mml::string mml_mount_name;

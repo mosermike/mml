@@ -24,6 +24,7 @@
 
 
 #include "mml/definitions.hpp"
+#include "mml/exception.hpp"
 #include "mml/file.hpp"
 #include "mml/help.hpp"
 #include "mml/log.hpp"
